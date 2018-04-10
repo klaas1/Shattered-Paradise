@@ -264,6 +264,31 @@ MechRailgun:
 			ConcreteArmor: 25
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 
+MechRailgun2:
+	ReloadDelay: 120
+	Range: 8c0
+	Burst: 2
+	BurstDelays: 10
+	Report: railuse5.aud
+	Projectile: Railgun#SpriteRailgun##
+		DamageActorsInLine: True
+		BeamColor: 00CCCC
+		BeamAlphaDeltaPerTick: -10
+		Duration: 20
+		BeamWidth: 50
+		HelixAnim: sparklong
+		HelixAnimSequence: idle
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 15000
+		Versus:
+			InfantryArmor: 200
+			BuildingArmor: 175
+			VehicleArmor: 160
+			DefenseArmor: 160
+			ConcreteArmor: 25
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+
 MechDummy:
 	ReloadDelay: 120
 	Range: 8c0
@@ -274,7 +299,7 @@ MechDummy:
 		Width: 20
 		BeamDuration: 3
 		Color: FFFFFF
-		BeamDuration: 20
+		BeamDuration: 30
 		ZOffset: 2047
 		# SecondaryBeam: True
 		# SecondaryBeamWidth: 30

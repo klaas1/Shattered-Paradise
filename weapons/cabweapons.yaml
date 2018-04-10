@@ -473,7 +473,7 @@ RepairVehicleRep:
 
 DroneHostMissile:
 	Inherits: ^RocketWarhead
-	ReloadDelay: 125
+	ReloadDelay: 175
 	Range: 10c0
 	Burst: 2
 	Report: samshot1.aud

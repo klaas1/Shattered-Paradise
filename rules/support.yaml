@@ -1,8 +1,7 @@
 GAVULC:
 	Inherits: ^Defence
 	Inherits@1: ^TowerStealthDetection
-	# WithWallSpriteBody:
-	WithSpriteBody:
+	WithWallSpriteBody:
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -53,7 +52,7 @@ GAROCK:
 	Inherits@1: ^TowerStealthDetection
 	Power:
 		Amount: -20
-	WithSpriteBody:
+	WithWallSpriteBody:
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -98,7 +97,7 @@ GACSAM:
 	Inherits: ^AntiAir
 	Power:
 		Amount: -20
-	WithSpriteBody:
+	WithWallSpriteBody:
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -856,12 +855,15 @@ NATMPL:
 		DisplayRadarPing: True
 		MissilePalette: player
 		IsPlayerPalette: True
-		BeaconPoster:
+		BeaconPoster: minimltiicon
 		OrderName: ClusterMissile
 		CameraActor: camera
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
 		PauseOnCondition: empdisable || disabled
 	Health:
 		HP: 300000
@@ -888,8 +890,9 @@ MUVENTI:
 		Dimensions: 2,2
 	Health:
 		HP: 100000
-	NydusPrimaryExit:
-	Nydus:
+	TeleportNetworkPrimaryExit:
+	TeleportNetwork:
+		Type: mutantteleportnetwork
 		PauseOnCondition: disabled
 	RallyPoint:
 	Exit:
@@ -1143,6 +1146,8 @@ CABSW1:
 		IncomingSpeechNotification: SuperweaponFired
 		IncomingSound: SuperweaponFired
 		LaunchSound: n_swlaunch.aud
+		BeaconPoster: minicabsw1powericon
+		BeaconPalette: chrome
 		DisplayTimerStances: Ally, Neutral, Enemy
 		PauseOnCondition: empdisable || disabled
 		CameraActor: camera

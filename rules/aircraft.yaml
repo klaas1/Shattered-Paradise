@@ -63,6 +63,9 @@ CLOUD1:
 	Interactable:
 	-GainsExperience:
 	-ProducibleWithLevel:
+	-GrantConditionOnDamageState@spawnsparks:
+	-ExplodeWeapon@spawnsparks:
+	-ExternalCondition@spawnsparks:
 
 ORCA:
 	Inherits: ^Helicopter

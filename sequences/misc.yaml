@@ -90,6 +90,21 @@ beacon:
 		BlendMode: Additive
 		ZOffset: 2047
 		Offset: 0, 0, 24
+	minimltiicon: minimltiicon
+		Length: *
+		Offset: 0,-42
+	minichemicon: minichemicon
+		Length: *
+		Offset: 0,-42
+	minipulsicon: minipulsicon
+		Length: *
+		Offset: 0,-42
+	minicabsw1powericon: minicabsw1powericon
+		Length: *
+		Offset: 0,-42
+	clock: beaconclock
+		Length: *
+		Offset: 0,-42
 
 crate:
 	idle:
@@ -354,7 +369,12 @@ lurkertrail:
 		Tick: 30
 
 sparkprojectile:
-	idle:
+	idle: sparkprojectile
+		Length: *
+
+sparklong:
+	idle: sparklong
+		Length: *
 
 viscproj:
 	idle:

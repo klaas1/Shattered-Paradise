@@ -344,7 +344,7 @@ HMEC:
 	Mobile:
 		TurnSpeed: 3
 		Speed: 40
-		Crushes: wall, crate, infantry, Vehicle, Cyborg
+		Crushes: wall, crate, infantry, Vehicle, HeavyInfantry
 	-RejectsOrders@berserk:
 	Health:
 		HP: 200000
@@ -373,14 +373,14 @@ HMEC:
 		FireDelay: 5
 		PauseOnCondition: empdisable
 	Armament@2:
-		Weapon: MechRailgun
+		Weapon: MechRailgun2
 		LocalOffset: 1200,-250,2650, 1200,250,2650
 		PauseOnCondition: empdisable
+		MuzzleSequence: muzzle
 	Armament@3:
 		Weapon: MechDummy
 		LocalOffset: 1200,-250,2650, 1200,250,2650
 		PauseOnCondition: empdisable
-		FireDelay: 8
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	-TemporaryOwnerManager:
@@ -396,6 +396,7 @@ HMEC:
 		Offset: 600,-300,-400
 		TurnSpeed: 6
 		Turret: third
+	WithMuzzleOverlay:
 	WithSpriteTurret:
 	WithSpriteTurret@2
 		Sequence: turret2
@@ -756,8 +757,6 @@ TTNK:
 		Sequence: deployed
 		RequiresCondition: !undeployed
 	-WithVoxelBody:
-	RenderVoxels:
-		Scale: 0.6
 	AttackFrontal:
 		Voice: Attack
 		RequiresCondition: undeployed
@@ -767,8 +766,7 @@ TTNK:
 		Turret: deployed
 		InitialFacing: 160
 		RealignDelay: -1
-	# WithSpriteTurret@deployed:
-	WithVoxelTurret@deployed:
+	WithSpriteTurret@deployed:
 		Turret: deployed
 		RequiresCondition: deployed
 		Armament: deployed
@@ -1349,7 +1347,8 @@ WOLF:
 		Type: VehicleArmor
 	Targetable:
 		TargetTypes: Ground, Vehicle
-	-Crushable:
+	Crushable:
+		CrushClasses: HeavyInfantry
 	AttackFrontal:
 	AutoTarget:
 	Armament@PRIMARY:
@@ -1452,7 +1451,8 @@ DEATHCLAW:
 		HP: 65000
 	WithInfantryBody:
 		IdleSequences: idle2, idle3
-	-Crushable:
+	Crushable:
+		CrushClasses: HeavyInfantry
 	Mobile:
 		Speed: 110
 		SharesCell: False
@@ -1675,7 +1675,7 @@ SCRMOBMINE:
 		Cost: 1400
 	Tooltip:
 		Name: Subjugator
-	Mindcontroller:
+	MindController:
 		Capacity: 3
 		Sound: sonpulse.aud
 		GiveCondition: mindcontrolled
@@ -1706,8 +1706,8 @@ SCRMOBMINE:
 
 TRIPOD:
 	Inherits@1: ^Walker
-	Inherits: ^ScrinVehicle
-	Inherits@2: ^8CellVision
+	Inherits@2: ^ScrinVehicle
+	Inherits@3: ^8CellVision
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -2025,7 +2025,7 @@ SPIDERARTY:
 		Prerequisites: ~cabweap, cabtech
 	Mobile:
 		TurnSpeed: 6
-		Speed: 80
+		Speed: 70
 		Crushes: crate, infantry
 		TerrainSpeeds:
 	Voiced:
@@ -2159,12 +2159,7 @@ LIMPED:
 	Mobile:
 		Speed: 90
 		Crushes: crate
-	# Transforms:
-		# IntoActor: dlimpet
-		# Facing: 96
-		# TransformSounds: place2.aud
-		# NoTransformSounds:
-		# Voice: Move
+	Crushable:
 	WithSpriteBody:
 	Voiced:
 		VoiceSet: Limpet

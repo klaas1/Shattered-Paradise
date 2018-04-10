@@ -96,6 +96,7 @@ Packages:
 	sp|bits/nod/effects
 	sp|bits/neutral
 	sp|bits/neutral/structures
+	sp|bits/neutral/swicons
 	sp|uibits
 
 MapFolders:

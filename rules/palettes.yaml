@@ -24,6 +24,10 @@
 		Name: chrome
 		Filename: cameo.pal
 		AllowModifiers: false
+	PaletteFromPaletteWithAlpha@chromealpha:
+		Name: chromealpha
+		Alpha: 0.1
+		BasePalette: chrome
 	PaletteFromFile@chromewithshadow:
 		Name: chromewithshadow
 		Filename: cameo.pal

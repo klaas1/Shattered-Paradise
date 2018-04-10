@@ -934,18 +934,14 @@ neutralradar:
 	Defaults:
 		Offset: 0, -24, 60
 	idle:
-		Start: 30
 		Length: 26
 		Tick: 100
-		ShadowStart: 112
 	damaged-idle:
-		Start: 56
+		Start: 26
 		Length: 26
 		Tick: 100
-		ShadowStart: 138
 	dead:
-		Start: 56
-		ShadowStart: 138
+		Start: 26
 
 neutralpowerplant:
 	Inherits: ^EmpOverlay

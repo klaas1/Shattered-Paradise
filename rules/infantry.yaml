@@ -212,7 +212,8 @@ EAGLEGUARD:
 		Weapon: TrooperRail
 		LocalOffset: 550,100,550
 		PauseOnCondition: WebDisable
-	-Crushable:
+	Crushable:
+		CrushClasses: HeavyInfantry
 	AttackFrontal:
 		Voice: Attack
 
@@ -815,7 +816,8 @@ FLOAT:
 		Prerequisites: ~scrrax, scrradr
 	Valued:
 		Cost: 400
-	-Crushable:
+	Crushable:
+		CrushClasses: HeavyInfantry
 	Tooltip:
 		Name: Essence Collector
 	Health:
@@ -905,7 +907,8 @@ COLOSSI:
 		LocalOffset: 300,0,1000
 		RequiresCondition: undeployed
 		PauseOnCondition: WebDisable
-	-Crushable:
+	Crushable:
+		CrushClasses: HeavyInfantry
 	-TakeCover:
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
@@ -955,7 +958,7 @@ CABSENTRY:
 		SharesCell: False
 	GrantPeriodicCondition:
 		Condition: KillMe
-		CooldownDuration: 500
+		CooldownDuration: 250
 	KillsSelf@KillMe:
 		RequiresCondition: KillMe
 	ExternalCondition@KillMe:
@@ -1445,7 +1448,8 @@ MHIJACK:
 		Name: Hijacker
 	Voiced:
 		VoiceSet: Spy
-	-Crushable:
+	Crushable:
+		CrushClasses: HeavyInfantry
 	Health:
 		HP: 9000
 	Targetable@MindControlImmunity:

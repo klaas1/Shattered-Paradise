@@ -48,7 +48,7 @@ CAMERA:
 	EditorTilesetFilter:
 		Categories: Other
 
-^mmch.colorpicker:
+mmch.colorpicker:
 	Inherits: MMCH
 	Mobile:
 		InitialFacing: 160

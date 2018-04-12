@@ -74,7 +74,7 @@ FiendShard2:
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
 		ValidTargets: Ground, Water
-		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player

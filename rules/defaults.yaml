@@ -1956,6 +1956,7 @@
 	RevealsShroud:
 		Type: Footprint 
 	-GivesBuildableArea:
+	-SpawnActorOnDeath@tiberium2:
 	AutoTarget:
 	-MustBeDestroyed:
 	RenderRangeCircle:

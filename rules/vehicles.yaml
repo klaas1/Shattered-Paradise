@@ -826,9 +826,6 @@ TICKHOLOGRAM:
 	-AttackTurreted@deployed:
 	AttackFrontal:
 		-RequiresCondition: undeployed
-	GrantPeriodicCondition:
-		Condition: KillMe
-		CooldownDuration: 1000
 	KillsSelf@KillMe:
 		RequiresCondition: KillMe
 	ExternalCondition@KillMe:

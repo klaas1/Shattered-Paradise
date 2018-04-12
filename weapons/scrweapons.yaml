@@ -558,7 +558,7 @@ TripodProton:
 	Range: 1c512
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
-		Speed: 150
+		Speed: 500
 		Blockable: false
 		Shadow: true
 		Image: TORPEDO
@@ -692,7 +692,7 @@ DestroyerCannon:
 	ReloadDelay: 200
 	Range: 14c0
 	MinRange: 4c0
-	Report: oneshot04.wav
+	Report: devourerlasor0000.wav, devourerlasor0001.wav, devourerlasor0002.wav
 	Burst: 1
 	Inaccuracy: 2c0
 	BurstDelays: 5
@@ -853,13 +853,9 @@ TractorBeam:
 	Inherits: ^FullDamage
 	ReloadDelay: 25
 	Range: 10c0
-	Report:
+	Report: sonic4.aud
 	ValidTargets: Air
-	Projectile: BulletAS
-		Speed: 100c0
-		Image: blueball
-		Shadow: true
-		Palette: pips
+	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
 		ValidTargets: Air

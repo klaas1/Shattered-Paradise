@@ -555,7 +555,7 @@ PalaLazor:
 	Inherits: ^FullDamage
 	ReloadDelay: 75
 	Range: 8c0
-	Report: lastur1.aud
+	Report: avatarlaser0000.wav, avatarlaser0001.wav, avatarlaser0002.wav
 	Projectile: LaserZap
 		Width: 60
 		BeamDuration: 7

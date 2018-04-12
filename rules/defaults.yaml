@@ -1965,6 +1965,8 @@
 		Type: DefenseArmor
 	EditorTilesetFilter:
 		Categories: Defence
+	Replacement:
+		ReplaceableTypes: Tower
 
 ^AntiAir:
 	Inherits: ^Defence
@@ -2146,6 +2148,8 @@
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 4
+	Replaceable:
+		Types: Gate, Tower
 
 ^Gate:
 	Inherits: ^Building
@@ -2185,6 +2189,8 @@
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 4
+	Replacement:
+		ReplaceableTypes: Gate
 
 ^Gate_A:
 	Inherits: ^Gate

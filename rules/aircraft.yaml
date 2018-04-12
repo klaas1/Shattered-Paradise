@@ -716,7 +716,7 @@ STORMRIDER:
 	Selectable:
 		Bounds: 30,24
 	Voiced:
-		VoiceSet: Seeker
+		VoiceSet: Deva
 	Hovers:
 	Aircraft:
 		MaximumPitch: 90
@@ -773,7 +773,7 @@ drache:
 	Health:
 		HP: 100000
 	Voiced:
-		VoiceSet: Seeker
+		VoiceSet: Deva
 	Targetable@MindControlInmune:
 		TargetTypes: MindControlInmune
 	Aircraft:
@@ -817,7 +817,7 @@ SCRGLYDER1:
 	Tooltip:
 		Name: Glider
 	Voiced:
-		VoiceSet: Seeker
+		VoiceSet: Deva
 	Selectable:
 		Bounds: 40,30
 	Transforms:
@@ -879,7 +879,7 @@ SCRDESTROYER:
 		BuildPaletteOrder: 9
 		Prerequisites: ~scrair, scrradr
 	Voiced:
-		VoiceSet: Seeker
+		VoiceSet: Deva
 	Selectable:
 		Bounds: 85,50,0,-12
 	Aircraft:
@@ -932,7 +932,7 @@ SCRTRANS:
 		Prerequisites: ~scrair, scrdepot
 		BuildPaletteOrder: 8
 	Voiced:
-		VoiceSet: Seeker
+		VoiceSet: Deva
 	Cargo:
 		Types: Infantry, Vehicle
 		MaxWeight: 10
@@ -983,7 +983,7 @@ SCRINCOUNCIL:
 	Selectable:
 		Bounds: 80,70,0,-12
 	Voiced:
-		VoiceSet: Seeker
+		VoiceSet: Deva
 	Selectable:
 		Priority: 6
 	Health:
@@ -1041,7 +1041,7 @@ SCRCARRIER:
 		BuildPaletteOrder: 11
 		Prerequisites: ~scrair, scrtech
 	Voiced:
-		VoiceSet: Seeker
+		VoiceSet: Deva
 	Targetable@Essence:
 		TargetTypes: ScrinUnit
 	Selectable:
@@ -1167,7 +1167,7 @@ SCRBATTLESHIP:
 		Prerequisites: ~scrair, scrtech
 		BuildLimit: 1
 	Voiced:
-		VoiceSet: Seeker
+		VoiceSet: Deva
 	Selectable:
 		Bounds: 90,55
 	Targetable@Essence:

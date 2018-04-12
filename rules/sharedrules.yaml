@@ -743,8 +743,6 @@ SCRDEPOT:
 	-WithRepairOverlay@CRANE:
 	-WithRepairOverlay@PLATFORM:
 	-WithDeathAnimation@BIB:
-	Selectable:
-		DecorationBounds: 110, 60, 3, -4
 
 ^TechCenter:
 	Inherits: ^Building

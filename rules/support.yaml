@@ -2,6 +2,7 @@ GAVULC:
 	Inherits: ^Defence
 	Inherits@1: ^TowerStealthDetection
 	WithWallSpriteBody:
+	# WithSpriteBody:
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -52,7 +53,7 @@ GAROCK:
 	Inherits@1: ^TowerStealthDetection
 	Power:
 		Amount: -20
-	WithWallSpriteBody:
+	WithSpriteBody:
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -97,7 +98,7 @@ GACSAM:
 	Inherits: ^AntiAir
 	Power:
 		Amount: -20
-	WithWallSpriteBody:
+	WithSpriteBody:
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -1065,6 +1066,8 @@ CABEYE:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
+	WithSpriteBody:
+		PauseOnCondition: empdisable || disabled
 	Health:
 		HP: 75000
 	WithRangeCircle:

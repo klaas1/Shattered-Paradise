@@ -418,14 +418,6 @@ CrusaHologram:
 	RenderSprites:
 		Image: crusader
 
-TemplarHologram:
-	Inherits@2: ^Hologram
-	Armament:
-		Weapon: TemplarLasor
-	Crushable:
-	RenderSprites:
-		Image: templar
-
 MARAUDER:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender

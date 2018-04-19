@@ -405,19 +405,19 @@ VEINHOLESPAWNERDUMMY:
 	-SpawnActorOnDeath@nanomachineburst:
 	Interactable:
 
-FIREACTOR:
-	Inherits: ^DUMMYAIRCRAFT
-	Tooltip:
-		Name: Fire
-	-RevealsShroud:
-	Health:
-		HP: 30
-	SelfHealing:
-		Step: -10
-		Delay: 25
-		HealIfBelow: 200
-	ExplodeWeapon:
-		Weapon: MillitantFire
+# FIREACTOR:
+	# Inherits: ^DUMMYAIRCRAFT
+	# Tooltip:
+		# Name: Fire
+	# -RevealsShroud:
+	# Health:
+		# HP: 30
+	# SelfHealing:
+		# Step: -10
+		# Delay: 25
+		# HealIfBelow: 200
+	# ExplodeWeapon:
+		# Weapon: MillitantFire
 
 INFTIBSPAWN:
 	Inherits: ^DUMMYAIRCRAFT

@@ -164,6 +164,10 @@
 		BaseName: cloak
 		BasePalette: player
 		Alpha: 0.55
+	PaletteFromPaletteWithAlpha@terrainalpha:
+		BasePalette: terraindecoration
+		Name: terrainalpha
+		Alpha: 0.55
 	PlayerHighlightPalette:
 	MenuPaletteEffect:
 	GlobalLightingPaletteEffect:
@@ -288,22 +292,22 @@
 		Name: apolra2salpha
 		BasePalette: apolra2s
 		Alpha: 0.7
-	PaletteFromJasc32File@gradgreen:
+	PaletteFromGimpOrJascFile@gradgreen:
 		Name: gradgreen
 		Filename: gradgreen.pal
 		Premultiply: true
 		AllowModifiers: false
-	PaletteFromJasc32File@gensmkexploj:
+	PaletteFromGimpOrJascFile@gensmkexploj:
 		Name: gensmkexploj
 		Filename: gensmkexploj.pal
 		Premultiply: false
 		AllowModifiers: false
-	PaletteFromJasc32File@gensmkexplojFblue:
+	PaletteFromGimpOrJascFile@gensmkexplojFblue:
 		Name: gensmkexplojFblue
 		Filename: gensmkexplojFblue.pal
 		Premultiply: false
 		AllowModifiers: false
-	PaletteFromJasc32File@cyanjascpal:
+	PaletteFromGimpOrJascFile@cyanjascpal:
 		Name: cyanjascpal
 		Filename: cyanjascpal.pal
 		Premultiply: true

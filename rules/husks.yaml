@@ -55,6 +55,11 @@ TRNSPORT.Husk:
 		Speed: 149
 	RenderSprites:
 		Image: trnsport
+		FactionImages:
+			gdi: trnsport
+			nod: nodcarryall
+			cab: cabcarryall
+			mut: forgcarryall
 
 GUARDIAN.Husk:
 	Inherits: ^AircraftHusk

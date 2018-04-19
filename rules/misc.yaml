@@ -52,6 +52,7 @@ mmch.colorpicker:
 	Inherits: MMCH
 	Mobile:
 		InitialFacing: 160
+	-Buildable:
 	Turreted:
 		InitialFacing: 160
 	WithInfantryBody:

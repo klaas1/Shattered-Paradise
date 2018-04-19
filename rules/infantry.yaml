@@ -14,11 +14,16 @@ GDIE1:
 		HP: 12000
 	Voiced:
 		VoiceSet: Marine
-	Armament@PRIMARY:
+	Armament@1:
 		Weapon: MarineRifle
 		PauseOnCondition: WebDisable
+	Armament@2:
+		Weapon: GMarineRifle
+		PauseOnCondition: WebDisable
+		Name: OnFoot
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	RenderSprites:
 
 GRENADIER:
@@ -35,23 +40,29 @@ GRENADIER:
 		Name: Phalanx
 	Health:
 		HP: 9000
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
-		LoadedChance: 100
-		Chance: 5
-	Armament:
+	Armament@1:
 		Weapon: GrenadierBazooka
 		LocalOffset: 0,0,600
 		PauseOnCondition: WebDisable
-	Armament@AA:
+		Name: OnFoot
+	Armament@2:
 		Weapon: GrenadierBazookaAA
+		LocalOffset: 0,0,600
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@3:
+		Weapon: GGrenadierBazooka
+		LocalOffset: 0,0,600
+		PauseOnCondition: WebDisable
+	Armament@4:
+		Weapon: GGrenadierBazookaAA
 		LocalOffset: 0,0,600
 		PauseOnCondition: WebDisable
 	Voiced:
 		VoiceSet: Marine
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 
 MEDIC:
 	Inherits: ^Soldier
@@ -98,10 +109,15 @@ JUMPJET:
 	Armament@1:
 		Weapon: JJGrenade
 		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GJJGrenade
+		PauseOnCondition: WebDisable
 	Passenger:
 		PipType: Blue
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 
 JUMPJETAIR:
 	Inherits: ^Aircraft
@@ -208,14 +224,20 @@ EAGLEGUARD:
 	Health:
 		HP: 35000
 	-DamagedByTerrain:
-	Armament:
+	Armament@1:
 		Weapon: TrooperRail
+		LocalOffset: 550,100,550
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GTrooperRail
 		LocalOffset: 550,100,550
 		PauseOnCondition: WebDisable
 	Crushable:
 		CrushClasses: HeavyInfantry
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 
 ALTNODE1:
 	Inherits: ^Soldier
@@ -237,8 +259,13 @@ ALTNODE1:
 	Armament:
 		Weapon: MilitantRifle
 		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@1:
+		Weapon: MilitantRifle
+		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	RenderSprites:
 
 CRUSADER:
@@ -255,7 +282,7 @@ CRUSADER:
 		Name: Crusader
 	Health:
 		HP: 8000
-	Armament:
+	Armament@1:
 		Weapon: CrusaderBazooka
 		LocalOffset: 0,0,600
 		PauseOnCondition: WebDisable
@@ -263,9 +290,18 @@ CRUSADER:
 		Weapon: CrusaderBazookaAA
 		LocalOffset: 0,0,600
 		PauseOnCondition: WebDisable
+	Armament@3:
+		Weapon: GCrusaderBazooka
+		LocalOffset: 0,0,600
+		PauseOnCondition: WebDisable
+	Armament@4AA:
+		Weapon: GCrusaderBazookaAA
+		LocalOffset: 0,0,600
+		PauseOnCondition: WebDisable
 	-TakeCover:
 	AttackTurreted:
 		Voice: Attack
+		Armaments: OnFoot
 	Turreted:
 	Passenger:
 		PipType: Blue
@@ -296,8 +332,14 @@ TEMPLAR:
 		Weapon: TemplarFlame
 		LocalOffset: 200,50,320
 		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GTemplarFlame
+		LocalOffset: 200,50,320
+		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	RenderSprites:
 	-DamagedByTerrain:
 
@@ -322,6 +364,11 @@ NCONF:
 		Weapon: TemplarLasor
 		LocalOffset: 362,0,778
 		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GTemplarLasor
+		LocalOffset: 362,0,778
+		PauseOnCondition: WebDisable
 	Cloak@cloakgenerator:
 		RequiresCondition: !lawea
 		InitialDelay: 80
@@ -332,6 +379,7 @@ NCONF:
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	RenderSprites:
 	Voiced:
 		VoiceSet: BlackHand
@@ -384,13 +432,18 @@ BHS:
 				PathingCost: 70
 	Voiced:
 		VoiceSet: Oxanna
-	Armament@PRIMARY:
+	Armament@1:
 		Weapon: BHRifle
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GBHRifle
 		PauseOnCondition: WebDisable
 	AnnounceOnSeen:
 		Notification: CommandoDetected
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	Demolition:
 		DetonationDelay: 45
 		Voice: Attack
@@ -604,7 +657,7 @@ SEER:
 		Description: Psychic mutant that leads armies through fear.\n\nGood vs: Vehicles, Aircraft.\n\nSpecial:\n- Can persuade friendly units to fight harder when deployed.\n- Buffed units will get 20% extra attack speed, move speed and receive 20% more damage.\n- Effect lasts 15 seconds.\n- Heals on Tiberium.\n- Can attack air\n- Crush class: crushable.
 		Prerequisites: ~murax, muhall
 	Valued:
-		Cost: 800
+		Cost: 650
 	Tooltip:
 		Name: Tyrant
 	Voiced:
@@ -759,13 +812,26 @@ LEGIO:
 		LocalOffset: 350,200,800
 		FireDelay: 5
 		PauseOnCondition: WebDisable
+		Name: OnFoot
 	Armament@AA:
 		Weapon: LegioNeedlerAA
 		LocalOffset: 350,200,800
 		FireDelay: 5
 		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament:
+		Weapon: GLegioNeedler
+		LocalOffset: 350,200,800
+		FireDelay: 5
+		PauseOnCondition: WebDisable
+	Armament@AA:
+		Weapon: GLegioNeedlerAA
+		LocalOffset: 350,200,800
+		FireDelay: 5
+		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 
 SHAPESHIFTER:
 	Inherits: ENGINEER
@@ -825,14 +891,22 @@ FLOAT:
 			BlueTiberium: 100
 			Veins: 100
 			Water: 80
-	Armament@maquinademierda:
+	Armament@1:
 		Weapon: FloatTesla
+		LocalOffset: 0,0,500
+		FireDelay: 10
+		PauseOnCondition: WebDisable
+		ForceTargetStances: Enemy
+		Name: OnFoot
+	Armament@2:
+		Weapon: GFloatTesla
 		LocalOffset: 0,0,500
 		FireDelay: 10
 		PauseOnCondition: WebDisable
 		ForceTargetStances: Enemy
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	-TakeCover:
 
 BUG:
@@ -861,11 +935,16 @@ BUG:
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
-	Armament:
+	Armament@1:
 		Weapon: FloatGlaive
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GFloatGlaive
 		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	-TakeCover:
 
 COLOSSI:
@@ -874,7 +953,7 @@ COLOSSI:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 22
-		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Immune to Tiberium radiation.
+		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Immune to Tiberium radiation.\n- One hits infantry.
 		Prerequisites: ~scrrax, scrtech
 	Valued:
 		Cost: 900
@@ -894,11 +973,20 @@ COLOSSI:
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
-	Armament:
+	Armament@1:
 		Weapon: ColossiTesla
 		LocalOffset: 300,0,1000
 		RequiresCondition: undeployed
 		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GColossiTesla
+		LocalOffset: 300,0,1000
+		RequiresCondition: undeployed
+		PauseOnCondition: WebDisable
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
 	Crushable:
 		CrushClasses: HeavyInfantry
 	-TakeCover:
@@ -917,9 +1005,6 @@ COLOSSI:
 		StandSequences: deployed
 		Sequence: deployed
 		RequiresCondition: !undeployed
-	AttackFrontal:
-		Voice: Attack
-		RequiresCondition: undeployed
 	ExplodeWeapon:
 		Weapon: ColossiBlast
 		RequiresCondition: deployed
@@ -944,6 +1029,7 @@ CABSENTRY:
 	-SpawnActorOnDeath@nanomachineburst:
 	-GainsExperience:
 	-ProducibleWithLevel:
+	-Passenger:
 	Mobile:
 		Speed: 70
 		Crushes: nada
@@ -999,11 +1085,16 @@ CYBORG:
 		VoiceSet: Cyborg
 	Health:
 		HP: 28000
-	Armament:
+	Armament@1:
 		Weapon: CyborgVulcan
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GCyborgVulcan
 		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	SelectionDecorations:
 
 CBORG:
@@ -1026,16 +1117,27 @@ CBORG:
 	DeliversCash:
 		Payload: 45
 		Voice: Move
-	Armament:
+	Armament@1:
 		Weapon: CyborgRocket
 		LocalOffset: 424,198,1086
 		PauseOnCondition: WebDisable
-	Armament@AA:
+		Name: OnFoot
+	Armament@2AA:
 		Weapon: CyborgRocketAA
+		LocalOffset: 424,198,1086
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@3:
+		Weapon: GCyborgRocket
+		LocalOffset: 424,198,1086
+		PauseOnCondition: WebDisable
+	Armament@4AA:
+		Weapon: GCyborgRocketAA
 		LocalOffset: 424,198,1086
 		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	RenderSprites:
 
 SWARMLING:
@@ -1170,18 +1272,31 @@ GLAD:
 		SharesCell: False
 	Health:
 		HP: 50000
-	Armament@primary:
+	Armament@1:
 		Weapon: GLAD120mm
 		MuzzleSequence: muzzle
 		LocalOffset: 170,250,500
 		PauseOnCondition: WebDisable
-	Armament@secondary:
+		Name: OnFoot
+	Armament@2:
 		Weapon: GLAD120mm
+		MuzzleSequence: muzzle
+		LocalOffset: 170,-250,500
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@3:
+		Weapon: GGLAD120mm
+		MuzzleSequence: muzzle
+		LocalOffset: 170,250,500
+		PauseOnCondition: WebDisable
+	Armament@4:
+		Weapon: GGLAD120mm
 		MuzzleSequence: muzzle
 		LocalOffset: 170,-250,500
 		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	BodyOrientation:
 		QuantizedFacings: 32
 		CameraPitch: 250
@@ -1252,13 +1367,19 @@ MOTH:
 		Sequence: deployed
 		RequiresCondition: !undeployed
 	-WithInfantryBody:
-	Armament@primary:
-		Weapon: LurkerHit #LurkerProj
+	Armament@1:
+		Weapon: LurkerProj
+		RequiresCondition: deployed
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GLurkerProj
 		RequiresCondition: deployed
 		PauseOnCondition: WebDisable
 	AttackOmni:
 		RequiresCondition: deployed
 		PauseOnCondition: WebDisable
+		Armaments: OnFoot
 	RenderRangeCircle:
 	-WithIdleOverlay@web:
 
@@ -1297,8 +1418,14 @@ CYC2:
 		Weapon: CyCannon
 		LocalOffset: 170,85,683
 		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@1:
+		Weapon: GCyCannon
+		LocalOffset: 170,85,683
+		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 16,32,-1,-12
@@ -1318,11 +1445,16 @@ WORKER:
 		Voice: Move
 	Armor@worker:
 		Type: Worker
-	Armament@PRIMARY:
+	Armament@1:
 		Weapon: Minigun
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@2:
+		Weapon: GMinigun
 		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	RenderSprites:
 	-SpawnActorOnDeath@nanomachineburst:
 	-SpawnActorOnDeath@conversion:
@@ -1389,12 +1521,23 @@ cybdog:
 		Weapon: Dogzooka
 		LocalOffset: 0,-100,300
 		PauseOnCondition: WebDisable
+		Name: OnFoot
 	Armament@2:
 		Weapon: Dogzooka
 		LocalOffset: 0,-100,300
 		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@3:
+		Weapon: GDogzooka
+		LocalOffset: 0,-100,300
+		PauseOnCondition: WebDisable
+	Armament@4:
+		Weapon: GDogzooka
+		LocalOffset: 0,-100,300
+		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
+		Armaments: OnFoot
 	SelectionDecorations:
 	-SpawnActorOnDeath@nanomachineburst:
 

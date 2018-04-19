@@ -120,6 +120,30 @@ WolverineVulcan:
 	Warhead@1Dam: SpreadDamage
 		Damage: 3750
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+
+APCGrenade:
+	Inherits: ^ArtilleryWarhead
+	Inherits@2: ^GreyExplo
+	ReloadDelay: 50
+	Range: 4c0
+	Report: grenadelauncherfire.wav
+	ValidTargets: Ground, Water
+	Projectile: BulletAS
+		Speed: 320
+		Blockable: false
+		Shadow: true
+		LaunchAngle: 45
+		Inaccuracy: 0c512
+		Image: DISCUS
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 5000
+		Versus:
+			BuildingArmor: 25
+			VehicleArmor: 25
+			DefenseArmor: 25
+		ValidTargets: Ground, Water
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 		
 ApcVulcan:
 	Inherits: ^RifleWarhead

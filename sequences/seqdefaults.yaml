@@ -24,7 +24,7 @@
 		Length: *
 		Offset: 0, 0, 28
 	shield: shieldmedium
-		Length: *
+		Length: 1
 	dummy: dot
 		UseTilesetCode: false
 		ZOffset: -9999
@@ -85,7 +85,7 @@
 		Length: 6
 		ShadowStart: 6
 	shield: shieldsmall
-		Length: *
+		Length: 1
 	emp-overlay: emp_fx01
 		Length: *
 		UseTilesetCode: false

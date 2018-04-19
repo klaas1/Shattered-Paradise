@@ -32,27 +32,6 @@ MilitantExplode:
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
 
-MillitantFire:
-	Inherits: ^FlameWarhead
-	ReloadDelay: 15
-	Projectile: InstantExplode
-	ValidTargets: Ground, Water
-	Warhead@3Dam_area: SpreadDamage
-		Spread: 300
-		Damage: 2000
-		Falloff: 100, 50, 25, 0
-		ValidTargets: Ground, Water
-		Versus:
-			BuildingArmor: 250
-		DamageTypes: MilitantFireDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: militantfire, militantfire2, militantfire3
-		InvalidImpactTypes: Water, Air, AirHit
-		ExplosionPalette: apolra2
-	Warhead@3Smu: LeaveSmudge
-		SmudgeType: SmallScorch
-		InvalidTargets: Vehicle, Building, Wall
-
 CrusaderBazooka:
 	Inherits: ^RocketWarhead
 	Inherits@2: ^Small_Clsn
@@ -419,7 +398,6 @@ HarpyClawAA:
 	Range: 6c0
 	MinRange: 0c100
 	Projectile: InstantHit
-	Report: cygun1.aud
 	InvalidTargets: Ground, Water, Vehicle, Building, Infantry
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
@@ -492,21 +470,6 @@ CerberusLazor:
 		InvalidTargets: Air
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
-CerberusLasorSpawn:
-	Inherits: CombatDroneLasorSpawn
-	ReloadDelay: 150
-	Warhead@op: FireShrapnel
-		Amount: 6
-		Weapon: CerberusShrapnelLasor
-
-CerberusShrapnelLasor:
-	Inherits: CombatDroneLasor
-	Projectile: LaserZap
-		BeamDuration: 10
-		-Color:
-	Warhead@1Dam: SpreadDamage
-		Damage: 3000
-
 TurretLaserFire:
 	Inherits: ^FullDamage
 	ReloadDelay: 45
@@ -542,11 +505,73 @@ ObeliskLaserFire:
 	Projectile: LaserZap
 		Width: 90
 		ZOffset: 2047
-		Color: FA0F0F
-		SecondaryBeam: True
-		SecondaryBeamWidth: 30
-		SecondaryBeamZOffset: 2550
-		SecondaryBeamColor: FFFFFF
+		Color: FF000080
+		SecondaryBeam: true
+		SecondaryBeamWidth: 180
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: FF000040
 	Warhead@1Dam: SpreadDamage
 		Damage: 16500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+
+################################################################
+# UNUSED
+################################################################
+
+# MilitantExplode:
+	# Inherits: ^FlameWarhead
+	# Inherits@1: ^DecentFalloff
+	# Inherits@2: ^Large_Explosion
+	# ReloadDelay: 40
+	# Range: 1c0
+	# Projectile: InstantExplode
+	# Warhead@1Dam: SpreadDamage
+		# Spread: 200
+		# Damage: 90000
+		# AffectsParent: True
+		# Versus:
+			# InfantryArmor: 600
+			# BuildingArmor: 100
+			# DefenseArmor: 100
+			# VehicleArmor: 1
+			# ConcreteArmor: 1
+		# DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
+	# Warhead@4Smu: LeaveSmudge
+		# SmudgeType: SmallScorch
+		# InvalidTargets: Vehicle, Building, Wall
+
+# MillitantFire:
+	# Inherits: ^FlameWarhead
+	# ReloadDelay: 15
+	# Projectile: InstantExplode
+	# ValidTargets: Ground, Water
+	# Warhead@3Dam_area: SpreadDamage
+		# Spread: 300
+		# Damage: 2000
+		# Falloff: 100, 50, 25, 0
+		# ValidTargets: Ground, Water
+		# Versus:
+			# BuildingArmor: 250
+		# DamageTypes: MilitantFireDeath
+	# Warhead@2Eff: CreateEffect
+		# Explosions: militantfire, militantfire2, militantfire3
+		# InvalidImpactTypes: Water, Air, AirHit
+		# ExplosionPalette: apolra2
+	# Warhead@3Smu: LeaveSmudge
+		# SmudgeType: SmallScorch
+		# InvalidTargets: Vehicle, Building, Wall
+
+# CerberusLasorSpawn:
+	# Inherits: CombatDroneLasorSpawn
+	# ReloadDelay: 150
+	# Warhead@op: FireShrapnel
+		# Amount: 6
+		# Weapon: CerberusShrapnelLasor
+
+# CerberusShrapnelLasor:
+	# Inherits: CombatDroneLasor
+	# Projectile: LaserZap
+		# BeamDuration: 10
+		# -Color:
+	# Warhead@1Dam: SpreadDamage
+		# Damage: 3000

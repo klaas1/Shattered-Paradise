@@ -705,7 +705,7 @@ STORMRIDER:
 	Inherits@3: ^11CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 850
+		Cost: 800
 	Tooltip:
 		Name: Storm Rider
 	Buildable:

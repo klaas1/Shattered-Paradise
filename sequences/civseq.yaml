@@ -292,6 +292,15 @@ aban17:
 aban18:
 	Inherits: ^aban1x1
 
+tiberumbillboard:
+	Defaults:
+		Offset: -24, -24, 24
+	idle:
+		ShadowStart: 2
+	damaged-idle:
+		Start: 1
+		ShadowStart: 3
+
 ^bboard1x1:
 	Defaults:
 		Offset: 0, -12, 6

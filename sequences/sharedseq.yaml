@@ -246,11 +246,13 @@ mcv.gdi:
 		ZOffset: -500
 	icon: sidebar-gdi|harvicon
 	dock:
-		Start: 25
-		ShadowStart: 89
+		Length: 1
+		Facings: -64
+		ShadowStart: 64
 	dock-loop:
-		Start: 25
-		ShadowStart: 89
+		Length: 1
+		Facings: -64
+		ShadowStart: 64
 
 gdiharv:
 	Inherits: ^Harvester
@@ -279,13 +281,13 @@ cabharv:
 		Tick: 80
 		ShadowStart: 94
 	dock: dino3
-		Start: 72
-		Length: 14
-		ShadowStart: 158
+		Start: 1
+		Facings: 8
+		ShadowStart: 86
 	dock-loop: dino3
-		Start: 85
-		Length: 1
-		ShadowStart: 171
+		Start: 1
+		Facings: 8
+		ShadowStart: 86
 	icon: cabharvicon
 
 lpst.gdi:

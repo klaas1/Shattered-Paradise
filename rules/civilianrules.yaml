@@ -1137,6 +1137,17 @@ AMMOCRAT:
 	RenderSprites:
 		Palette: player
 
+TIBERUMBILLBOARD:
+	Inherits: ^CivBillboard
+	Inherits@1: ^3x1Shape
+	Tooltip:
+		Name: TibeRUM, Mutants love it!!
+	Building:
+		Dimensions: 3,1
+		Footprint: xxx
+	RenderSprites:
+		Palette: player
+
 BBOARD01:
 	Inherits: ^CivBillboard
 	Tooltip:
@@ -1579,7 +1590,7 @@ CAARMR:
 	Inherits: ^TechBuilding
 	Inherits@shape: ^4x4Shape
 	Tooltip:
-		Name: Civilian Armory
+		Name: Civilian Armory (Provides veterancy)
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4, 4

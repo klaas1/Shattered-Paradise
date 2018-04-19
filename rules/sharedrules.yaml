@@ -119,6 +119,7 @@ HARV:
 		DeliverVoice: Action
 		PipCount: 7
 	WithMoveAnimation:
+	WithDockingAnimation:
 	Mobile:
 		Speed: 60
 		Crushes: wall, crate, infantry, RazorShark
@@ -149,7 +150,6 @@ HARV:
 	SelectionDecorations:
 	Capturable:
 		CaptureThreshold: 60
-	WithDockingAnimation:
 	RenderSprites:
 		Image: gdiharv
 		FactionImages:
@@ -1041,7 +1041,7 @@ TRNSPORT:
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
-		HP: 17500
+		HP: 12000
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithFacingSpriteBody:

@@ -666,7 +666,7 @@
 ^tractorstop:
 	SpeedMultiplier:
 		RequiresCondition: tractorstop
-		Modifier: 15
+		Modifier: 0
 	ExternalCondition@tractorstop:
 		Condition: tractorstop
 
@@ -1053,7 +1053,8 @@
 	RenderSprites:
 		Palette: terraindecoration
 	WithCrateBody:
-		Images: crate
+		IdleSequence: crate
+		WaterTerrainTypes: crate
 	Interactable:
 		Bounds: 24,24
 

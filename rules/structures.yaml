@@ -438,7 +438,7 @@ NAHPAD:
 	Buildable:
 		BuildPaletteOrder: 8
 		Queue: Building
-		Description: Produces and rearms aircraft.\n\nSpecial:\n- Maximun production speed is reached with 7 helipads.\n- Max production speed reduces production time by 50%.\n- Max production speed reduces production time by 50%.
+		Description: Produces and rearms aircraft.\n\nSpecial:\n- Maximun production speed is reached with 7 helipads.\n- Max production speed reduces production time by 50%.
 		Prerequisites: naradr, ~structures.nod
 	Building:
 		Footprint: xx xx
@@ -789,7 +789,7 @@ MUTSW2:
 		Queue: Building
 		BuildPaletteOrder: 9
 		Prerequisites: muhall, ~structures.mut, ~techlevel.unrestricted
-		Description: With this structure Mutant commanders are able to summon veinhole monster.\n\nSpecial:\n- Provides access to Veinhole Summon\n- Requires power to operate
+		Description: With this structure Mutant commanders are able to summon veinhole monster.\n\nSpecial:\n- Provides access to Veinhole Monsters.\n- Requires power to operate.
 		BuildLimit: 1
 	Valued:
 		Cost: 1500
@@ -816,7 +816,7 @@ MUTSW2:
 		IncomingSpeechNotification: SuperweaponFired
 		IncomingSound: SuperweaponFired
 		LaunchSound: n_swlaunch.aud
-		Description: Veinhole summon
+		Description: Veinhole Spawn
 		LongDesc: Spawns a cluster of veinholes\non the targetted location.\nVeinholes spawn gas clouds, radiation, and tiberian crabs.\nThey also provide vision.
 		DisplayTimerStances: Ally, Neutral, Enemy
 		PauseOnCondition: empdisable || disabled

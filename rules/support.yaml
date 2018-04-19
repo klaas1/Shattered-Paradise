@@ -1,8 +1,8 @@
 GAVULC:
 	Inherits: ^Defence
 	Inherits@1: ^TowerStealthDetection
-	WithWallSpriteBody:
-	# WithSpriteBody:
+	# WithWallSpriteBody:
+	WithSpriteBody:
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -38,6 +38,7 @@ GAVULC:
 	WithMuzzleOverlay:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
+		PauseOnCondition: disabled
 	LineBuildNode:
 		Types: turret
 	Power@base:
@@ -86,6 +87,7 @@ GAROCK:
 		LocalOffset: 325,-128,1800
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
+		PauseOnCondition: disabled
 	LineBuildNode:
 		Types: turret
 	ProvidesPrerequisite@buildingname:
@@ -131,6 +133,7 @@ GACSAM:
 		LocalOffset: 400,0,1800
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
+		PauseOnCondition: disabled
 	LineBuildNode:
 		Types: turret
 	ProvidesPrerequisite@buildingname:
@@ -198,14 +201,17 @@ NAOBEL:
 	WithMuzzleOverlay:
 	Armament:
 		Weapon: ObeliskLaserFire
-		LocalOffset: 1400,270,1000
+		LocalOffset: 1980,297,1131
 		MuzzleSequence: muzzle
 		MuzzlePalette: obelpal
 	AttackCharges:
-		ChargeAudio: obelpowr.aud
-		ReloadTime: 40
 		PauseOnCondition: empdisable || disabled
-		InitialChargeDelay: 40
+		ChargeLevel: 30
+		ChargingCondition: charging
+	AmbientSound:
+		RequiresCondition: charging && !disabled
+		SoundFiles: obelpowr.aud
+		# Interval: 30, 40
 	WithChargeOverlay:
 		Sequence: active
 		Palette: player
@@ -414,11 +420,8 @@ CABPIT:
 	Selectable:
 		Bounds: 90, 48, 0, -6
 		DecorationBounds: 90, 48, 0, -6
-	-EmitInfantryOnSell@gdi:
-	-EmitInfantryOnSell@nod:
-	-EmitInfantryOnSell@mut:
-	-EmitInfantryOnSell@cab:
-	-EmitInfantryOnSell@scr:
+	-ExternalCapturable:
+	-ExternalCapturableBar:
 	Health:
 		HP: 70000
 	AutoTarget:
@@ -983,15 +986,15 @@ SCREXTRACTOR:
 	Health:
 		HP: 60000
 	Power:
-		Amount: -50
+		Amount: -30
 	SelectionDecorations:
 	ProximityExternalCondition@VanguardShield:
 		Condition: VanguardShield
-		Range: 8c0
+		Range: 10c0
 		AffectsParent: false
 		RequiresCondition: !disabled
 	WithRangeCircle:
-		Range: 8c0
+		Range: 10c0
 		Type: VanguardShield
 	RequiresBuildableArea:
 		AreaTypes: building

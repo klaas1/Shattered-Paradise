@@ -94,7 +94,7 @@ APC:
 		Prerequisites: ~gaweap, gapile
 	Mobile:
 		TurnSpeed: 5
-		Speed: 95
+		Speed: 100
 		TerrainSpeeds:
 			Water: 60
 	Health:
@@ -133,7 +133,7 @@ APC:
 		StationaryInterval: 18
 		MovingInterval: 6
 	Armament@primary:
-		Weapon: ApcVulcan
+		Weapon: APCGrenade
 		LocalOffset: 350,0,1000
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
@@ -377,10 +377,6 @@ HMEC:
 		LocalOffset: 1200,-250,2650, 1200,250,2650
 		PauseOnCondition: empdisable
 		MuzzleSequence: muzzle
-	Armament@3:
-		Weapon: MechDummy
-		LocalOffset: 1200,-250,2650, 1200,250,2650
-		PauseOnCondition: empdisable
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	-TemporaryOwnerManager:
@@ -440,8 +436,6 @@ BGGY:
 	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 300
-	Tooltip:
-		Name: Raider Buggy
 	Buildable:
 		Queue: Vehicle
 		Description: Fast vehicle armed with a machine, has room for one passenger that modifies the weapon of the vehicle.\n\nGood vs: Changes depending on the passenger.\n\nSpecial:\n- The weapon of the vehicle changes with the passenger.\n- Stealth detection\n- NOTE: Only NOD units are supported.
@@ -456,6 +450,16 @@ BGGY:
 		TurnSpeed: 8
 	Health:
 		HP: 15000
+	-RenderVoxels:
+	-WithVoxelBody:
+	WithFacingSpriteBody:
+	WithShadow:
+	RenderSprites:
+	AutoTarget:
+	WithMuzzleOverlay:
+############################################
+# Conditions
+############################################
 	Cargo:
 		MaxWeight: 1
 		PipCount: 1
@@ -494,6 +498,9 @@ BGGY:
 			bug: ifv.bug
 			colossi: ifv.colossi
 			float: ifv.float
+############################################
+# Armaments
+############################################
 	Armament:
 		Weapon: MilitantRifle
 		LocalOffset: 200,-43,200
@@ -586,7 +593,7 @@ BGGY:
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.glad
 	Armament@moth:
-		Weapon: LurkerHit
+		Weapon: LurkerProj
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.moth
 	Armament@cyc2:
@@ -595,6 +602,9 @@ BGGY:
 		RequiresCondition: ifv.cyc2
 	AttackTurreted:
 		PauseOnCondition: empdisable
+###################################
+# Turret Graphics
+###################################
 	WithSpriteTurret@asd:
 		Sequence: turret-none
 		RequiresCondition: !loaded
@@ -646,13 +656,69 @@ BGGY:
 	WithSpriteTurret@colossi:
 		Sequence: turret-colossi
 		RequiresCondition: ifv.colossi
-	-RenderVoxels:
-	-WithVoxelBody:
-	WithFacingSpriteBody:
-	WithShadow:
-	RenderSprites:
-	AutoTarget:
-	WithMuzzleOverlay:
+############################################
+# Names
+############################################
+	Tooltip:
+		Name: Raider Buggy
+		RequiresCondition: !loaded
+	Tooltip@militant:
+		Name: Anti Infantry Buggy
+		RequiresCondition: ifv.militant
+	Tooltip@crusader:
+		Name: Anti Vehicle Buggy
+		RequiresCondition: ifv.crusader
+	Tooltip@templar:
+		Name: Salty Buggy (Flamer)
+		RequiresCondition: ifv.templar
+	Tooltip@nconf:
+		Name: Black Hand Buggy
+		RequiresCondition: ifv.nconf
+	Tooltip@bhs:
+		Name: Toxin Commando Buggy
+		RequiresCondition: ifv.bhs
+	Tooltip@jumpjet:
+		Name: Grenade Launcher Buggy
+		RequiresCondition: ifv.jumpjet
+	Tooltip@eagleguard:
+		Name: Eagle Guard Buggy
+		RequiresCondition: ifv.eagleguard
+	Tooltip@medic:
+		Name: Medical Buggy
+		RequiresCondition: ifv.medic
+	Tooltip@skirmisher:
+		Name: Skirmisher Buggy
+		RequiresCondition: ifv.skirmisher
+	Tooltip@seer:
+		Name: Tyrant Buggy
+		RequiresCondition: ifv.seer
+	Tooltip@psyker:
+		Name: Lyra Buggy
+		RequiresCondition: ifv.psyker
+	Tooltip@glad:
+		Name: Gladiator Buggy
+		RequiresCondition: ifv.glad
+	Tooltip@cyc2:
+		Name: Cyborg Commando Buggy
+		RequiresCondition: ifv.cyc2
+	Tooltip@moth:
+		Name: Abductor Buggy
+		RequiresCondition: ifv.moth
+	Tooltip@reclaimer:
+		Name: Flood Buggy
+		RequiresCondition: ifv.reclaimer
+	Tooltip@shark:
+		Name: RazorBuggy
+		RequiresCondition: ifv.shark
+	Tooltip@bug:
+		Name: Plague Buggy
+		RequiresCondition: ifv.bug
+	Tooltip@colossi:
+		Name: Colossal Buggy
+		RequiresCondition: ifv.colossi
+	Tooltip@float:
+		Name: Essential Buggy
+		RequiresCondition: ifv.float
 
 BUGGYHOLOGRAM:
 	Inherits: BGGY
@@ -1383,7 +1449,7 @@ MRLS:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Forgotten MLRS
+		Name: Irradiator MLRS
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 21
@@ -1620,11 +1686,11 @@ SCRRECHARGER:
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: Vanguard
+		Name: Guardian
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
-		Description: Support hover drone.\n\nSpecial:- Generates shields around nearby friendly units.\n- Shields protect from all damage until the unit is hit 4 times.\n- Does not protect against super weapons.\n- Absorbs essence from killed enemies to heal.\n- Can Crush infantry.
+		Description: Mobile shield generator.\n\nSpecial:- Generates shields around nearby friendly units.\n- Shields protect from all damage until the unit is hit 4 times.\n- Does not protect against super weapons.\n- Absorbs essence from killed enemies to heal.\n- Can Crush infantry.
 		Prerequisites: ~scrweap, scrdepot, scrradr
 	Mobile:
 		TurnSpeed: 8
@@ -1639,10 +1705,10 @@ SCRRECHARGER:
 		TargetStances: Ally
 	ProximityExternalCondition@VanguardShield:
 		Condition: VanguardShield
-		Range: 3c0
+		Range: 4c0
 		AffectsParent: false
 	WithRangeCircle:
-		Range: 3c0
+		Range: 4c0
 		Type: VanguardShield
 	Targetable:
 		TargetTypes: Ground, Vehicle
@@ -1798,7 +1864,7 @@ CENTURION:
 	Inherits@1: ^BasicStealthDetection
 	Inherits@2: ^7CellVision
 	Valued:
-		Cost: 850
+		Cost: 800
 	Tooltip:
 		Name: Centurion
 	Buildable:
@@ -1943,7 +2009,7 @@ ECM:
 		Prerequisites: ~cabweap, cabradr
 	Mobile:
 		TurnSpeed: 3
-		Speed: 50
+		Speed: 60
 	Voiced:
 		VoiceSet: Limpet
 	AmmoPool:
@@ -2215,6 +2281,11 @@ SGEN:
 		NoTransformSounds:
 		Voice: Move
 	Carryable:
+
+ART2:
+	Inherits: HOWTLIZER
+	RenderSprites:
+		Image: howtlizer
 
 SCRDRONEC:
 	Inherits@1: ^AutoTargetGround

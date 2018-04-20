@@ -440,42 +440,42 @@ VEHICLETIBSPAWN:
 	Explodes:
 		Weapon: SpawnBerserker
 
-STALKERDUMMY:
-	Inherits: ^DUMMYAIRCRAFT
-	SelfHealing:
-		PercentageStep: -50
-		Step: 0
-		Delay: 1500
-		HealIfBelow: 200
-	Tooltip:
-		Name: Gravity Mine
-	WithShadow:
-	Health:
-		HP: 2000
-		NotifyAppliedDamage: False
-	AttackFrontal:
-	AttackWander:
-		MinMoveDelay: 0
-		MaxMoveDelay: 25
-	AttackMove:
-	Aircraft:
-		TurnSpeed: 20
-		Speed: 100
-		CruiseAltitude: 0
-	AutoTarget:
-		ScanRadius: 8
-	ProximityExternalCondition:
-		Condition: ScrinOrb
-		Range: 3c0
-		AffectsParent: false
-		ValidStances: Ally, Neutral, Enemy
-	RenderSprites:
-		Image: gavitymine
-		Palette: playerscrin
-		PlayerPalette: playerscrin
-	Armament:
-		Weapon: StalkerGrinder
-		TargetStances: Enemy, Neutral
+# STALKERDUMMY:
+	# Inherits: ^DUMMYAIRCRAFT
+	# SelfHealing:
+		# PercentageStep: -50
+		# Step: 0
+		# Delay: 1500
+		# HealIfBelow: 200
+	# Tooltip:
+		# Name: Gravity Mine
+	# WithShadow:
+	# Health:
+		# HP: 2000
+		# NotifyAppliedDamage: False
+	# AttackFrontal:
+	# AttackWander:
+		# MinMoveDelay: 0
+		# MaxMoveDelay: 25
+	# AttackMove:
+	# Aircraft:
+		# TurnSpeed: 20
+		# Speed: 100
+		# CruiseAltitude: 0
+	# AutoTarget:
+		# ScanRadius: 8
+	# ProximityExternalCondition:
+		# Condition: ScrinOrb
+		# Range: 3c0
+		# AffectsParent: false
+		# ValidStances: Ally, Neutral, Enemy
+	# RenderSprites:
+		# Image: gavitymine
+		# Palette: playerscrin
+		# PlayerPalette: playerscrin
+	# Armament:
+		# Weapon: StalkerGrinder
+		# TargetStances: Enemy, Neutral
 
 SCRINESSENCESMALL:
 	Inherits: ^DUMMYAIRCRAFT

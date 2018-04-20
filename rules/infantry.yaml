@@ -261,7 +261,7 @@ ALTNODE1:
 		PauseOnCondition: WebDisable
 		Name: OnFoot
 	Armament@1:
-		Weapon: MilitantRifle
+		Weapon: GMilitantRifle
 		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
@@ -286,10 +286,12 @@ CRUSADER:
 		Weapon: CrusaderBazooka
 		LocalOffset: 0,0,600
 		PauseOnCondition: WebDisable
+		Armaments: OnFoot
 	Armament@AA:
 		Weapon: CrusaderBazookaAA
 		LocalOffset: 0,0,600
 		PauseOnCondition: WebDisable
+		Armaments: OnFoot
 	Armament@3:
 		Weapon: GCrusaderBazooka
 		LocalOffset: 0,0,600
@@ -1678,11 +1680,11 @@ STALKER:
 		TerrainSpeeds:
 			Water: 80
 		Crushes: crate
-	Armament@prim:
-		Weapon: GravMineSuicide
-	AttackFrontal:
-		Voice: Attack
-		PauseOnCondition: WebDisable
+	# Armament@prim:
+		# Weapon: GravMineSuicide
+	# AttackFrontal:
+		# Voice: Attack
+		# PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: throw
 	-TakeCover:

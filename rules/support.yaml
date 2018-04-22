@@ -206,7 +206,7 @@ NAOBEL:
 		MuzzlePalette: obelpal
 	AttackCharges:
 		PauseOnCondition: empdisable || disabled
-		ChargeLevel: 30
+		ChargeLevel: 40
 		ChargingCondition: charging
 	AmbientSound:
 		RequiresCondition: charging && !disabled
@@ -342,8 +342,8 @@ MUCANNON:
 	Armament:
 		Weapon: LeonidCannon
 		MuzzleSequence: muzzle
-		LocalOffset: 1200,0,600
-		Recoil: 1c0
+		LocalOffset: 1400,0,700
+		# Recoil: 1c0
 	SelectionDecorations:
 	RequiresBuildableArea:
 		AreaTypes: building

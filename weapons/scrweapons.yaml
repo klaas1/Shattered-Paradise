@@ -81,7 +81,7 @@ ColossiTeslaSplash:
 	Projectile: TeslaZap
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
-		Damage: 4000
+		Damage: 1
 	-Warhead@op: FireShrapnel
 
 ColossiBlast:

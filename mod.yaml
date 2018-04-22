@@ -1,7 +1,7 @@
 Metadata:
 	Title: Shattered Paradise
 	Description: Live the Second Tiberium War in a perspective you have never seen before.\nFind your place in this apocalyptic wasteland and make your enemies fear you!\n\nShattered Paradise that brings three new factions to Tiberian Sun and\ntries to mimic the gameplay style of the original game while also adding\nmore content to the game like units and mechanics.
-	Version: {Build 20180412}
+	Version: {Build 20180421}
 	Author: Nolt, with the help of a lot of people.
 
 PackageFormats: Mix
@@ -339,6 +339,7 @@ GameSpeeds:
 		OrderLatency: 10
 
 ColorValidator:
+	TeamColorPresets: f70606, ff7a22, f8d3b3, f8e947, b6f706, f335a0, a64d6c, ce08f9, f5b2db, 12b572, 380135, 1d06f7, 328dff, 78dbf8, cef6b1, 000000
 
 ModContent:
 	InstallPromptMessage: Tiberian Sun requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the 2012 Tiberian Sun freeware release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.

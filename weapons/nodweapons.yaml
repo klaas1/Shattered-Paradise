@@ -378,7 +378,7 @@ HarpyClaw:
 	Range: 5c0
 	MinRange: 0c100
 	InvalidTargets: Air
-	Report: VenomGun0000.wav, VenomGun0001.wav, VenomGun0002.wav 
+	Report: VenomGun0000.wav, VenomGun0001.wav, VenomGun0002.wav
 	ValidTargets: Ground, Water, Vehicle, Building, Infantry
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
@@ -398,6 +398,7 @@ HarpyClawAA:
 	Range: 6c0
 	MinRange: 0c100
 	Projectile: InstantHit
+	Report: VenomGun0000.wav, VenomGun0001.wav, VenomGun0002.wav
 	InvalidTargets: Ground, Water, Vehicle, Building, Infantry
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
@@ -511,7 +512,7 @@ ObeliskLaserFire:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FF000040
 	Warhead@1Dam: SpreadDamage
-		Damage: 16500
+		Damage: 28000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 ################################################################

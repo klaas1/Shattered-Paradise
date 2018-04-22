@@ -483,7 +483,6 @@ FLOATER:
 		Range: 5c0
 	ExplodeWeapon:
 		Weapon: FloaterCloudSpawn
-	-SpawnActorOnDeath@conversion:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	-SelfHealing@poisoncloud:

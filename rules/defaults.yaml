@@ -1203,7 +1203,7 @@
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@conversion:
 		Actor: worker
-		Probability: 80
+		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: false
@@ -1507,12 +1507,6 @@
 		RequiresCondition: BugPoison
 	Armor:
 		Type: VehicleArmor
-	SpawnActorOnDeath@conversion:
-		Actor: PALADIN2
-		Probability: 100
-		OwnerType: Killer
-		DeathType: CabalDeath
-		RequiresLobbyCreeps: false
 	SpawnActorOnDeath@tiberium2:
 		Actor: vehicletibspawn
 		Probability: 25

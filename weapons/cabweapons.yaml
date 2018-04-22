@@ -135,16 +135,18 @@ GLAD120mm:
 
 LurkerProj:
 	Inherits: ^FullDamage
-	ReloadDelay: 80
+	ReloadDelay: 100
 	Range: 9c0
-	Projectile: WarheadTrailProjectile # CyclicImpactProjectile
+	Projectile: WarheadTrailProjectile
 		Offsets: 0,128,0#, 64,96,0, -64,96,0
 		Firemode: Line # try putting "Line" or "Spread" here, "Focus"
+		Inaccuracy: 0c0
 		Weapon: LurkerHit
 		Speed: 200
 		ExplosionInterval: 3
-		# Blockable: False
-		KillProjectilesWhenReachedTargetLocation: True #try putting true
+		ExplodeUnderThisAltitude: -9999
+		Blockable: False
+		KillProjectilesWhenReachedTargetLocation: false #try putting true
 	Warhead@1Dam: SpreadDamage
 		Damage: 1
 
@@ -162,16 +164,22 @@ LurkerHit:
 		MaximumLaunchSpeed: 213
 		Blockable: False
 	Warhead@1Dam: SpreadDamage
-		Damage: 4000
+		Damage: 11000
 		Versus:
-			Worker: 25
+			InfantryArmor: 100
+			BuildingArmor: 25
+			VehicleArmor: 25
+			DefenseArmor: 25
+			AircraftArmor: 100
+			ConcreteArmor: 15
 		ValidStances: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 	Warhead@2Eff: CreateEffect
 		ExplosionPalette: playercab
 		Explosions: lurkertentacle
 		ImpactSounds: expdirt1.aud
-		InvalidImpactTypes: Water
+		ValidTargets: Ground, Air
+		ForceDisplayAtGroundLevel: true
 
 CyCannon:
 	ReloadDelay: 100
@@ -185,6 +193,7 @@ CyCannon:
 		Shadow: true
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
+		Spread: 300
 		Damage: 10000
 		ValidTargets: Ground, Water
 		Versus:
@@ -216,7 +225,7 @@ WorkerMinigun:
 	Projectile: BulletAS
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
+		Damage: 1600
 		DamageTypes: Prone70Percent, TriggerProne
 
 Dogzooka:

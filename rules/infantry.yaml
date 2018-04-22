@@ -364,12 +364,12 @@ NCONF:
 		Speed: 65
 	Armament@1:
 		Weapon: TemplarLasor
-		LocalOffset: 362,0,778
+		LocalOffset: 400,0,778
 		PauseOnCondition: WebDisable
 		Name: OnFoot
 	Armament@2:
 		Weapon: GTemplarLasor
-		LocalOffset: 362,0,778
+		LocalOffset: 400,0,778
 		PauseOnCondition: WebDisable
 	Cloak@cloakgenerator:
 		RequiresCondition: !lawea
@@ -1018,7 +1018,7 @@ CABSENTRY:
 	Armor@worker:
 		Type: Worker
 	Valued:
-		Cost: 10
+		Cost: 100
 	Tooltip:
 		Name: Sentry Drone
 	Explodes:
@@ -1307,6 +1307,7 @@ MOTH:
 	Inherits: ^CabalDroneInfantry
 	Inherits@1: ^CabRender
 	Inherits@2: ^8CellVision
+	Inherits@3: ^PermanentSelfHeal
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1338,7 +1339,7 @@ MOTH:
 			Water: 80
 		RequiresCondition: !deployed && !WebDisable
 	Health:
-		HP: 30000
+		HP: 35000
 	Selectable:
 		Priority: 7
 		DecorationBounds: 22,32,-1,-9
@@ -1352,11 +1353,11 @@ MOTH:
 		UndeploySound: clicky1.aud
 	Cloak@cloakgenerator:
 		RequiresCondition: deployed
-		InitialDelay: 80
-		CloakDelay: 80
-		CloakSound: cloak5.aud
+		InitialDelay: 40
+		CloakDelay: 40
 		Palette: cloakcab
-		UncloakSound: cloak5.aud
+		-CloakSound: cloak5.aud
+		-UncloakSound: cloak5.aud
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Hovers:
@@ -1448,11 +1449,11 @@ WORKER:
 	Armor@worker:
 		Type: Worker
 	Armament@1:
-		Weapon: Minigun
+		Weapon: WorkerMinigun
 		PauseOnCondition: WebDisable
 		Name: OnFoot
 	Armament@2:
-		Weapon: GMinigun
+		Weapon: GWorkerMinigun
 		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack

@@ -361,6 +361,7 @@ MammothTusk:
 MKIITusk:
 	Inherits: MammothTusk
 	BurstDelays: 10
+	ReloadDelay: 150
 
 FighterHellfire:
 	Inherits: ^RocketWarhead

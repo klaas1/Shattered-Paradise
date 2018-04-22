@@ -53,6 +53,12 @@ TRNSPORT.Husk:
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 149
+	WithIdleOverlay@1Air:
+		Offset: 500,0,650
+		Sequence: rotor
+	WithIdleOverlay@2Ground:
+		Offset: 500,0,650
+		Sequence: slow-rotor
 	RenderSprites:
 		Image: trnsport
 		FactionImages:

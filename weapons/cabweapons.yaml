@@ -164,12 +164,13 @@ LurkerHit:
 		MaximumLaunchSpeed: 213
 		Blockable: False
 	Warhead@1Dam: SpreadDamage
+		# Spread: 0c190
 		Damage: 11000
 		Versus:
 			InfantryArmor: 100
 			BuildingArmor: 25
-			VehicleArmor: 25
-			DefenseArmor: 25
+			VehicleArmor: 10
+			DefenseArmor: 10
 			AircraftArmor: 100
 			ConcreteArmor: 15
 		ValidStances: Enemy, Neutral

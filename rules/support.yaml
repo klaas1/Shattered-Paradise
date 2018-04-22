@@ -609,7 +609,7 @@ SCRTRACTOR:
 	Tooltip:
 		Name: Tractor Beam
 	Buildable:
-		Description: Scrin Anti-Air base defense\n\nGood vs Aircraft\n\nSpecial:\n- Can attack air.\n- Slows down targetted aircraft.\n- Requires power to operate.
+		Description: Scrin Anti-Air base defense\n\nGood vs Aircraft\n\nSpecial:\n- Can attack air.\n- Freezes the targetted aircraft momentarily.\n- Requires power to operate.
 		Queue: Defense
 		Prerequisites: scrradr, ~structures.scr
 		BuildPaletteOrder: 25
@@ -635,7 +635,22 @@ SCRTRACTOR:
 		LocalOffset: 512,0,512
 	Armament@2:
 		Weapon: TractorBeam2
-		LocalOffset: 512,0,2048
+		LocalOffset: 512,600,1948
+	Armament@3:
+		Weapon: TractorBeam2
+		LocalOffset: 512,-590,1948
+	Armament@4:
+		Weapon: TractorBeam2
+		LocalOffset: 300,200,2400
+	Armament@5:
+		Weapon: TractorBeam2
+		LocalOffset: 300,-190,2400
+	Armament@6:
+		Weapon: TractorBeam2
+		LocalOffset: 512,200,1500
+	Armament@7:
+		Weapon: TractorBeam2
+		LocalOffset: 512,-190,1500
 	Power:
 		Amount: -20
 	SelectionDecorations:

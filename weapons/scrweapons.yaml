@@ -609,7 +609,7 @@ TractorBeam:
 	Inherits: ^FullDamage
 	ReloadDelay: 50
 	Range: 10c0
-	Report: sonic4.aud
+	Report: triplasor0000.wav, triplasor0001.wav, triplasor0002.wav
 	ValidTargets: Air
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
@@ -623,11 +623,13 @@ TractorBeam:
 		ValidTargets: Air
 
 TractorBeam2:
-	ReloadDelay: 5
+	ReloadDelay: 50
 	Range: 8c0
 	ValidTargets: Air
 	Projectile: LaserZap
 		Color: 50F5FF45
+		Width: 50
+		Duration: 15
 	Warhead@1Dam: SpreadDamage
 		Damage: 1
 		ValidTargets: Air

@@ -251,8 +251,8 @@ explosion:
 	tib_expsmall: tibexpsmall
 	cabexplo: cabexplo
 	lurkertentacle: lurkertentacle
-		Offset: 0, -12, 12
-		Tick: 15
+		Offset: 0, -18, 12
+		Tick: 10
 	cabspark: cabspark
 	destroexp: destroexp
 	lightningexplo: lightningexplo

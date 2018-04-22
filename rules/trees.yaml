@@ -246,6 +246,7 @@ MINIVEIN:
 	-DamageMultiplier@Veinhole:
 	-Sellable:
 	-RepairableBuilding: 
+	-MustBeDestroyed:
 	Health:
 		HP: 80000
 	Selectable:

@@ -1685,8 +1685,8 @@
 		LandWhenIdle: false
 		Voice: Move
 		RepulsionSpeed: 30
-		CruiseAltitude: 2560
-		AltitudeVelocity: 250
+		CruiseAltitude: 3060
+		AltitudeVelocity: 300
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, Building
 	Passenger:
 		CargoType: Aircraft
@@ -1751,7 +1751,6 @@
 	Inherits@3: ^AutoTargetAir
 	Aircraft:
 		LandWhenIdle: False
-		CruiseAltitude: 2560
 	ReturnOnIdle:
 
 ^AircraftHusk:

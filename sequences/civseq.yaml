@@ -1345,3 +1345,16 @@ gaicbm:
 	make: gaicbmmk
 		Length: 30
 		ShadowStart: 30
+
+radiotower:
+	Defaults:
+		Offset: 0, -63, 48
+		DepthSpriteOffset: 0, 0
+	idle:
+		ShadowStart: 2
+	damaged-idle:
+		Start: 1
+		ShadowStart: 3
+	dead:
+		Start: 1
+		ShadowStart: 3

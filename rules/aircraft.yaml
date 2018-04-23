@@ -459,11 +459,6 @@ CERBERUS:
 	AttackHeli:
 		FacingTolerance: 64
 		Voice: Attack
-	AmmoPool:
-		Ammo: 999
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:
 	-WithVoxelBody:
@@ -486,8 +481,8 @@ CERBERUS:
 	WithRangeCircle:
 		Range: 4c0
 		Type: cloakgenerator
-	ReloadAmmoPool@1:
-		Delay: 1
+	-ReloadAmmoPool@AIReload:
+	-AmmoPool:
 
 MUTHELI:
 	Inherits: ^Helicopter
@@ -663,45 +658,9 @@ MUTBIRD:
 		Name: Seeder Bird
 	-Buildable:
 
-SCRPOD:
-	Inherits: ^Plane
-	Inherits@2: ^ScrinRender
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Transport Shuttle
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
-	-SelectionDecorations:
-	-AppearsOnRadar:
-	Selectable:
-		Bounds: 1,1
-	Aircraft:
-		MaximumPitch: 300
-		CruiseAltitude: 3000
-		TurnSpeed: 5
-		Speed: 500
-		AirborneCondition: airborne
-		MoveIntoShroud: true
-	Health:
-		HP: 30000
-	RevealsShroud:
-		Range: 0c0
-		Type: CenterPosition
-	-AttackMove:
-	-RenderVoxels:
-	-WithVoxelBody:
-	RenderSprites:
-	BodyOrientation:
-		QuantizedFacings: 32
-	WithFacingSpriteBody:
-	FlyAwayOnIdle:
-	RejectsOrders:
-
 STORMRIDER:
 	Inherits: ^Plane
 	Inherits@1: ^AutoTargetAllAssaultMove
-	Inherits@2: ^SelfReloads
 	Inherits@3: ^11CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -728,10 +687,8 @@ STORMRIDER:
 		HP: 10000
 	Armament:
 		Weapon: StormRiderBlast
-		PauseOnCondition: !ammo
 	Armament@AA:
 		Weapon: StormRiderBlastAA
-		PauseOnCondition: !ammo
 	-ReturnOnIdle:
 	-RenderVoxels:
 	-WithVoxelBody:
@@ -739,19 +696,14 @@ STORMRIDER:
 	WithFacingSpriteBody:
 	AttackTurreted:
 	Turreted:
-	AmmoPool:
-		Ammo: 15
-		PipCount: 0
-		ReloadCount: 5
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		AmmoCondition: ammo
 	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: STORMRIDER.Husk
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
+	-AmmoPool:
+	-ReloadAmmoPool@AIReload:
 
 drache:
 	Inherits: ^Helicopter
@@ -810,7 +762,6 @@ SCRGLYDER1:
 	Inherits: ^Helicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^SelfReloads
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 800
@@ -833,16 +784,9 @@ SCRGLYDER1:
 	Armament:
 		Weapon: Glyder1Cannon
 		LocalOffset: 0,0,-100
-		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
-	AmmoPool:
-		Ammo: 5
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		AmmoCondition: ammo
 	AutoTarget:
 	-RenderVoxels:
 	-WithVoxelBody:
@@ -861,12 +805,13 @@ SCRGLYDER1:
 		Color: E0D048
 		ZOffset: 9999
 		RequiresCondition: !lawea
+	-AmmoPool:
+	-ReloadAmmoPool@AIReload:
 
 SCRDESTROYER:
 	Inherits: ^Helicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^SelfReloads
 	Inherits@5: ^7CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -894,16 +839,9 @@ SCRDESTROYER:
 	Armament:
 		Weapon: DestroyerCannon
 		LocalOffset: 300,0,0
-		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
-	AmmoPool:
-		Ammo: 5
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		AmmoCondition: ammo
 	AutoTarget:
 	-RenderVoxels:
 	-WithVoxelBody:
@@ -916,6 +854,8 @@ SCRDESTROYER:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
+	-AmmoPool:
+	-ReloadAmmoPool@AIReload:
 
 SCRTRANS:
 	Inherits: ^Helicopter
@@ -1028,7 +968,6 @@ SCRCARRIER:
 	Inherits: ^Helicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -1078,6 +1017,8 @@ SCRCARRIER:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
+	-AmmoPool:
+	-ReloadAmmoPool@AIReload:
 
 STORMRIDERSPAWN:
 	Inherits: STORMRIDER
@@ -1125,6 +1066,9 @@ STORMRIDERSPAWN:
 		Condition: ForceReturn
 	-SpawnActorOnDeath:
 	-SmokeParticleEmitter:
+	-GrantConditionOnDamageState@spawnsparks:
+	-ExplodeWeapon@spawnsparks:
+	-ExternalCondition@spawnsparks:
 
 CABDRONEJET:
 	Inherits: STORMRIDERSPAWN
@@ -1153,7 +1097,6 @@ SCRBATTLESHIP:
 	Inherits: ^Helicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^SelfReloads
 	Inherits@5: ^PermanentSelfHeal
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -1184,19 +1127,13 @@ SCRBATTLESHIP:
 	Armament:
 		Weapon: BattleshipCannon
 		LocalOffset: 0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
-		PauseOnCondition: !ammo
 	AttackTurreted:
 	Turreted:
-	AmmoPool:
-		Ammo: 25
-		PipCount: 0
-		ReloadDelay: 5
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		AmmoCondition: ammo
 	AutoTarget:
 	-RenderVoxels:
 	-WithVoxelBody:
+	-AmmoPool:
+	-ReloadAmmoPool@AIReload:
 	RenderSprites:
 	WithFacingSpriteBody:
 	BodyOrientation:
@@ -1211,7 +1148,6 @@ WASP:
 	Inherits: ^Helicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^BasicStealthDetection
-	Inherits@3: ^SelfReloads
 	Inherits@4: ^11CellVision
 	Inherits@5: ^CabRender
 	Inherits@Shadow: ^AircraftShadow
@@ -1253,22 +1189,16 @@ WASP:
 		Weapon: WaspLasorAA
 		AmmoPoolName: Rocket
 		LocalOffset: 200, 350,-100
-		PauseOnCondition: !ammo
 	Armament@TheRealThing:
 		Weapon: WaspBullet
-		PauseOnCondition: !ammo
 	Armament@TheRealThingAA:
 		Weapon: WaspBulletAA
-		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
-	AmmoPool:
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		AmmoCondition: ammo
 	AutoTarget:
+	-AmmoPool:
+	-ReloadAmmoPool@AIReload:
 	-RenderVoxels:
 	-WithVoxelBody:
 	RenderSprites:
@@ -1305,8 +1235,6 @@ FIREFLY:
 		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
 		HP: 10000
-	Transforms:
-		IntoActor: cabsentryturret
 	-RenderVoxels:
 	-WithVoxelBody:
 	RenderSprites:
@@ -1326,11 +1254,10 @@ BASILISK:
 	Inherits: ^Helicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^Ra2vxl
-	Inherits@3: ^SelfReloads
 	Inherits@4: ^CabRender
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1800
+		Cost: 2000
 	Tooltip:
 		Name: Basilisk
 	Buildable:
@@ -1347,24 +1274,19 @@ BASILISK:
 		Speed: 75
 		MoveIntoShroud: true
 	Health:
-		HP: 35000
+		HP: 50000
 	Armament:
 		Weapon: BasiliskBomb
 		LocalOffset: 128,0,0, 500,-700,0, 500,700,0
-		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
-	AmmoPool:
-		Ammo: 5
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		AmmoCondition: ammo
 	AutoTarget:
 	RenderSprites:
 	-RenderVoxels:
 	-WithVoxelBody:
+	-AmmoPool:
+	-ReloadAmmoPool@AIReload:
 	WithFacingSpriteBody:
 	SpawnActorOnDeath:
 		Actor: BASILISK.Husk
@@ -1373,7 +1295,6 @@ DEVOURER:
 	Inherits: ^Helicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^PermanentSelfHeal
-	Inherits@3: ^SelfReloads
 	Inherits@5: ^CabRender
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -1425,3 +1346,5 @@ DEVOURER:
 		Actor: DEVOURER.Husk
 	ExternalCondition@DevoBuff:
 		Condition: DevoBuff
+	-AmmoPool:
+	-ReloadAmmoPool@AIReload:

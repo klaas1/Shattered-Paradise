@@ -2697,3 +2697,14 @@ EGGS:
 		RequiresLobbyCreeps: true
 	RequiresBuildableArea:
 		AreaTypes: building
+
+RADIOTOWER:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Communications Tower
+	Health:
+		HP: 10000
+	Armor:
+		Type: BuildingArmor
+	RenderSprites:
+		Palette: player

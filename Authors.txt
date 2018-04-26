@@ -76,6 +76,7 @@ soundpacks.com	: Various sound effects.
 
 Comrade Crimson		: GDI Marine, Mutant Vehicle quotes.
 DrWhitePsyker		: Stealth Tank
+Graion Dilach		: Forgotten MCV
 HiJinxy				: Harvester
 SchismNavigator		: Beam Cannon
 SkyHunter713		: Guardian Platform

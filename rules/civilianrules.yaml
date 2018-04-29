@@ -470,7 +470,6 @@ FLOATER:
 	Inherits: ^HoverVehicle
 	Tooltip:
 		Name: Floater
-	-GainsExperience:
 	Health:
 		HP: 10000
 		Shape: Circle

@@ -133,7 +133,6 @@ ORCAB:
 	Selectable:
 		Bounds: 30,24
 	Aircraft:
-		CruiseAltitude: 3072
 		MaximumPitch: 120
 		TurnSpeed: 4
 		IdealSeparation: 256
@@ -567,7 +566,6 @@ WETP:
 	Selectable:
 		Bounds: 30,24
 	Aircraft:
-		CruiseAltitude: 3072
 		MaximumPitch: 120
 		TurnSpeed: 6
 		Speed: 170

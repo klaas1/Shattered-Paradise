@@ -992,6 +992,50 @@
 	EditorTilesetFilter:
 		Categories: Buildable Structure
 
+^Defence:
+	Inherits: ^Building
+	Inherits@1: ^AutoTargetAll
+	Inherits@2: ^DisableOnLowPowerOrPowerDown
+	Inherits@3: ^8CellVision
+	RevealsShroud:
+		Type: Footprint 
+	-GivesBuildableArea:
+	-SpawnActorOnDeath@tiberium2:
+	AutoTarget:
+	-MustBeDestroyed:
+	RenderRangeCircle:
+	Targetable@Defence:
+		TargetTypes: Defence
+	-EmitInfantryOnSell@gdi:
+	-EmitInfantryOnSell@nod:
+	-EmitInfantryOnSell@cab:
+	-EmitInfantryOnSell@mut:
+	-EmitInfantryOnSell@scr:
+	Armor:
+		Type: DefenseArmor
+	EditorTilesetFilter:
+		Categories: Defence
+	Replacement:
+		ReplaceableTypes: Tower
+
+^AntiAir:
+	Inherits: ^Defence
+	Inherits@0: ^10CellVision
+	RenderRangeCircle:
+		RangeCircleType: AA
+	RevealsShroud:
+		Type: Footprint 
+
+^Tier2:
+	Inherits: ^Defence
+	RenderRangeCircle:
+		RangeCircleType: Tier2
+
+^MiscTurret:
+	Inherits: ^Defence
+	RenderRangeCircle:
+		RangeCircleType: MiscTurret
+
 ^CivBuilding:
 	Inherits: ^BasicBuilding
 	Inherits@0: ^7CellVision
@@ -1474,6 +1518,7 @@
 		Radius: 3c0
 	Crushable:
 		CrushClasses: Vehicle
+		WarnProbability: 0
 	Valued:
 		Cost: 1
 	Mobile:
@@ -1685,7 +1730,7 @@
 		LandWhenIdle: false
 		Voice: Move
 		RepulsionSpeed: 30
-		CruiseAltitude: 3060
+		CruiseAltitude: 3c256
 		AltitudeVelocity: 300
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, Building
 	Passenger:
@@ -1708,9 +1753,6 @@
 	WithVoxelBody:
 	EditorTilesetFilter:
 		Categories: Aircraft
-	Repairable:
-		RepairBuildings: gadept, scrdepot
-		Voice: Move
 	AmmoPool:
 		Ammo: 8
 	ReloadAmmoPool@AIReload:
@@ -1735,7 +1777,7 @@
 	Inherits: ^Aircraft
 	Aircraft:
 		LandWhenIdle: False
-		CruiseAltitude: 2048
+		CruiseAltitude: 2c256
 		CanHover: True
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 		TakeOffOnResupply: true
@@ -1941,45 +1983,6 @@
 	Inherits: ^Decoration
 	Tooltip:
 		Name: Palette
-
-^Defence:
-	Inherits: ^Building
-	Inherits@1: ^AutoTargetAll
-	Inherits@2: ^DisableOnLowPowerOrPowerDown
-	Inherits@3: ^8CellVision
-	RevealsShroud:
-		Type: Footprint 
-	-GivesBuildableArea:
-	-SpawnActorOnDeath@tiberium2:
-	AutoTarget:
-	-MustBeDestroyed:
-	RenderRangeCircle:
-	Targetable@Defence:
-		TargetTypes: Defence
-	Armor:
-		Type: DefenseArmor
-	EditorTilesetFilter:
-		Categories: Defence
-	Replacement:
-		ReplaceableTypes: Tower
-
-^AntiAir:
-	Inherits: ^Defence
-	Inherits@0: ^10CellVision
-	RenderRangeCircle:
-		RangeCircleType: AA
-	RevealsShroud:
-		Type: Footprint 
-
-^Tier2:
-	Inherits: ^Defence
-	RenderRangeCircle:
-		RangeCircleType: Tier2
-
-^MiscTurret:
-	Inherits: ^Defence
-	RenderRangeCircle:
-		RangeCircleType: MiscTurret
 
 ^DeployedVehicle:
 	Inherits: ^GenericEffects

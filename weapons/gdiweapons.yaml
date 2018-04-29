@@ -226,7 +226,7 @@ JuggCannon:
 
 SonicZap:
 	ReloadDelay: 60
-	Range: 6c0
+	Range: 5c0
 	Report: sonic4.aud
 	Projectile: AreaBeam
 		Speed: 0c250

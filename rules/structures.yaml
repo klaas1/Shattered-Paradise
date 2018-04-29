@@ -164,8 +164,6 @@ GAHPAD:
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-platform
 		UseDeathTypeSuffix: false
-	Power:
-		Amount: -10
 	Selectable:
 		Bounds: 88, 66, 0, -5
 		DecorationBounds: 88, 66, 0, -5
@@ -330,7 +328,7 @@ NAHAND:
 NODREF:
 	Inherits: PROC
 	Tooltip:
-		Name: NOD Refinery
+		Name: Nod Refinery
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
@@ -344,7 +342,7 @@ NODREF:
 NODREF2:
 	Inherits: FLIPPEDPROC
 	Tooltip:
-		Name: NOD Refinery
+		Name: Nod Refinery
 	RenderSprites:
 		-Image: proc.gdi
 		-FactionImages:
@@ -452,8 +450,6 @@ NAHPAD:
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-platform
 		UseDeathTypeSuffix: false
-	Power:
-		Amount: -10
 	Selectable:
 		Bounds: 78, 48, 0, -6
 		DecorationBounds: 78, 54, 0, -8
@@ -748,8 +744,6 @@ MUAIR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	Power:
-		Amount: -10
 	ProductionBar:
 	Selectable:
 		Bounds: 88, 66, 0, -5
@@ -1141,8 +1135,6 @@ SCRAIR:
 		Sequence: idle-platform
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-	Power:
-		Amount: -10
 	Selectable:
 		Bounds: 120, 130, 0, -40
 		DecorationBounds: 120, 130, 0, -40
@@ -1436,8 +1428,6 @@ CABAIR:
 	Reservable:
 	RepairsUnits:
 	ProductionBar:
-	Power:
-		Amount: -10
 	Selectable:
 		Bounds: 88, 66, 0, -5
 		DecorationBounds: 88, 66, 0, -5

@@ -611,6 +611,8 @@ FLIPPEDPROC:
 	ProductionBar:
 	Health:
 		HP: 60000
+	Power:
+		Amount: -20
 	WithSpriteBody:
 		PauseOnCondition: disabled
 
@@ -1037,7 +1039,7 @@ TRNSPORT:
 		IdealSeparation: 3c0
 		TurnSpeed: 5
 		Speed: 130
-		CruiseAltitude: 2800
+		CruiseAltitude: 2c768
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:

@@ -132,9 +132,13 @@ explosion:
 	medium_grey_explosion: xgrymed1
 	large_grey_explosion: xgrymed2
 	fire1: fire1
+		ZOffset: 2048
 	fire2: fire2
+		ZOffset: 2048
 	fire3: fire3
+		ZOffset: 2048
 	fire4: fire4
+		ZOffset: 2048
 	sparks: sparks
 	sparks2: sparks2
 	sparks3: sparks3
@@ -267,12 +271,12 @@ explosion:
 		Offset: -5,-12, 12
 	scrinpulse3: scrinpulse3
 		Offset: -5,-12, 12
-	scrinenergyeff: scrinenergyeff
-		Tick: 25
-	vanguardshockwave: vanguardshockwave
-		Offset: 0,-12, 12
-	stalkershockwave: stalkershockwave
-		Offset: 0,-12, 12
+	# scrinenergyeff: scrinenergyeff
+		# Tick: 25
+	# vanguardshockwave: vanguardshockwave
+		# Offset: 0,-12, 12
+	# stalkershockwave: stalkershockwave
+		# Offset: 0,-12, 12
 	firestormexplo: firestormexplo
 	firestormexplo1: firestormexplo1
 	firestormexplo2: firestormexplo2

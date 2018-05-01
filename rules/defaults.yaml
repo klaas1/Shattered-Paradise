@@ -719,9 +719,19 @@
 		ValidDamageStates: Critical, Heavy
 	ExplodeWeapon@spawnsparks:
 		RequiresCondition: spawnsparks && !cloakgenerator
-		Weapon: DebrisSpawner
+		Weapon: SparkSpawner
 	ExternalCondition@spawnsparks:
 		Condition: spawnsparks
+
+^SpawnFire:
+	GrantConditionOnDamageState@SpawnFire:
+		Condition: SpawnFire
+		ValidDamageStates: Critical, Heavy
+	ExplodeWeapon@SpawnFire:
+		RequiresCondition: SpawnFire && !cloakgenerator
+		Weapon: BuildingCriticalDamageFireSpawner
+	ExternalCondition@SpawnFire:
+		Condition: SpawnFire
 
 ^DamagedByRadioactivity: #Damage = DamageCoeff * RadioactivityLevel / MaxLevel
 	DamagedByRadioactivity@Default:
@@ -883,6 +893,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^1x1Shape
+	Inherits@4: ^SpawnFire
 	WithTextControlGroupDecoration:
 	# DelayedWeaponAttachable:
 		# Type: bomb
@@ -907,6 +918,14 @@
 		DamagedSounds: expnew01.aud
 		DestroyedSounds: crmble2.aud
 	WithSpriteBody:
+	Explodes@BuildingFireSmallParticleSpawner:
+		Weapon: BuildingFireSmallParticleSpawner
+		EmptyWeapon: BuildingFireSmallParticleSpawner
+		Type: Footprint
+	Explodes@BuildingFireBigSpawn:
+		Weapon: BuildingFireBigParticleSpawner
+		EmptyWeapon: BuildingFireBigParticleSpawner
+		Type: Footprint
 	Explodes:
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode

@@ -1775,7 +1775,7 @@
 	Inherits: ^Aircraft
 	Aircraft:
 		LandWhenIdle: False
-		CruiseAltitude: 2c256
+		CruiseAltitude: 3c512
 		CanHover: True
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 		TakeOffOnResupply: true

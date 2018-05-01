@@ -131,8 +131,6 @@ rank:
 	rank-veteran-1: newpips
 	rank-veteran-2: newpips
 		Start: 1
-	rank-veteran-3: newpips
-		Start: 2
 	rank-elite: newpips
 		Start: 3
 

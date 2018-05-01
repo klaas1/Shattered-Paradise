@@ -242,73 +242,48 @@
 ^GainsExperience:
 	GainsExperience:
 		Conditions:
-			200: rank-veteran
-			400: rank-veteran
-			800: rank-veteran
-			1600: rank-veteran
+			300: rank-veteran
+			600: rank-veteran
+			900: rank-veteran
 	GrantCondition@RANK-ELITE:
-		RequiresCondition: rank-veteran >= 4
+		RequiresCondition: rank-veteran >= 3
 		Condition: rank-elite
 	DamageMultiplier@RANK-1:
 		RequiresCondition: rank-veteran == 1
-		Modifier: 95
+		Modifier: 90
 	DamageMultiplier@RANK-2:
 		RequiresCondition: rank-veteran == 2
-		Modifier: 90
-	DamageMultiplier@RANK-3:
-		RequiresCondition: rank-veteran == 3
-		Modifier: 85
+		Modifier: 80
 	DamageMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
-		Modifier: 75
+		Modifier: 70
 	FirepowerMultiplier@RANK-1:
 		RequiresCondition: rank-veteran == 1
-		Modifier: 105
+		Modifier: 110
 	FirepowerMultiplier@RANK-2:
 		RequiresCondition: rank-veteran == 2
-		Modifier: 110
-	FirepowerMultiplier@RANK-3:
-		RequiresCondition: rank-veteran == 3
 		Modifier: 120
 	FirepowerMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 130
 	SpeedMultiplier@RANK-1:
 		RequiresCondition: rank-veteran == 1
-		Modifier: 105
+		Modifier: 110
 	SpeedMultiplier@RANK-2:
 		RequiresCondition: rank-veteran == 2
-		Modifier: 110
-	SpeedMultiplier@RANK-3:
-		RequiresCondition: rank-veteran == 3
 		Modifier: 120
 	SpeedMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
-		Modifier: 140
+		Modifier: 130
 	ReloadDelayMultiplier@RANK-1:
 		RequiresCondition: rank-veteran == 1
-		Modifier: 95
+		Modifier: 90
 	ReloadDelayMultiplier@RANK-2:
 		RequiresCondition: rank-veteran == 2
-		Modifier: 90
-	ReloadDelayMultiplier@RANK-3:
-		RequiresCondition: rank-veteran == 3
-		Modifier: 85
+		Modifier: 80
 	ReloadDelayMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
-		Modifier: 75
-	InaccuracyMultiplier@RANK-1:
-		RequiresCondition: rank-veteran == 1
-		Modifier: 90
-	InaccuracyMultiplier@RANK-2:
-		RequiresCondition: rank-veteran == 2
-		Modifier: 80
-	InaccuracyMultiplier@RANK-3:
-		RequiresCondition: rank-veteran == 3
 		Modifier: 70
-	InaccuracyMultiplier@RANK-ELITE:
-		RequiresCondition: rank-elite
-		Modifier: 50
 	SelfHealing@ELITE:
 		PercentageStep: 1
 		Delay: 150
@@ -331,14 +306,6 @@
 		RequiresCondition: rank-veteran == 2
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
-	WithDecoration@RANK-3:
-		Image: rank
-		Sequence: rank-veteran-3
-		Palette: pips
-		ReferencePoint: Bottom, Right
-		RequiresCondition: rank-veteran == 3
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
 	WithDecoration@RANK-ELITE:
 		Image: rank
 		Sequence: rank-elite
@@ -347,17 +314,14 @@
 		RequiresCondition: rank-elite
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
-	GivesExperienceMultiplier@2:
+	GivesExperienceMultiplier@RANK-1:
 		Modifier: 150
 		RequiresCondition: rank-veteran == 1
-	GivesExperienceMultiplier@3:
+	GivesExperienceMultiplier@RANK-2:
 		Modifier: 200
 		RequiresCondition: rank-veteran == 2
-	GivesExperienceMultiplier@4:
+	GivesExperienceMultiplier@RANK-ELITE:
 		Modifier: 250
-		RequiresCondition: rank-veteran == 3
-	GivesExperienceMultiplier@1:
-		Modifier: 300
 		RequiresCondition: rank-elite
 
 ^TyrannyBuff:

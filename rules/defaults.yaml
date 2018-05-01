@@ -1507,8 +1507,6 @@
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	WithTextControlGroupDecoration:
-	# DelayedWeaponAttachable:
-		# Type: bomb
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	Chronoshiftable:
@@ -1730,7 +1728,7 @@
 		LandWhenIdle: false
 		Voice: Move
 		RepulsionSpeed: 30
-		CruiseAltitude: 3c256
+		CruiseAltitude: 4c0
 		AltitudeVelocity: 300
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, Building
 	Passenger:

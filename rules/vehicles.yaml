@@ -1523,9 +1523,7 @@ DEATHCLAW:
 		SharesCell: False
 		-RequiresCondition: !WebDisable
 	Armament:
-		Weapon: DeathclawBlow
-	Armament@1:
-		Weapon: DeathclawBlow2
+		Weapon: RavagerStrike
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:

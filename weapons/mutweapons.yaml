@@ -348,12 +348,12 @@ BullBuff:
 		Condition: WolfBuff
 		ValidStances: Ally
 
-DeathclawBlow:
+RavagerStrike:
 	Inherits: ^FullDamage
 	ReloadDelay: 30
 	Range: 1c512
 	Report: fiend2.aud
-	ValidTargets: Vehicle, Defence, Infantry
+	ValidTargets: Vehicle, Defence, Infantry, Building
 	Projectile: BulletAS
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
@@ -361,20 +361,8 @@ DeathclawBlow:
 		Damage: 2380
 		ValidTargets: Vehicle, Defence, Infantry
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
-
-DeathclawBlow2:
-	Inherits: ^FullDamage
-	ReloadDelay: 60
-	Range: 2c0
-	Report: fiend2.aud
-	ValidTargets: Building
-	Projectile: BulletAS
-		Speed: 5c682
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c090
-		Damage: 4000
-		ValidTargets: Building
-		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+		Versus:
+			InfantryArmor: 125
 
 IFVulcan:
 	Inherits: ^RifleWarhead
@@ -475,12 +463,18 @@ MiniNuke:
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c0
 		Damage: 4500
+		Versus:
+			BuildingArmor: 115
 	Warhead@ClusterDamage3: SpreadDamage
 		Spread: 1c512
 		Damage: 7500
+		Versus:
+			BuildingArmor: 115
 	Warhead@7Dam_areanukeb: SpreadDamage
 		Spread: 2c0
 		Damage: 1500
+		Versus:
+			BuildingArmor: 115
 	Warhead@8Radio: CreateRadioactivity
 		Range: 1, 2, 3, 4, 5, 6
 		Level: 1000

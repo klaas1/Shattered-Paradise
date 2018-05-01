@@ -1250,6 +1250,7 @@ MUTMCV:
 		Voice: Move
 	Voiced:
 		VoiceSet: MutantMCV
+		Volume: 0.8
 
 MUTQUAD:
 	Inherits: ^VoxelTank

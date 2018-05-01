@@ -21,7 +21,7 @@ GrenadierBazooka:
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
 		ValidTargets: Ground, Water
-		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 
 GrenadierBazookaAA:
 	Inherits: GrenadierBazooka

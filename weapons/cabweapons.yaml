@@ -388,7 +388,7 @@ WaspLasor:
 	Range: 6c0
 	MinRange: 0c100
 	Report: lastur1.aud
-	ValidTargets: Ground, Water
+	ValidTargets: Infantry, Vehicle, Building, Defence, Ground, Water
 	InvalidTargets: Air
 	Projectile: LaserZap
 		Color: 0dc7b8
@@ -401,7 +401,7 @@ WaspLasor:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Damage: 1
-		ValidTargets: Ground, Water
+		ValidTargets: Infantry, Vehicle, Building, Defence, Ground, Water
 		InvalidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
@@ -409,11 +409,11 @@ WaspLasorAA:
 	Inherits: WaspLasor
 	ReloadDelay: 30
 	ValidTargets: Air
-	InvalidTargets: Ground, Water
+	InvalidTargets: Infantry, Vehicle, Building, Defence, Ground, Water
 	Warhead@1Dam: SpreadDamage
 		Damage: 1
 		ValidTargets: Air
-		InvalidTargets: Ground, Water
+		InvalidTargets: Infantry, Vehicle, Building, Defence, Ground, Water
 
 WaspBullet:
 	Inherits: ^APWarhead

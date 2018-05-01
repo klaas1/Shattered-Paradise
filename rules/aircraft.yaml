@@ -1171,22 +1171,19 @@ WASP:
 		VoiceSet: Limpet
 	Armament@1:
 		Weapon: WaspLasor
-		LocalOffset: 200,350,-100
-		PauseOnCondition: !ammo
+		LocalOffset: 250,350,-100
 	Armament@2:
 		Weapon: WaspLasor
 		AmmoPoolName: Rocket
-		LocalOffset: 200,-350,-100
-		PauseOnCondition: !ammo
+		LocalOffset: 250,-350,-100
 	Armament@3:
 		Weapon: WaspLasorAA
 		AmmoPoolName: Rocket
-		LocalOffset: 200,-350,-100
-		PauseOnCondition: !ammo
+		LocalOffset: 250,-350,-100
 	Armament@4:
 		Weapon: WaspLasorAA
 		AmmoPoolName: Rocket
-		LocalOffset: 200, 350,-100
+		LocalOffset: 250, 350,-100
 	Armament@TheRealThing:
 		Weapon: WaspBullet
 	Armament@TheRealThingAA:

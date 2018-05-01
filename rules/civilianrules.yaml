@@ -231,6 +231,8 @@ DOGGIE:
 	Armor:
 		Type: InfantryArmor
 	-RevealsShroud:
+	-GainsExperience:
+	-ProducibleWithLevel:
 	Mobile:
 		Speed: 120
 		Crushes: nada
@@ -484,6 +486,8 @@ FLOATER:
 		Weapon: FloaterCloudSpawn
 	QuantizeFacingsFromSequence:
 		Sequence: stand
+	-GainsExperience:
+	-ProducibleWithLevel:
 	-SelfHealing@poisoncloud:
 	-ExternalCondition@CloudPoison:
 	WithSpriteBody:

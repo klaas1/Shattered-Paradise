@@ -1039,6 +1039,7 @@ TRNSPORT:
 		IdealSeparation: 3c0
 		TurnSpeed: 5
 		Speed: 130
+		CruiseAltitude: 3c768
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:

@@ -139,7 +139,6 @@ Weapons:
 	sp|weapons/cabweapons.yaml
 	sp|weapons/scrweapons.yaml
 	sp|weapons/garrisonweapons.yaml
-	sp|weapons/miscweapons.yaml
 
 Sequences:
 	sp|sequences/misc.yaml

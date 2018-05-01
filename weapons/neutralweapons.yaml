@@ -297,3 +297,140 @@ LTrail:
 4tnktusk:
 	Inherits: MammothTusk
 	Range: 6c0
+
+EngineerCapture:
+	ReloadDelay: 200
+	Report: klax1.aud
+	ValidTargets: Building
+	Range: 1c0
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+		ValidTargets: Building
+	Warhead@2Dam: CaptureActor
+		ValidTargets: Building
+
+LightTowerClaxon:
+	ReloadDelay: 200
+	Report: klax1.aud
+	ValidTargets: Ground, Water, Air
+	Range: 10c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+	ValidTargets: Ground, Water, Air
+	Projectile: InstantExplode
+
+
+GreenTibRadiation:
+	ReloadDelay: 100
+	Projectile: InstantExplode
+	Warhead@8Radio: CreateRadioactivity
+		Range: 1, 2, 3, 4, 5
+		Falloff: 100, 65, 45, 25, 5
+		Level: 32
+		MaxLevel: 250
+		RadioactivityLayerName: HarmlessRadiationGreen
+
+BlueTibRadiation:
+	Inherits: GreenTibRadiation
+	Warhead@8Radio: CreateRadioactivity
+		RadioactivityLayerName: BlueRadiation
+		Range: 1, 2, 3, 4
+		Falloff: 100, 50, 25, 5
+
+SpawnVisc:
+	ReloadDelay: 25
+	Range: 2c0
+	Burst: 1
+	BurstDelays: 1
+	ValidTargets: ViscMale
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+    	ValidTargets: ViscMale
+		Damage: 1
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+	Warhead@5Actor: SpawnActor
+		Actors: VISC_SML
+		FallRate: 5000
+		Range: 3
+		ValidTargets: Ground, Water, Infantry, Air, Vehicle, Building, Wall
+
+SpawnZombie:
+	Inherits: SpawnVisc
+	Warhead@5Actor: SpawnActor
+		Actors: ZOMBIE
+
+SpawnBerserker:
+	Inherits: SpawnVisc
+	Warhead@5Actor: SpawnActor
+		Actors: BERSERKER
+
+SlimeAttack:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 80
+	Range: 1c512
+	Report: vicer1.aud
+	Projectile: BulletAS
+		Speed: 426
+	Warhead@1Dam: SpreadDamage
+		Damage: 6000
+		Versus:
+			VehicleArmor: 60
+			DefenseArmor: 60
+			ConcreteArmor: 20
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
+
+VeinholeAttack:
+	ReloadDelay: 50
+	Range: 5c0
+	Report:
+	Projectile: InstantExplode
+	InvalidTargets: Veinhole
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
+	Warhead@5Actor: SpawnActor
+		Actors: cloud1
+		FallRate: 5000
+		Range: 3
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@8Radio: CreateRadioactivity
+		Range: 1, 2, 3, 4
+		Level: 10
+		Falloff: 100, 50, 25, 5
+		MaxLevel: 1000
+
+FloaterCloudSpawn:
+	Inherits: VeinholeAttack
+	ReloadDelay: 100
+
+Veins:
+	ReloadDelay: 12
+	Warhead@Damage: SpreadDamage
+		Spread: 42
+		Damage: 6
+		DamageTypes: TiberiumDeath
+	Warhead@Effect: CreateEffect
+		Explosions: veins
+		ExplosionPalette: player
+
+Repair:
+	ReloadDelay: 80
+	Range: 1c819
+	Report: REPAIR11.AUD
+	ValidTargets: Repair
+	Projectile: BulletAS
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		DebugOverlayColor: 00FF00
+		Spread: 213
+		Damage: -5000
+		ValidTargets: Repair
+
+Demolish:
+	Warhead@1Dam: SpreadDamage
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_twlt
+		ExplosionPalette: effectalpha75
+		ImpactSounds: expnew09.aud

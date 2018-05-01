@@ -16,6 +16,7 @@ BoolBada			: Another code wizzard, responsible for carrier logic and other fun s
 FiveAces			: Streaming.
 SchismNavigator		: Worked on SP for some time.
 4XS					: For his help with concept art. http://4-x-s.deviantart.com/
+LawAndOrder			: Help with yaml maintenance.
 Noddy				: Asset Hunter.
 Voidwalker			: Coding & Maintenance.
 ZxGanon				: Balance & Streaming.

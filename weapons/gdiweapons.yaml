@@ -88,7 +88,7 @@ TrooperRail:
 	ReloadDelay: 75
 	Range: 5c0
 	Report: railgunfire.wav
-	Projectile: LaserZap
+	Projectile: Railgun
 		BeamDuration: 20
 		Blockable: true
 		Width: 40

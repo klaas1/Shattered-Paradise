@@ -616,7 +616,7 @@ CABRAILAA:
 	Range: 10c0
 	Report: railgunfire.wav
 	ValidTargets: Air
-	Projectile: LaserZap
+	Projectile: Railgun
 		Width: 75
 		ZOffset: 2047
 		Color: 0008ED
@@ -625,7 +625,6 @@ CABRAILAA:
 		Damage: 2500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		ValidTargets: Air
-
 
 LaserFence:
 	TargetActorCenter: true

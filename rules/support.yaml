@@ -506,10 +506,10 @@ CABRAIL:
 		Recoils: no
 	Armament:
 		Weapon: CABRAILAA
-		LocalOffset: 600,400,800
+		LocalOffset: 600,400,2000
 	Armament@2:
 		Weapon: CABRAILAA
-		LocalOffset: 600,-400,800
+		LocalOffset: 600,-400,2000
 	Power:
 		Amount: -20
 	SelectionDecorations:

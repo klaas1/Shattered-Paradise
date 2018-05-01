@@ -958,7 +958,7 @@ COLOSSI:
 		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Immune to Tiberium radiation.\n- One hits infantry.
 		Prerequisites: ~scrrax, scrtech
 	Valued:
-		Cost: 900
+		Cost: 800
 	Tooltip:
 		Name: Colossus
 	Selectable:
@@ -1168,6 +1168,8 @@ SWARMLING:
 	RenderSprites:
 		Image: swarmling
 		-FactionImages:
+	Voiced:
+		VoiceSet: Limpet
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@tib:
 	-WithDeathAnimation@explosion:
@@ -1325,6 +1327,8 @@ MOTH:
 		Voice: Move
 	Voiced:
 		VoiceSet: Limpet
+	Hovers:
+		RequiresCondition: !deployed
 	Mobile:
 		Speed: 60
 		TerrainSpeeds:
@@ -1338,10 +1342,22 @@ MOTH:
 			Veins: 100
 			Water: 80
 		RequiresCondition: !deployed && !WebDisable
+	LeavesTrails:
+		Image: wake
+		Palette: effect
+		TerrainTypes: Water
+		StationaryInterval: 18
+		MovingInterval: 6
+	KillsSelf@hoverunitonwater:
+		RequiresCondition: hoverunitonwater && WebDisable
+	GrantConditionOnTerrain:
+		Condition: hoverunitonwater
+		TerrainTypes: Water
+	ExternalCondition@hoverunitonwater:
+		Condition: hoverunitonwater
 	Health:
 		HP: 30000
 	Selectable:
-		Priority: 7
 		DecorationBounds: 22,32,-1,-9
 	SelectionDecorations:
 	GrantConditionOnDeploy:
@@ -1361,8 +1377,6 @@ MOTH:
 		-UncloakSound: cloak5.aud
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-	Hovers:
-		RequiresCondition: !deployed
 	WithMakeAnimation:
 	WithFacingSpriteBody@1234:
 		Sequence: idle

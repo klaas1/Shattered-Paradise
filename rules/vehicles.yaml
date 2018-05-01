@@ -245,7 +245,7 @@ SONIC:
 	Inherits: ^VoxelTank
 	Inherits@1: ^8CellVision
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	Tooltip:
 		Name: Disruptor
 	Buildable:
@@ -286,7 +286,7 @@ G4TNK:
 	Inherits@1: ^8CellVision
 	Inherits@2: ^IncompleteSelfHeal
 	Valued:
-		Cost: 1700
+		Cost: 1500
 	Tooltip:
 		Name: Mammoth Tank
 	Buildable:
@@ -2008,7 +2008,7 @@ ECM:
 		Queue: Vehicle
 		Description: Utility vehicle.\n\nSpecial:\n- Can place up to 8 mines in the battlefield\n- Reloads in service depot.\n- Mines are cloaked and harm all unit types.\n- Can crush Infantry.
 		BuildPaletteOrder: 33
-		Prerequisites: ~cabweap, cabradr
+		Prerequisites: ~cabweap, gadept
 	Mobile:
 		TurnSpeed: 3
 		Speed: 70
@@ -2027,6 +2027,7 @@ ECM:
 	-WithVoxelBody:
 	WithFacingSpriteBody:
 	Selectable:
+		Priority: 6
 		DecorationBounds: 50, 50, 0, 0
 	-SelfHealing@veinholedrain:
 	-ExternalCondition@veinholedrain:
@@ -2120,7 +2121,7 @@ PALADIN:
 	Inherits@2: ^CabRender
 	Inherits@3: ^PermanentSelfHeal
 	Valued:
-		Cost: 1500
+		Cost: 1650
 	Tooltip:
 		Name: Paladin
 	Buildable:

@@ -506,9 +506,9 @@ BasiliskBomb:
 		ValidTargets: Ground, Water
 		Versus:
 			InfantryArmor: 500
-			BuildingArmor: 75
+			BuildingArmor: 50
 			VehicleArmor: 25
-			DefenseArmor: 75
+			DefenseArmor: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: firestormexplo, firestormexplo1, firestormexplo2

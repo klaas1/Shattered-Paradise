@@ -488,8 +488,6 @@ FLOATER:
 		Sequence: stand
 	-GainsExperience:
 	-ProducibleWithLevel:
-	-SelfHealing@poisoncloud:
-	-ExternalCondition@CloudPoison:
 	WithSpriteBody:
 	Mobile:
 		Speed: 100

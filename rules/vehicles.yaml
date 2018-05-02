@@ -1426,8 +1426,6 @@ WOLF:
 		Weight: 3
 	Armor@BullArmor:
 		Type: BullArmor
-	-SelfHealing@poisoncloud:
-	-ExternalCondition@CloudPoison:
 	Health:
 		HP: 30000
 	Mobile:

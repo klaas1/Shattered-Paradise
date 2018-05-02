@@ -378,17 +378,6 @@
 		RequiresCondition: !invulnerability
 		UnmindcontrolSound: bleep5.aud
 
-^CloudPoison:
-	SelfHealing@poisoncloud:
-		PercentageStep: -2
-		Step: -5000
-		Delay: 12
-		RequiresCondition: Poison
-		HealIfBelow: 200
-		DamageTypes: TiberiumDeath
-	ExternalCondition@CloudPoison:
-		Condition: CloudPoison
-
 ^ScrinEssence:
 	SpawnActorOnDeath@ScrinEssence:
 		Actor: scrinessencesmall
@@ -795,14 +784,12 @@
 
 ^StructureEffects:
 	Inherits: ^GenericEffects
-	Inherits@1: ^CloudPoison
 	Inherits@2: ^EmpDisable
 	Inherits@3: ^SpawnSmoke
 	Inherits@9: ^SpawnSpark
 
 ^InfantryEffects:
 	Inherits: ^GenericEffects
-	Inherits@0: ^CloudPoison
 	Inherits@1: ^TyrannyBuff
 	Inherits@2: ^InfantryStealthDetection
  	Inherits@3: ^HopspitalHeal
@@ -814,7 +801,6 @@
 
 ^VehicleEffects:
 	Inherits: ^GenericEffects
-	Inherits@0: ^CloudPoison
 	Inherits@1: ^TyrannyBuff
 	Inherits@2: ^DisplayWrench
  	Inherits@3: ^MachineShopHeal
@@ -1524,8 +1510,6 @@
 		Bounds: 40,30
 	SelectionDecorations:
 		Palette: pips
-	SelfHealing@poisoncloud:
-		PercentageStep: -3
 	WithIdleOverlay@BugPoison:
 		Sequence: cloud
 		IsPlayerPalette: true
@@ -1979,7 +1963,7 @@
 	DrawLineToTarget:
 	Armor:
 		Type: VehicleArmor
-	SelfHealing@poisoncloud:
+	SelfHealing@scloud:
 		PercentageStep: -3
 	Building:
 		Dimensions: 1,1

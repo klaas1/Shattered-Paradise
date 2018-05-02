@@ -2287,6 +2287,5 @@
 ^TowerStealthDetection:
 	DetectCloaked:
 		Range: 7c0
-		PauseOnCondition: empdisable || disabled
-		RequiresCondition: !empdisable || !disabled
+		RequiresCondition: !empdisable && !disabled
 	RenderDetectionCircle:

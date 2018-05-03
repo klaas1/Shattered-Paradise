@@ -14,6 +14,10 @@ Terrain:
 		Color: C7C9FA
 		TargetTypes: Ground
 		RestrictPlayerColor: true
+	TerrainType@Ice:
+		Type: Ice
+		Color: 99afc2
+		TargetTypes: Ground
 	TerrainType@Road:
 		Type: Road
 		Color: 2D2B28
@@ -11278,7 +11282,7 @@ Templates:
 		Images: ice0101.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: AFCBED
 				RightColor: B0CCED
 				ZOffset: -12
@@ -11289,7 +11293,7 @@ Templates:
 		Images: ice0102.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: AAC4EA
 				RightColor: ABC6EB
 				ZOffset: -12
@@ -11300,7 +11304,7 @@ Templates:
 		Images: ice0103.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: AECAEC
 				RightColor: A5BEE7
 				ZOffset: -12
@@ -11311,7 +11315,7 @@ Templates:
 		Images: ice0104.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: ADC8EC
 				RightColor: A7C1E8
 				ZOffset: -12
@@ -11322,7 +11326,7 @@ Templates:
 		Images: ice0105.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: ABC6EB
 				RightColor: 9EB5E3
 				ZOffset: -12
@@ -11333,7 +11337,7 @@ Templates:
 		Images: ice0106.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A2BBE6
 				RightColor: ACC7EB
 				ZOffset: -12
@@ -11344,7 +11348,7 @@ Templates:
 		Images: ice0107.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A5BFE8
 				RightColor: A5BFE8
 				ZOffset: -12
@@ -11355,7 +11359,7 @@ Templates:
 		Images: ice0108.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A2BBE6
 				RightColor: A6BFE7
 				ZOffset: -12
@@ -11366,7 +11370,7 @@ Templates:
 		Images: ice0109.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A8C3EA
 				RightColor: 9EB5E3
 				ZOffset: -12
@@ -11377,7 +11381,7 @@ Templates:
 		Images: ice0110.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A4BEE8
 				RightColor: ADC9EC
 				ZOffset: -12
@@ -11388,7 +11392,7 @@ Templates:
 		Images: ice0111.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A4BEE8
 				RightColor: A6C0E9
 				ZOffset: -12
@@ -11399,7 +11403,7 @@ Templates:
 		Images: ice0112.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A3BDE7
 				RightColor: A6C0E8
 				ZOffset: -12
@@ -11410,7 +11414,7 @@ Templates:
 		Images: ice0113.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A6C0E9
 				RightColor: 9DB4E3
 				ZOffset: -12
@@ -11421,7 +11425,7 @@ Templates:
 		Images: ice0114.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9DB5E4
 				RightColor: AEC9EC
 				ZOffset: -12
@@ -11432,7 +11436,7 @@ Templates:
 		Images: ice0115.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9EB6E4
 				RightColor: A5BEE8
 				ZOffset: -12
@@ -11443,7 +11447,7 @@ Templates:
 		Images: ice0116.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9DB4E3
 				RightColor: A6BFE7
 				ZOffset: -12
@@ -11454,7 +11458,7 @@ Templates:
 		Images: ice0117.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9AB0E1
 				RightColor: 98AEE0
 				ZOffset: -12
@@ -11465,7 +11469,7 @@ Templates:
 		Images: ice0118.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 415160
 				RightColor: 677895
 				ZOffset: -12
@@ -11476,7 +11480,7 @@ Templates:
 		Images: ice0119.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3E4F5F
 				RightColor: 637693
 				ZOffset: -12
@@ -11487,7 +11491,7 @@ Templates:
 		Images: ice0120.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475769
 				RightColor: 8195BB
 				ZOffset: -12
@@ -11498,7 +11502,7 @@ Templates:
 		Images: ice0121.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 6B7D9F
 				RightColor: 3F505F
 				ZOffset: -12
@@ -11509,7 +11513,7 @@ Templates:
 		Images: ice0122.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7386A9
 				RightColor: 7384A6
 				ZOffset: -12
@@ -11520,7 +11524,7 @@ Templates:
 		Images: ice0123.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 6B7D9F
 				RightColor: 677A99
 				ZOffset: -12
@@ -11531,7 +11535,7 @@ Templates:
 		Images: ice0124.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7385A8
 				RightColor: 8598C1
 				ZOffset: -12
@@ -11542,7 +11546,7 @@ Templates:
 		Images: ice0125.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 596A80
 				RightColor: 3A4B57
 				ZOffset: -12
@@ -11553,7 +11557,7 @@ Templates:
 		Images: ice0126.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 596B82
 				RightColor: 677895
 				ZOffset: -12
@@ -11564,7 +11568,7 @@ Templates:
 		Images: ice0127.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5F7189
 				RightColor: 6A7E9C
 				ZOffset: -12
@@ -11575,7 +11579,7 @@ Templates:
 		Images: ice0128.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 60728B
 				RightColor: 8195BB
 				ZOffset: -12
@@ -11586,7 +11590,7 @@ Templates:
 		Images: ice0129.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7E91B9
 				RightColor: 465768
 				ZOffset: -12
@@ -11597,7 +11601,7 @@ Templates:
 		Images: ice0130.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7F93BB
 				RightColor: 7284A6
 				ZOffset: -12
@@ -11608,7 +11612,7 @@ Templates:
 		Images: ice0131.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7E91B9
 				RightColor: 6E82A2
 				ZOffset: -12
@@ -11619,7 +11623,7 @@ Templates:
 		Images: ice0132.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7F92BA
 				RightColor: 8397BF
 				ZOffset: -12
@@ -11630,7 +11634,7 @@ Templates:
 		Images: ice0133.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475769
 				RightColor: 7183A5
 				ZOffset: -12
@@ -11641,7 +11645,7 @@ Templates:
 		Images: ice0134.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475869
 				RightColor: 637693
 				ZOffset: -12
@@ -11652,7 +11656,7 @@ Templates:
 		Images: ice0135.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 506073
 				RightColor: 8195BB
 				ZOffset: -12
@@ -11663,7 +11667,7 @@ Templates:
 		Images: ice0136.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7083A5
 				RightColor: 465667
 				ZOffset: -12
@@ -11674,7 +11678,7 @@ Templates:
 		Images: ice0137.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7183A6
 				RightColor: 6E81A1
 				ZOffset: -12
@@ -11685,7 +11689,7 @@ Templates:
 		Images: ice0138.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 596A80
 				RightColor: 4F6074
 				ZOffset: -12
@@ -11696,7 +11700,7 @@ Templates:
 		Images: ice0139.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5F718B
 				RightColor: 7182A5
 				ZOffset: -12
@@ -11707,7 +11711,7 @@ Templates:
 		Images: ice0140.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7E91B9
 				RightColor: 5B6C85
 				ZOffset: -12
@@ -11718,7 +11722,7 @@ Templates:
 		Images: ice0141.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 495A6A
 				RightColor: 677895
 				ZOffset: -12
@@ -11729,7 +11733,7 @@ Templates:
 		Images: ice0142.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 445566
 				RightColor: 6A7D9B
 				ZOffset: -12
@@ -11740,7 +11744,7 @@ Templates:
 		Images: ice0143.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 6B7D9F
 				RightColor: 54657C
 				ZOffset: -12
@@ -11751,7 +11755,7 @@ Templates:
 		Images: ice0144.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5F7189
 				RightColor: 455666
 				ZOffset: -12
@@ -11762,7 +11766,7 @@ Templates:
 		Images: ice0145.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 506073
 				RightColor: 7183A5
 				ZOffset: -12
@@ -11773,7 +11777,7 @@ Templates:
 		Images: ice0146.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4D5D70
 				RightColor: 6A7D9B
 				ZOffset: -12
@@ -11784,7 +11788,7 @@ Templates:
 		Images: ice0147.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7083A5
 				RightColor: 5A6B84
 				ZOffset: -12
@@ -11795,7 +11799,7 @@ Templates:
 		Images: ice0148.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5F7189
 				RightColor: 596B83
 				ZOffset: -12
@@ -11806,7 +11810,7 @@ Templates:
 		Images: ice0149.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3E4E5D
 				RightColor: 3A4A56
 				ZOffset: -12
@@ -11817,7 +11821,7 @@ Templates:
 		Images: ice0150.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 384856
 				RightColor: 48586B
 				ZOffset: -12
@@ -11828,7 +11832,7 @@ Templates:
 		Images: ice0151.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3E4F5F
 				RightColor: 3E4E5E
 				ZOffset: -12
@@ -11839,7 +11843,7 @@ Templates:
 		Images: ice0152.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 415160
 				RightColor: 33444E
 				ZOffset: -12
@@ -11850,7 +11854,7 @@ Templates:
 		Images: ice0153.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3E4E5D
 				RightColor: 4E5F73
 				ZOffset: -12
@@ -11861,7 +11865,7 @@ Templates:
 		Images: ice0154.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3E4F5F
 				RightColor: 52637B
 				ZOffset: -12
@@ -11872,7 +11876,7 @@ Templates:
 		Images: ice0155.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475869
 				RightColor: 3E4E5E
 				ZOffset: -12
@@ -11883,7 +11887,7 @@ Templates:
 		Images: ice0156.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475767
 				RightColor: 3A4A56
 				ZOffset: -12
@@ -11894,7 +11898,7 @@ Templates:
 		Images: ice0157.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 445566
 				RightColor: 596A82
 				ZOffset: -12
@@ -11905,7 +11909,7 @@ Templates:
 		Images: ice0158.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475869
 				RightColor: 52637B
 				ZOffset: -12
@@ -11916,7 +11920,7 @@ Templates:
 		Images: ice0159.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4D5D70
 				RightColor: 445565
 				ZOffset: -12
@@ -11927,7 +11931,7 @@ Templates:
 		Images: ice0160.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475767
 				RightColor: 4E5F73
 				ZOffset: -12
@@ -11938,7 +11942,7 @@ Templates:
 		Images: ice0161.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 445566
 				RightColor: 445565
 				ZOffset: -12
@@ -11949,7 +11953,7 @@ Templates:
 		Images: ice0162.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 415160
 				RightColor: 48586B
 				ZOffset: -12
@@ -11960,7 +11964,7 @@ Templates:
 		Images: ice0163.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4D5D70
 				RightColor: 596A82
 				ZOffset: -12
@@ -11971,7 +11975,7 @@ Templates:
 		Images: ice0164.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Water
 				LeftColor: 2B3B43
 				RightColor: 2A3A42
 				ZOffset: -12
@@ -11982,7 +11986,7 @@ Templates:
 		Images: ice0201.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: B2CEEE
 				RightColor: B5D0EE
 				ZOffset: -12
@@ -11993,7 +11997,7 @@ Templates:
 		Images: ice0202.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: ADC8EB
 				RightColor: ADC7EB
 				ZOffset: -12
@@ -12004,7 +12008,7 @@ Templates:
 		Images: ice0203.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: AFCAEC
 				RightColor: A7C0E8
 				ZOffset: -12
@@ -12015,7 +12019,7 @@ Templates:
 		Images: ice0204.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: B0CBED
 				RightColor: A5BFE8
 				ZOffset: -12
@@ -12026,7 +12030,7 @@ Templates:
 		Images: ice0205.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: ADC8EC
 				RightColor: 9EB6E5
 				ZOffset: -12
@@ -12037,7 +12041,7 @@ Templates:
 		Images: ice0206.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A5BEE8
 				RightColor: B0CBED
 				ZOffset: -12
@@ -12048,7 +12052,7 @@ Templates:
 		Images: ice0207.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A6C0E9
 				RightColor: A9C3EA
 				ZOffset: -12
@@ -12059,7 +12063,7 @@ Templates:
 		Images: ice0208.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A5BEE8
 				RightColor: A5BFE8
 				ZOffset: -12
@@ -12070,7 +12074,7 @@ Templates:
 		Images: ice0209.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A5BEE7
 				RightColor: 9CB4E3
 				ZOffset: -12
@@ -12081,7 +12085,7 @@ Templates:
 		Images: ice0210.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A4BDE7
 				RightColor: B0CBED
 				ZOffset: -12
@@ -12092,7 +12096,7 @@ Templates:
 		Images: ice0211.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A4BDE7
 				RightColor: A7C0E8
 				ZOffset: -12
@@ -12103,7 +12107,7 @@ Templates:
 		Images: ice0212.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A6C0E8
 				RightColor: A6C0E9
 				ZOffset: -12
@@ -12114,7 +12118,7 @@ Templates:
 		Images: ice0213.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A6C0E8
 				RightColor: A0B8E5
 				ZOffset: -12
@@ -12125,7 +12129,7 @@ Templates:
 		Images: ice0214.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9EB6E4
 				RightColor: ADC8EB
 				ZOffset: -12
@@ -12136,7 +12140,7 @@ Templates:
 		Images: ice0215.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9FB7E5
 				RightColor: A9C3EA
 				ZOffset: -12
@@ -12147,7 +12151,7 @@ Templates:
 		Images: ice0216.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9FB7E5
 				RightColor: A6C0E9
 				ZOffset: -12
@@ -12158,7 +12162,7 @@ Templates:
 		Images: ice0217.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 99B0E0
 				RightColor: 99B0E0
 				ZOffset: -12
@@ -12169,7 +12173,7 @@ Templates:
 		Images: ice0218.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 404F61
 				RightColor: 697B9E
 				ZOffset: -12
@@ -12180,7 +12184,7 @@ Templates:
 		Images: ice0219.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3B4C58
 				RightColor: 647896
 				ZOffset: -12
@@ -12191,7 +12195,7 @@ Templates:
 		Images: ice0220.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4E5F74
 				RightColor: 8A9FCD
 				ZOffset: -12
@@ -12202,7 +12206,7 @@ Templates:
 		Images: ice0221.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 697C9D
 				RightColor: 344450
 				ZOffset: -12
@@ -12213,7 +12217,7 @@ Templates:
 		Images: ice0222.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 798DB5
 				RightColor: 7386AD
 				ZOffset: -12
@@ -12224,7 +12228,7 @@ Templates:
 		Images: ice0223.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 6A7E9E
 				RightColor: 647795
 				ZOffset: -12
@@ -12235,7 +12239,7 @@ Templates:
 		Images: ice0224.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7B8FB7
 				RightColor: 8A9FCD
 				ZOffset: -12
@@ -12246,7 +12250,7 @@ Templates:
 		Images: ice0225.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 516379
 				RightColor: 2B3B44
 				ZOffset: -12
@@ -12257,7 +12261,7 @@ Templates:
 		Images: ice0226.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 54677E
 				RightColor: 697B9E
 				ZOffset: -12
@@ -12268,7 +12272,7 @@ Templates:
 		Images: ice0227.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5D7089
 				RightColor: 667998
 				ZOffset: -12
@@ -12279,7 +12283,7 @@ Templates:
 		Images: ice0228.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5F738D
 				RightColor: 8A9FCD
 				ZOffset: -12
@@ -12290,7 +12294,7 @@ Templates:
 		Images: ice0229.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7D92B8
 				RightColor: 364754
 				ZOffset: -12
@@ -12301,7 +12305,7 @@ Templates:
 		Images: ice0230.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7E93BB
 				RightColor: 7386AD
 				ZOffset: -12
@@ -12312,7 +12316,7 @@ Templates:
 		Images: ice0231.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7D92B9
 				RightColor: 667998
 				ZOffset: -12
@@ -12323,7 +12327,7 @@ Templates:
 		Images: ice0232.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7F94BC
 				RightColor: 8A9FCD
 				ZOffset: -12
@@ -12334,7 +12338,7 @@ Templates:
 		Images: ice0233.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4A5A6E
 				RightColor: 7487AE
 				ZOffset: -12
@@ -12345,7 +12349,7 @@ Templates:
 		Images: ice0234.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 425463
 				RightColor: 647896
 				ZOffset: -12
@@ -12356,7 +12360,7 @@ Templates:
 		Images: ice0235.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 566780
 				RightColor: 8A9FCD
 				ZOffset: -12
@@ -12367,7 +12371,7 @@ Templates:
 		Images: ice0236.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7589AE
 				RightColor: 364754
 				ZOffset: -12
@@ -12378,7 +12382,7 @@ Templates:
 		Images: ice0237.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 768AB0
 				RightColor: 667A99
 				ZOffset: -12
@@ -12389,7 +12393,7 @@ Templates:
 		Images: ice0238.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 516379
 				RightColor: 3A4B5A
 				ZOffset: -12
@@ -12400,7 +12404,7 @@ Templates:
 		Images: ice0239.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5E718B
 				RightColor: 7487AE
 				ZOffset: -12
@@ -12411,7 +12415,7 @@ Templates:
 		Images: ice0240.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7D92B8
 				RightColor: 45566A
 				ZOffset: -12
@@ -12422,7 +12426,7 @@ Templates:
 		Images: ice0241.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4A5B70
 				RightColor: 697B9E
 				ZOffset: -12
@@ -12433,7 +12437,7 @@ Templates:
 		Images: ice0242.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 47596B
 				RightColor: 667A99
 				ZOffset: -12
@@ -12444,7 +12448,7 @@ Templates:
 		Images: ice0243.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 697C9D
 				RightColor: 435467
 				ZOffset: -12
@@ -12455,7 +12459,7 @@ Templates:
 		Images: ice0244.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5B6F87
 				RightColor: 374855
 				ZOffset: -12
@@ -12466,7 +12470,7 @@ Templates:
 		Images: ice0245.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 54657D
 				RightColor: 7487AE
 				ZOffset: -12
@@ -12477,7 +12481,7 @@ Templates:
 		Images: ice0246.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4F6176
 				RightColor: 667A99
 				ZOffset: -12
@@ -12488,7 +12492,7 @@ Templates:
 		Images: ice0247.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7589AE
 				RightColor: 45576A
 				ZOffset: -12
@@ -12499,7 +12503,7 @@ Templates:
 		Images: ice0248.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5B6F87
 				RightColor: 46586B
 				ZOffset: -12
@@ -12510,7 +12514,7 @@ Templates:
 		Images: ice0249.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 354653
 				RightColor: 2B3B44
 				ZOffset: -12
@@ -12521,7 +12525,7 @@ Templates:
 		Images: ice0250.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 293941
 				RightColor: 384856
 				ZOffset: -12
@@ -12532,7 +12536,7 @@ Templates:
 		Images: ice0251.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 33444F
 				RightColor: 354552
 				ZOffset: -12
@@ -12543,7 +12547,7 @@ Templates:
 		Images: ice0252.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 364753
 				RightColor: 283840
 				ZOffset: -12
@@ -12554,7 +12558,7 @@ Templates:
 		Images: ice0253.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 354653
 				RightColor: 3A4B5A
 				ZOffset: -12
@@ -12565,7 +12569,7 @@ Templates:
 		Images: ice0254.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 33444F
 				RightColor: 445568
 				ZOffset: -12
@@ -12576,7 +12580,7 @@ Templates:
 		Images: ice0255.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 405261
 				RightColor: 354552
 				ZOffset: -12
@@ -12587,7 +12591,7 @@ Templates:
 		Images: ice0256.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 425365
 				RightColor: 2B3B44
 				ZOffset: -12
@@ -12598,7 +12602,7 @@ Templates:
 		Images: ice0257.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 405161
 				RightColor: 46586B
 				ZOffset: -12
@@ -12609,7 +12613,7 @@ Templates:
 		Images: ice0258.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 405261
 				RightColor: 445568
 				ZOffset: -12
@@ -12620,7 +12624,7 @@ Templates:
 		Images: ice0259.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 4D5F73
 				RightColor: 374855
 				ZOffset: -12
@@ -12631,7 +12635,7 @@ Templates:
 		Images: ice0260.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 425365
 				RightColor: 3A4B5A
 				ZOffset: -12
@@ -12642,7 +12646,7 @@ Templates:
 		Images: ice0261.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 405161
 				RightColor: 374855
 				ZOffset: -12
@@ -12653,7 +12657,7 @@ Templates:
 		Images: ice0262.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 364653
 				RightColor: 384856
 				ZOffset: -12
@@ -12664,7 +12668,7 @@ Templates:
 		Images: ice0263.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 4D5F73
 				RightColor: 46586B
 				ZOffset: -12
@@ -12675,7 +12679,7 @@ Templates:
 		Images: ice0264.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Water
 				LeftColor: 293941
 				RightColor: 283840
 				ZOffset: -12
@@ -12686,7 +12690,7 @@ Templates:
 		Images: ice0301.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: B0CCED
 				RightColor: AECAEC
 				ZOffset: -12
@@ -12697,7 +12701,7 @@ Templates:
 		Images: ice0302.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: ABC5EA
 				RightColor: AAC5EA
 				ZOffset: -12
@@ -12708,7 +12712,7 @@ Templates:
 		Images: ice0303.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: ACC6EB
 				RightColor: A2BAE6
 				ZOffset: -12
@@ -12719,7 +12723,7 @@ Templates:
 		Images: ice0304.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: AEC9EC
 				RightColor: A1BAE5
 				ZOffset: -12
@@ -12730,7 +12734,7 @@ Templates:
 		Images: ice0305.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: ABC6EB
 				RightColor: 9BB1E2
 				ZOffset: -12
@@ -12741,7 +12745,7 @@ Templates:
 		Images: ice0306.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A5BEE8
 				RightColor: ACC7EB
 				ZOffset: -12
@@ -12752,7 +12756,7 @@ Templates:
 		Images: ice0307.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A5BFE8
 				RightColor: A3BBE7
 				ZOffset: -12
@@ -12763,7 +12767,7 @@ Templates:
 		Images: ice0308.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A5BEE8
 				RightColor: A1BAE5
 				ZOffset: -12
@@ -12774,7 +12778,7 @@ Templates:
 		Images: ice0309.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A5BFE8
 				RightColor: 9BB1E2
 				ZOffset: -12
@@ -12785,7 +12789,7 @@ Templates:
 		Images: ice0310.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A3BCE7
 				RightColor: AAC4EB
 				ZOffset: -12
@@ -12796,7 +12800,7 @@ Templates:
 		Images: ice0311.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A3BCE7
 				RightColor: A2BAE6
 				ZOffset: -12
@@ -12807,7 +12811,7 @@ Templates:
 		Images: ice0312.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A4BDE7
 				RightColor: A2BAE6
 				ZOffset: -12
@@ -12818,7 +12822,7 @@ Templates:
 		Images: ice0313.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: A4BDE7
 				RightColor: 9BB1E2
 				ZOffset: -12
@@ -12829,7 +12833,7 @@ Templates:
 		Images: ice0314.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9FB7E4
 				RightColor: A8C2EA
 				ZOffset: -12
@@ -12840,7 +12844,7 @@ Templates:
 		Images: ice0315.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9FB7E4
 				RightColor: A1B9E6
 				ZOffset: -12
@@ -12851,7 +12855,7 @@ Templates:
 		Images: ice0316.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9FB7E4
 				RightColor: A0B8E5
 				ZOffset: -12
@@ -12862,7 +12866,7 @@ Templates:
 		Images: ice0317.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Ice
 				LeftColor: 9AB0DF
 				RightColor: 9AAFE0
 				ZOffset: -12
@@ -12873,7 +12877,7 @@ Templates:
 		Images: ice0318.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 405261
 				RightColor: 7084A1
 				ZOffset: -12
@@ -12884,7 +12888,7 @@ Templates:
 		Images: ice0319.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 415262
 				RightColor: 61738D
 				ZOffset: -12
@@ -12895,7 +12899,7 @@ Templates:
 		Images: ice0320.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 516378
 				RightColor: 889DC2
 				ZOffset: -12
@@ -12906,7 +12910,7 @@ Templates:
 		Images: ice0321.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 677B96
 				RightColor: 3F505F
 				ZOffset: -12
@@ -12917,7 +12921,7 @@ Templates:
 		Images: ice0322.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7589A9
 				RightColor: 7E94B6
 				ZOffset: -12
@@ -12928,7 +12932,7 @@ Templates:
 		Images: ice0323.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 677B96
 				RightColor: 60738C
 				ZOffset: -12
@@ -12939,7 +12943,7 @@ Templates:
 		Images: ice0324.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7589A9
 				RightColor: 889DC2
 				ZOffset: -12
@@ -12950,7 +12954,7 @@ Templates:
 		Images: ice0325.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 657A94
 				RightColor: 31414B
 				ZOffset: -12
@@ -12961,7 +12965,7 @@ Templates:
 		Images: ice0326.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 657A94
 				RightColor: 7084A1
 				ZOffset: -12
@@ -12972,7 +12976,7 @@ Templates:
 		Images: ice0327.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 768BAB
 				RightColor: 647792
 				ZOffset: -12
@@ -12983,7 +12987,7 @@ Templates:
 		Images: ice0328.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 768BAB
 				RightColor: 889DC2
 				ZOffset: -12
@@ -12994,7 +12998,7 @@ Templates:
 		Images: ice0329.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 859BBF
 				RightColor: 435464
 				ZOffset: -12
@@ -13005,7 +13009,7 @@ Templates:
 		Images: ice0330.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 859BBF
 				RightColor: 7E94B6
 				ZOffset: -12
@@ -13016,7 +13020,7 @@ Templates:
 		Images: ice0331.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 859BBF
 				RightColor: 647792
 				ZOffset: -12
@@ -13027,7 +13031,7 @@ Templates:
 		Images: ice0332.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 859BBF
 				RightColor: 889DC2
 				ZOffset: -12
@@ -13038,7 +13042,7 @@ Templates:
 		Images: ice0333.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4C5F71
 				RightColor: 7A8FB0
 				ZOffset: -12
@@ -13049,7 +13053,7 @@ Templates:
 		Images: ice0334.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4D6072
 				RightColor: 61738D
 				ZOffset: -12
@@ -13060,7 +13064,7 @@ Templates:
 		Images: ice0335.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 5D7188
 				RightColor: 889DC2
 				ZOffset: -12
@@ -13071,7 +13075,7 @@ Templates:
 		Images: ice0336.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 6D829F
 				RightColor: 425362
 				ZOffset: -12
@@ -13082,7 +13086,7 @@ Templates:
 		Images: ice0337.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 6D829F
 				RightColor: 62758F
 				ZOffset: -12
@@ -13093,7 +13097,7 @@ Templates:
 		Images: ice0338.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 657A94
 				RightColor: 415363
 				ZOffset: -12
@@ -13104,7 +13108,7 @@ Templates:
 		Images: ice0339.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7288A5
 				RightColor: 7A8FB0
 				ZOffset: -12
@@ -13115,7 +13119,7 @@ Templates:
 		Images: ice0340.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 859BBF
 				RightColor: 54677C
 				ZOffset: -12
@@ -13126,7 +13130,7 @@ Templates:
 		Images: ice0341.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4C5F72
 				RightColor: 7084A1
 				ZOffset: -12
@@ -13137,7 +13141,7 @@ Templates:
 		Images: ice0342.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 47596B
 				RightColor: 637690
 				ZOffset: -12
@@ -13148,7 +13152,7 @@ Templates:
 		Images: ice0343.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 677B96
 				RightColor: 506277
 				ZOffset: -12
@@ -13159,7 +13163,7 @@ Templates:
 		Images: ice0344.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7187A3
 				RightColor: 3D4F5C
 				ZOffset: -12
@@ -13170,7 +13174,7 @@ Templates:
 		Images: ice0345.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 586D82
 				RightColor: 7A8FB0
 				ZOffset: -12
@@ -13181,7 +13185,7 @@ Templates:
 		Images: ice0346.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 53677B
 				RightColor: 637690
 				ZOffset: -12
@@ -13192,7 +13196,7 @@ Templates:
 		Images: ice0347.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 6D829F
 				RightColor: 52657A
 				ZOffset: -12
@@ -13203,7 +13207,7 @@ Templates:
 		Images: ice0348.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 7187A3
 				RightColor: 4E6174
 				ZOffset: -12
@@ -13214,7 +13218,7 @@ Templates:
 		Images: ice0349.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 344550
 				RightColor: 2F3F48
 				ZOffset: -12
@@ -13225,7 +13229,7 @@ Templates:
 		Images: ice0350.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 2E3E47
 				RightColor: 3D4E5C
 				ZOffset: -12
@@ -13236,7 +13240,7 @@ Templates:
 		Images: ice0351.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3C4D5A
 				RightColor: 394A57
 				ZOffset: -12
@@ -13247,7 +13251,7 @@ Templates:
 		Images: ice0352.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3A4B58
 				RightColor: 2C3C45
 				ZOffset: -12
@@ -13258,7 +13262,7 @@ Templates:
 		Images: ice0353.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 344550
 				RightColor: 405160
 				ZOffset: -12
@@ -13269,7 +13273,7 @@ Templates:
 		Images: ice0354.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3C4D5A
 				RightColor: 4A5D6F
 				ZOffset: -12
@@ -13280,7 +13284,7 @@ Templates:
 		Images: ice0355.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475B6B
 				RightColor: 394A57
 				ZOffset: -12
@@ -13291,7 +13295,7 @@ Templates:
 		Images: ice0356.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 405361
 				RightColor: 2F3F48
 				ZOffset: -12
@@ -13302,7 +13306,7 @@ Templates:
 		Images: ice0357.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 425563
 				RightColor: 4D6072
 				ZOffset: -12
@@ -13313,7 +13317,7 @@ Templates:
 		Images: ice0358.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 475B6B
 				RightColor: 4A5D6F
 				ZOffset: -12
@@ -13324,7 +13328,7 @@ Templates:
 		Images: ice0359.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4E6274
 				RightColor: 3C4D5A
 				ZOffset: -12
@@ -13335,7 +13339,7 @@ Templates:
 		Images: ice0360.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 405361
 				RightColor: 405160
 				ZOffset: -12
@@ -13346,7 +13350,7 @@ Templates:
 		Images: ice0361.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 425563
 				RightColor: 3C4D5A
 				ZOffset: -12
@@ -13357,7 +13361,7 @@ Templates:
 		Images: ice0362.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 3A4B58
 				RightColor: 3D4E5C
 				ZOffset: -12
@@ -13368,7 +13372,7 @@ Templates:
 		Images: ice0363.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Impassable
 				LeftColor: 4E6274
 				RightColor: 4D6072
 				ZOffset: -12
@@ -13379,7 +13383,7 @@ Templates:
 		Images: ice0364.sno
 		Size: 1, 1
 		Tiles:
-			0: Clear
+			0: Water
 				LeftColor: 2B3B43
 				RightColor: 2B3A42
 				ZOffset: -12

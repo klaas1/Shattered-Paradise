@@ -182,7 +182,7 @@ GUARDIAN:
 		Speed: 60
 		Repulsable: true
 		MoveIntoShroud: true
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
 		HP: 65000
 	Armament@primary:
@@ -297,7 +297,7 @@ ORCATRAN:
 		TurnSpeed: 5
 		Speed: 84
 		InitialFacing: 0
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
 		HP: 20000
 	Cargo:
@@ -730,7 +730,7 @@ drache:
 		TurnSpeed: 3
 		Speed: 35
 		MoveIntoShroud: true
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	BaseBuilding:
@@ -776,7 +776,7 @@ SCRGLYDER1:
 		Speed: 120
 		Repulsable: true
 		MoveIntoShroud: true
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, Water
+		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, Water
 	Health:
 		HP: 30000
 	Armament:
@@ -886,7 +886,7 @@ SCRTRANS:
 		LandWhenIdle: true
 		Repulsable: true
 		MoveIntoShroud: true
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
 		HP: 35000
 	-RenderVoxels:
@@ -1227,7 +1227,7 @@ FIREFLY:
 		Repulsable: true
 		-RearmBuildings: gahpad
 		MoveIntoShroud: true
-		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		AllowedTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
 		HP: 10000
 	-RenderVoxels:

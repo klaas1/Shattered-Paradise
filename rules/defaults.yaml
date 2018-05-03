@@ -1062,7 +1062,7 @@
 		Name: Crate
 	Crate:
 		Lifetime: 180
-		TerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, Veins, Green, Pavement
+		TerrainTypes: Clear, Ice, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, Veins, Green, Pavement
 	RenderSprites:
 		Palette: terraindecoration
 	WithCrateBody:
@@ -1124,6 +1124,7 @@
 		WaitAverage: 10
 		TerrainSpeeds:
 			Clear: 100
+			Ice: 100
 			Road: 110
 			Rail: 100
 			DirtRoad: 105
@@ -1493,6 +1494,7 @@
 		WaitAverage: 10
 		TerrainSpeeds:
 			Clear: 100
+			Ice: 100
 			Road: 120
 			Rail: 100
 			DirtRoad: 110
@@ -1583,6 +1585,7 @@
 	Mobile:
 		TerrainSpeeds:
 			Clear: 100
+			Ice: 100
 			Road: 100
 			Rail: 100
 			DirtRoad: 100
@@ -1697,7 +1700,7 @@
 		RepulsionSpeed: 30
 		CruiseAltitude: 4c0
 		AltitudeVelocity: 300
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, Building
+		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, Building
 	Passenger:
 		CargoType: Aircraft
 	Voiced:
@@ -1744,7 +1747,7 @@
 		LandWhenIdle: False
 		CruiseAltitude: 3c512
 		CanHover: True
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 		TakeOffOnResupply: true
 		VTOL: true
 	Targetable@AIRBORNE:
@@ -1811,6 +1814,7 @@
 		SharesCell: no
 		TerrainSpeeds:
 			Clear: 90
+			Ice: 90
 			Road: 100
 			Rail: 80
 			DirtRoad: 90
@@ -1996,6 +2000,7 @@
 	Mobile:
 		TerrainSpeeds:
 			Clear: 90
+			Ice: 90
 			Road: 100
 			Rail: 90
 			DirtRoad: 100

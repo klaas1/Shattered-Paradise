@@ -955,7 +955,7 @@ SAPC:
 		RequiresCondition: !empdisable && !loading
 		Subterranean: true
 		SubterraneanCondition: submerged
-		SubterraneanTransitionTerrainTypes: Clear, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
+		SubterraneanTransitionTerrainTypes: Clear, Ice, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
 		SubterraneanTransitionCost: -2147483647 # int maxvalue
 		SubterraneanTransitionSound: subdril1.aud
 		SubterraneanTransitionImage: dig
@@ -963,6 +963,7 @@ SAPC:
 		SubterraneanTransitionOnRamps: True
 		TerrainSpeeds:
 			Subterranean: 120
+			Ice: 100
 			Road: 100
 			Bridge: 100
 	Cloak@cloakgenerator:
@@ -1016,7 +1017,7 @@ SUBTANK:
 		RequiresCondition: !empdisable && !loading
 		Subterranean: true
 		SubterraneanCondition: submerged
-		SubterraneanTransitionTerrainTypes: Clear, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
+		SubterraneanTransitionTerrainTypes: Clear, Ice, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
 		SubterraneanTransitionCost: 0#-2147483647
 		SubterraneanTransitionSound: subdril1.aud
 		SubterraneanTransitionImage: dig
@@ -1025,6 +1026,8 @@ SUBTANK:
 		TerrainSpeeds:
 			Clear: 100
 				PathingCost: 150
+			Ice: 100
+				PathingCost: 150               
 			Road: 120
 				PathingCost: 150
 			Rail: 100

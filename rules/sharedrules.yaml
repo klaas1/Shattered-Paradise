@@ -124,6 +124,7 @@ HARV:
 		Speed: 60
 		Crushes: wall, crate, infantry, RazorShark
 		TerrainSpeeds:
+			Ice: 100
 			Clear: 100
 			Road: 100
 			Rail: 100
@@ -1041,7 +1042,7 @@ TRNSPORT:
 		Speed: 130
 		CruiseAltitude: 3c768
 		InitialFacing: 0
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
 		HP: 12000
 	-RenderVoxels:

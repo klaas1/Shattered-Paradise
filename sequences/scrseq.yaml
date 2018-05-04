@@ -683,6 +683,7 @@ scrrax:
 		Length: 38
 	ship: scrpodanim
 		UseTilesetCode: false
+		Offset: 52, -240
 		Length: *
 		ZOffset: 4048
 	emp-overlay: emp_fx01

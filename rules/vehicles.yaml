@@ -1272,7 +1272,7 @@ MUTQUAD:
 		Prerequisites: ~muweap
 	Mobile:
 		TurnSpeed: 7
-		Speed: 95
+		Speed: 80
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 30000

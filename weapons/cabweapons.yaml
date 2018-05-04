@@ -319,7 +319,7 @@ DroneHostMissile:
 		Weapon: DroneHostShell
 		ValidTargets: Ground, Air, Water, Airhit
 	Warhead@2: FireShrapnel
-		Amount: 3
+		Amount: 2
 		Weapon: DroneHostShellSpawner
 		ValidTargets: Ground, Air, Water, Airhit
 

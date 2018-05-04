@@ -1147,6 +1147,10 @@ TIBERUMBILLBOARD:
 		Footprint: xxx
 	RenderSprites:
 		Palette: player
+	Interactable:
+		Bounds: 120, 60, 10, -18
+	Selectable:
+		Bounds: 120, 60, 10, -18
 
 BBOARD01:
 	Inherits: ^CivBillboard

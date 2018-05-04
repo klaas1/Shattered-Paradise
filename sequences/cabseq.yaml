@@ -822,7 +822,7 @@ cabproc:
 		ZOffset: 512
 		BlendMode: Additive
 		-DepthSprite:
-	icon: cabprociconnotbroken
+	icon: cabprocicon
 		Offset: 0, 0
 		UseTilesetCode: false
 		-DepthSprite:

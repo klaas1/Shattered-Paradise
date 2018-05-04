@@ -1793,6 +1793,8 @@ TRIPOD:
 		HP: 37500
 	Carryable:
 		LocalOffset: 0,0,2500
+	Voiced:
+		VoiceSet: Tripod
 	AttackFrontal:
 		Voice: Attack
 		PauseOnCondition: empdisable

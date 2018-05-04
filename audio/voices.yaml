@@ -287,6 +287,15 @@ Deva:
 		Action: devaquote0000, devaquote0001, devaquote0002
 		Die: devaquote0003, devaquote0004, devaquote0005
 
+Tripod:
+	DefaultVariant: .wav
+	Voices:
+		Select: TripSound0000, TripSound0001, TripSound0002
+		Move: TripSound0003, TripSound0004, TripSound0005
+		Attack: TripSound0006, TripSound0007, TripSound0008
+		Action: TripSound0006, TripSound0007, TripSound0008
+		Die: SeekerVoice0000
+
 Scrin:
 	Voices:
 		Select: 32-i000

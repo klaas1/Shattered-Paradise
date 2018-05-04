@@ -134,6 +134,12 @@ rank:
 	rank-elite: newpips
 		Start: 3
 
+healpip:
+	idle:
+		Length: *
+		ZOffset: 511
+		Offset: 0, 0
+
 dig:
 	idle:
 		Length: *

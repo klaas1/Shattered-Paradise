@@ -439,24 +439,40 @@
 ^HopspitalHeal:
 	SelfHealing@HOSPITAL:
 		PercentageStep: 1
-		Delay: 23
+		Delay: 25
 		HealIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: hospitalheal
 	GrantConditionOnPrerequisite@hospitalheal:
 		Condition: hospitalheal
-		Prerequisites: CAHOSP
+		Prerequisites: cahosp
+	WithDecoration@hospitalheal:
+		Image: healpip
+		Sequence: idle
+		ReferencePoint: Bottom, Right
+		Palette: mouse
+		ShowToEnemies: true
+		RequiresCondition: hospitalheal
+	ExternalCondition@hospitalheal:
+		Condition: hospitalheal
 
 ^MachineShopHeal:
 	SelfHealing@MachineShopHeal:
 		PercentageStep: 1
-		Delay: 23
+		Delay: 25
 		HealIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: MachineShopHeal
 	GrantConditionOnPrerequisite@MachineShopHeal:
 		Condition: MachineShopHeal
-		Prerequisites: MACHINESHOP
+		Prerequisites: machineshop
+	WithDecoration@MachineShopHeal:
+		Image: wrenchicon
+		Sequence: idle
+		ReferencePoint: Bottom, Right
+		Palette: player
+		ShowToEnemies: true
+		RequiresCondition: MachineShopHeal
 
 ^VeinholePoisonVehicle:
 	SelfHealing@veinholedrain:
@@ -1105,15 +1121,6 @@
 		HP: 5000
 		Shape: Circle
 			Radius: 128
-	SelfHealing@BarracksHeal:
-		PercentageStep: 2
-		Step: 0
-		Delay: 50
-		RequiresCondition: BarracksHeal
-		DamageCooldown: 200
-		HealIfBelow: 101
-	ExternalCondition@BarracksHeal:
-		Condition: BarracksHeal
 	Armor:
 		Type: InfantryArmor
 	Mobile:

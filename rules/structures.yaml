@@ -495,7 +495,7 @@ NAMISL:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Chemical Missile Silo
+		Name: Chemical Missile Factory
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:

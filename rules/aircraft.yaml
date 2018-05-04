@@ -430,7 +430,7 @@ CERBERUS:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Cerberus
+		Name: Manticore
 	Buildable:
 		Description: High tech frigate armed with a mobile stealth generator.\n\nGood vs: Ground Targets\n\nSpecial:\n- Cloacks friendly units next to it.
 		Queue: Air

@@ -67,7 +67,7 @@ ReaperWeb:
 	ValidTargets: Infantry
 	Projectile: BulletAS
 		Speed: 150
-		Image: web
+		Image: web2
 		Shadow: true
 		LaunchAngle: 130
 		Palette: ra
@@ -315,11 +315,11 @@ DroneHostMissile:
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@1: FireShrapnel
-		Amount: 6
+		Amount: 2
 		Weapon: DroneHostShell
 		ValidTargets: Ground, Air, Water, Airhit
 	Warhead@2: FireShrapnel
-		Amount: 1
+		Amount: 3
 		Weapon: DroneHostShellSpawner
 		ValidTargets: Ground, Air, Water, Airhit
 
@@ -327,7 +327,7 @@ DroneHostShell:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 150
-	Range: 2c0
+	Range: 1c512
 	ValidTargets: Ground, Water, Vehicle, Infantry, water
 	Projectile: BulletAS
 		Speed: 200
@@ -340,7 +340,7 @@ DroneHostShell:
 		RangeLimit: 25
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 1500
+		Damage: 1000
 		Versus:
 			Worker: 25
 		ValidTargets: Ground, Water, Vehicle, Infantry, water

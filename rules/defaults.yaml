@@ -1082,8 +1082,7 @@
 	RenderSprites:
 		Palette: terraindecoration
 	WithCrateBody:
-		IdleSequence: crate
-		WaterTerrainTypes: crate
+		Images: crate
 	Interactable:
 		Bounds: 24,24
 
@@ -1798,7 +1797,7 @@
 	FallsToEarth:
 		Spins: true
 		Moves: true
-		Velocity: 86
+		Velocity: 140
 		Explosion: SmallPlaneExplode
 
 ^Visceroid:
@@ -1897,7 +1896,7 @@
 	Targetable:
 		TargetTypes: Building, Ground, C4
 	Health:
-		HP: 50000
+		HP: 10000
 		Shape: Circle
 			Radius: 500
 	RequiresBuildableArea:

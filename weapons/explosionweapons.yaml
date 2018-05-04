@@ -118,6 +118,11 @@ UnitExplodeSmall:
 		Sequence: fire1
 		Palette: effectalpha75
 		Weapon: DummyWeapon
+	Warhead@4Sharpnel: FireShrapnel
+		Weapon: SmallDebris
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 UnitExplode:
 	Inherits: ^ExploDefaults

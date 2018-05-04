@@ -397,12 +397,12 @@ GACNST:
 		Cost: 500
 	ProvidesPrerequisite:
 		Prerequisite: barracks
-	ProximityExternalCondition@BarracksHeal:
-		Condition: BarracksHeal
+	ProximityExternalCondition@hospitalheal:
+		Condition: hospitalheal
 		Range: 5c0
 	WithRangeCircle:
 		Range: 5c0
-		Type: BarracksHeal
+		Type: hospitalheal
 	Health:
 		HP: 80000
 	Exit@1:

@@ -317,7 +317,7 @@ glaive:
 		Facings: 1
 		ZOffset: 1023
 
-web:
+web2:
 	idle:
 		Length: *
 		ZOffset: 1023

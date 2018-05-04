@@ -104,7 +104,7 @@ IonCannon:
 		InvalidTargets: Vehicle, Building, Wall
 	Warhead@4Sharpnel: FireShrapnel
 		Weapon: LargeDebris
-		Amount: 3
+		Amount: 6
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@3Effect: CreateEffect

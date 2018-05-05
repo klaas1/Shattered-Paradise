@@ -421,12 +421,12 @@ GACNST:
 PROC:
 	Inherits: ^Building
 	Inherits@4: ^NormalRefineryHitShape
+	Tooltip:
+		Name: Tiberium Refinery
 	Valued:
 		Cost: 1500
 	CustomSellValue:
 		Value: 500
-	Tooltip:
-		Name: Tiberium Refinery
 	ProvidesPrerequisite:
 		Factions: gdi, cab, mut, nod
 		Prerequisite: proc
@@ -443,14 +443,14 @@ PROC:
 		DockAngle: 160
 		DockOffset: 2,1
 		DiscardExcessResources: false
-	StoresResources:
-		PipColor: Green
-		PipCount: 15
-		Capacity: 1000
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: 3,1
 		Facing: 160
+	StoresResources:
+		PipColor: Green
+		PipCount: 15
+		Capacity: 1000
 	Explodes:
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
@@ -483,17 +483,17 @@ PROC:
 FLIPPEDPROC:
 	Inherits: ^Building
 	Inherits@4: ^FlippedRefineryHitshape
+	Tooltip:
+		Name: Tiberium Refinery
 	Valued:
 		Cost: 1500
 	CustomSellValue:
 		Value: 500
-	Tooltip:
-		Name: Tiberium Refinery
 	ProvidesPrerequisite:
 		Factions: gdi, cab, mut, nod, scr
 		Prerequisite: proc
 	Building:
-		Footprint: xx== xx== xx==
+		Footprint: ==xx ==xx ==xx
 		Dimensions: 4,3
 	Selectable:
 		Bounds: 100, 70, 24, 12
@@ -502,16 +502,17 @@ FLIPPEDPROC:
 	Health:
 		HP: 140000
 	Refinery:
-		DockAngle: 0
-		DockOffset: 1,1
+		DockAngle: 30
+		DockOffset: 0,1
 		DiscardExcessResources: false
+	FreeActor:
+		Actor: HARV
+		SpawnOffset: -1,1
+		Facing: 30
 	StoresResources:
 		PipColor: Green
 		PipCount: 15
 		Capacity: 1000
-	FreeActor:
-		Actor: HARV
-		SpawnOffset: 1,1
 	Explodes:
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion

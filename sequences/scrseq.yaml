@@ -574,9 +574,7 @@ drached:
 		Facings: 1
 	run:
 		Start: 1
-		Length: 20
-		Facings: 1
-		Tick: 100
+		Facings: 32
 	icon: dracheicon
 		Offset: 0, 0
 	idle:

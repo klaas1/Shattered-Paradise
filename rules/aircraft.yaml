@@ -744,8 +744,9 @@ drache:
 		Voice: Move
 	SelectionDecorations:
 	RenderSprites:
+	WithFacingSpriteBody:
+		Sequence: run
 	Hovers:
-	WithInfantryBody:
 	-RenderVoxels:
 	-WithVoxelBody:
 	SpawnActorOnDeath:

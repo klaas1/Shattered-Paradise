@@ -1,6 +1,8 @@
 GAPOWR:
 	Inherits: ^PowerPlant
 	Inherits@2: ^2x2Shape
+	Tooltip:
+		Name: GDI Power Plant
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1
@@ -8,8 +10,6 @@ GAPOWR:
 		Description: Provides power for other structures.
 	Valued:
 		Cost: 300
-	Tooltip:
-		Name: GDI Power Plant
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -43,13 +43,13 @@ GAPOWR:
 GAPILE:
 	Inherits: ^Barracks
 	Inherits@2: ^2x2Shape
+	Tooltip:
+		Name: GDI Barracks
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
 		Description: Arms Infantry.\n\nSpecial:\n- Heals infantry in an certain area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
 		Prerequisites: anypower, ~structures.gdi
-	Tooltip:
-		Name: GDI Barracks
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -78,6 +78,8 @@ GDIREF:
 		BuildPaletteOrder: 3
 		Prerequisites: ~structures.gdi, gapowr
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.
+	FreeActor:
+		Actor: harv.gdi
 	RenderSprites:
 		-Image: proc.gdi
 		-FactionImages:
@@ -87,20 +89,17 @@ GDIREF2:
 	Inherits: FLIPPEDPROC
 	Tooltip:
 		Name: GDI Refinery
-	RenderSprites:
-		-Image: proc.gdi
-		-FactionImages:
-	-WithIdleOverlay@REDLIGHTS:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
 		Prerequisites: ~structures.gdi, gapowr
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.\n- Turned 180 degrees.
-	Building:
-		Footprint: ==xx ==xx ==xx
-		Dimensions: 4,3
 	FreeActor:
-		Actor: HARV
+		Actor: harv.gdi
+	RenderSprites:
+		-Image: proc.gdi
+		-FactionImages:
+	-WithIdleOverlay@REDLIGHTS:
 
 GAWEAP:
 	Inherits: ^Factory
@@ -126,13 +125,13 @@ GAWEAP:
 GARADR:
 	Inherits: ^Radar
 	Inherits@2: ^2x2Shape
+	Tooltip:
+		Name: GDI Radar
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 6
 		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Stealth detection\n- Requires power to operate
 		Prerequisites: proc, ~structures.gdi
-	Tooltip:
-		Name: GDI Radar
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 		PauseOnCondition: disabled
@@ -144,8 +143,6 @@ GARADR:
 GAHPAD:
 	Inherits@1: ^Helipad
 	Inherits@2: ^2x2Shape
-	Valued:
-		Cost: 500
 	Tooltip:
 		Name: Helipad
 	Buildable:
@@ -153,6 +150,8 @@ GAHPAD:
 		Queue: Building
 		Description: Produces and rearms aircraft.\n\nSpecial:\n- Maximun production speed is reached with 7 helipads.
 		Prerequisites: garadr, ~structures.gdi
+	Valued:
+		Cost: 500
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -175,13 +174,13 @@ GAHPAD:
 GATECH:
 	Inherits: ^TechCenter
 	Inherits@4: ^3x2Shape
+	Tooltip:
+		Name: GDI Tech Center
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 8
 		Description: Provides access to advanced G.D.I. technologies.
 		Prerequisites: garadr, ~structures.gdi
-	Tooltip:
-		Name: GDI Tech Center
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -201,6 +200,8 @@ GTDROP:
 	Inherits: ^Building
 	Inherits@2: ^3x3Shape
 	Inherits@3: ^SuperWeapon
+	Tooltip:
+		Name: Dropship-Bay
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 9
@@ -209,8 +210,6 @@ GTDROP:
 		Description: Staging area for drop pod assault. \n\nSpecial:\n- Provides access to Helldiver Drop support\n- Unlocks the Mammoth MKII\n- Requires power to operate
 	Valued:
 		Cost: 1500
-	Tooltip:
-		Name: Dropship-Bay
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Building:
@@ -274,6 +273,8 @@ NODYARD:
 NAPOWR:
 	Inherits: ^PowerPlant
 	Inherits@2: ^2x2Shape
+	Tooltip:
+		Name: Nod Power Plant
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1
@@ -281,8 +282,6 @@ NAPOWR:
 		Prerequisites: ~structures.nod
 	Valued:
 		Cost: 300
-	Tooltip:
-		Name: Nod Power Plant
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -302,13 +301,13 @@ NAPOWR:
 NAHAND:
 	Inherits: ^Barracks
 	Inherits@2: ^3x2Shape
+	Tooltip:
+		Name: Hand of Nod
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
 		Description: Arms Infantry.\n\nSpecial:\n- Heals infantry in an certain area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
 		Prerequisites: anypower, ~structures.nod
-	Tooltip:
-		Name: Hand of Nod
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -334,6 +333,8 @@ NODREF:
 		BuildPaletteOrder: 3
 		Prerequisites: ~structures.nod, napowr
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.
+	FreeActor:
+		Actor: harv.nod
 	RenderSprites:
 		-Image: proc.gdi
 		-FactionImages:
@@ -352,15 +353,9 @@ NODREF2:
 		BuildPaletteOrder: 3
 		Prerequisites: ~structures.nod, napowr
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.\n- Turned 180 degrees.
-	Building:
-		Footprint: ==xx ==xx ==xx
-		Dimensions: 4,3
-	Refinery:
-		DockOffset: 1,1
 	FreeActor:
-		Actor: HARV
-		SpawnOffset: 1,1
-
+		Actor: harv.nod
+        
 NAWEAP:
 	Inherits: ^Factory
 	Tooltip:
@@ -383,6 +378,8 @@ NAWEAP:
 NARADR:
 	Inherits: ^Radar
 	Inherits@2: ^2x2Shape
+	Tooltip:
+		Name: Nod Radar
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 6
@@ -391,8 +388,6 @@ NARADR:
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 		PauseOnCondition: disabled
-	Tooltip:
-		Name: Nod Radar
 	Selectable:
 		Bounds: 96, 48, 0, -6
 		DecorationBounds: 96, 72, 0, -12
@@ -401,6 +396,8 @@ NARADR:
 NAAPWR:
 	Inherits: ^PowerPlant
 	Inherits@2: ^2x3Shape
+	Tooltip:
+		Name: Advanced Power Plant
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 7
@@ -408,8 +405,6 @@ NAAPWR:
 		Prerequisites: naradr, ~structures.nod
 	Valued:
 		Cost: 700
-	Tooltip:
-		Name: Advanced Power Plant
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 2,3
@@ -429,8 +424,6 @@ NAAPWR:
 NAHPAD:
 	Inherits@1: ^Helipad
 	Inherits@2: ^2x2Shape
-	Valued:
-		Cost: 500
 	Tooltip:
 		Name: Helipad
 	Buildable:
@@ -438,6 +431,8 @@ NAHPAD:
 		Queue: Building
 		Description: Produces and rearms aircraft.\n\nSpecial:\n- Maximun production speed is reached with 7 helipads.\n- Max production speed reduces production time by 50%.
 		Prerequisites: naradr, ~structures.nod
+	Valued:
+		Cost: 500
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -461,13 +456,13 @@ NAHPAD:
 NATECH:
 	Inherits: ^TechCenter
 	Inherits@2: ^2x2Shape
+	Tooltip:
+		Name: Nod Tech Center
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 9
 		Description: Provides access to advanced Nod technologies.
 		Prerequisites: naradr, ~structures.nod
-	Tooltip:
-		Name: Nod Tech Center
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -486,6 +481,8 @@ NAMISL:
 	Inherits: ^Building
 	Inherits@2: ^2x2Shape
 	Inherits@3: ^SuperWeapon
+	Tooltip:
+		Name: Chemical Missile Silo
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 9
@@ -494,8 +491,6 @@ NAMISL:
 		BuildLimit: 1
 	Valued:
 		Cost: 1500
-	Tooltip:
-		Name: Chemical Missile Factory
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -588,6 +583,8 @@ MUPOWR:
 	Inherits: ^Building
 	Inherits@1: ^MutRender
 	Inherits@2: ^2x2Shape
+	Tooltip:
+		Name: Mutant Power Plant
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1
@@ -595,8 +592,6 @@ MUPOWR:
 		Prerequisites: ~structures.mut
 	Valued:
 		Cost: 300
-	Tooltip:
-		Name: Mutant Power Plant
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Building:
@@ -647,19 +642,16 @@ MURAX:
 MUPROC:
 	Inherits: PROC
 	Inherits@2: ^MutRender
+	Tooltip:
+		Name: Forgotten Refinery
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
 		Prerequisites: ~structures.mut, mupowr
 		IconPalette: UnittemIconMut
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.
-	Tooltip:
-		Name: Forgotten Refinery
-	Building:
-		Footprint: xx== xx== xx==
-		Dimensions: 4,3
 	FreeActor:
-		SpawnOffset: 3,1
+		Actor: harv.mut
 	RenderSprites:
 		PlayerPalette: playermut
 		Image: muproc
@@ -671,32 +663,24 @@ MUPROC:
 		DeathSequencePalette: playermut
 		CrushedSequencePalette: playermut
 		CrushedPaletteIsPlayerPalette: true
-	RequiresBuildableArea:
-		AreaTypes: building
 
 MUPROC2:
 	Inherits: FLIPPEDPROC
 	Inherits@2: ^MutRender
 	Tooltip:
 		Name: Forgotten Refinery
-	RenderSprites:
-		-Image: proc.gdi
-		-FactionImages:
-	-WithIdleOverlay@REDLIGHTS:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
 		IconPalette: UnittemIconMut
 		Prerequisites: ~structures.mut, mupowr
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.\n- Turned 180 degrees.
-	Building:
-		Footprint: ==xx ==xx ==xx
-		Dimensions: 4,3
-	Refinery:
-		DockOffset: 1,1
 	FreeActor:
-		Actor: HARV
-		SpawnOffset: 1,1
+		Actor: harv.mut
+	RenderSprites:
+		-Image: proc.gdi
+		-FactionImages:
+	-WithIdleOverlay@REDLIGHTS:
 
 MUWEAP:
 	Inherits: ^Factory
@@ -717,13 +701,13 @@ MURADR:
 	Inherits: ^Radar
 	Inherits@1: ^MutRender
 	Inherits@2: ^2x2Shape
+	Tooltip:
+		Name: Mutant Radar
 	Buildable:
 		Queue: Building
 		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Stealth detection\n- Requires power to operate.
 		BuildPaletteOrder: 6
 		Prerequisites: proc, ~structures.mut
-	Tooltip:
-		Name: Dome Radar
 	Selectable:
 		Bounds: 96, 66, 0, -10
 		DecorationBounds: 96, 66, 0, -13
@@ -732,10 +716,10 @@ MURADR:
 MUAIR:
 	Inherits@1: ^MutRender
 	Inherits@3: ^Helipad
-	Valued:
-		Cost: 500
 	Tooltip:
 		Name: Mutant Helipad
+	Valued:
+		Cost: 500
 	Buildable:
 		BuildPaletteOrder: 7
 		Queue: Building
@@ -757,13 +741,13 @@ MUHALL:
 	Inherits: ^TechCenter
 	Inherits@1: ^MutRender
 	Inherits@2: ^3x4Shape
+	Tooltip:
+		Name: Forgotten Hall
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 8
 		Description: Provides access to contact with Forgotten Leaders.
 		Prerequisites: muradr, ~structures.mut
-	Tooltip:
-		Name: Forgotten Hall
 	Building:
 		Footprint: xxx xxx xxx xxx
 		Dimensions: 3,4
@@ -779,6 +763,8 @@ MUTSW2:
 	Inherits@1: ^MutRender
 	Inherits@2: ^3x3Shape
 	Inherits@3: ^SuperWeapon
+	Tooltip:
+		Name: Mother Veinhole
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 9
@@ -787,8 +773,6 @@ MUTSW2:
 		BuildLimit: 1
 	Valued:
 		Cost: 1500
-	Tooltip:
-		Name: Mother Veinhole
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -843,6 +827,9 @@ drached:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
 	Inherits@4: ^3x3Shape
+	Tooltip:
+		Name: Deployed Host Station
+		Description: Builds base structures.
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -857,9 +844,6 @@ drached:
 		Prerequisites: ~disabled
 	Valued:
 		Cost: 1500
-	Tooltip:
-		Name: Deployed Host Station
-		Description: Builds base structures.
 	BaseBuilding:
 	Transforms:
 		IntoActor: drache
@@ -927,6 +911,8 @@ SCRPOWR:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
 	Inherits@2: ^3x2Shape
+	Tooltip:
+		Name: Scrin Generator
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1
@@ -934,8 +920,6 @@ SCRPOWR:
 		Prerequisites: ~structures.scr
 	Valued:
 		Cost: 400
-	Tooltip:
-		Name: Scrin Generator
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
 	Building:
@@ -962,13 +946,13 @@ SCRRAX:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
 	Inherits@4: ^2x2Shape
+	Tooltip:
+		Name: Landing Zone
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
 		Description: Calls down Infantry.\n\nSpecial:\n- Heals infantry in an certain area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
 		Prerequisites: scrpowr, ~structures.scr
-	Tooltip:
-		Name: Landing Zone
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -995,21 +979,11 @@ SCRPROC:
 		Prerequisites: scrpowr, ~structures.scr
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 4000$.
 		IconPalette: UnittemIconScrin
-	Building:
-		Footprint: xx== xx== xx==
-		Dimensions: 4,3
-	Explodes:
-		Weapon: TiberiumExplosion
-		EmptyWeapon: TiberiumExplosion
-	Explodes@1:
-		Weapon: TiberiumExplosion
-		EmptyWeapon: TiberiumExplosion
 	StoresResources:
 		PipCount: 17
 		Capacity: 4000
 	FreeActor:
 		Actor: SCRHARV
-		SpawnOffset: 3,1
 	ProvidesPrerequisite@buildingname:
 	-WithIdleOverlay@REDLIGHTS:
 	-WithDockingOverlay@UNLOAD:
@@ -1017,12 +991,9 @@ SCRPROC:
 	ProvidesPrerequisite:
 		Factions: scr
 		Prerequisite: scrproc
-	SelectionDecorations:
 	RenderSprites:
 		Image: scrproc
 		-FactionImages:
-	RequiresBuildableArea:
-		AreaTypes: building
 	Selectable:
 		DecorationBounds: 150, 122, -10, -18
 
@@ -1044,17 +1015,11 @@ SCRPROC2:
 		Prerequisites: scrpowr, ~structures.scr
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 4000$.\n- Turned 180 degrees.
 		IconPalette: UnittemIconScrin
-	Building:
-		Footprint: ==xx ==xx ==xx
-		Dimensions: 4,3
 	ProvidesPrerequisite:
 		Factions: scr
 		Prerequisite: scrproc
-	Refinery:
-		DockOffset: 1,1
 	FreeActor:
 		Actor: SCRHARV
-		SpawnOffset: 1,1
 	StoresResources:
 		PipCount: 17
 		Capacity: 4000
@@ -1082,13 +1047,13 @@ SCRRADR:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
 	Inherits@4: ^3x3Shape
+	Tooltip:
+		Name: Scrin Radar
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 6
 		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Stealth detection\n- Requires power to operate
 		Prerequisites: scrproc, ~structures.scr
-	Tooltip:
-		Name: Scrin Radar
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1135,6 +1100,8 @@ SCRAIR:
 		Sequence: idle-platform
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
+	Power:
+		Amount: -10
 	Selectable:
 		Bounds: 120, 130, 0, -40
 		DecorationBounds: 120, 130, 0, -40
@@ -1155,6 +1122,8 @@ SCRTECH:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
 	Inherits@2: ^2x3Shape
+	Tooltip:
+		Name: Scrin Laboratory
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 8
@@ -1162,8 +1131,6 @@ SCRTECH:
 		Prerequisites: scrradr, ~structures.scr
 	Valued:
 		Cost: 2000
-	Tooltip:
-		Name: Scrin Laboratory
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -1183,6 +1150,8 @@ SCRADVPOWR:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
 	Inherits@4: ^3x3Shape
+	Tooltip:
+		Name: Reality destabilizer
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 9
@@ -1191,8 +1160,6 @@ SCRADVPOWR:
 		BuildLimit: 1
 	Valued:
 		Cost: 1500
-	Tooltip:
-		Name: Reality destabilizer
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
 	Building:
@@ -1262,6 +1229,8 @@ CABPOWR:
 	Inherits: ^PowerPlant
 	Inherits@1: ^CabRender
 	Inherits@4: ^2x2Shape
+	Tooltip:
+		Name: Firestorm Power Plant
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1
@@ -1269,8 +1238,6 @@ CABPOWR:
 		Prerequisites: ~structures.cab
 	Valued:
 		Cost: 500
-	Tooltip:
-		Name: Firestorm Power Plant
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1313,19 +1280,16 @@ CABCLAW:
 CABPROC:
 	Inherits: PROC
 	Inherits@1: ^CabRender
+	Tooltip:
+		Name: C.A.B.A.L. Refinery
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
 		Prerequisites: cabpowr, ~structures.cab
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.
 		IconPalette: UnittemIconCab
-	Tooltip:
-		Name: C.A.B.A.L. Refinery
-	Building:
-		Footprint: xx== xx== xx==
-		Dimensions: 4,3
 	FreeActor:
-		SpawnOffset: 3,1
+		Actor: harv.cab
 	RenderSprites:
 		-Image: proc.gdi
 		-FactionImages:
@@ -1335,32 +1299,25 @@ CABPROC:
 		DeathSequencePalette: playermut
 		CrushedSequencePalette: playermut
 		CrushedPaletteIsPlayerPalette: true
-	RequiresBuildableArea:
-		AreaTypes: building
 
 CABPROC2:
 	Inherits: FLIPPEDPROC
 	Inherits@1: ^CabRender
 	Tooltip:
 		Name: C.A.B.A.L. Refinery
-	RenderSprites:
-		-Image: proc.gdi
-		-FactionImages:
-	-WithIdleOverlay@REDLIGHTS:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
 		Prerequisites: cabpowr, ~structures.cab
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.\n- Turned 180 degrees.
 		IconPalette: UnittemIconCab
-	Building:
-		Footprint: ==xx ==xx ==xx
-		Dimensions: 4,3
-	Refinery:
-		DockOffset: 1,1
 	FreeActor:
-		Actor: HARV
-		SpawnOffset: 1,1
+		Actor: harv.cab
+	RenderSprites:
+		-Image: proc.gdi
+		-FactionImages:
+	-WithIdleOverlay@REDLIGHTS:
+
 
 CABWEAP:
 	Inherits: ^Factory
@@ -1382,13 +1339,13 @@ CABRADR:
 	Inherits: ^Radar
 	Inherits@1: ^CabRender
 	Inherits@4: ^3x3Shape
+	Tooltip:
+		Name: C.A.B.A.L. Radar
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 6
 		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Stealth detection\n- Requires power to operate.
 		Prerequisites: proc, ~structures.cab
-	Tooltip:
-		Name: C.A.B.A.L. Radar
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1428,6 +1385,8 @@ CABAIR:
 	Reservable:
 	RepairsUnits:
 	ProductionBar:
+	Power:
+		Amount: -10
 	Selectable:
 		Bounds: 88, 66, 0, -5
 		DecorationBounds: 88, 66, 0, -5
@@ -1446,13 +1405,13 @@ CABTECH:
 	Inherits: ^TechCenter
 	Inherits@1: ^CabRender
 	Inherits@2: ^3x2Shape
+	Tooltip:
+		Name: Supercomputer
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 8
 		Description: Provides access to advanced CABAL technologies.
 		Prerequisites: cabradr, ~structures.cab
-	Tooltip:
-		Name: Supercomputer
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -1468,8 +1427,6 @@ CABOBELISK:
 	Inherits@1: ^CabRender
 	Inherits@2: ^2x2Shape
 	Inherits@3: ^SuperWeapon
-	Valued:
-		Cost: 1500
 	Tooltip:
 		Name: Nanomachine Core
 	Buildable:
@@ -1478,6 +1435,8 @@ CABOBELISK:
 		Description: Cabal´s Support Superweapon.\n\nSpecial:\n- Provides access to Nanomachine Swarms\n- Requires power to operate
 		BuildPaletteOrder: 9
 		BuildLimit: 1
+	Valued:
+		Cost: 1500
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2

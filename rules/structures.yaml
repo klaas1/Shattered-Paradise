@@ -986,7 +986,6 @@ SCRPROC:
 		Actor: SCRHARV
 	ProvidesPrerequisite@buildingname:
 	-WithIdleOverlay@REDLIGHTS:
-	-WithDockingOverlay@UNLOAD:
 	-WithDockedOverlay@flame:
 	ProvidesPrerequisite:
 		Factions: scr
@@ -1007,7 +1006,6 @@ SCRPROC2:
 		-Image: proc.gdi
 		-FactionImages:
 	-WithIdleOverlay@REDLIGHTS:
-	-WithDockingOverlay@UNLOAD:
 	-WithDockedOverlay@flame:
 	Buildable:
 		Queue: Building

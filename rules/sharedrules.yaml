@@ -441,8 +441,11 @@ PROC:
 		HP: 140000
 	Refinery:
 		DockAngle: 160
-		DockOffset: 2,1
+		DockOffset: 3,1
 		DiscardExcessResources: false
+		IsDragRequired: true
+		DragOffset: 512,512,0
+		DragLength: 12
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: 3,1
@@ -459,7 +462,6 @@ PROC:
 		EmptyWeapon: TiberiumExplosion
 	WithIdleOverlay@REDLIGHTS:
 		Sequence: idle-redlights
-	WithDockingOverlay@UNLOAD:
 	WithIdleOverlay@BIB:
 		Sequence: bib
 	WithDockedOverlay@flame:
@@ -503,8 +505,11 @@ FLIPPEDPROC:
 		HP: 140000
 	Refinery:
 		DockAngle: 30
-		DockOffset: 0,1
+		DockOffset: -1,1
 		DiscardExcessResources: false
+		IsDragRequired: true
+		DragOffset: -1024,-1024,0
+		DragLength: 12
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: -1,1
@@ -521,7 +526,6 @@ FLIPPEDPROC:
 		EmptyWeapon: TiberiumExplosion
 	WithIdleOverlay@REDLIGHTS:
 		Sequence: idle-redlights
-	WithDockingOverlay@UNLOAD:
 	WithIdleOverlay@BIB:
 		Sequence: bib
 	WithDockedOverlay@flame:

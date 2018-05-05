@@ -672,7 +672,7 @@
 		ValidDamageStates: Critical
 	SmokeParticleEmitter:
 		RequiresCondition: smoketrail && !cloakgenerator
-		Sequence: idle
+		Sequences: idle
 		SpawnFrequency: 3, 10
 		Gravity: -32,-32,48, 32,32,48
 		Offset: 0,0,0,0,0,0

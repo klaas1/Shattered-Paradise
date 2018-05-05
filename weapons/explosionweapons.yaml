@@ -115,8 +115,8 @@ UnitExplodeSmall:
 	Warhead@2: SpawnSmokeParticle
 		Duration: 25, 600
 		Image: explosion
-		Sequence: fire1
-		Palette: effectalpha75
+		Sequences: fire1
+		Palette: effectalpha25
 		Weapon: DummyWeapon
 	Warhead@4Sharpnel: FireShrapnel
 		Weapon: SmallDebris
@@ -134,8 +134,8 @@ UnitExplode:
 	Warhead@2: SpawnSmokeParticle
 		Duration: 25, 600
 		Image: explosion
-		Sequence: fire4
-		Palette: effectalpha75
+		Sequences: fire4
+		Palette: effectalpha25
 		Weapon: DummyWeapon
 
 VeinholeExplosion:
@@ -165,8 +165,8 @@ ScrinUnitExplode:
 	Warhead@2: SpawnSmokeParticle
 		Duration: 25, 600
 		Image: explosion
-		Sequence: fire4
-		Palette: effectalpha75
+		Sequences: fire4
+		Palette: effectalpha25
 		Weapon: DummyWeapon
 
 ScrinUnitExplode2:
@@ -181,8 +181,8 @@ ScrinUnitExplode2:
 	Warhead@2: SpawnSmokeParticle
 		Duration: 25, 600
 		Image: explosion
-		Sequence: fire2
-		Palette: effectalpha75
+		Sequences: fire2
+		Palette: effectalpha25
 		Weapon: DummyWeapon
 
 ScrinUnitExplode3:
@@ -275,7 +275,7 @@ SmallDebris:
 	Warhead@2: SpawnSmokeParticle
 		Duration: 25, 600
 		Image: explosion
-		Sequence: fire2
+		Sequences: fire2, fire1
 		Palette: effectalpha25
 		Weapon: DummyWeapon
 
@@ -294,7 +294,7 @@ LargeDebris:
 	Warhead@2: SpawnSmokeParticle
 		Duration: 25, 600
 		Image: explosion
-		Sequence: fire1
+		Sequences: fire1, fire2
 		Palette: effectalpha25
 		Weapon: DummyWeapon
 
@@ -307,9 +307,9 @@ LargeDebris:
 	Warhead@2: SpawnSmokeParticle
 		Duration: 25, 600
 		Image: explosion
-		Sequence: fire2
-		Palette: effectalpha50
-		Weapon: DummyWeapon
+		Sequences: fire2, fire1
+		Palette: effectalpha25
+		# Weapon: DummyWeapon
 
 BuildingFireBigParticleSpawner:
 	Inherits: ^ParticleSpawner
@@ -349,16 +349,16 @@ BuildingFireBig:
 	Warhead@2: SpawnSmokeParticle
 		Duration: 25, 600
 		Image: explosion
-		Sequence: fire3
-		Palette: effectalpha75
-		Weapon: DummyWeapon
+		Sequences: fire3, fire4
+		Palette: effectalpha50
+		# Weapon: DummyWeapon
 
 BuildingFireSmall:
   	Inherits: BuildingFireBig
 	Range: 2c0
 	MinRange: 0c512
   	Warhead@2: SpawnSmokeParticle
-		Sequence: fire2
+		Sequences: fire2, fire1
 		Duration: 25, 300
 
 BuildingCriticalDamageFireSpawner:
@@ -373,7 +373,7 @@ BuildingCriticalDamageFireSmall:
 	MinRange: 0c256
   	Warhead@2: SpawnSmokeParticle
 		Duration: 250
-		Sequence: fire1
+		Sequences: fire1
 	-Warhead@2Smu: LeaveSmudge
 	-Warhead@3Eff: CreateEffect
 

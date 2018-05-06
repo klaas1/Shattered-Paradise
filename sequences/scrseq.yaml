@@ -394,11 +394,11 @@ scrharv:
 		Facings: -32
 		ShadowStart: 32
 	dock:
-		Start: 12
-		ShadowStart: 45
+		Facings: -32
+		ShadowStart: 32
 	dock-loop:
-		Start: 12
-		ShadowStart: 45
+		Facings: -32
+		ShadowStart: 32
 	harvest: harvestr
 		Length: *
 	icon: scrharvicon

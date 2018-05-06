@@ -699,6 +699,7 @@
 	ExplodeWeapon@SpawnFire:
 		RequiresCondition: SpawnFire && !cloakgenerator
 		Weapon: BuildingCriticalDamageFireSpawner
+		ResetReloadWhenEnabled: False
 	ExternalCondition@SpawnFire:
 		Condition: SpawnFire
 
@@ -1002,6 +1003,8 @@
 		Categories: Defence
 	Replacement:
 		ReplaceableTypes: Tower
+	ExplodeWeapon@SpawnFire:
+		Weapon: DefenceCriticalDamageFireSpawner
 
 ^AntiAir:
 	Inherits: ^Defence

@@ -323,7 +323,7 @@ BuildingFireSmallParticleSpawner:
 		Weapon: BuildingFireSmallShrapnel
 
 BuildingFireBigShrapnel:
-	ReloadDelay: 10
+	ReloadDelay: 15
 	Projectile: InstantExplode
 	Warhead@op: FireShrapnel
 		Weapon: BuildingFireBig
@@ -332,7 +332,7 @@ BuildingFireBigShrapnel:
 
 BuildingFireSmallShrapnel:
    	Inherits: BuildingFireBigShrapnel
-   	ReloadDelay: 4
+   	ReloadDelay: 6
    	Warhead@op: FireShrapnel
 		Weapon: BuildingFireSmall
 
@@ -363,19 +363,28 @@ BuildingFireSmall:
 
 BuildingCriticalDamageFireSpawner:
 	Inherits: BuildingFireBigShrapnel
-	ReloadDelay: 250
+	ReloadDelay: 125
    	Warhead@op: FireShrapnel
 		Weapon: BuildingCriticalDamageFireSmall
 
 BuildingCriticalDamageFireSmall:
   	Inherits: BuildingFireBig
-	Range: 1c512
-	MinRange: 0c256
+	Range: 1c0
   	Warhead@2: SpawnSmokeParticle
 		Duration: 250
-		Sequences: fire1
+		Sequences: fire1, fire2
 	-Warhead@2Smu: LeaveSmudge
 	-Warhead@3Eff: CreateEffect
+
+DefenceCriticalDamageFireSpawner:
+	Inherits: BuildingCriticalDamageFireSpawner
+	ReloadDelay: 250
+   	Warhead@op: FireShrapnel
+		Weapon: DefenceCriticalDamageFireSmall
+
+DefenceCriticalDamageFireSmall:
+  	Inherits: BuildingCriticalDamageFireSmall
+	Range: 0c400
 
 DummyWeapon:
 	Projectile: InstantHit

@@ -16,7 +16,7 @@ Player:
 		UnitQueues: Vehicle, Infantry, Air
 		UnitsCommonNames:
 			Mcv: mcv, drache, cabmcv, nodmcv, mutmcv
-			ExcludeFromSquads: harv, scrharv
+			ExcludeFromSquads: harv, scrharv, harv.gdi, harv.nod, harv.mut, harv.cab
 		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 35
 		RushInterval: 1125

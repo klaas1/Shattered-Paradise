@@ -242,8 +242,8 @@ mcv.gdi:
 	harvest: harvestr
 		Length: *
 		ZRamp: 1
-		Offset: 0, 0, 6
-		ZOffset: -500
+		Offset: 0,0,0
+		ZOffset: -512
 	icon: sidebar-gdi|harvicon
 	dock:
 		Length: 1
@@ -287,6 +287,22 @@ cabharv:
 		Facings: 8
 		ShadowStart: 86
 	icon: cabharvicon
+
+scrharv:
+	Inherits: ^Harvester
+	idle:
+		Facings: -32
+		ShadowStart: 32
+	move:
+		Facings: -32
+		ShadowStart: 32
+	dock:
+		Facings: -32
+		ShadowStart: 32
+	dock-loop:
+		Facings: -32
+		ShadowStart: 32
+	icon: scrharvicon
 
 lpst.gdi:
 	Inherits: ^EmpOverlay

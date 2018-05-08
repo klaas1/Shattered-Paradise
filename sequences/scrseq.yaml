@@ -385,24 +385,6 @@ drache.falling:
 	idle: drache
 		Start: 1
 
-scrharv:
-	Inherits: ^EmpOverlay
-	idle:
-		Facings: -32
-		ShadowStart: 32
-	move:
-		Facings: -32
-		ShadowStart: 32
-	dock:
-		Facings: -32
-		ShadowStart: 32
-	dock-loop:
-		Facings: -32
-		ShadowStart: 32
-	harvest: harvestr
-		Length: *
-	icon: scrharvicon
-
 scrscorpion:
 	Inherits: ^EmpOverlay
 	stand:

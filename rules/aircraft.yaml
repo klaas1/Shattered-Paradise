@@ -559,7 +559,7 @@ WETP:
 	Tooltip:
 		Name: Falcon
 	Buildable:
-		Description: Fast jet that throws a small tiberium bomb.\n\nGood vs: Ground Targets\nSpecial:\n- Can mutate killed enemy units\n- Emittes tiberium gas damaging nearby units.\n- Attacks emit radiation that harms infantry in the area.
+		Description: Fast jet that throws a small tiberium bomb.\n\nGood vs: Ground Targets\nSpecial:\n- Can mutate killed enemy units\n- Emits tiberium gas damaging nearby units.\n- Gains a speed boost after attacking.
 		Queue: Air
 		BuildPaletteOrder: 7
 		Prerequisites: ~muair, muhall
@@ -568,7 +568,7 @@ WETP:
 	Aircraft:
 		MaximumPitch: 120
 		TurnSpeed: 6
-		Speed: 150
+		Speed: 170
 		AirborneCondition: airborne
 		MoveIntoShroud: true
 	Health:
@@ -597,12 +597,21 @@ WETP:
 		RequiresCondition: cruising
 	SpawnActorOnDeath:
 		Actor: WETP.Husk
-	SpeedMultiplier@NotSupersonic:
-		RequiresCondition: !NotSupersonic
-		Modifier: 200
-	GrantConditionOnAttack@NotSupersonic:
-		Condition: NotSupersonic
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne && !Supersonic
+	SpeedMultiplier@Supersonic:
+		RequiresCondition: Supersonic
+		Modifier: 300
+	GrantConditionOnAttack@Supersonic:
+		Condition: Supersonic
 		RevokeDelay: 250
+	RevealsShroud:
+		RequiresCondition: !Supersonic
+	RevealsShroud@Supersonic:    
+		Range: 3c0
+		RequiresCondition: Supersonic
+		Type: CenterPosition 
 
 MUTQUEEN:
 	Inherits: ^Helicopter

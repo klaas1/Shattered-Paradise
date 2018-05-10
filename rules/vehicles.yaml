@@ -1474,13 +1474,14 @@ MRLS:
 	Armament:
 		Weapon: tiberianrocket
 		LocalOffset: 400,100,900, 400,-100,900
-		PauseOnCondition: empdisable
 		RequiresCondition: !deployed
+		PauseOnCondition: empdisable || tibrocket2
 	Armament@clean:
 		Weapon: TiberianRocketClean
 		LocalOffset: 400,100,900, 400,-100,900
-		PauseOnCondition: empdisable
+		PauseOnCondition: empdisable || tibrocket1
 		RequiresCondition: deployed
+		Name: secondary
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
@@ -1500,6 +1501,13 @@ MRLS:
 		Color: E0D048
 		ZOffset: 9999
 		RequiresCondition: !deployed
+	GrantConditionOnAttack@tibrocket1:
+		Condition: tibrocket1
+		RevokeDelay: 200
+	GrantConditionOnAttack@tibrocket2:
+		Condition: tibrocket2
+		RevokeDelay: 200
+		ArmamentNames: secondary
 
 DEATHCLAW:
 	Inherits: ^Beast

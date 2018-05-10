@@ -745,7 +745,7 @@ drache:
 	SelectionDecorations:
 	RenderSprites:
 	WithFacingSpriteBody:
-		Sequence: run
+		Sequence: stand
 	Hovers:
 	-RenderVoxels:
 	-WithVoxelBody:

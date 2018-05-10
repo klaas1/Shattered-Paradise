@@ -54,6 +54,11 @@ SkirmisherMortar:
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	-Warhead@4Smu: LeaveSmudge
 	-Warhead@5Smu: LeaveSmudge
+	Warhead@8Radio: CreateRadioactivity
+		Range: 1
+		Level: 6
+		Falloff: 100
+		MaxLevel: 1000
 
 FiendShard2:
 	Inherits: ^APWarhead
@@ -353,13 +358,11 @@ RavagerStrike:
 	ReloadDelay: 30
 	Range: 1c512
 	Report: fiend2.aud
-	ValidTargets: Vehicle, Defence, Infantry, Building
 	Projectile: BulletAS
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c090
-		Damage: 2380
-		ValidTargets: Vehicle, Defence, Infantry
+		Damage: 5000
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 		Versus:
 			InfantryArmor: 125
@@ -457,6 +460,10 @@ TiberianRocket:
 		Falloff: 70, 40
 		MaxLevel: 1000
 
+TiberianRocketClean:
+	Inherits: TiberianRocket
+	-Warhead@8Radio: CreateRadioactivity
+
 MiniNuke:
 	Inherits: ClusterMissile
 	ValidTargets: Ground, Water, Water, Air
@@ -510,6 +517,11 @@ QueenShard:
 		ExplosionPalette: apolgreenalpha
 		ImpactSounds: expnew14.aud
 		InvalidTargets: Water
+	Warhead@8Radio: CreateRadioactivity
+		Range: 1
+		Level: 40
+		Falloff: 100
+		MaxLevel: 1000
 
 SpawnEggShrapnel:
 	ReloadDelay: 500
@@ -665,7 +677,7 @@ FalconPunch:
 		CloseEnough: 200
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
-		Damage: 13500
+		Damage: 27000
 		ValidTargets: Ground, Water, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@5Actor: SpawnActor
@@ -674,7 +686,7 @@ FalconPunch:
 		Range: 3
 	Warhead@8Radio: CreateRadioactivity
 		Range: 1, 2, 3
-		Level: 400
+		Level: 600
 		Falloff: 100, 50, 25
 		MaxLevel: 1000
 

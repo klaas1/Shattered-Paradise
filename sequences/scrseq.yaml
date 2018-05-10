@@ -359,11 +359,7 @@ drache:
 		Tick: 150
 		Offset: 0, 0, 60
 	stand:
-		Facings: 20
-	run:
-		Start: 1
-		Facings: 20
-		Tick: 150
+		Facings: 1
 	icon: dracheicon
 		Offset: 0, 0
 	idle:
@@ -384,24 +380,6 @@ drache.falling:
 		Offset: 0, 0
 	idle: drache
 		Start: 1
-
-scrharv:
-	Inherits: ^EmpOverlay
-	idle:
-		Facings: -32
-		ShadowStart: 32
-	move:
-		Facings: -32
-		ShadowStart: 32
-	dock:
-		Facings: -32
-		ShadowStart: 32
-	dock-loop:
-		Facings: -32
-		ShadowStart: 32
-	harvest: harvestr
-		Length: *
-	icon: scrharvicon
 
 scrscorpion:
 	Inherits: ^EmpOverlay

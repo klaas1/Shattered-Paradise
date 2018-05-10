@@ -146,7 +146,7 @@ HARV:
 	Explodes:
 		Weapon: TiberiumExplosion
 	WithHarvestOverlay:
-		Offset: 1500,0,0
+		LocalOffset: 768,0,0
 		Palette: effect
 	SelectionDecorations:
 	Capturable:
@@ -441,11 +441,11 @@ PROC:
 		HP: 140000
 	Refinery:
 		DockAngle: 160
-		DockOffset: 3,1
+		DockOffset: 2,1
 		DiscardExcessResources: false
-		IsDragRequired: true
-		DragOffset: 512,512,0
-		DragLength: 12
+		# IsDragRequired: true
+		# DragOffset: 200,200,0
+		# DragLength: 12
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: 3,1
@@ -505,11 +505,11 @@ FLIPPEDPROC:
 		HP: 140000
 	Refinery:
 		DockAngle: 30
-		DockOffset: -1,1
+		DockOffset: 1,1
 		DiscardExcessResources: false
-		IsDragRequired: true
-		DragOffset: -1024,-1024,0
-		DragLength: 12
+		# IsDragRequired: true
+		# DragOffset: -512,-512,0
+		# DragLength: 12
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: -1,1

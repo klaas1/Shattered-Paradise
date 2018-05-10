@@ -862,8 +862,6 @@
 	Inherits@3: ^1x1Shape
 	Inherits@4: ^SpawnFire
 	WithTextControlGroupDecoration:
-	# DelayedWeaponAttachable:
-		# Type: bomb
 	SelectionDecorations:
 		Palette: pips
 	Selectable:

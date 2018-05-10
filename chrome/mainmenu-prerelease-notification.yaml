@@ -72,5 +72,5 @@ Background@MAINMENU_PRERELEASE_NOTIFICATION:
 			Y: PARENT_BOTTOM - 45
 			Width: 120
 			Height: 25
-			Text: I Understand.
+			Text: I Understand
 			Font: Bold

@@ -555,20 +555,20 @@ WETP:
 	Inherits@2: ^AutoTargetAllAssaultMove
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1000
+		Cost: 1800
 	Tooltip:
 		Name: Falcon
 	Buildable:
 		Description: Fast jet that throws a small tiberium bomb.\n\nGood vs: Ground Targets\nSpecial:\n- Can mutate killed enemy units\n- Emittes tiberium gas damaging nearby units.\n- Attacks emit radiation that harms infantry in the area.
 		Queue: Air
-		BuildPaletteOrder: 6
+		BuildPaletteOrder: 7
 		Prerequisites: ~muair, muhall
 	Selectable:
 		Bounds: 30,24
 	Aircraft:
 		MaximumPitch: 120
 		TurnSpeed: 6
-		Speed: 170
+		Speed: 150
 		AirborneCondition: airborne
 		MoveIntoShroud: true
 	Health:
@@ -597,6 +597,12 @@ WETP:
 		RequiresCondition: cruising
 	SpawnActorOnDeath:
 		Actor: WETP.Husk
+	SpeedMultiplier@NotSupersonic:
+		RequiresCondition: !NotSupersonic
+		Modifier: 200
+	GrantConditionOnAttack@NotSupersonic:
+		Condition: NotSupersonic
+		RevokeDelay: 250
 
 MUTQUEEN:
 	Inherits: ^Helicopter
@@ -612,8 +618,8 @@ MUTQUEEN:
 	Buildable:
 		Description: Harasser and mutator.\n\nGood vs: Vehicles, Buildings\n\nSpecial:\n- Can mutate killed enemy units\n- Lays eggs via deploy which later hatch as crabs that are hostile to anyone.
 		Queue: Air
-		BuildPaletteOrder: 7
-		Prerequisites: ~muair, muhall
+		BuildPaletteOrder: 6
+		Prerequisites: ~muair, gadept
 	Selectable:
 		Bounds: 30,24
 	Voiced:
@@ -745,7 +751,7 @@ drache:
 	SelectionDecorations:
 	RenderSprites:
 	WithFacingSpriteBody:
-		Sequence: run
+		Sequence: stand
 	Hovers:
 	-RenderVoxels:
 	-WithVoxelBody:

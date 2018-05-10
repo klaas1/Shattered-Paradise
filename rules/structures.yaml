@@ -1294,8 +1294,8 @@ CABPROC:
 	-WithIdleOverlay@REDLIGHTS:
 	-ProvidesPrerequisite@proc:
 	WithDeathAnimation:
-		DeathSequencePalette: playermut
-		CrushedSequencePalette: playermut
+		DeathSequencePalette: playercab
+		CrushedSequencePalette: playercab
 		CrushedPaletteIsPlayerPalette: true
 
 CABPROC2:
@@ -1315,7 +1315,10 @@ CABPROC2:
 		-Image: proc.gdi
 		-FactionImages:
 	-WithIdleOverlay@REDLIGHTS:
-
+	WithDeathAnimation:
+		DeathSequencePalette: playercab
+		CrushedSequencePalette: playercab
+		CrushedPaletteIsPlayerPalette: true
 
 CABWEAP:
 	Inherits: ^Factory

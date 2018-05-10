@@ -624,10 +624,10 @@ E3:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 14
-		Description: Siege militia armed with mortars.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Heals on Tiberium\n- High attack range\n- Minimum attack distance\n- Crush class: crushable
+		Description: Siege militia armed with mortars.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Heals on Tiberium\n- High attack range\n- Has a minimum attack distance.\n- Applies a radiation damage on impact.\n- Inmune to radiation damage.\n- Crush class: crushable
 		Prerequisites: ~murax, muradr
 	Valued:
-		Cost: 250
+		Cost: 200
 	Tooltip:
 		Name: Skirmisher
 	Voiced:
@@ -649,6 +649,7 @@ E3:
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
+	-DamagedByRadioactivity@Default:
 
 SEER:
 	Inherits: ^Mutant
@@ -659,7 +660,7 @@ SEER:
 		Description: Psychic mutant that leads armies through fear.\n\nGood vs: Vehicles, Aircraft.\n\nSpecial:\n- Can persuade friendly units to fight harder when deployed.\n- Buffed units will get 20% extra attack speed, move speed and receive 20% more damage.\n- Effect lasts 15 seconds.\n- Heals on Tiberium.\n- Can attack air\n- Crush class: crushable.
 		Prerequisites: ~murax, muhall
 	Valued:
-		Cost: 650
+		Cost: 500
 	Tooltip:
 		Name: Tyrant
 	Voiced:

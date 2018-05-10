@@ -1407,7 +1407,7 @@ WOLF:
 		Description: Tiberium beast that uses tiberium gas to harm nearby units.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Heals on Tiberium.\n- Attacks emit radiation that harms infantry in the area.\n- Can mutate killed enemy units.\n- Inmune to tiberium radiation.
 		Prerequisites: ~muweap, muradr
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Tiberian Bull
 	Voiced:
@@ -1432,7 +1432,7 @@ WOLF:
 	Health:
 		HP: 30000
 	Mobile:
-		Speed: 90
+		Speed: 95
 		SharesCell: false
 		-RequiresCondition: !WebDisable
 	ExternalCondition@berserk:
@@ -1457,7 +1457,7 @@ MRLS:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 21
-		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed enemy units\n- Emittes tiberium radiaton that damages nearby units.\n- Can crush infantry.\n- Inmune to tiberium radiation.
+		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed enemy units\n- Emits tiberium radiaton that damages nearby units.\n- Can swap to regular warheads with a deploy order.\n- Can crush infantry.\n- Inmune to tiberium radiation.
 		Prerequisites: ~muweap, muhall
 	Mobile:
 		TurnSpeed: 10
@@ -1475,6 +1475,12 @@ MRLS:
 		Weapon: tiberianrocket
 		LocalOffset: 400,100,900, 400,-100,900
 		PauseOnCondition: empdisable
+		RequiresCondition: !deployed
+	Armament@clean:
+		Weapon: TiberianRocketClean
+		LocalOffset: 400,100,900, 400,-100,900
+		PauseOnCondition: empdisable
+		RequiresCondition: deployed
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
@@ -1486,6 +1492,14 @@ MRLS:
 	WithFacingSpriteBody:
 	WithSpriteTurret:
 	-DamagedByRadioactivity@Default:
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+	WithTextDecoration@primary:
+		Text: R
+		ReferencePoint: Right
+		Color: E0D048
+		ZOffset: 9999
+		RequiresCondition: !deployed
 
 DEATHCLAW:
 	Inherits: ^Beast
@@ -1498,7 +1512,7 @@ DEATHCLAW:
 		Description: Melee beast from the outer redzones that brings death with its claws.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium
 		Prerequisites: ~muweap, muhall
 	Valued:
-		Cost: 900
+		Cost: 1200
 	Tooltip:
 		Name: Ravager
 	Voiced:
@@ -1515,7 +1529,7 @@ DEATHCLAW:
 	Armor:
 		Type: VehicleArmor
 	Health:
-		HP: 65000
+		HP: 80000
 	WithInfantryBody:
 		IdleSequences: idle2, idle3
 	Crushable:

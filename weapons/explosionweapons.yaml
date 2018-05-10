@@ -373,6 +373,7 @@ BuildingCriticalDamageFireSmall:
   	Warhead@2: SpawnSmokeParticle
 		Duration: 250
 		Sequences: fire1, fire2
+		Image: buildingfire
 	-Warhead@2Smu: LeaveSmudge
 	-Warhead@3Eff: CreateEffect
 

@@ -12,7 +12,6 @@ Packages:
 	.
 	./mods/common: common
 	./mods/as: as
-	$d2k: d2k
 	$sp: sp
 	$ts: ts
 # Tiberian Sun
@@ -183,7 +182,6 @@ Chrome:
 Assemblies:
 	common|OpenRA.Mods.Common.dll
 	common|OpenRA.Mods.Cnc.dll
-	d2k|OpenRA.Mods.D2k.dll
 	as|OpenRA.Mods.AS.dll
 
 ChromeLayout:

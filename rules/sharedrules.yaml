@@ -137,7 +137,6 @@ HARV:
 			Veins: 100
 	Health:
 		HP: 50000
-	-TemporaryOwnerManager:
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	Armor:

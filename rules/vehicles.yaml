@@ -379,7 +379,6 @@ HMEC:
 		MuzzleSequence: muzzle
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
-	-TemporaryOwnerManager:
 	-WithVoxelBody:
 	Turreted:
 		Offset: -500,0,0

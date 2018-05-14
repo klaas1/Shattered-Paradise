@@ -1106,7 +1106,6 @@
 	Inherits@5: ^5CellVision
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
-	TemporaryOwnerManager:
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	Chronoshiftable:
@@ -1482,7 +1481,6 @@
 	Inherits@3: ^VehicleShape
 	Inherits@4: ^5CellVision
 	DrawLineToTarget:
-	TemporaryOwnerManager:
 	WithTextControlGroupDecoration:
 	GivesExperience:
 		PlayerExperienceModifier: 1

@@ -454,7 +454,6 @@ BHS:
 		CloakDelay: 50
 		IsPlayerPalette: true
 		UncloakOn: Attack
-	-TemporaryOwnerManager:
 	RenderSprites:
 	-DamagedByTerrain:
 
@@ -735,7 +734,6 @@ PSYKER:
 		Speed: 70
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
-	-TemporaryOwnerManager:
 	Armament@PRIMARY:
 		Weapon: PsykerRay
 		Name: OnFoot
@@ -1432,7 +1430,6 @@ CYC2:
 		Speed: 65
 	Health:
 		HP: 70000
-	-TemporaryOwnerManager:
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
 	Targetable@MCImmune:

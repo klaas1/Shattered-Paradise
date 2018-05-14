@@ -975,6 +975,7 @@ HealScrin:
 		# ValidTargets: Mothership
 		# DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
+# ChangeOwner can no longer be used since we removed all d2k dependencies!
 # CouncilSteal:
 	# ReloadDelay: 150
 	# Range: 6c0
@@ -993,7 +994,7 @@ HealScrin:
 		# Versus:
 			# ConcreteArmor: 30
 		# DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-	# Warhead@4OwnerChange: ChangeOwner
+	# Warhead@4OwnerChange: ChangeOwner 
 		# Range: 1c512
 		# Duration: 75
 		# InvalidTargets: C4, MindControlInmune

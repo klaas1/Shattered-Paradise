@@ -663,7 +663,7 @@ FalconPunch:
 	ValidTargets: Ground, Water, Water
 	ReloadDelay: 1
 	MinRange: 0c100
-	Range: 5c0
+	Range: 3c0
 	Projectile: Missile
 		TerrainHeightAware: True
 		CruiseAltitude: 6000

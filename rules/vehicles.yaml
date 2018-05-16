@@ -1519,7 +1519,7 @@ DEATHCLAW:
 		Description: Melee beast from the outer redzones that brings death with its claws.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium
 		Prerequisites: ~muweap, muhall
 	Valued:
-		Cost: 1200
+		Cost: 1300
 	Tooltip:
 		Name: Ravager
 	Voiced:
@@ -1536,7 +1536,7 @@ DEATHCLAW:
 	Armor:
 		Type: VehicleArmor
 	Health:
-		HP: 80000
+		HP: 65000
 	WithInfantryBody:
 		IdleSequences: idle2, idle3
 	Crushable:

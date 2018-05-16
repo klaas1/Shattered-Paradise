@@ -559,7 +559,7 @@ WETP:
 	Tooltip:
 		Name: Falcon
 	Buildable:
-		Description: Fast jet that throws a small tiberium bomb.\n\nGood vs: Ground Targets\nSpecial:\n- Can mutate killed enemy units\n- Emits tiberium gas damaging nearby units.\n- Gains a speed boost after attacking.
+		Description: Fast jet that throws a small tiberium bomb.\n\nGood vs: Ground Targets.\nSpecial:\n- Can mutate killed enemy units\n- Emits tiberium gas damaging nearby units.\n- Moves at high speed until it fires its payload\n- Has no vision when moving at high speed.
 		Queue: Air
 		BuildPaletteOrder: 7
 		Prerequisites: ~muair, muhall
@@ -567,8 +567,8 @@ WETP:
 		Bounds: 30,24
 	Aircraft:
 		MaximumPitch: 120
-		TurnSpeed: 6
-		Speed: 170
+		TurnSpeed: 9
+		Speed: 150
 		AirborneCondition: airborne
 		MoveIntoShroud: true
 	Health:
@@ -590,6 +590,7 @@ WETP:
 		PipTypeEmpty: AmmoEmpty
 		AmmoCondition: ammo
 	AutoTarget:
+		ScanRadius: 6
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
 	RenderSprites:
@@ -597,21 +598,15 @@ WETP:
 		RequiresCondition: cruising
 	SpawnActorOnDeath:
 		Actor: WETP.Husk
-	Targetable@AIRBORNE:
-		TargetTypes: Air
-		RequiresCondition: airborne && !Supersonic
 	SpeedMultiplier@Supersonic:
-		RequiresCondition: Supersonic
+		RequiresCondition: ammo
 		Modifier: 300
-	GrantConditionOnAttack@Supersonic:
-		Condition: Supersonic
-		RevokeDelay: 250
 	RevealsShroud:
-		RequiresCondition: !Supersonic
+		RequiresCondition: !ammo
 	RevealsShroud@Supersonic:    
 		Range: 3c0
-		RequiresCondition: Supersonic
-		Type: CenterPosition 
+		RequiresCondition: ammo
+		Type: CenterPosition
 
 MUTQUEEN:
 	Inherits: ^Helicopter

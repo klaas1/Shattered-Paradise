@@ -458,8 +458,9 @@
 	WithDecoration@hospitalheal:
 		Image: healpip
 		Sequence: idle
-		ReferencePoint: Bottom, Right
+		ReferencePoint: Bottom, Left
 		Palette: mouse
+		ValidStances: Ally, Enemy
 		ShowToEnemies: true
 		RequiresCondition: hospitalheal
 	ExternalCondition@hospitalheal:
@@ -478,7 +479,8 @@
 	WithDecoration@MachineShopHeal:
 		Image: wrenchicon
 		Sequence: idle
-		ReferencePoint: Bottom, Right
+		ReferencePoint: Bottom, Left
+		ValidStances: Ally, Enemy
 		Palette: player
 		ShowToEnemies: true
 		RequiresCondition: MachineShopHeal

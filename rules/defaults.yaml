@@ -179,15 +179,15 @@
 ^NormalRefineryHitShape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1524, -1920
-			BottomRight: 1524, 1524
+			TopLeft: -1536, -2048
+			BottomRight: 1536, 0
 			LocalYaw: 128
 
 ^FlippedRefineryHitshape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1524, -1524
-			BottomRight: 1524, 1920
+			TopLeft: -1536, 0
+			BottomRight: 1536, 2048
 			LocalYaw: 128
 
 ^4x3Shape:

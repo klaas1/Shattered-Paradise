@@ -9,14 +9,14 @@ WestWood Studios Studios
 OpenRA dev team for their effort in creating openra (no ORA, no SP).
 
 Apollo				: Knowledge about palettes and explosion making.
-Scipción			: Got me into 3D modelling.
+Scipciï¿½n			: Got me into 3D modelling.
 Penev, abcdefg30	: Saved the mod from countless bugs.
 Graion Dilach		: Code wizzard, responsible for the code necessary for many features the mod offers.
 BoolBada			: Another code wizzard, responsible for carrier logic and other fun stuff.
 FiveAces			: Streaming.
 SchismNavigator		: Worked on SP for some time.
 4XS					: For his help with concept art. http://4-x-s.deviantart.com/
-LawAndOrder			: Help with yaml maintenance.
+lawANDorder			: YAML Maintenance & SDK configuration.
 Noddy				: Asset Hunter.
 Voidwalker			: Coding & Maintenance.
 ZxGanon				: Balance & Streaming.
@@ -28,7 +28,7 @@ Trempler			: Mapping.
 #Images and Others.
 
 Nolt		: CABAL, Scrin and Mutant UI, skirmish faction logos.
-Scipción	: Shattered Paradise planet logo.
+Scipciï¿½n	: Shattered Paradise planet logo.
 Alex06		: Dev Blog image.
 
 Assets come from three sources, Public, Vanilla and made by Nolt, if an asset isnt listed here
@@ -36,7 +36,7 @@ and it doesnt belong to the vanilla tiberian sun or any other cnc game, then its
 
 #Game Art
 
-Ahkâm		: Firestorm effect indicator.
+Ahkï¿½m		: Firestorm effect indicator.
 Agent Z		: GDI MRLS Voxel, Forgotten Harvester.
 Astor		: Veterancy Chevrons (I guess its Astor :/)
 ApolloTD	: Gradient Colored Palettes, Explosion Packs.
@@ -52,7 +52,7 @@ Marn		: Weapon light effects.
 Moder.U		: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
 Muldrake	: Twilight Mammoth Tank.
 The_Dementor	: Cameos: Skirmisher, EMP pulse Icons, Harvester and mut MCV, Wrench and Tiberium Icons. 
-HG_Scipción	: Scrin powerplant and Cabal refinery model.
+HG_Scipciï¿½n	: Scrin powerplant and Cabal refinery model.
 Jah		: Storm Rider vxl.	
 KALAPS S8 	: Forgotten Tank Destroyer		
 Super Joe	: Marine shp, Militant shp.

@@ -52,6 +52,7 @@ GAVULC:
 GAROCK:
 	Inherits: ^Tier2
 	Inherits@1: ^TowerStealthDetection
+	Inherits@2: ^AntiVehiclePriority
 	Power:
 		Amount: -20
 	WithSpriteBody:
@@ -315,6 +316,7 @@ MUCANNON:
 	Inherits: ^Defence
 	Inherits@1: ^MutRender
 	Inherits@2: ^TowerStealthDetection
+	Inherits@3: ^AntiVehiclePriority
 	Valued:
 		Cost: 500
 	Tooltip:

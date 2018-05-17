@@ -14,6 +14,13 @@
 	RenderSprites:
 	ConditionManager:
 
+^AntiVehiclePriority:
+  	AutoTargetPriority@AntiVehiclePriority:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Vehicle
+		InvalidTargets: NoAutoTarget
+		Priority: 1
+
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -23,10 +30,12 @@
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Infantry, Vehicle, Creep, Water, Defence, Air
 		InvalidTargets: NoAutoTarget
+		Priority: 2
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Infantry, Vehicle, Creep, Water, Building, Defence, Air
 		InvalidTargets: NoAutoTarget
+		Priority: 2
 
 ^AutoTargetGroundAssaultMove:
 	Inherits: ^AutoTargetGround

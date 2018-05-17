@@ -134,39 +134,44 @@ cborg:
 		Tick: 80
 		Offset: 0, 0, 16
 	stand:
-		Facings: 8
-		ShadowStart: 173
+		Facings: -8
 	run:
 		Start: 8
-		Length: 9
-		Facings: 8
+		Length: 8
+		Facings: -8
 		Tick: 65
-		ShadowStart: 181
 	idle1:
-		Start: 80
-		Length: 19
-		ShadowStart: 253
+		Start: 113
+		Length: 27
 	idle2:
-		Start: 99
-		Length: 12
-		ShadowStart: 272
-	die1:
-		Start: 161
+		Start: 141
+		Length: 18
+	die1: cborgdeath
 		Length: 6
-		ShadowStart: 334
-	die2:
-		Start: 167
+	die2: cborgdeath
+		Start: 6
 		Length: 5
-		ShadowStart: 340
 	die3: infdie
 		Length: *
 	die4: s_bang34
 		Length: *
 	shoot:
-		Start: 113
-		Length: 6
-		Facings: 8
-		ShadowStart: 286
+		Start: 72
+		Length: 5
+		Facings: -8
+	crippled-stand:
+		Start: 159
+		Facings: -8
+	crippled-run:
+		Start: 167
+		Tick: 60
+		Length: 8
+		Facings: -8
+	crippled-shoot:
+		Tick: 60
+		Start: 231
+		Length: 5
+		Facings: -8
 	die6: electro
 		Length: *
 	icon: cborgicon

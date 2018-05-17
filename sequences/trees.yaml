@@ -192,10 +192,8 @@ minivein:
 		ZOffset: -512
 	idle:
 		Length: 39
-	dead: sushimake
-		Start: 30
-		Length: -29
-		Facings: 1
+	dead: sushimake2
+		Length: *
 	stand:
 		Length: 39
 	make: sushimake

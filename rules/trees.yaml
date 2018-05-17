@@ -17,9 +17,14 @@ BIGBLUE:
 		Name: Vinifera
 	SeedsResource:
 		ResourceType: BlueTiberium
-		Interval: 75
+		Interval: 55
 	ExplodeWeapon@1234567:
 		Weapon: BlueTibRadiation
+
+BIGBLUE3:
+	Inherits: BIGBLUE
+	RenderSprites:
+		Image: bigblue
 
 TREE01:
 	Inherits: ^Tree

@@ -1874,7 +1874,7 @@
 		StartsRevealed: true
 	SeedsResource:
 		ResourceType: Tiberium
-		Interval: 75
+		Interval: 35
 	WithIdleAnimation:
 	EditorTilesetFilter:
 		Categories: Blossom Tree

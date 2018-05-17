@@ -659,6 +659,12 @@ MUTQUEEN:
 	-ReloadAmmoPool@AIReload:
 	-AmmoPool:
 	-ExternalCondition@AIReload:
+	-GrantConditionOnDamageState@spawnsparks:
+	-ExplodeWeapon@spawnsparks:
+	-ExternalCondition@spawnsparks:
+	-GrantConditionOnDamageState@smoke:
+	-SmokeParticleEmitter:
+	-ExternalCondition@smoketrail:
 
 MUTBIRD:
 	Inherits@3: MUTQUEEN
@@ -766,6 +772,8 @@ drache:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
+	-GainsExperience:
+	-ProducibleWithLevel:
 
 SCRGLYDER1:
 	Inherits: ^Helicopter

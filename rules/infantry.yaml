@@ -91,6 +91,8 @@ MEDIC:
 	AttackFrontal:
 	Passenger:
 		PipType: Red
+	-GainsExperience:
+	-ProducibleWithLevel:
 
 JUMPJET:
 	Inherits: ^Soldier

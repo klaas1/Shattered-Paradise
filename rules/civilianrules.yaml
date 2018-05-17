@@ -342,8 +342,6 @@ ZOMBIE:
 		HP: 7500
 		Shape: Circle
 			Radius: 213
-	Armor:
-		Type: None
 	RevealsShroud:
 		Range: 4c0
 	Explodes:

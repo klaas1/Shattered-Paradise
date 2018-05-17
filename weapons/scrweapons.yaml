@@ -701,7 +701,7 @@ EssenceMissile:
 		Image: essencetrail
 		TrailImage: essencetrailmini
 		TrailPalette: apolra2ialpha
-		Speed: 300
+		Speed: 600
 		TrailInterval: 1
 		Palette: apolra2ialpha
 	Warhead@1Dam: SpreadDamage

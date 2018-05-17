@@ -150,7 +150,8 @@ BikeExplo:
 		InvalidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		Versus:
-			BuildingArmor: 200
+			BuildingArmor: 150
+			ConcreteArmor: 15
 	Warhead@5Sharpnel: FireShrapnel
 		Weapon: NukeFlame3
 		Amount: 60

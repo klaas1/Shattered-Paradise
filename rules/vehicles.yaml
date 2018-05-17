@@ -8,6 +8,7 @@ SMECH:
 		Name: Wolverine
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Small but fast anti-infantry walker.\n\nGood vs: Infantry\n\nSpecial:\n- Stealth detection.
 		BuildPaletteOrder: 2
 		Prerequisites: ~gaweap
@@ -47,6 +48,7 @@ MMCH:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 3
+		BuildAtProductionType: Tank
 		Description: Well balanced main battle walker armed with an anti-tank cannon.\n\nGood vs: Vehicles\n\nSpecial:\n- Can crush infantry
 		Prerequisites: ~gaweap
 	Mobile:
@@ -89,6 +91,7 @@ APC:
 		Name: Amphibious APC
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Armored infantry transport.\n\nGood vs: Infantry.\n\nSpecial:\n- Can transport 5 infantry units.\n- Can travel over water.\n- Can crush infantry.
 		BuildPaletteOrder: 4
 		Prerequisites: ~gaweap, gapile
@@ -155,6 +158,7 @@ HVR:
 		Name: Hover MLRS
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Hovering vehicle, armed with long range missiles.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Can attack Air\n- Hovers (it ignores terrain like Veins and Water)
 		BuildPaletteOrder: 5
 		Prerequisites: ~gaweap, garadr
@@ -201,6 +205,7 @@ JUG:
 		Name: Juggernaut
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Heavy mechanized artillery walker.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can crush infantry
 		BuildPaletteOrder: 6
 		Prerequisites: ~gaweap, gatech
@@ -250,6 +255,7 @@ SONIC:
 		Name: Disruptor
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Armored high-tech vehicle with sonic armament.\n\nGood vs: Ground Targets.\n\nSpecial:\n- Deals damage over time to any unit in line of fire.\n- Can crush infantry.
 		BuildPaletteOrder: 7
 		Prerequisites: ~gaweap, gatech
@@ -290,7 +296,8 @@ G4TNK:
 	Tooltip:
 		Name: Mammoth Tank
 	Buildable:
-		Queue: Vehicle
+		Queue: Mammoth
+		BuildAtProductionType: Tank
 		Description: Heavy assault tank.\n\nGood vs: Vehicles, Aircraft.\n\nSpecial:\n- Selfheal to 50%\n- Can attack air.\n- Can crush infantry.
 		BuildPaletteOrder: 8
 		Prerequisites: ~gaweap, gatech
@@ -339,6 +346,7 @@ HMEC:
 		Queue: Vehicle
 		BuildPaletteOrder: 9
 		Prerequisites: ~gaweap, gtdrop
+		BuildAtProductionType: Mammoth
 		Description: GDI's super-heavy walker and the proud of their army.\n\nGood vs: Everything\n\nSpecial:\n- Maximum Supply of 1.\n- Selfhealing up to 100%.\n- Can attack air.\n- Can crush infantry.\n- Immune to mind control.\n- Can crush vehicles and cyborgs.
 		BuildLimit: 1
 	Mobile:
@@ -379,6 +387,7 @@ HMEC:
 		MuzzleSequence: muzzle
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
+	-TemporaryOwnerManager:
 	-WithVoxelBody:
 	Turreted:
 		Offset: -500,0,0
@@ -410,6 +419,7 @@ NODMCV:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
+		BuildAtProductionType: Tank
 		Prerequisites: ~naweap, gadept
 	Tooltip:
 		Name: Nod MCV
@@ -437,6 +447,7 @@ BGGY:
 		Cost: 300
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Fast vehicle armed with a machine, has room for one passenger that modifies the weapon of the vehicle.\n\nGood vs: Changes depending on the passenger.\n\nSpecial:\n- The weapon of the vehicle changes with the passenger.\n- Stealth detection.\n- Units inside deal 20% extra damage.
 		BuildPaletteOrder: 10
 		Prerequisites: ~naweap
@@ -773,6 +784,7 @@ TTNK:
 		Name: Tick Tank
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 11
 		Description: Nod´s main battle tank armed with an anti-tank cannon.\n\nGood vs: Vehicles\n\nSpecial:\n- Can deploy to gain extra protection\n- Can crush infantry
 		Prerequisites: ~naweap
@@ -905,6 +917,7 @@ BIKE:
 		Name: Demo Bike
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 12
 		Description: Fast moving suicide vehicle.\n\nGood vs: Ground Targets\n\nSpecial:\n- Can deploy to explode
 		Prerequisites: ~naweap, naradr
@@ -946,6 +959,7 @@ SAPC:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 13
+		BuildAtProductionType: Tank
 		Prerequisites: ~naweap, naradr
 		Description: Troop transport that can move underground.\n\nSpecial:\n- Can move underground.\n- Can transport up to 5 infantry.\n- Can crush infantry.\n- Cannot receive orders but halt when underground.
 	Mobile:
@@ -1006,6 +1020,7 @@ SUBTANK:
 		Name: Devil's Tongue
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Subterranean flame tank able to move underground.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Can move underground.\n- Can crush infantry.\n- Cannot receive orders but halt when underground.
 		BuildPaletteOrder: 14
 		Prerequisites: ~naweap, natech
@@ -1089,11 +1104,6 @@ ARMH:
 		Cost: 1300
 	Tooltip:
 		Name: Beam Cannon
-	Buildable:
-		Queue: Vehicle
-		Description: High tech artillery armed with a laser cannon.\n\nGood vs: Ground Targets\n- Can crush infantry
-		BuildPaletteOrder: 15
-		Prerequisites: ~disabled
 	Health:
 		HP: 16000
 	Mobile:
@@ -1130,7 +1140,8 @@ HOWTLIZER:
 		Name: Specter
 	Buildable:
 		Queue: Vehicle
-		Description: High tech artillery armed with a self-propelled howitzer.\nAnd cloak generators.\n\nGood vs: Ground Targets\n- Can crush infantry.\n- Cloaks when not firing.
+		BuildAtProductionType: Tank
+		Description: High tech artillery armed with a self-propelled howitzer.\nAnd cloak generators.\n\nGood vs: Ground Targets\n- Can crush infantry.\n- Cloaks when not firing.\n- Cloaking malfunctions when at red hp.
 		BuildPaletteOrder: 15
 		Prerequisites: ~naweap, natech
 	Health:
@@ -1145,6 +1156,7 @@ HOWTLIZER:
 		UncloakSound: cloak5.aud
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+		RequiresCondition: !CloakBreaks
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithMuzzleOverlay:
@@ -1162,6 +1174,9 @@ HOWTLIZER:
 	-GrantConditionOnDamageState@smoke:
 	-SmokeParticleEmitter:
 	-ExternalCondition@smoketrail:
+	GrantConditionOnDamageState@CloakBreaks:
+		Condition: CloakBreaks
+		ValidDamageStates: Critical
 
 STNK:
 	Inherits: ^VoxelTank
@@ -1172,8 +1187,9 @@ STNK:
 		Name: Stealth Tank
 	Buildable:
 		BuildPaletteOrder: 16
+		BuildAtProductionType: Tank
 		Prerequisites: ~naweap, natech
-		Description: High tech tank armed with rocket launchers and equipped with a personal mobile stealth generator.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Stealthed\n- Can attack air\n- Can crush infantry
+		Description: High tech tank armed with rocket launchers and equipped with a personal mobile stealth generator.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Stealthed\n- Can attack air\n- Can crush infantry.\n- Cloaking malfunctions when at red hp.
 		Queue: Vehicle
 	Mobile:
 		TurnSpeed: 7
@@ -1191,6 +1207,7 @@ STNK:
 		UncloakSound: cloak5.aud
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+		RequiresCondition: !CloakBreaks
 	Armament:
 		Weapon: StealthRocket
 		LocalOffset: 400,100,300, 400,-100,300
@@ -1222,6 +1239,9 @@ STNK:
 	-GrantConditionOnDamageState@smoke:
 	-SmokeParticleEmitter:
 	-ExternalCondition@smoketrail:
+	GrantConditionOnDamageState@CloakBreaks:
+		Condition: CloakBreaks
+		ValidDamageStates: Critical
 
 #####################################################################
 # FORGOTTEN
@@ -1232,6 +1252,7 @@ MUTMCV:
 	Inherits@1: ^MutRender
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 110
 		Prerequisites: ~muweap, gadept
 	Tooltip:
@@ -1266,6 +1287,7 @@ MUTQUAD:
 		Name: Quad Cannon
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 17
 		Description: Armored truck armed with a quad cannon.\n\nGood vs: Infantry, Aircraft\n\nSpecial:\n- Stealth detection\n- Can crush infantry
 		Prerequisites: ~muweap
@@ -1314,6 +1336,7 @@ LYNX:
 	Inherits@4: ^8CellVision
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Light tank armed with an anti-tank cannon.\n\nGood vs: Vehicles\n\nSpecial:\n- Can crush infantry
 		BuildPaletteOrder: 18
 		Prerequisites: ~muweap
@@ -1363,6 +1386,7 @@ STRUCK:
 	Tooltip:
 		Name: Battle Bus
 	Buildable:
+		BuildAtProductionType: Tank
 		Description: Combat transport.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Cargo for 5 soldiers.\n- Passengers can fire from inside the vehicle.\n- Can crush infantry.
 		Queue: Vehicle
 		BuildPaletteOrder: 19
@@ -1402,8 +1426,9 @@ WOLF:
 	Inherits@2: ^MindControllable
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 20
-		Description: Tiberium beast that uses tiberium gas to harm nearby units.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Heals on Tiberium.\n- Attacks emit radiation that harms infantry in the area.\n- Can mutate killed enemy units.\n- Inmune to tiberium radiation.
+		Description: Tiberium beast that uses tiberium gas to harm nearby units.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Heals on Tiberium.\n- Attacks emit radiation that harms infantry in the area.\n- Can mutate killed enemy units.\n- Inmune to tiberium radiation.\n- E.M.P. Inmune.
 		Prerequisites: ~muweap, muradr
 	Valued:
 		Cost: 700
@@ -1455,6 +1480,7 @@ MRLS:
 		Name: Irradiator MLRS
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 21
 		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed enemy units\n- Emits tiberium radiaton that damages nearby units.\n- Can swap to regular warheads with a deploy order.\n- Can crush infantry.\n- Inmune to tiberium radiation.
 		Prerequisites: ~muweap, muhall
@@ -1515,8 +1541,9 @@ DEATHCLAW:
 	Inherits@3: ^MindControllable
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 22
-		Description: Melee beast from the outer redzones that brings death with its claws.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium
+		Description: Melee beast from the outer redzones that brings death with its claws.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- E.M.P. Inmune.
 		Prerequisites: ~muweap, muhall
 	Valued:
 		Cost: 1300
@@ -1567,6 +1594,7 @@ HVRTRUK3:
 	Tooltip:
 		Name: Demo Truck
 	Buildable:
+		BuildAtProductionType: Tank
 		Description: A hovering demolition truck with a oneway ticket.\n\nGood vs: Everything\n\nSpecial:\n- Can explode via deploy and unleash huge damage and AoE.\n- Hovers (it ignores terrain like Veins and Water)
 		Queue: Vehicle
 		BuildPaletteOrder: 23
@@ -1609,6 +1637,7 @@ SCRSCORPION:
 		Name: Ichor Walker
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 24
 		Description: Anti-personnel walker.\n\n Good vs Infantry.\n\nSpecial:\n- Can mutate enemies killed.\n- Deals considerable damage to vehicles.\n- Absorbs essence from killed enemies to heal.\n- Attacks emit radiation that harms infantry in the area.\n- Inmune to tiberium radiation.
 		Prerequisites: ~scrweap
@@ -1640,6 +1669,7 @@ SCRMBT:
 	Inherits@1: ^8CellVision
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		BuildPaletteOrder: 25
 		Description: Light Tank, good for scouting.\n\nGood vs Ground targets.\n\nSpecial:\n- Hovers (it ignores terrain like Veins and Water).\nAbsorbs essence from killed units to heal.\n- Cannot crush infantry.
 		Prerequisites: ~scrweap
@@ -1677,6 +1707,7 @@ SCRGLYDER2:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 26
+		BuildAtProductionType: Tank
 		Description: Anti air hover vehicle.\n\nGood vs Aircraft\n\nSpecial:\n- Can transform into an aerial version that can only engage ground units.\n- Absorbs essence from killed units to heal.\nBUG: Switching modes will make the unit loose any accumulated experience.\n- Hovers (it ignores terrain like Veins and Water)
 		Prerequisites: ~scrweap, scrradr
 	Valued:
@@ -1713,6 +1744,7 @@ SCRRECHARGER:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
+		BuildAtProductionType: Tank
 		Description: Mobile shield generator.\n\nSpecial:\n- Generates shields around nearby friendly units.\n- Shields protect from all damage until the unit is hit 4 times.\n- Does not protect against super weapons.\n- Absorbs essence from killed enemies to heal.\n- Can Crush infantry.
 		Prerequisites: ~scrweap, scrdepot, scrradr
 	Mobile:
@@ -1755,6 +1787,7 @@ SCRMOBMINE:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 28
+		BuildAtProductionType: Tank
 		Description: Mind Control unit\n\nSpecial:\n- Can mind control vehicles.\n- Can control up to three units.\n- Absorbs essence from killed units to heal.\n- Cannot mindcontrol MCVs or harvester.
 		Prerequisites: ~scrweap, scrtech
 	Valued:
@@ -1803,6 +1836,7 @@ TRIPOD:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 29
+		BuildAtProductionType: Tank
 		Prerequisites: ~scrweap, scrtech
 		Description: Advanced walker.\n\n  Good vs Infantry, Buildings.\n\nSpecial:\n- Absorbs essence from killed units to heal.
 		IconPalette: chromescrin
@@ -1865,6 +1899,7 @@ CABMCV:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
+		BuildAtProductionType: Tank
 		Prerequisites: ~cabweap, gadept
 		IconPalette: UnittemIconCab
 	Tooltip:
@@ -1895,6 +1930,7 @@ CENTURION:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
+		BuildAtProductionType: Tank
 		Description: Heavy walker equipped with chain guns.\n\nGood vs: Infantry\n\nSpecial:\n- Stealth detection\n- Can crush infantry
 		Prerequisites: ~cabweap
 	Mobile:
@@ -1946,6 +1982,7 @@ REAPERCAB:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
+		BuildAtProductionType: Tank
 		Description: Fast raiding walker armed with cluster missiles and web launchers.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Can attack air\n- Can ensnare infantry with webs.
 		Prerequisites: ~cabweap
 	Selectable:
@@ -1995,6 +2032,7 @@ REPAIRVEHICLE:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 32
+		BuildAtProductionType: Tank
 		Prerequisites: ~cabweap, gadept
 		Description: Repairs nearby vehicles.\n\nSpecial:\n- unarmed.\n- repairs vehicles.\n- can crush infantry.
 	Health:
@@ -2029,6 +2067,7 @@ ECM:
 		Name: Artisan
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Utility vehicle.\n\nSpecial:\n- Can place up to 8 mines in the battlefield\n- Reloads in service depot.\n- Mines are cloaked and harm all unit types.\n- Can crush Infantry.
 		BuildPaletteOrder: 33
 		Prerequisites: ~cabweap, gadept
@@ -2068,6 +2107,7 @@ CABAPC:
 		Name: Hover APC
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Description: Armored transport.\n\nSpecial:\n- Can transport 8 infantry units\n- Can transport vehicles\n- Hovers (it ignores terrain like Veins and Water)
 		BuildPaletteOrder: 33
 		Prerequisites: ~cabweap, cabradr
@@ -2110,6 +2150,7 @@ SPIDERARTY:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 34
+		BuildAtProductionType: Tank
 		Description: Heavy Artillery that deploys drones at the targetted area.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals AOE damage\n- Minimum attack distance.\n- Upon attack drones get spawned that attack the enemy.\n- Converts killed units into workers.\n- Can crush infantry.
 		Prerequisites: ~cabweap, cabtech
 	Mobile:
@@ -2150,6 +2191,7 @@ PALADIN:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 35
+		BuildAtProductionType: Tank
 		Description: Advanced Walker armed with a twin laser cannon.\n\nGood vs: Ground Targets\n\nSpecial:\n- Selfrepair\n- Can crush infantry.
 		Prerequisites: ~cabweap, cabtech
 	Mobile:

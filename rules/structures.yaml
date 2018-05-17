@@ -248,6 +248,18 @@ GTDROP:
 		HP: 300000
 	RequiresBuildableArea:
 		AreaTypes: building
+	RallyPoint:
+		Offset: 0,2
+	Exit@1:
+		SpawnOffset: -280,400,0
+		ExitCell: 0,1
+		ProductionTypes: Mammoth, Vehicle
+	Production:
+		Produces: Vehicle, Mammoth
+		# ActorType: dship
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	ProductionBar:
 
 NODYARD:
 	Inherits: GACNST

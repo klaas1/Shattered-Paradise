@@ -52,6 +52,7 @@ MCV:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
 		Prerequisites: ~gaweap, gadept
+		BuildAtProductionType: Tank
 		Description: Deploys into a Construction Yard.\n\nSpecial:\n- Provides a build radius for structures.\n- Can crush infantry.\n- Maximun production speed is reached with 7 Conyards.\n- Max production speed reduces production time by 50%.\n- Cannot be mindcontrolled.
 	Valued:
 		Cost: 2000
@@ -95,6 +96,7 @@ HARV:
 		Queue: Vehicle
 		BuildPaletteOrder: 1
 		Prerequisites: ~humanstuff, factory
+		BuildAtProductionType: Tank
 		InitialActivity: FindResources
 		Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium.\n- Immune to Veins.\n- Can crush infantry.\n- Cannot be mindcontrolled.
 	Selectable:
@@ -205,6 +207,7 @@ SCRHARV:
 		Cost: 1000
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tank
 		Prerequisites: scrproc, ~scrweap
 		InitialActivity: FindResources
 	Mobile:
@@ -569,12 +572,13 @@ FLIPPEDPROC:
 		SpawnOffset: -384,-384,0
 		ExitCell: 3,1
 		ExitDelay: 5
+		ProductionTypes: Tank, Vehicle 
 	Tooltip:
 		Name: Vehicle or Aircraft production
 	ProvidesPrerequisite@factoryhelipad:
 		Prerequisite: Vehicle or Aircraft production
 	Production:
-		Produces: Vehicle
+		Produces: Vehicle, Tank
 	PrimaryBuilding:
 	ProductionBar:
 	Power:

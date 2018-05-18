@@ -1270,6 +1270,19 @@ napost:
 		UseTilesetCode: false
 		-DepthSprite:
 
+dshp:
+	emp-overlay: dot
+	veins: dot
+	cloud: dot
+	smoketrailsmall: smoketrailsmall
+		Length: *
+	sparks: sparks3
+		Length: *
+	muzzle: dot
+	shield: dot
+	dummy: dot
+	idle: dot
+
 nafnce:
 	Defaults:
 		Offset: 0, -12, 13

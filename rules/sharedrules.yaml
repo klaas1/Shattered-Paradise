@@ -560,8 +560,8 @@ FLIPPEDPROC:
 		Footprint: xxx= xxx= xxx=
 		Dimensions: 4,3
 	Selectable:
-		Bounds: 149, 80, -3, -10
-		DecorationBounds: 149, 116, -3, -20
+		Bounds: 100, 70, -30, -24
+		DecorationBounds: 102, 70, -26, -24
 	Health:
 		HP: 208000
 	RallyPoint:

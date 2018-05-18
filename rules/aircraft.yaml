@@ -268,10 +268,16 @@ DSHP:
 		TurnSpeed: 5
 		Speed: 168
 		InitialFacing: 0
+		Repulsable: False
+	-Targetable@AIRBORNE:
+	-Targetable@GROUND:
+	FlyAwayOnIdle:
 	Health:
 		HP: 20000
+	RejectsOrders:
+	-RevealsShroud:
 	Cargo:
-		Types: Infantry
+		Types: Infantry, Vehicle
 		MaxWeight: 5
 		PipCount: 5
 		UnloadVoice: Move
@@ -279,6 +285,19 @@ DSHP:
 		Actor: DSHP.Husk
 	-ReloadAmmoPool@AIReload:
 	-AmmoPool:
+	RenderSprites:
+	Cloak@Dropship:
+		RequiresCondition: !DropshipCloak
+		IsPlayerPalette: true
+		CloakTypes: JohnCena
+	ExternalCondition@DropshipCloak:
+		Condition: DropshipCloak
+	Interactable:
+		Bounds: 1,1
+	Selectable:
+		Bounds: 1,1
+	SelectionDecorations:
+		Bounds: 1,1
 
 ORCATRAN:
 	Inherits: ^Helicopter

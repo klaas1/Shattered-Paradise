@@ -56,6 +56,10 @@ GFiendShard2:
 	Inherits: FiendShard2
 	Inherits@1: ^GarrisonWeapon
 
+GFiendShardAA:
+	Inherits: FiendShardAA
+	Inherits@1: ^GarrisonWeapon
+
 GSkirmisherMortar:
 	Inherits: SkirmisherMortar
 	Range: 9c0

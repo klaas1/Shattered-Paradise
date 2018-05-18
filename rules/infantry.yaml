@@ -580,6 +580,9 @@ MUTFIEND:
 		PauseOnCondition: WebDisable
 	Armament@Garrison:
 		Weapon: GFiendShard2
+	Armament@AAGarrison:
+		Weapon: GFiendShardAA
+		PauseOnCondition: WebDisable
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot

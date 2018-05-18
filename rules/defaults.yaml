@@ -1874,7 +1874,7 @@
 		StartsRevealed: true
 	SeedsResource:
 		ResourceType: Tiberium
-		Interval: 35
+		Interval: 50
 	WithIdleAnimation:
 	EditorTilesetFilter:
 		Categories: Blossom Tree
@@ -2131,7 +2131,7 @@
 		Cost: 100
 	RequiresBuildableArea:
 		AreaTypes: building
-		Adjacent: 4
+		Adjacent: 6
 	Replaceable:
 		Types: Gate, Tower
 
@@ -2154,7 +2154,7 @@
 	Tooltip:
 		Description: Automated barrier that opens for allied units.
 	Building:
-		Adjacent: 4
+		Adjacent: 6
 		BuildSounds: place2.aud
 		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
 	EditorTilesetFilter:

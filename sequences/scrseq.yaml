@@ -518,11 +518,11 @@ scrcarrier:
 	Defaults:
 		Offset: 0,0,64
 	stand:
-		Facings: 32
+		Facings: -32
 	idle:
-		Facings: 32
+		Facings: -32
 	run:
-		Facings: 32
+		Facings: -32
 	icon: scrcarriericon
 
 scrincouncil:

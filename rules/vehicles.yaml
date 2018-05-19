@@ -296,7 +296,7 @@ G4TNK:
 	Tooltip:
 		Name: Mammoth Tank
 	Buildable:
-		Queue: Mammoth
+		Queue: Vehicle
 		BuildAtProductionType: Tank
 		Description: Heavy assault tank.\n\nGood vs: Vehicles, Aircraft.\n\nSpecial:\n- Selfheal to 50%\n- Can attack air.\n- Can crush infantry.
 		BuildPaletteOrder: 8
@@ -1710,7 +1710,7 @@ SCRGLYDER2:
 		Description: Anti air hover vehicle.\n\nGood vs Aircraft\n\nSpecial:\n- Can transform into an aerial version that can only engage ground units.\n- Absorbs essence from killed units to heal.\nBUG: Switching modes will make the unit loose any accumulated experience.\n- Hovers (it ignores terrain like Veins and Water)
 		Prerequisites: ~scrweap, scrradr
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Glider
 	Health:

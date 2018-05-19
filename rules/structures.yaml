@@ -195,7 +195,6 @@ GATECH:
 	RequiresBuildableArea:
 		AreaTypes: building
 
-
 GTDROP:
 	Inherits: ^Building
 	Inherits@2: ^3x3Shape
@@ -283,9 +282,6 @@ NODYARD:
 		Prerequisite: structures.nod
 	ProvidesPrerequisite@grantself:
 		Factions: gdi, nod, cab, mut, scr
-	-EmitInfantryOnSell@humanengie:
-	-EmitInfantryOnSell@mutengie:
-	EmitInfantryOnSell@snowflake:
 
 NAPOWR:
 	Inherits: ^PowerPlant

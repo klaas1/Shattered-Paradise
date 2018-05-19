@@ -850,8 +850,9 @@ NAPOST:
 	Armor:
 		Type: ConcreteArmor
 	-Targetable:
+	-Targetable@Defence:
 	Targetable@Fence:
-		TargetTypes: Building, Ground, DetonateAttack
+		TargetTypes: Building, Ground, DetonateAttack, NoAutoTarget
 	LineBuild:
 		Range: 10
 		NodeTypes: laserfencenode
@@ -937,6 +938,7 @@ NAFNCE:
 		Range: 2c0, 5c0
 	Interactable:
 		Bounds: 48, 24
+	-EditorTilesetFilter:
 
 MUTWALL:
 	Inherits: ^Wall

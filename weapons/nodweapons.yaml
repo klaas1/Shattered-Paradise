@@ -85,6 +85,8 @@ TemplarLasor:
 		Width: 40
 		BeamDuration: 2
 		Inaccuracy: 150
+		ZOffset: 4000
+		SecondaryBeamZOffset: 4000
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 2400
@@ -300,11 +302,11 @@ BCLazor:
 	Projectile: LaserZap
 		BeamDuration: 20
 		Width: 90
-		ZOffset: 2047
 		Color: FA0F0F
 		SecondaryBeam: True
 		SecondaryBeamWidth: 30
-		SecondaryBeamZOffset: 2550
+		ZOffset: 4000
+		SecondaryBeamZOffset: 4000
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
@@ -463,6 +465,8 @@ CerberusLazor:
 	Projectile: LaserZap
 		BeamWidth: 2
 		BeamDuration: 20
+		ZOffset: 4000
+		SecondaryBeamZOffset: 4000
 	MinRange: 3c0
 	InvalidTargets: Air
 	Warhead@1Dam: SpreadDamage
@@ -480,7 +484,8 @@ TurretLaserFire:
 	Projectile: LaserZap
 		Width: 50
 		BeamDuration: 5
-		ZOffset: 2047
+		ZOffset: 4000
+		SecondaryBeamZOffset: 4000
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 3500
@@ -506,11 +511,11 @@ ObeliskLaserFire:
 	Report: obelray1.aud
 	Projectile: LaserZap
 		Width: 90
-		ZOffset: 2047
+		ZOffset: 4000
 		Color: FF000080
 		SecondaryBeam: true
 		SecondaryBeamWidth: 180
-		SecondaryBeamZOffset: 2047
+		SecondaryBeamZOffset: 4000
 		SecondaryBeamColor: FF000040
 	Warhead@1Dam: SpreadDamage
 		Damage: 28000

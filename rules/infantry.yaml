@@ -70,6 +70,8 @@ MEDIC:
 		Cost: 200
 	Tooltip:
 		Name: Medic
+	Mobile:
+		Speed: 55
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 4
@@ -97,7 +99,7 @@ MEDIC:
 JUMPJET:
 	Inherits: ^Soldier
 	Valued:
-		Cost: 450
+		Cost: 400
 	Tooltip:
 		Name: Jumpjet Infantry
 	Voiced:
@@ -126,7 +128,7 @@ JUMPJETAIR:
 	Inherits@2: ^AutoTargetAll
 	Inherits@3: ^8CellVision
 	Valued:
-		Cost: 450
+		Cost: 400
 	Tooltip:
 		Name: Jumpjet Infantry
 	Buildable:
@@ -211,7 +213,7 @@ EAGLEGUARD:
 	Inherits: ^Soldier
 	Inherits@1: ^7CellVision
 	Valued:
-		Cost: 700
+		Cost: 500
 	Tooltip:
 		Name: Eagle Guard
 	Buildable:
@@ -320,7 +322,7 @@ TEMPLAR:
 		Description: Flame warrior, resurrected regenesis prototype.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Does not receive damage from tiberium fields.\n- Crush class: crushable
 		Prerequisites: ~nahand, naradr
 	Valued:
-		Cost: 400
+		Cost: 300
 	Tooltip:
 		Name: Templar
 	Health:
@@ -357,7 +359,7 @@ NCONF:
 		Prerequisites: ~nahand, natech
 		IconPalette: UnittemIcon
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Black Hand Trooper
 	Health:
@@ -879,7 +881,7 @@ FLOAT:
 		Description: Support unit that steals essence from enemy units.\n\nSpecial:\n- Hovers (it ignores terrain like Veins and Water)\n- Attack deals little to no damage but steals essence to heal friendly units.\n- Crush class: crushable.\n- Does not receive damage from tiberium fields.
 		Prerequisites: ~scrrax, scrradr
 	Valued:
-		Cost: 400
+		Cost: 300
 	Crushable:
 		CrushClasses: HeavyInfantry
 	Tooltip:
@@ -925,7 +927,7 @@ BUG:
 		Description: Alien breed that poisons enemies.\n\nGood vs Ground targets.\n\nSpecial\n- Units hit will become poisoned.\n- Poisoned units take damage over time\n- Poisoned units have reduced attack and movement speed by 10%.\n- Plague Carriers attacks bounce up to 3 times.\n- Absorbs essence from killed enemies to heal.\n- Crush class: crushable.\n- Does not receive damage from tiberium fields.
 		Prerequisites: ~scrrax, scrradr
 	Valued:
-		Cost: 650
+		Cost: 500
 	Tooltip:
 		Name: Plague Trooper
 	Targetable@MindControlImmunity:
@@ -1261,7 +1263,7 @@ GLAD:
 	Inherits@1: ^7CellVision
 	Inherits@2: ^PermanentSelfHeal
 	Valued:
-		Cost: 800
+		Cost: 700
 	DeliversCash:
 		Payload: 300
 		Voice: Move
@@ -1319,7 +1321,7 @@ MOTH:
 	Inherits@2: ^8CellVision
 	Inherits@3: ^PermanentSelfHeal
 	Valued:
-		Cost: 1000
+		Cost: 900
 	Tooltip:
 		Name: Abductor
 	Buildable:

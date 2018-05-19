@@ -1,78 +1,77 @@
-	Shattered Paradise, a mod for OpenRA made by Alfredo Brandau (Nolt).
+	Shattered Paradise, a mod for OpenRA made by the Nolt).
 
 #Special Thanks
 
 A warm thank you to the following folks.
 
-WestWood Studios Studios
-	
-OpenRA dev team for their effort in creating openra (no ORA, no SP).
+* WestWood Studios Studios
+* OpenRA dev team for their effort in creating the game.
+
+This is the current development team.
 
 Apollo				: Knowledge about palettes and explosion making.
-Scipci�n			: Got me into 3D modelling.
-Penev, abcdefg30	: Saved the mod from countless bugs.
+abcdefg30			: Dev that offered time working on specific issues.
 Graion Dilach		: Code wizzard, responsible for the code necessary for many features the mod offers.
-BoolBada			: Another code wizzard, responsible for carrier logic and other fun stuff.
 FiveAces			: Streaming.
-SchismNavigator		: Worked on SP for some time.
-4XS					: For his help with concept art. http://4-x-s.deviantart.com/
 lawANDorder			: YAML Maintenance & SDK configuration.
-Noddy				: Asset Hunter.
+Noddy				: Asset Hunter, Writter.
 Voidwalker			: Coding & Maintenance.
 ZxGanon				: Balance & Streaming.
-Skyhunter713		: Voice Acting.
 Jrb0001				: Multiplayer server support.
 Trempler			: Mapping.
+Windawz				: 2d Support.
+Kerbiter			: Logo support.
+CptNaughty			: Prop modeller.
 
+Former team members
 
-#Images and Others.
+SchismNavigator		: Worked on SP for some time.
+BoolBada			: Another code wizzard, responsible for carrier logic and other fun stuff.
+4XS					: For his help with concept art. http://4-x-s.deviantart.com/
+Penev				: Dev that offered time working on specific issues.
+Skyhunter713		: Voice Acting.
+Scipci�n			: Got me into 3D modelling.
 
-Nolt		: CABAL, Scrin and Mutant UI, skirmish faction logos.
-Scipci�n	: Shattered Paradise planet logo.
-Alex06		: Dev Blog image.
+#Game Art
 
 Assets come from three sources, Public, Vanilla and made by Nolt, if an asset isnt listed here
 and it doesnt belong to the vanilla tiberian sun or any other cnc game, then its made by Nolt.
 
-#Game Art
-
-Ahk�m		: Firestorm effect indicator.
-Agent Z		: GDI MRLS Voxel, Forgotten Harvester.
-Astor		: Veterancy Chevrons (I guess its Astor :/)
-ApolloTD	: Gradient Colored Palettes, Explosion Packs.
-azri_apoc 	: Nod Harvester.
-CyborgCommandoKerem: Black Hand Sniper shp.
-DonutArnold	: Basilisk torpedo explosion effect, scrin explosion effects and NOD nuke explosion effect.	
-ErastusMercy	: Mammoth Tank, disruptor, buggy, spectre and repair vehicle voxels.
-GameMaster0000	: Tiberian Fiend Icon.
-Gangster	: His template.
-Hassan_2030	: Grinder vxl.
-Lin Kuei Ominae	: Tripod shp (Unit and Cameo).
-Marn		: Weapon light effects.
-Moder.U		: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
-Muldrake	: Twilight Mammoth Tank.
-The_Dementor	: Cameos: Skirmisher, EMP pulse Icons, Harvester and mut MCV, Wrench and Tiberium Icons. 
-HG_Scipci�n	: Scrin powerplant and Cabal refinery model.
-Jah		: Storm Rider vxl.	
-KALAPS S8 	: Forgotten Tank Destroyer		
-Super Joe	: Marine shp, Militant shp.
-Orac		: Forgotten Trike vxl.
+Alex06				: Old dev Blog image.
+Ahk�m				: Firestorm effect indicator.
+Agent Z				: GDI MRLS Voxel, Forgotten Harvester.
+Astor				: Veterancy Chevrons (I guess its Astor :/)
+ApolloTD			: Gradient Colored Palettes, Explosion Packs.
+azri_apoc			: Nod Harvester.
+CyborgCommandoKerem	: Black Hand Sniper shp.
+DonutArnold			: Basilisk torpedo explosion effect, scrin explosion effects and NOD nuke explosion effect.	
+ErastusMercy		: Mammoth Tank, disruptor, buggy, spectre and repair vehicle voxels.
+GameMaster0000		: Tiberian Fiend Icon.
+Gangster			: His template.
+Hassan_2030			: Grinder vxl.
+Lin Kuei Ominae		: Tripod shp (Unit and Cameo).
+Marn				: Weapon light effects.
+Moder.U				: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
+Muldrake			: Twilight Mammoth Tank.
+The_Dementor		: Cameos: Skirmisher, EMP pulse Icons, Harvester and mut MCV, Wrench and Tiberium Icons. 
+HG_Scipci�n			: Scrin powerplant and Cabal refinery model, Shattered Paradise planet logo.
+Jah					: Storm Rider vxl.	
+KALAPS S8 			: Forgotten Tank Destroyer		
+Super Joe			: Marine shp, Militant shp.
+Orac				: Forgotten Trike vxl.
 OverWatch (PPM User): Forgotten Battle Bus vxl.	
-Windawz		: CABAL, Scrin and Forgotten UI remasters. Repair Vehicle recolor icon, Cyborg Commando Recolor icon.
-Windawz		: Arrow for the refinery icons.
-wirecase.com	: Guardian Platform model.				
-Zoidzilla	: His template.	
-Zero18		: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl, Hologram Projector vxl.
-ZxGanon		: Super weapon warning announcer.
+Windawz				: CABAL, Scrin and Forgotten UI remasters. Repair Vehicle recolor icon, Cyborg Commando Recolor icon.
+Windawz				: Arrow for the refinery icons.
+wirecase.com		: Guardian Platform model.				
+Zoidzilla			: His template.	
+Zero18				: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl, Hologram Projector vxl.
+ZxGanon				: Super weapon warning announcer.
 
 #Sounds
 Audiomicro.com	: Legio and Glyder sound effect.
 Introspectral	: Destroyer weapon sound effect.
-FXhome.com	: Battleship Sound effect.
+FXhome.com		: Battleship Sound effect.
 soundpacks.com	: Various sound effects.
-
-#Maps This spot is only used for missions as you can't see who made each of them
-#where as you can see who made each map on the map selection menu.
 
 #Voice Cast
 
@@ -81,5 +80,4 @@ DrWhitePsyker		: Stealth Tank
 Graion Dilach		: Forgotten MCV
 HiJinxy				: Harvester
 SchismNavigator		: Beam Cannon
-SkyHunter713		: Guardian Platform
-Scrin and NOD EVA	: Command and conquer 3.
+SkyHunter713		: Old Guardian Platform

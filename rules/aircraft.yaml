@@ -574,7 +574,7 @@ WETP:
 	Inherits@2: ^AutoTargetAllAssaultMove
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1800
+		Cost: 2000
 	Tooltip:
 		Name: Falcon
 	Buildable:
@@ -697,7 +697,7 @@ STORMRIDER:
 	Inherits@3: ^11CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Storm Rider
 	Buildable:

@@ -337,9 +337,19 @@ TripodLaser:
 			DefenseArmor: 50
 			ConcreteArmor: 30
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath, ScrinEssenceKill
+	Warhead@2: SpawnSmokeParticle
+		Duration: 6
+		Image: explosion
+		Sequences: fire1
+		Palette: effectalpha25
+		Weapon: TripodProtonSpawner
+
+TripodProtonSpawner:
+	ReloadDelay: 1
+	Projectile: InstantExplode
 	Warhead@op: FireShrapnel
 		Weapon: TripodProton
-		Amount: 30
+		Amount: 2
 		AllowDirectHit: false
 
 TripodProton:
@@ -359,6 +369,11 @@ TripodProton:
 		Damage: 1000
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
+	Warhead@4Sharpnel: FireShrapnel
+		Weapon: SmallDebris
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 StormRiderBlast:
 	Inherits: ^FullDamage

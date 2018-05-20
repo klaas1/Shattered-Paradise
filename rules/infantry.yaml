@@ -126,7 +126,7 @@ JUMPJET:
 JUMPJETAIR:
 	Inherits: ^Aircraft
 	Inherits@2: ^AutoTargetAll
-	Inherits@3: ^8CellVision
+	Inherits@3: ^10CellVision
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -172,7 +172,7 @@ JUMPJETAIR:
 		AirborneCondition: airborne
 		CruisingCondition: cruising
 		CruiseAltitude: 2c500
-		IdealSeparation: 0c500
+		IdealSeparation: 1c0
 		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 		LandWhenIdle: False
 		CanHover: true
@@ -500,13 +500,20 @@ MARAUDER:
 	Armament@1:
 		Weapon: MarauderShotgun
 		Name: OnFoot
+		PauseOnCondition: WebDisable
+		RequiresCondition: !deployed
+	Armament@2:
+		Weapon: GMarauderShotgun
+		MuzzlePalette: playermut
+		RequiresCondition: !deployed
+	Armament@3:
+		Weapon: DeployedMarauderShotgun
+		Name: OnFoot
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 		MuzzlePalette: playermut
 		PauseOnCondition: WebDisable
-	Armament@2:
-		Weapon: GMarauderShotgun
-		MuzzlePalette: playermut
+		RequiresCondition: deployed
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
@@ -1093,7 +1100,7 @@ CYBORG:
 	Voiced:
 		VoiceSet: Cyborg
 	Health:
-		HP: 28000
+		HP: 32200
 	Armament@1:
 		Weapon: CyborgVulcan
 		PauseOnCondition: WebDisable

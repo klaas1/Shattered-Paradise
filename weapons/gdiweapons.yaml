@@ -38,11 +38,10 @@ JJGrenade:
 	Report: grenadelauncherfire.wav
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
-		Speed: 320
+		Speed: 360
 		Blockable: false
 		Shadow: true
 		LaunchAngle: 45
-		Inaccuracy: 0c512
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
@@ -95,7 +94,7 @@ TrooperRail:
 		Color: 0008ED
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
-		Damage: 6000
+		Damage: 4000
 		DamageTypes: Prone60Percent, TriggerProne, BulletDeath
 		Versus:
 			InfantryArmor: 50
@@ -129,11 +128,10 @@ APCGrenade:
 	Report: grenadelauncherfire.wav
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
-		Speed: 320
+		Speed: 360
 		Blockable: false
 		Shadow: true
 		LaunchAngle: 45
-		Inaccuracy: 0c512
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
 		Spread: 200

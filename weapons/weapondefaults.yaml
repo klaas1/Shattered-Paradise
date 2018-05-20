@@ -18,7 +18,7 @@
 		Versus:
 			InfantryArmor: 100
 			BuildingArmor: 30
-			VehicleArmor: 15
+			VehicleArmor: 10
 			DefenseArmor: 15
 			AircraftArmor: 100
 			ConcreteArmor: 5

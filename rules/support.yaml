@@ -445,7 +445,7 @@ CABBLAST:
 	Inherits@1: ^CabRender
 	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 1200
+		Cost: 1000
 	Tooltip:
 		Name: Blaster Turret
 	Buildable:

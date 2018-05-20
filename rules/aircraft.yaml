@@ -621,11 +621,7 @@ WETP:
 		RequiresCondition: ammo
 		Modifier: 300
 	RevealsShroud:
-		RequiresCondition: !ammo
-	RevealsShroud@Supersonic:    
 		Range: 3c0
-		RequiresCondition: ammo
-		Type: CenterPosition
 
 MUTQUEEN:
 	Inherits: ^Helicopter

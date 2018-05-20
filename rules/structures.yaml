@@ -523,7 +523,7 @@ NAMISL:
 	NukePower@ToxinMissile:
 		Cursor: nuke
 		Icon: toxinmissile
-		ChargeInterval: 4500
+		ChargeInterval: 6000
 		Description: Chemical Missile
 		LongDesc: Launches a warhead filled with tiberium, it spawns gas clouds and radiates the area.\nHas a fast reaction time.
 		BeginChargeSound:

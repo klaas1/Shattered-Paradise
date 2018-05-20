@@ -2404,7 +2404,7 @@ WELL:
 		Amount: 100
 		CaptureAmount: 500
 	Health:
-		HP: 100000
+		HP: 135000
 	RenderSprites:
 	Explodes:
 		Weapon: TiberiumExplosion

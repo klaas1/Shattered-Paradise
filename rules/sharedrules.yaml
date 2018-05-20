@@ -514,7 +514,7 @@ FLIPPEDPROC:
 		# DragLength: 12
 	FreeActor:
 		Actor: HARV
-		SpawnOffset: -1,1
+		SpawnOffset: 0,1
 		Facing: 30
 	StoresResources:
 		PipColor: Green

@@ -16,6 +16,10 @@ MarauderShotgun:
 		AllowDirectHit: false
 		AimTargetStances: Ally, Neutral, Enemy
 
+DeployedMarauderShotgun:
+	Inherits: MarauderShotgun
+	Range: 5c0
+
 MarauderShotgunInnacurate:
 	Inherits: MarauderShotgun
 	Range: 1c0
@@ -39,7 +43,7 @@ SkirmisherMortar:
 	MinRange: 2c0
 	Report: 120mmf.aud
 	Projectile: BulletAS
-		Speed: 140
+		Speed: 180
 		Image: 120mm
 		LaunchAngle: 165
 		Shadow: true

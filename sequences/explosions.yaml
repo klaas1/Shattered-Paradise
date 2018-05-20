@@ -3,7 +3,7 @@ explosion:
 		Length: *
 		ZOffset: 9000
 		Offset: 0,0,120
-		Tick: 25
+		Tick: 35
 	building: twlt070
 	pulse_explosion: pulsefx2
 		BlendMode: Additive

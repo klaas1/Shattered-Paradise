@@ -248,6 +248,22 @@
 			BottomRight: 3072, 2048
 			LocalYaw: 128
 
+^CrateBuffs:
+	SpeedMultiplier@speedcrate:
+		RequiresCondition: speedcrate
+		Modifier: 125
+	FirepowerMultiplier@firepowercrate:
+		RequiresCondition: firepowercrate
+		Modifier: 125
+	DamageMultiplier@damagecrate:
+		RequiresCondition: damagecrate
+		Modifier: 75
+	ExternalCondition@damagecrate:
+		Condition: damagecrate
+	ExternalCondition@firepowercrate:
+		Condition: firepowercrate
+	ExternalCondition@speedcrate:
+		Condition: speedcrate
 ^GainsExperience:
 	GainsExperience:
 		Conditions:
@@ -294,10 +310,10 @@
 		RequiresCondition: rank-elite
 		Modifier: 70
 	SelfHealing@ELITE:
-		PercentageStep: 1
-		Delay: 150
+		PercentageStep: 5
+		Delay: 75
 		HealIfBelow: 100
-		DamageCooldown: 125
+		DamageCooldown: 200
 		RequiresCondition: rank-elite
 	WithDecoration@RANK-1:
 		Image: rank
@@ -804,28 +820,29 @@
 ^GenericEffects:
 	Inherits@0: ^KillSelf
 	Inherits@1: ^Cloakable
-	Inherits@1: ^ToxinTrooperDebuff
-	Inherits@3: ^ScrinEssence
-	Inherits@4: ^BurstRecovery
-	Inherits@5: ^FirestormGenBuff
+	Inherits@2: ^ScrinEssence
+	Inherits@3: ^BurstRecovery
+	Inherits@4: ^FirestormGenBuff
+	Inherits@5: ^CrateBuffs
 	RevealOnFire:
 
 ^StructureEffects:
 	Inherits: ^GenericEffects
-	Inherits@2: ^EmpDisable
-	Inherits@3: ^SpawnSmoke
-	Inherits@9: ^SpawnSpark
+	Inherits@1: ^EmpDisable
+	Inherits@2: ^SpawnSmoke
+	Inherits@3: ^SpawnSpark
 
 ^InfantryEffects:
 	Inherits: ^GenericEffects
 	Inherits@1: ^TyrannyBuff
 	Inherits@2: ^InfantryStealthDetection
  	Inherits@3: ^HopspitalHeal
+	Inherits@4: ^ToxinTrooperDebuff
 	Inherits@5: ^RejectsOrdersBerkserk
 	Inherits@6: ^WebDisable
-	Inherits@8: ^BugPoison
-	Inherits@10: ^DisplayVanguardShield
-	Inherits@11: ^DamagedByRadioactivity
+	Inherits@7: ^BugPoison
+	Inherits@8: ^DisplayVanguardShield
+	Inherits@9: ^DamagedByRadioactivity
 
 ^VehicleEffects:
 	Inherits: ^GenericEffects

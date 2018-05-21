@@ -75,7 +75,7 @@ CrabAcid:
 	ValidTargets: Ground, Water, Vehicle, Infantry, Building
 	InvalidTargets: NeutralTibCritter
 	Projectile: BulletAS
-		Speed: 100
+		Speed: 200
 		Image: acidall32mini
 		Inaccuracy: 384
 		Palette: apolgreenalpha
@@ -93,9 +93,9 @@ CrabAcid:
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
 	Warhead@3Radio: CreateRadioactivity
-		Range: 1, 2
-		Level: 5
-		Falloff: 100, 37
+		Range: 1, 2, 3
+		Level: 10
+		Falloff: 100, 50, 20
 		MaxLevel: 1000
 
 Tentacle:

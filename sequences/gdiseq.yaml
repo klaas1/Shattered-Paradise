@@ -931,7 +931,7 @@ gaplug3:
 
 gtdrop:
 	Defaults:
-		Offset: 12, -30
+		Offset: 0,-30
 		UseTilesetCode: false
 	idle:
 		ShadowStart: 3

@@ -50,6 +50,8 @@ CAMERA:
 
 mmch.colorpicker:
 	Inherits: MMCH
+	EditorOnlyTooltip:
+		Name: Color picker unit (Do not place in editor)
 	Mobile:
 		InitialFacing: 160
 	-Buildable:
@@ -83,10 +85,31 @@ CRATE:
 	RevealMapCrateAction:
 		SelectionShares: 1
 		Effect: reveal-map
-	GiveMcvCrateAction:
+	GiveMcvCrateAction@gdi:
 		SelectionShares: 0
 		NoBaseSelectionShares: 100
 		Units: mcv
+		ValidFactions: gdi
+	GiveMcvCrateAction@nod:
+		SelectionShares: 0
+		NoBaseSelectionShares: 100
+		Units: nodmcv
+		ValidFactions: nod
+	GiveMcvCrateAction@mut:
+		SelectionShares: 0
+		NoBaseSelectionShares: 100
+		Units: mutmcv
+		ValidFactions: mut
+	GiveMcvCrateAction@cab:
+		SelectionShares: 0
+		NoBaseSelectionShares: 100
+		Units: cabmcv
+		ValidFactions: cab
+	GiveMcvCrateAction@scr:
+		SelectionShares: 0
+		NoBaseSelectionShares: 100
+		Units: drache
+		ValidFactions: scr
 	GrantExternalConditionCrateAction@cloak:
 		SelectionShares: 5
 		Effect: stealth
@@ -95,16 +118,16 @@ CRATE:
 	GrantExternalConditionCrateAction@firepower:
 		SelectionShares: 5
 		Effect: firepower
-		Condition: firepower
+		Condition: firepowercrate
 		Notification: 00-i070.aud
 	GrantExternalConditionCrateAction@armor:
 		SelectionShares: 5
 		Effect: armor
-		Condition: damage
+		Condition: damagecrate
 		Notification: 00-i068.aud
 	GrantExternalConditionCrateAction@speed:
 		SelectionShares: 5
-		Condition: speed
+		Condition: speedcrate
 		Notification: 00-i080.aud
 
 SROCK01:

@@ -2,7 +2,7 @@ Player:
 	HackyAI@SP:
 		Name: SP AI
 		Type: SPAI
-		SquadSize: 7
+		SquadSize: 14
 		SquadSizeRandomBonus: 15
 		MinimumExcessPower: 40
 		BuildingCommonNames:
@@ -16,7 +16,7 @@ Player:
 		UnitQueues: Vehicle, Infantry, Air
 		UnitsCommonNames:
 			Mcv: mcv, drache, cabmcv, nodmcv, mutmcv
-			ExcludeFromSquads: harv, scrharv, harv.gdi, harv.nod, harv.mut, harv.cab
+			ExcludeFromSquads: harv, scrharv, harv.gdi, harv.nod, harv.mut, harv.cab, engineer, e2, swarmling, shapeshifter
 		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 35
 		RushInterval: 1125
@@ -34,6 +34,8 @@ Player:
 		ShouldRepairBuildings: True
 		CheckForNewBasesDelay: 1500
 		NewProductionCashThreshold: 90000
+		# CapturingActorTypes: engineer, e2, swarmling, shapeshifter
+		# CapturableActorTypes: well, gacnst, mutyard, cabyard, nodyard, drached
 		BuildingLimits:
 			gadept: 1
 			scrdepot: 1
@@ -71,7 +73,7 @@ Player:
 			cabtech: 1
 			gavulc: 8
 			cabpit: 8
-			mubunkr: 12
+			mubunkrfull: 5
 			nalasr: 8
 			scrneedler: 8
 			muflak: 7
@@ -133,7 +135,7 @@ Player:
 			nasam: 10%
 			cabpit: 10%
 			cabrail: 10%
-			mubunkr: 10%
+			mubunkrfull: 10%
 			muflak: 10%
 			scrneedler: 10%
 			scrtractor: 10%
@@ -143,7 +145,6 @@ Player:
 			scrdrone: 5%
 			gafire: 1%
 			# nastlh: 2%
-			# muventi: 1%
 			cabeye: 1%
 			scrextrator: 1%
 			nahpad: 5%
@@ -152,6 +153,10 @@ Player:
 			scrair: 5%
 			cabair: 5%
 		UnitLimits:
+			# engineer: 3
+			# e2: 3
+			# swarmling: 3
+			# shapeshifter: 3
 			harv: 5
 			scrharv: 5
 			gdie1: 18
@@ -182,8 +187,10 @@ Player:
 			bug: 4
 			smech: 7
 			bggy: 7
+			rocketbggy: 7
+			flamebggy: 7
 			mmch: 7
-			struck: 10
+			struckfull: 10
 			centurion: 10
 			scrdronec: 3
 			scrscorpion: 10
@@ -196,7 +203,6 @@ Player:
 			wolf: 8
 			g4tnk: 8
 			scrmbt: 8
-			# scrrecharger: 3
 			sonic: 7
 			deathclaw: 7
 			paladin: 4
@@ -210,7 +216,6 @@ Player:
 			wasp: 10
 			basilisk: 4
 			devourer: 1
-			# bigblue: 6
 			scrin: 3
 			cerberus: 2
 			orca: 5
@@ -222,6 +227,10 @@ Player:
 			scrdestroyer: 2
 			scrbattleship: 1
 		UnitsToBuild:
+			# engineer: 1%
+			# e2: 1%
+			# swarmling: 1%
+			# shapeshifter: 1%
 			harv: 40%
 			scrharv: 40%
 			cabharv: 40%
@@ -254,8 +263,10 @@ Player:
 			mmch: 5%
 			smech: 7%
 			bggy: 5%
+			rocketbggy: 5%
+			flamebggy: 5%
 			trike: 5%
-			struck: 7%
+			struckfull: 7%
 			centurion: 7%
 			scrdronec: 4%
 			scrscorpion: 5%
@@ -268,7 +279,6 @@ Player:
 			wolf: 9%
 			g4tnk: 9%
 			scrmbt: 9%
-			# scrrecharger: 9%
 			sonic: 12%
 			jug: 12%
 			hmec: 12%
@@ -282,7 +292,6 @@ Player:
 			wasp: 7%
 			basilisk: 5%
 			devourer: 5%
-			# bigblue: 7%
 			scrin: 5%
 			cerberus: 2%
 			orca: 7%

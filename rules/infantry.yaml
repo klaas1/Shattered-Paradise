@@ -467,6 +467,8 @@ FlameHologram:
 		Weapon: MilitantRifle
 	RenderSprites:
 		Image: altnode1
+	EditorOnlyTooltip:
+		Name: Militant Hollogram
 
 CrusaHologram:
 	Inherits@2: ^Hologram
@@ -475,6 +477,8 @@ CrusaHologram:
 		LocalOffset: 0,0,600
 	RenderSprites:
 		Image: crusader
+	EditorOnlyTooltip:
+		Name: Crusader Hollogram
 
 MARAUDER:
 	Inherits: ^Mutant

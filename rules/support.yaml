@@ -262,7 +262,6 @@ NASAM:
 	RequiresBuildableArea:
 		AreaTypes: building
 
-
 MUBUNKR:
 	Inherits: ^Defence
 	Inherits@1: ^MutRender
@@ -276,13 +275,13 @@ MUBUNKR:
 		Description: Fortified position where infantry can fire from within.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Provides stealth detection\n- Up to 4 infantry units can be garrisoned\n- Does not require power to operate
 		Queue: Defense
 		BuildPaletteOrder: 16
-		Prerequisites: murax, ~structures.mut
+		Prerequisites: murax, ~structures.mut, ~!AImoney
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 88, 42, 0, -6
-		DecorationBounds: 88, 72, 0, -12
+		Bounds: 80, 42, 0, -6
+		DecorationBounds: 80, 42, 0, -6
 	Health:
 		HP: 90000
 	AutoTarget:
@@ -312,6 +311,19 @@ MUBUNKR:
 	-WithDecoration@POWERDOWN:
 	-PowerMultiplier@POWERDOWN:
 
+MUBUNKRFULL:
+	Inherits: MUBUNKR
+	Buildable:
+		Prerequisites: murax, ~structures.mut, ~AImoney
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: mubunkr
+	EditorOnlyTooltip:
+		Name: Filled Bunker
+ 	Cargo:
+		InitialUnits: marauder, marauder, mutfiend, mutfiend
+        
 MUCANNON:
 	Inherits: ^Defence
 	Inherits@1: ^MutRender

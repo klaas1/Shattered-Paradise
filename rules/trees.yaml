@@ -25,6 +25,8 @@ BIGBLUE3:
 	Inherits: BIGBLUE
 	RenderSprites:
 		Image: bigblue
+	EditorOnlyTooltip:
+		Name: Duplicated vinifera (It helps avoid map inportation issues)
 
 TREE01:
 	Inherits: ^Tree
@@ -232,6 +234,8 @@ VEINHOLE:
 
 VEINHOLE2:
 	Inherits: VEINHOLE
+	EditorOnlyTooltip:
+		Name: Low ground veinhole
 
 MINIVEIN:
 	Inherits: VEINHOLE

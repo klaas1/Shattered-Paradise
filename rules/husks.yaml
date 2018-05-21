@@ -320,7 +320,7 @@ DRACHE.Husk:
 	Tooltip:
 		Name: Drache
 	FallsToEarth:
-		Explosion: ScrinUnitExplode4
+		Explosion: BattleshipExplode
 	Selectable:
 		Bounds: 1,1
 	WithShadow:

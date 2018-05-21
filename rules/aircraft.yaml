@@ -265,10 +265,11 @@ DSHP:
 		Name: Dropship
 	Aircraft:
 		LandWhenIdle: yes
-		TurnSpeed: 5
-		Speed: 168
+		TurnSpeed: 10
+		Speed: 200
 		InitialFacing: 0
 		Repulsable: False
+		AltitudeVelocity: 500
 	-Targetable@AIRBORNE:
 	-Targetable@GROUND:
 	FlyAwayOnIdle:
@@ -286,6 +287,8 @@ DSHP:
 	-ReloadAmmoPool@AIReload:
 	-AmmoPool:
 	RenderSprites:
+	RenderVoxels:
+		Scale: 20
 	Cloak@Dropship:
 		RequiresCondition: !DropshipCloak
 		IsPlayerPalette: true
@@ -1057,6 +1060,8 @@ STORMRIDERSPAWN:
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
 	Inherits@Shadow: ^AircraftShadow
+	EditorOnlyTooltip:
+		Name: Assault Carrier Drone (Do not place in editor)
 	Tooltip:
 		Name: Wyverm
 	GainsExperienceMultiplier:
@@ -1107,6 +1112,10 @@ CABDRONEJET:
 	Inherits@1: ^CabRender
 	Armament:
 		Weapon: CabJetMiniBomb
+	EditorOnlyTooltip:
+		Name: Drone pit Drone (Do not place in editor)
+	Tooltip:
+		Name: Cabal Drone
 	-Armament@AA:
 	Valued:
 		Cost: 50

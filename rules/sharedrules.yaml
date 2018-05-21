@@ -338,8 +338,8 @@ GACNST:
 		Factions: gdi, nod, cab, mut
 		Prerequisite: humanstuff
 		ResetOnOwnerChange: True
-	ProvidesPrerequisite@gdi:
-		Factions: gdi
+	ProvidesPrerequisite@faction:
+		Factions: gdi, nod, cab, mut, scr
 		Prerequisite: structures.gdi
 	EmitInfantryOnSell@humanengie:
 		ActorTypes: engineer

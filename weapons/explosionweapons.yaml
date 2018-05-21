@@ -215,6 +215,11 @@ TiberiumExplosion:
 	Warhead@3Eff: CreateEffect
 		Explosions: tibexp
 		ImpactSounds: expnew09.aud
+	Warhead@8Radio: CreateRadioactivity
+		Range: 1, 2, 3, 4
+		Level: 40
+		Falloff: 100, 50, 25, 12
+		MaxLevel: 1000
 
 ZombieExplosion:
 	Warhead@1Dam: SpreadDamage

@@ -371,7 +371,7 @@ TripodProton:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 	Warhead@4Sharpnel: FireShrapnel
 		Weapon: SmallDebris
-		Amount: 2
+		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 

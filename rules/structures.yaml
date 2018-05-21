@@ -209,8 +209,6 @@ GTDROP:
 		Description: Staging area for drop pod assault. \n\nSpecial:\n- Provides access to Helldiver Drop support\n- Unlocks the Mammoth MKII\n- Requires power to operate
 	Valued:
 		Cost: 1500
-	ProvidesPrerequisite:
-		Prerequisite: factory
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -247,23 +245,21 @@ GTDROP:
 		HP: 300000
 	RequiresBuildableArea:
 		AreaTypes: building
-	# RallyPoint:
-		# Offset: 1,3
-	# Exit@1:
-		# SpawnOffset: -280,400,0
-		# ExitCell: 1,2
-		# ProductionTypes: Mammoth
-	# ProductionAirdrop:
-		# Produces: Vehicle, Mammoth
-		# ActorType: dshp
-		# ReadyAudio: UnitReady
-	# PrimaryBuilding:
-		# PrimaryCondition: primary
-	# ProductionBar:
-	# ProximityExternalCondition@DropshipCloak:
-		# Condition: DropshipCloak
-		# Range: 10c0
-		# AffectsParent: false
+	RallyPoint:
+		Offset: 4,4
+	Exit@1:
+		SpawnOffset: 350,450,0#-280,400,0
+		ExitCell: 4,4
+		ProductionTypes: Mammoth, Vehicle
+	ProductionAirdrop:
+		Produces: Vehicle, Mammoth
+		ActorType: dshp
+		ReadyAudio: UnitReady
+	ProductionBar:
+	ProximityExternalCondition@DropshipCloak:
+		Condition: DropshipCloak
+		Range: 10c0
+		AffectsParent: false
 
 NODYARD:
 	Inherits: GACNST
@@ -277,8 +273,7 @@ NODYARD:
 	-WithIdleOverlay@SIDE:
 	-WithIdleOverlay@FRONT:
 	-WithBuildingPlacedOverlay:
-	ProvidesPrerequisite@nod:
-		Factions: gdi, nod, cab, mut, scr
+	ProvidesPrerequisite@faction:
 		Prerequisite: structures.nod
 	ProvidesPrerequisite@grantself:
 		Factions: gdi, nod, cab, mut, scr
@@ -582,8 +577,7 @@ MUTYARD:
 	-WithIdleOverlay@SIDE:
 	-WithIdleOverlay@FRONT:
 	-WithBuildingPlacedOverlay:
-	ProvidesPrerequisite@mut:
-		Factions: gdi, nod, cab, mut, scr
+	ProvidesPrerequisite@faction:
 		Prerequisite: structures.mut
 	ProvidesPrerequisite@grantself:
 		Factions: gdi, nod, cab, mut, scr
@@ -878,6 +872,7 @@ drached:
 	ProductionBar@Defense:
 		ProductionType: Defense
 	ProvidesPrerequisite@scr:
+		Factions: gdi, nod, cab, mut, scr
 		Prerequisite: structures.scr
 	ProvidesPrerequisite@12321:
 		Prerequisite: scrinstuff
@@ -1006,8 +1001,6 @@ SCRPROC:
 	RenderSprites:
 		Image: scrproc
 		-FactionImages:
-	Selectable:
-		DecorationBounds: 150, 122, -10, -18
 
 SCRPROC2:
 	Inherits: FLIPPEDPROC
@@ -1226,8 +1219,7 @@ CABYARD:
 	-WithIdleOverlay@SIDE:
 	-WithIdleOverlay@FRONT:
 	-WithBuildingPlacedOverlay:
-	ProvidesPrerequisite@cab:
-		Factions: gdi, nod, cab, mut, scr
+	ProvidesPrerequisite@faction:
 		Prerequisite: structures.cab
 	ProvidesPrerequisite@grantself:
 		Factions: gdi, nod, cab, mut, scr

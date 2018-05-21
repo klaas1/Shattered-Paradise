@@ -346,8 +346,8 @@ HMEC:
 		Queue: Vehicle
 		BuildPaletteOrder: 9
 		Prerequisites: ~gaweap, gtdrop
-		# BuildAtProductionType: Mammoth
-		Description: GDI's super-heavy walker and the proud of their army.\n\nGood vs: Everything\n\nSpecial:\n- Maximum Supply of 1.\n- Selfhealing up to 100%.\n- Can attack air.\n- Can crush infantry.\n- Immune to mind control.\n- Can crush vehicles and cyborgs.
+		BuildAtProductionType: Mammoth
+		Description: GDI's super-heavy walker and the proud of their army.\n\nGood vs: Everything\n\nSpecial:\n- Maximum Supply of 1.\n- Selfhealing up to 100%.\n- Can attack air.\n- Can crush infantry.\n- Immune to mind control.\n- Can crush vehicles and cyborgs.\n- It is deployed via dropship at the Dropship Bay.
 		BuildLimit: 1
 	Mobile:
 		TurnSpeed: 3
@@ -449,7 +449,7 @@ BGGY:
 		BuildAtProductionType: Tank
 		Description: Fast vehicle armed with a machine, has room for one passenger that modifies the weapon of the vehicle.\n\nGood vs: Changes depending on the passenger.\n\nSpecial:\n- The weapon of the vehicle changes with the passenger.\n- Stealth detection.\n- Units inside deal 20% extra damage.
 		BuildPaletteOrder: 10
-		Prerequisites: ~naweap
+		Prerequisites: ~naweap, ~!AImoney
 	Mobile:
 		TurnSpeed: 16
 		Speed: 135
@@ -729,10 +729,38 @@ BGGY:
 		Name: Essential Buggy
 		RequiresCondition: ifv.float
 
+ROCKETBGGY:
+	Inherits: BGGY
+	Valued:
+		Cost: 600
+	EditorOnlyTooltip:
+		Name: Rocket Buggy
+	RenderSprites:
+		Image: bggy
+	Buildable:
+		Prerequisites: ~naweap, ~AImoney
+	Cargo:
+		InitialUnits: crusader
+
+FLAMEBGGY:
+	Inherits: BGGY
+	Valued:
+		Cost: 800
+	RenderSprites:
+		Image: bggy
+	Buildable:
+		Prerequisites: ~naweap, naradr, ~AImoney
+	Cargo:
+		InitialUnits: templar
+	EditorOnlyTooltip:
+		Name: Flame Buggy
+
 BUGGYHOLOGRAM:
 	Inherits: BGGY
 	Inherits@1: ^3CellVision
 	-Buildable:
+	EditorOnlyTooltip:
+		Name: Hollogram Buggy
 	WithDecoration@holoicon:
 		Image: holoicon
 		Sequence: idle
@@ -861,6 +889,8 @@ TICKHOLOGRAM:
 	Inherits: TTNK
 	Inherits@1: ^3CellVision
 	-Buildable:
+	EditorOnlyTooltip:
+		Name: Tick Tank Hollogram
 	WithDecoration@holoicon:
 		Image: holoicon
 		Sequence: idle
@@ -1389,7 +1419,7 @@ STRUCK:
 		Description: Combat transport.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Cargo for 5 soldiers.\n- Passengers can fire from inside the vehicle.
 		Queue: Vehicle
 		BuildPaletteOrder: 19
-		Prerequisites: ~muweap, murax
+		Prerequisites: ~muweap, murax, ~!AImoney
 	Mobile:
 		TurnSpeed: 10
 		Speed: 100
@@ -1418,6 +1448,19 @@ STRUCK:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853
 		PortCones: 1086, 86, 86, 86, 86, 86
+
+STRUCKFULL:
+	Inherits: STRUCK
+	Buildable:
+		Prerequisites: ~muweap, murax, ~AImoney
+	Valued:
+		Cost: 1200
+ 	Cargo:
+		InitialUnits: marauder, marauder, mutfiend, mutfiend, e3
+ 	RenderSprites:
+ 	 	Image: struck
+	EditorOnlyTooltip:
+		Name: Filled Battle bus
 
 WOLF:
 	Inherits: ^Beast

@@ -277,7 +277,7 @@ VISC_SML:
 		RequiresCondition: Transform
 	GrantPeriodicCondition:
 		Condition: Transform
-		CooldownDuration: 750
+		CooldownDuration: 1000
 	-AutoTarget:
 	-AutoTargetPriority@DEFAULT:
 	-AutoTargetPriority@ATTACKANYTHING:
@@ -321,6 +321,8 @@ VISC_LRG_SCRIN:
 	RejectsOrders:
 	-UpdatesPlayerStatistics:
 	-AppearsOnRadar:
+	EditorOnlyTooltip:
+		Name: Visceroid Hive Visc (Do not place in editor)
 	AutoTarget:
 		ScanRadius: 5
 		InitialStance: AttackAnything
@@ -421,6 +423,8 @@ BERSERKER:
 CRAB:
 	Inherits: ^Beast
 	Inherits@1: ^MutRender
+	EditorOnlyTooltip:
+		Name: Queen Crab (Dies after some time)
 	Tooltip:
 		Name: Crab
 	-GainsExperience:
@@ -433,11 +437,14 @@ CRAB:
 	Armor:
 		Type: InfantryArmor
 	RevealsShroud:
-		Range: 40c0
+		Range: 8c0
+	AutoTarget:
+		ScanRadius: 7
+		InitialStance: AttackAnything
 	-SpawnActorOnDeath@conversion:
 	-Crushable:
 	Mobile:
-		Speed: 100
+		Speed: 50
 		Crushes: nada
 	Voiced:
 		VoiceSet: Fiend
@@ -465,6 +472,20 @@ CRAB:
 		ReduceMoveRadiusDelay: 1
 		MinMoveDelay: 25
 		MaxMoveDelay: 100
+
+PERMACRAB:
+	Inherits: CRAB
+ 	EditorOnlyTooltip:
+		Name: Permanent Crab
+	RenderSprites:
+		Image: crab
+	-GrantPeriodicCondition:
+	-SelfHealing@crab:
+	SelfHealing@ELITE:
+		PercentageStep: 5
+		Delay: 75
+		HealIfBelow: 100
+		DamageCooldown: 300
 
 FLOATER:
 	Inherits: ^HoverVehicle
@@ -515,6 +536,8 @@ jfish:
 	Inherits: FLOATER
 	RenderSprites:
 		Image: floater
+	EditorOnlyTooltip:
+		Name: Duplicated Floater (It helps avoid map inportation issues)
 
 CIV1:
 	Inherits: ^CivilianInfantry
@@ -2464,63 +2487,65 @@ BLOODDERRICK:
 		TargetStances: Ally, Enemy, Neutral
 	AutoTarget:
 	SpawnActorOnDeath@1:
-		Actor: crab
+		Actor: permacrab
 		Probability: 100
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		Offset: -1,-1
 	SpawnActorOnDeath@2:
-		Actor: crab
-		Probability: 50
-		OwnerType: InternalName
-		InternalOwner: Creeps
-	SpawnActorOnDeath@3:
-		Actor: crab
-		Probability: 100
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		Offset: -1,0
-	SpawnActorOnDeath@4:
-		Actor: crab
-		Probability: 50
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		Offset: -1,0
-	SpawnActorOnDeath@5:
-		Actor: crab
+		Actor: permacrab
 		Probability: 100
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		Offset: 0,-1
-	SpawnActorOnDeath@6:
-		Actor: crab
-		Probability: 50
+	SpawnActorOnDeath@3:
+		Actor: permacrab
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		Offset: 1,-1
+	SpawnActorOnDeath@4:
+		Actor: permacrab
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		Offset: 1,0
+	SpawnActorOnDeath@5:
+		Actor: permacrab
+		Probability: 100
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		Offset: 0,1
+	SpawnActorOnDeath@6:
+		Actor: permacrab
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		Offset: 1,0
 	SpawnActorOnDeath@7:
-		Actor: crab
+		Actor: permacrab
 		Probability: 100
 		OwnerType: InternalName
 		InternalOwner: Creeps
-		Offset: 0,2
+		Offset: 1,1
 	SpawnActorOnDeath@8:
-		Actor: crab
-		Probability: 50
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		Offset: 1,2
-	SpawnActorOnDeath@9:
-		Actor: crab
+		Actor: permacrab
 		Probability: 100
 		OwnerType: InternalName
 		InternalOwner: Creeps
-		Offset: 2,2
-	SpawnActorOnDeath@10:
-		Actor: crab
-		Probability: 50
+		Offset: 1,1
+	SpawnActorOnDeath@9:
+		Actor: permacrab
+		Probability: 100
 		OwnerType: InternalName
 		InternalOwner: Creeps
+		Offset: 1,1
+	SpawnActorOnDeath@10:
+		Actor: permacrab
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		Offset: 1,1
 	-ExternalCapturable:
 	-ExternalCapturableBar:
 

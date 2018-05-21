@@ -264,6 +264,7 @@
 		Condition: firepowercrate
 	ExternalCondition@speedcrate:
 		Condition: speedcrate
+
 ^GainsExperience:
 	GainsExperience:
 		Conditions:
@@ -313,7 +314,7 @@
 		PercentageStep: 5
 		Delay: 75
 		HealIfBelow: 100
-		DamageCooldown: 200
+		DamageCooldown: 150
 		RequiresCondition: rank-elite
 	WithDecoration@RANK-1:
 		Image: rank

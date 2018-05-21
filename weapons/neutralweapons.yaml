@@ -275,28 +275,9 @@ LTrail:
 			ConcreteArmor: 5
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 
-4tnkgun:
-	Inherits: ^APWarhead
-	Inherits@2: ^Large_Clsn
-	ReloadDelay: 80
-	Range: 5c768
-	Report: 120mmf.aud
-	Burst: 2
-	BurstDelays: 5
-	Projectile: BulletAS
-		Speed: 682
-		Image: 120mm
-		Shadow: true
-		LaunchAngle: 62
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 5000
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-
 4tnktusk:
 	Inherits: MammothTusk
-	Range: 6c0
+	Range: 6c0  
 
 EngineerCapture:
 	ReloadDelay: 200

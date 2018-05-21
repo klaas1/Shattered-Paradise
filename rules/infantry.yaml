@@ -17,10 +17,10 @@ GDIE1:
 	Armament@1:
 		Weapon: MarineRifle
 		PauseOnCondition: WebDisable
+		Name: OnFoot
 	Armament@2:
 		Weapon: GMarineRifle
 		PauseOnCondition: WebDisable
-		Name: OnFoot
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot

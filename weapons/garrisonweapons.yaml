@@ -4,6 +4,7 @@
 GMinigun:
 	Inherits@1: Minigun
 	Inherits: ^GarrisonWeapon
+
 GMarineRifle:
 	Inherits@1: MarineRifle
 	Inherits: ^GarrisonWeapon

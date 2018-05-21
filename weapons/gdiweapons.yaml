@@ -261,6 +261,48 @@ SonicZap:
 			Disruptor: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 
+4TNKGUN:
+	Inherits: ^APWarhead
+	Inherits@2: ^Large_Clsn
+	ReloadDelay: 80
+	Range: 6c0
+	Report: 120mmf.aud
+	Burst: 2
+	BurstDelays: 5
+	Projectile: BulletAS
+		Speed: 682
+		Image: 120mm
+		Shadow: true
+		LaunchAngle: 62
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 5000
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+MammothTusk:
+	Inherits: ^RocketWarhead
+	Inherits@2: ^Mediumtwlt
+	ReloadDelay: 120
+	Range: 6c0
+	Report: misl1.aud
+	ValidTargets: Ground, Water, Vehicle, Building, Infantry, Air
+	Burst: 2
+	Projectile: Missile
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 10
+		MaximumLaunchSpeed: 213
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Damage: 4500
+		ValidTargets: Ground, Water, Vehicle, Building, Infantry, Air
+		Versus:
+		DamageTypes: Explosion
+
 MechRailgun:
 	ReloadDelay: 120
 	Range: 8c0
@@ -288,7 +330,7 @@ MechRailgun:
 
 MechRailgun2:
 	ReloadDelay: 120
-	Range: 8c0
+	Range: 7c0
 	Burst: 2
 	BurstDelays: 10
 	Report: railuse5.aud
@@ -313,7 +355,7 @@ MechRailgun2:
 
 MechDummy:
 	ReloadDelay: 120
-	Range: 8c0
+	Range: 7c0
 	Burst: 2
 	InvalidTargets: Air
 	ValidTargets: Ground, Water
@@ -333,32 +375,10 @@ MechDummy:
 		ValidTargets: Ground, Water, water, Infantry, Vehicle, Building
 		InvalidTargets: Air
 
-MammothTusk:
-	Inherits: ^RocketWarhead
-	Inherits@2: ^Mediumtwlt
-	ReloadDelay: 120
-	Range: 7c0
-	Report: misl1.aud
-	ValidTargets: Ground, Water, Vehicle, Building, Infantry, Air
-	Burst: 2
-	Projectile: Missile
-		Blockable: false
-		Shadow: true
-		Inaccuracy: 128
-		Image: DRAGON
-		TrailImage: small_smoke_trail
-		HorizontalRateOfTurn: 10
-		MaximumLaunchSpeed: 213
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Damage: 4500
-		ValidTargets: Ground, Water, Vehicle, Building, Infantry, Air
-		Versus:
-		DamageTypes: Explosion
-
 MKIITusk:
 	Inherits: MammothTusk
 	BurstDelays: 10
+	Rance: 7c0
 	ReloadDelay: 150
 
 FighterHellfire:

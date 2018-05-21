@@ -286,7 +286,7 @@ SCRMBTLASOR:
 	Inherits: ^FullDamage
 	Inherits@2: ^Scrin_Explo
 	ReloadDelay: 75
-	Range: 5c0
+	Range: 6c0
 	Report: SeekerShot0000.wav,  SeekerShot0001.wav,  SeekerShot0002.wav,  SeekerShot0003.wav
 	Projectile: LaserZap
 		Width: 50

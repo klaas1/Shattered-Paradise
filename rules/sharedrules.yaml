@@ -1182,14 +1182,14 @@ NAPULS:
 	Inherits: ^Defence
 	Inherits@4: ^2x2Shape
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: EMP Cannon
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 32
 		Prerequisites: ~humanstuff, radar
-		Description: Cannon that uses EMP projectiles to disable vehicles.\n\nSpecial:\n- Fires a pulse blast which disables all vehicles and buildings in the area\n- Hover units disabled staying over water will be destroyed instantly.\n- Requires power to operate
+		Description: Cannon that uses EMP projectiles to disable vehicles.\n\nSpecial:\n- Fires a pulse blast which disables all vehicles and buildings in the area\n- Hover units disabled staying over water will be destroyed instantly.\n- Requires power to operate.\n- Cannot be disabled.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1199,8 +1199,9 @@ NAPULS:
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
+	-ToggleConditionOnOrder:
 	Health:
-		HP: 150000
+		HP: 100000
 	-AutoTarget:
 	-AutoTargetPriority@DEFAULT:
 	-AutoTargetPriority@ATTACKANYTHING:
@@ -1228,8 +1229,11 @@ NAPULS:
 		Prerequisite: emp.gdi
 		Factions: gdi, mut, nod, cab, scr
 		ResetOnOwnerChange: true
-	AttackOrderPower@nod:
+	FireArmamentPower:
+		AllowMultiple: False
 		Cursor: emp
+		MaximumFiringInstances: 1
+		ArmamentName: primary
 		Icon: emp
 		ChargeInterval: 3000
 		Description: E.M. Pulse
@@ -1243,87 +1247,17 @@ NAPULS:
 		AreaTypes: building
 
 SCRSHIELD:
-	Inherits: ^Defence
+	Inherits: NAPULS
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
-	Inherits@4: ^2x2Shape
-	Valued:
-		Cost: 1000
 	Tooltip:
 		Name: Stasis Field Generator
 	Buildable:
-		Queue: Defense
-		Description: Uses EMP projectiles to disable vehicles.\n\nSpecial:\n- Fires a pulse blast which disables all vehicles and buildings in the area\n- Hover units disabled staying over water will be destroyed instantly.\n- Requires power to operate
-		BuildPaletteOrder: 33
 		Prerequisites: scrradr, ~structures.scr
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Selectable:
-		Bounds: 88, 42, 0, -6
-		DecorationBounds: 88, 72, 0, -12
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	Turreted:
-		TurnSpeed: 10
-		InitialFacing: 300
-	AttackTurreted:
-	Armament:
-		Weapon: EMPulseCannon
-		LocalOffset: 0,0,1800
-	WithColoredOverlay@disabled:
-		RequiresCondition: disabled
-		Palette: disabled
-	-AutoTarget:
-	-AutoTargetPriority@DEFAULT:
-	-AutoTargetPriority@ATTACKANYTHING:
-	ToggleConditionOnOrder:
-		Condition: powerdown
-		OrderName: PowerDown
-	WithColoredOverlay@disabled:
-		RequiresCondition: disabled
-		Palette: disabled
-	ExternalCondition@disabled:
-		Condition: disabled
-	Health:
-		HP: 150000
-	Power:
-		Amount: -100
-	SelectionDecorations:
-	ProvidesPrerequisite@gdi:
-		Prerequisite: emp.gdi
-		Factions: gdi, mut, nod, cab, scr
-		ResetOnOwnerChange: true
-	AttackOrderPower@nod:
-		Cursor: emp
-		Icon: emp
-		ChargeInterval: 3000
-		Description: E.M. Pulse
-		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
-		EndChargeSound: SuperWeaponReady
-		EndChargeSpeechNotification: SuperWeaponReady
-		SelectTargetSound: speech-nod|00-i042.aud
-		Prerequisites: emp.gdi
-		OrderName: Nodemp
-		BeaconPoster: minipulsicon
-		BeaconPalette: chromealpha
-		PauseOnCondition: empdisable || disabled
-		ArrowSequence: arrow
-		ClockSequence: clock
-		CircleSequence: circles
-		BeaconPaletteIsPlayerPalette: False
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: chrome
-		RequiresCondition: powerdown
-		ReferencePoint: Center
-	RequiresBuildableArea:
-		AreaTypes: building
-	PowerMultiplier@POWERDOWN:
-		RequiresCondition: powerdown
-		Modifier: 0
+	-WithSpriteTurret:
+	RenderSprites:
+		Image: scrshield
+		-FactionImages:
 
 GATE_A:
 	Inherits: ^Gate_A

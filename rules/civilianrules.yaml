@@ -1615,20 +1615,36 @@ CAARMR:
 	Inherits: ^TechBuilding
 	Inherits@shape: ^4x4Shape
 	Tooltip:
-		Name: Civilian Armory (Provides veterancy)
+		Name: Civilian Armory (Provides veterancy Power)
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4, 4
 	Health:
-		HP: 80000
-	ProvidesPrerequisite:
-		Prerequisite: barracks.upgraded
 	ThrowsShrapnel@SMALL:
 		Pieces: 6, 9
 	ThrowsShrapnel@LARGE:
 		Pieces: 3, 4
 	WithIdleOverlay:
 		Sequence: flag
+	FireArmamentPower:
+		AllowMultiple: True
+		Cursor: emp
+		MaximumFiringInstances: 1000
+		ArmamentName: primary
+		Icon: emp
+		ChargeInterval: 3000
+		Description: Veterancy
+		LongDesc: Adds an extra level of experience to the selected units (1 range radius), does not affect aircraft
+		EndChargeSound: speech-nod|00-i158.aud
+		SelectTargetSound: n_00-i042.aud
+		OrderName: Veterancy
+		PauseOnCondition: disabled
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 300
+	AttackTurreted:
+	Armament:
+		Weapon: VeterancyWeapon
 
 CACRSH01:
 	Inherits: ^Decoration

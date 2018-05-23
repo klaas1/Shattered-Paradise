@@ -185,7 +185,7 @@ NAOBEL:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Obelisk of Light
+		Name: Orbelisk of Light
 	Buildable:
 		Description: Advanced high tech laser defense.\n\nGood vs: Ground Targets.\n\nSpecial:\n- Provides stealth detection.\n- Requires power to operate.
 		Queue: Defense

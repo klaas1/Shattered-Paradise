@@ -64,13 +64,13 @@ SuicideBomb:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 
 EMPulseCannon:
-	ReloadDelay: 50
+	ReloadDelay: 25
 	Range: 25c0
-	MinRange: 3c0
+	MinRange: 4c0
 	Report: plsecan2.aud
 	ValidTargets: Vehicle, Building, Ground, Water
 	Projectile: BulletAS
-		Speed: 425
+		Speed: 300
 		Blockable: false
 		Shadow: true
 		LaunchAngle: 110
@@ -78,15 +78,39 @@ EMPulseCannon:
 	Warhead@1Eff: CreateEffect
 		Explosions: pulse_explosion
 	Warhead@1: GrantExternalCondition
-		Range: 4c0
+		Range: 1c512
 		Duration: 250
 		Condition: empdisable
 		ValidTargets: Vehicle, Building
 	Warhead@2: GrantExternalCondition
+		Range: 1c512
+		Duration: 250
+		Condition: notmobile
+		ValidTargets: Vehicle, Building
+	Warhead@3: GrantExternalCondition
 		Range: 4c0
 		Duration: 250
 		Condition: notmobile
 		ValidTargets: Vehicle, Building
+		Delay: 10
+	Warhead@4: GrantExternalCondition
+		Range: 4c0
+		Duration: 250
+		Condition: empdisable
+		ValidTargets: Vehicle, Building
+		Delay: 10
+
+VeterancyWeapon:
+	ReloadDelay: 25
+	Range: 999c0
+	# Report: plsecan2.aud
+	ValidTargets: Vehicle, Building, Ground, Water
+	Projectile: InstantHit
+	# Warhead@1Eff: CreateEffect
+		# Explosions: pulse_explosion
+	Warhead@1Eff: Promotion
+		Range: 1c0
+		ValidStances: Ally, Neutral
 
 IonCannon:
 	Inherits: ^SWBaseEffects

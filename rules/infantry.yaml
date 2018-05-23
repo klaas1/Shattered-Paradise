@@ -496,7 +496,7 @@ MARAUDER:
 	Voiced:
 		VoiceSet: Rocket
 	Health:
-		HP: 9000
+		HP: 11000
 	AutoTarget:
 		ScanRadius: 8
 	Mobile:
@@ -513,29 +513,27 @@ MARAUDER:
 	Armament@3:
 		Weapon: DeployedMarauderShotgun
 		Name: OnFoot
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: playermut
-		PauseOnCondition: WebDisable
 		RequiresCondition: deployed
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
-		AllowedTerrainTypes: Tiberium, BlueTiberium
 		DeploySound:
 		UndeploySound:
 	WithInfantryBody:
 		RequiresCondition: !WebDisable && undeployed
-	WithInfantryBody@deployed:
-		StandSequences: turret
-		RequiresCondition: !WebDisable && deployed
-	WithMuzzleOverlay:
-		RequiresCondition: deployed
+	WithMakeAnimation:
 	Turreted:
 		TurnSpeed: 50
 		InitialFacing: 160
+	WithSpriteTurret@idle:
+		RequiresCondition: deployed && !AnimateTurret
+	WithSpriteTurret@animated:
+		RequiresCondition: deployed && AnimateTurret
+		Sequence: turret-shoot
+	WithSpriteBody:
+		Sequence: dot
 	AttackFrontal:
 		Armaments: OnFoot
 		Voice: Attack
@@ -546,12 +544,10 @@ MARAUDER:
 		Voice: Attack
 		RequiresCondition: deployed
 		PauseOnCondition: WebDisable
-	DamageMultiplier@deployed:
-		RequiresCondition: deployed
-		Modifier: 75
-	RangeMultiplier@deployed:
-		RequiresCondition: deployed
-		Modifier: 120
+	GrantConditionOnAttack:
+		Condition: AnimateTurret
+		# RevokeDelay: 10
+		ArmamentNames: OnFoot
 
 MUTFIEND:
 	Inherits: ^Beast

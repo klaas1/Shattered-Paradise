@@ -470,7 +470,7 @@ PROC:
 		Sequence: flame
 		Palette: effect
 	Power:
-		Amount: -40
+		Amount: -30
 	ProvidesPrerequisite@proc:
 		ProvidesPrerequisite: proc
 		Description: Tiberium Refinery
@@ -534,7 +534,7 @@ FLIPPEDPROC:
 		Sequence: flame
 		Palette: effect
 	Power:
-		Amount: -40
+		Amount: -30
 	ProvidesPrerequisite@proc:
 		ProvidesPrerequisite: proc
 		Description: Tiberium Refinery
@@ -769,7 +769,7 @@ SCRDEPOT:
 	WithSpriteBody:
 		PauseOnCondition: disabled
 	Power:
-		Amount: -150
+		Amount: -100
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -1216,7 +1216,7 @@ NAPULS:
 	WithSpriteTurret:
 		Sequence: turret
 	Power:
-		Amount: -100
+		Amount: -150
 	SelectionDecorations:
 	RenderSprites:
 		Image: napuls.gdi

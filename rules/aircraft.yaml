@@ -834,12 +834,6 @@ SCRGLYDER1:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
-	WithTextDecoration@primary:
-		Text: F
-		ReferencePoint: Right
-		Color: E0D048
-		ZOffset: 9999
-		RequiresCondition: !lawea
 	-AmmoPool:
 	-ReloadAmmoPool@AIReload:
 

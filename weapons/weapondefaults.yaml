@@ -126,8 +126,8 @@
 	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Versus:
-			InfantryArmor: 100
-			BuildingArmor: 50
+			InfantryArmor: 150
+			BuildingArmor: 75
 			VehicleArmor: 50
 			DefenseArmor: 50
 			AircraftArmor: 100

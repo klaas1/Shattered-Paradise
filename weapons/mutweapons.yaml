@@ -18,7 +18,7 @@ MarauderShotgun:
 
 DeployedMarauderShotgun:
 	Inherits: MarauderShotgun
-	Range: 5c0
+	Range: 4c768
 
 MarauderShotgunInnacurate:
 	Inherits: MarauderShotgun
@@ -313,34 +313,44 @@ BerserkerBlow:
 
 BullAcid:
 	Inherits: ^AcidWarhead
-	ReloadDelay: 75
+	ReloadDelay: 100
 	Range: 5c0
-	Report: flamtnk1.aud
+	Burst: 3
+	Report: fiend2.aud
 	Projectile: BulletAS
-		Speed: 150
+		Speed: 500
 		Image: acidall32mini
-		Inaccuracy: 384
 		Palette: apolgreenalpha
-	Burst: 10
-	BurstDelays: 2
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 700
+		Damage: 1250
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Warhead@2Eff: CreateEffect
 		Explosions: tib_expsmall
 		ExplosionPalette: apolgreenalpha
 		InvalidTargets: Water
-	Warhead@8Radio: CreateRadioactivity
-		Range: 1, 2
-		Level: 6
-		Falloff: 100, 25
-		MaxLevel: 1000
+	Warhead@Acid: GrantExternalCondition
+		Range: 1c0
+		Duration: 150
+		Condition: WolfDebuff
+	Warhead@op: FireShrapnel
+		Weapon: BullAcidJump
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy
+		ValidTargets: Infantry, Vehicle, Building, Ground, Wall
+
+BullAcidJump:
+	Inherits: BullAcid
+	Range: 1c0
+	-Warhead@op: FireShrapnel
+	-Warhead@Acid: GrantExternalCondition
 
 BullBuff:
 	Inherits: ^NoDamage
-	ReloadDelay: 60
+	ReloadDelay: 1
 	Range: 5c0
 	Projectile: InstantExplode
 	ValidTargets: Infantry, Vehicle, Building
@@ -351,11 +361,7 @@ BullBuff:
 	Warhead@2Eff: CreateEffect
 		Explosions: bullparticle
 		ExplosionPalette: apolgreenalpha
-	Warhead@Acid: GrantExternalCondition
-		Range: 4c0
-		Duration: 200
-		Condition: WolfBuff
-		ValidStances: Ally
+
 
 RavagerStrike:
 	Inherits: ^FullDamage

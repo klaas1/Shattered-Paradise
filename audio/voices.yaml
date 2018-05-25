@@ -290,6 +290,7 @@ Deva:
 Tripod:
 	DefaultVariant: .wav
 	Voices:
+		Build: TripSound0000
 		Select: TripSound0001, TripSound0002, TripSound0003
 		Move: TripSound0003, TripSound0004, TripSound0005
 		Attack: TripSound0006, TripSound0007, TripSound0008

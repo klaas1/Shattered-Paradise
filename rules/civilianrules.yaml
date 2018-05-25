@@ -323,6 +323,8 @@ VISC_LRG_SCRIN:
 	-AppearsOnRadar:
 	EditorOnlyTooltip:
 		Name: Visceroid Hive Visc (Do not place in editor)
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	AutoTarget:
 		ScanRadius: 5
 		InitialStance: AttackAnything
@@ -531,6 +533,8 @@ FLOATER:
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 100
 		MaxMoveDelay: 200
+	-DamagedByRadioactivity@Default:
+	-DamagedByRadioactivity@OrangeRadiation:
 
 jfish:
 	Inherits: FLOATER
@@ -1627,7 +1631,7 @@ CAARMR:
 	WithIdleOverlay:
 		Sequence: flag
 	FireArmamentPower:
-		AllowMultiple: True
+		# AllowMultiple: True
 		Cursor: emp
 		MaximumFiringInstances: 1000
 		ArmamentName: primary

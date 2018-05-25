@@ -292,15 +292,15 @@
 	FirepowerMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 130
-	SpeedMultiplier@RANK-1:
-		RequiresCondition: rank-veteran == 1
-		Modifier: 110
-	SpeedMultiplier@RANK-2:
-		RequiresCondition: rank-veteran == 2
-		Modifier: 120
-	SpeedMultiplier@RANK-ELITE:
-		RequiresCondition: rank-elite
-		Modifier: 130
+	# SpeedMultiplier@RANK-1:
+		# RequiresCondition: rank-veteran == 1
+		# Modifier: 110
+	# SpeedMultiplier@RANK-2:
+		# RequiresCondition: rank-veteran == 2
+		# Modifier: 120
+	# SpeedMultiplier@RANK-ELITE:
+		# RequiresCondition: rank-elite
+		# Modifier: 130
 	ReloadDelayMultiplier@RANK-1:
 		RequiresCondition: rank-veteran == 1
 		Modifier: 90
@@ -372,6 +372,23 @@
 		RequiresCondition: TyrannyBuff
 	ExternalCondition@TyrannyBuff:
 		Condition: TyrannyBuff
+
+^WolfDebuff:
+	WithIdleOverlay@WolfDebuff:
+		Sequence: bullparticle
+		Palette: apolgreenalpha
+		RequiresCondition: WolfDebuff
+	DamageMultiplier@WolfDebuff:
+		RequiresCondition: WolfDebuff
+		Modifier: 115
+	ExternalCondition@WolfDebuff:
+		Condition: WolfDebuff
+	SelfHealing@WolfDebuff:
+		PercentageStep: -1
+		Step: 0
+		Delay: 25
+		HealIfBelow: 101
+		RequiresCondition: WolfDebuff && !stoppoison
 
 ^DisplayWrench:
 	WithDecoration@DisplayWrench:
@@ -844,6 +861,7 @@
 	Inherits@7: ^BugPoison
 	Inherits@8: ^DisplayVanguardShield
 	Inherits@9: ^DamagedByRadioactivity
+	Inherits@10: ^WolfDebuff
 
 ^VehicleEffects:
 	Inherits: ^GenericEffects
@@ -859,6 +877,7 @@
 	Inherits@10: ^DisplayVanguardShield
 	Inherits@11: ^VeinholePoisonVehicle
 	Inherits@12: ^DamagedByRadioactivity
+	Inherits@13: ^WolfDebuff
 	SpeedMultiplier@submerged:
 		Modifier: 60
 		RequiresCondition: submerged
@@ -1298,16 +1317,22 @@
 	Inherits: ^Soldier
 	Targetable@Mutant:
 		TargetTypes: Mutant
-	DamagedByTerrain:
-		Damage: -200
-		DamageInterval: 48
-		Terrain: Tiberium, BlueTiberium
+	-DamagedByTerrain:
+	GrantConditionOnTerrain@Tib:
+		Condition: TiberiumHealing
+		TerrainTypes: Tiberium, BlueTiberium
 	Mobile:
 		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 50
 			BlueTiberium: 70
 				PathingCost: 50
+	SelfHealing@Tib:
+		PercentageStep: 1
+		Step: 0
+		Delay: 150
+		DamageCooldown: 0
+		HealIfBelow: 105
 
 ^Beast:
 	Inherits: ^Mutant
@@ -1519,7 +1544,7 @@
 		Duration: 50
 		Radius: 3c0
 	Crushable:
-		CrushClasses: Vehicle
+		CrushClasses: vehicle
 		WarnProbability: 0
 	Valued:
 		Cost: 1
@@ -1873,6 +1898,7 @@
 	WithFacingSpriteBody:
 	EditorTilesetFilter:
 		Categories: Tib Critters
+	MindControllable:
 
 ^BlossomTree:
 	Inherits@1: ^SpriteActor

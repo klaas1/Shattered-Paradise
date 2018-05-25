@@ -236,9 +236,6 @@ ScorpAcid:
 		Spread: 250
 		Damage: 975
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
-		Versus:
-			InfantryArmor: 150
-			BuildingArmor: 75
 		InvalidTargets: Shark
 	Warhead@2Shark: SpreadDamage
 		Spread: 250
@@ -595,9 +592,6 @@ NeedlerAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
 		Damage: 800
-		Versus:
-			InfantryArmor: 150
-			BuildingArmor: 75
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		InvalidTargets: Shark
 	Warhead@2Shark: SpreadDamage

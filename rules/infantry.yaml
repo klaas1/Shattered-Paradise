@@ -7,11 +7,11 @@ GDIE1:
 		Description: Basic combat infantry.\n\nGood vs: Infantry\n\nSpecial:\n- Crush class: crushable
 		Prerequisites: ~gapile
 	Valued:
-		Cost: 140
+		Cost: 150
 	Tooltip:
 		Name: Marine
 	Health:
-		HP: 12000
+		HP: 14000
 	Voiced:
 		VoiceSet: Marine
 	Armament@1:
@@ -199,12 +199,6 @@ JUMPJETAIR:
 	-ExternalCondition@smoketrail:
 	-ReloadAmmoPool@AIReload:
 	-AmmoPool:
-	WithTextDecoration@primary:
-		Text: F
-		ReferencePoint: Right
-		Color: E0D048
-		ZOffset: 9999
-		RequiresCondition: !lawea
 	-GrantConditionOnDamageState@spawnsparks:
 	-ExplodeWeapon@spawnsparks:
 	-ExternalCondition@spawnsparks:
@@ -490,7 +484,7 @@ MARAUDER:
 		Description: Wasteland soldiers armed with shotguns.\n\nGood vs: Infantry\n\nSpecial:\n- Heals on Tiberium\n- Can deploy to increase health and attackrange.\n- Crush class: crushable
 		Prerequisites: ~murax
 	Valued:
-		Cost: 120
+		Cost: 150
 	Tooltip:
 		Name: Marauder
 	Voiced:
@@ -518,6 +512,7 @@ MARAUDER:
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		DeployAnimation: make
+		CanDeployOnRamps: True
 		Facing: 160
 		DeploySound:
 		UndeploySound:
@@ -1100,7 +1095,7 @@ CYBORG:
 	Voiced:
 		VoiceSet: Cyborg
 	Health:
-		HP: 32200
+		HP: 35000
 	Armament@1:
 		Weapon: CyborgVulcan
 		PauseOnCondition: WebDisable

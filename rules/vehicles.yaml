@@ -1470,7 +1470,7 @@ WOLF:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 20
-		Description: Tiberium beast that uses tiberium gas to harm nearby units.\n\nGood vs: Infantry\n\nSpecial:\n- Heals on Tiberium.\n- Attacks emit radiation that harms infantry in the area.\n- Can mutate killed enemy units.\n- Inmune to tiberium radiation.\n- E.M.P. Inmune.
+		Description: Tiberium beast that uses tiberium acid to harm nearby units.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- Attacks reduce target resistance by 15%.\n- Can mutate killed units.\n- Inmune to tiberium radiation.\n- E.M.P. Inmune.\n- Heals even when in combat.
 		Prerequisites: ~muweap, muradr
 	Valued:
 		Cost: 700
@@ -1483,7 +1483,7 @@ WOLF:
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	Crushable:
-		CrushClasses: HeavyInfantry
+		CrushClasses: vehicle
 	AttackFrontal:
 	AutoTarget:
 	Armament@PRIMARY:
@@ -1493,16 +1493,16 @@ WOLF:
 		CargoType: Vehicle
 		Voice: Move
 		Weight: 3
-	Armor@BullArmor:
-		Type: BullArmor
+	SelfHealing@Bullshit:
+		PercentageStep: 5
+		Delay: 100
+		HealIfBelow: 100
+		DamageCooldown: 100
 	Health:
-		HP: 30000
+		HP: 20000
 	Mobile:
 		Speed: 95
 		SharesCell: false
-		-RequiresCondition: !WebDisable
-	ExternalCondition@berserk:
-		Condition: berserk
 	-DamagedByRadioactivity@Default:
 	-WithColoredOverlay@WebDisable:
 	-TimedConditionBar@WebDisable:
@@ -1524,7 +1524,7 @@ MRLS:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 21
-		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed enemy units\n- Emits tiberium radiaton that damages nearby units.\n- Can swap to regular warheads with a deploy order.\n- Can crush infantry.\n- Inmune to tiberium radiation.
+		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed units\n- Emits tiberium radiaton that damages nearby units.\n- Can swap to regular warheads with a deploy order.\n- Can crush infantry.\n- Inmune to tiberium radiation.
 		Prerequisites: ~muweap, muhall
 	Mobile:
 		TurnSpeed: 10
@@ -1564,11 +1564,11 @@ MRLS:
 		DeployedCondition: deployed
 		CanDeployOnRamps: True
 	WithTextDecoration@primary:
-		Text: R
+		Text: N
 		ReferencePoint: Right
 		Color: E0D048
 		ZOffset: 9999
-		RequiresCondition: !deployed
+		RequiresCondition: deployed
 	GrantConditionOnAttack@tibrocket1:
 		Condition: tibrocket1
 		RevokeDelay: 200
@@ -1610,7 +1610,7 @@ DEATHCLAW:
 	WithInfantryBody:
 		IdleSequences: idle2, idle3
 	Crushable:
-		CrushClasses: HeavyInfantry
+		CrushClasses: vehicle
 	Mobile:
 		Speed: 110
 		SharesCell: False
@@ -1923,14 +1923,15 @@ TRIPOD:
 		DefaultAttackSequence: shoot
 	QuantizeFacingsFromSequence:
 		Sequence: stand
-	HitShape:
-		TargetableOffsets: 0,0,3650
-		Type: Circle
-			VerticalTopOffset: 4000
 	ExternalCondition@spawnsparks:
 		LocalOffset: 0,0,4000
 	SmokeParticleEmitter:
 		Offset: 0,0,3000
+	DeathSounds:
+		DeathTypes: BulletDeath, SmallExplosionDeath, ExplosionDeath, CabalDeath, CabalDeathCrate, BlackHandRfle, HeadshotDeath, SmallExplosionDeath, TiberiumDeath
+	AnnounceOnBuildAS:
+		Voice: Build
+		OnlyToOwner: True
 
 ###########################################################
 # CABAL
@@ -2330,7 +2331,7 @@ LIMPED:
 	Inherits@2: ^HoverVehicle
 	Inherits@1: ^8CellVision
 	Valued:
-		Cost: 800
+		Cost: 400
 	Tooltip:
 		Name: Scout Drone
 		Description: Hover Drone, cloaks when deployed. Spreads unsmellable\ngas around it confusing nearby units becoming uncontrollable.\n\nUnnarmed.
@@ -2340,6 +2341,8 @@ LIMPED:
 		Speed: 90
 		Crushes: crate
 	Crushable:
+		CrushClasses: infantry
+		WarnProbability: 0
 	WithSpriteBody:
 	Voiced:
 		VoiceSet: Limpet

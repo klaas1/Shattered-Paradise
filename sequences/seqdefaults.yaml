@@ -23,6 +23,9 @@
 	muzzle: gunfire
 		Length: *
 		Offset: 0, 0, 28
+	bullparticle: bullparticle3
+		Length: *
+		Tick: 80
 	shield: shieldmedium
 		Length: 1
 	dummy: dot
@@ -91,6 +94,8 @@
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+	bullparticle: bullparticle2
+		Length: *
 
 ^SpriteVehicle:
 	Inherits: ^EmpOverlay

@@ -1329,7 +1329,7 @@
 				PathingCost: 50
 	SelfHealing@Tib:
 		PercentageStep: 1
-		Step: 0
+		Step: 200
 		Delay: 100
 		DamageCooldown: 0
 		HealIfBelow: 105

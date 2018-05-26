@@ -572,7 +572,7 @@ CabJetMiniBomb:
 	ValidTargets: Ground, Water, Building, Infantry, Vehicle
 	Range: 1c512
 	Projectile: BulletAS
-		Speed: 170
+		Speed: 600
 		Image: 120mm
 		Shadow: true
 		Palette: ra

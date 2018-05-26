@@ -98,6 +98,7 @@ MEDIC:
 
 JUMPJET:
 	Inherits: ^Soldier
+	Inherits@2: ^6CellVision
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -111,7 +112,7 @@ JUMPJET:
 	Transforms:
 		IntoActor: jumpjetair
 	Armament@1:
-		Weapon: JJGrenade
+		Weapon: JJGroundGrenade
 		PauseOnCondition: WebDisable
 		Name: OnFoot
 	Armament@2:
@@ -620,6 +621,7 @@ E2:
 	RenderSprites:
 		Image: e2
 		-FactionImages:
+	-DamagedByTerrain:
 	-AutoTarget:
 	-GainsExperience:
 	-ProducibleWithLevel

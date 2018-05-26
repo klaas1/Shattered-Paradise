@@ -53,6 +53,10 @@ JJGrenade:
 		ValidTargets: Ground, Water
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 
+JJGroundGrenade:
+	Inherits: JJGrenade
+	Range: 5c0
+
 JJBuff:
 	Inherits: ^NoDamage
 	ReloadDelay: 80

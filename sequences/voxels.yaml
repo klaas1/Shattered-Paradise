@@ -122,6 +122,10 @@ sonic:
 	idle:
 	turret: sonictur
 
+cube:
+	idle:
+	unload:
+
 #truk: # TODO: unused
 #	idle:
 

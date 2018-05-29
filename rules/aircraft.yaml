@@ -940,11 +940,6 @@ SCRINCOUNCIL:
 	Inherits: ^Helicopter
 	Inherits@2: ^ScrinRender
 	Inherits@Shadow: ^AircraftShadow
-	Buildable:
-		Queue: Air
-		BuildPaletteOrder: 10
-		Prerequisites: ~scrair, scrtech
-		Description: Mobile factory.\n\nSpecial\n- Enables vehicle production.\n- Can move while building.\n- Will not drop non amphibious units on water.
 	Valued:
 		Cost: 3000
 	Tooltip:

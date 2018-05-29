@@ -53,6 +53,10 @@ JJGrenade:
 		ValidTargets: Ground, Water
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 
+JJGroundGrenade:
+	Inherits: JJGrenade
+	Range: 5c0
+
 JJBuff:
 	Inherits: ^NoDamage
 	ReloadDelay: 80
@@ -266,7 +270,7 @@ SonicZap:
 	Inherits@2: ^Large_Clsn
 	ReloadDelay: 80
 	Range: 6c0
-	Report: 120mmf.aud
+	Report: tankmediumfire.wav
 	Burst: 2
 	BurstDelays: 5
 	Projectile: BulletAS

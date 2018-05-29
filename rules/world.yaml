@@ -20,7 +20,7 @@
 	Faction@1:
 		Name: Nod
 		InternalName: nod
-		Description: Brotherhood of Nod\nThe Brotherhood fights under the leadership of Kane to speed up\nthe evolution of humanity through the power of Tiberium.\n\nHit and run faction.\n\nSpecial Characteristics:\n\n- Nod units are oriented to do guerilla attacks and stealth.\n- Advanced laser technology and Subterranean Vehicles.\n- Support Structure: Stealth Generators.\n- Support power: Toxin Bomb (quick missile).\n- Superweapon: Atomic Bomb.
+		Description: Brotherhood of Nod\nThe Brotherhood fights under the leadership of Kane to speed up\nthe evolution of mankind through the power of Tiberium.\n\nHit and run faction.\n\nSpecial Characteristics:\n\n- Nod units are oriented to do guerilla attacks and stealth.\n- Advanced laser technology and Subterranean Vehicles.\n- Support Structure: Stealth Generators.\n- Support power: Toxin Bomb (quick missile).\n- Superweapon: Atomic Bomb.
 	Faction@2:
 		Name: Mutants
 		InternalName: mut

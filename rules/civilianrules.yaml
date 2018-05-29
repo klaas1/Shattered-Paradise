@@ -355,7 +355,7 @@ ZOMBIE:
 	AutoTarget:
 		ScanRadius: 3
 	Mobile:
-		Speed: 75
+		Speed: 55
 		Crushes: nada
 	-SpawnActorOnDeath@conversion:
 	-TakeCover:
@@ -1630,25 +1630,28 @@ CAARMR:
 		Pieces: 3, 4
 	WithIdleOverlay:
 		Sequence: flag
-	FireArmamentPower:
+	DetonateWeaponPower:
 		# AllowMultiple: True
 		Cursor: emp
 		MaximumFiringInstances: 1000
 		ArmamentName: primary
-		Icon: emp
+		Icon: veterancyicon
 		ChargeInterval: 3000
 		Description: Veterancy
 		LongDesc: Adds an extra level of experience to the selected units (1 range radius), does not affect aircraft
 		EndChargeSound: speech-nod|00-i158.aud
 		SelectTargetSound: n_00-i042.aud
 		OrderName: Veterancy
+		ActivationSequence: idle
 		PauseOnCondition: disabled
-	Turreted:
-		TurnSpeed: 10
-		InitialFacing: 300
-	AttackTurreted:
-	Armament:
+		TargetCircleRange: 1c512
 		Weapon: VeterancyWeapon
+	# Turreted:
+		# TurnSpeed: 10
+		# InitialFacing: 300
+	# AttackTurreted:
+	# Armament:
+		# Weapon: VeterancyWeapon
 
 CACRSH01:
 	Inherits: ^Decoration

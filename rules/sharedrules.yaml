@@ -321,8 +321,6 @@ GACNST:
 	WithIdleOverlay@FRONT:
 		Sequence: idle-front
 	WithBuildingPlacedOverlay:
-	Power:
-		Amount: 0
 	Selectable:
 		Bounds: 144, 60, 0, -6
 		DecorationBounds: 144, 80, 0, -12

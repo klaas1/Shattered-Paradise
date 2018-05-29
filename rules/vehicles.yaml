@@ -1178,14 +1178,14 @@ HOWTLIZER:
 	Mobile:
 		Speed: 50
 		TurnSpeed: 3
-	Cloak@cloakgenerator:
-		InitialDelay: 170
-		CloakDelay: 170
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud
-		IsPlayerPalette: true
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-		RequiresCondition: !CloakBreaks
+	# Cloak@cloakgenerator:
+		# InitialDelay: 170
+		# CloakDelay: 170
+		# CloakSound: cloak5.aud
+		# UncloakSound: cloak5.aud
+		# IsPlayerPalette: true
+		# UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+		# RequiresCondition: !CloakBreaks
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithMuzzleOverlay:
@@ -2338,7 +2338,7 @@ LIMPED:
 	Health:
 		HP: 10000
 	Mobile:
-		Speed: 90
+		Speed: 55
 		Crushes: crate
 	Crushable:
 		CrushClasses: infantry

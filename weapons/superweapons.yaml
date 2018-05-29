@@ -109,7 +109,7 @@ VeterancyWeapon:
 	# Warhead@1Eff: CreateEffect
 		# Explosions: pulse_explosion
 	Warhead@1Eff: Promotion
-		Range: 1c0
+		Range: 1c512
 		ValidStances: Ally, Neutral
 
 IonCannon:

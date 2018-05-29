@@ -1329,10 +1329,11 @@
 				PathingCost: 50
 	SelfHealing@Tib:
 		PercentageStep: 1
-		Step: 0
-		Delay: 150
+		Step: 200
+		Delay: 100
 		DamageCooldown: 0
 		HealIfBelow: 105
+		RequiresCondition: TiberiumHealing
 
 ^Beast:
 	Inherits: ^Mutant

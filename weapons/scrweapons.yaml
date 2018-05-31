@@ -497,7 +497,6 @@ DestroyerCannon:
 	MinRange: 4c0
 	Report: devourerlasor0000.wav, devourerlasor0001.wav, devourerlasor0002.wav
 	Burst: 1
-	Inaccuracy: 2c0
 	BurstDelays: 5
 	Projectile: BulletAS
 		Speed: 300

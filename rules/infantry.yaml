@@ -418,8 +418,6 @@ BHS:
 		TargetTypes: MindControlInmune
 	Targetable@MCImmune:
 		TargetTypes: MCImmune
-	SelfHealing@NodCloakHealing:
-		Delay: 150
 	-RejectsOrders@berserk:
 	-TakeCover:
 	Health:

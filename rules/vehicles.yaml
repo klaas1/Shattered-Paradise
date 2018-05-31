@@ -341,7 +341,7 @@ HMEC:
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Mammoth Mk. II
+		Name: Behemoth
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 9

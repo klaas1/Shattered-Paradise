@@ -185,7 +185,7 @@ NAOBEL:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Orbelisk of Light
+		Name: Obelisk of Light
 	Buildable:
 		Description: Advanced high tech laser defense.\n\nGood vs: Ground Targets.\n\nSpecial:\n- Provides stealth detection.\n- Requires power to operate.
 		Queue: Defense
@@ -752,7 +752,7 @@ GAPLUG:
 	Buildable:
 		BuildPaletteOrder: 41
 		Prerequisites: proc, gatech, ~structures.gdi, ~techlevel.unrestricted
-		Description: Communications facility for the Ion Cannon Array.\n\nSpecial:\n- Provides access to Ion Cannon Alpha Strike\n- Requires power to operate
+		Description: Communications facility for the Ion Cannon Array.\n\nSpecial:\n- Provides access to the Ion Cannon Array\n- Requires power to operate
 		Queue: Defense
 		BuildLimit: 1
 	Building:
@@ -766,7 +766,7 @@ GAPLUG:
 		Sequence: idle-strip
 	DetonateWeaponPower@ioncannon:
 		Icon: ioncannon
-		Description: Ion Cannon Alpha Strike
+		Description: Ion Cannon Array
 		DisplayTimer: True
 		DisplayBeacon: True
 		LongDesc: Fires an array of ion cannons on the targetted area.

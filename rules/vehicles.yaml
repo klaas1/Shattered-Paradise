@@ -259,7 +259,6 @@ SONIC:
 		Description: Armored high-tech vehicle with sonic armament.\n\nGood vs: Ground Targets.\n\nSpecial:\n- Deals damage over time to any unit in line of fire.\n- Can crush infantry.
 		BuildPaletteOrder: 7
 		Prerequisites: ~gaweap, gatech
-	-RejectsOrders@berserk:
 	Mobile:
 		TurnSpeed: 4
 		Speed: 70
@@ -353,7 +352,7 @@ HMEC:
 		TurnSpeed: 3
 		Speed: 40
 		Crushes: wall, crate, infantry, Vehicle, HeavyInfantry
-	-RejectsOrders@berserk:
+    -Crushable:
 	Health:
 		HP: 200000
 	AnnounceOnSeen:
@@ -980,7 +979,7 @@ BIKE:
 		ShowToEnemies: true
 
 SAPC:
-	Inherits: ^VoxelVehicle
+	Inherits: ^SubterraneanVoxelVehicle
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -995,54 +994,19 @@ SAPC:
 		TurnSpeed: 5
 		Speed: 80
 		RequiresCondition: !empdisable && !loading
-		Subterranean: true
-		SubterraneanCondition: submerged
-		SubterraneanTransitionTerrainTypes: Clear, Ice, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
-		SubterraneanTransitionCost: -2147483647 # int maxvalue
-		SubterraneanTransitionSound: subdril1.aud
-		SubterraneanTransitionImage: dig
-		SubterraneanTransitionSequence: idle
-		SubterraneanTransitionOnRamps: True
-		TerrainSpeeds:
-			Subterranean: 120
-			Ice: 100
-			Road: 100
-			Bridge: 100
-	Cloak@cloakgenerator:
-		RequiresCondition: submerged
-		InitialDelay: 25
-		CloakDelay: 25
-		IsPlayerPalette: true
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-	SelfHealing@veinholedrain:
-		RequiresCondition: veinholedrain && !submerged
-	WithIdleOverlay@veinholedrain:
-		RequiresCondition: veinholedrain && !submerged
 	Health:
 		HP: 20000
-	RevealsShroud:
-		RequiresCondition: !inside-tunnel && !submerged
-		MaxHeightDelta: 3
-	RejectsOrders@subterranean:
-		RequiresCondition: submerged
-		Except: Stop
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
 		PipCount: 5
 		UnloadVoice: Unload
 		LoadingCondition: loading
-	WithVoxelBody:
-		RequiresCondition: !submerged
-	Targetable:
-		RequiresCondition: !inside-tunnel && !submerged
-	AnnounceOnSeen@subterranean:
-		Notification: SubterraneanUnitDetected
-		PingRadar: True
 
 SUBTANK:
-	Inherits: ^VoxelTank
+	Inherits: ^SubterraneanVoxelVehicle
 	Inherits@1: ^8CellVision
+	Inherits@2: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -1056,48 +1020,6 @@ SUBTANK:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 90
-		Crushes: wall, crate, infantry
-		RequiresCondition: !empdisable && !loading
-		Subterranean: true
-		SubterraneanCondition: submerged
-		SubterraneanTransitionTerrainTypes: Clear, Ice, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
-		SubterraneanTransitionCost: 0#-2147483647
-		SubterraneanTransitionSound: subdril1.aud
-		SubterraneanTransitionImage: dig
-		SubterraneanTransitionSequence: idle
-		SubterraneanTransitionOnRamps: True
-		TerrainSpeeds:
-			Clear: 100
-				PathingCost: 150
-			Ice: 100
-				PathingCost: 150               
-			Road: 120
-				PathingCost: 150
-			Rail: 100
-				PathingCost: 150
-			DirtRoad: 110
-				PathingCost: 150
-			Rough: 80
-				PathingCost: 150
-			Bridge: 120
-				PathingCost: 150
-			Tiberium: 70
-				PathingCost: 300
-			BlueTiberium: 70
-				PathingCost: 300
-			Veins: 80
-				PathingCost: 150
-			Subterranean: 120
-	SelfHealing@veinholedrain:
-		RequiresCondition: veinholedrain && !submerged
-	WithIdleOverlay@veinholedrain:
-		RequiresCondition: veinholedrain && !submerged
-	Cloak@cloakgenerator:
-		RequiresCondition: submerged
-		InitialDelay: 25
-		CloakDelay: 25
-		IsPlayerPalette: true
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Health:
 		HP: 25000
 	Armament:
@@ -1108,23 +1030,10 @@ SUBTANK:
 		Weapon: DevilsFlame
 		LocalOffset: 0,-400,0
 		PauseOnCondition: empdisable
-	RejectsOrders@subterranean:
-		RequiresCondition: submerged
-		Except: Stop
 	AttackFrontal:
 		Voice: Attack
 		PauseOnCondition: empdisable
 	AutoTarget:
-	WithVoxelBody:
-		RequiresCondition: !submerged
-	Targetable:
-		RequiresCondition: !inside-tunnel && !submerged
-	-GrantConditionOnDamageState@smoke:
-	-SmokeParticleEmitter:
-	-ExternalCondition@smoketrail:
-	AnnounceOnSeen@subterranean:
-		Notification: SubterraneanUnitDetected
-		PingRadar: True
 
 ARMH:
 	Inherits: ^VoxelTank
@@ -1178,14 +1087,14 @@ HOWTLIZER:
 	Mobile:
 		Speed: 50
 		TurnSpeed: 3
-	# Cloak@cloakgenerator:
-		# InitialDelay: 170
-		# CloakDelay: 170
-		# CloakSound: cloak5.aud
-		# UncloakSound: cloak5.aud
-		# IsPlayerPalette: true
-		# UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-		# RequiresCondition: !CloakBreaks
+	Cloak@cloakgenerator:
+		InitialDelay: 170
+		CloakDelay: 170
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+		RequiresCondition: !CloakBreaks
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithMuzzleOverlay:
@@ -1254,7 +1163,6 @@ STNK:
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
-	-RejectsOrders@berserk:
 	BodyOrientation:
 		QuantizedFacings: 32
 		CameraPitch: 250
@@ -1476,23 +1384,9 @@ WOLF:
 		Cost: 700
 	Tooltip:
 		Name: Tiberian Bull
-	Voiced:
-		VoiceSet: Fiend
-	Armor:
-		Type: VehicleArmor
-	Targetable:
-		TargetTypes: Ground, Vehicle
-	Crushable:
-		CrushClasses: vehicle
-	AttackFrontal:
-	AutoTarget:
 	Armament@PRIMARY:
 		Weapon: BullAcid
 		LocalOffset: 128,0,400
-	Passenger:
-		CargoType: Vehicle
-		Voice: Move
-		Weight: 3
 	SelfHealing@Bullshit:
 		PercentageStep: 5
 		Delay: 100
@@ -1503,14 +1397,6 @@ WOLF:
 	Mobile:
 		Speed: 95
 		SharesCell: false
-	-DamagedByRadioactivity@Default:
-	-WithColoredOverlay@WebDisable:
-	-TimedConditionBar@WebDisable:
-	-WithIdleOverlay@web:
-	-ExternalCondition@WebDisable:
-	BodyOrientation:
-		QuantizedFacings: 8
-		CameraPitch: 250
 
 MRLS:
 	Inherits: ^VoxelTank
@@ -1592,41 +1478,17 @@ DEATHCLAW:
 		Cost: 1300
 	Tooltip:
 		Name: Ravager
-	Voiced:
-		VoiceSet: Fiend
-	Passenger:
-		CargoType: Vehicle
-		Voice: Move
-		Weight: 3
-	Targetable:
-		TargetTypes: Ground, Vehicle
 	AutoTarget:
 		ScanRadius: 6
 		InitialStance: AttackAnything
-	Armor:
-		Type: VehicleArmor
 	Health:
 		HP: 65000
-	WithInfantryBody:
-		IdleSequences: idle2, idle3
-	Crushable:
-		CrushClasses: vehicle
 	Mobile:
 		Speed: 110
-		SharesCell: False
-		-RequiresCondition: !WebDisable
 	Armament:
 		Weapon: RavagerStrike
-	AttackFrontal:
-		Voice: Attack
-	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 30,50,0,-20
-	-DamagedByRadioactivity@Default:
-	-WithColoredOverlay@WebDisable:
-	-TimedConditionBar@WebDisable:
-	-WithIdleOverlay@web:
-	-ExternalCondition@WebDisable:
 
 HVRTRUK3:
 	Inherits: ^VoxelVehicle
@@ -2246,7 +2108,6 @@ PALADIN:
 		TurnSpeed: 5
 		Speed: 70
 		Crushes: wall, crate, infantry
-	-RejectsOrders@berserk:
 	SelfHealing@Permanent:
 		DamageCooldown: 0
 		Delay: 75
@@ -2408,69 +2269,37 @@ ART2:
 	RenderSprites:
 		Image: howtlizer
 
-SCRDRONEC:
-	Inherits@1: ^AutoTargetGround
-	Inherits@2: ^HoverVehicle
-	Inherits: ^ScrinVehicle
-	Valued:
-		Cost: 950
-	Tooltip:
-		Name: Vanguard
-	Health:
-		HP: 25000
-	Mobile:
-		Speed: 80
-	RenderSprites:
-	-WithIdleOverlay@shield:
-	WithFacingSpriteBody:
-	-Cloak@CLOAKGENERATOR:
-	BodyOrientation:
-		QuantizedFacings: 32
-	-Targetable@Shield:
-	AttackFrontal:
-		PauseOnCondition: empdisable
-	Armament:
-		Weapon: VanguardShrapnel
-		TargetStances: Ally
-	ProximityExternalCondition@VanguardShield:
-		Condition: VanguardShield
-		Range: 3c0
-		AffectsParent: false
-	WithRangeCircle:
-		Range: 3c0
-		Type: VanguardShield
-	Targetable:
-		TargetTypes: Ground, Vehicle
-	AutoTarget:
-	# ExplodeWeapon@Rifle1:
-		# Weapon: RifleBounce
-		# RequiresCondition: RifleWarhead
-	# ExplodeWeapon@Rocket1:
-		# Weapon: RocketBounce
-		# RequiresCondition: RocketWarhead
-	# ExplodeWeapon@AP1:
-		# Weapon: APBounce
-		# RequiresCondition: APWarhead
-	# ExplodeWeapon@Flame1:
-		# Weapon: FlameBounce
-		# RequiresCondition: FlameWarhead
-	# ExplodeWeapon@Artillery1:
-		# Weapon: ArtilleryBounce
-		# RequiresCondition: ArtilleryWarhead
-	# ExplodeWeapon@FullDamage1:
-		# Weapon: FullDamageBounce
-		# RequiresCondition: FullDamage
-	# ExternalCondition@RifleWarhead:
-		# Condition: RifleWarhead
-	# ExternalCondition@RocketWarhead:
-		# Condition: RocketWarhead
-	# ExternalCondition@APWarhead:
-		# Condition: APWarhead
-	# ExternalCondition@FlameWarhead:
-		# Condition: FlameWarhead
-	# ExternalCondition@ArtilleryWarhead:
-		# Condition: ArtilleryWarhead
-	# ExternalCondition@FullDamage:
-		# Condition: FullDamage
-	# ExternalCondition@VanguardShield:
+# SCRDRONEC:
+	# Inherits@1: ^AutoTargetGround
+	# Inherits@2: ^HoverVehicle
+	# Inherits: ^ScrinVehicle
+	# Valued:
+		# Cost: 950
+	# Tooltip:
+		# Name: Vanguard
+	# Health:
+		# HP: 25000
+	# Mobile:
+		# Speed: 80
+	# RenderSprites:
+	# -WithIdleOverlay@shield:
+	# WithFacingSpriteBody:
+	# -Cloak@CLOAKGENERATOR:
+	# BodyOrientation:
+		# QuantizedFacings: 32
+	# -Targetable@Shield:
+	# AttackFrontal:
+		# PauseOnCondition: empdisable
+	# Armament:
+		# Weapon: VanguardShrapnel
+		# TargetStances: Ally
+	# ProximityExternalCondition@VanguardShield:
 		# Condition: VanguardShield
+		# Range: 3c0
+		# AffectsParent: false
+	# WithRangeCircle:
+		# Range: 3c0
+		# Type: VanguardShield
+	# Targetable:
+		# TargetTypes: Ground, Vehicle
+	# AutoTarget:

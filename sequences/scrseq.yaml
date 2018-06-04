@@ -334,6 +334,10 @@ colossi:
 		Start: 218
 		Length: 6
 		ShadowStart: 465
+	die-crushed:
+		Start: 217
+		Tick: 400
+		ShadowStart: 464
 	shoot:
 		Start: 72
 		Length: 8

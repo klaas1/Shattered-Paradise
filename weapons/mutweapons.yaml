@@ -677,8 +677,8 @@ FalconPunch:
 	Projectile: Missile
 		TerrainHeightAware: True
 		CruiseAltitude: 6000
-		MinimumLaunchAngle: 300
-		MaximumLaunchAngle: 300
+		MinimumLaunchAngle: 255
+		MaximumLaunchAngle: 255
 		MaximumLaunchSpeed: 0c543
 		MinimumLaunchSpeed: 0c301
 		Speed: 0c600

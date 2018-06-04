@@ -430,9 +430,8 @@ ClusterMissile:
 		Amount: 90
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
-	Warhead@5Spawn: SpawnActor
-		Actors: shakyshaky
-		Range: 3
+	Warhead@Shake: ScreenShaker
+		Intensity: 10
 	Warhead@KillShieldedUnit: GrantExternalCondition
 		Range: 6c0
 	Warhead@8Radio: CreateRadioactivity
@@ -526,10 +525,8 @@ MeteorSpawner:
 		Delay: 15
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
-	Warhead@5Spawn: SpawnActor
-		Actors: shakyshaky
-		Range: 3
-		Delay: 30
+	Warhead@Shake: ScreenShaker
+		Intensity: 10
 	Warhead@6: FireShrapnel
 		Weapon: MeteorSpawner2
 		Amount: 1
@@ -674,9 +671,8 @@ CabalCannon:
 		SmudgeType: LargeCrater
 		InvalidImpactTypes: Water
 		InvalidTargets: Vehicle, Building, Wall
-	Warhead@5Spawn: SpawnActor
-		Actors: shakyshaky
-		Range: 3
+	Warhead@Shake: ScreenShaker
+		Intensity: 10
 	Warhead@6Spawn: SpawnActor
 		Actors: visionactor
 		Range: 3

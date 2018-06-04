@@ -1086,8 +1086,6 @@ TRNSPORT:
 	# WithRoof:
 	SpawnActorOnDeath:
 		Actor: TRNSPORT.Husk
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 	-GainsExperience:
 	-ProducibleWithLevel:
 	WithIdleOverlay@1Air:

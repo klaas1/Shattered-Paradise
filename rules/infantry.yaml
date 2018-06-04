@@ -198,8 +198,6 @@ JUMPJETAIR:
 	-GrantConditionOnDamageState@smoke:
 	-SmokeParticleEmitter:
 	-ExternalCondition@smoketrail:
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 	-GrantConditionOnDamageState@spawnsparks:
 	-ExplodeWeapon@spawnsparks:
 	-ExternalCondition@spawnsparks:
@@ -418,7 +416,6 @@ BHS:
 		TargetTypes: MindControlInmune
 	Targetable@MCImmune:
 		TargetTypes: MCImmune
-	-RejectsOrders@berserk:
 	-TakeCover:
 	Health:
 		HP: 25000
@@ -544,7 +541,7 @@ MARAUDER:
 		ArmamentNames: OnFoot
 
 MUTFIEND:
-	Inherits: ^Beast
+	Inherits: ^Mutant
 	Inherits@1: ^6CellVision
 	Tooltip:
 		Name: Tiberian Fiend
@@ -589,6 +586,21 @@ MUTFIEND:
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
+	-TakeCover:
+	-WithDeathAnimation@body:
+	-WithDeathAnimation@tib:
+	-SpawnActorOnDeath@FLAMEGUY:
+	-SpawnActorOnDeath@FLAMEGUY2:
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	WithDeathAnimation@normal:
+		DeathTypes:
+			TiberiumDeath: 1, 2
+			EnergyDeath: 1, 2
 
 E2:
 	Inherits@1: ENGINEER
@@ -736,7 +748,6 @@ PSYKER:
 		VoiceSet: Umagon
 	Health:
 		HP: 15000
-	-RejectsOrders@berserk:
 	AnnounceOnSeen:
 		Notification: CommandoDetected
 	Mobile:
@@ -1431,7 +1442,6 @@ CYC2:
 		BuildPaletteOrder: 30
 		Prerequisites: ~cabclaw, cabtech
 		BuildLimit: 1
-	-RejectsOrders@berserk:
 	DeliversCash:
 		Payload: 600
 		Voice: Move
@@ -1646,7 +1656,6 @@ AWARRIOR:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
 	-SelectionDecorations:
-	RejectsOrders@slaved:
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -1695,28 +1704,19 @@ AWARRIOR:
 		TargetTypes: MCImmune
 
 STALKER:
-	Inherits: ^ScrinSoldier
+	Inherits: ^Infantry
 	Selectable:
 		Class: Stalker
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Stalker
-		Description: Disruption infantry, explodes on contact releasing a energy orb that\nfollows enemy units Damaging and slowing them\n\n  Strong vs Unit acumulations.\n  Unarmed.
 	Health:
 		HP: 13000
-	Targetable@Stalker:
-		TargetTypes: Stalker
 	Mobile:
 		Speed: 90
 		TerrainSpeeds:
 			Water: 80
 		Crushes: crate
-	# Armament@prim:
-		# Weapon: GravMineSuicide
-	# AttackFrontal:
-		# Voice: Attack
-		# PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: throw
-	-TakeCover:

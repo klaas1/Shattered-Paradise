@@ -550,7 +550,6 @@ CIV1:
 
 CIV2:
 	Inherits: ^CivilianInfantry
-	-AutoTarget:
 
 CIV3:
 	Inherits: ^CivilianInfantry
@@ -585,7 +584,6 @@ CIV3:
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
-	AutoTarget:
 	SelfHealing:
 		PercentageStep: 1
 		Step: 0
@@ -647,7 +645,7 @@ ICBM:
 		Voice: Move
 
 WEED:
-	Inherits: ^VoxelTank
+	Inherits: ^VoxelVehicle
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -668,18 +666,12 @@ WEED:
 		TurnSpeed: 5
 	Health:
 		HP: 600
-	SelfHealing:
-		Delay: 10
-		HealIfBelow: 50
-		DamageCooldown: 200
 	Armor:
-		Type: BuildingArmor
+		Type: VehicleArmor
 	RevealsShroud:
 		Range: 4c0
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	-GainsExperience:
-	-ProducibleWithLevel:
 
 BUS:
 	Inherits: ^CivilianVoxelVehicle
@@ -2476,7 +2468,7 @@ MACHINESHOP:
 	ProvidesPrerequisite@buildingname:
 
 BLOODDERRICK:
-	Inherits: ^TechBuilding
+	Inherits: ^CivBuilding
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^3x3Shape
 	Tooltip:
@@ -2492,23 +2484,11 @@ BLOODDERRICK:
 		Weapon: TiberiumExplosion
 	RenderSprites:
 		PlayerPalette: playerscrin
-	WithDeathAnimation:
-		DeathSequencePalette: playerscrin
-		CrushedSequencePalette: playerscrin
-		CrushedPaletteIsPlayerPalette: true
 	SelectionDecorations:
 		VisualBounds: 102, 60, 0, 0
-	AttackOmni:
-	WithAttackAnimation:
-		AttackSequence: move
 	WithRangeCircle:
 		Range: 12c0
 		Type: Bounty
-	RejectsOrders:
-	Armament:
-		Weapon: DerrickAnimation
-		TargetStances: Ally, Enemy, Neutral
-	AutoTarget:
 	SpawnActorOnDeath@1:
 		Actor: permacrab
 		Probability: 100
@@ -2569,8 +2549,6 @@ BLOODDERRICK:
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		Offset: 1,1
-	-ExternalCapturable:
-	-ExternalCapturableBar:
 
 NEUTRALRADAR:
 	Inherits: ^TechBuilding

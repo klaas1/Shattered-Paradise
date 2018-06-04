@@ -812,10 +812,6 @@
 	RevealsShroud:
 		Range: 14c0
 
-^Academy:
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
-
 ^UsesAmunition:
 	AmmoPool:
 		Ammo: 8
@@ -1219,7 +1215,7 @@
 	Voiced:
 		VoiceSet: Infantry
 	Targetable:
-		TargetTypes: Ground, Infantry
+		TargetTypes: Ground, Infantry, DetonateAttack
 		RequiresCondition: !inside-tunnel
 	Passenger:
 		CargoType: Infantry
@@ -1286,7 +1282,6 @@
 ^Soldier:
 	Inherits@1: ^Infantry
 	Inherits@2: ^Cloakable
-	Inherits@3: ^Academy
 	Inherits@4: ^AutoTargetGroundAssaultMove
 	Inherits@5: ^5CellVision
 	MustBeDestroyed:
@@ -1380,7 +1375,6 @@
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	Inherits@1: ^Academy
 	Inherits@2: ^AutoTargetGroundAssaultMove
 	Inherits@3: ^7CellVision
 	-SpawnActorOnDeath@conversion:
@@ -1416,7 +1410,6 @@
 
 ^CabalDroneInfantry:
 	Inherits@1: ^Infantry
-	Inherits@2: ^Academy
 	Inherits@3: ^AutoTargetGroundAssaultMove
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@explosion:
@@ -1465,7 +1458,6 @@
 		HP: 4500
 	-GainsExperience:
 	-GivesExperience:
-	-ProducibleWithLevel:
 	-Passenger:
 	-DamagedByTerrain:
 	-ActorLostNotification:
@@ -1601,16 +1593,9 @@
 		Actor: SCRINESSENCESMALL
 	Voiced:
 		VoiceSet: Vehicle
-	WithIdleOverlay@BugPoison:
-		Sequence: cloud
-		IsPlayerPalette: true
-		Palette: cloakscrin
-		RequiresCondition: BugPoison
 	WithTextControlGroupDecoration:
 	Targetable:
-		TargetTypes: Ground, Vehicle
-	Targetable@repair:
-		TargetTypes: repair
+		TargetTypes: Ground, Vehicle, DetonateAttack
 	Repairable:
 		RepairBuildings: gadept, scrdepot
 		Voice: Move
@@ -1636,10 +1621,11 @@
 		Range: 2c0, 5c0
 	EditorTilesetFilter:
 		Categories: Vehicle
+	BodyOrientation:
+		QuantizedFacings: 32
 
 ^Tank:
 	Inherits: ^Vehicle
-	Inherits@1: ^Academy
 	Inherits@2: ^AutoTargetGroundAssaultMove
 	Mobile:
 		Crushes: wall, crate, infantry
@@ -1649,7 +1635,6 @@
 
 ^HoverVehicle:
 	Inherits: ^Vehicle
-	Inherits@1: ^Academy
 	Hovers:
 	Mobile:
 		TerrainSpeeds:
@@ -1677,15 +1662,25 @@
 		TerrainTypes: Water
 	ExternalCondition@hoverunitonwater:
 		Condition: hoverunitonwater
+	WithFacingSpriteBody:
 	-Explodes:
 	-SelfHealing@veinholedrain:
 	-ExternalCondition@veinholedrain:
 	-WithIdleOverlay@veinholedrain:
 	-GrantConditionOnTerrain@VEINS:
 
+^HoverTank:
+    Inherits: ^HoverVehicle
+    Inherits@1: ^AutoTargetGroundAssaultMove
+	WithSpriteTurret:
+	Turreted:
+	AttackTurreted:
+	BodyOrientation:
+		QuantizedFacings: 32
+		CameraPitch: 250
+
 ^Walker:
 	Inherits: ^Vehicle
-	Inherits@1: ^Academy
 	Inherits@2: ^AutoTargetGroundAssaultMove
 	Mobile:
 		Crushes: wall, crate, infantry
@@ -1701,8 +1696,8 @@
 			VerticalTopOffset: 500
 
 ^ScrinVehicle:
-	Inherits@1: ^ScrinReaper
-	Inherits@2: ^ScrinRender
+	Inherits@0: ^ScrinReaper
+	Inherits@1: ^ScrinRender
 	Explodes:
 		Weapon: ScrinUnitExplode
 		EmptyWeapon: ScrinUnitExplode
@@ -1722,7 +1717,6 @@
 
 ^VoxelTank:
 	Inherits: ^Tank
-	Inherits@2: ^AutoTargetGroundAssaultMove
 	BodyOrientation:
 		QuantizedFacings: 0
 		CameraPitch: 85
@@ -1801,7 +1795,6 @@
 
 ^Aircraft:
 	Inherits@0: ^GainsExperience
-	Inherits@1: ^Academy
 	Inherits@2: ^AircraftEffects
 	Inherits@3: ^ExistsInWorld
 	Inherits@4: ^VehicleShape
@@ -2101,8 +2094,6 @@
 	DrawLineToTarget:
 	Armor:
 		Type: VehicleArmor
-	SelfHealing@scloud:
-		PercentageStep: -3
 	Building:
 		Dimensions: 1,1
 		Footprint: x

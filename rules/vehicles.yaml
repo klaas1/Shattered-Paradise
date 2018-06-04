@@ -84,7 +84,7 @@ MMCH:
 		Bounds: 30, 42, 0, -8
 
 APC:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -120,8 +120,6 @@ APC:
 	WithSpriteTurret@2:
   		Sequence: turret-water
 		RequiresCondition: inwater
-	-WithVoxelBody:
-	-RenderVoxels:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
@@ -147,9 +145,7 @@ APC:
 	WithMuzzleOverlay:
 
 HVR:
-	Inherits: ^VoxelTank
-	Inherits@1: ^AutoTargetGround
-	Inherits@2: ^HoverVehicle
+	Inherits@1: ^HoverTank
 	Inherits@3: ^BasicStealthDetection
 	Inherits@4: ^8CellVision
 	Valued:
@@ -182,16 +178,7 @@ HVR:
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
-	AutoTarget:
-	-RenderVoxels:
-	-WithVoxelBody:
-	WithFacingSpriteBody:
 	WithMuzzleOverlay:
-	WithSpriteTurret:
-	-SelfHealing@veinholedrain:
-	-ExternalCondition@veinholedrain:
-	-WithIdleOverlay@veinholedrain:
-	-GrantConditionOnTerrain@VEINS:
 	BodyOrientation:
 		QuantizedFacings: 32
 		CameraPitch: 250
@@ -247,7 +234,7 @@ JUG:
 		CameraPitch: 250
 
 SONIC:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^8CellVision
 	Valued:
 		Cost: 1200
@@ -280,14 +267,12 @@ SONIC:
 		TurnSpeed: 3
 		Offset: -400,0,0
 	AutoTarget:
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
 G4TNK:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^8CellVision
 	Inherits@2: ^IncompleteSelfHeal
 	Valued:
@@ -327,14 +312,12 @@ G4TNK:
 		QuantizedFacings: 32
 		CameraPitch: 250
 	AutoTarget:
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
 HMEC:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^10CellVision
 	Inherits@1: ^PermanentSelfHeal
 	Valued:
@@ -386,7 +369,6 @@ HMEC:
 		MuzzleSequence: muzzle
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
-	-WithVoxelBody:
 	Turreted:
 		Offset: -500,0,0
 		TurnSpeed: 3
@@ -437,7 +419,7 @@ NODMCV:
 		Voice: Move
 
 BGGY:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^AutoTargetGround
 	Inherits@2: ^7CellVision
 	Inherits@3: ^BasicStealthDetection
@@ -458,8 +440,6 @@ BGGY:
 		TurnSpeed: 8
 	Health:
 		HP: 15000
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	WithShadow:
 	RenderSprites:
@@ -800,8 +780,7 @@ BUGGYHOLOGRAM:
 	-ActorLostNotification:
 
 TTNK:
-	Inherits: ^VoxelTank
-	Inherits@1: ^Ra2vxl
+	Inherits: ^Tank
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^8CellVision
 	Valued:
@@ -859,7 +838,6 @@ TTNK:
 	WithSpriteBody@deployed:
 		Sequence: deployed
 		RequiresCondition: !undeployed
-	-WithVoxelBody:
 	AttackFrontal:
 		Voice: Attack
 		RequiresCondition: undeployed
@@ -938,7 +916,7 @@ TICKHOLOGRAM:
 	-ActorLostNotification:
 
 BIKE:
-	Inherits: ^VoxelVehicle
+	Inherits: ^Vehicle
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -961,8 +939,6 @@ BIKE:
 	WithRangeCircle:
 		Range: 2c0
 		Type: DemoBike
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	WithShadow:
 	RenderSprites:
@@ -1036,7 +1012,7 @@ SUBTANK:
 	AutoTarget:
 
 ARMH:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^5CellVision
 	Valued:
 		Cost: 1300
@@ -1047,8 +1023,6 @@ ARMH:
 	Mobile:
 		Speed: 70
 		TurnSpeed: 5
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	Armament:
 		Weapon: BCLazor
@@ -1070,7 +1044,7 @@ ARMH:
 		OnlyToOwner: True
 
 HOWTLIZER:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^5CellVision
 	Valued:
 		Cost: 1400
@@ -1095,8 +1069,6 @@ HOWTLIZER:
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 		RequiresCondition: !CloakBreaks
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithMuzzleOverlay:
 	WithFacingSpriteBody:
 	Armament:
@@ -1109,6 +1081,7 @@ HOWTLIZER:
 		Voice: Attack
 		PauseOnCondition: empdisable
 	AutoTarget:
+	-MustBeDestroyed:
 	-GrantConditionOnDamageState@smoke:
 	-SmokeParticleEmitter:
 	-ExternalCondition@smoketrail:
@@ -1117,7 +1090,7 @@ HOWTLIZER:
 		ValidDamageStates: Critical
 
 STNK:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^8CellVision
 	Valued:
 		Cost: 900
@@ -1154,8 +1127,6 @@ STNK:
 		Weapon: StealthRocketAA
 		LocalOffset: 400,100,300, 400,-100,300
 		PauseOnCondition: empdisable
-	-RenderVoxels:
-	-WithVoxelBody:
 	Turreted:
 		Offset: 0,0,600
 		TurnSpeed: 6
@@ -1213,8 +1184,7 @@ MUTMCV:
 		Volume: 0.8
 
 MUTQUAD:
-	Inherits: ^VoxelTank
-	Inherits@1: ^Ra2vxl
+	Inherits: ^Tank
 	Inherits@2: ^BasicStealthDetection
 	Inherits@3: ^MutRender
 	Inherits@4: ^8CellVision
@@ -1237,8 +1207,6 @@ MUTQUAD:
 	Voiced:
 		VoiceSet: Trike
 		Volume: 3
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
@@ -1266,7 +1234,7 @@ MUTQUAD:
 		CameraPitch: 250
 
 LYNX:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^Ra2vxl
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^MutRender
@@ -1288,11 +1256,9 @@ LYNX:
 	WithFacingSpriteBody:
 	Health:
 		HP: 22500
-	-RenderVoxels:
 	Voiced:
 		VoiceSet: Trike
 		Volume: 3
-	-WithVoxelBody:
 	Turreted:
 		TurnSpeed: 6
 		Offset: 150,0,0
@@ -1314,7 +1280,7 @@ LYNX:
 		PauseOnCondition: empdisable
 
 STRUCK:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^Ra2vxl
 	Inherits@2: ^6CellVision
 	Inherits@3: ^MutRender
@@ -1340,10 +1306,7 @@ STRUCK:
 	BodyOrientation:
 		QuantizedFacings: 32
 		CameraPitch: 250
-	-RenderVoxels:
-	-WithVoxelBody:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	WithFacingSpriteBody:
 	Cargo:
 		Types: Infantry
@@ -1399,7 +1362,7 @@ WOLF:
 		SharesCell: false
 
 MRLS:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Inherits@1: ^5CellVision
 	Inherits@2: ^MutRender
 	Valued:
@@ -1441,8 +1404,6 @@ MRLS:
 	Turreted:
 		TurnSpeed: 9
 		Offset: -300,0,0
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	WithSpriteTurret:
 	-DamagedByRadioactivity@Default:
@@ -1491,7 +1452,6 @@ DEATHCLAW:
 		DecorationBounds: 30,50,0,-20
 
 HVRTRUK3:
-	Inherits: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
 	Inherits@3: ^MutRender
 	Valued:
@@ -1510,9 +1470,6 @@ HVRTRUK3:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 60
-	-RenderVoxels:
-	-WithVoxelBody:
-	WithFacingSpriteBody:
 	Health:
 		HP: 12500
 	Explodes:
@@ -1520,10 +1477,6 @@ HVRTRUK3:
 		EmptyWeapon: MiniNuke
 	AttackSuicides:
 		PauseOnCondition: empdisable
-	-SelfHealing@veinholedrain:
-	-ExternalCondition@veinholedrain:
-	-WithIdleOverlay@veinholedrain:
-	-GrantConditionOnTerrain@VEINS:
 	WithDecoration@TNT:
 		Image: bombicon
 		Sequence: idle
@@ -1568,9 +1521,8 @@ SCRSCORPION:
 	-DamagedByRadioactivity@Default:
 
 SCRMBT:
-	Inherits@1: ^HoverVehicle
+	Inherits@1: ^HoverTank
 	Inherits: ^ScrinVehicle
-	Inherits@2: ^AutoTargetGround
 	Inherits@1: ^8CellVision
 	Buildable:
 		Queue: Vehicle
@@ -1595,20 +1547,12 @@ SCRMBT:
 		PauseOnCondition: empdisable
 	AttackTurreted:
 		PauseOnCondition: empdisable
-	WithSpriteTurret:
-	AutoTarget:
-	RenderSprites:
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
-		CameraPitch: 250
 
 SCRGLYDER2:
-	Inherits@1: ^HoverVehicle
-	Inherits: ^ScrinVehicle
-	Inherits@2: ^AutoTargetGround
-	Inherits@3: ^BasicStealthDetection
-	Inherits@1: ^8CellVision
+	Inherits: ^HoverVehicle
+	Inherits@1: ^ScrinVehicle
+	Inherits@2: ^BasicStealthDetection
+	Inherits@3: ^8CellVision
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 26
@@ -1631,13 +1575,8 @@ SCRGLYDER2:
 		RecoilRecovery: 25
 		LocalOffset: 100,0,1500
 		PauseOnCondition: empdisable
-	AutoTarget:
 	AttackFrontal:
 		PauseOnCondition: empdisable
-	RenderSprites:
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
 
 SCRRECHARGER:
 	Inherits@1: ^Walker
@@ -1683,7 +1622,6 @@ SCRRECHARGER:
 	WithMoveAnimation:
 		MoveSequence: run
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 SCRMOBMINE:
 	Inherits@0: ^HoverVehicle
@@ -1715,18 +1653,12 @@ SCRMOBMINE:
 	Mobile:
     	TurnSpeed: 7
 		Speed: 95
-	AutoTarget:
 	AttackFrontal:
 		PauseOnCondition: empdisable
-	RenderSprites:
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
 	WithRangeCircle:
 		Type: Subjugator
 	RenderRangeCircle:
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 TRIPOD:
 	Inherits@1: ^Walker
@@ -1932,7 +1864,7 @@ REAPERCAB:
 	DeathSounds:
 
 REPAIRVEHICLE:
-	Inherits: ^VoxelTank
+	Inherits: ^Tank
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1959,16 +1891,13 @@ REPAIRVEHICLE:
 		Voice: Attack
 	AutoTarget:
 		ScanRadius: 6
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	AutoTarget:
 		InitialStance: AttackAnything
 
 ECM:
-	Inherits: ^VoxelVehicle
+	Inherits: ^Vehicle
 	Inherits@1: ^Ra2vxl
 	Inherits@3: ^CabRender
 	Valued:
@@ -1995,8 +1924,6 @@ ECM:
 	Health:
 		HP: 40000
 	SelectionDecorations:
-	-RenderVoxels:
-	-WithVoxelBody:
 	WithFacingSpriteBody:
 	Selectable:
 		Priority: 6
@@ -2007,8 +1934,6 @@ ECM:
 	-GrantConditionOnTerrain@VEINS:
 
 CABAPC:
-	Inherits: ^VoxelVehicle
-	Inherits@1: ^Ra2vxl
 	Inherits@2: ^HoverVehicle
 	Inherits@3: ^CabRender
 	Valued:
@@ -2028,8 +1953,6 @@ CABAPC:
 		VoiceSet: Limpet
 	Health:
 		HP: 40000
-	Turreted:
-		TurnSpeed: 10
 	Cargo:
 		Types: Infantry, Vehicle
 		MaxWeight: 8
@@ -2037,17 +1960,8 @@ CABAPC:
 		UnloadVoice: Unload
 		LoadingCondition: notmobile
 	SelectionDecorations:
-	-RenderVoxels:
-	-WithVoxelBody:
-	WithFacingSpriteBody:
 	Selectable:
 		DecorationBounds: 75, 45 , 0, -6
-	-SelfHealing@veinholedrain:
-	-ExternalCondition@veinholedrain:
-	-WithIdleOverlay@veinholedrain:
-	-GrantConditionOnTerrain@VEINS:
-	-GainsExperience:
-	-ProducibleWithLevel:
 
 SPIDERARTY:
 	Inherits: ^Walker
@@ -2188,8 +2102,7 @@ JUGGER:
 		Bounds: 30, 35, 0, -8
 
 LIMPED:
-	Inherits: ^VoxelTank
-	Inherits@2: ^HoverVehicle
+	Inherits: ^HoverVehicle
 	Inherits@1: ^8CellVision
 	Valued:
 		Cost: 400
@@ -2205,21 +2118,11 @@ LIMPED:
 		CrushClasses: infantry
 		WarnProbability: 0
 	WithSpriteBody:
+    -WithFacingSpriteBody:
 	Voiced:
 		VoiceSet: Limpet
 	Selectable:
 		Bounds: 20, 30, 0, -6
-	RenderSprites:
-	BodyOrientation:
-		QuantizedFacings: 32
-	Hovers:
-	-RenderVoxels:
-	-WithVoxelBody:
-	WithFacingSpriteBody:
-	-AutoTarget:
-	-AutoTargetPriority@DEFAULT:
-	-AutoTargetPriority@ATTACKANYTHING:
-	AttackMove:
 
 REPAIR:
 	Inherits: ^VoxelTank
@@ -2241,7 +2144,6 @@ REPAIR:
 	AttackFrontal:
 		Voice: Attack
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 SGEN:
 	Inherits: ^VoxelVehicle

@@ -56,7 +56,6 @@ CLOUD1:
 	-SelfHealing@KillShieldedUnit:
 	Interactable:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	-GrantConditionOnDamageState@spawnsparks:
 	-ExplodeWeapon@spawnsparks:
 
@@ -315,7 +314,6 @@ ORCATRAN:
 	SpawnActorOnDeath:
 		Actor: ORCATRAN.Husk
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 APACHE:
 	Inherits: ^CombatHelicopter
@@ -767,7 +765,6 @@ DRACHE:
 		Image: scrsmoke
 		Palette: apolbluealpha60
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 SCRGLYDER1:
 	Inherits: ^CombatHelicopter
@@ -901,7 +898,6 @@ SCRTRANS:
 	SpawnActorOnDeath:
 		Actor: SCRTRANS.Husk
 	-GainsExperience:
-	-ProducibleWithLevel:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
@@ -949,7 +945,6 @@ SCRINCOUNCIL:
 	SpawnActorOnDeath:
 		Actor: SCRCOUNCIL.Husk
 	-GainsExperience:
-	-ProducibleWithLevel:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
@@ -1233,7 +1228,6 @@ FIREFLY:
 	SpawnActorOnDeath:
 		Actor: FIREFLY.Husk
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 BASILISK:
 	Inherits: ^CombatHelicopter

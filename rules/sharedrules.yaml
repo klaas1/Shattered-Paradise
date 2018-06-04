@@ -15,8 +15,6 @@ E1:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 	RenderSprites:
 		Image: e1.gdi
 		FactionImages:
@@ -34,7 +32,6 @@ ENGINEER:
 		Prerequisites: ~SharedEngie
 		Description: Utility unit.\n\nGood vs: Buildings\n\nSpecial:\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Crush class: crushable.
 	-GainsExperience:
-	-ProducibleWithLevel
 	Voiced:
 		VoiceSet: Engineer
 	RenderSprites:
@@ -232,7 +229,6 @@ SCRHARV:
 		Volume: 1
 	Selectable:
 		DecorationBounds: 36,36
-	-ProducibleWithLevel:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
@@ -1087,7 +1083,6 @@ TRNSPORT:
 	SpawnActorOnDeath:
 		Actor: TRNSPORT.Husk
 	-GainsExperience:
-	-ProducibleWithLevel:
 	WithIdleOverlay@1Air:
 		Offset: 500,0,650
 		Sequence: rotor

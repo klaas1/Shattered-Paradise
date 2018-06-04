@@ -25,8 +25,6 @@ GHOST:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Condition
 
 WEEDGUY:
 	Inherits: ^Soldier
@@ -67,8 +65,6 @@ UMAGON:
 		PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 CHAMSPY:
 	Inherits: ^Soldier
@@ -119,8 +115,6 @@ MUTANT:
 		PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 MWMN:
 	Inherits: ^Mutant
@@ -141,8 +135,6 @@ MWMN:
 		PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 MUTANT3:
 	Inherits: ^Mutant
@@ -163,8 +155,6 @@ MUTANT3:
 		PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 TRATOS:
 	Inherits: ^Mutant
@@ -232,7 +222,6 @@ DOGGIE:
 		Type: InfantryArmor
 	-RevealsShroud:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	Mobile:
 		Speed: 120
 		Crushes: nada
@@ -341,7 +330,6 @@ ZOMBIE:
 	Tooltip:
 		Name: Haunt
 	-GainsExperience:
-	-ProducibleWithLevel:
 	Health:
 		HP: 7500
 		Shape: Circle
@@ -383,7 +371,6 @@ BERSERKER:
 	Tooltip:
 		Name: Berserker
 	-GainsExperience:
-	-ProducibleWithLevel:
 	Health:
 		HP: 20000
 		Shape: Circle
@@ -430,7 +417,6 @@ CRAB:
 	Tooltip:
 		Name: Crab
 	-GainsExperience:
-	-ProducibleWithLevel:
 	-DamagedByRadioactivity@Default:
 	Health:
 		HP: 17000
@@ -491,6 +477,7 @@ PERMACRAB:
 
 FLOATER:
 	Inherits: ^HoverVehicle
+	Inherits@1: ^AutoTargetGroundAssaultMove
 	Tooltip:
 		Name: Floater
 	Health:
@@ -507,8 +494,7 @@ FLOATER:
 		Weapon: FloaterCloudSpawn
 	QuantizeFacingsFromSequence:
 		Sequence: stand
-	-GainsExperience:
-	-ProducibleWithLevel:
+	-WithFacingSpriteBody:
 	WithSpriteBody:
 	Mobile:
 		Speed: 100

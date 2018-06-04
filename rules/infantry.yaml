@@ -94,7 +94,6 @@ MEDIC:
 	Passenger:
 		PipType: Red
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 JUMPJET:
 	Inherits: ^Soldier
@@ -634,7 +633,6 @@ E2:
 	-DamagedByTerrain:
 	-AutoTarget:
 	-GainsExperience:
-	-ProducibleWithLevel
 	-AutoTargetPriority@DEFAULT:
 	-AutoTargetPriority@ATTACKANYTHING:
 
@@ -1053,7 +1051,6 @@ CABSENTRY:
 	-UpdatesPlayerStatistics:
 	-SpawnActorOnDeath@nanomachineburst:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	-Passenger:
 	Mobile:
 		Speed: 70

@@ -102,81 +102,68 @@
 ^2x1Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -512, -1024
-			BottomRight: 512, 1024
-			LocalYaw: 128
+			TopLeft: -1024, -512
+			BottomRight: 1024, 512
 
 ^1x2Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1024, -512, 
-			BottomRight: 1024, 512
-			LocalYaw: 128
+			TopLeft: -512, -1024
+			BottomRight: 512, 1024
 
 ^2x2Shape:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1024, -1024
 			BottomRight: 1024, 1024
-			LocalYaw: 128
 
 ^1x3Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1536, -512
-			BottomRight: 1536, 512
-			LocalYaw: 128
+			TopLeft: -512, -1536
+			BottomRight: 512, 1536
 
 ^3x1Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -512, -1536
-			BottomRight: 512, 1536
-			LocalYaw: 128
+			TopLeft: -1536, -512
+			BottomRight: 1536, 512
 
 ^3x2Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1024, -1536
-			BottomRight: 1024, 1536
-			LocalYaw: 128
-			# TopLeft: -1200, -1200
-			# BottomRight: 900, 1200
+			TopLeft: -1536, -1024
+			BottomRight: 1536, 1024
 
 ^2x3Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1536, -1024
-			BottomRight: 1536, 1024
-			LocalYaw: 128
+			TopLeft: -1024, -1536
+			BottomRight: 1024, 1536
 
 ^3x3Shape:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
-			LocalYaw: 128
 
 ^2x4Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -2048, -1024
-			BottomRight: 2048, 1024
-			LocalYaw: 128
+			TopLeft: -1024, -2048
+			BottomRight: 1024, 2048
 
 ^4x2Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1024, -2048
-			BottomRight: 1024, 2048
-			LocalYaw: 128
+			TopLeft: -2048, -1024
+			BottomRight: 2048, 1024
 
 ^3x4Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -2048, -1536
-			BottomRight: 2048, 1536
-			LocalYaw: 128
+			TopLeft: -1536, -2048
+			BottomRight: 1536, 2048
 
 ^4x3FactoryWithBibShape:
 	HitShape:
@@ -202,51 +189,44 @@
 ^4x3Shape:
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1536, -2048 
-			BottomRight: 1536, 2048 
-			LocalYaw: 128
+			TopLeft: -2048, -1536
+			BottomRight: 2048, 1536
 
 ^4x4Shape:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -2048, -2048
 			BottomRight: 2048, 2048
-			LocalYaw: 128
 
 ^3x5Shape:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1536, -2560
 			BottomRight: 1536, 2560
-			LocalYaw: 128
-    
+
 ^5x3Shape:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -2560, -1536
 			BottomRight: 2560, 1536
-			LocalYaw: 128
-    
+
 ^2x5Shape:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1024, -2560
 			BottomRight: 1024, 2560
-			LocalYaw: 128
 
 ^2x6Shape:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1024, -3072
 			BottomRight: 1024, 3072
-			LocalYaw: 128
 
 ^6x4Shape:
 	HitShape:
 		Type: Rectangle
 			TopLeft: -3072, -2048
 			BottomRight: 3072, 2048
-			LocalYaw: 128
 
 ^CrateBuffs:
 	SpeedMultiplier@speedcrate:
@@ -349,6 +329,8 @@
 	GivesExperienceMultiplier@RANK-ELITE:
 		Modifier: 250
 		RequiresCondition: rank-elite
+	Targetable@Academy:
+        TargetTypes: CanTakeVeterancyPower
 
 ^TyrannyBuff:
 	SpeedMultiplier@TyrannyBuff:
@@ -398,7 +380,7 @@
 		Palette: apgrey
 		ShowToEnemies: true
 		RequiresCondition: DisplayWrench
-	ExternalCondition@TyrannyBuff:
+	ExternalCondition@DisplayWrench:
 		Condition: DisplayWrench
 
 ^FirestormGenBuff:
@@ -418,7 +400,6 @@
 ^MindControllable:
 	WithMindControlArc:
 	MindControllable:
-		RequiresCondition: !invulnerability
 		UnmindcontrolSound: bleep5.aud
 
 ^ScrinEssence:
@@ -478,6 +459,18 @@
 		Delay: 75
 		DamageCooldown: 200
 		HealIfBelow: 105
+
+^HealsOnTiberium:
+	GrantConditionOnTerrain@Tib:
+		Condition: TiberiumHealing
+		TerrainTypes: Tiberium, BlueTiberium
+	SelfHealing@Tib:
+		PercentageStep: 1
+		Step: 200
+		Delay: 100
+		DamageCooldown: 0
+		HealIfBelow: 105
+		RequiresCondition: TiberiumHealing
 
 ^HopspitalHeal:
 	SelfHealing@HOSPITAL:
@@ -567,12 +560,6 @@
 		Modifier: 15
 	ExternalCondition@ToxinTrooperDebuff:
 		Condition: ToxinTrooperDebuff
-
-^RejectsOrdersBerkserk:
-	RejectsOrders@berserk:
-		RequiresCondition: submerged
-	# ExternalCondition@ToxinTrooper:
-		# Condition: ToxinTrooper
 
 ^EmpDisable:
 	WithColoredOverlay@EMPDISABLE:
@@ -762,78 +749,63 @@
 ^3CellVision:
 	RevealsShroud:
 		Range: 3c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition 
 
 ^4CellVision:
 	RevealsShroud:
 		Range: 4c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition 
 
 ^5CellVision:
 	RevealsShroud:
 		Range: 5c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition 
 
 ^6CellVision:
 	RevealsShroud:
 		Range: 6c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition 
 
 ^7CellVision:
 	RevealsShroud:
 		Range: 7c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition
 
 ^8CellVision:
 	RevealsShroud:
 		Range: 8c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition
 
 ^9CellVision:
 	RevealsShroud:
 		Range: 9c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition
 
 ^10CellVision:
 	RevealsShroud:
 		Range: 10c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition 
 
 ^11CellVision:
 	RevealsShroud:
 		Range: 11c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition 
 
 ^12CellVision:
 	RevealsShroud:
 		Range: 12c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition 
 
 ^13CellVision:
 	RevealsShroud:
 		Range: 13c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition 
 
 ^14CellVision:
 	RevealsShroud:
 		Range: 14c0
-		RequiresCondition: !inside-tunnel && !submerged
-		Type: CenterPosition
 
-^Academy:
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+^UsesAmunition:
+	AmmoPool:
+		Ammo: 8
+	ReloadAmmoPool@AIReload:
+		AmmoPool: primary
+		RequiresCondition: AIReload
+		Count: 20
+	GrantConditionOnPrerequisite@AIReload:
+		Condition: AIReload
+		Prerequisites: AIReload
+	ExternalCondition@AIReload:
+		Condition: AIReload
 
 ^GenericEffects:
 	Inherits@0: ^KillSelf
@@ -854,9 +826,8 @@
 	Inherits: ^GenericEffects
 	Inherits@1: ^TyrannyBuff
 	Inherits@2: ^InfantryStealthDetection
- 	Inherits@3: ^HopspitalHeal
+	Inherits@3: ^HopspitalHeal
 	Inherits@4: ^ToxinTrooperDebuff
-	Inherits@5: ^RejectsOrdersBerkserk
 	Inherits@6: ^WebDisable
 	Inherits@7: ^BugPoison
 	Inherits@8: ^DisplayVanguardShield
@@ -869,7 +840,6 @@
 	Inherits@2: ^DisplayWrench
  	Inherits@3: ^MachineShopHeal
 	Inherits@4: ^BugPoison
-	Inherits@5: ^RejectsOrdersBerkserk
 	Inherits@6: ^EmpDisableMobile
 	Inherits@7: ^SpawnSmoke
 	Inherits@8: ^MindControllable
@@ -878,9 +848,6 @@
 	Inherits@11: ^VeinholePoisonVehicle
 	Inherits@12: ^DamagedByRadioactivity
 	Inherits@13: ^WolfDebuff
-	SpeedMultiplier@submerged:
-		Modifier: 60
-		RequiresCondition: submerged
 
 ^AircraftEffects:
 	Inherits: ^GenericEffects
@@ -907,8 +874,7 @@
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Inherits@3: ^1x1Shape
-	Inherits@4: ^SpawnFire
+	Inherits@3: ^SpawnFire
 	WithTextControlGroupDecoration:
 	SelectionDecorations:
 		Palette: pips
@@ -951,6 +917,12 @@
 		HP: 28000
 		Shape: Circle
 			Radius: 500
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: -128
+			TopLeft: -512, -512
+			BottomRight: 512, 512
 	Demolishable:
 	SpawnActorOnDeath@tiberium2:
 		Actor: inftibspawn
@@ -1082,6 +1054,8 @@
 		Palette: terraindecoration
 	EditorTilesetFilter:
 		Categories: Civilian Structure
+	ExternalCondition@CLOAKGENERATOR:
+		Condition: cloakgenerator
 
 ^TechBuilding:
 	Inherits: ^BasicBuilding
@@ -1152,15 +1126,46 @@
 	Inherits@3: ^SpriteActor
 	Inherits@4: ^InfantryShape
 	Inherits@5: ^5CellVision
-	DrawLineToTarget:
-	WithTextControlGroupDecoration:
-	GivesExperience:
-		PlayerExperienceModifier: 1
+	ActorLostNotification:
+	AttackMove:
+		Voice: Move
+	Armor:
+		Type: InfantryArmor
 	Chronoshiftable:
 		ReturnToOrigin: false
+	Crushable:
+		WarnProbability: 0
+		CrushSound: squish6.aud
+	DamagedByTerrain:
+		Damage: 200
+		DamageInterval: 25
+		Terrain: Tiberium, BlueTiberium
+		DamageTypes: TiberiumDeath
+	DrawLineToTarget:
+	DeathSounds@NORMAL:
+		DeathTypes: BulletDeath, SmallExplosionDeath, ExplosionDeath, CabalDeath, CabalDeathCrate, BlackHandRfle, HeadshotDeath, SmallExplosionDeath, TiberiumDeath
+	DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: FireDeath
+	DeathSounds@ZAPPED:
+		Voice: Zapped
+		DeathTypes: EnergyDeath
+	EditorTilesetFilter:
+		Categories: Infantry
+	GivesExperience:
+		PlayerExperienceModifier: 1
+	Guard:
+		Voice: Move
+	Guardable:
+	HiddenUnderFog:
+	RevealsShroud:
+		RequiresCondition: !inside-tunnel
+		Type: CenterPosition
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
+	RevealsShroud:
+		Type: CenterPosition
 	Valued:
 		Cost: 1
 	TeleportNetworkTransportable:
@@ -1168,8 +1173,6 @@
 		HP: 5000
 		Shape: Circle
 			Radius: 128
-	Armor:
-		Type: InfantryArmor
 	Mobile:
 		Voice: Move
 		Speed: 60
@@ -1190,20 +1193,41 @@
 				PathingCost: 300
 			Veins: 80
 		TunnelCondition: inside-tunnel
+	Selectable:
+		Bounds: 22,30,0,-10
 	SelectionDecorations:
 		Palette: pips
 	RenderSprites:
 		Scale: 0.95
-	Selectable:
-		Bounds: 22,30,0,-10
 	Voiced:
 		VoiceSet: Infantry
-	IgnoresDisguise:
 	Targetable:
-		TargetTypes: Ground, Infantry
-		RequiresCondition: !ToxinTrooper || !inside-tunnel
+		TargetTypes: Ground, Infantry, DetonateAttack
+		RequiresCondition: !inside-tunnel
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
 	QuantizeFacingsFromSequence:
 		Sequence: stand
+	SpawnActorOnDeath@FLAMEGUY:
+		Actor: FLAMEGUY
+		DeathType: FireDeath
+	SpawnActorOnDeath@FLAMEGUY2:
+		Actor: FLAMEGUY
+		DeathType: MilitantFireDeath
+	SpawnActorOnDeath@tiberium:
+		Actor: inftibspawn
+		Probability: 25
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeath
+		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@conversion:
+		Actor: worker
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeath
+		RequiresLobbyCreeps: false
 	WithInfantryBody:
 	WithDeathAnimation@normal:
 		DeathTypes:
@@ -1240,60 +1264,13 @@
 			SmallExplosionDeath: body1, body2, body3, body4, body5
 			EnergyDeath: body1, body2, body3, body4, body5
 			ExplosionDeath: body1, body2, body3, body4, body5
-	AutoTarget:
-	AttackMove:
-		Voice: Move
-	Passenger:
-		CargoType: Infantry
-		Voice: Move
-	HiddenUnderFog:
-	ActorLostNotification:
-	Crushable:
-		WarnProbability: 0
-		CrushSound: squish6.aud
-	DamagedByTerrain:
-		Damage: 200
-		DamageInterval: 25
-		Terrain: Tiberium, BlueTiberium
-		DamageTypes: TiberiumDeath
-	SpawnActorOnDeath@FLAMEGUY:
-		Actor: FLAMEGUY
-		DeathType: FireDeath
-	SpawnActorOnDeath@FLAMEGUY2:
-		Actor: FLAMEGUY
-		DeathType: MilitantFireDeath
-	SpawnActorOnDeath@tiberium:
-		Actor: inftibspawn
-		Probability: 25
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		DeathType: TiberiumDeath
-		RequiresLobbyCreeps: true
-	SpawnActorOnDeath@conversion:
-		Actor: worker
-		Probability: 100
-		OwnerType: Killer
-		DeathType: CabalDeath
-		RequiresLobbyCreeps: false
-	Guard:
-		Voice: Move
-	Guardable:
-	DeathSounds@NORMAL:
-		DeathTypes: BulletDeath, SmallExplosionDeath, ExplosionDeath, CabalDeath, CabalDeathCrate, BlackHandRfle, HeadshotDeath, SmallExplosionDeath, TiberiumDeath
-	DeathSounds@BURNED:
-		Voice: Burned
-		DeathTypes: FireDeath
-	DeathSounds@ZAPPED:
-		Voice: Zapped
-		DeathTypes: EnergyDeath
-	EditorTilesetFilter:
-		Categories: Infantry
+	WithTextControlGroupDecoration:
 
 ^Soldier:
-	Inherits: ^Infantry
-	Inherits@1: ^Academy
-	Inherits@2: ^AutoTargetGroundAssaultMove
-	Inherits@3: ^5CellVision
+	Inherits@1: ^Infantry
+	Inherits@2: ^Cloakable
+	Inherits@4: ^AutoTargetGroundAssaultMove
+	Inherits@5: ^5CellVision
 	MustBeDestroyed:
 	TakeCover:
 		DamageModifiers:
@@ -1315,29 +1292,12 @@
 
 ^Mutant:
 	Inherits: ^Soldier
-	Targetable@Mutant:
-		TargetTypes: Mutant
+    Inherits@1: ^HealsOnTiberium
 	-DamagedByTerrain:
-	GrantConditionOnTerrain@Tib:
-		Condition: TiberiumHealing
-		TerrainTypes: Tiberium, BlueTiberium
-	Mobile:
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 50
-			BlueTiberium: 70
-				PathingCost: 50
-	SelfHealing@Tib:
-		PercentageStep: 1
-		Step: 200
-		Delay: 100
-		DamageCooldown: 0
-		HealIfBelow: 105
-		RequiresCondition: TiberiumHealing
 
 ^Beast:
-	Inherits: ^Mutant
-	-TakeCover:
+	Inherits: ^Soldier
+    Inherits@1: ^HealsOnTiberium
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -1348,10 +1308,39 @@
 		DeathTypes:
 			TiberiumDeath: 1, 2
 			EnergyDeath: 1, 2
+	-TakeCover:
 	-WithDeathAnimation@body:
 	-WithDeathAnimation@tib:
 	-SpawnActorOnDeath@FLAMEGUY:
 	-SpawnActorOnDeath@FLAMEGUY2:
+	Armor:
+		Type: VehicleArmor
+	Targetable:
+		TargetTypes: Ground, Vehicle
+	Crushable:
+		CrushClasses: vehicle
+	Voiced:
+		VoiceSet: Fiend
+	AttackFrontal:
+	Passenger:
+		CargoType: Vehicle
+		Voice: Move
+		Weight: 3
+	Mobile:
+		SharesCell: false
+		-RequiresCondition: !WebDisable
+ 	-WithColoredOverlay@WebDisable:
+	-TimedConditionBar@WebDisable:
+	-SpeedMultiplier@WebDisable:
+	WithInfantryBody:
+		IdleSequences: idle2, idle3
+		-RequiresCondition: !WebDisable
+	-WithIdleOverlay@web:
+	-ExternalCondition@WebDisable:
+	BodyOrientation:
+		QuantizedFacings: 8
+		CameraPitch: 250
+	SelectionDecorations:
 
 ^ScrinSoldier:
 	Inherits: ^Soldier
@@ -1373,7 +1362,6 @@
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	Inherits@1: ^Academy
 	Inherits@2: ^AutoTargetGroundAssaultMove
 	Inherits@3: ^7CellVision
 	-SpawnActorOnDeath@conversion:
@@ -1409,7 +1397,6 @@
 
 ^CabalDroneInfantry:
 	Inherits@1: ^Infantry
-	Inherits@2: ^Academy
 	Inherits@3: ^AutoTargetGroundAssaultMove
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@explosion:
@@ -1420,7 +1407,8 @@
 	-DamagedByTerrain:
 	Voiced:
 		VoiceSet: Limpet
-	-Crushable:
+	Crushable:
+		CrushClasses: HeavyInfantry
 	Mobile:
 		TerrainSpeeds:
 			Tiberium: 70
@@ -1457,7 +1445,6 @@
 		HP: 4500
 	-GainsExperience:
 	-GivesExperience:
-	-ProducibleWithLevel:
 	-Passenger:
 	-DamagedByTerrain:
 	-ActorLostNotification:
@@ -1535,18 +1522,28 @@
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^VehicleShape
 	Inherits@4: ^5CellVision
-	DrawLineToTarget:
-	WithTextControlGroupDecoration:
-	GivesExperience:
-		PlayerExperienceModifier: 1
+	ActorLostNotification:
+	Armor:
+		Type: VehicleArmor
+	AttackMove:
+		Voice: Move
+	Capturable:
+		Types: Vehicle
+		CaptureThreshold: 100
+		CancelActivity: True
 	Chronoshiftable:
 		ReturnToOrigin: false
+	Crushable:
+		CrushClasses: Vehicle
+		WarnProbability: 0
+	DrawLineToTarget:
+	GivesExperience:
+		PlayerExperienceModifier: 1
+	RevealsShroud:
+		Type: CenterPosition
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
-	Crushable:
-		CrushClasses: vehicle
-		WarnProbability: 0
 	Valued:
 		Cost: 1
 	Mobile:
@@ -1572,13 +1569,6 @@
 		Bounds: 40,30
 	SelectionDecorations:
 		Palette: pips
-	WithIdleOverlay@BugPoison:
-		Sequence: cloud
-		IsPlayerPalette: true
-		Palette: cloakscrin
-		RequiresCondition: BugPoison
-	Armor:
-		Type: VehicleArmor
 	SpawnActorOnDeath@tiberium2:
 		Actor: vehicletibspawn
 		Probability: 25
@@ -1590,11 +1580,9 @@
 		Actor: SCRINESSENCESMALL
 	Voiced:
 		VoiceSet: Vehicle
+	WithTextControlGroupDecoration:
 	Targetable:
-		TargetTypes: Ground, Vehicle
-		RequiresCondition: !ToxinTrooper
-	Targetable@repair:
-		TargetTypes: repair
+		TargetTypes: Ground, Vehicle, DetonateAttack
 	Repairable:
 		RepairBuildings: gadept, scrdepot
 		Voice: Move
@@ -1603,14 +1591,7 @@
 		PipType: Blue
 		Voice: Move
 		Weight: 3
-	AttackMove:
-		Voice: Move
 	HiddenUnderFog:
-	ActorLostNotification:
-	Capturable:
-		Types: Vehicle
-		CaptureThreshold: 100
-		CancelActivity: True
 	Guard:
 		Voice: Move
 	Guardable:
@@ -1627,10 +1608,11 @@
 		Range: 2c0, 5c0
 	EditorTilesetFilter:
 		Categories: Vehicle
+	BodyOrientation:
+		QuantizedFacings: 32
 
 ^Tank:
 	Inherits: ^Vehicle
-	Inherits@1: ^Academy
 	Inherits@2: ^AutoTargetGroundAssaultMove
 	Mobile:
 		Crushes: wall, crate, infantry
@@ -1640,7 +1622,6 @@
 
 ^HoverVehicle:
 	Inherits: ^Vehicle
-	Inherits@1: ^Academy
 	Hovers:
 	Mobile:
 		TerrainSpeeds:
@@ -1668,15 +1649,25 @@
 		TerrainTypes: Water
 	ExternalCondition@hoverunitonwater:
 		Condition: hoverunitonwater
+	WithFacingSpriteBody:
 	-Explodes:
 	-SelfHealing@veinholedrain:
 	-ExternalCondition@veinholedrain:
 	-WithIdleOverlay@veinholedrain:
 	-GrantConditionOnTerrain@VEINS:
 
+^HoverTank:
+    Inherits: ^HoverVehicle
+    Inherits@1: ^AutoTargetGroundAssaultMove
+	WithSpriteTurret:
+	Turreted:
+	AttackTurreted:
+	BodyOrientation:
+		QuantizedFacings: 32
+		CameraPitch: 250
+
 ^Walker:
 	Inherits: ^Vehicle
-	Inherits@1: ^Academy
 	Inherits@2: ^AutoTargetGroundAssaultMove
 	Mobile:
 		Crushes: wall, crate, infantry
@@ -1692,8 +1683,8 @@
 			VerticalTopOffset: 500
 
 ^ScrinVehicle:
-	Inherits@1: ^ScrinReaper
-	Inherits@2: ^ScrinRender
+	Inherits@0: ^ScrinReaper
+	Inherits@1: ^ScrinRender
 	Explodes:
 		Weapon: ScrinUnitExplode
 		EmptyWeapon: ScrinUnitExplode
@@ -1713,12 +1704,75 @@
 
 ^VoxelTank:
 	Inherits: ^Tank
-	Inherits@2: ^AutoTargetGroundAssaultMove
 	BodyOrientation:
 		QuantizedFacings: 0
 		CameraPitch: 85
 	RenderVoxels:
 	WithVoxelBody:
+
+^SubterraneanVoxelVehicle:
+    Inherits: ^VoxelVehicle
+	Mobile:
+		TurnSpeed: 6
+		Speed: 90
+		Crushes: wall, crate, infantry
+		RequiresCondition: !empdisable
+		Subterranean: true
+		SubterraneanCondition: submerged
+		SubterraneanTransitionTerrainTypes: Clear, Ice, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
+		SubterraneanTransitionCost: 0#-2147483647
+		SubterraneanTransitionSound: subdril1.aud
+		SubterraneanTransitionImage: dig
+		SubterraneanTransitionSequence: idle
+		SubterraneanTransitionOnRamps: True
+		TerrainSpeeds:
+			Clear: 100
+				PathingCost: 150
+			Ice: 100
+				PathingCost: 150               
+			Road: 120
+				PathingCost: 150
+			Rail: 100
+				PathingCost: 150
+			DirtRoad: 110
+				PathingCost: 150
+			Rough: 80
+				PathingCost: 150
+			Bridge: 120
+				PathingCost: 150
+			Tiberium: 70
+				PathingCost: 300
+			BlueTiberium: 70
+				PathingCost: 300
+			Veins: 80
+				PathingCost: 150
+			Subterranean: 70
+	RevealsShroud:
+		Range: 3c0
+		RequiresCondition: !inside-tunnel && !submerged
+	SelfHealing@veinholedrain:
+		RequiresCondition: veinholedrain && !submerged
+	WithIdleOverlay@veinholedrain:
+		RequiresCondition: veinholedrain && !submerged
+	Cloak@cloakgenerator:
+		RequiresCondition: submerged
+		InitialDelay: 25
+		CloakDelay: 25
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	RejectsOrders@subterranean:
+		RequiresCondition: submerged
+		Except: Stop
+	WithVoxelBody:
+		RequiresCondition: !submerged
+	Targetable:
+		RequiresCondition: !inside-tunnel && !submerged
+	-GrantConditionOnDamageState@smoke:
+	-SmokeParticleEmitter:
+	-ExternalCondition@smoketrail:
+	AnnounceOnSeen@subterranean:
+		Notification: SubterraneanUnitDetected
+		PingRadar: True
 
 ^CivilianVoxelVehicle:
 	Inherits: ^VoxelVehicle
@@ -1728,15 +1782,17 @@
 
 ^Aircraft:
 	Inherits@0: ^GainsExperience
-	Inherits@1: ^Academy
 	Inherits@2: ^AircraftEffects
 	Inherits@3: ^ExistsInWorld
 	Inherits@4: ^VehicleShape
 	Inherits@5: ^10CellVision
+	Inherits@6: ^Cloakable
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	AppearsOnRadar:
 		UseLocation: yes
+	RevealsShroud:
+		Type: CenterPosition
 	Targetable@GROUND:
 		TargetTypes: Vehicle, Ground, LandedAircraft
 		RequiresCondition: !airborne
@@ -1781,17 +1837,8 @@
 	WithVoxelBody:
 	EditorTilesetFilter:
 		Categories: Aircraft
-	AmmoPool:
-		Ammo: 8
-	ReloadAmmoPool@AIReload:
-		AmmoPool: primary
-		RequiresCondition: AIReload
-		Count: 20
-	GrantConditionOnPrerequisite@AIReload:
-		Condition: AIReload
-		Prerequisites: AIReload
-	ExternalCondition@AIReload:
-		Condition: AIReload
+	Hovers@CRUISING:
+		RequiresCondition: cruising
 
 ^AircraftShadow:
 	WithShadow:
@@ -1813,8 +1860,10 @@
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Helicopter
 		RequiresCondition: airborne
-	Hovers@CRUISING:
-		RequiresCondition: cruising
+
+^CombatHelicopter:
+	Inherits: ^Helicopter
+	Inherits@0: ^GainsExperience
 
 ^Plane:
 	Inherits: ^Aircraft
@@ -1822,6 +1871,10 @@
 	Aircraft:
 		LandWhenIdle: False
 	ReturnOnIdle:
+
+^CombatPlane:
+    Inherits: ^Plane
+    Inherits@0: ^GainsExperience
 
 ^AircraftHusk:
 	Inherits: ^SpriteActor
@@ -2028,8 +2081,6 @@
 	DrawLineToTarget:
 	Armor:
 		Type: VehicleArmor
-	SelfHealing@scloud:
-		PercentageStep: -3
 	Building:
 		Dimensions: 1,1
 		Footprint: x

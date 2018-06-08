@@ -270,9 +270,9 @@ SonicZap:
 	Inherits@2: ^Large_Clsn
 	ReloadDelay: 80
 	Range: 6c0
-	Report: 120mmf.aud
+	Report: tankmediumfire.wav
 	Burst: 2
-	BurstDelays: 5
+	BurstDelays: 8
 	Projectile: BulletAS
 		Speed: 682
 		Image: 120mm

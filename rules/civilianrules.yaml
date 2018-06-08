@@ -25,8 +25,6 @@ GHOST:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Condition
 
 WEEDGUY:
 	Inherits: ^Soldier
@@ -67,8 +65,6 @@ UMAGON:
 		PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 CHAMSPY:
 	Inherits: ^Soldier
@@ -119,8 +115,6 @@ MUTANT:
 		PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 MWMN:
 	Inherits: ^Mutant
@@ -141,8 +135,6 @@ MWMN:
 		PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 MUTANT3:
 	Inherits: ^Mutant
@@ -163,8 +155,6 @@ MUTANT3:
 		PauseOnCondition: WebDisable
 	WithInfantryBody:
 		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 TRATOS:
 	Inherits: ^Mutant
@@ -232,7 +222,6 @@ DOGGIE:
 		Type: InfantryArmor
 	-RevealsShroud:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	Mobile:
 		Speed: 120
 		Crushes: nada
@@ -341,7 +330,6 @@ ZOMBIE:
 	Tooltip:
 		Name: Haunt
 	-GainsExperience:
-	-ProducibleWithLevel:
 	Health:
 		HP: 7500
 		Shape: Circle
@@ -383,7 +371,6 @@ BERSERKER:
 	Tooltip:
 		Name: Berserker
 	-GainsExperience:
-	-ProducibleWithLevel:
 	Health:
 		HP: 20000
 		Shape: Circle
@@ -430,7 +417,6 @@ CRAB:
 	Tooltip:
 		Name: Crab
 	-GainsExperience:
-	-ProducibleWithLevel:
 	-DamagedByRadioactivity@Default:
 	Health:
 		HP: 17000
@@ -491,6 +477,7 @@ PERMACRAB:
 
 FLOATER:
 	Inherits: ^HoverVehicle
+	Inherits@1: ^AutoTargetGroundAssaultMove
 	Tooltip:
 		Name: Floater
 	Health:
@@ -507,8 +494,7 @@ FLOATER:
 		Weapon: FloaterCloudSpawn
 	QuantizeFacingsFromSequence:
 		Sequence: stand
-	-GainsExperience:
-	-ProducibleWithLevel:
+	-WithFacingSpriteBody:
 	WithSpriteBody:
 	Mobile:
 		Speed: 100
@@ -550,7 +536,6 @@ CIV1:
 
 CIV2:
 	Inherits: ^CivilianInfantry
-	-AutoTarget:
 
 CIV3:
 	Inherits: ^CivilianInfantry
@@ -585,7 +570,6 @@ CIV3:
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
-	AutoTarget:
 	SelfHealing:
 		PercentageStep: 1
 		Step: 0
@@ -647,7 +631,7 @@ ICBM:
 		Voice: Move
 
 WEED:
-	Inherits: ^VoxelTank
+	Inherits: ^VoxelVehicle
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -668,18 +652,12 @@ WEED:
 		TurnSpeed: 5
 	Health:
 		HP: 600
-	SelfHealing:
-		Delay: 10
-		HealIfBelow: 50
-		DamageCooldown: 200
 	Armor:
-		Type: BuildingArmor
+		Type: VehicleArmor
 	RevealsShroud:
 		Range: 4c0
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	-GainsExperience:
-	-ProducibleWithLevel:
 
 BUS:
 	Inherits: ^CivilianVoxelVehicle
@@ -882,6 +860,7 @@ ABAN01:
 	ThrowsShrapnel@LARGE:
 		Pieces: 2, 4
 		Weapons: LargeDebris
+
 ABAN02:
 	Inherits: ^CivBuilding
 	Inherits@SHAPE: ^5x3Shape
@@ -1635,7 +1614,7 @@ CAARMR:
 		Cursor: emp
 		MaximumFiringInstances: 1000
 		ArmamentName: primary
-		Icon: emp
+		Icon: veterancyicon
 		ChargeInterval: 3000
 		Description: Veterancy
 		LongDesc: Adds an extra level of experience to the selected units (1 range radius), does not affect aircraft
@@ -2476,7 +2455,7 @@ MACHINESHOP:
 	ProvidesPrerequisite@buildingname:
 
 BLOODDERRICK:
-	Inherits: ^TechBuilding
+	Inherits: ^CivBuilding
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^3x3Shape
 	Tooltip:
@@ -2492,23 +2471,11 @@ BLOODDERRICK:
 		Weapon: TiberiumExplosion
 	RenderSprites:
 		PlayerPalette: playerscrin
-	WithDeathAnimation:
-		DeathSequencePalette: playerscrin
-		CrushedSequencePalette: playerscrin
-		CrushedPaletteIsPlayerPalette: true
 	SelectionDecorations:
 		VisualBounds: 102, 60, 0, 0
-	AttackOmni:
-	WithAttackAnimation:
-		AttackSequence: move
 	WithRangeCircle:
 		Range: 12c0
 		Type: Bounty
-	RejectsOrders:
-	Armament:
-		Weapon: DerrickAnimation
-		TargetStances: Ally, Enemy, Neutral
-	AutoTarget:
 	SpawnActorOnDeath@1:
 		Actor: permacrab
 		Probability: 100
@@ -2569,8 +2536,6 @@ BLOODDERRICK:
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		Offset: 1,1
-	-ExternalCapturable:
-	-ExternalCapturableBar:
 
 NEUTRALRADAR:
 	Inherits: ^TechBuilding

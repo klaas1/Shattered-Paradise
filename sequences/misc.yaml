@@ -540,6 +540,7 @@ icon:
 	hunterseeker: detnicon
 	ScrStasis: scrshieldicon
 	mothershipicon: councilicon
+    veterancyicon: veterancysupportpowericon
 
 clustermissile:
 	up: atnukemini

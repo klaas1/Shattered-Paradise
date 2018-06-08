@@ -1,22 +1,3 @@
-^DUMMYSTRUCTURE:
-	Inherits: ^BasicBuilding
-	-Targetable:
-	-WithSpriteBody:
-	-Explodes:
-	-ShakeOnDeath:
-	-UpdatesPlayerStatistics:
-	-SoundOnDamageTransition:
-	RevealsShroud:
-		Range: 3c0
-		Type: CenterPosition
-	-SelectionDecorations:
-	-Selectable:
-	AlwaysVisible:
-	-FrozenUnderFog:
-	RenderSprites:
-		Image: blackhanddummy
-	Interactable:
-
 ^DUMMYAIRCRAFT:
 	Inherits: ^SpriteActor
 	Inherits@2: ^1x1Shape
@@ -35,6 +16,7 @@
 		TakeOffOnResupply: true
 		VTOL: true
 	HiddenUnderFog:
+		Type: CenterPosition
 	Interactable:
 	Armor:
 		Type: Wood
@@ -54,28 +36,6 @@ VISIONACTOR:
 		Step: -10
 		Delay: 10
 		HealIfBelow: 200
-
-SHAKYSHAKY:
-	Inherits: ^DUMMYAIRCRAFT
-	ShakeOnDeath:
-	RevealsShroud:
-		Range: 3c0
-	Health:
-		HP: 10
-	SelfHealing:
-		Step: -10
-		Delay: 10
-		HealIfBelow: 200
-
-SHAKYSHAKYMINI:
-	Inherits: SHAKYSHAKY
-	ShakeOnDeath:
-		Intensity: 2
-
-SHAKYSHAKYMINIMINI:
-	Inherits: SHAKYSHAKY
-	ShakeOnDeath:
-		Intensity: 1
 
 IONBEAMTARGET:
 	Inherits: ^DUMMYAIRCRAFT
@@ -386,7 +346,6 @@ VEINHOLESPAWNERDUMMY:
 	-UpdatesPlayerStatistics:
 	-SelectionDecorations:
 	-Selectable:
-	-AutoTarget:
 	-ActorLostNotification:
 	RenderSprites:
 		Image: blackhanddummy

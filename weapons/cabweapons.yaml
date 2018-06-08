@@ -453,10 +453,8 @@ DevourerGrinder:
 		Spread: 90
 		Damage: 9000
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
-	Warhead@5Actor: SpawnActor
-		Actors: SHAKYSHAKYMINI
-		FallRate: 5000
-		Range: 6
+	Warhead@Shake: ScreenShaker
+		Intensity: 2
 
 DevourerExplo:
 	ReloadDelay: 25

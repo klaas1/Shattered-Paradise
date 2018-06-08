@@ -830,89 +830,34 @@ MUTSW2:
 		Palette: apolbluealpha60
 
 drached:
-	Inherits: ^Building
+	Inherits: GACNST
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
-	Inherits@4: ^3x3Shape
 	Tooltip:
 		Name: Deployed Host Station
-		Description: Builds base structures.
-	Building:
-		Footprint: xxx xxx xxx
-		BuildSounds: facbld1.aud
-		Dimensions: 3,3
-	Health:
-		HP: 300000
-	Production:
-		Produces: Building,Defense
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 1000
-		Prerequisites: ~disabled
-	Valued:
-		Cost: 1500
-	BaseBuilding:
 	Transforms:
 		IntoActor: drache
 		Offset: 1,1
 		Facing: 96
 		DeployCursor: undeploy
-	BaseProvider:
-		Range: 20c0
-	Targetable:
-		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, MindControlInmune
-	Power:
-		Amount: 0
-	RenderSprites:
 	Selectable:
 		Bounds: 144, 60, 0, -6
 		DecorationBounds: 144, 80, 0, -12
-	ProductionBar@Building:
-		ProductionType: Building
-	ProductionBar@Defense:
-		ProductionType: Defense
-	ProvidesPrerequisite@scr:
-		Factions: gdi, nod, cab, mut, scr
-		Prerequisite: structures.scr
 	ProvidesPrerequisite@12321:
 		Prerequisite: scrinstuff
 		Factions: scr
 		ResetOnOwnerChange: True
 	SelectionDecorations:
-	ProvidesAIPrerequisite@AImoney:
-		Prerequisite: AImoney
-	GrantConditionOnPrerequisite@AImoney:
-		Condition: money
-		Prerequisites: AImoney
-	CashTrickler@AImoney:
-		Interval: 1000
-		Amount: 600
-		ShowTicks: False
-		RequiresCondition: money
-	RequiresBuildableArea:
-		AreaTypes: building
-	EmitInfantryOnSell@snowflake:
-		ActorTypes: shapeshifter
-	EmitInfantryOnSell@gdi:
-		ValuePercent: 15
-		ActorTypes: gdie1
-		Factions: gdi
-	EmitInfantryOnSell@nod:
-		ValuePercent: 15
-		ActorTypes: altnode1
-		Factions: nod
-	EmitInfantryOnSell@cab:
-		ValuePercent: 15
-		ActorTypes: worker
-		Factions: cab
-	EmitInfantryOnSell@mut:
-		ValuePercent: 15
-		ActorTypes: marauder
-		Factions: mut
-	EmitInfantryOnSell@scr:
-		ValuePercent: 15
-		ActorTypes: shark
-		Factions: scr
+	-WithIdleOverlay@TOP:
+	-WithIdleOverlay@SIDE:
+	-WithIdleOverlay@FRONT:
+	-WithBuildingPlacedOverlay:
+	ProvidesPrerequisite@faction:
+		Prerequisite: structures.scr
+	ProvidesPrerequisite@grantself:
+		Factions: gdi, nod, cab, mut, scr
+	-EmitInfantryOnSell@humanengie:
+	-EmitInfantryOnSell@mutengie:
 
 SCRPOWR:
 	Inherits: ^Building
@@ -1104,8 +1049,6 @@ SCRAIR:
 		Sequence: idle-platform
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-	Power:
-		Amount: -10
 	Selectable:
 		Bounds: 120, 130, 0, -40
 		DecorationBounds: 120, 130, 0, -40
@@ -1391,8 +1334,6 @@ CABAIR:
 	Reservable:
 	RepairsUnits:
 	ProductionBar:
-	Power:
-		Amount: -10
 	Selectable:
 		Bounds: 88, 66, 0, -5
 		DecorationBounds: 88, 66, 0, -5

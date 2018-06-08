@@ -1,5 +1,5 @@
 CLOUD1:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	-Selectable:
 	-SelectionDecorations:
@@ -35,7 +35,7 @@ CLOUD1:
 		DeathPaletteIsPlayerPalette: false
 	RejectsOrders:
 	Cloak@CLOAKGENERATOR:
-		RequiresCondition: HolaSoyVinceConSlapShopMiraLaPapaUnCorteNoSePuedeCortar
+		-RequiresCondition: HolaSoyVinceConSlapShopMiraLaPapaUnCorteNoSePuedeCortar
 	RenderSprites:
 		Image: cloud1
 		Palette: effectalpha
@@ -50,25 +50,17 @@ CLOUD1:
 		Weapon: CloudDamage
 	-GrantConditionOnDamageState@smoke:
 	-SmokeParticleEmitter:
-	-ExternalCondition@smoketrail:
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 	-WithIdleOverlay@shield:
-	-ExternalCondition@VanguardShield:
-	-ExternalCondition@BreakShield:
 	-Targetable@Shield:
 	-DamageMultiplier@Boarded6:
 	-SelfHealing@KillShieldedUnit:
-	-ExternalCondition@KillShieldedUnit:
 	Interactable:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	-GrantConditionOnDamageState@spawnsparks:
 	-ExplodeWeapon@spawnsparks:
-	-ExternalCondition@spawnsparks:
 
 ORCA:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^BasicStealthDetection
 	Inherits@3: ^11CellVision
@@ -118,7 +110,7 @@ ORCA:
 		Actor: ORCA.Husk
 
 ORCAB:
-	Inherits: ^Plane
+	Inherits: ^CombatPlane
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -167,7 +159,7 @@ ORCAB:
 		Actor: ORCAB.Husk
 
 GUARDIAN:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@3: ^BasicStealthDetection
 	Inherits@4: ^PermanentSelfHeal
@@ -192,11 +184,6 @@ GUARDIAN:
 	AttackHeli:
 		FacingTolerance: 64
 		Voice: Attack
-	AmmoPool:
-		Ammo: 10
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:
 	-WithVoxelBody:
@@ -220,11 +207,9 @@ GUARDIAN:
 	Transforms:
 		IntoActor: guardiandep
 		Voice: Action1
-	ReloadAmmoPool@1:
-		Delay: 20
 
 DPOD:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Valued:
 		Cost: 10
 	Tooltip:
@@ -247,6 +232,7 @@ DPOD:
 	Armament:
 		Weapon: Vulcan2
 		PauseOnCondition: !ammo
+    RenderSprites:
 	AttackHeli:
 		Voice: Attack
 	AmmoPool:
@@ -258,7 +244,7 @@ DPOD:
 	AutoTarget:
 
 DSHP:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -284,8 +270,6 @@ DSHP:
 		UnloadVoice: Move
 	SpawnActorOnDeath:
 		Actor: DSHP.Husk
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 	RenderSprites:
 	RenderVoxels:
 		Scale: 20
@@ -303,7 +287,7 @@ DSHP:
 		Bounds: 1,1
 
 ORCATRAN:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^6CellVision
 	Valued:
 		Cost: 1200
@@ -329,16 +313,14 @@ ORCATRAN:
 		UnloadVoice: Move
 	SpawnActorOnDeath:
 		Actor: ORCATRAN.Husk
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 APACHE:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^BasicStealthDetection
 	Inherits@3: ^11CellVision
+    Inherits@4: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 1000
@@ -393,8 +375,9 @@ APACHE:
 		Actor: APACHE.Husk
 
 SCRIN:
-	Inherits: ^Plane
+	Inherits: ^CombatPlane
 	Inherits@1: ^AutoTargetAllAssaultMove
+    Inherits@2: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 1500
@@ -446,7 +429,7 @@ SCRIN:
 		Actor: SCRIN.Husk
 
 CERBERUS:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -497,21 +480,18 @@ CERBERUS:
 		DisableSound: cloak5.aud
 		AffectsParent: False
 	-Cloak@CLOAKGENERATOR:
-	-ExternalCondition@CLOAKGENERATOR:
-	-ExternalCondition@crate-cloak:
 	WithRangeCircle:
 		Range: 4c0
 		Type: cloakgenerator
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 
 MUTHELI:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^Ra2vxl
 	Inherits@2: ^AutoTargetAllAssaultMove
 	Inherits@3: ^BasicStealthDetection
 	Inherits@4: ^MutRender
 	Inherits@5: ^11CellVision
+    Inherits@6: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 1000
@@ -572,9 +552,10 @@ MUTHELI:
 		Actor: MUTHELI.Husk
 
 WETP:
-	Inherits: ^Plane
+	Inherits: ^CombatPlane
 	Inherits@1: ^Ra2vxl
 	Inherits@2: ^AutoTargetAllAssaultMove
+    Inherits@3: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 2000
@@ -627,7 +608,7 @@ WETP:
 		Range: 3c0
 
 MUTQUEEN:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^SpriteActor
 	Inherits@2: ^MutRender
 	Inherits@3: ^AutoTargetAllAssaultMove
@@ -674,9 +655,6 @@ MUTQUEEN:
 		FacingTolerance: 20
 	Armament@1:
 		Weapon: QueenShard
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
-	-ExternalCondition@AIReload:
 	-GrantConditionOnDamageState@spawnsparks:
 	-ExplodeWeapon@spawnsparks:
 	-ExternalCondition@spawnsparks:
@@ -691,7 +669,7 @@ MUTBIRD:
 	-Buildable:
 
 STORMRIDER:
-	Inherits: ^Plane
+	Inherits: ^CombatPlane
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@3: ^11CellVision
 	Inherits@Shadow: ^AircraftShadow
@@ -734,11 +712,9 @@ STORMRIDER:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:
 
-drache:
-	Inherits: ^Helicopter
+DRACHE:
+	Inherits: ^CombatHelicopter
 	Inherits@5: ^6CellVision
 	Inherits@2: ^ScrinRender
 	Inherits@Shadow: ^AircraftShadow
@@ -785,16 +761,13 @@ drache:
 	-WithVoxelBody:
 	SpawnActorOnDeath:
 		Actor: DRACHE.Husk
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
 	-GainsExperience:
-	-ProducibleWithLevel:
 
 SCRGLYDER1:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
 	Inherits@Shadow: ^AircraftShadow
@@ -834,11 +807,9 @@ SCRGLYDER1:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:
 
 SCRDESTROYER:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
 	Inherits@5: ^7CellVision
@@ -883,11 +854,9 @@ SCRDESTROYER:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:
 
 SCRTRANS:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^9CellVision
 	Inherits@2: ^ScrinRender
 	Inherits@Shadow: ^AircraftShadow
@@ -928,16 +897,13 @@ SCRTRANS:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
 		Actor: SCRTRANS.Husk
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
 
 SCRINCOUNCIL:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@2: ^ScrinRender
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -978,10 +944,7 @@ SCRINCOUNCIL:
 	-WithVoxelBody:
 	SpawnActorOnDeath:
 		Actor: SCRCOUNCIL.Husk
-	-ReloadAmmoPool@AIReload:
-	-AmmoPool:
 	-GainsExperience:
-	-ProducibleWithLevel:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
@@ -989,7 +952,7 @@ SCRINCOUNCIL:
 		Prerequisite: scrweap
 
 SCRCARRIER:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
 	Inherits@4: ^BasicStealthDetection
@@ -1041,8 +1004,6 @@ SCRCARRIER:
 	SmokeParticleEmitter:
 		Image: scrsmoke
 		Palette: apolbluealpha60
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:
 
 STORMRIDERSPAWN:
 	Inherits: STORMRIDER
@@ -1124,7 +1085,7 @@ CABDRONEJET:
 	-SelectionDecorations:
 
 SCRBATTLESHIP:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
 	Inherits@5: ^PermanentSelfHeal
@@ -1162,8 +1123,6 @@ SCRBATTLESHIP:
 	AutoTarget:
 	-RenderVoxels:
 	-WithVoxelBody:
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:
 	RenderSprites:
 	WithFacingSpriteBody:
 	BodyOrientation:
@@ -1175,7 +1134,7 @@ SCRBATTLESHIP:
 		Palette: apolbluealpha60
 
 WASP:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^BasicStealthDetection
 	Inherits@4: ^11CellVision
@@ -1224,8 +1183,6 @@ WASP:
 		FacingTolerance: 20
 		Voice: Attack
 	AutoTarget:
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:
 	-RenderVoxels:
 	-WithVoxelBody:
 	RenderSprites:
@@ -1236,7 +1193,7 @@ WASP:
 		Actor: WASP.Husk
 
 FIREFLY:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@5: ^CabRender
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -1271,14 +1228,9 @@ FIREFLY:
 	SpawnActorOnDeath:
 		Actor: FIREFLY.Husk
 	-GainsExperience:
-	-ProducibleWithLevel:
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:
-	-GrantConditionOnPrerequisite@AIReload:
-	-ExternalCondition@AIReload:
 
 BASILISK:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^Ra2vxl
 	Inherits@4: ^CabRender
@@ -1312,14 +1264,12 @@ BASILISK:
 	RenderSprites:
 	-RenderVoxels:
 	-WithVoxelBody:
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:
 	WithFacingSpriteBody:
 	SpawnActorOnDeath:
 		Actor: BASILISK.Husk
 
 DEVOURER:
-	Inherits: ^Helicopter
+	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^PermanentSelfHeal
 	Inherits@5: ^CabRender
@@ -1373,5 +1323,3 @@ DEVOURER:
 		Actor: DEVOURER.Husk
 	ExternalCondition@DevoBuff:
 		Condition: DevoBuff
-	-AmmoPool:
-	-ReloadAmmoPool@AIReload:

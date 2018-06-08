@@ -384,8 +384,8 @@ StormRiderBlast:
 	Projectile: Missile
 		TerrainHeightAware: True
 		CruiseAltitude: 4000
-		MinimumLaunchAngle: 300
-		MaximumLaunchAngle: 300
+		MinimumLaunchAngle: 255
+		MaximumLaunchAngle: 255
 		MaximumLaunchSpeed: 0c543
 		MinimumLaunchSpeed: 0c301
 		Blockable: false
@@ -497,7 +497,6 @@ DestroyerCannon:
 	MinRange: 4c0
 	Report: devourerlasor0000.wav, devourerlasor0001.wav, devourerlasor0002.wav
 	Burst: 1
-	Inaccuracy: 2c0
 	BurstDelays: 5
 	Projectile: BulletAS
 		Speed: 300

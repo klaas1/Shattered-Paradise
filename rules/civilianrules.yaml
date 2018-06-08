@@ -860,6 +860,7 @@ ABAN01:
 	ThrowsShrapnel@LARGE:
 		Pieces: 2, 4
 		Weapons: LargeDebris
+
 ABAN02:
 	Inherits: ^CivBuilding
 	Inherits@SHAPE: ^5x3Shape

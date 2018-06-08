@@ -272,7 +272,7 @@ SonicZap:
 	Range: 6c0
 	Report: tankmediumfire.wav
 	Burst: 2
-	BurstDelays: 5
+	BurstDelays: 8
 	Projectile: BulletAS
 		Speed: 682
 		Image: 120mm

@@ -194,7 +194,7 @@ ChromeLayout:
 	common|chrome/ingame-infoobjectives.yaml
 	common|chrome/ingame-infostats.yaml
 	sp|chrome/ingame-observer.yaml
-	ts|chrome/ingame-observerstats.yaml
+	sp|chrome/ingame-observerstats.yaml
 	sp|chrome/ingame-player.yaml #The only file of chromes that is on SP
 	common|chrome/ingame-perf.yaml
 	ts|chrome/ingame-debug.yaml

@@ -5,23 +5,23 @@ Background@INGAME_OBSERVERSTATS_BG:
 		StatisticsProductionKey: StatisticsProduction
 		StatisticsCombatKey: StatisticsCombat
 		StatisticsGraphKey: StatisticsGraph
-	X: 25
-	Y: 50
-	Width: 1025
-	Height: 500
-	Background: dialog
+	X: (WINDOW_RIGHT - WIDTH) / 2
+	Y: (WINDOW_BOTTOM - HEIGHT)
+	Width: 1005
+	Height: 250
 	Children:
-		Container@BACKGROUND:
+		Background@BACKGROUND:
 			Width: PARENT_RIGHT
+			Background: panel-black
 			Height: PARENT_BOTTOM - 35
 			Children:
 				Label@TITLE:
 					X: 0
-					Y: 15
+					Y: 0 + 20
 					Width: PARENT_RIGHT
-					Height: 25
-					Font: Bold
+					Font: BigBold
 					Align: Center
+					Contrast: True
 					Text: Statistics
 				DropDownButton@STATS_DROPDOWN:
 					X: PARENT_RIGHT - 200
@@ -38,35 +38,35 @@ Background@INGAME_OBSERVERSTATS_BG:
 					Height: PARENT_BOTTOM
 					Children:
 						Label@PLAYER_HEADER:
-							X: 85
+							X: 75
 							Y: 40
 							Width: 160
 							Height: 25
 							Font: Bold
 							Text: Player
 						Label@CASH_HEADER:
-							X: 245
+							X: 235
 							Y: 40
 							Width: 80
 							Height: 25
 							Font: Bold
 							Text: Cash
 						Label@EARNED_MIN_HEADER:
-							X: 325
+							X: 315
 							Y: 40
 							Width: 60
 							Height: 25
 							Font: Bold
 							Text: Earned/min
 						Label@POWER_HEADER:
-							X: 425
+							X: 415
 							Y: 40
-							Width: 60
+							Width: 80
 							Height: 25
 							Font: Bold
 							Text: Power
 						Label@KILLS_HEADER:
-							X: 485
+							X: 475
 							Y: 40
 							Width: 60
 							Height: 25
@@ -74,7 +74,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Text: Kills
 							Align: Right
 						Label@DEATHS_HEADER:
-							X: 545
+							X: 535
 							Y: 40
 							Width: 60
 							Height: 25
@@ -82,7 +82,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Text: Deaths
 							Align: Right
 						Label@ASSETS_DESTROYED_HEADER:
-							X: 605
+							X: 595
 							Y: 40
 							Width: 80
 							Height: 25
@@ -90,7 +90,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Text: Destroyed
 							Align: Right
 						Label@ASSETS_LOST_HEADER:
-							X: 685
+							X: 675
 							Y: 40
 							Width: 80
 							Height: 25
@@ -98,15 +98,15 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Text: Lost
 							Align: Right
 						Label@EXPERIENCE_HEADER:
-							X: 765
+							X: 755
 							Y: 40
-							Width: 95
+							Width: 94
 							Height: 25
 							Font: Bold
 							Text: Score
 							Align: Right
 						Label@ACTIONS_MIN_HEADER:
-							X: 860
+							X: 850
 							Y: 40
 							Width: 90
 							Height: 25
@@ -120,56 +120,56 @@ Background@INGAME_OBSERVERSTATS_BG:
 					Height: PARENT_BOTTOM
 					Children:
 						Label@PLAYER_HEADER:
-							X: 85
+							X: 75
 							Y: 40
 							Width: 160
 							Height: 25
 							Font: Bold
 							Text: Player
 						Label@CASH_HEADER:
-							X: 245
+							X: 235
 							Y: 40
 							Width: 80
 							Height: 25
 							Font: Bold
 							Text: Cash
 						Label@EARNED_MIN_HEADER:
-							X: 325
+							X: 315
 							Y: 40
 							Width: 60
 							Height: 25
 							Font: Bold
 							Text: Earned/min
 						Label@EARNED_THIS_MIN_HEADER:
-							X: 425
+							X: 415
 							Y: 40
 							Width: 60
 							Height: 25
 							Font: Bold
 							Text: Earned this min
 						Label@ASSETS_HEADER:
-							X: 565
+							X: 555
 							Y: 40
 							Width: 60
 							Height: 25
 							Font: Bold
 							Text: Assets
 						Label@EARNED_HEADER:
-							X: 645
+							X: 635
 							Y: 40
 							Width: 60
 							Height: 25
 							Font: Bold
 							Text: Earned
 						Label@SPENT_HEADER:
-							X: 725
+							X: 715
 							Y: 40
 							Width: 60
 							Height: 25
 							Font: Bold
 							Text: Spent
 						Label@HARVESTERS_HEADER:
-							X: 805
+							X: 795
 							Y: 40
 							Width: 60
 							Height: 25
@@ -183,21 +183,21 @@ Background@INGAME_OBSERVERSTATS_BG:
 					Height: PARENT_BOTTOM
 					Children:
 						Label@PLAYER_HEADER:
-							X: 85
+							X: 75
 							Y: 40
 							Width: 160
 							Height: 25
 							Font: Bold
 							Text: Player
 						Label@PRODUCTION_HEADER:
-							X: 245
+							X: 235
 							Y: 40
 							Width: 320
 							Height: 25
 							Font: Bold
 							Text: Production
 						Label@SUPPORT_POWERS_HEADER:
-							X: 565
+							X: 555
 							Y: 40
 							Width: 320
 							Height: 25
@@ -210,7 +210,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 					Height: PARENT_BOTTOM
 					Children:
 						Label@PLAYER_HEADER:
-							X: 85
+							X: 75
 							Y: 40
 							Width: 160
 							Height: 25
@@ -231,7 +231,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Font: Bold
 							Text: Lost
 						Label@UNITS_KILLED_HEADER:
-							X: 425
+							X: 415
 							Y: 40
 							Width: 40
 							Height: 25
@@ -239,7 +239,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Text: Units Killed
 							Align: Right
 						Label@UNITS_DEAD_HEADER:
-							X: 525
+							X: 515
 							Y: 40
 							Width: 40
 							Height: 25
@@ -247,7 +247,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Text: Units Lost
 							Align: Right
 						Label@BUILDINGS_KILLED_HEADER:
-							X: 645
+							X: 635
 							Y: 40
 							Width: 40
 							Height: 25
@@ -255,7 +255,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Text: Bldg Killed
 							Align: Right
 						Label@BUILDINGS_DEAD_HEADER:
-							X: 745
+							X: 735
 							Y: 40
 							Width: 40
 							Height: 25
@@ -277,10 +277,10 @@ Background@INGAME_OBSERVERSTATS_BG:
 							Text: Earnings received each minute
 							Align: Center
 				ScrollPanel@PLAYER_STATS_PANEL:
-					X: 25
+					X: 15
 					Y: 70
-					Width: PARENT_RIGHT - 50
-					Height: PARENT_BOTTOM - 45 - 50
+					Width: PARENT_RIGHT - 30
+					Height: PARENT_BOTTOM - 35 - 50
 					TopBottomSpacing: 5
 					ItemSpacing: 5
 					Children:
@@ -464,14 +464,12 @@ Background@INGAME_OBSERVERSTATS_BG:
 									Y: 0
 									Width: 320
 									Height: PARENT_BOTTOM
-									ClockPalette: iconclock
 									TooltipContainer: TOOLTIP_CONTAINER
 								ObserverSupportPowerIcons@SUPPORT_POWER_ICONS:
 									X: 535
 									Y: 0
 									Width: 320
 									Height: PARENT_BOTTOM
-									ClockPalette: iconclock
 						ScrollItem@COMBAT_PLAYER_TEMPLATE:
 							X: 0
 							Y: 0
@@ -533,10 +531,10 @@ Background@INGAME_OBSERVERSTATS_BG:
 									Align: Right
 									Shadow: True
 						Container@EARNED_THIS_MIN_GRAPH_TEMPLATE:
-							X: 0
-							Y: 0
+							X: 10
+							Y: 10
 							Width: PARENT_RIGHT - 100
-							Height: PARENT_BOTTOM - 50
+							Height: PARENT_BOTTOM - 60
 							Children:
 								LineGraph@EARNED_THIS_MIN_GRAPH:
 									X: 0
@@ -553,10 +551,10 @@ Background@INGAME_OBSERVERSTATS_BG:
 									LabelFont: TinyBold
 									AxisFont: Bold
 		Button@CLOSE:
-			X: PARENT_RIGHT - 145
-			Y: PARENT_BOTTOM - 45
-			Width: 120
-			Height: 25
+			X: 15
+			Y: PARENT_BOTTOM - 235
+			Width: 140
+			Height: 30
 			Text: Close
 			Key: escape
 			Font: Bold

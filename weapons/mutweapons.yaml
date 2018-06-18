@@ -620,7 +620,7 @@ FirestormExplo:
 
 GargoylACannon:
 	Inherits: ^FullDamage
-	Inherits@2: ^Small_Clsn
+	Inherits@2: ^Tiny_Explo
 	ReloadDelay: 25
 	MinRange: 0c100
 	Range: 6c0

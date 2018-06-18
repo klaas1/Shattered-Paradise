@@ -595,7 +595,6 @@ MUTFIEND:
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
-		RequiresLobbyCreeps: true
 	WithDeathAnimation@normal:
 		DeathTypes:
 			TiberiumDeath: 1, 2
@@ -1588,16 +1587,7 @@ FLAMEGUY:
 	Mobile:
 		Speed: 75
 		SharesCell: true
-		TerrainSpeeds:
-			Clear: 45
-			Ice: 45
-			Road: 50
-			Rail: 45
-			DirtRoad: 50
-			Rough: 40
-			Tiberium: 45
-			BlueTiberium: 45
-			Veins: 25
+        Locomotor: Infantry
 	HiddenUnderFog:
 	WithInfantryBody:
 		IdleSequences: run

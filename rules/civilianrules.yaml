@@ -1609,6 +1609,8 @@ CAARMR:
 		Pieces: 3, 4
 	WithIdleOverlay:
 		Sequence: flag
+	Health:
+		HP: 56000
 	DetonateWeaponPower:
 		# AllowMultiple: True
 		Cursor: emp
@@ -1625,12 +1627,6 @@ CAARMR:
 		PauseOnCondition: disabled
 		TargetCircleRange: 1c512
 		Weapon: VeterancyWeapon
-	# Turreted:
-		# TurnSpeed: 10
-		# InitialFacing: 300
-	# AttackTurreted:
-	# Armament:
-		# Weapon: VeterancyWeapon
 
 CACRSH01:
 	Inherits: ^Decoration
@@ -2288,7 +2284,7 @@ GALITE:
 		MaxHeightDelta: 3
 	Power:
 		Amount: 0
-# TODO: should use terrain lighting instead, depends on https://github.com/OpenRA/OpenRA/issues/3605
+	# TODO: should use terrain lighting instead, depends on https://github.com/OpenRA/OpenRA/issues/3605
 	WithIdleOverlay@LIGHTING:
 		Sequence: lighting
 		Palette: alpha
@@ -2719,8 +2715,10 @@ RADIOTOWER:
 	Tooltip:
 		Name: Communications Tower
 	Health:
-		HP: 10000
+		HP: 20000
 	Armor:
 		Type: BuildingArmor
 	RenderSprites:
 		Palette: player
+    Selectable:
+        Bounds: 40,140,0,-52

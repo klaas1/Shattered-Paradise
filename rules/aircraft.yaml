@@ -50,10 +50,6 @@ CLOUD1:
 		Weapon: CloudDamage
 	-GrantConditionOnDamageState@smoke:
 	-SmokeParticleEmitter:
-	-WithIdleOverlay@shield:
-	-Targetable@Shield:
-	-DamageMultiplier@Boarded6:
-	-SelfHealing@KillShieldedUnit:
 	Interactable:
 	-GainsExperience:
 	-GrantConditionOnDamageState@spawnsparks:
@@ -721,7 +717,7 @@ DRACHE:
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 110
-		Description: Deploys into a Host Station.\n\nSpecial:\n- Provides a build radius for structures.\n- Maximun production speed is reached with 7 Conyards.\n- Max production speed reduces production time by 50%.
+		Description: Deploys into a Host Station.\n\nSpecial:\n- Provides a build radius for structures.\n- Maximun production speed is reached with 7 Conyards.\n- Max production speed reduces production time by 50%.\n- Has increased HP when deployed.
 		Prerequisites: ~scrair
 	Valued:
 		Cost: 2000
@@ -731,14 +727,14 @@ DRACHE:
 		Bounds: 100, 85, 0, -24
 		Priority: 4
 	Health:
-		HP: 100000
+		HP: 60000
 	Voiced:
 		VoiceSet: Deva
 	Targetable@MindControlInmune:
 		TargetTypes: MindControlInmune
 	Aircraft:
 		TurnSpeed: 3
-		Speed: 35
+		Speed: 60
 		MoveIntoShroud: true
 		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	MustBeDestroyed:
@@ -1075,9 +1071,10 @@ CABDRONEJET:
 		Image: cabdronejet
 	Aircraft:
 		MaximumPitch: 90
-		TurnSpeed: 20
-		Speed: 160
+		TurnSpeed: 30
+		Speed: 200
 		AirborneCondition: airborne
+		AltitudeVelocity: 600
 		MoveIntoShroud: true
 	AttackPlane:
 		AttackTurnDelay: 25

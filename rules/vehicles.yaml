@@ -290,7 +290,7 @@ G4TNK:
 		TurnSpeed: 4
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 70000
+		HP: 80000
 	Turreted:
 		TurnSpeed: 3
 		Offset: -200,0,0
@@ -445,9 +445,9 @@ BGGY:
 	RenderSprites:
 	AutoTarget:
 	WithMuzzleOverlay:
-############################################
-# Conditions
-############################################
+	############################################
+	# Conditions
+	############################################
 	Cargo:
 		MaxWeight: 1
 		PipCount: 1
@@ -486,9 +486,9 @@ BGGY:
 			bug: ifv.bug
 			colossi: ifv.colossi
 			float: ifv.float
-############################################
-# Armaments
-############################################
+	############################################
+	# Armaments
+	############################################
 	Armament:
 		Weapon: MilitantRifle
 		LocalOffset: 200,-43,200
@@ -590,9 +590,9 @@ BGGY:
 		RequiresCondition: ifv.cyc2
 	AttackTurreted:
 		PauseOnCondition: empdisable
-###################################
-# Turret Graphics
-###################################
+	###################################
+	# Turret Graphics
+	###################################
 	WithSpriteTurret@asd:
 		Sequence: turret-none
 		RequiresCondition: !loaded
@@ -644,9 +644,9 @@ BGGY:
 	WithSpriteTurret@colossi:
 		Sequence: turret-colossi
 		RequiresCondition: ifv.colossi
-############################################
-# Names
-############################################
+	############################################
+	# Names
+	############################################
 	Tooltip:
 		Name: Raider Buggy
 		RequiresCondition: !loaded
@@ -1589,7 +1589,7 @@ SCRRECHARGER:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
 		BuildAtProductionType: Tank
-		Description: Mobile shield generator.\n\nSpecial:\n- Generates shields around nearby friendly units.\n- Shields protect from all damage until the unit is hit 4 times.\n- Does not protect against super weapons.\n- Absorbs essence from killed enemies to heal.\n- Can Crush infantry.
+		Description: Mobile shield generator.\n\nSpecial:\n- Generates shields around nearby friendly units.\n- Shields protect from all damage until the unit is hit 4 times.\n- Does not protect against super weapons.\n- Absorbs essence from killed enemies to heal.\n- Can Crush infantry.\n- Cannot apply shields to aircraft.
 		Prerequisites: ~scrweap, scrdepot, scrradr
 	Mobile:
 		TurnSpeed: 8
@@ -2026,7 +2026,7 @@ PALADIN:
 		DamageCooldown: 0
 		Delay: 75
 	Health:
-		HP: 90000
+		HP: 70000
 	Voiced:
 		VoiceSet: Cyborg
 	BodyOrientation:
@@ -2065,7 +2065,6 @@ PALADIN:
 #########################################################
 # UNUSED
 #######################################################
-
 
 JUGGER:
 	Inherits: ^Walker
@@ -2152,7 +2151,7 @@ SGEN:
 	Tooltip:
 		Name: Mobile Stealth Generator
 	Mobile:
-		TurnSpeed: 6
+		TurnSpeed: 2#6
 		Speed: 90
 	RenderVoxels:
 	Health:
@@ -2171,37 +2170,37 @@ ART2:
 	RenderSprites:
 		Image: howtlizer
 
-# SCRDRONEC:
+SCRDRONEC:
 	# Inherits@1: ^AutoTargetGround
 	# Inherits@2: ^HoverVehicle
 	# Inherits: ^ScrinVehicle
 	# Valued:
-		# Cost: 950
+	# 	Cost: 950
 	# Tooltip:
-		# Name: Vanguard
+	# 	Name: Vanguard
 	# Health:
-		# HP: 25000
+	# 	HP: 25000
 	# Mobile:
-		# Speed: 80
+	# 	Speed: 80
 	# RenderSprites:
 	# -WithIdleOverlay@shield:
 	# WithFacingSpriteBody:
 	# -Cloak@CLOAKGENERATOR:
 	# BodyOrientation:
-		# QuantizedFacings: 32
+	# 	QuantizedFacings: 32
 	# -Targetable@Shield:
 	# AttackFrontal:
-		# PauseOnCondition: empdisable
+	# 	PauseOnCondition: empdisable
 	# Armament:
-		# Weapon: VanguardShrapnel
-		# TargetStances: Ally
+	# 	Weapon: VanguardShrapnel
+	# 	TargetStances: Ally
 	# ProximityExternalCondition@VanguardShield:
-		# Condition: VanguardShield
-		# Range: 3c0
-		# AffectsParent: false
+	# 	Condition: VanguardShield
+	# 	# Range: 3c0 # 2c0
+	# 	AffectsParent: false
 	# WithRangeCircle:
-		# Range: 3c0
-		# Type: VanguardShield
+	# 	Range: 3c0
+	# 	Type: VanguardShield
 	# Targetable:
-		# TargetTypes: Ground, Vehicle
+	# 	TargetTypes: Ground, Vehicle
 	# AutoTarget:

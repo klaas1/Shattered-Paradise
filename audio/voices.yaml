@@ -9,7 +9,7 @@ Infantry:
 		Move: 15-i018, 15-i024, 15-i044
 		Attack: 15-i044, 15-i050, 15-i044, 15-i046
 		Action: 15-i044, 15-i050, 15-i044, 15-i046
-#		Feedback: 15-i058, 15-i064 # TODO
+		# Feedback: 15-i058, 15-i064 # TODO
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
 		Zapped: electro1
@@ -20,7 +20,7 @@ Rocket:
 		Move: 15-i008, 15-i014, 15-i026
 		Attack: 15-i008, 15-i014, 15-i026, 15-i050, 15-i060
 		Action: 15-i008, 15-i014, 15-i026, 15-i050, 15-i060
-#		Feedback: 15-i058, 15-i064 #TODO
+		# Feedback: 15-i058, 15-i064 #TODO
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
 		Zapped: electro1
@@ -69,7 +69,7 @@ JumpJet:
 		Move: 15-i018, 15-i024, 15-i044
 		Attack: 15-i044, 15-i050, 15-i044, 15-i046
 		Action: 15-i044, 15-i050, 15-i044, 15-i046
-#		Feedback: 15-i058, 15-i064
+		# Feedback: 15-i058, 15-i064
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
 		Zapped: electro1
@@ -80,7 +80,7 @@ Weed:
 		Move: 15-i024, 15-i044
 		Attack: 15-i006, 15-i046
 		Action: 15-i006, 15-i046
-#		Feedback: 15-i058, 15-i064 # TODO
+		# Feedback: 15-i058, 15-i064 # TODO
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
 		Zapped: electro1
@@ -90,7 +90,7 @@ Spy:
 		Select: 21-i000, 21-i002, 21-i004
 		Move: 21-i010, 21-i012, 21-i016
 		Action: 21-i010, 21-i012, 21-i022
-#		Feedback: 21-i000, 21-i002 # TODO
+		# Feedback: 21-i000, 21-i002 # TODO
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
 		Zapped: electro1
@@ -326,7 +326,7 @@ Marine:
 		Move: marine0009, marine0010, marine0011, marine0012, marine0014
 		Attack: marine0001, marine0002, marine0003, marine0004
 		Action: marine0009, marine0010, marine0011, marine0012, marine0014
-#		Feedback: 15-i058, 15-i064 # TODO
+		# Feedback: 15-i058, 15-i064 # TODO
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
 		Zapped: electro1
@@ -371,7 +371,7 @@ Trike:
 		Move: trike0007, trike0008, trike0009, trike00014
 		Attack: trike0000, trike0001, trike0002, trike0003, trike0004, trike0005, trike0006
 		Action: trike0000, trike0001, trike0002, trike0003, trike0004, trike0005, trike0006
-#		Feedback: 15-i058, 15-i064 # TODO
+		# Feedback: 15-i058, 15-i064 # TODO
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
 		Zapped: electro1

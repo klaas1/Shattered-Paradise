@@ -50,7 +50,7 @@ MCV:
 		BuildPaletteOrder: 110
 		Prerequisites: ~gaweap, gadept
 		BuildAtProductionType: Tank
-		Description: Deploys into a Construction Yard.\n\nSpecial:\n- Provides a build radius for structures.\n- Can crush infantry.\n- Maximun production speed is reached with 7 Conyards.\n- Max production speed reduces production time by 50%.\n- Cannot be mindcontrolled.
+		Description: Deploys into a Construction Yard.\n\nSpecial:\n- Provides a build radius for structures.\n- Can crush infantry.\n- Maximun production speed is reached with 7 Conyards.\n- Max production speed reduces production time by 50%.\n- Cannot be mindcontrolled.\n- Has increased HP when deployed.
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -59,11 +59,11 @@ MCV:
 		Priority: 5
 		DecorationBounds: 42,42
 	Health:
-		HP: 120000
+		HP: 60000
 	Armor:
 		Type: VehicleArmor
 	Mobile:
-		Speed: 45
+		Speed: 70
 		TurnSpeed: 5
 		Crushes: wall, crate, infantry
 	Targetable@MindControl:
@@ -335,29 +335,29 @@ GACNST:
 	ProvidesPrerequisite@faction:
 		Factions: gdi, nod, cab, mut, scr
 		Prerequisite: structures.gdi
-	EmitInfantryOnSell@humanengie:
+	SpawnActorsOnSell@humanengie:
 		ActorTypes: engineer
 		Factions: gdi, nod
-	EmitInfantryOnSell@mutengie:
+	SpawnActorsOnSell@mutengie:
 		ActorTypes: e2
 		Factions: mut
-	EmitInfantryOnSell@gdi:
+	SpawnActorsOnSell@gdi:
 		ValuePercent: 15
 		ActorTypes: gdie1
 		Factions: gdi
-	EmitInfantryOnSell@nod:
+	SpawnActorsOnSell@nod:
 		ValuePercent: 15
 		ActorTypes: altnode1
 		Factions: nod
-	EmitInfantryOnSell@cab:
+	SpawnActorsOnSell@cab:
 		ValuePercent: 15
 		ActorTypes: worker
 		Factions: cab
-	EmitInfantryOnSell@mut:
+	SpawnActorsOnSell@mut:
 		ValuePercent: 15
 		ActorTypes: marauder
 		Factions: mut
-	EmitInfantryOnSell@scr:
+	SpawnActorsOnSell@scr:
 		ValuePercent: 15
 		ActorTypes: legio
 		Factions: scr
@@ -713,8 +713,8 @@ GADEPT:
 		DeathSequence: dead-ground
 		UseDeathTypeSuffix: false
 	# ExplodeWeapon:
-		# Weapon: ServDepoShrapnelSpawn
-		# RequiresCondition: !disabled
+	# 	Weapon: ServDepoShrapnelSpawn
+	# 	RequiresCondition: !disabled
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:

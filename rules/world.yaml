@@ -77,6 +77,124 @@
 	ExitsDebugOverlayManager:
 	CliffBackImpassabilityLayer:
 	SubterraneanActorLayer:
+	Locomotor@Infantry:
+		Name: Infantry
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Ice: 100
+			Road: 110
+			Rail: 100
+			DirtRoad: 105
+			Rough: 80
+			Bridge: 110
+			Tiberium: 70
+				PathingCost: 300
+			BlueTiberium: 70
+				PathingCost: 300
+			Veins: 80
+  	Locomotor@TibInmuneInfantry:
+		Name: TibInmuneInfantry
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Ice: 100
+			Road: 110
+			Rail: 100
+			DirtRoad: 105
+			Rough: 80
+			Bridge: 110
+			Tiberium: 70
+				PathingCost: 50
+			BlueTiberium: 70
+				PathingCost: 50
+			Veins: 80
+	Locomotor@Vehicle:
+		Name: Vehicle
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 100
+			Ice: 100
+			Road: 120
+			Rail: 100
+			DirtRoad: 110
+			Rough: 80
+			Bridge: 120
+			Tiberium: 70
+			BlueTiberium: 70
+			Veins: 80
+				PathingCost: 300
+	Locomotor@InfantryCrusherVehicle:
+		Name: InfantryCrusherVehicle
+		Crushes: crate, infantry
+		TerrainSpeeds:
+			Clear: 100
+			Ice: 100
+			Road: 120
+			Rail: 100
+			DirtRoad: 110
+			Rough: 80
+			Bridge: 120
+			Tiberium: 70
+			BlueTiberium: 70
+			Veins: 80
+				PathingCost: 300
+	Locomotor@VehicleCrusher:
+		Name: VehicleCrusher
+		Crushes: crate, infantry, vehicle
+		TerrainSpeeds:
+			Clear: 100
+			Ice: 100
+			Road: 120
+			Rail: 100
+			DirtRoad: 110
+			Rough: 80
+			Bridge: 120
+			Tiberium: 70
+			BlueTiberium: 70
+			Veins: 80
+				PathingCost: 300
+	SubterraneanLocomotor@SUBTERRANEAN:
+		Name: subterranean
+		Crushes: wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 70
+				PathingCost: 150
+			Road: 100
+				PathingCost: 150
+			Bridge: 100
+				PathingCost: 150
+			Rail: 100
+				PathingCost: 150
+			DirtRoad: 90
+				PathingCost: 150
+			Rough: 60
+				PathingCost: 150
+			Tiberium: 70
+				PathingCost: 150
+			BlueTiberium: 70
+				PathingCost: 150
+			Veins: 70
+				PathingCost: 150
+			Subterranean: 120
+		SubterraneanTransitionTerrainTypes: Clear, Rough
+		SubterraneanTransitionCost: 0
+	Locomotor@HOVER:
+		Name: hover
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 100
+			Ice: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
+			Water: 80
 
 World:
 	Inherits: ^BaseWorld

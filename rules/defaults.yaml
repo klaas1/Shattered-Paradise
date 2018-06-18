@@ -273,14 +273,14 @@
 		RequiresCondition: rank-elite
 		Modifier: 130
 	# SpeedMultiplier@RANK-1:
-		# RequiresCondition: rank-veteran == 1
-		# Modifier: 110
+	# RequiresCondition: rank-veteran == 1
+	# Modifier: 110
 	# SpeedMultiplier@RANK-2:
-		# RequiresCondition: rank-veteran == 2
-		# Modifier: 120
+	# RequiresCondition: rank-veteran == 2
+	# Modifier: 120
 	# SpeedMultiplier@RANK-ELITE:
-		# RequiresCondition: rank-elite
-		# Modifier: 130
+	# RequiresCondition: rank-elite
+	# Modifier: 130
 	ReloadDelayMultiplier@RANK-1:
 		RequiresCondition: rank-veteran == 1
 		Modifier: 90
@@ -853,7 +853,6 @@
 	Inherits: ^GenericEffects
 	Inherits@0: ^tractorstop
 	Inherits@3: ^SpawnSmoke
-	Inherits@4: ^DisplayVanguardShield
 	Inherits@9: ^SpawnSpark
 
 ^ProducesStuff:
@@ -965,23 +964,23 @@
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
-	EmitInfantryOnSell@gdi:
+	SpawnActorsOnSell@gdi:
 		ValuePercent: 30
 		ActorTypes: gdie1
 		Factions: gdi
-	EmitInfantryOnSell@nod:
+	SpawnActorsOnSell@nod:
 		ValuePercent: 30
 		ActorTypes: altnode1
 		Factions: nod
-	EmitInfantryOnSell@cab:
+	SpawnActorsOnSell@cab:
 		ValuePercent: 30
 		ActorTypes: worker
 		Factions: cab
-	EmitInfantryOnSell@mut:
+	SpawnActorsOnSell@mut:
 		ValuePercent: 30
 		ActorTypes: marauder
 		Factions: mut
-	EmitInfantryOnSell@scr:
+	SpawnActorsOnSell@scr:
 		ValuePercent: 30
 		ActorTypes: shark
 		Factions: scr
@@ -1010,11 +1009,11 @@
 	RenderRangeCircle:
 	Targetable@Defence:
 		TargetTypes: Defence
-	-EmitInfantryOnSell@gdi:
-	-EmitInfantryOnSell@nod:
-	-EmitInfantryOnSell@cab:
-	-EmitInfantryOnSell@mut:
-	-EmitInfantryOnSell@scr:
+	-SpawnActorsOnSell@gdi:
+	-SpawnActorsOnSell@nod:
+	-SpawnActorsOnSell@cab:
+	-SpawnActorsOnSell@mut:
+	-SpawnActorsOnSell@scr:
 	Armor:
 		Type: DefenseArmor
 	EditorTilesetFilter:
@@ -1177,22 +1176,8 @@
 		Voice: Move
 		Speed: 60
 		Crushes: crate
-		SharesCell: true
 		WaitAverage: 10
-		TerrainSpeeds:
-			Clear: 100
-			Ice: 100
-			Road: 110
-			Rail: 100
-			DirtRoad: 105
-			Rough: 80
-			Bridge: 110
-			Tiberium: 70
-				PathingCost: 300
-			BlueTiberium: 70
-				PathingCost: 300
-			Veins: 80
-		TunnelCondition: inside-tunnel
+        Locomotor: Infantry
 	Selectable:
 		Bounds: 22,30,0,-10
 	SelectionDecorations:
@@ -1294,6 +1279,8 @@
 	Inherits: ^Soldier
     Inherits@1: ^HealsOnTiberium
 	-DamagedByTerrain:
+    Mobile:
+        Locomotor: TibInmuneInfantry
 
 ^Beast:
 	Inherits: ^Soldier
@@ -1303,11 +1290,12 @@
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
-		RequiresLobbyCreeps: true
 	WithDeathAnimation@normal:
 		DeathTypes:
 			TiberiumDeath: 1, 2
 			EnergyDeath: 1, 2
+    Mobile:
+        Locomotor: Vehicle
 	-TakeCover:
 	-WithDeathAnimation@body:
 	-WithDeathAnimation@tib:
@@ -1354,11 +1342,7 @@
 		CrushedPaletteIsPlayerPalette: true
 	-DamagedByTerrain:
 	Mobile:
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 50
-			BlueTiberium: 70
-				PathingCost: 50
+		Locomotor: TibInmuneInfantry
 
 ^Cyborg:
 	Inherits@1: ^Infantry
@@ -1376,11 +1360,7 @@
 		Weapon: DroneExplode
 		EmptyWeapon: DroneExplode
 	Mobile:
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 50
-			BlueTiberium: 70
-				PathingCost: 50
+		Locomotor: TibInmuneInfantry
 	DeathSounds:
 	MustBeDestroyed:
 	WithPermanentInjury:
@@ -1410,11 +1390,7 @@
 	Crushable:
 		CrushClasses: HeavyInfantry
 	Mobile:
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 50
-			BlueTiberium: 70
-				PathingCost: 50
+		Locomotor: TibInmuneInfantry
 
 ^CivilianInfantry:
 	Inherits: ^Infantry
@@ -1483,7 +1459,7 @@
 	-SpawnActorOnDeath@ScrinEssence:
 	GrantPeriodicCondition:
 		Condition: KillMe
-		CooldownDuration: 750
+		CooldownDuration: 375
 	KillsSelf@KillMe:
 		RequiresCondition: KillMe
 	ExternalCondition@KillMe:
@@ -1547,21 +1523,7 @@
 	Valued:
 		Cost: 1
 	Mobile:
-		Crushes: crate
-		WaitAverage: 10
-		TerrainSpeeds:
-			Clear: 100
-			Ice: 100
-			Road: 120
-			Rail: 100
-			DirtRoad: 110
-			Rough: 80
-			Bridge: 120
-			Tiberium: 70
-			BlueTiberium: 70
-			Veins: 80
-				PathingCost: 300
-		TunnelCondition: inside-tunnel
+		Locomotor: Vehicle
 		TurnSpeed: 7
 		Voice: Move
 	TeleportNetworkTransportable:
@@ -1624,18 +1586,7 @@
 	Inherits: ^Vehicle
 	Hovers:
 	Mobile:
-		TerrainSpeeds:
-			Clear: 100
-			Ice: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
-			Water: 80
-		Crushes: crate
+		Locomotor: hover
 	LeavesTrails:
 		Image: wake
 		Palette: effect
@@ -1715,38 +1666,7 @@
 	Mobile:
 		TurnSpeed: 6
 		Speed: 90
-		Crushes: wall, crate, infantry
-		RequiresCondition: !empdisable
-		Subterranean: true
-		SubterraneanCondition: submerged
-		SubterraneanTransitionTerrainTypes: Clear, Ice, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
-		SubterraneanTransitionCost: 0#-2147483647
-		SubterraneanTransitionSound: subdril1.aud
-		SubterraneanTransitionImage: dig
-		SubterraneanTransitionSequence: idle
-		SubterraneanTransitionOnRamps: True
-		TerrainSpeeds:
-			Clear: 100
-				PathingCost: 150
-			Ice: 100
-				PathingCost: 150               
-			Road: 120
-				PathingCost: 150
-			Rail: 100
-				PathingCost: 150
-			DirtRoad: 110
-				PathingCost: 150
-			Rough: 80
-				PathingCost: 150
-			Bridge: 120
-				PathingCost: 150
-			Tiberium: 70
-				PathingCost: 300
-			BlueTiberium: 70
-				PathingCost: 300
-			Veins: 80
-				PathingCost: 150
-			Subterranean: 70
+		Locomotor: subterranean
 	RevealsShroud:
 		Range: 3c0
 		RequiresCondition: !inside-tunnel && !submerged
@@ -1923,19 +1843,7 @@
 		Speed: 120
 		WaitAverage: 10
 		TurnSpeed: 16
-		Crushes: crate
-		SharesCell: no
-		TerrainSpeeds:
-			Clear: 90
-			Ice: 90
-			Road: 100
-			Rail: 80
-			DirtRoad: 90
-			Rough: 70
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
-		TunnelCondition: inside-tunnel
+        Locomotor: Vehicle
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
@@ -1964,8 +1872,8 @@
 		Dimensions: 1,1
 	AppearsOnRadar:
 	# WithIdleOverlay:
-		# Sequence: light
-		# Palette: gradgreen
+	# Sequence: light
+	# Palette: gradgreen
 	RadarColorFromTerrain:
 		Terrain: Tiberium
 	FrozenUnderFog:
@@ -2110,19 +2018,10 @@
 	WithVoxelBody:
 	DrawLineToTarget:
 	Mobile:
-		TerrainSpeeds:
-			Clear: 90
-			Ice: 90
-			Road: 100
-			Rail: 90
-			DirtRoad: 100
-			Rough: 80
-			Tiberium: 90
-			BlueTiberium: 90
-			Veins: 50
+        Locomotor: Vehicle
 		TurnSpeed: 5
 		Voice: Move
-		Speed: 120
+		Speed: 40
 		TunnelCondition: inside-tunnel
 	Cargo:
 		Types: Vehicle

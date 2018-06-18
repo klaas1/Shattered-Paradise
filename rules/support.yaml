@@ -436,6 +436,7 @@ CABPIT:
 		DecorationBounds: 90, 48, 0, -6
 	-ExternalCapturable:
 	-ExternalCapturableBar:
+	-ToggleConditionOnOrder:
 	Health:
 		HP: 70000
 	AutoTarget:
@@ -446,7 +447,7 @@ CABPIT:
 		Weapon: CabPitFighterSpawn
 	CarrierMaster:
 		Actors: CABDRONEJET, CABDRONEJET, CABDRONEJET
-		RespawnTicks: 700
+		RespawnTicks: 150
 		ReamTicks: 10
 		InstaRepair: true
 	RequiresBuildableArea:
@@ -1222,39 +1223,39 @@ CABGRINDER:
 	RequiresBuildableArea:
 		AreaTypes: building
 
-# CABSENTRYTURRET:
+CABSENTRYTURRET:
 	# Inherits: ^MiscTurret
 	# Inherits@1: ^CabRender
 	# Valued:
-		# Cost: 700
+	# 	Cost: 700
 	# Tooltip:
-		# Name: Firefly
+	# 	Name: Firefly
 	# Building:
 	# Selectable:
-		# Bounds: 40, 30, -3, -8
-		# DecorationBounds: 40, 36, -3, -8
+	# 	Bounds: 40, 30, -3, -8
+	# 	DecorationBounds: 40, 36, -3, -8
 	# Health:
-		# HP: 70000
+	# 	HP: 70000
 	# -Sellable:
 	# BodyOrientation:
-		# QuantizedFacings: 32
+	# 	QuantizedFacings: 32
 	# Turreted:
-		# TurnSpeed: 10
-		# InitialFacing: 50
+	# 	TurnSpeed: 10
+	# 	InitialFacing: 50
 	# AttackTurreted:
 	# WithSpriteTurret:
-		# Recoils: no
+	# 	Recoils: no
 	# Transforms:
-		# IntoActor: firefly
+	# 	IntoActor: firefly
 	# Armament@1:
-		# Weapon: ArtisanTurretLasor
-		# LocalOffset: 300,-150,300
+	# 	Weapon: ArtisanTurretLasor
+	# 	LocalOffset: 300,-150,300
 	# Armament@2:
-		# Weapon: ArtisanTurretLasor
-		# LocalOffset: 300,150,300
+	# 	Weapon: ArtisanTurretLasor
+	# 	LocalOffset: 300,150,300
 	# SelectionDecorations:
 	# RequiresBuildableArea:
-		# AreaTypes: building
+	# 	AreaTypes: building
 	# -GrantConditionOnDamageState@smoke:
 	# -SmokeParticleEmitter:
 	# -ExternalCondition@smoketrail:
@@ -1736,36 +1737,36 @@ MUSTABLE:
 	RequiresBuildableArea:
 		AreaTypes: building
 
-# CABNEXUS:
+CABNEXUS:
 	# Inherits: ^Defence
 	# Inherits@1: ^CabRender
 	# Inherits@2: ^2x2Shape
 	# Valued:
-		# Cost: 700
+	# 	Cost: 700
 	# Tooltip:
-		# Name: Obelisk Nexus
+	# 	Name: Obelisk Nexus
 	# Building:
-		# Footprint: xx xx
-		# Dimensions: 2,2
+	# 	Footprint: xx xx
+	# 	Dimensions: 2,2
 	# Selectable:
-		# Bounds: 90, 48, 0, -6
-		# DecorationBounds: 90, 48, 0, -6
+	# 	Bounds: 90, 48, 0, -6
+	# 	DecorationBounds: 90, 48, 0, -6
 	# GrantConditionOnPowerState@LOWPOWER:
-		# Condition: lowpower
-		# ValidPowerStates: Low, Critical
+	# 	Condition: lowpower
+	# 	ValidPowerStates: Low, Critical
 	# Health:
-		# HP: 15000
+	# 	HP: 15000
 	# BodyOrientation:
-		# QuantizedFacings: 32
+	# 	QuantizedFacings: 32
 	# Armament:
-		# Weapon: CABNEXUSAA
-		# LocalOffset: 0,0,1000
+	# 	Weapon: CABNEXUSAA
+	# 	LocalOffset: 0,0,1000
 	# AttackOmni:
 	# Power:
-		# Amount: -50
+	# 	Amount: -50
 	# SelectionDecorations:
 	# RequiresBuildableArea:
-		# AreaTypes: building
+	# 	AreaTypes: building
 
 SCRMINE:
 	Inherits: ^ScrinRender

@@ -108,14 +108,14 @@ TrooperRail:
 		Duration: 30
 		Condition: notmobile
 	Warhead@emp2: GrantExternalCondition
-		Range: 1c0
+		Range: 0c512
 		Duration: 30
 		Condition: empdisable
 
 WolverineVulcan:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
-	ReloadDelay: 50
+	ReloadDelay: 40
 	Range: 7c0
 	Report: tsgun4.aud
 	Projectile: BulletAS
@@ -237,6 +237,7 @@ SonicZap:
 		Width: 384
 		Shape: Flat
 		ZOffset: 2047
+		TrackTarget: True
 		BeyondTargetRange: 0c256
 		Blockable: true
 		Color: 50F5FF45
@@ -416,27 +417,27 @@ FighterHellfireAA:
 		Damage: 1500
 		ValidTargets: Air
 
-# OBBomb:
-	# Inherits: ^BombWarhead
-	# Inherits@2: ^Large_Explosion
-	# ReloadDelay: 30
-	# Burst: 5
-	# MinRange: 0c100
-	# Report: expnew05.aud, expnew06.aud, expnew09.aud, expnew19.aud
-	# BurstDelays: 3
-	# ValidTargets: Ground, Water, Building, Infantry, Vehicle
-	# Range: 3c0
-	# Projectile: GravityBomb
-		# Speed: 170
-		# Image: 120mm
-		# Shadow: true
-		# Palette: ra
-	# Warhead@1Dam: SpreadDamage
-		# Falloff: 100, 80, 70, 60, 50
-		# Spread: 400
-		# Damage: 15000
-		# ValidTargets: Ground, Water, Building, Infantry, Vehicle
-		# DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+OBBomb:
+	# # Inherits: ^BombWarhead
+	# # Inherits@2: ^Large_Explosion
+	# # ReloadDelay: 30
+	# # Burst: 5
+	# # MinRange: 0c100
+	# # Report: expnew05.aud, expnew06.aud, expnew09.aud, expnew19.aud
+	# # BurstDelays: 3
+	# # ValidTargets: Ground, Water, Building, Infantry, Vehicle
+	# # Range: 3c0
+	# # Projectile: GravityBomb
+	# 	# Speed: 170
+	# 	# Image: 120mm
+	# 	# Shadow: true
+	# 	# Palette: ra
+	# # Warhead@1Dam: SpreadDamage
+	# 	# Falloff: 100, 80, 70, 60, 50
+	# 	# Spread: 400
+	# 	# Damage: 15000
+	# 	# ValidTargets: Ground, Water, Building, Infantry, Vehicle
+	# 	# DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 
 OBBombFrontal:
 	Inherits: ^BombWarhead

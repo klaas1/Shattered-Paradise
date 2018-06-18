@@ -1,8 +1,8 @@
 Metadata:
 	Title: Shattered Paradise
-	Description: Live the Second Tiberium War in a perspective you have never seen before.\nFind your place in this apocalyptic wasteland and make your enemies fear you!\n\nShattered Paradise that brings three new factions to Tiberian Sun and\ntries to mimic the gameplay style of the original game while also adding\nmore content to the game like units and mechanics.
-	Version: {Build 20180607}
-	Author: Nolt, with the help of a lot of people.
+	Version: {Build 20180618}
+	Website: https://www.openra.net
+	WebIcon32: https://www.openra.net/images/icons/ts_32x32.png
 
 PackageFormats: Mix
 
@@ -14,7 +14,7 @@ Packages:
 	./mods/as: as
 	$sp: sp
 	$ts: ts
-# Tiberian Sun
+	# Tiberian Sun
 	~scores.mix
 	~sidenc01.mix
 	~sidenc02.mix
@@ -38,7 +38,7 @@ Packages:
 	~speech02.mix: speech-nod
 	~tem.mix
 	~temperat.mix
-# Firestorm
+	# Firestorm
 	~scores01.mix
 	~expand01.mix
 	~sounds01.mix
@@ -99,7 +99,6 @@ Packages:
 	sp|uibits
 
 MapFolders:
-	# sp|maps: System
 	sp|maps/ww: System
 	sp|maps/meme: System
 	sp|maps/balanced: System

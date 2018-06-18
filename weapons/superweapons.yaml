@@ -103,11 +103,11 @@ EMPulseCannon:
 VeterancyWeapon:
 	ReloadDelay: 25
 	Range: 999c0
-	# Report: plsecan2.aud
-	ValidTargets: Vehicle, Building, Ground, Water
-	Projectile: InstantHit
-	# Warhead@1Eff: CreateEffect
-		# Explosions: pulse_explosion
+	# # Report: plsecan2.aud
+	# ValidTargets: Vehicle, Building, Ground, Water
+	# Projectile: InstantHit
+	# # Warhead@1Eff: CreateEffect
+	# 	# Explosions: pulse_explosion
 	Warhead@1Eff: Promotion
 		Range: 1c512
 		ValidStances: Ally, Neutral

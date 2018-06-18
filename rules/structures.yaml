@@ -581,9 +581,9 @@ MUTYARD:
 		Prerequisite: structures.mut
 	ProvidesPrerequisite@grantself:
 		Factions: gdi, nod, cab, mut, scr
-	-EmitInfantryOnSell@humanengie:
-	-EmitInfantryOnSell@mutengie:
-	EmitInfantryOnSell@snowflake:
+	-SpawnActorsOnSell@humanengie:
+	-SpawnActorsOnSell@mutengie:
+	SpawnActorsOnSell@snowflake:
 		ActorTypes: e2
 
 MUPOWR:
@@ -856,8 +856,8 @@ drached:
 		Prerequisite: structures.scr
 	ProvidesPrerequisite@grantself:
 		Factions: gdi, nod, cab, mut, scr
-	-EmitInfantryOnSell@humanengie:
-	-EmitInfantryOnSell@mutengie:
+	-SpawnActorsOnSell@humanengie:
+	-SpawnActorsOnSell@mutengie:
 
 SCRPOWR:
 	Inherits: ^Building
@@ -1166,9 +1166,9 @@ CABYARD:
 		Prerequisite: structures.cab
 	ProvidesPrerequisite@grantself:
 		Factions: gdi, nod, cab, mut, scr
-	-EmitInfantryOnSell@humanengie:
-	-EmitInfantryOnSell@mutengie:
-	EmitInfantryOnSell@snowflake:
+	-SpawnActorsOnSell@humanengie:
+	-SpawnActorsOnSell@mutengie:
+	SpawnActorsOnSell@snowflake:
 		ActorTypes: swarmling
 
 CABPOWR:

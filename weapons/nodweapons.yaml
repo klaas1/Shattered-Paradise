@@ -424,6 +424,8 @@ Proton:
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 128
+		HorizontalRateOfTurn: 40
+		VerticalRateOfTurn: 40
 		Palette: effect
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
@@ -478,7 +480,7 @@ CerberusLazor:
 
 TurretLaserFire:
 	Inherits: ^FullDamage
-	ReloadDelay: 45
+	ReloadDelay: 35
 	Range: 6c768
 	Report: lastur1.aud
 	Projectile: LaserZap
@@ -520,65 +522,3 @@ ObeliskLaserFire:
 	Warhead@1Dam: SpreadDamage
 		Damage: 28000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-
-################################################################
-# UNUSED
-################################################################
-
-# MilitantExplode:
-	# Inherits: ^FlameWarhead
-	# Inherits@1: ^DecentFalloff
-	# Inherits@2: ^Large_Explosion
-	# ReloadDelay: 40
-	# Range: 1c0
-	# Projectile: InstantExplode
-	# Warhead@1Dam: SpreadDamage
-		# Spread: 200
-		# Damage: 90000
-		# AffectsParent: True
-		# Versus:
-			# InfantryArmor: 600
-			# BuildingArmor: 100
-			# DefenseArmor: 100
-			# VehicleArmor: 1
-			# ConcreteArmor: 1
-		# DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
-	# Warhead@4Smu: LeaveSmudge
-		# SmudgeType: SmallScorch
-		# InvalidTargets: Vehicle, Building, Wall
-
-# MillitantFire:
-	# Inherits: ^FlameWarhead
-	# ReloadDelay: 15
-	# Projectile: InstantExplode
-	# ValidTargets: Ground, Water
-	# Warhead@3Dam_area: SpreadDamage
-		# Spread: 300
-		# Damage: 2000
-		# Falloff: 100, 50, 25, 0
-		# ValidTargets: Ground, Water
-		# Versus:
-			# BuildingArmor: 250
-		# DamageTypes: MilitantFireDeath
-	# Warhead@2Eff: CreateEffect
-		# Explosions: militantfire, militantfire2, militantfire3
-		# InvalidImpactTypes: Water, Air, AirHit
-		# ExplosionPalette: apolra2
-	# Warhead@3Smu: LeaveSmudge
-		# SmudgeType: SmallScorch
-		# InvalidTargets: Vehicle, Building, Wall
-
-# CerberusLasorSpawn:
-	# Inherits: CombatDroneLasorSpawn
-	# ReloadDelay: 150
-	# Warhead@op: FireShrapnel
-		# Amount: 6
-		# Weapon: CerberusShrapnelLasor
-
-# CerberusShrapnelLasor:
-	# Inherits: CombatDroneLasor
-	# Projectile: LaserZap
-		# BeamDuration: 10
-		# -Color:
-	# Warhead@1Dam: SpreadDamage
-		# Damage: 3000

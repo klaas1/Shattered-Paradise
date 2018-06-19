@@ -144,7 +144,7 @@ BikeExplo:
 	ValidTargets: Ground, Water, Water, Air
 	InvalidTargets: Air
 	Report: gexpbara, gexpbarb, gexpbarc
-	Warhead@1Dam_impact: SpreadDamage
+	Warhead@1Dam: SpreadDamage
 		Spread: 700
 		Damage: 90000
 		ValidTargets: Ground, Water, Water, Air

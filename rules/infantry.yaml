@@ -621,11 +621,7 @@ E2:
 	WithInfantryBody:
 		AttackSequence: throw
 	Mobile:
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 50
-			BlueTiberium: 70
-				PathingCost: 50
+		Locomotor: TibInmuneInfantry
 	RenderSprites:
 		Image: e2
 		-FactionImages:
@@ -866,11 +862,7 @@ SHAPESHIFTER:
 	Voiced:
 		VoiceSet: Hijacker
 	Mobile:
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 50
-			BlueTiberium: 70
-				PathingCost: 50
+		Locomotor: TibInmuneInfantry
 	-DamagedByTerrain:
 	Selectable:
 		Priority: 6
@@ -901,17 +893,7 @@ FLOAT:
 	Health:
 		HP: 17500
 	Mobile:
-		TerrainSpeeds:
-			Clear: 100
-			Ice: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
-			Water: 80
+        Locomotor: HoverInfantry
 	Armament@1:
 		Weapon: FloatTesla
 		LocalOffset: 0,0,500
@@ -1223,17 +1205,7 @@ PDRONE:
 	Mobile:
 		Speed: 85
 		-RequiresCondition: WebDisable
-		TerrainSpeeds:
-			Clear: 100
-			Ice: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
-			Water: 80
+        Locomotor: HoverInfantry
 	Health:
 		HP: 9500
 	WithInfantryBody:
@@ -1353,17 +1325,7 @@ MOTH:
 		RequiresCondition: !deployed
 	Mobile:
 		Speed: 60
-		TerrainSpeeds:
-			Clear: 100
-			Ice: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
-			Water: 80
+        Locomotor: HoverInfantry
 		RequiresCondition: !deployed && !WebDisable
 	LeavesTrails:
 		Image: wake
@@ -1585,7 +1547,7 @@ FLAMEGUY:
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^1x1Shape
 	Mobile:
-		Speed: 75
+		Speed: 60
 		SharesCell: true
         Locomotor: Infantry
 	HiddenUnderFog:

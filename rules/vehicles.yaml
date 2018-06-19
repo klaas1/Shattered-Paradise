@@ -32,7 +32,7 @@ SMECH:
 	WithFacingSpriteBody:
 		Sequence: stand
 	WithAttackAnimation:
-		AttackSequence: shoot
+		Sequence: shoot
 	WithMoveAnimation:
 		MoveSequence: run
 	Selectable:
@@ -334,7 +334,7 @@ HMEC:
 	Mobile:
 		TurnSpeed: 3
 		Speed: 40
-		Crushes: wall, crate, infantry, Vehicle, HeavyInfantry
+		Locomotor: VehicleCrusher
     -Crushable:
 	Health:
 		HP: 200000
@@ -440,10 +440,6 @@ BGGY:
 		TurnSpeed: 8
 	Health:
 		HP: 15000
-	WithFacingSpriteBody:
-	WithShadow:
-	RenderSprites:
-	AutoTarget:
 	WithMuzzleOverlay:
 	############################################
 	# Conditions
@@ -939,8 +935,6 @@ BIKE:
 	WithRangeCircle:
 		Range: 2c0
 		Type: DemoBike
-	WithFacingSpriteBody:
-	WithShadow:
 	RenderSprites:
 	Explodes:
 		Weapon: BikeExplo
@@ -1069,8 +1063,11 @@ HOWTLIZER:
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 		RequiresCondition: !CloakBreaks
+	WithIdleOverlay@shield:
+		Sequence: shield
+		IsPlayerPalette: true
+		Palette: cloakscrinshield
 	WithMuzzleOverlay:
-	WithFacingSpriteBody:
 	Armament:
 		Weapon: SpectreCannon
 		LocalOffset: 600,0,1500
@@ -1108,7 +1105,10 @@ STNK:
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 20000
-	WithFacingSpriteBody:
+	WithIdleOverlay@shield:
+		Sequence: shield
+		IsPlayerPalette: true
+		Palette: cloakscrinshield
 	GrantCondition:
 		Condition: cloakgenerator
 	Cloak@cloakgenerator:
@@ -1553,6 +1553,7 @@ SCRGLYDER2:
 	Inherits@1: ^ScrinVehicle
 	Inherits@2: ^BasicStealthDetection
 	Inherits@3: ^8CellVision
+	Inherits@4: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 26
@@ -1598,7 +1599,7 @@ SCRRECHARGER:
 		HP: 20000
 	-WithIdleOverlay@shield:
 	-Targetable@Shield:
-	-DamageMultiplier@Boarded6:
+	-Armor@Shield:
 	Armament:
 		Weapon: VanguardShrapnel
 		TargetStances: Ally
@@ -1968,7 +1969,7 @@ SPIDERARTY:
 	Inherits@1: ^6CellVision
 	Inherits@2: ^CabRender
 	Valued:
-		Cost: 1350
+		Cost: 1150
 	Tooltip:
 		Name: Drone Host
 	Buildable:
@@ -2009,7 +2010,7 @@ PALADIN:
 	Inherits@2: ^CabRender
 	Inherits@3: ^PermanentSelfHeal
 	Valued:
-		Cost: 1650
+		Cost: 1500
 	Tooltip:
 		Name: Paladin
 	Buildable:

@@ -1,4 +1,5 @@
 FireballLauncher:
+    Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 4c256
 	Report: flamtnk1.aud
@@ -23,6 +24,7 @@ FireballLauncher:
 		InvalidTargets: Vehicle, Building, Wall
 
 Hellfire:
+    Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 6c0
 	Report: orcamis1.aud
@@ -301,7 +303,6 @@ LightTowerClaxon:
 	ValidTargets: Ground, Water, Air
 	Projectile: InstantExplode
 
-
 GreenTibRadiation:
 	ReloadDelay: 100
 	Projectile: InstantExplode
@@ -362,6 +363,7 @@ SlimeAttack:
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 
 VeinholeAttack:
+    Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 5c0
 	Report:
@@ -386,6 +388,7 @@ FloaterCloudSpawn:
 	ReloadDelay: 100
 
 Veins:
+    Inherits: ^RifleWarhead
 	ReloadDelay: 12
 	Warhead@Damage: SpreadDamage
 		Spread: 42

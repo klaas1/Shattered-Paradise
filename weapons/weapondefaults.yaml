@@ -1,11 +1,7 @@
 ^WeaponGenericUpgrades:
-	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
-		Condition: RifleWarhead
 	Warhead@ShieldUpgrade: GrantExternalCondition
 		Condition: BreakShield
-		Range: 32
+		Range: 64
 		Duration: 400
 
 ^RifleWarhead:
@@ -22,8 +18,7 @@
 			DefenseArmor: 15
 			AircraftArmor: 100
 			ConcreteArmor: 5
-	Warhead@BounceUpgrade: GrantExternalCondition
-		Condition: RifleWarhead
+			Shield: 0
 
 ^RocketWarhead:
 	Inherits: ^WeaponGenericUpgrades
@@ -56,8 +51,7 @@
 			DefenseArmor: 100
 			AircraftArmor: 100
 			ConcreteArmor: 35
-	Warhead@BounceUpgrade: GrantExternalCondition
-		Condition: RocketWarhead
+			Shield: 0
 
 ^APWarhead:
 	Inherits: ^WeaponGenericUpgrades
@@ -76,8 +70,7 @@
 			DefenseArmor: 100
 			AircraftArmor: 100
 			ConcreteArmor: 35
-	Warhead@BounceUpgrade: GrantExternalCondition
-		Condition: APWarhead
+			Shield: 0
 
 ^FlameWarhead:
 	Inherits: ^WeaponGenericUpgrades
@@ -90,8 +83,7 @@
 			VehicleArmor: 25
 			AircraftArmor: 100
 			ConcreteArmor: 1
-	Warhead@BounceUpgrade: GrantExternalCondition
-		Condition: FlameWarhead
+			Shield: 0
 
 ^ArtilleryWarhead:
 	Inherits: ^WeaponGenericUpgrades
@@ -102,8 +94,7 @@
 			VehicleArmor: 50
 			DefenseArmor: 100
 			ConcreteArmor: 35
-	Warhead@BounceUpgrade: GrantExternalCondition
-		Condition: ArtilleryWarhead
+			Shield: 0
 	Warhead@ShieldUpgrade: GrantExternalCondition
 		Range: 256
 		Duration: 750
@@ -119,6 +110,7 @@
 			DefenseArmor: 100
 			AircraftArmor: 100
 			ConcreteArmor: 20
+			Shield: 0
 	Warhead@BounceUpgrade: GrantExternalCondition
 		Condition: ArtilleryWarhead
 
@@ -132,6 +124,7 @@
 			DefenseArmor: 50
 			AircraftArmor: 100
 			ConcreteArmor: 15
+			Shield: 0
 	Warhead@BounceUpgrade: GrantExternalCondition
 		Condition: FlameWarhead
 
@@ -150,6 +143,7 @@
 			VehicleArmor: 100
 			DefenseArmor: 100
 			ConcreteArmor: 30
+			Shield: 0
 	Warhead@BounceUpgrade: GrantExternalCondition
 		Condition: FullDamage
 

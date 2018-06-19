@@ -684,19 +684,21 @@
 	Targetable@Shield:
 		TargetTypes: ShieldedUnit
 		RequiresCondition: VanguardShield
-	DamageMultiplier@Boarded6:
-		RequiresCondition: VanguardShield && BreakShield <= 4 && KillShieldedUnit == 0
-		Modifier: 0
-	SelfHealing@KillShieldedUnit:
+    Armor@Shield:
+		RequiresCondition: VanguardShield && BreakShield <= 4
+        Type: Shield
+
+^GetsOneShotedbySuperweapons:
+	SelfHealing@GetsOneShotedbySuperweapons:
 		PercentageStep: -100
 		Step: 0
 		Delay: 50
-		RequiresCondition: KillShieldedUnit
+		RequiresCondition: GetsOneShotedbySuperweapons
 		DamageCooldown: 0
 		HealIfBelow: 101
 		DamageTypes: FireDeath
-	ExternalCondition@KillShieldedUnit:
-		Condition: KillShieldedUnit
+	ExternalCondition@GetsOneShotedbySuperweapons:
+		Condition: GetsOneShotedbySuperweapons
 
 ^SpawnSmoke:
 	GrantConditionOnDamageState@smoke:
@@ -740,6 +742,7 @@
 		DamageCoeff: 3000
 		DamageTypes: TiberiumDeath
 		DamageInterval: 25
+		RequiresCondition: !(VanguardShield && BreakShield <= 4)
 	DamagedByRadioactivity@OrangeRadiation:
 		DamageCoeff: 2500
 		DamageTypes: FireDeath
@@ -833,6 +836,9 @@
 	Inherits@8: ^DisplayVanguardShield
 	Inherits@9: ^DamagedByRadioactivity
 	Inherits@10: ^WolfDebuff
+	Inherits@11: ^GetsOneShotedbySuperweapons
+	GrantConditionOnTunnelLayer:
+		Condition: inside-tunnel
 
 ^VehicleEffects:
 	Inherits: ^GenericEffects
@@ -840,20 +846,24 @@
 	Inherits@2: ^DisplayWrench
  	Inherits@3: ^MachineShopHeal
 	Inherits@4: ^BugPoison
-	Inherits@6: ^EmpDisableMobile
-	Inherits@7: ^SpawnSmoke
-	Inherits@8: ^MindControllable
-	Inherits@9: ^SpawnSpark
-	Inherits@10: ^DisplayVanguardShield
-	Inherits@11: ^VeinholePoisonVehicle
-	Inherits@12: ^DamagedByRadioactivity
-	Inherits@13: ^WolfDebuff
+	Inherits@5: ^EmpDisableMobile
+	Inherits@6: ^SpawnSmoke
+	Inherits@7: ^MindControllable
+	Inherits@8: ^SpawnSpark
+	Inherits@9: ^DisplayVanguardShield
+	Inherits@10: ^VeinholePoisonVehicle
+	Inherits@11: ^DamagedByRadioactivity
+	Inherits@12: ^WolfDebuff
+	Inherits@13: ^GetsOneShotedbySuperweapons
+	GrantConditionOnTunnelLayer:
+		Condition: inside-tunnel
 
 ^AircraftEffects:
 	Inherits: ^GenericEffects
-	Inherits@0: ^tractorstop
-	Inherits@3: ^SpawnSmoke
-	Inherits@9: ^SpawnSpark
+	Inherits@1: ^tractorstop
+	Inherits@2: ^SpawnSmoke
+	Inherits@3: ^SpawnSpark
+	Inherits@4: ^GetsOneShotedbySuperweapons
 
 ^ProducesStuff:
 	WithTextDecoration@primary:
@@ -914,8 +924,6 @@
 		Range: 6c0
 	Health:
 		HP: 28000
-		Shape: Circle
-			Radius: 500
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
@@ -994,6 +1002,11 @@
 	WithMakeAnimation:
 	EditorTilesetFilter:
 		Categories: Buildable Structure
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: mouse
 
 ^Defence:
 	Inherits: ^Building
@@ -1306,7 +1319,7 @@
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	Crushable:
-		CrushClasses: vehicle
+		CrushClasses: Vehicle
 	Voiced:
 		VoiceSet: Fiend
 	AttackFrontal:
@@ -1572,12 +1585,13 @@
 		Categories: Vehicle
 	BodyOrientation:
 		QuantizedFacings: 32
+    WithFacingSpriteBody:
 
 ^Tank:
 	Inherits: ^Vehicle
 	Inherits@2: ^AutoTargetGroundAssaultMove
 	Mobile:
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Explodes:
 		Weapon: UnitExplode
 		EmptyWeapon: UnitExplode
@@ -1586,7 +1600,7 @@
 	Inherits: ^Vehicle
 	Hovers:
 	Mobile:
-		Locomotor: hover
+		Locomotor: Hover
 	LeavesTrails:
 		Image: wake
 		Palette: effect
@@ -1600,7 +1614,6 @@
 		TerrainTypes: Water
 	ExternalCondition@hoverunitonwater:
 		Condition: hoverunitonwater
-	WithFacingSpriteBody:
 	-Explodes:
 	-SelfHealing@veinholedrain:
 	-ExternalCondition@veinholedrain:
@@ -1632,6 +1645,7 @@
 		TargetableOffsets: 0,0,400
 		Type: Circle
 			VerticalTopOffset: 500
+	-WithFacingSpriteBody:
 
 ^ScrinVehicle:
 	Inherits@0: ^ScrinReaper
@@ -1652,6 +1666,7 @@
 		QuantizedFacings: 0
 	RenderVoxels:
 	WithVoxelBody:
+	-WithFacingSpriteBody:
 
 ^VoxelTank:
 	Inherits: ^Tank
@@ -1660,6 +1675,7 @@
 		CameraPitch: 85
 	RenderVoxels:
 	WithVoxelBody:
+	-WithFacingSpriteBody:
 
 ^SubterraneanVoxelVehicle:
     Inherits: ^VoxelVehicle
@@ -1693,6 +1709,13 @@
 	AnnounceOnSeen@subterranean:
 		Notification: SubterraneanUnitDetected
 		PingRadar: True
+	Targetable:
+		RequiresCondition: !inside-tunnel && !submerged
+	GrantConditionOnSubterraneanLayer:
+		Condition: submerged
+		SubterraneanTransitionImage: dig
+		SubterraneanTransitionSequence: idle
+		SubterraneanTransitionSound: subdril1.aud
 
 ^CivilianVoxelVehicle:
 	Inherits: ^VoxelVehicle

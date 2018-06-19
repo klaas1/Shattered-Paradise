@@ -1610,7 +1610,7 @@ CAARMR:
 	WithIdleOverlay:
 		Sequence: flag
 	Health:
-		HP: 56000
+		HP: 120000
 	DetonateWeaponPower:
 		# AllowMultiple: True
 		Cursor: emp

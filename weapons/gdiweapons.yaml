@@ -104,11 +104,11 @@ TrooperRail:
 			InfantryArmor: 50
 			ConcreteArmor: 5
 	Warhead@emp: GrantExternalCondition
-		Range: 0c512
+		Range: 0c768
 		Duration: 30
 		Condition: notmobile
 	Warhead@emp2: GrantExternalCondition
-		Range: 0c512
+		Range: 0c768
 		Duration: 30
 		Condition: empdisable
 
@@ -228,7 +228,7 @@ JuggCannon:
 
 SonicZap:
 	ReloadDelay: 60
-	Range: 5c0
+	Range: 6c0
 	Report: sonic4.aud
 	Projectile: AreaBeam
 		Speed: 0c250
@@ -309,6 +309,7 @@ MammothTusk:
 		DamageTypes: Explosion
 
 MechRailgun:
+    Inherits: ^APWarhead
 	ReloadDelay: 120
 	Range: 8c0
 	Burst: 2

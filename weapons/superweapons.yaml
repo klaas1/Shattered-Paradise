@@ -1,12 +1,12 @@
 ^SWBaseEffects:
-	Warhead@KillShieldedUnit: GrantExternalCondition
+	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 5c0
 		Duration: 250
-		Condition: KillShieldedUnit
-	Warhead@KillShieldedUnitAA: GrantExternalCondition
+		Condition: GetsOneShotedbySuperweapons
+	Warhead@GetsOneShotedbySuperweaponsAA: GrantExternalCondition
 		Range: 3c0
 		Duration: 250
-		Condition: KillShieldedUnit
+		Condition: GetsOneShotedbySuperweapons
 		ValidTargets: Aircraft, Air, Airhit
 
 MultiCluster:
@@ -158,8 +158,6 @@ IonCannon:
 		Explosions: ionbeam6
 		ExplosionPalette: effect-ignore-lighting-alpha75
 		VictimScanRadius: 0
-	Warhead@KillShieldedUnit: GrantExternalCondition
-		Range: 5c0
 
 IonCannonSpawner:
 	ReloadDelay: 6
@@ -432,7 +430,7 @@ ClusterMissile:
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@Shake: ScreenShaker
 		Intensity: 10
-	Warhead@KillShieldedUnit: GrantExternalCondition
+	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 6c0
 	Warhead@8Radio: CreateRadioactivity
 		Range: 1, 2, 3, 4, 5, 6
@@ -621,7 +619,7 @@ MeteorRainNormal:
 		Amount: 3
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
-	Warhead@KillShieldedUnit: GrantExternalCondition
+	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 1c0
 
 MeteorRainSlow:
@@ -681,7 +679,7 @@ CabalCannon:
 		Size: 2
 		InvalidTargets: Vehicle, Building, Wall
 		Delay: 15
-	Warhead@KillShieldedUnit: GrantExternalCondition
+	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 4c0
 
 NanoMachineBurst:
@@ -758,7 +756,7 @@ IonRay:
 		Explosions: fire1, fire2, fire3, fire4
 		ImpactSounds: expnew09.aud
 		Delay: 10
-	Warhead@KillShieldedUnit: GrantExternalCondition
+	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 0c512
 
 VeinholeSummonerWeapon:

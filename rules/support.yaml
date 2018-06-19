@@ -286,8 +286,8 @@ MUBUNKR:
 		HP: 90000
 	AutoTarget:
 	Cargo:
-		MaxWeight: 4
-		PipCount: 4
+		MaxWeight: 5
+		PipCount: 5
 		Types: Infantry
 		EjectOnDeath: true
 		LoadedCondition: loaded
@@ -1093,7 +1093,7 @@ CABEYE:
 		Description: High tech detection system.\n\nSpecial:\n- Provides huge vision range\n- Shrouds the enemy vision range in a certain area\n- Requires power to operate
 		Prerequisites: ~structures.cab, cabtech
 	Valued:
-		Cost: 600
+		Cost: 1000
 	Tooltip:
 		Name: Eye of Cabal
 	Building:
@@ -1104,10 +1104,10 @@ CABEYE:
 	Health:
 		HP: 75000
 	WithRangeCircle:
-		Range: 9c0
+		Range: 12c0
 		Type: cabeye
 	CreatesShroud:
-		Range: 8c0
+		Range: 12c0
 		RequiresCondition: !disabled
 	RevealsShroud@asd:
 		Range: 24c0

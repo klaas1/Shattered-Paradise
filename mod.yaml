@@ -1,6 +1,6 @@
 Metadata:
 	Title: Shattered Paradise
-	Version: {Build 20180620}
+	Version: {Build 20180620 I}
 	Website: https://www.openra.net
 	WebIcon32: https://ppmforums.com/files/logo2megamini_614.png
 
@@ -192,9 +192,9 @@ ChromeLayout:
 	common|chrome/ingame-infobriefing.yaml
 	common|chrome/ingame-infoobjectives.yaml
 	common|chrome/ingame-infostats.yaml
-	sp|chrome/ingame-observer.yaml
+	ts|chrome/ingame-observer.yaml
 	sp|chrome/ingame-observerstats.yaml
-	sp|chrome/ingame-player.yaml #The only file of chromes that is on SP
+	ts|chrome/ingame-player.yaml #The only file of chromes that is on SP
 	common|chrome/ingame-perf.yaml
 	ts|chrome/ingame-debug.yaml
 	common|chrome/ingame-infochat.yaml

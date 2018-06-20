@@ -65,7 +65,7 @@ MCV:
 	Mobile:
 		Speed: 70
 		TurnSpeed: 5
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	MustBeDestroyed:
@@ -121,19 +121,7 @@ HARV:
 	WithDockingAnimation:
 	Mobile:
 		Speed: 60
-		Crushes: wall, crate, infantry, RazorShark
-		TerrainSpeeds:
-			Ice: 100
-			Clear: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Tiberium: 100
-				PathingCost: 1
-			BlueTiberium: 100
-				PathingCost: 1
-			Veins: 100
+        Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 50000
 	Targetable@MindControl:

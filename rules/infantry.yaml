@@ -966,7 +966,7 @@ COLOSSI:
 	Health:
 		HP: 35000
 	Mobile:
-		SharesCell: False
+		Locomotor: HeavyInfantry
 		RequiresCondition: !deployed && !WebDisable
 	-SpawnActorOnDeath@FLAMEGUY:
 	SpawnActorOnDeath@conversion:
@@ -1033,8 +1033,7 @@ CABSENTRY:
 	-Passenger:
 	Mobile:
 		Speed: 70
-		Crushes: nada
-		SharesCell: False
+		Locomotor: HeavyInfantry
 	GrantPeriodicCondition:
 		Condition: KillMe
 		CooldownDuration: 250
@@ -1265,7 +1264,7 @@ GLAD:
 	WithMuzzleOverlay:
 	Mobile:
 		Speed: 55
-		SharesCell: False
+		Locomotor: HeavyInfantry
 	Health:
 		HP: 50000
 	Armament@1:
@@ -1546,7 +1545,6 @@ FLAMEGUY:
 	Inherits@3: ^1x1Shape
 	Mobile:
 		Speed: 60
-		SharesCell: true
         Locomotor: Infantry
 	HiddenUnderFog:
 	WithInfantryBody:
@@ -1662,8 +1660,5 @@ STALKER:
 		HP: 13000
 	Mobile:
 		Speed: 90
-		TerrainSpeeds:
-			Water: 80
-		Crushes: crate
 	WithInfantryBody:
 		AttackSequence: throw

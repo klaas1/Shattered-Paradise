@@ -179,7 +179,7 @@
 			Veins: 70
 				PathingCost: 150
 			Subterranean: 120
-		SubterraneanTransitionTerrainTypes: Clear, Rough
+		SubterraneanTransitionTerrainTypes: Clear, Ice, Rough, Road, Rail, DirtRoad, Bridge,  Tiberium, BlueTiberium, Veins
 		SubterraneanTransitionCost: -5
 	Locomotor@HOVER:
 		Name: Hover

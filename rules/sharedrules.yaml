@@ -45,6 +45,7 @@ ENGINEER:
 
 MCV:
 	Inherits: ^VoxelVehicle
+    Inherits@2: ^LowerSelectionPriority
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
@@ -56,7 +57,6 @@ MCV:
 	Tooltip:
 		Name: Mobile Construction Vehicle
 	Selectable:
-		Priority: 5
 		DecorationBounds: 42,42
 	Health:
 		HP: 60000
@@ -85,6 +85,7 @@ MCV:
 
 HARV:
 	Inherits: ^VoxelVehicle
+	Inherits@2: ^LowerSelectionPriority
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -97,7 +98,6 @@ HARV:
 		InitialActivity: FindResources
 		Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium.\n- Immune to Veins.\n- Can crush infantry.\n- Cannot be mindcontrolled.
 	Selectable:
-		Priority: 7
 		Bounds: 36,36
 		Class: HumanHarv
 		DecorationBounds: 36,36
@@ -288,7 +288,7 @@ GACNST:
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
 	Health:
-		HP: 240000
+		HP: 180000
 	Production:
 		Produces: Building, Defense
 	Valued:
@@ -385,6 +385,8 @@ GACNST:
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
 	ScalePowerWithHealth:
+	Health:
+		HP: 50000
 
 ^Barracks:
 	Inherits: ^Building
@@ -400,7 +402,7 @@ GACNST:
 		Range: 5c0
 		Type: hospitalheal
 	Health:
-		HP: 80000
+		HP: 50000
 	Exit@1:
 		SpawnOffset: -256,1024,0
 		ExitCell: 2,2
@@ -557,7 +559,7 @@ FLIPPEDPROC:
 		Bounds: 100, 70, -30, -24
 		DecorationBounds: 102, 70, -26, -24
 	Health:
-		HP: 208000
+		HP: 150000
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
@@ -630,7 +632,7 @@ FLIPPEDPROC:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 120000
+		HP: 100000
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
@@ -759,7 +761,7 @@ SCRDEPOT:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	Health:
-		HP: 150000
+		HP: 120000
 	WithSpriteBody:
 		PauseOnCondition: disabled
 	Power:
@@ -1026,7 +1028,8 @@ TRNSPORT:
 	Inherits@1: ^Helicopter
 	Inherits@2: ^9CellVision
 	Inherits@3: ^SpriteActor
-	Inherits: ^AircraftShadow
+    Inherits@4: ^LowerSelectionPriority
+	Inherits@5: ^AircraftShadow
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -1068,7 +1071,6 @@ TRNSPORT:
 			mut: forgcarryall
 	Selectable:
 		Bounds: 44,32,0,-8
-		Priority: 4
 	Cargo:
 		Types: Vehicle
 		MaxWeight: 3
@@ -1199,11 +1201,8 @@ NAPULS:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
-	AttackTurreted:
-	Armament:
-		Weapon: EMPulseCannon
-		LocalOffset: 200,0,1500
-		LocalYaw: 0,100
+
+
 	WithSpriteTurret:
 		Sequence: turret
 	Power:
@@ -1220,11 +1219,17 @@ NAPULS:
 		Prerequisite: emp.gdi
 		Factions: gdi, mut, nod, cab, scr
 		ResetOnOwnerChange: true
+	AttackTurreted:
+	Armament:
+		Weapon: EMPulseCannon
+		LocalOffset: 200,0,1500
+		LocalYaw: 0,100
+        Name: Superweapon
 	FireArmamentPower:
 		AllowMultiple: False
 		Cursor: emp
 		MaximumFiringInstances: 1
-		ArmamentName: primary
+		ArmamentName: Superweapon
 		Icon: emp
 		ChargeInterval: 3000
 		Description: E.M. Pulse

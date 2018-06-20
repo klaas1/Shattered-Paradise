@@ -108,6 +108,7 @@ FiendShardAA:
 		ValidTargets: Air
 
 SeerTesla:
+	Inherits: ^FullDamage
 	ReloadDelay: 125
 	Range: 6c0
 	Report: voltautofire.wav
@@ -267,36 +268,6 @@ PsykerRay:
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
-GMarauderShotgun:
-	Inherits: MarauderShotgun
-	Range: 6c768
-
-GFiendShard2:
-	Inherits: FiendShard2
-	Range: 6c768
-	Projectile: BulletAS
-		Inaccuracy: 1c500
-
-GSkirmisherMortar:
-	Inherits: SkirmisherMortar
-	Range: 8c200
-
-GSeerTesla:
-	Inherits: SeerTesla
-	Range: 6c768
-
-GKnightAcid:
-	Inherits: KnightAcid
-	Range: 6c768
-
-GKnightAcid2:
-	Inherits: KnightAcid2
-	Range: 6c768
-
-GPsykerRay:
-	Inherits: PsykerRay
-	Range: 12c0
-
 BerserkerBlow:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Clsn
@@ -348,21 +319,6 @@ BullAcidJump:
 	-Warhead@op: FireShrapnel
 	-Warhead@Acid: GrantExternalCondition
 
-BullBuff:
-	Inherits: ^NoDamage
-	ReloadDelay: 1
-	Range: 5c0
-	Projectile: InstantExplode
-	ValidTargets: Infantry, Vehicle, Building
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 1
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: bullparticle
-		ExplosionPalette: apolgreenalpha
-
-
 RavagerStrike:
 	Inherits: ^FullDamage
 	ReloadDelay: 30
@@ -376,19 +332,6 @@ RavagerStrike:
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 		Versus:
 			InfantryArmor: 125
-
-IFVulcan:
-	Inherits: ^RifleWarhead
-	Inherits@2: ^Piffs
-	ReloadDelay: 35
-	Burst: 1
-	Range: 4c0
-	Report: tsgun4.aud
-	Projectile: BulletAS
-		Speed: 1c682
-	Warhead@1Dam: SpreadDamage
-		Damage: 2500
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, BulletDeath
 
 LynxCannon:
 	Inherits: ^APWarhead
@@ -738,32 +681,6 @@ FlakFire:
 		Explosions: water_piffs
 		ExplosionPalette: ra
 		ValidTargets: Water
-
-VentilatorPoison:
-	Inherits: ^RifleWarhead
-	ReloadDelay: 150
-	Range: 4c0
-	ValidTargets: Infantry
-	Projectile: InstantExplode
-	Warhead@1Dam: SpreadDamage
-		Spread: 2c0
-		Falloff: 300, 150, 100, 50, 0
-		ValidTargets: Infantry
-		InvalidTargets: Mutant
-		Damage: 10000
-		DamageTypes: TiberiumDeath
-	Warhead@2Dam: SpreadDamage
-		Spread: 2c0
-		ValidTargets: Mutant
-		Falloff: 300, 150, 100, 50, 0
-		Damage: -2500
-		Versus:
-			InfantryArmor: 125
-			BuildingArmor: 25
-			VehicleArmor: 25
-			DefenseArmor: 25
-			ConcreteArmor: 5
-		DamageTypes: TiberiumDeath
 
 VeinholeEggElevator:
 	Inherits: EggElevator

@@ -85,6 +85,7 @@ ColossiTeslaSplash:
 	-Warhead@op: FireShrapnel
 
 ColossiBlast:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 2
 	Range: 8c0
 	Projectile: InstantExplode

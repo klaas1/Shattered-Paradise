@@ -272,7 +272,7 @@ MUBUNKR:
 	Tooltip:
 		Name: Bunker
 	Buildable:
-		Description: Fortified position where infantry can fire from within.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Provides stealth detection\n- Up to 4 infantry units can be garrisoned\n- Does not require power to operate
+		Description: Fortified position where infantry can fire from within.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Provides stealth detection when garrisoned.\n- Up to 4 infantry units can be garrisoned\n- Does not require power to operate.
 		Queue: Defense
 		BuildPaletteOrder: 16
 		Prerequisites: murax, ~structures.mut, ~!AImoney
@@ -291,6 +291,8 @@ MUBUNKR:
 		Types: Infantry
 		EjectOnDeath: true
 		LoadedCondition: loaded
+	DetectCloaked:
+		RequiresCondition: loaded && !empdisable && !disabled
 	AttackGarrisoned:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853
@@ -1465,46 +1467,46 @@ REPAIRTUR:
 	RequiresBuildableArea:
 		AreaTypes: building
 
-GUARDIANDEP:
-	Inherits: ^Building
-	Inherits@2: ^2x2Shape
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Landed Guardian Platform
-		Description: Makes the nearby units and\nstructures more resistant to\ndamage.
-	Selectable:
-		Bounds: 110,90
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	WithRangeCircle:
-		Range: 4c0
-		Type: cloakgenerator
-	ProximityExternalCondition@firestorm:
-		Condition: AuraRepair
-		Range: 5c0
-		AffectsParent: false
-	Selectable:
-		Bounds: 110, 60, 3, -4
-	Health:
-		HP: 65000
-	Voiced:
-		VoiceSet: GuardianVO
-		Volume: 3
-	Armament:
-		Weapon: RepairVehicleRep
-		Cursor: repair
-		OutsideRangeCursor: repair
-		TargetStances: Ally
-	AttackTurreted:
-	Turreted:
-	AutoTarget:
-	Transforms:
-		IntoActor: guardian
-		Voice: Action2
-	RequiresBuildableArea:
-		AreaTypes: building
+	# GUARDIANDEP:
+	# Inherits: ^Building
+	# Inherits@2: ^2x2Shape
+	# Valued:
+	# 	Cost: 2000
+	# Tooltip:
+	# 	Name: Landed Guardian Platform
+	# 	Description: Makes the nearby units and\nstructures more resistant to\ndamage.
+	# Selectable:
+	# 	Bounds: 110,90
+	# Building:
+	# 	Footprint: xx xx
+	# 	Dimensions: 2,2
+	# WithRangeCircle:
+	# 	Range: 4c0
+	# 	Type: cloakgenerator
+	# ProximityExternalCondition@firestorm:
+	# 	Condition: AuraRepair
+	# 	Range: 5c0
+	# 	AffectsParent: false
+	# Selectable:
+	# 	Bounds: 110, 60, 3, -4
+	# Health:
+	# 	HP: 65000
+	# Voiced:
+	# 	VoiceSet: GuardianVO
+	# 	Volume: 3
+	# Armament:
+	# 	Weapon: RepairVehicleRep
+	# 	Cursor: repair
+	# 	OutsideRangeCursor: repair
+	# 	TargetStances: Ally
+	# AttackTurreted:
+	# Turreted:
+	# AutoTarget:
+	# Transforms:
+	# 	IntoActor: guardian
+	# 	Voice: Action2
+	# RequiresBuildableArea:
+	# 	AreaTypes: building
 
 MASTL:
 	Inherits: ^DeployedVehicle

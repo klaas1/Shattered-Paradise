@@ -272,15 +272,6 @@
 	FirepowerMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 130
-	# SpeedMultiplier@RANK-1:
-	# RequiresCondition: rank-veteran == 1
-	# Modifier: 110
-	# SpeedMultiplier@RANK-2:
-	# RequiresCondition: rank-veteran == 2
-	# Modifier: 120
-	# SpeedMultiplier@RANK-ELITE:
-	# RequiresCondition: rank-elite
-	# Modifier: 130
 	ReloadDelayMultiplier@RANK-1:
 		RequiresCondition: rank-veteran == 1
 		Modifier: 90
@@ -429,6 +420,10 @@
 	Voiced:
 		VoiceSet: SWVoice
 		Volume: 15
+
+^LowerSelectionPriority:
+	Selectable:
+		Priority: 6
 
 ^Cloakable:
 	Cloak@CLOAKGENERATOR:
@@ -818,6 +813,8 @@
 	Inherits@4: ^FirestormGenBuff
 	Inherits@5: ^CrateBuffs
 	RevealOnFire:
+	OwnerLostAction:
+		Action: Kill
 
 ^StructureEffects:
 	Inherits: ^GenericEffects
@@ -1077,6 +1074,8 @@
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700
+	OwnerLostAction:
+		Action: ChangeOwner
 	Capturable:
 		CaptureThreshold: 100
 	RenderSprites:
@@ -1480,6 +1479,7 @@
 
 ^Engineer:
 	Inherits@1: ^InfantryShape
+	Inherits@2: ^LowerSelectionPriority
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1487,8 +1487,6 @@
 	Buildable:
 		BuildPaletteOrder: 100
 		Description: Utility unit.\n\nGood vs: Buildings\n\nSpecial:\n- Can capture neutral and enemy buildings\n- Can repair buildings to max health instantly\n- Crush class: crushable
-	Selectable:
-		Priority: 6
 	Mobile:
 		Speed: 50
 	Health:
@@ -2110,6 +2108,8 @@
 	FrozenUnderFog:
 	AppearsOnRadar:
 	Interactable:
+	OwnerLostAction:
+		Action: ChangeOwner
 	Building:
 		Dimensions: 1,1
 		Footprint: x

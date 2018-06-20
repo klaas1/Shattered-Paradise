@@ -315,32 +315,19 @@ MechRailgun:
 	Burst: 2
 	BurstDelays: 10
 	Report: railuse5.aud
-	Projectile: AreaBeam
-		Speed: 20c0
-		Duration: 3
-		DamageInterval: 2
-		Width: 80
-		BeyondTargetRange: 0c64
-		Blockable: true
-		Color: 00CCCC
+	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 15000
-		Versus:
-			InfantryArmor: 200
-			BuildingArmor: 175
-			VehicleArmor: 160
-			DefenseArmor: 160
-			ConcreteArmor: 25
+		Damage: 1
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 
 MechRailgun2:
 	ReloadDelay: 120
-	Range: 7c0
+	Range: 8c0
 	Burst: 2
 	BurstDelays: 10
 	Report: railuse5.aud
-	Projectile: Railgun#SpriteRailgun##
+	Projectile: Railgun
 		DamageActorsInLine: True
 		BeamColor: 00CCCC
 		BeamAlphaDeltaPerTick: -10
@@ -350,36 +337,15 @@ MechRailgun2:
 		HelixAnimSequence: idle
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 15000
+		Damage: 30000
 		Versus:
 			InfantryArmor: 200
 			BuildingArmor: 175
 			VehicleArmor: 160
 			DefenseArmor: 160
 			ConcreteArmor: 25
+            Shield: 0
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
-
-MechDummy:
-	ReloadDelay: 120
-	Range: 7c0
-	Burst: 2
-	InvalidTargets: Air
-	ValidTargets: Ground, Water
-	Projectile: LaserZap
-		Width: 20
-		BeamDuration: 3
-		Color: FFFFFF
-		BeamDuration: 30
-		ZOffset: 2047
-		# SecondaryBeam: True
-		# SecondaryBeamWidth: 30
-		# SecondaryBeamZOffset: 2550
-		# SecondaryBeamColor: 
-	Warhead@1Dam: SpreadDamage
-		Spread: 96
-		Damage: 1
-		ValidTargets: Ground, Water, water, Infantry, Vehicle, Building
-		InvalidTargets: Air
 
 MKIITusk:
 	Inherits: MammothTusk
@@ -418,28 +384,6 @@ FighterHellfireAA:
 		Damage: 1500
 		ValidTargets: Air
 
-OBBomb:
-	# # Inherits: ^BombWarhead
-	# # Inherits@2: ^Large_Explosion
-	# # ReloadDelay: 30
-	# # Burst: 5
-	# # MinRange: 0c100
-	# # Report: expnew05.aud, expnew06.aud, expnew09.aud, expnew19.aud
-	# # BurstDelays: 3
-	# # ValidTargets: Ground, Water, Building, Infantry, Vehicle
-	# # Range: 3c0
-	# # Projectile: GravityBomb
-	# 	# Speed: 170
-	# 	# Image: 120mm
-	# 	# Shadow: true
-	# 	# Palette: ra
-	# # Warhead@1Dam: SpreadDamage
-	# 	# Falloff: 100, 80, 70, 60, 50
-	# 	# Spread: 400
-	# 	# Damage: 15000
-	# 	# ValidTargets: Ground, Water, Building, Infantry, Vehicle
-	# 	# DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
-
 OBBombFrontal:
 	Inherits: ^BombWarhead
 	Inherits@2: ^Large_Explosion
@@ -463,50 +407,6 @@ OBBombFrontal:
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@ShieldUpgrade: GrantExternalCondition
 		Range: 128
-
-GuardianRail:
-	Inherits: ^FullDamage
-	ReloadDelay: 100
-	Range: 8c0
-	Report: biggun1.aud
-	Projectile: LaserZap
-		BeamWidth: 2
-		BeamDuration: 3
-		Blockable: true
-		Color: 0080FFC8
-	Warhead@1Dam: SpreadDamage
-		Damage: 7500
-		DamageTypes: Prone60Percent, TriggerProne, BulletDeath
-		Versus:
-			InfantryArmor: 150
-			ConcreteArmor: 5
-
-GuardianClaw:
-	Inherits: ^RifleWarhead
-	Inherits@2: ^Piffs
-	ReloadDelay: 50
-	Range: 7c0
-	Report: cygun1.aud
-	ValidTargets: Air
-	Projectile: BulletAS
-		Speed: 2c682
-		ValidTargets: Air
-	Warhead@1Dam: SpreadDamage
-		Damage: 6000
-		ValidTargets: Ground, Water, Vehicle, Building, Infantry, Air
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-
-GuardianRepair:
-	ReloadDelay: 150
-	Range: 5c0
-	Report: repair11.aud
-	ValidTargets: Repair
-	Projectile: BulletAS
-		Speed: 1c682
-	Warhead@1Dam: SpreadDamage
-		DebugOverlayColor: 00FF00
-		Damage: -9000
-		ValidTargets: Repair
 
 VulcanTower:
 	Inherits: ^RifleWarhead

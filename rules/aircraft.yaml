@@ -154,55 +154,55 @@ ORCAB:
 	SpawnActorOnDeath:
 		Actor: ORCAB.Husk
 
-GUARDIAN:
-	Inherits: ^CombatHelicopter
-	Inherits@1: ^AutoTargetAllAssaultMove
-	Inherits@3: ^BasicStealthDetection
-	Inherits@4: ^PermanentSelfHeal
-	Valued:
-		Cost: 2500
-	Tooltip:
-		Name: Guardian Platform
-	Selectable:
-		Bounds: 110,90
-	Aircraft:
-		TurnSpeed: 5
-		Speed: 60
-		Repulsable: true
-		MoveIntoShroud: true
-		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
-	Health:
-		HP: 65000
-	Armament@primary:
-		Weapon: GuardianRail
-	Armament@secondary:
-		Weapon: GuardianClaw
-	AttackHeli:
-		FacingTolerance: 64
-		Voice: Attack
-	AutoTarget:
-	-RenderVoxels:
-	-WithVoxelBody:
-	RenderSprites:
-		PlayerPalette: playertemperate
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
-	SpawnActorOnDeath:
-		Actor: GUARDIAN.Husk
-	Voiced:
-		VoiceSet: GuardianVO
-		Volume: 3
-	AnnounceOnBuildAS:
-		Voice: Build
-		OnlyToOwner: True
-	AnnounceOnKillAS:
-		Voice: Kill
-		Interval: 1000
-		OnlyToOwner: True
-	Transforms:
-		IntoActor: guardiandep
-		Voice: Action1
+	# GUARDIAN:
+	# Inherits: ^CombatHelicopter
+	# Inherits@1: ^AutoTargetAllAssaultMove
+	# Inherits@3: ^BasicStealthDetection
+	# Inherits@4: ^PermanentSelfHeal
+	# Valued:
+	# 	Cost: 2500
+	# Tooltip:
+	# 	Name: Guardian Platform
+	# Selectable:
+	# 	Bounds: 110,90
+	# Aircraft:
+	# 	TurnSpeed: 5
+	# 	Speed: 60
+	# 	Repulsable: true
+	# 	MoveIntoShroud: true
+	# 	LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+	# Health:
+	# 	HP: 65000
+	# Armament@primary:
+	# 	Weapon: GuardianRail
+	# Armament@secondary:
+	# 	Weapon: GuardianClaw
+	# AttackHeli:
+	# 	FacingTolerance: 64
+	# 	Voice: Attack
+	# AutoTarget:
+	# -RenderVoxels:
+	# -WithVoxelBody:
+	# RenderSprites:
+	# 	PlayerPalette: playertemperate
+	# WithFacingSpriteBody:
+	# BodyOrientation:
+	# 	QuantizedFacings: 32
+	# SpawnActorOnDeath:
+	# 	Actor: GUARDIAN.Husk
+	# Voiced:
+	# 	VoiceSet: GuardianVO
+	# 	Volume: 3
+	# AnnounceOnBuildAS:
+	# 	Voice: Build
+	# 	OnlyToOwner: True
+	# AnnounceOnKillAS:
+	# 	Voice: Kill
+	# 	Interval: 1000
+	# 	OnlyToOwner: True
+	# Transforms:
+	# 	IntoActor: guardiandep
+	# 	Voice: Action1
 
 DPOD:
 	Inherits: ^CombatHelicopter

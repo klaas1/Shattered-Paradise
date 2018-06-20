@@ -13,8 +13,6 @@ GAPOWR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	Health:
-		HP: 75000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	WithIdleOverlay@PLUG:
@@ -296,8 +294,6 @@ NAPOWR:
 	Selectable:
 		Bounds: 88, 48, 2, -6
 		DecorationBounds: 88, 80, 2, -12
-	Health:
-		HP: 75000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	Power:
@@ -604,8 +600,6 @@ MUPOWR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	Health:
-		HP: 75000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	Selectable:
@@ -879,7 +873,7 @@ SCRPOWR:
 		Footprint: xx xx xx
 		Dimensions: 3,2
 	Health:
-		HP: 100000
+		HP: 65000
 	Selectable:
 		Bounds: 90, 48, 0, -6
 		DecorationBounds: 90, 84, 0, -12
@@ -1188,7 +1182,7 @@ CABPOWR:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 120000
+		HP: 80000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	Selectable:

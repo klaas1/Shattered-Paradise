@@ -224,7 +224,7 @@ JUG:
 	WithFacingSpriteBody:
 		Sequence: stand
 	WithAttackAnimation:
-		AttackSequence: shoot
+		Sequence: shoot
 	WithMoveAnimation:
 		MoveSequence: run
 	Selectable:
@@ -1900,7 +1900,8 @@ REPAIRVEHICLE:
 ECM:
 	Inherits: ^Vehicle
 	Inherits@1: ^Ra2vxl
-	Inherits@3: ^CabRender
+	Inherits@2: ^CabRender
+    Inherits@3: ^LowerSelectionPriority
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -1927,7 +1928,6 @@ ECM:
 	SelectionDecorations:
 	WithFacingSpriteBody:
 	Selectable:
-		Priority: 6
 		DecorationBounds: 50, 50, 0, 0
 	-SelfHealing@veinholedrain:
 	-ExternalCondition@veinholedrain:

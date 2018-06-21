@@ -486,17 +486,20 @@ BGGY:
 	# Armaments
 	############################################
 	Armament:
+		Weapon: BuggyCannon
+		LocalOffset: 250,0,125
+		RequiresCondition: !loaded
+	Armament@militant1:
 		Weapon: MilitantRifle
 		LocalOffset: 200,-43,200
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
-		RequiresCondition: !loaded
-	FirepowerMultiplier@MilitantRifle:
-		Modifier: 120
-		RequiresCondition: !loaded
-	Armament@militant:
-		Weapon: BuggyCannon
-		LocalOffset: 250,0,125
+		RequiresCondition: ifv.militant
+	Armament@militant2:
+		Weapon: MilitantRifle
+		LocalOffset: 200,-43,200
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 		RequiresCondition: ifv.militant
 	Armament@crusa:
 		Weapon: CrusaderBazooka

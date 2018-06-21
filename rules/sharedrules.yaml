@@ -1216,7 +1216,7 @@ NAPULS:
 	FireArmamentPower:
 		AllowMultiple: False
 		Cursor: emp
-		MaximumFiringInstances: 1
+		MaximumFiringInstances: 1000
 		ArmamentName: Superweapon
 		Icon: emp
 		ChargeInterval: 3000

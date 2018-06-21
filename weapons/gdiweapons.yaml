@@ -32,7 +32,7 @@ GrenadierBazookaAA:
 
 JJGrenade:
 	Inherits: ^ArtilleryWarhead
-	Inherits@2: ^GreyExplo
+	Inherits@2: ^Small_Bang
 	ReloadDelay: 80
 	Range: 4c0
 	Report: grenadelauncherfire.wav

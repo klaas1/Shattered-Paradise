@@ -15,7 +15,7 @@ SMECH:
 	Mobile:
     	TurnSpeed: 10
 		Speed: 100
-		Crushes: crate
+		Locomotor: Vehicle
 	Health:
 		HP: 17500
 	AttackFrontal:
@@ -54,7 +54,7 @@ MMCH:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 80
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 40000
 	BodyOrientation:
@@ -98,8 +98,7 @@ APC:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 100
-		TerrainSpeeds:
-			Water: 60
+        Locomotor: AmphAPCLocomotor
 	Health:
 		HP: 35000
 	Turreted:
@@ -161,7 +160,7 @@ HVR:
 	Mobile:
 		Speed: 110
 		TurnSpeed: 9
-		TerrainSpeeds:
+		Locomotor: Hover
 	Health:
 		HP: 22000
 	Armament:
@@ -198,6 +197,7 @@ JUG:
 		Prerequisites: ~gaweap, gatech
 	Mobile:
 		Speed: 60
+        Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 21000
 	AttackFrontal:
@@ -249,7 +249,7 @@ SONIC:
 	Mobile:
 		TurnSpeed: 4
 		Speed: 70
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 55000
 	Armor@disruptor:
@@ -288,7 +288,7 @@ G4TNK:
 	Mobile:
 		Speed: 60
 		TurnSpeed: 4
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 80000
 	Turreted:
@@ -434,7 +434,7 @@ BGGY:
 	Mobile:
 		TurnSpeed: 16
 		Speed: 135
-		Crushes: crate
+		Locomotor: Vehicle
 	Turreted:
 		Offset: -250,0,400
 		TurnSpeed: 8
@@ -486,17 +486,20 @@ BGGY:
 	# Armaments
 	############################################
 	Armament:
+		Weapon: BuggyCannon
+		LocalOffset: 250,0,125
+		RequiresCondition: !loaded
+	Armament@militant1:
 		Weapon: MilitantRifle
 		LocalOffset: 200,-43,200
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
-		RequiresCondition: !loaded
-	FirepowerMultiplier@MilitantRifle:
-		Modifier: 120
-		RequiresCondition: !loaded
-	Armament@militant:
-		Weapon: BuggyCannon
-		LocalOffset: 250,0,125
+		RequiresCondition: ifv.militant
+	Armament@militant2:
+		Weapon: MilitantRifle
+		LocalOffset: 200,-43,200
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 		RequiresCondition: ifv.militant
 	Armament@crusa:
 		Weapon: CrusaderBazooka
@@ -742,7 +745,7 @@ BUGGYHOLOGRAM:
 		ReferencePoint: Bottom, Right
 		Palette: mouse
 	Mobile:
-		Crushes: crate
+		Locomotor: Vehicle
 	-Cargo:
 	-ThrowsShrapnel:
 	-Explodes:
@@ -792,7 +795,7 @@ TTNK:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 95
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 		RequiresCondition: undeployed && !empdisable
 	Health:
 		HP: 35000
@@ -870,7 +873,7 @@ TICKHOLOGRAM:
 		ReferencePoint: Bottom, Right
 		Palette: mouse
 	Mobile:
-		Crushes: crate
+		Locomotor: Vehicle
 	-Explodes:
 	-GrantConditionOnDeploy:
 	-WithSpriteBody@deployed:
@@ -927,7 +930,7 @@ BIKE:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 115
-		Crushes: crate
+		Locomotor: Vehicle
 	Armor@Bike:
 		Type: Bike
 	Health:
@@ -1017,6 +1020,7 @@ ARMH:
 	Mobile:
 		Speed: 70
 		TurnSpeed: 5
+		Locomotor: Vehicle
 	WithFacingSpriteBody:
 	Armament:
 		Weapon: BCLazor
@@ -1055,6 +1059,7 @@ HOWTLIZER:
 	Mobile:
 		Speed: 50
 		TurnSpeed: 3
+		Locomotor: InfantryCrusherVehicle
 	Cloak@cloakgenerator:
 		InitialDelay: 170
 		CloakDelay: 170
@@ -1102,7 +1107,7 @@ STNK:
 	Mobile:
 		TurnSpeed: 7
 		Speed: 100
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 20000
 	WithIdleOverlay@shield:
@@ -1201,7 +1206,7 @@ MUTQUAD:
 	Mobile:
 		TurnSpeed: 7
 		Speed: 80
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 30000
 	Voiced:
@@ -1252,7 +1257,7 @@ LYNX:
 	Mobile:
 		TurnSpeed: 7
 		Speed: 100
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	WithFacingSpriteBody:
 	Health:
 		HP: 22500
@@ -1297,7 +1302,7 @@ STRUCK:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 100
-		Crushes: crate
+		Locomotor: Vehicle
 	Health:
 		HP: 40000
 	Voiced:
@@ -1359,7 +1364,7 @@ WOLF:
 		HP: 20000
 	Mobile:
 		Speed: 95
-		SharesCell: false
+		Locomotor: Vehicle
 
 MRLS:
 	Inherits: ^Tank
@@ -1378,7 +1383,7 @@ MRLS:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 90
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	BodyOrientation:
 		QuantizedFacings: 32
 		CameraPitch: 250
@@ -1446,6 +1451,7 @@ DEATHCLAW:
 		HP: 65000
 	Mobile:
 		Speed: 110
+		Locomotor: Vehicle
 	Armament:
 		Weapon: RavagerStrike
 	Selectable:
@@ -1470,6 +1476,7 @@ HVRTRUK3:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 60
+		Locomotor: Hover
 	Health:
 		HP: 12500
 	Explodes:
@@ -1502,7 +1509,7 @@ SCRSCORPION:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 100
-		Crushes: crate
+		Locomotor: Vehicle
 	Health:
 		HP: 30000
 	AttackFrontal:
@@ -1539,6 +1546,7 @@ SCRMBT:
 	Mobile:
     	TurnSpeed: 7
 		Speed: 90
+		Locomotor: Hover
 	Turreted:
 		TurnSpeed: 6
 	Armament:
@@ -1568,6 +1576,7 @@ SCRGLYDER2:
 		HP: 30000
 	Mobile:
 		Speed: 100
+		Locomotor: Hover
 	Transforms:
 		IntoActor: scrglyder1
 	Armament:
@@ -1595,6 +1604,7 @@ SCRRECHARGER:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 80
+		Locomotor: Vehicle
 	Health:
 		HP: 20000
 	-WithIdleOverlay@shield:
@@ -1654,6 +1664,7 @@ SCRMOBMINE:
 	Mobile:
     	TurnSpeed: 7
 		Speed: 95
+		Locomotor: Hover
 	AttackFrontal:
 		PauseOnCondition: empdisable
 	WithRangeCircle:
@@ -1681,7 +1692,7 @@ TRIPOD:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 80
-		Crushes: crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 37500
 	Carryable:
@@ -1775,7 +1786,7 @@ CENTURION:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 70
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 50000
 	Voiced:
@@ -1831,8 +1842,7 @@ REAPERCAB:
 	Mobile:
     	TurnSpeed: 8
 		Speed: 95
-		SharesCell: False
-		Crushes: nada
+		Locomotor: Vehicle
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -1881,6 +1891,7 @@ REPAIRVEHICLE:
 	Mobile:
 		Speed: 70
 		TurnSpeed: 7
+		Locomotor: InfantryCrusherVehicle
 	Armament:
 		Weapon: RepairVehicleRep
 		Cursor: repair
@@ -1915,6 +1926,7 @@ ECM:
 	Mobile:
 		TurnSpeed: 3
 		Speed: 70
+		Locomotor: InfantryCrusherVehicle
 	Voiced:
 		VoiceSet: Limpet
 	AmmoPool:
@@ -1950,6 +1962,7 @@ CABAPC:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 130
+		Locomotor: Hover
 	Voiced:
 		VoiceSet: Limpet
 	Health:
@@ -1981,8 +1994,7 @@ SPIDERARTY:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 70
-		Crushes: crate, infantry
-		TerrainSpeeds:
+		Locomotor: InfantryCrusherVehicle
 	Voiced:
 		VoiceSet: Limpet
 	Health:
@@ -2022,7 +2034,7 @@ PALADIN:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 70
-		Crushes: wall, crate, infantry
+		Locomotor: InfantryCrusherVehicle
 	SelfHealing@Permanent:
 		DamageCooldown: 0
 		Delay: 75
@@ -2077,6 +2089,7 @@ JUGGER:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 75
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 21000
 	AttackFrontal:
@@ -2113,7 +2126,7 @@ LIMPED:
 		HP: 10000
 	Mobile:
 		Speed: 55
-		Crushes: crate
+		Locomotor: Vehicle
 	Crushable:
 		CrushClasses: infantry
 		WarnProbability: 0
@@ -2171,7 +2184,7 @@ ART2:
 	RenderSprites:
 		Image: howtlizer
 
-SCRDRONEC:
+	# SCRDRONEC:
 	# Inherits@1: ^AutoTargetGround
 	# Inherits@2: ^HoverVehicle
 	# Inherits: ^ScrinVehicle

@@ -1399,8 +1399,6 @@
 	-DamagedByTerrain:
 	Voiced:
 		VoiceSet: Limpet
-	Crushable:
-		CrushClasses: HeavyInfantry
 	Mobile:
 		Locomotor: TibInmuneInfantry
 
@@ -1588,8 +1586,6 @@
 ^Tank:
 	Inherits: ^Vehicle
 	Inherits@2: ^AutoTargetGroundAssaultMove
-	Mobile:
-		Locomotor: InfantryCrusherVehicle
 	Explodes:
 		Weapon: UnitExplode
 		EmptyWeapon: UnitExplode
@@ -1631,8 +1627,6 @@
 ^Walker:
 	Inherits: ^Vehicle
 	Inherits@2: ^AutoTargetGroundAssaultMove
-	Mobile:
-		Crushes: wall, crate, infantry
 	Explodes:
 		Weapon: UnitExplode
 		EmptyWeapon: UnitExplode

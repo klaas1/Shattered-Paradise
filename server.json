@@ -1,6 +1,6 @@
 {
     "mod": "sp",
-    "modversion": "{Build 20180620}",
+    "modversion": "{Build 20180620 II}",
     "map": "50795cd535bb2f204d25403e0d794c520aa8658d",
     "timestep": 40,
     "orderlatency": 3,
@@ -69,6 +69,11 @@
             "locked": false
         },
         "crates": {
+            "value": false,
+            "preferredvalue": false,
+            "locked": false
+        },
+        "separateTeamSpawns": {
             "value": false,
             "preferredvalue": false,
             "locked": false

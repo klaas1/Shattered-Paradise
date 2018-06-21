@@ -488,16 +488,12 @@ BGGY:
 	Armament:
 		Weapon: BuggyCannon
 		LocalOffset: 250,0,125
-		RequiresCondition: !loaded
-	Armament@militant1:
-		Weapon: MilitantRifle
-		LocalOffset: 200,-43,200
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
-		RequiresCondition: ifv.militant
-	Armament@militant2:
-		Weapon: MilitantRifle
-		LocalOffset: 200,-43,200
+		RequiresCondition: !loaded
+	Armament@militant1:
+		Weapon: BuggyCannonLoaded
+		LocalOffset: 250,0,125
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 		RequiresCondition: ifv.militant
@@ -520,10 +516,14 @@ BGGY:
 	Armament@bhs:
 		Weapon: BHRifle
 		LocalOffset: 250,0,125
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 		RequiresCondition: ifv.bhs
 	Armament@jumpjet:
 		Weapon: JJGrenade
 		LocalOffset: 250,0,125
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 		RequiresCondition: ifv.jumpjet
 	Armament@medic:
 		Weapon: Heal
@@ -575,10 +575,14 @@ BGGY:
 		Weapon: GLAD120mm
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.glad
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 	Armament@glad2:
 		Weapon: GLAD120mm
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.glad
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 	Armament@moth:
 		Weapon: LurkerProj
 		LocalOffset: 250,0,125

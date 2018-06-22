@@ -362,7 +362,12 @@ HMEC:
 		Name: third
 		FireDelay: 5
 		PauseOnCondition: empdisable
-	Armament@2:
+	Armament@3:
+		Weapon: MechRailgun
+		LocalOffset: 1200,-250,2650, 1200,250,2650
+		PauseOnCondition: empdisable
+		MuzzleSequence: muzzle
+	Armament@4:
 		Weapon: MechRailgun2
 		LocalOffset: 1200,-250,2650, 1200,250,2650
 		PauseOnCondition: empdisable
@@ -737,51 +742,6 @@ FLAMEBGGY:
 	EditorOnlyTooltip:
 		Name: Flame Buggy
 
-BUGGYHOLOGRAM:
-	Inherits: BGGY
-	Inherits@1: ^3CellVision
-	-Buildable:
-	EditorOnlyTooltip:
-		Name: Hollogram Buggy
-	WithDecoration@holoicon:
-		Image: holoicon
-		Sequence: idle
-		ReferencePoint: Bottom, Right
-		Palette: mouse
-	Mobile:
-		Locomotor: Vehicle
-	-Cargo:
-	-ThrowsShrapnel:
-	-Explodes:
-	RenderSprites:
-		Image: bggy
-	FirepowerMultiplier@Hologram:
-		Modifier: 20
-		BaseLevel: 0
-	WithDeathAnimation@body:
-		DeathSequencePalette: apolra2i
-		DeathPaletteIsPlayerPalette: False
-		DeathTypes:
-			BulletDeath: evaporate
-			CabalDeath: evaporate
-			CabalDeathCrate: evaporate
-			BlackHandRfle: evaporate
-			HeadshotDeath: evaporate
-			SmallExplosionDeath: evaporate
-			FireDeath: evaporate
-			TiberiumDeath: evaporate
-			TiberiumDeathStrong: evaporate
-			EnergyDeath: evaporate
-			ExplosionDeath: evaporate
-	GrantPeriodicCondition:
-		Condition: KillMe
-		CooldownDuration: 750
-	KillsSelf@KillMe:
-		RequiresCondition: KillMe
-	ExternalCondition@KillMe:
-		Condition: KillMe
-	-ActorLostNotification:
-
 TTNK:
 	Inherits: ^Tank
 	Inherits@2: ^SpriteActor
@@ -868,6 +828,7 @@ TTNK:
 TICKHOLOGRAM:
 	Inherits: TTNK
 	Inherits@1: ^3CellVision
+    Inherits@2: ^HologramKillTimer
 	-Buildable:
 	EditorOnlyTooltip:
 		Name: Tick Tank Hollogram

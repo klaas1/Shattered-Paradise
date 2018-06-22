@@ -35,7 +35,7 @@ CLOUD1:
 		DeathPaletteIsPlayerPalette: false
 	RejectsOrders:
 	Cloak@CLOAKGENERATOR:
-		-RequiresCondition: HolaSoyVinceConSlapShopMiraLaPapaUnCorteNoSePuedeCortar
+		RequiresCondition: HolaSoyVinceConSlapShopMiraLaPapaUnCorteNoSePuedeCortar
 	RenderSprites:
 		Image: cloud1
 		Palette: effectalpha

@@ -103,11 +103,11 @@ TrooperRail:
 		Versus:
 			InfantryArmor: 50
 			ConcreteArmor: 5
-	Warhead@emp: GrantExternalCondition
+	Warhead@1: GrantExternalCondition
 		Range: 0c768
 		Duration: 30
 		Condition: notmobile
-	Warhead@emp2: GrantExternalCondition
+	Warhead@2: GrantExternalCondition
 		Range: 0c768
 		Duration: 30
 		Condition: empdisable
@@ -337,7 +337,7 @@ MechRailgun2:
 		HelixAnimSequence: idle
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 30000
+		Damage: 15000
 		Versus:
 			InfantryArmor: 200
 			BuildingArmor: 175

@@ -641,7 +641,7 @@ CabalCannon:
 	BurstDelays: 20
 	MinRange: 6c0
 	Inaccuracy: 100c0
-	Report: MISL1.AUD
+	Report: devourerlasor0000.wav, devourerlasor0001.wav, devourerlasor0002.wav
 	ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Projectile: BulletAS
 		Speed: 300

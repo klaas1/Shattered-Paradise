@@ -451,23 +451,13 @@ BHS:
 	-DamagedByTerrain:
 
 FlameHologram:
-	Inherits@2: ^Hologram
+	Inherits@2: ^HologramSoldier
 	Armament:
 		Weapon: MilitantRifle
 	RenderSprites:
 		Image: altnode1
 	EditorOnlyTooltip:
 		Name: Militant Hollogram
-
-CrusaHologram:
-	Inherits@2: ^Hologram
-	Armament:
-		Weapon: CrusaderBazooka
-		LocalOffset: 0,0,600
-	RenderSprites:
-		Image: crusader
-	EditorOnlyTooltip:
-		Name: Crusader Hollogram
 
 MARAUDER:
 	Inherits: ^Mutant

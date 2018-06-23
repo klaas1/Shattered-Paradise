@@ -216,7 +216,7 @@
 		SubterraneanTransitionCost: -5
 	Locomotor@HOVER:
 		Name: Hover
-		Crushes: crate, infantry
+		Crushes: crate
 		TerrainSpeeds:
 			Clear: 100
 			Ice: 100

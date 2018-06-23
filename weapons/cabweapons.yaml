@@ -194,6 +194,7 @@ CyCannon:
 		Speed: 250
 		Acceleration: 50
 		Shadow: true
+		Palette: effect
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
 		Spread: 300

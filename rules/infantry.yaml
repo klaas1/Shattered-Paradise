@@ -544,7 +544,6 @@ MUTFIEND:
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeath
-		RequiresLobbyCreeps: true
 	Valued:
 		Cost: 250
 	Health:

@@ -509,7 +509,7 @@ FirestormExplo:
 		Blockable: false
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 150
-		Damage: 30000
+		Damage: 300000
 		ValidTargets: Ground, Water, Air
 		ValidStances: Enemy, Neutral
 	Warhead@2Eff: CreateEffect

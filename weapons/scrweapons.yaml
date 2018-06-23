@@ -404,12 +404,16 @@ StormRiderBlast:
 		ValidTargets: Ground, Water, Vehicle, Building, Infantry
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 		InvalidTargets: Shark, Air
+		Versus:
+			InfantryArmor: 50
 	Warhead@2Shark: SpreadDamage
 		Damage: 4500
 		ValidTargets: Shark
 		InvalidTargets: Building, Vehicle, Air
 		ValidStances: Enemy, Neutral
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
+		Versus:
+			InfantryArmor: 50
 	Warhead@ShieldUpgrade: GrantExternalCondition
 		Range: 96
 

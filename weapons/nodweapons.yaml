@@ -401,13 +401,11 @@ Proton:
 	Burst: 9
 	ValidTargets: Ground, Water, Vehicle, Building, Infantry
 	BurstDelays: 2
-	Projectile: Missile
-		Speed: 341
+	Projectile: BulletAS
+		Speed: 600
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 128
-		HorizontalRateOfTurn: 40
-		VerticalRateOfTurn: 40
 		Palette: effect
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
@@ -420,6 +418,20 @@ ProtonAA:
 	Inherits: Proton
 	BurstDelays: 3
 	ValidTargets: Air
+	Projectile: Missile
+		TerrainHeightAware: True
+		CruiseAltitude: 5000
+		MinimumLaunchAngle: 255
+		MaximumLaunchAngle: 255
+		MaximumLaunchSpeed: 0c543
+		MinimumLaunchSpeed: 0c301
+		RangeLimit: 15c0
+		AllowSnapping: true
+		CloseEnough: 200
+		Speed: 400
+		Blockable: false
+		HorizontalRateOfTurn: 60
+		VerticalRateOfTurn: 60
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 1200

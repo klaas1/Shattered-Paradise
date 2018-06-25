@@ -73,7 +73,7 @@
             "preferredvalue": false,
             "locked": false
         },
-        "separateTeamSpawns": {
+        "randomspawnpositions": {
             "value": false,
             "preferredvalue": false,
             "locked": false

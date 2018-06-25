@@ -103,11 +103,11 @@ TrooperRail:
 		Versus:
 			InfantryArmor: 50
 			ConcreteArmor: 5
-	Warhead@emp: GrantExternalCondition
+	Warhead@1: GrantExternalCondition
 		Range: 0c768
 		Duration: 30
 		Condition: notmobile
-	Warhead@emp2: GrantExternalCondition
+	Warhead@2: GrantExternalCondition
 		Range: 0c768
 		Duration: 30
 		Condition: empdisable
@@ -256,7 +256,7 @@ SonicZap:
 	Warhead@2Dam: SpreadDamage
 		Range: 0, 48
 		Falloff: 50, 50
-		Damage: 12
+		Damage: 1000
 		AffectsParent: false
 		ValidStances: Ally
 		Versus:
@@ -337,7 +337,7 @@ MechRailgun2:
 		HelixAnimSequence: idle
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 30000
+		Damage: 15000
 		Versus:
 			InfantryArmor: 200
 			BuildingArmor: 175
@@ -509,7 +509,7 @@ FirestormExplo:
 		Blockable: false
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 150
-		Damage: 30000
+		Damage: 300000
 		ValidTargets: Ground, Water, Air
 		ValidStances: Enemy, Neutral
 	Warhead@2Eff: CreateEffect

@@ -430,6 +430,7 @@ ClusterMissile:
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@Shake: ScreenShaker
 		Intensity: 10
+		Duration: 15
 	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 6c0
 	Warhead@8Radio: CreateRadioactivity
@@ -525,6 +526,7 @@ MeteorSpawner:
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@Shake: ScreenShaker
 		Intensity: 10
+		Duration: 15
 	Warhead@6: FireShrapnel
 		Weapon: MeteorSpawner2
 		Amount: 1
@@ -641,7 +643,7 @@ CabalCannon:
 	BurstDelays: 20
 	MinRange: 6c0
 	Inaccuracy: 100c0
-	Report: MISL1.AUD
+	Report: devourerlasor0000.wav, devourerlasor0001.wav, devourerlasor0002.wav
 	ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Projectile: BulletAS
 		Speed: 300
@@ -671,6 +673,7 @@ CabalCannon:
 		InvalidTargets: Vehicle, Building, Wall
 	Warhead@Shake: ScreenShaker
 		Intensity: 10
+		Duration: 15
 	Warhead@6Spawn: SpawnActor
 		Actors: visionactor
 		Range: 3

@@ -928,10 +928,8 @@ bloodderrick:
 	Inherits: ^EmpOverlay
 	Defaults:
 		Offset: 0, -32, 60
-	idle: derrickidle
-		Length: *
 		UseTilesetCode: false
-	move: derrickmove
+	idle: derrickidle
 		Length: *
 		UseTilesetCode: false
 	dead: derrickidle

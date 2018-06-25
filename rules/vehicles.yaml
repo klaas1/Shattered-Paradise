@@ -362,7 +362,12 @@ HMEC:
 		Name: third
 		FireDelay: 5
 		PauseOnCondition: empdisable
-	Armament@2:
+	Armament@3:
+		Weapon: MechRailgun
+		LocalOffset: 1200,-250,2650, 1200,250,2650
+		PauseOnCondition: empdisable
+		MuzzleSequence: muzzle
+	Armament@4:
 		Weapon: MechRailgun2
 		LocalOffset: 1200,-250,2650, 1200,250,2650
 		PauseOnCondition: empdisable
@@ -488,16 +493,12 @@ BGGY:
 	Armament:
 		Weapon: BuggyCannon
 		LocalOffset: 250,0,125
-		RequiresCondition: !loaded
-	Armament@militant1:
-		Weapon: MilitantRifle
-		LocalOffset: 200,-43,200
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
-		RequiresCondition: ifv.militant
-	Armament@militant2:
-		Weapon: MilitantRifle
-		LocalOffset: 200,-43,200
+		RequiresCondition: !loaded
+	Armament@militant1:
+		Weapon: BuggyCannonLoaded
+		LocalOffset: 250,0,125
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 		RequiresCondition: ifv.militant
@@ -520,10 +521,14 @@ BGGY:
 	Armament@bhs:
 		Weapon: BHRifle
 		LocalOffset: 250,0,125
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 		RequiresCondition: ifv.bhs
 	Armament@jumpjet:
 		Weapon: JJGrenade
 		LocalOffset: 250,0,125
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 		RequiresCondition: ifv.jumpjet
 	Armament@medic:
 		Weapon: Heal
@@ -575,10 +580,14 @@ BGGY:
 		Weapon: GLAD120mm
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.glad
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 	Armament@glad2:
 		Weapon: GLAD120mm
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.glad
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
 	Armament@moth:
 		Weapon: LurkerProj
 		LocalOffset: 250,0,125
@@ -733,51 +742,6 @@ FLAMEBGGY:
 	EditorOnlyTooltip:
 		Name: Flame Buggy
 
-BUGGYHOLOGRAM:
-	Inherits: BGGY
-	Inherits@1: ^3CellVision
-	-Buildable:
-	EditorOnlyTooltip:
-		Name: Hollogram Buggy
-	WithDecoration@holoicon:
-		Image: holoicon
-		Sequence: idle
-		ReferencePoint: Bottom, Right
-		Palette: mouse
-	Mobile:
-		Locomotor: Vehicle
-	-Cargo:
-	-ThrowsShrapnel:
-	-Explodes:
-	RenderSprites:
-		Image: bggy
-	FirepowerMultiplier@Hologram:
-		Modifier: 20
-		BaseLevel: 0
-	WithDeathAnimation@body:
-		DeathSequencePalette: apolra2i
-		DeathPaletteIsPlayerPalette: False
-		DeathTypes:
-			BulletDeath: evaporate
-			CabalDeath: evaporate
-			CabalDeathCrate: evaporate
-			BlackHandRfle: evaporate
-			HeadshotDeath: evaporate
-			SmallExplosionDeath: evaporate
-			FireDeath: evaporate
-			TiberiumDeath: evaporate
-			TiberiumDeathStrong: evaporate
-			EnergyDeath: evaporate
-			ExplosionDeath: evaporate
-	GrantPeriodicCondition:
-		Condition: KillMe
-		CooldownDuration: 750
-	KillsSelf@KillMe:
-		RequiresCondition: KillMe
-	ExternalCondition@KillMe:
-		Condition: KillMe
-	-ActorLostNotification:
-
 TTNK:
 	Inherits: ^Tank
 	Inherits@2: ^SpriteActor
@@ -864,6 +828,7 @@ TTNK:
 TICKHOLOGRAM:
 	Inherits: TTNK
 	Inherits@1: ^3CellVision
+    Inherits@2: ^HologramKillTimer
 	-Buildable:
 	EditorOnlyTooltip:
 		Name: Tick Tank Hollogram
@@ -1509,7 +1474,7 @@ SCRSCORPION:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 100
-		Locomotor: Vehicle
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 30000
 	AttackFrontal:

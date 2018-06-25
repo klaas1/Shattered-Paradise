@@ -423,13 +423,12 @@ CABPIT:
 	Tooltip:
 		Name: Drone Pit
 	Buildable:
-		Description: Drone Hangar, launches bomber drones.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Drones are killable\n- Requires power to operate
+		Description: Drone Hangar, launches bomber drones.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Drones can be shoot down with anti air weapons.
 		Queue: Defense
 		BuildPaletteOrder: 19
 		Prerequisites: cabclaw, ~structures.cab
 		IconPalette: UnittemIconCab
-	Power:
-		Amount: -20
+	-GrantCondition@IDISABLE:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1093,7 +1092,7 @@ CABEYE:
 		Queue: Defense
 		BuildPaletteOrder: 52
 		Description: High tech detection system.\n\nSpecial:\n- Provides huge vision range\n- Shrouds the enemy vision range in a certain area\n- Requires power to operate
-		Prerequisites: ~structures.cab, cabtech
+		Prerequisites: ~structures.cab, cabradr
 	Valued:
 		Cost: 1000
 	Tooltip:

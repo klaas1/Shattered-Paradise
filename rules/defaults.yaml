@@ -1424,17 +1424,16 @@
 	-SpawnActorOnDeath@tiberium:
 	-SpawnActorOnDeath@conversion:
 
-^Hologram:
-	Inherits: ^Soldier
-	Inherits@1: ^3CellVision
-	Health:
-		HP: 4500
-	-GainsExperience:
-	-GivesExperience:
-	-Passenger:
-	-DamagedByTerrain:
-	-ActorLostNotification:
-	AttackFrontal:
+^HologramKillTimer:
+	GrantPeriodicCondition:
+		Condition: KillMe
+		CooldownDuration: 375
+	KillsSelf@KillMe:
+		RequiresCondition: KillMe
+		KillsSelf: True
+		DamageTypes: BulletDeath
+	ExternalCondition@KillMe:
+		Condition: KillMe
 	WithDecoration@holoicon:
 		Image: holoicon
 		Sequence: idle
@@ -1444,20 +1443,24 @@
 	WithDeathAnimation@body:
 		DeathSequencePalette: apolra2i
 		DeathPaletteIsPlayerPalette: False
-		DeathTypes:
-			BulletDeath: evaporate
-			CabalDeath: evaporate
-			CabalDeathCrate: evaporate
-			BlackHandRfle: evaporate
-			HeadshotDeath: evaporate
-			SmallExplosionDeath: evaporate
-			FireDeath: evaporate
-			TiberiumDeath: evaporate
-			EnergyDeath: evaporate
-			ExplosionDeath: evaporate
+        UseDeathTypeSuffix: False
+		DeathSequence: dieevaporate
 	FirepowerMultiplier@Hologram:
 		Modifier: 2
 		BaseLevel: 0
+
+^HologramSoldier:
+	Inherits: ^Soldier
+	Inherits@1: ^3CellVision
+	Inherits@2: ^HologramKillTimer
+	Health:
+		HP: 4500
+	-GainsExperience:
+	-GivesExperience:
+	-Passenger:
+	-DamagedByTerrain:
+	-ActorLostNotification:
+	AttackFrontal:
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@tib:
 	-WithDeathAnimation@explosion:
@@ -1467,13 +1470,6 @@
 	-SpawnActorOnDeath@tiberium:
 	-SpawnActorOnDeath@conversion:
 	-SpawnActorOnDeath@ScrinEssence:
-	GrantPeriodicCondition:
-		Condition: KillMe
-		CooldownDuration: 375
-	KillsSelf@KillMe:
-		RequiresCondition: KillMe
-	ExternalCondition@KillMe:
-		Condition: KillMe
 
 ^Engineer:
 	Inherits@1: ^InfantryShape

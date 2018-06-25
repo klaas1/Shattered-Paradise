@@ -1,7 +1,7 @@
 ^WeaponGenericUpgrades:
 	Warhead@ShieldUpgrade: GrantExternalCondition
 		Condition: BreakShield
-		Range: 64
+		Range: 96
 		Duration: 400
 
 ^RifleWarhead:

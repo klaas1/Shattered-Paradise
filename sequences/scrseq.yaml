@@ -488,6 +488,8 @@ scrpod:
 
 stormrider:
 	Inherits: ^SpriteVehicle
+	idle:
+		Facings: 32
 	icon: stormridericon
 
 scrglyder1:

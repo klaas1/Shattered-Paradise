@@ -2465,13 +2465,11 @@ BLOODDERRICK:
 		HP: 40000
 	Explodes:
 		Weapon: TiberiumExplosion
-	RenderSprites:
-		PlayerPalette: playerscrin
 	SelectionDecorations:
 		VisualBounds: 102, 60, 0, 0
-	WithRangeCircle:
-		Range: 12c0
-		Type: Bounty
+	RenderSprites:
+		-Palette: playerscrin
+		PlayerPalette: playerscrin
 	SpawnActorOnDeath@1:
 		Actor: permacrab
 		Probability: 100

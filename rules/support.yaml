@@ -268,7 +268,7 @@ MUBUNKR:
 	Inherits@2: ^TowerStealthDetection
 	Inherits@3: ^2x2Shape
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: Bunker
 	Buildable:
@@ -1117,7 +1117,7 @@ CABEYE:
 		Bounds: 90, 124, 0, -40
 		DecorationBounds: 90, 124, 0, -40
 	Power:
-		Amount: -30
+		Amount: -50
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack
 	ProvidesPrerequisite@buildingname:

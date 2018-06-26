@@ -218,7 +218,7 @@ EAGLEGUARD:
 	Mobile:
 		Speed: 50
 	Health:
-		HP: 35000
+		HP: 30000
 	-DamagedByTerrain:
 	Armament@1:
 		Weapon: TrooperRail
@@ -539,11 +539,6 @@ MUTFIEND:
 		BuildPaletteOrder: 12
 		Description: Tiberium beasts trained to take out enemys with tiberium shards.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Heals on Tiberium\n- Can attack Air\n- Crush class: crushable
 		Prerequisites: ~murax
-	SpawnActorOnDeath@conversion:
-		Actor: cybdog
-		Probability: 100
-		OwnerType: Killer
-		DeathType: CabalDeath
 	Valued:
 		Cost: 250
 	Health:
@@ -552,6 +547,7 @@ MUTFIEND:
 			Radius: 213
 	Mobile:
 		Speed: 80
+        Locomotor: TibFiends
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -581,9 +577,6 @@ MUTFIEND:
 	-SpawnActorOnDeath@FLAMEGUY2:
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
-		Probability: 100
-		OwnerType: Killer
-		DeathType: CabalDeathInfantry
 	WithDeathAnimation@normal:
 		DeathTypes:
 			TiberiumDeath: 1, 2
@@ -662,7 +655,7 @@ SEER:
 		Description: Psychic mutant that leads armies through fear.\n\nGood vs: Vehicles, Aircraft.\n\nSpecial:\n- Can persuade friendly units to fight harder when deployed.\n- Buffed units will get 20% extra attack speed, move speed and receive 20% more damage.\n- Effect lasts 15 seconds.\n- Heals on Tiberium.\n- Can attack air\n- Crush class: crushable.
 		Prerequisites: ~murax, muhall
 	Valued:
-		Cost: 500
+		Cost: 650
 	Tooltip:
 		Name: Tyrant
 	Voiced:
@@ -947,7 +940,7 @@ COLOSSI:
 		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.\n- One hits infantry.
 		Prerequisites: ~scrrax, scrtech
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Colossus
 	Selectable:

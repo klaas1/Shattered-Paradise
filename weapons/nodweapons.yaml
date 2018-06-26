@@ -151,14 +151,14 @@ BikeExplo:
 	InvalidTargets: Air
 	Report: gexpbara, gexpbarb, gexpbarc
 	Warhead@1Dam: SpreadDamage
-		Spread: 700
+		Spread: 2c0
 		Damage: 90000
 		ValidTargets: Ground, Water, Water, Air
 		AffectsParent: true
 		InvalidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		Versus:
-			BuildingArmor: 100
+			BuildingArmor: 75
 			ConcreteArmor: 15
 	Warhead@5Sharpnel: FireShrapnel
 		Weapon: NukeFlame3

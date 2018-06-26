@@ -228,7 +228,7 @@ JuggCannon:
 
 SonicZap:
 	ReloadDelay: 60
-	Range: 6c0
+	Range: 5c0
 	Report: sonic4.aud
 	Projectile: AreaBeam
 		Speed: 0c250
@@ -256,7 +256,7 @@ SonicZap:
 	Warhead@2Dam: SpreadDamage
 		Range: 0, 48
 		Falloff: 50, 50
-		Damage: 1000
+		Damage: 2000
 		AffectsParent: false
 		ValidStances: Ally
 		Versus:

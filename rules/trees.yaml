@@ -32,8 +32,8 @@ BIGBLUE3:
     Inherits: ^Tree
     AmbientSound@TibSound:
         SoundFiles: floatmov.wav, flotmov2.wav, flotmov3.wav, flotmov4.wav
-        Delay: 1500, 3000
-        Interval: 1500, 3000
+        Delay: 0, 500
+        Interval: 750, 1500
 
 TREE01:
 	Inherits: ^Tree

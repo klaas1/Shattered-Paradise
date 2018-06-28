@@ -1092,7 +1092,7 @@ SCRADVPOWR:
 	Inherits@3: ^ScrinDeathExplo
 	Inherits@4: ^3x3Shape
 	Tooltip:
-		Name: Reality Destabilizer
+		Name: Reality destabilizer
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 9

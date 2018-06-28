@@ -63,7 +63,7 @@ MCV:
 	Armor:
 		Type: VehicleArmor
 	Mobile:
-		Speed: 60
+		Speed: 70
 		TurnSpeed: 5
 		Locomotor: InfantryCrusherVehicle
 	Targetable@MindControl:
@@ -196,7 +196,7 @@ SCRHARV:
 		Prerequisites: scrproc, ~scrweap
 		InitialActivity: FindResources
 	Mobile:
-        Locomotor: InfantryCrusherVehicle
+		Crushes: wall, crate, infantry, RazorShark
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	Capturable:

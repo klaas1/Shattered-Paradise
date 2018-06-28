@@ -813,8 +813,6 @@
 	Inherits@4: ^FirestormGenBuff
 	Inherits@5: ^CrateBuffs
 	RevealOnFire:
-        ArmamentNames: primary, secondary, OnFoot
-        Duration: 50
 	OwnerLostAction:
 		Action: Kill
 
@@ -961,8 +959,7 @@
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	RevealsShroud:
-		Type: Footprint
-        MaxHeightDelta: 3
+		Type: Footprint 
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700
@@ -1092,11 +1089,6 @@
 		UseDeathTypeSuffix: false
 	Targetable@NoAutoTarget:
 		TargetTypes: NoAutoTarget
-	WithBuildingRepairDecoration:
-		Image: allyrepair
-		Sequence: repair
-		ReferencePoint: Center
-		Palette: mouse
 
 ^CivBillboard:
 	Inherits: ^CivBuilding
@@ -1180,7 +1172,6 @@
 	RevealsShroud:
 		RequiresCondition: !inside-tunnel
 		Type: CenterPosition
-        MaxHeightDelta: 3
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
@@ -1311,7 +1302,6 @@
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
-	-DamagedByTerrain:
 	WithDeathAnimation@normal:
 		DeathTypes:
 			TiberiumDeath: 1, 2
@@ -1532,7 +1522,6 @@
 		PlayerExperienceModifier: 1
 	RevealsShroud:
 		Type: CenterPosition
-        MaxHeightDelta: 3
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0

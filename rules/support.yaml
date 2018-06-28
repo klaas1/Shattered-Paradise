@@ -268,7 +268,7 @@ MUBUNKR:
 	Inherits@2: ^TowerStealthDetection
 	Inherits@3: ^2x2Shape
 	Valued:
-		Cost: 400
+		Cost: 500
 	Tooltip:
 		Name: Bunker
 	Buildable:
@@ -484,7 +484,7 @@ CABBLAST:
 		Recoils: no
 	Armament:
 		Weapon: BlasterProton
-		LocalOffset: 600,256,128, 600,-256,128, 300,256,256, 300,-256,256
+		LocalOffset: 512,0,512
 	Power:
 		Amount: -50
 	SelectionDecorations:
@@ -1117,7 +1117,7 @@ CABEYE:
 		Bounds: 90, 124, 0, -40
 		DecorationBounds: 90, 124, 0, -40
 	Power:
-		Amount: -50
+		Amount: -30
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack
 	ProvidesPrerequisite@buildingname:

@@ -2433,9 +2433,6 @@ WELL:
 		Image: scrsmoke
 		Palette: apolgreenalpha
 		Offset: 1300,0,0
-	GivesCashOnCapture:
-		Amount: 250
-    
 
 MACHINESHOP:
 	Inherits: ^TechBuilding
@@ -2447,6 +2444,7 @@ MACHINESHOP:
 		Dimensions: 2, 2
 	Selectable:
 		Bounds: 90, 60, 0, -12
+	RenderSprites:
 	Health:
 		HP: 100000
 	RenderSprites:
@@ -2676,8 +2674,7 @@ EGGS:
 		Palette: playermut
 	Targetable:
 		TargetTypes: Defence, Ground, C4, DetonateAttack, NeutralTibCritter
-    -Demolishable:
-    -ThrowsShrapnel@SMALL:
+	-ThrowsShrapnel@SMALL:
 	-ThrowsShrapnel@LARGE:
 	-Explodes:
 	-SoundOnDamageTransition:

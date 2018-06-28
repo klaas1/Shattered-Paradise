@@ -151,14 +151,14 @@ BikeExplo:
 	InvalidTargets: Air
 	Report: gexpbara, gexpbarb, gexpbarc
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c0
+		Spread: 700
 		Damage: 90000
 		ValidTargets: Ground, Water, Water, Air
 		AffectsParent: true
 		InvalidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		Versus:
-			BuildingArmor: 75
+			BuildingArmor: 100
 			ConcreteArmor: 15
 	Warhead@5Sharpnel: FireShrapnel
 		Weapon: NukeFlame3
@@ -478,13 +478,10 @@ TurretLaserFire:
 	Range: 6c768
 	Report: lastur1.aud
 	Projectile: LaserZap
-		Duration: 15
-		ZOffset: 2047
-		Color: FF000080
-		SecondaryBeam: true
-		SecondaryBeamWidth: 180
-		SecondaryBeamZOffset: 2047
-		SecondaryBeamColor: FF000040
+		Width: 50
+		BeamDuration: 5
+		ZOffset: 4000
+		SecondaryBeamZOffset: 4000
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 3500

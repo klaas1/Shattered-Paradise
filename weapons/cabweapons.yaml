@@ -281,7 +281,7 @@ DroneHostMissile:
 	ReloadDelay: 175
 	Range: 10c0
 	Burst: 2
-	Report: samshot1.aud, icbm1.aud
+	Report: samshot1.aud
 	ValidTargets: Ground, Water
 	Projectile: Missile
 		Blockable: false
@@ -435,7 +435,6 @@ DevourerGrinder:
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 	Warhead@Shake: ScreenShaker
 		Intensity: 2
-		Duration: 15
 
 DevourerExplo:
 	ReloadDelay: 25
@@ -571,7 +570,7 @@ CabJetMiniBomb:
 BlasterProton:
 	Inherits: ^FullDamage
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 100
+	ReloadDelay: 150
 	Burst: 6
 	Range: 11c0
 	MinRange: 3c0
@@ -582,10 +581,9 @@ BlasterProton:
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 1c0
-		LaunchAngle: 120
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
-		Spread: 350
+		Spread: 200
 		Damage: 5850
 		ValidTargets: Ground, Water, Vehicle, Infantry, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath

@@ -431,7 +431,7 @@ CERBERUS:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Manticore
+		Name: Paladin Cruiser
 	Buildable:
 		Description: High tech frigate armed with a mobile stealth generator.\n\nGood vs: Ground Targets\n\nSpecial:\n- Cloacks friendly units next to it.
 		Queue: Air
@@ -479,6 +479,9 @@ CERBERUS:
 	WithRangeCircle:
 		Range: 4c0
 		Type: cloakgenerator
+	AmbientSound:
+		RequiresCondition: LaserCharge == 1
+		SoundFiles: obelpowr.aud
 
 MUTHELI:
 	Inherits: ^CombatHelicopter
@@ -1277,7 +1280,7 @@ DEVOURER:
 		Name: Devourer
 	Buildable:
 		Queue: Air
-		Description: Heavy and slow melee frigate.\n\nGood vs: Ground Targets\n\nSpecial:\n- Selfrepair
+		Description: Heavy and slow melee frigate.\n\nGood vs: Buildings\n\nSpecial:\n- Selfrepair
 		BuildPaletteOrder: 15
 		Prerequisites: ~cabair, cabtech
 	Selectable:

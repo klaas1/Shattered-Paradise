@@ -484,7 +484,7 @@ CABBLAST:
 		Recoils: no
 	Armament:
 		Weapon: BlasterProton
-		LocalOffset: 512,0,512
+		LocalOffset: 600,256,128, 600,-256,128, 300,256,256, 300,-256,256
 	Power:
 		Amount: -50
 	SelectionDecorations:

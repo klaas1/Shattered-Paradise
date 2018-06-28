@@ -281,7 +281,7 @@ DroneHostMissile:
 	ReloadDelay: 175
 	Range: 10c0
 	Burst: 2
-	Report: samshot1.aud
+	Report: samshot1.aud, icbm1.aud
 	ValidTargets: Ground, Water
 	Projectile: Missile
 		Blockable: false
@@ -582,6 +582,7 @@ BlasterProton:
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 1c0
+		LaunchAngle: 120
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
 		Spread: 350

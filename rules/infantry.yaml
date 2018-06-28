@@ -1173,8 +1173,6 @@ PDRONE:
 		Description: Melee drone programmed to kill enemy infantry.\n\nSpecial:\n- Can only attack infantry\n- Turns killed infantry into worker cyborgs\n- Does not receive damage from tiberium fields.\n- Crush class: crushable
 		BuildPaletteOrder: 26
 		Prerequisites: ~cabclaw
-	WithInfantryBody:
-		-RequiresCondition: !WebDisable
 	Selectable:
 		Bounds: 22,32,0,0
 	Crushable:
@@ -1188,7 +1186,10 @@ PDRONE:
 	Health:
 		HP: 9500
 	WithInfantryBody:
-		IdleSequences: idle1,idle2
+		IdleSequences: idle1, idle2
+		AttackSequences: shoot
+		DefaultAttackSequence: fire
+		-RequiresCondition: !WebDisable
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything

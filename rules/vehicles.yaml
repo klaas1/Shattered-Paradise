@@ -290,7 +290,7 @@ G4TNK:
 		TurnSpeed: 4
 		Locomotor: InfantryCrusherVehicle
 	Health:
-		HP: 80000
+		HP: 72000
 	Turreted:
 		TurnSpeed: 3
 		Offset: -200,0,0
@@ -323,13 +323,13 @@ HMEC:
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Behemoth
+		Name: Mammoth MK.II
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 9
 		Prerequisites: ~gaweap, gtdrop
 		BuildAtProductionType: Mammoth
-		Description: GDI's super-heavy walker and the proud of their army.\n\nGood vs: Everything\n\nSpecial:\n- Maximum Supply of 1.\n- Selfhealing up to 100%.\n- Can attack air.\n- Can crush infantry.\n- Immune to mind control.\n- Can crush vehicles and cyborgs.\n- It is deployed via dropship at the Dropship Bay.
+		Description: GDI's super-heavy walker and the pride of their army.\n\nGood vs: Everything\n\nSpecial:\n- Maximum Supply of 1.\n- Selfhealing up to 100%.\n- Can attack air.\n- Can crush infantry.\n- Immune to mind control.\n- Can crush vehicles and cyborgs.\n- It is deployed via dropship at the Dropship Bay.
 		BuildLimit: 1
 	Mobile:
 		TurnSpeed: 3
@@ -901,7 +901,7 @@ BIKE:
 	Health:
 		HP: 7000
 	WithRangeCircle:
-		Range: 2c0
+		Range: 3c0
 		Type: DemoBike
 	RenderSprites:
 	Explodes:
@@ -915,6 +915,8 @@ BIKE:
 		ReferencePoint: Bottom, Left
 		Palette: mouse
 		ShowToEnemies: true
+	AutoTarget:
+	AttackFrontal:
 
 SAPC:
 	Inherits: ^SubterraneanVoxelVehicle
@@ -1216,16 +1218,16 @@ LYNX:
 		BuildPaletteOrder: 18
 		Prerequisites: ~muweap
 	Valued:
-		Cost: 650
+		Cost: 700
 	Tooltip:
 		Name: Lynx
 	Mobile:
-		TurnSpeed: 7
-		Speed: 100
+		TurnSpeed: 10
+		Speed: 105
 		Locomotor: InfantryCrusherVehicle
 	WithFacingSpriteBody:
 	Health:
-		HP: 22500
+		HP: 25000
 	Voiced:
 		VoiceSet: Trike
 		Volume: 3
@@ -1314,7 +1316,7 @@ WOLF:
 		Description: Tiberium beast that uses tiberium acid to harm nearby units.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- Attacks reduce target resistance by 15%.\n- Can mutate killed units.\n- Inmune to tiberium radiation.\n- E.M.P. Inmune.\n- Heals even when in combat.
 		Prerequisites: ~muweap, muradr
 	Valued:
-		Cost: 700
+		Cost: 800
 	Tooltip:
 		Name: Tiberian Bull
 	Armament@PRIMARY:
@@ -1329,7 +1331,7 @@ WOLF:
 		HP: 20000
 	Mobile:
 		Speed: 95
-		Locomotor: Vehicle
+        Locomotor: TibVeCritter
 
 MRLS:
 	Inherits: ^Tank
@@ -1416,7 +1418,7 @@ DEATHCLAW:
 		HP: 65000
 	Mobile:
 		Speed: 110
-		Locomotor: Vehicle
+        Locomotor: TibVeCritter
 	Armament:
 		Weapon: RavagerStrike
 	Selectable:
@@ -1455,6 +1457,8 @@ HVRTRUK3:
 		ReferencePoint: Bottom, Left
 		Palette: mouse
 		ShowToEnemies: true
+	AutoTarget:
+	AttackFrontal:
 
 SCRSCORPION:
 	Inherits@1: ^Walker
@@ -1507,7 +1511,7 @@ SCRMBT:
 	Tooltip:
 		Name: Hover Tank
 	Health:
-		HP: 30000
+		HP: 28000
 	Mobile:
     	TurnSpeed: 7
 		Speed: 90
@@ -1531,7 +1535,7 @@ SCRGLYDER2:
 		Queue: Vehicle
 		BuildPaletteOrder: 26
 		BuildAtProductionType: Tank
-		Description: Anti air hover vehicle.\n\nGood vs Aircraft\n\nSpecial:\n- Can transform into an aerial version that can only engage ground units.\n- Absorbs essence from killed units to heal.\nBUG: Switching modes will make the unit loose any accumulated experience.\n- Hovers (it ignores terrain like Veins and Water)
+		Description: Anti air hover vehicle.\n\nGood vs Aircraft\n\nSpecial:\n- Can transform into an aerial version that can only engage ground units.\n- Aerial Version weapon performs Good Vs Infantry.\n- Absorbs essence from killed units to heal.\nBUG: Switching modes will make the unit loose any accumulated experience.\n- Hovers (it ignores terrain like Veins and Water)
 		Prerequisites: ~scrweap, scrradr
 	Valued:
 		Cost: 700
@@ -1652,14 +1656,14 @@ TRIPOD:
 		BuildPaletteOrder: 29
 		BuildAtProductionType: Tank
 		Prerequisites: ~scrweap, scrtech
-		Description: Advanced walker.\n\n  Good vs Infantry, Buildings.\n\nSpecial:\n- Absorbs essence from killed units to heal.
+		Description: Advanced walker.\n\n  Good vs Infantry, Buildings.\n\nSpecial:\n- Absorbs essence from killed units to heal\n- Can crush infantry
 		IconPalette: chromescrin
 	Mobile:
 		TurnSpeed: 6
 		Speed: 80
 		Locomotor: InfantryCrusherVehicle
 	Health:
-		HP: 37500
+		HP: 45000
 	Carryable:
 		LocalOffset: 0,0,2500
 	Voiced:
@@ -1946,6 +1950,7 @@ SPIDERARTY:
 	Inherits: ^Walker
 	Inherits@1: ^6CellVision
 	Inherits@2: ^CabRender
+	Inherits@3: ^PermanentSelfHeal
 	Valued:
 		Cost: 1150
 	Tooltip:
@@ -1954,7 +1959,7 @@ SPIDERARTY:
 		Queue: Vehicle
 		BuildPaletteOrder: 34
 		BuildAtProductionType: Tank
-		Description: Heavy Artillery that deploys drones at the targetted area.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals AOE damage\n- Minimum attack distance.\n- Upon attack drones get spawned that attack the enemy.\n- Converts killed units into workers.\n- Can crush infantry.
+		Description: Heavy Artillery that deploys drones at the targetted area.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals AOE damage\n- Minimum attack distance.\n- Upon attack drones get spawned that attack the enemy.\n- Converts killed units into workers.\n- Can crush infantry.\n- Selfrepair
 		Prerequisites: ~cabweap, cabtech
 	Mobile:
 		TurnSpeed: 6
@@ -1989,7 +1994,7 @@ PALADIN:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Paladin
+		Name: Minotaur
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 35

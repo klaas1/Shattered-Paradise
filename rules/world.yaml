@@ -128,6 +128,38 @@
 			BlueTiberium: 70
 				PathingCost: 50
 			Veins: 80
+  	Locomotor@TibFiends:
+		Name: TibFiends
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Ice: 100
+			Road: 110
+			Rail: 100
+			DirtRoad: 105
+			Rough: 80
+			Bridge: 110
+			Tiberium: 100
+				PathingCost: 50
+			BlueTiberium: 100
+				PathingCost: 50
+			Veins: 80
+	Locomotor@TibVeCritter:
+		Name: TibVeCritter
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 100
+			Ice: 100
+			Road: 120
+			Rail: 100
+			DirtRoad: 110
+			Rough: 80
+			Bridge: 120
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 80
+				PathingCost: 300
 	Locomotor@Vehicle:
 		Name: Vehicle
 		Crushes: crate

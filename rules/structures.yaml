@@ -46,7 +46,7 @@ GAPILE:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
-		Description: Arms Infantry.\n\nSpecial:\n- Heals infantry in an certain area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
+		Description: Arms Infantry.\n\nSpecial:\n- Heals infantry in an area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
 		Prerequisites: anypower, ~structures.gdi
 	Building:
 		Footprint: xx xx
@@ -258,6 +258,8 @@ GTDROP:
 		Condition: DropshipCloak
 		Range: 10c0
 		AffectsParent: false
+	Power:
+		Amount: -150
 
 NODYARD:
 	Inherits: GACNST
@@ -310,7 +312,7 @@ NAHAND:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
-		Description: Arms Infantry.\n\nSpecial:\n- Heals infantry in an certain area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
+		Description: Arms Infantry.\n\nSpecial:\n- Heals infantry in an area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
 		Prerequisites: anypower, ~structures.nod
 	Building:
 		Footprint: xxx xxx
@@ -560,6 +562,8 @@ NAMISL:
 		RequiresCondition: powerdown
 		Modifier: 0
 	WithNukeLaunchAnimation:
+	Power:
+		Amount: -150
 
 MUTYARD:
 	Inherits: GACNST
@@ -624,7 +628,7 @@ MURAX:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
-		Description: Arms Infantry.\n\nSpecial:\n- Heals infantry in an certain area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
+		Description: Arms Infantry.\n\nSpecial:\n- Heals infantry in an area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
 		Prerequisites: anypower, ~structures.mut
 	Tooltip:
 		Name: Mutant Armory
@@ -807,6 +811,8 @@ MUTSW2:
 		HP: 300000
 	RequiresBuildableArea:
 		AreaTypes: building
+	Power:
+		Amount: -150
 
 ^ScrinDeathExplo:
 	Explodes:
@@ -898,7 +904,7 @@ SCRRAX:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
-		Description: Calls down Infantry.\n\nSpecial:\n- Heals infantry in an certain area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
+		Description: Calls down Infantry.\n\nSpecial:\n- Heals infantry in an area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
 		Prerequisites: scrpowr, ~structures.scr
 	Building:
 		Footprint: xx xx
@@ -1141,6 +1147,8 @@ SCRADVPOWR:
 		HP: 300000
 	RequiresBuildableArea:
 		AreaTypes: building
+	Power:
+		Amount: -150
 
 CABYARD:
 	Inherits: GACNST
@@ -1203,7 +1211,7 @@ CABCLAW:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
-		Description: Processes Infantry.\n\nSpecial:\n- Heals infantry in an certain area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
+		Description: Processes Infantry.\n\nSpecial:\n- Heals infantry in an area around it.\n- Maximun production speed is reached with 7 barracks.\n- Max production speed reduces production time by 50%.
 		Prerequisites: anypower, ~structures.cab
 	Building:
 		Footprint: xx xx xx
@@ -1415,3 +1423,5 @@ CABOBELISK:
 		HP: 300000
 	RequiresBuildableArea:
 		AreaTypes: building
+	Power:
+		Amount: -150

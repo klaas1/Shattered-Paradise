@@ -189,9 +189,9 @@ CyCannon:
 	Range: 7c0
 	Report: scrin5b.aud
 	ValidTargets: Ground, Water
-	Projectile: Missile
+	Projectile: BulletAS
 		Blockable: false
-		Speed: 250
+		Speed: 750
 		Acceleration: 50
 		Shadow: true
 		Palette: effect
@@ -235,25 +235,25 @@ WorkerMinigun:
 Dogzooka:
 	Inherits: JJGrenade
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 75
+	ReloadDelay: 50
 	Range: 4c0
-	MinRange: 0c512
 	Report: rketinf1.aud
 	ValidTargets: Ground, Water
 	Warhead@1Dam: SpreadDamage
-		Damage: 3000
+		Damage: 1600
 		Versus:
 			InfantryArmor: 100
 			BuildingArmor: 30
-			VehicleArmor: 15
+			VehicleArmor: 10
 			DefenseArmor: 15
 			AircraftArmor: 100
 			ConcreteArmor: 5
+			Shield: 0
 
 CenturionVulcan:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
-	ReloadDelay: 35
+	ReloadDelay: 50
 	Burst: 2
 	Range: 6c0
 	Report: HammerGun0000.wav, HammerGun0001.wav, HammerGun0002.wav
@@ -261,7 +261,7 @@ CenturionVulcan:
 		Speed: 1c682
 		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 1700
+		Damage: 2000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 RepairVehicleRep:
@@ -278,7 +278,7 @@ RepairVehicleRep:
 
 DroneHostMissile:
 	Inherits: ^RocketWarhead
-	ReloadDelay: 175
+	ReloadDelay: 150
 	Range: 10c0
 	Burst: 2
 	Report: samshot1.aud, icbm1.aud
@@ -295,11 +295,11 @@ DroneHostMissile:
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@1: FireShrapnel
-		Amount: 2
+		Amount: 1
 		Weapon: DroneHostShell
 		ValidTargets: Ground, Air, Water, Airhit
 	Warhead@2: FireShrapnel
-		Amount: 2
+		Amount: 1
 		Weapon: DroneHostShellSpawner
 		ValidTargets: Ground, Air, Water, Airhit
 

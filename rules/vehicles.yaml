@@ -895,12 +895,12 @@ BIKE:
 	-ActorLostNotification:
 	Mobile:
 		TurnSpeed: 10
-		Speed: 115
+		Speed: 95
 		Locomotor: Vehicle
 	Armor@Bike:
 		Type: Bike
 	Health:
-		HP: 7000
+		HP: 9000
 	WithRangeCircle:
 		Range: 3c0
 		Type: DemoBike
@@ -1429,7 +1429,7 @@ HVRTRUK3:
 	Inherits@2: ^HoverVehicle
 	Inherits@3: ^MutRender
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: Demo Truck
 	Buildable:
@@ -1570,7 +1570,7 @@ SCRRECHARGER:
 		BuildPaletteOrder: 27
 		BuildAtProductionType: Tank
 		Description: Mobile shield generator.\n\nSpecial:\n- Generates shields around nearby friendly units.\n- Shields protect from all damage until the unit is hit 4 times.\n- Does not protect against super weapons.\n- Absorbs essence from killed enemies to heal.\n- Can Crush infantry.\n- Cannot apply shields to aircraft.
-		Prerequisites: ~scrweap, scrdepot, scrradr
+		Prerequisites: ~scrweap, scrdepot
 	Mobile:
 		TurnSpeed: 8
 		Speed: 80

@@ -422,7 +422,7 @@
 		MaxHeightDelta: 3
 		Range: 2c0
 	Power:
-		Amount: -150
+		Amount: -200
 	SupportPowerChargeBar:
 	AnnounceOnBuild:
 	Voiced:
@@ -1022,7 +1022,8 @@
 	Inherits@2: ^DisableOnLowPowerOrPowerDown
 	Inherits@3: ^8CellVision
 	RevealsShroud:
-		Type: Footprint 
+		Type: Footprint
+        MaxHeightDelta: 3
 	-GivesBuildableArea:
 	-SpawnActorOnDeath@tiberium2:
 	AutoTarget:
@@ -1082,6 +1083,7 @@
 	Inherits@0: ^6CellVision
 	RevealsShroud:
 		Type: Footprint 
+        MaxHeightDelta: 3
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700

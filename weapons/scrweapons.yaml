@@ -236,6 +236,9 @@ ScorpAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
 		Damage: 975
+		Versus:
+			InfantryArmor: 150
+			BuildingArmor: 75
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		InvalidTargets: Shark
 	Warhead@2Shark: SpreadDamage
@@ -243,7 +246,7 @@ ScorpAcid:
 		Damage: 975
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		Versus:
-			InfantryArmor: 160
+			InfantryArmor: 150
 			BuildingArmor: 75
 		ValidTargets: Shark
 		InvalidTargets: Building, Vehicle
@@ -317,7 +320,7 @@ SCRMBTLASOR:
 TripodLaser:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
-	Range: 6c0
+	Range: 7c0
 	Report: scrin5b.aud
 	Projectile: BulletAS
 		Speed: 350
@@ -327,10 +330,10 @@ TripodLaser:
 		Palette: apolgreenalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 4000
+		Damage: 2500
 		Versus:
 			InfantryArmor: 100
-			BuildingArmor: 100
+			BuildingArmor: 80
 			VehicleArmor: 50
 			DefenseArmor: 50
 			ConcreteArmor: 30
@@ -363,8 +366,14 @@ TripodProton:
 		Image: TORPEDO
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 250
-		Damage: 1000
+		Spread: 0c512
+		Damage: 2500
+		Versus:
+			InfantryArmor: 100
+			BuildingArmor: 80
+			VehicleArmor: 50
+			DefenseArmor: 50
+			ConcreteArmor: 30
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 	Warhead@4Sharpnel: FireShrapnel
@@ -599,6 +608,9 @@ NeedlerAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
 		Damage: 800
+		Versus:
+			InfantryArmor: 150
+			BuildingArmor: 75
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		InvalidTargets: Shark
 	Warhead@2Shark: SpreadDamage

@@ -395,7 +395,7 @@ SCRIN:
 		AirborneCondition: airborne
 		MoveIntoShroud: true
 	Health:
-		HP: 20000
+		HP: 17500
 	Armament@1:
 		Weapon: Proton
 		PauseOnCondition: !ammo

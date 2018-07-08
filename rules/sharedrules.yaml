@@ -663,7 +663,7 @@ GADEPT:
 	Inherits: ^Building
 	Inherits@1: ^3x3Shape
 	Valued:
-		Cost: 700
+		Cost: 900
 	Tooltip:
 		Name: Service Depot
 	Buildable:
@@ -753,7 +753,7 @@ SCRDEPOT:
 	WithSpriteBody:
 		PauseOnCondition: disabled
 	Power:
-		Amount: -100
+		Amount: -200
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -871,7 +871,7 @@ NAFNCE:
 	Inherits: ^Wall
 	Inherits@1: ^Cloakable
 	-Replaceable:
-	Valued:
+    Valued:
 		Cost: 50
 	CustomSellValue:
 		Value: 0
@@ -1020,7 +1020,7 @@ TRNSPORT:
     Inherits@4: ^LowerSelectionPriority
 	Inherits@5: ^AircraftShadow
 	Valued:
-		Cost: 400
+		Cost: 600
 	Tooltip:
 		Name: Carryall
 	Buildable:

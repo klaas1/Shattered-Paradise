@@ -600,7 +600,7 @@ MeteorRainNormal:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
-		Damage: 3500
+		Damage: 10000
 		ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
@@ -657,7 +657,7 @@ CabalCannon:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 700
-		Damage: 30000
+		Damage: 15000
 		Versus:
 			BuildingArmor: 600
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water

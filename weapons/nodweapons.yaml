@@ -131,7 +131,7 @@ BuggyCannon:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
 	ReloadDelay: 50
-	Range: 4c0
+	Range: 5c0
 	Report: tsgun4.aud
 	Projectile: BulletAS
 		Speed: 1c682

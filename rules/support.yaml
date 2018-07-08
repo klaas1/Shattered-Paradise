@@ -869,7 +869,6 @@ NATMPL:
 		Sequence: idle-lights
 	NukePower@NodNuke:
 		Cursor: nuke
-    
 		Icon: clustermissile
 		ChargeInterval: 9000
 		Description: Atomic Bomb
@@ -900,6 +899,7 @@ NATMPL:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
+		FlightDelay: 200
 		PauseOnCondition: empdisable || disabled
 	Health:
 		HP: 300000
@@ -1109,7 +1109,7 @@ CABEYE:
 		Range: 12c0
 		Type: cabeye
 	CreatesShroud:
-		Range: 12c0
+		Range: 11c0
 		RequiresCondition: !disabled
 	RevealsShroud@asd:
 		Range: 24c0
@@ -1118,7 +1118,7 @@ CABEYE:
 		Bounds: 90, 124, 0, -40
 		DecorationBounds: 90, 124, 0, -40
 	Power:
-		Amount: -50
+		Amount: -100
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack
 	ProvidesPrerequisite@buildingname:
@@ -1172,7 +1172,7 @@ CABSW1:
 	FireArmamentPower:
 		Cursor: emp
 		Icon: cabcannon
-		ChargeInterval: 6750
+		ChargeInterval: 7500
 		Description: Iron Savior
 		LongDesc: Fires a volley of energy volleys at the target location.\n\nSpecial:\n- Instant kills ground units and aircraft
 		EndChargeSound: SuperWeaponReady

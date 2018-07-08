@@ -61,7 +61,7 @@ LegioNeedlerAA:
 ColossiTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
-	Range: 4c0
+	Range: 5c0
 	Report: voltautofire.wav
 	Charges: yes
 	Projectile: TeslaZap
@@ -283,7 +283,7 @@ VanguardShrapnel:
 SCRMBTLASOR:
 	Inherits: ^FullDamage
 	Inherits@2: ^Scrin_Explo
-	ReloadDelay: 75
+	ReloadDelay: 95
 	Range: 6c0
 	Report: SeekerShot0000.wav,  SeekerShot0001.wav,  SeekerShot0002.wav,  SeekerShot0003.wav
 	Projectile: LaserZap
@@ -297,7 +297,7 @@ SCRMBTLASOR:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
-		Damage: 7000
+		Damage: 8500
 		Versus:
 			InfantryArmor: 45
 		DamageTypes: Prone60Percent, TriggerProne, FireDeath, ScrinEssenceKill
@@ -436,14 +436,14 @@ Glyder1Cannon:
 	Report: photon1.wav
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
-		Speed: 250
+		Speed: 500
 		Image: torpedo
 		Shadow: true
 		-TrailImage: small_smoke_trail
 		-TrailPalette: effectalpha75
 		Palette: apblue
 	Warhead@1Dam: SpreadDamage
-		Spread: 90
+		Spread: 200
 		Damage: 3000
 		Versus:
 			InfantryArmor: 140
@@ -545,7 +545,7 @@ WyvermBlast:
 	Range: 6c512
 	MinRange: 0c100
 	Report: laserpistol.wav
-	ValidTargets: Ground, Water, Air
+	ValidTargets: Ground, Water
 	Projectile: Missile
 		TerrainHeightAware: True
 		CruiseAltitude: 4000
@@ -572,14 +572,15 @@ WyvermBlast:
 			VehicleArmor: 100
 			DefenseArmor: 100
 			BuildingArmor: 50
-		ValidTargets: Ground, Water, Air
+		ValidTargets: Ground, Water
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 
 WyvermBlastAA:
 	Inherits: WyvermBlast
+	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		Damage: 1500
+		Damage: 2500
 
 NeedlerAcid:
 	Inherits: ^AcidWarhead

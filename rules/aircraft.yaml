@@ -431,12 +431,12 @@ CERBERUS:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Manticore
+		Name: Paladin Cruiser
 	Buildable:
 		Description: High tech frigate armed with a mobile stealth generator.\n\nGood vs: Ground Targets\n\nSpecial:\n- Cloacks friendly units next to it.
 		Queue: Air
 		BuildPaletteOrder: 5
-		Prerequisites: ~nahpad, natmpl
+		Prerequisites: ~nahpad, natech
 	Selectable:
 		Bounds: 90,45
 	Aircraft:
@@ -479,6 +479,9 @@ CERBERUS:
 	WithRangeCircle:
 		Range: 4c0
 		Type: cloakgenerator
+	AmbientSound:
+		RequiresCondition: LaserCharge == 1
+		SoundFiles: obelpowr.aud
 
 MUTHELI:
 	Inherits: ^CombatHelicopter
@@ -734,7 +737,7 @@ DRACHE:
 		TargetTypes: MindControlInmune
 	Aircraft:
 		TurnSpeed: 3
-		Speed: 60
+		Speed: 50
 		MoveIntoShroud: true
 		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	MustBeDestroyed:
@@ -1085,7 +1088,8 @@ SCRBATTLESHIP:
 	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
-	Inherits@5: ^PermanentSelfHeal
+	Inherits@3: ^PermanentSelfHeal
+	Inherits@4: ^CommandoIcon
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 4000
@@ -1095,7 +1099,7 @@ SCRBATTLESHIP:
 		Description: Scrin flagship\n\nStrong vs Ground units\n\nSpecial:\n- Maximum Supply of 1.\n- Auto repairs.\n- Can absorb essence from killed enemies to heal.
 		Queue: Air
 		BuildPaletteOrder: 12
-		Prerequisites: ~scrair, scrtech
+		Prerequisites: ~scrair, scradvpowr
 		BuildLimit: 1
 	Voiced:
 		VoiceSet: Deva
@@ -1277,14 +1281,14 @@ DEVOURER:
 		Name: Devourer
 	Buildable:
 		Queue: Air
-		Description: Heavy and slow melee frigate.\n\nGood vs: Ground Targets\n\nSpecial:\n- Selfrepair
+		Description: Heavy and slow melee frigate.\n\nGood vs: Buildings\n\nSpecial:\n- Selfrepair
 		BuildPaletteOrder: 15
 		Prerequisites: ~cabair, cabtech
 	Selectable:
 		Bounds: 80, 60, 0, -24
 	Aircraft:
 		TurnSpeed: 6
-		Speed: 55
+		Speed: 35
 		CruiseAltitude: 0c750
 		Repulsable: true
 		MoveIntoShroud: true

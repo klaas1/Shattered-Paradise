@@ -220,6 +220,10 @@ wrenchicon:
 	Inherits: ^IngameIcon
 	idle: wrenchicon
 
+skullicon:
+	Inherits: ^IngameIcon
+	idle: skullicon
+
 mpspawn:
 	Inherits: ^IngameIcon
 

@@ -1,6 +1,6 @@
 Metadata:
 	Title: Shattered Paradise
-	Version: {Build 20180622}
+	Version: {Build 20180704 Bleed}
 	Website: https://www.openra.net
 	WebIcon32: https://ppmforums.com/files/logo2megamini_614.png
 
@@ -102,7 +102,7 @@ MapFolders:
 	sp|maps/ww: System
 	sp|maps/meme: System
 	sp|maps/balanced: System
-	sp|maps/coop: System
+	sp|maps/others: System
 	~^maps/sp/{DEV_VERSION}: User
 
 Rules:

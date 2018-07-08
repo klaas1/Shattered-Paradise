@@ -1,6 +1,6 @@
 {
     "mod": "sp",
-    "modversion": "{Build 20180622}",
+    "modversion": "{Build 20180704 Bleed}",
     "map": "50795cd535bb2f204d25403e0d794c520aa8658d",
     "timestep": 40,
     "orderlatency": 3,
@@ -73,7 +73,7 @@
             "preferredvalue": false,
             "locked": false
         },
-        "randomspawnpositions": {
+        "separateteamspawns": {
             "value": false,
             "preferredvalue": false,
             "locked": false

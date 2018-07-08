@@ -268,7 +268,7 @@ MUBUNKR:
 	Inherits@2: ^TowerStealthDetection
 	Inherits@3: ^2x2Shape
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: Bunker
 	Buildable:
@@ -484,7 +484,7 @@ CABBLAST:
 		Recoils: no
 	Armament:
 		Weapon: BlasterProton
-		LocalOffset: 512,0,512
+		LocalOffset: 600,256,128, 600,-256,128, 300,256,256, 300,-256,256
 	Power:
 		Amount: -50
 	SelectionDecorations:
@@ -869,6 +869,7 @@ NATMPL:
 		Sequence: idle-lights
 	NukePower@NodNuke:
 		Cursor: nuke
+    
 		Icon: clustermissile
 		ChargeInterval: 9000
 		Description: Atomic Bomb
@@ -1117,7 +1118,7 @@ CABEYE:
 		Bounds: 90, 124, 0, -40
 		DecorationBounds: 90, 124, 0, -40
 	Power:
-		Amount: -30
+		Amount: -50
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack
 	ProvidesPrerequisite@buildingname:

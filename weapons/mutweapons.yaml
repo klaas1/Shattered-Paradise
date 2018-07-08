@@ -336,11 +336,11 @@ RavagerStrike:
 LynxCannon:
 	Inherits: ^APWarhead
 	Inherits@2: ^Mediuml_Clsn
-	ReloadDelay: 75
+	ReloadDelay: 50
 	Range: 6c0
 	Report: 120mmf.aud
 	Warhead@1Dam: SpreadDamage
-		Damage: 4500
+		Damage: 4000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 QuadFire:
@@ -374,7 +374,7 @@ QuadFireAA:
 
 TiberianRocket:
 	Inherits: ^ArtilleryWarhead
-	ReloadDelay: 225
+	ReloadDelay: 120
 	Range: 12c0
 	Burst: 8
 	Report: rketinf1.aud
@@ -391,8 +391,8 @@ TiberianRocket:
 		TrailImage: small_smoke_trail
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 200
-		Damage: 5290
+		Spread: 350
+		Damage: 4500
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@2EffWater: CreateEffect

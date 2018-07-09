@@ -37,7 +37,7 @@ MarauderShotgunInnacurate:
 SkirmisherMortar:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Clsn
-	Inherits@3: ^Small_Twlt
+	Inherits@3: ^SpawnsIrradiation
 	ReloadDelay: 150
 	Range: 8c0
 	MinRange: 2c0
@@ -56,23 +56,17 @@ SkirmisherMortar:
 		Spread: 300
 		Damage: 3500
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
-	-Warhead@4Smu: LeaveSmudge
 	-Warhead@5Smu: LeaveSmudge
-	Warhead@8Radio: CreateRadioactivity
-		Range: 1
-		Level: 6
-		Falloff: 100
-		MaxLevel: 1000
 
 FiendShard2:
 	Inherits: ^APWarhead
 	ReloadDelay: 60
 	Burst: 2
-	Range: 4c0
+	Range: 5c0
 	Report: fiend2.aud
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
-		Speed: 450
+		Speed: 900
 		Image: CRYSTAL4
 		Inaccuracy: 512
 		HorizontalRateOfTurn: 40
@@ -98,7 +92,7 @@ FiendShardAA:
 	Inherits: FiendShard2
 	Inherits: ^RocketWarhead
 	ValidTargets: Air
-	Range: 5c512
+	Range: 6c0
 	Projectile: Missile
 		Image: CRYSTAL4
 		Palette: greentiberium
@@ -295,6 +289,9 @@ BullAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 1250
+        Versus:
+			VehicleArmor: 35
+			DefenseArmor: 35
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Warhead@2Eff: CreateEffect
@@ -362,7 +359,7 @@ QuadFire:
 
 QuadFireAA:
 	Inherits: QuadFire
-	Range: 7c512
+	Range: 7c0
 	ValidTargets: Air
 	Projectile: InstantHit
 	InvalidTargets: Ground, Water, Vehicle, Building, Infantry
@@ -374,6 +371,7 @@ QuadFireAA:
 
 TiberianRocket:
 	Inherits: ^ArtilleryWarhead
+	Inherits@1: ^SpawnsIrradiation
 	ReloadDelay: 120
 	Range: 12c0
 	Burst: 8
@@ -407,15 +405,12 @@ TiberianRocket:
 		Explosions: tib_expsmall
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water, Air, AirHit
-	Warhead@8Radio: CreateRadioactivity
-		Range: 1, 2
-		Level: 20
-		Falloff: 70, 40
-		MaxLevel: 1000
+	Warhead@3Radio: CreateRadioactivity
+		Level: 10
 
 TiberianRocketClean:
 	Inherits: TiberianRocket
-	-Warhead@8Radio: CreateRadioactivity
+	-Warhead@3Radio: CreateRadioactivity
 	-Warhead@4Eff: CreateEffect
 	Warhead@2Eff: CreateEffect
 		Explosions: jsclsn16, jsclsn16b, jexplosml, jexplosml
@@ -446,7 +441,7 @@ MiniNuke:
 		Range: 1, 2, 3, 4, 5, 6
 		Level: 1000
 		Falloff: 100, 60, 40, 25, 15, 5
-		MaxLevel: 1000
+		MaxLevel: 500
 		RadioactivityLayerName: OrangeRadiation
 
 QueenShard:
@@ -481,7 +476,7 @@ QueenShard:
 		Range: 1
 		Level: 40
 		Falloff: 100
-		MaxLevel: 1000
+		MaxLevel: 500
 
 SpawnEggShrapnel:
 	ReloadDelay: 500
@@ -613,6 +608,7 @@ CloudDamage:
 FalconPunch:
 	Inherits: ^BombWarhead
 	Inherits@2: ^Mediuml_Clsn
+	Inherits@3: ^SpawnsIrradiationFalcon
 	ValidTargets: Ground, Water, Water
 	ReloadDelay: 1
 	MinRange: 0c100
@@ -644,11 +640,6 @@ FalconPunch:
 		Actors: cloud1, cloud1, cloud1, cloud1, cloud1, cloud1, cloud1, cloud1
 		FallRate: 5000
 		Range: 3
-	Warhead@8Radio: CreateRadioactivity
-		Range: 1, 2, 3
-		Level: 600
-		Falloff: 100, 50, 25
-		MaxLevel: 1000
 
 LeonidCannon:
 	Inherits: ^APWarhead

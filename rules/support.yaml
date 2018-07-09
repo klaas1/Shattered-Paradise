@@ -734,7 +734,7 @@ GAFIRE:
 	WithIdleOverlay@2:
 		Sequence: idle2
 	Power:
-		Amount: -50
+		Amount: -100
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 	RequiresBuildableArea:
@@ -771,6 +771,7 @@ GAPLUG:
 		Description: Ion Cannon Array
 		DisplayTimer: True
 		DisplayBeacon: True
+		TargetCircleRange: 5c0
 		LongDesc: Fires an array of ion cannons on the targetted area.
 		ChargeInterval: 6000
 		ActivationSequence: idle
@@ -899,6 +900,7 @@ NATMPL:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
+		FlightDelay: 200
 		PauseOnCondition: empdisable || disabled
 	Health:
 		HP: 300000
@@ -971,10 +973,11 @@ MUTSW1:
 		Bounds: 116, 60, 3, -6
 		DecorationBounds: 116, 78, 3, -8
 	SelectionDecorations:
-	SpawnActorPower@ionstorm:
-		Actor: ionstormgenerator
+	DetonateWeaponPower@IonStorm:
+		Weapon: IonStormSpawnerWeapon
 		Icon: ionstorm
 		ChargeInterval: 9000
+		TargetCircleRange: 8c0
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady
 		LaunchSpeechNotification: SuperweaponFired
@@ -1053,7 +1056,7 @@ SCRSW1:
 		Bounds: 116, 60, 3, -6
 		DecorationBounds: 116, 78, 3, -8
 	SelectionDecorations:
-	DetonateWeaponPower@nanomachinesson:
+	DetonateWeaponPower@MeteorStorm:
 		Cursor: emp
 		Icon: meteor
 		ChargeInterval: 6000
@@ -1061,6 +1064,7 @@ SCRSW1:
 		LongDesc: Drags meteors from orbit dealing moderate damage over a wide area.\n\nSpecial:\n- Instant kills ground units and aircraft.
 		Prerequisites: MeteorSpawner
 		Weapon: MeteorSpawner
+		TargetCircleRange: 5c0
 		OrderName: MeteorSpawner
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady
@@ -1108,7 +1112,7 @@ CABEYE:
 		Range: 12c0
 		Type: cabeye
 	CreatesShroud:
-		Range: 12c0
+		Range: 11c0
 		RequiresCondition: !disabled
 	RevealsShroud@asd:
 		Range: 24c0
@@ -1117,7 +1121,7 @@ CABEYE:
 		Bounds: 90, 124, 0, -40
 		DecorationBounds: 90, 124, 0, -40
 	Power:
-		Amount: -50
+		Amount: -100
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack
 	ProvidesPrerequisite@buildingname:
@@ -1171,7 +1175,8 @@ CABSW1:
 	FireArmamentPower:
 		Cursor: emp
 		Icon: cabcannon
-		ChargeInterval: 6750
+		TargetCircleRange: 5c0
+		ChargeInterval: 7500
 		Description: Iron Savior
 		LongDesc: Fires a volley of energy volleys at the target location.\n\nSpecial:\n- Instant kills ground units and aircraft
 		EndChargeSound: SuperWeaponReady

@@ -28,6 +28,7 @@
 		Tick: 80
 	shield: shieldmedium
 		Length: 1
+		Offset: 0,12
 	dummy: dot
 		UseTilesetCode: false
 		ZOffset: -9999

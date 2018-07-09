@@ -9,45 +9,6 @@
 		Condition: GetsOneShotedbySuperweapons
 		ValidTargets: Aircraft, Air, Airhit
 
-MultiCluster:
-	Inherits: ^SWBaseEffects
-	ReloadDelay: 80
-	Range: 6c0
-	Report: MISL1.AUD
-	ValidTargets: Ground, Water, Air
-	Projectile: Missile
-		MaximumLaunchSpeed: 170
-		Arm: 2
-		Blockable: false
-		Shadow: true
-		Inaccuracy: 128
-		Image: DRAGON
-		HorizontalRateOfTurn: 8
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 6500
-		ValidTargets: Ground, Water, Air
-		Versus:
-			InfantryArmor: 25
-			BuildingArmor: 65
-			VehicleArmor: 75
-			DefenseArmor: 75
-			ConcreteArmor: 60
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_explosion
-		ImpactSounds: expnew09.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSounds: ssplash2.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall
-
 SuicideBomb:
 	ReloadDelay: 1
 	Range: 0c512
@@ -103,22 +64,18 @@ EMPulseCannon:
 VeterancyWeapon:
 	ReloadDelay: 25
 	Range: 999c0
-	# # Report: plsecan2.aud
-	# ValidTargets: Vehicle, Building, Ground, Water
-	# Projectile: InstantHit
-	# # Warhead@1Eff: CreateEffect
-	# 	# Explosions: pulse_explosion
 	Warhead@1Eff: Promotion
 		Range: 1c512
 		ValidStances: Ally, Neutral
 
-IonCannon:
+IonCannon: ### THIS IS THE MAIN ION CANON WEAPON
 	Inherits: ^SWBaseEffects
 	ValidTargets: Ground, Water, Air, IonBeam
 	Projectile: InstantExplode
+    Report: ion1.aud
 	Warhead@1Dam_area: SpreadDamage
 		Spread: 1c0
-		Damage: 100000
+		Damage: 150000
 		Falloff: 100, 50, 25, 0
 		ValidTargets: Ground, Water, Air
 		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
@@ -159,8 +116,8 @@ IonCannon:
 		ExplosionPalette: effect-ignore-lighting-alpha75
 		VictimScanRadius: 0
 
-IonCannonSpawner:
-	ReloadDelay: 6
+IonCannonSpawner: ### THIS ONE GENERATES THE MAIN ION BEAM DUMMY
+	ReloadDelay: 6 
 	Range: 12c0
 	Projectile: InstantExplode
 	Warhead@3Dam_area: SpreadDamage
@@ -175,7 +132,7 @@ IonCannonSpawner:
 		Actors: ionbeamtarget
 		Range: 3
 
-IonBeamCreator:
+IonBeamCreator: ### THIS ONE GENERATES THE MINI BEAMS
 	ReloadDelay: 6
 	Range: 5c0
 	MinRange: 5c0
@@ -189,7 +146,7 @@ IonBeamCreator:
 		Actors: ionbeammini
 		Range: 15
 
-IonScorch:
+IonScorch: ### THESE ARE THE WEAPONS OF THE MINI BEAMS ON THE SIDES
 	ReloadDelay: 1
 	Projectile: InstantExplode
 	ValidTargets: Ground, Water, Air, IonSpawner
@@ -198,7 +155,7 @@ IonScorch:
 		ExplosionPalette: effectalpha
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 200
-		Damage: 500
+		Damage: 250
 		InvalidTargets: IonBeam
 		DamageTypes: SmallExplosionDeath
 			InfantryArmor: 500
@@ -356,14 +313,14 @@ ClusterMissile:
 	ValidTargets: Ground, Water, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 0c512
-		Damage: 14000
+		Damage: 32000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Water, Air
 		Versus:
 			ConcreteArmor: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ClusterDamage3: SpreadDamage
-		Damage: 21000
+		Damage: 47000
 		Spread: 1c0
 		Falloff: 1000, 700, 500, 300, 150, 50, 0
 		Delay: 25
@@ -436,7 +393,7 @@ ClusterMissile:
 	Warhead@8Radio: CreateRadioactivity
 		Range: 1, 2, 3, 4, 5, 6
 		Level: 750
-		Falloff: 100, 60, 40, 25, 15, 5
+		Falloff: 100, 100, 60, 40, 20, 5
 		MaxLevel: 750
 		RadioactivityLayerName: OrangeRadiation
 
@@ -600,7 +557,7 @@ MeteorRainNormal:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
-		Damage: 3500
+		Damage: 10000
 		ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
@@ -657,7 +614,7 @@ CabalCannon:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 700
-		Damage: 30000
+		Damage: 15000
 		Versus:
 			BuildingArmor: 600
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water
@@ -688,11 +645,9 @@ CabalCannon:
 NanoMachineBurst:
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
-		Damage: 500
-		Falloff: 500, 368, 135, 50, 18, 7, 0
+		Spread: 1
+		Damage: 1
 		ValidTargets: Ground, Water, Air
-		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
 	Warhead@5Actor: SpawnActor
 		Actors: NANOMACHINEBURSTSPAWNER
 		FallRate: 5000
@@ -701,7 +656,7 @@ NanoMachineBurst:
 RecoveryGun:
 	Inherits: ^FullDamage
 	ReloadDelay: 1
-	Range: 12c0
+	Range: 7c0
 	ValidTargets: KilledUnit
 	Projectile: BulletAS
 		Speed: 100c0
@@ -710,6 +665,19 @@ RecoveryGun:
 		Damage: 20000
 		DamageTypes: Prone70Percent, TriggerProne, WorkerSummon
 		ValidTargets: KilledUnit
+
+IonStormSpawnerWeapon: ### THIS ONE GENERATES THE MAIN ION BEAM DUMMY
+    Inherits: IonCannonSpawner
+	ReloadDelay: 6 
+	Range: 12c0
+	Projectile: InstantExplode
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 1
+		Damage: 1
+		ValidTargets: Ground, Water, Air
+	-Warhead@op: FireShrapnel
+	Warhead@Spawn: SpawnActor
+		Actors: ionstormgenerator
 
 IonRaySpawner:
 	ReloadDelay: 10

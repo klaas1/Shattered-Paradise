@@ -663,7 +663,7 @@ GADEPT:
 	Inherits: ^Building
 	Inherits@1: ^3x3Shape
 	Valued:
-		Cost: 700
+		Cost: 900
 	Tooltip:
 		Name: Service Depot
 	Buildable:
@@ -753,7 +753,7 @@ SCRDEPOT:
 	WithSpriteBody:
 		PauseOnCondition: disabled
 	Power:
-		Amount: -100
+		Amount: -200
 	ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -870,7 +870,8 @@ NAPOST:
 NAFNCE:
 	Inherits: ^Wall
 	Inherits@1: ^Cloakable
-	Valued:
+	-Replaceable:
+    Valued:
 		Cost: 50
 	CustomSellValue:
 		Value: 0
@@ -1019,7 +1020,7 @@ TRNSPORT:
     Inherits@4: ^LowerSelectionPriority
 	Inherits@5: ^AircraftShadow
 	Valued:
-		Cost: 400
+		Cost: 600
 	Tooltip:
 		Name: Carryall
 	Buildable:
@@ -1189,8 +1190,6 @@ NAPULS:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
-
-
 	WithSpriteTurret:
 		Sequence: turret
 	Power:
@@ -1220,6 +1219,7 @@ NAPULS:
 		ArmamentName: Superweapon
 		Icon: emp
 		ChargeInterval: 3000
+		TargetCircleRange: 4c0
 		Description: E.M. Pulse
 		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
 		EndChargeSound: speech-nod|00-i158.aud

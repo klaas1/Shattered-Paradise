@@ -395,7 +395,7 @@ SCRIN:
 		AirborneCondition: airborne
 		MoveIntoShroud: true
 	Health:
-		HP: 20000
+		HP: 17500
 	Armament@1:
 		Weapon: Proton
 		PauseOnCondition: !ammo
@@ -1088,7 +1088,8 @@ SCRBATTLESHIP:
 	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
-	Inherits@5: ^PermanentSelfHeal
+	Inherits@3: ^PermanentSelfHeal
+	Inherits@4: ^CommandoIcon
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 4000

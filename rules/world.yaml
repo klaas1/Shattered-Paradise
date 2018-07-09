@@ -289,17 +289,18 @@ World:
 	BridgeLayer:
 	RadioactivityLayer@Default:
 		UpdateDelay: 75
-		Halflife: 400
+		Halflife: 150
+		Brightest: 128
 	RadioactivityLayer@HarmlessRadiationGreen:
 		Color: 00FF00
-		MaxLevel: 400
+		MaxLevel: 300
 		Name: HarmlessRadiationGreen
 	RadioactivityLayer@OrangeRadiation:
 		Color: EFFF00
 		Darkest: 16
 		Name: OrangeRadiation
 		UpdateDelay: 75
-		Halflife: 600
+		Halflife: 200
 	RadioactivityLayer@BlueRadiation:
 		Color: 000099
 		Color2: 000099

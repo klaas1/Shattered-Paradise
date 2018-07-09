@@ -346,6 +346,14 @@
 	ExternalCondition@TyrannyBuff:
 		Condition: TyrannyBuff
 
+^CommandoIcon:
+	WithDecoration@CommandoIcon:
+		Image: skullicon
+		Sequence: idle
+		ReferencePoint: Top, Left
+		Palette: mouse
+		ShowToEnemies: true
+
 ^WolfDebuff:
 	WithIdleOverlay@WolfDebuff:
 		Sequence: bullparticle
@@ -414,7 +422,7 @@
 		MaxHeightDelta: 3
 		Range: 2c0
 	Power:
-		Amount: -150
+		Amount: -200
 	SupportPowerChargeBar:
 	AnnounceOnBuild:
 	Voiced:
@@ -649,7 +657,7 @@
 		PercentageStep: 2
 		Step: 0
 		Delay: 25
-		HealIfBelow: 100
+		HealIfBelow: 102
 		RequiresCondition: nanomachineburst
 	SpawnActorOnDeath@nanomachineburst:
 		Actor: KILLEDACTOR
@@ -1014,7 +1022,8 @@
 	Inherits@2: ^DisableOnLowPowerOrPowerDown
 	Inherits@3: ^8CellVision
 	RevealsShroud:
-		Type: Footprint 
+		Type: Footprint
+        MaxHeightDelta: 3
 	-GivesBuildableArea:
 	-SpawnActorOnDeath@tiberium2:
 	AutoTarget:
@@ -1074,6 +1083,7 @@
 	Inherits@0: ^6CellVision
 	RevealsShroud:
 		Type: Footprint 
+        MaxHeightDelta: 3
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700

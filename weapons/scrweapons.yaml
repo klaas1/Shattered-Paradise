@@ -112,7 +112,7 @@ ColossiBlast:
 		Range: 1, 2, 3, 4, 5
 		Level: 15
 		Falloff: 100, 80, 60, 40, 15
-		MaxLevel: 1000
+		MaxLevel: 500
 		RadioactivityLayerName: ColossusRadiation
 
 ColossiBlastTesla:
@@ -222,6 +222,7 @@ FloatGlaive2:
 
 ScorpAcid:
 	Inherits: ^AcidWarhead
+	Inherits@1: ^SpawnIrradiationScrin
 	ReloadDelay: 100
 	Range: 4c0
 	Burst: 12
@@ -236,6 +237,9 @@ ScorpAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
 		Damage: 975
+		Versus:
+			InfantryArmor: 150
+			BuildingArmor: 75
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		InvalidTargets: Shark
 	Warhead@2Shark: SpreadDamage
@@ -243,7 +247,7 @@ ScorpAcid:
 		Damage: 975
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		Versus:
-			InfantryArmor: 160
+			InfantryArmor: 150
 			BuildingArmor: 75
 		ValidTargets: Shark
 		InvalidTargets: Building, Vehicle
@@ -252,10 +256,7 @@ ScorpAcid:
 		Explosions: tibexp2
 		ExplosionPalette: apolgreenalpha
 	Warhead@3Radio: CreateRadioactivity
-		Range: 1, 2
 		Level: 6
-		Falloff: 100, 37
-		MaxLevel: 1000
 
 MindController:
 	ReloadDelay: 100
@@ -317,7 +318,7 @@ SCRMBTLASOR:
 TripodLaser:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
-	Range: 6c0
+	Range: 7c0
 	Report: scrin5b.aud
 	Projectile: BulletAS
 		Speed: 350
@@ -327,10 +328,10 @@ TripodLaser:
 		Palette: apolgreenalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 4000
+		Damage: 2500
 		Versus:
 			InfantryArmor: 100
-			BuildingArmor: 100
+			BuildingArmor: 80
 			VehicleArmor: 50
 			DefenseArmor: 50
 			ConcreteArmor: 30
@@ -363,8 +364,14 @@ TripodProton:
 		Image: TORPEDO
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 250
-		Damage: 1000
+		Spread: 0c512
+		Damage: 2500
+		Versus:
+			InfantryArmor: 100
+			BuildingArmor: 80
+			VehicleArmor: 50
+			DefenseArmor: 50
+			ConcreteArmor: 30
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 	Warhead@4Sharpnel: FireShrapnel
@@ -584,6 +591,7 @@ WyvermBlastAA:
 
 NeedlerAcid:
 	Inherits: ^AcidWarhead
+	Inherits@1: ^SpawnIrradiationScrin
 	ReloadDelay: 50
 	Range: 6c768
 	Burst: 7
@@ -599,6 +607,9 @@ NeedlerAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
 		Damage: 800
+		Versus:
+			InfantryArmor: 150
+			BuildingArmor: 75
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		InvalidTargets: Shark
 	Warhead@2Shark: SpreadDamage
@@ -616,10 +627,7 @@ NeedlerAcid:
 		ExplosionPalette: apolgreenalpha
 		InvalidImpactTypes: Water
 	Warhead@3Radio: CreateRadioactivity
-		Range: 1, 2
 		Level: 6
-		Falloff: 100, 37
-		MaxLevel: 1000
 
 TractorBeam:
 	Inherits: ^FullDamage

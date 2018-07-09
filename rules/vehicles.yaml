@@ -319,7 +319,8 @@ G4TNK:
 HMEC:
 	Inherits: ^Tank
 	Inherits@1: ^10CellVision
-	Inherits@1: ^PermanentSelfHeal
+	Inherits@2: ^PermanentSelfHeal
+	Inherits@3: ^CommandoIcon
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -349,6 +350,13 @@ HMEC:
 		QuantizedFacings: 8
 		CameraPitch: 250
 	AutoTarget:
+    AmbientSound@WalkAnim:
+        SoundFiles: mamothwalk0000.wav, mamothwalk0001.wav, mamothwalk0002.wav, mamothwalk0003.wav
+        Delay: 16
+        Interval: 16
+        RequiresCondition: walking
+    GrantConditionOnMovement:
+        Condition: walking
 	Armament:
 		Weapon: MKIITusk
 		LocalOffset: 0,0,2800
@@ -894,12 +902,12 @@ BIKE:
 	-ActorLostNotification:
 	Mobile:
 		TurnSpeed: 10
-		Speed: 115
+		Speed: 95
 		Locomotor: Vehicle
 	Armor@Bike:
 		Type: Bike
 	Health:
-		HP: 7000
+		HP: 9000
 	WithRangeCircle:
 		Range: 3c0
 		Type: DemoBike
@@ -1428,7 +1436,7 @@ HVRTRUK3:
 	Inherits@2: ^HoverVehicle
 	Inherits@3: ^MutRender
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: Demo Truck
 	Buildable:
@@ -1473,7 +1481,7 @@ SCRSCORPION:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 24
-		Description: Anti-personnel walker.\n\n Good vs Infantry.\n\nSpecial:\n- Can mutate enemies killed.\n- Deals considerable damage to vehicles.\n- Absorbs essence from killed enemies to heal.\n- Attacks emit radiation that harms infantry in the area.\n- Inmune to tiberium radiation.
+		Description: Anti-personnel walker.\n\n Good vs Infantry.\n\nSpecial:\n- Can mutate enemies killed.\n- Deals considerable damage to vehicles.\n- Absorbs essence from killed enemies to heal.\n- Attacks emit radiation that harms infantry in the area.\n- Inmune to tiberium radiation.\n- Cannot crush infantry.
 		Prerequisites: ~scrweap
 	Mobile:
 		TurnSpeed: 6
@@ -1569,7 +1577,7 @@ SCRRECHARGER:
 		BuildPaletteOrder: 27
 		BuildAtProductionType: Tank
 		Description: Mobile shield generator.\n\nSpecial:\n- Generates shields around nearby friendly units.\n- Shields protect from all damage until the unit is hit 4 times.\n- Does not protect against super weapons.\n- Absorbs essence from killed enemies to heal.\n- Can Crush infantry.\n- Cannot apply shields to aircraft.
-		Prerequisites: ~scrweap, scrdepot, scrradr
+		Prerequisites: ~scrweap, scrdepot
 	Mobile:
 		TurnSpeed: 8
 		Speed: 80

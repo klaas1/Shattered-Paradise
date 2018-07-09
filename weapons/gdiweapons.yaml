@@ -47,7 +47,7 @@ JJGrenade:
 		Spread: 300
 		Damage: 5000
 		Versus:
-			BuildingArmor: 100
+			BuildingArmor: 80
 			VehicleArmor: 25
 			DefenseArmor: 25
 		ValidTargets: Ground, Water
@@ -128,7 +128,7 @@ APCGrenade:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^GreyExplo
 	ReloadDelay: 50
-	Range: 4c0
+	Range: 5c0
 	Report: grenadelauncherfire.wav
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
@@ -205,7 +205,7 @@ HoverMissileAA:
 JuggCannon:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 66
+	ReloadDelay: 75
 	Range: 15c0
 	MinRange: 5c0
 	Report: jugger1.aud

@@ -1181,6 +1181,8 @@ mutsw1:
 		UseTilesetCode: false
 	idle:
 		Start: 30
+	active:
+		Start: 26
 	damaged-idle:
 		Start: 31
 	dead:
@@ -1204,6 +1206,9 @@ mutsw2:
 		Offset: 0, -36, 36
 		UseTilesetCode: false
 	idle:
+		Start: 31
+		Length: 19
+	active:
 		Start: 31
 		Length: 19
 	damaged-idle:

@@ -64,11 +64,6 @@ EMPulseCannon:
 VeterancyWeapon:
 	ReloadDelay: 25
 	Range: 999c0
-	# # Report: plsecan2.aud
-	# ValidTargets: Vehicle, Building, Ground, Water
-	# Projectile: InstantHit
-	# # Warhead@1Eff: CreateEffect
-	# 	# Explosions: pulse_explosion
 	Warhead@1Eff: Promotion
 		Range: 1c512
 		ValidStances: Ally, Neutral
@@ -77,9 +72,10 @@ IonCannon: ### THIS IS THE MAIN ION CANON WEAPON
 	Inherits: ^SWBaseEffects
 	ValidTargets: Ground, Water, Air, IonBeam
 	Projectile: InstantExplode
+    Report: ion1.aud
 	Warhead@1Dam_area: SpreadDamage
 		Spread: 1c0
-		Damage: 100000
+		Damage: 150000
 		Falloff: 100, 50, 25, 0
 		ValidTargets: Ground, Water, Air
 		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
@@ -317,14 +313,14 @@ ClusterMissile:
 	ValidTargets: Ground, Water, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 0c512
-		Damage: 28000
+		Damage: 32000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Water, Air
 		Versus:
 			ConcreteArmor: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ClusterDamage3: SpreadDamage
-		Damage: 42000
+		Damage: 47000
 		Spread: 1c0
 		Falloff: 1000, 700, 500, 300, 150, 50, 0
 		Delay: 25
@@ -669,6 +665,19 @@ RecoveryGun:
 		Damage: 20000
 		DamageTypes: Prone70Percent, TriggerProne, WorkerSummon
 		ValidTargets: KilledUnit
+
+IonStormSpawnerWeapon: ### THIS ONE GENERATES THE MAIN ION BEAM DUMMY
+    Inherits: IonCannonSpawner
+	ReloadDelay: 6 
+	Range: 12c0
+	Projectile: InstantExplode
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 1
+		Damage: 1
+		ValidTargets: Ground, Water, Air
+	-Warhead@op: FireShrapnel
+	Warhead@Spawn: SpawnActor
+		Actors: ionstormgenerator
 
 IonRaySpawner:
 	ReloadDelay: 10

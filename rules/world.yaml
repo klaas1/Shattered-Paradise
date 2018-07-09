@@ -300,7 +300,7 @@ World:
 		Darkest: 16
 		Name: OrangeRadiation
 		UpdateDelay: 75
-		Halflife: 300
+		Halflife: 200
 	RadioactivityLayer@BlueRadiation:
 		Color: 000099
 		Color2: 000099

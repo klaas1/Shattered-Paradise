@@ -242,6 +242,9 @@ VEINHOLE:
 	-ExternalCondition@smoketrail:
 	-ThrowsShrapnel@SMALL:
 	-ThrowsShrapnel@LARGE:
+	-GrantConditionOnDamageState@SpawnFire:
+	-ExplodeWeapon@SpawnFire:
+	-ExternalCondition@SpawnFire:
 
 VEINHOLE2:
 	Inherits: VEINHOLE

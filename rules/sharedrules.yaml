@@ -1190,8 +1190,6 @@ NAPULS:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
-
-
 	WithSpriteTurret:
 		Sequence: turret
 	Power:
@@ -1221,6 +1219,7 @@ NAPULS:
 		ArmamentName: Superweapon
 		Icon: emp
 		ChargeInterval: 3000
+		TargetCircleRange: 4c0
 		Description: E.M. Pulse
 		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
 		EndChargeSound: speech-nod|00-i158.aud

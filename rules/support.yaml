@@ -771,6 +771,7 @@ GAPLUG:
 		Description: Ion Cannon Array
 		DisplayTimer: True
 		DisplayBeacon: True
+		TargetCircleRange: 5c0
 		LongDesc: Fires an array of ion cannons on the targetted area.
 		ChargeInterval: 6000
 		ActivationSequence: idle
@@ -972,10 +973,11 @@ MUTSW1:
 		Bounds: 116, 60, 3, -6
 		DecorationBounds: 116, 78, 3, -8
 	SelectionDecorations:
-	SpawnActorPower@ionstorm:
-		Actor: ionstormgenerator
+	DetonateWeaponPower@IonStorm:
+		Weapon: IonStormSpawnerWeapon
 		Icon: ionstorm
 		ChargeInterval: 9000
+		TargetCircleRange: 8c0
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady
 		LaunchSpeechNotification: SuperweaponFired
@@ -1054,7 +1056,7 @@ SCRSW1:
 		Bounds: 116, 60, 3, -6
 		DecorationBounds: 116, 78, 3, -8
 	SelectionDecorations:
-	DetonateWeaponPower@nanomachinesson:
+	DetonateWeaponPower@MeteorStorm:
 		Cursor: emp
 		Icon: meteor
 		ChargeInterval: 6000
@@ -1062,6 +1064,7 @@ SCRSW1:
 		LongDesc: Drags meteors from orbit dealing moderate damage over a wide area.\n\nSpecial:\n- Instant kills ground units and aircraft.
 		Prerequisites: MeteorSpawner
 		Weapon: MeteorSpawner
+		TargetCircleRange: 5c0
 		OrderName: MeteorSpawner
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady
@@ -1172,6 +1175,7 @@ CABSW1:
 	FireArmamentPower:
 		Cursor: emp
 		Icon: cabcannon
+		TargetCircleRange: 5c0
 		ChargeInterval: 7500
 		Description: Iron Savior
 		LongDesc: Fires a volley of energy volleys at the target location.\n\nSpecial:\n- Instant kills ground units and aircraft

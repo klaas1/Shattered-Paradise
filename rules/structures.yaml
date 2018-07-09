@@ -222,6 +222,7 @@ GTDROP:
 		ActivationSequence: idle
 		DisplayTimer: True
 		DisplayBeacon: True
+		TargetCircleRange: 6c0
 		Description: Helldiver Drop
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady
@@ -785,12 +786,13 @@ MUTSW2:
 		Bounds: 130, 80, 0, -24
 		DecorationBounds: 130, 100, 0, -24
 	SelectionDecorations:
-	IonCannonPower:
+	DetonateWeaponPower@Jeff:
 		Weapon: VeinholeSummonerWeapon
 		Effect: dot
 		Icon: veinholesw
 		ChargeInterval: 5000
 		OrderName: Veinhole
+		TargetCircleRange: 8c0
 		DisplayTimer: True
 		DisplayBeacon: True
 		EndChargeSound: SuperWeaponReady

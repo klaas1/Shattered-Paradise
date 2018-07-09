@@ -1283,7 +1283,7 @@ cabsw1:
 nanomachineswarmdummy:
 	Inherits: ^EmpOverlay
 	Defaults:
-		Offset: 0,-32
+		Offset: 0,-36
 	idle: dot
 		UseTilesetCode: false
 		ZOffset: -1024

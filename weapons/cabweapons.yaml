@@ -111,7 +111,7 @@ ReclaimerHit:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 75
 	Range: 1c512
-	Report: biggun1.aud
+	Report: piston1.wav, piston2.wav
 	ValidTargets: Infantry
 	Projectile: BulletAS
 		Speed: 5c682

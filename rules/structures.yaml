@@ -230,7 +230,7 @@ GTDROP:
 		Weapon: DroppodSpawner
 		DisplayTimerStances: Ally, Neutral, Enemy
 		PauseOnCondition: empdisable || disabled
-		ChargeInterval: 6000
+		ChargeInterval: 4500
 		CameraActor: camera
 		LaunchSpeechNotification: SuperweaponFired
 		IncomingSpeechNotification: SuperweaponFired
@@ -1399,15 +1399,16 @@ CABOBELISK:
 		Cursor: ioncannon
 		Icon: nanomachineswarm
 		Description: Nanomachine Swarm
-		LongDesc: Fills an area with nanomachines\nhealing friendly units and turning\nany fallen units into workers.
+		LongDesc: Fills an area with nanomachines.\n- Heals friendly units up to 40% (Even buildings)\n- Turns fallen units into workers (Friendly and Hostile).
 		OrderName: NanomachineSwarm
 		Weapon: NanoMachineBurst
+		TargetCircleRange: 7c0
 		BeginChargeSound:
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady
 		DisplayTimer: True
 		DisplayBeacon: True
-		ChargeInterval: 4500
+		ChargeInterval: 6000
 		DisplayRadarPing: True
 		DisplayTimerStances: Ally, Neutral, Enemy
 		PauseOnCondition: empdisable || disabled

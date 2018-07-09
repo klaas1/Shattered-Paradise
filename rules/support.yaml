@@ -734,7 +734,7 @@ GAFIRE:
 	WithIdleOverlay@2:
 		Sequence: idle2
 	Power:
-		Amount: -50
+		Amount: -100
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 	RequiresBuildableArea:

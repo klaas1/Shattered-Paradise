@@ -205,7 +205,7 @@ EAGLEGUARD:
 	Inherits: ^Soldier
 	Inherits@1: ^7CellVision
 	Valued:
-		Cost: 500
+		Cost: 600
 	Tooltip:
 		Name: Eagle Guard
 	Buildable:
@@ -351,7 +351,7 @@ NCONF:
 		Prerequisites: ~nahand, natech
 		IconPalette: UnittemIcon
 	Valued:
-		Cost: 700
+		Cost: 600
 	Tooltip:
 		Name: Black Hand Trooper
 	Health:
@@ -659,7 +659,7 @@ SEER:
 		Description: Psychic mutant that leads armies through fear.\n\nGood vs: Vehicles, Aircraft.\n\nSpecial:\n- Can persuade friendly units to fight harder when deployed.\n- Buffed units will get 20% extra attack speed, move speed and receive 20% more damage.\n- Effect lasts 15 seconds.\n- Heals on Tiberium.\n- Can attack air\n- Crush class: crushable.
 		Prerequisites: ~murax, muhall
 	Valued:
-		Cost: 650
+		Cost: 600
 	Tooltip:
 		Name: Tyrant
 	Voiced:
@@ -945,7 +945,7 @@ COLOSSI:
 		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.\n- One hits infantry.
 		Prerequisites: ~scrrax, scrtech
 	Valued:
-		Cost: 700
+		Cost: 600
 	Tooltip:
 		Name: Colossus
 	Selectable:

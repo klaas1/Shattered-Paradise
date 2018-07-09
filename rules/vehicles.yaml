@@ -350,6 +350,13 @@ HMEC:
 		QuantizedFacings: 8
 		CameraPitch: 250
 	AutoTarget:
+    AmbientSound@WalkAnim:
+        SoundFiles: mamothwalk0000.wav, mamothwalk0001.wav, mamothwalk0002.wav, mamothwalk0003.wav
+        Delay: 16
+        Interval: 16
+        RequiresCondition: walking
+    GrantConditionOnMovement:
+        Condition: walking
 	Armament:
 		Weapon: MKIITusk
 		LocalOffset: 0,0,2800
@@ -1474,7 +1481,7 @@ SCRSCORPION:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 24
-		Description: Anti-personnel walker.\n\n Good vs Infantry.\n\nSpecial:\n- Can mutate enemies killed.\n- Deals considerable damage to vehicles.\n- Absorbs essence from killed enemies to heal.\n- Attacks emit radiation that harms infantry in the area.\n- Inmune to tiberium radiation.
+		Description: Anti-personnel walker.\n\n Good vs Infantry.\n\nSpecial:\n- Can mutate enemies killed.\n- Deals considerable damage to vehicles.\n- Absorbs essence from killed enemies to heal.\n- Attacks emit radiation that harms infantry in the area.\n- Inmune to tiberium radiation.\n- Cannot crush infantry.
 		Prerequisites: ~scrweap
 	Mobile:
 		TurnSpeed: 6

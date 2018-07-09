@@ -657,7 +657,7 @@
 		PercentageStep: 2
 		Step: 0
 		Delay: 25
-		HealIfBelow: 100
+		HealIfBelow: 102
 		RequiresCondition: nanomachineburst
 	SpawnActorOnDeath@nanomachineburst:
 		Actor: KILLEDACTOR

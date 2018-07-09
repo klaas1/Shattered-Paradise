@@ -125,8 +125,26 @@
 			AircraftArmor: 100
 			ConcreteArmor: 15
 			Shield: 0
-	Warhead@BounceUpgrade: GrantExternalCondition
-		Condition: FlameWarhead
+
+^SpawnsIrradiation:
+	Warhead@3Radio: CreateRadioactivity
+		Range: 1, 2
+		Level: 40
+		Falloff: 100, 10
+		MaxLevel: 500
+
+^SpawnIrradiationScrin:
+    Inherits: ^SpawnsIrradiation
+	Warhead@3Radio: CreateRadioactivity
+		Level: 20
+
+^SpawnsIrradiationFalcon:
+    Inherits: ^SpawnsIrradiation
+	Warhead@8Radio: CreateRadioactivity
+		Range: 1, 2, 3
+		Level: 700
+		Falloff: 100, 50, 25
+		MaxLevel: 700
 
 ^DecentFalloff:
 	Inherits: ^WeaponGenericUpgrades
@@ -144,8 +162,6 @@
 			DefenseArmor: 100
 			ConcreteArmor: 30
 			Shield: 0
-	Warhead@BounceUpgrade: GrantExternalCondition
-		Condition: FullDamage
 
 ^NoDamage:
 	ValidTargets: Ground, Infantry, Vehicle, Building

@@ -1369,3 +1369,84 @@ radiotower:
 	dead:
 		Start: 1
 		ShadowStart: 3
+
+tankbarrier:
+	Defaults:
+		Offset: 0, -12, 48
+		DepthSpriteOffset: 0, 0
+	idle:
+		ShadowStart: 1
+	damaged-idle:
+		ShadowStart: 1
+	dead:
+		ShadowStart: 1
+
+tankbarrier2:
+	Inherits: tankbarrier
+		idle: tankbarrier2
+		damaged-idle: tankbarrier2
+		dead: tankbarrier2
+
+concretebarrier:
+	Defaults: concretebarrier
+		Offset: 0, -12, 48
+		DepthSpriteOffset: 0, 0
+	idle: concretebarrier
+		ShadowStart: 8
+
+concretebarrier2:
+	Inherits: concretebarrier
+	Defaults: concretebarrier
+		Offset: 0, -12, 48
+		DepthSpriteOffset: 0, 0
+	idle: concretebarrier
+		Start: 1
+		ShadowStart: 9
+
+concretebarrier3:
+	Inherits: concretebarrier
+	idle: concretebarrier
+		Start: 2
+		ShadowStart: 10
+
+concretebarrier4:
+	Inherits: concretebarrier
+	idle: concretebarrier
+		Start: 3
+		ShadowStart: 11
+
+concretebarrier5:
+	Inherits: concretebarrier
+	idle: concretebarrier
+		Start: 4
+		ShadowStart: 12
+
+concretebarrier6:
+	Inherits: concretebarrier
+	idle: concretebarrier
+		Start: 5
+		ShadowStart: 13
+
+concretebarrier7:
+	Inherits: concretebarrier
+	idle: concretebarrier
+		Start: 6
+		ShadowStart: 14
+
+concretebarrier8:
+	Inherits: concretebarrier
+	idle: concretebarrier
+		Start: 7
+		ShadowStart: 15
+
+fence:
+	Defaults:
+		Offset: 0, -12, 12
+		UseTilesetCode: false
+	idle:
+		Length: 16
+		ShadowStart: 32
+	damaged-idle: fence
+		Start: 16
+		Length: 16
+		ShadowStart: 48

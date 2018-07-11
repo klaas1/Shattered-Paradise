@@ -289,7 +289,7 @@ MUBUNKR:
 		MaxWeight: 5
 		PipCount: 5
 		Types: Infantry
-		EjectOnDeath: true
+		EjectOnDeath: False
 		LoadedCondition: loaded
 	DetectCloaked:
 		RequiresCondition: loaded && !empdisable && !disabled

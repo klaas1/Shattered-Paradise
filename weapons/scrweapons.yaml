@@ -218,7 +218,6 @@ FloatGlaive2:
 	Inherits: FloatGlaive
 	-Report:
 	-Warhead@op: FireShrapnel
-		Weapon: FloatGlaive3
 
 ScorpAcid:
 	Inherits: ^AcidWarhead

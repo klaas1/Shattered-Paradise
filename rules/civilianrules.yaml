@@ -2778,3 +2778,50 @@ FENCE:
 	-BlocksProjectiles:
 	Armor:
 		Type: BuildingArmor
+
+CONTAINER:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x2Shape
+	Building:
+		Footprint: xx
+		Dimensions: 1,2
+	Tooltip:
+		Name: Container
+	Health:
+		HP: 35000
+	Armor:
+		Type: BuildingArmor
+	RenderSprites:
+		Palette: player
+
+CONTAINER2:
+	Inherits: CONTAINER
+	Inherits@2: ^2x1Shape
+	Building:
+		Footprint: x x
+		Dimensions: 2,1
+
+CONTAINER3:
+	Inherits: CONTAINER
+	Inherits@2: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
+CONSTRUCTIONBARRIER:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Construction Barrier
+	Health:
+		HP: 5000
+	Armor:
+		Type: BuildingArmor
+	RenderSprites:
+		Palette: player
+
+CONSTRUCTIONBARRIER2:
+	Inherits: CONSTRUCTIONBARRIER

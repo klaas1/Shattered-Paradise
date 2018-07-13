@@ -327,7 +327,7 @@ IONSTORMGENERATOR:
 	RevealsShroud:
 		Range: 5c0
 	Health:
-		HP: 60
+		HP: 10
 		NotifyAppliedDamage: False
 	ExplodeWeapon:
 		Weapon: RandomBoltSpawner

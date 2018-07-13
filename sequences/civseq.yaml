@@ -1450,3 +1450,38 @@ fence:
 		Start: 16
 		Length: 16
 		ShadowStart: 48
+
+container:
+	Defaults:
+		Offset: 12, -18, 18
+	idle:
+		ShadowStart: 3
+
+container2:
+	Inherits: container
+	Defaults:
+		Offset: -12, -18, 6
+	idle: container
+		Start: 1
+		ShadowStart: 4
+
+container3:
+	Inherits: container
+	Defaults:
+		Offset: 0, -24, 24
+	idle: container
+		Start: 2
+		ShadowStart: 5
+
+constructionbarrier:
+	Defaults:
+		Offset: 0, -12, 48
+		DepthSpriteOffset: 0, 0
+	idle:
+		ShadowStart: 2
+
+constructionbarrier2:
+    Inherits: constructionbarrier
+	idle: constructionbarrier
+        Start: 1
+		ShadowStart: 3

@@ -359,17 +359,11 @@
 		Sequence: bullparticle
 		Palette: apolgreenalpha
 		RequiresCondition: WolfDebuff
-	DamageMultiplier@WolfDebuff:
+	FirepowerMultiplier@WolfDebuff:
 		RequiresCondition: WolfDebuff
-		Modifier: 115
+		Modifier: 70
 	ExternalCondition@WolfDebuff:
 		Condition: WolfDebuff
-	SelfHealing@WolfDebuff:
-		PercentageStep: -1
-		Step: 0
-		Delay: 25
-		HealIfBelow: 101
-		RequiresCondition: WolfDebuff && !stoppoison
 
 ^DisplayWrench:
 	WithDecoration@DisplayWrench:
@@ -545,12 +539,6 @@
 		Delay: 25
 		HealIfBelow: 101
 		RequiresCondition: BugPoison && !stoppoison
-	ReloadDelayMultiplier@BugPoison:
-		RequiresCondition: BugPoison
-		Modifier: 110
-	SpeedMultiplier@BugPoison:
-		RequiresCondition: BugPoison
-		Modifier: 90
 	ExternalCondition@BugPoison:
 		Condition: BugPoison
 	GrantConditionOnDamageState@stoppoison:

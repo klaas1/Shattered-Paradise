@@ -170,8 +170,18 @@
 		Damage: 1
 
 ^ExploDefaults:
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@op: FireShrapnel
 		Weapon: SmallDebris
 		Amount: 2
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@1Dam: SpreadDamage
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Damage: 1
+		Versus:
+			InfantryArmor: 300
+			BuildingArmor: 100
+			VehicleArmor: 50
+			DefenseArmor: 50
+			ConcreteArmor: 35

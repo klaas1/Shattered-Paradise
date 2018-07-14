@@ -228,6 +228,15 @@
 			TopLeft: -3072, -2048
 			BottomRight: 3072, 2048
 
+^CanBeCaptured:
+	Capturable:
+		CaptureThreshold: 100
+	WithColoredOverlay@capturingbuilding:
+		RequiresCondition: empdisable
+		Palette: captured
+	ExternalCondition@capturingbuilding:
+		Condition: capturingbuilding
+
 ^CrateBuffs:
 	SpeedMultiplier@speedcrate:
 		RequiresCondition: speedcrate
@@ -949,11 +958,9 @@
 	Inherits@0: ^BasicBuilding
 	Inherits@1: ^StructureEffects
 	Inherits@2: ^5CellVision
+	Inherits@3: ^CanBeCaptured
 	GivesBuildableArea:
 		AreaTypes: building
-	ExternalCapturable:
-		CaptureCompleteTime: 7
-	ExternalCapturableBar:
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	RevealsShroud:
@@ -1069,6 +1076,7 @@
 ^TechBuilding:
 	Inherits: ^BasicBuilding
 	Inherits@0: ^6CellVision
+	Inherits@1: ^CanBeCaptured
 	RevealsShroud:
 		Type: Footprint 
         MaxHeightDelta: 3
@@ -1082,9 +1090,6 @@
 	RenderSprites:
 	EditorTilesetFilter:
 		Categories: Tech Structure
-	ExternalCapturable:
-		CaptureCompleteTime: 7
-	ExternalCapturableBar:
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
@@ -1500,10 +1505,22 @@
 	DetectCloaked:
 		CloakTypes: mine
 		Range: 4c0
-	ExternalCaptures:
-		Type: building
-		ConsumeActor: true
-		PlayerExperience: 50
+	AttackFrontal:
+	Armament@loadup:
+		Weapon: EngineerCaptureLoadup
+		Name: primary
+	Armament@mainweapon:
+		Weapon: EngineerCapture
+		Name: secondary
+		RequiresCondition: CaptureEnabled > 4
+	GrantConditionOnAttack:
+		Condition: CaptureEnabled
+		RevokeOnNewTarget: True
+		RevokeDelay: 30
+		MaximumInstances: 5
+	KillsSelf:
+		RequiresCondition: CaptureEnabled > 4
+		Delay: 10
 
 ^Vehicle:
 	Inherits@0: ^GainsExperience
@@ -2176,7 +2193,6 @@
 		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
 	EditorTilesetFilter:
 		Categories: Defence
-	-ExternalCapturableBar:
 	WithDecoration@POWERDOWN:
 		Image: poweroff
 		Sequence: offline

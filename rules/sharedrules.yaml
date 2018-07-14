@@ -39,7 +39,6 @@ ENGINEER:
 		FactionImages:
 			gdi: engineer.gdi
 			nod: engineer.nod
-	AttackFrontal:
 	AnnounceOnSeen:
 		Notification: EnemyEngineerDetected
 

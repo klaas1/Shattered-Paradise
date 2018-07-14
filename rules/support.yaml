@@ -771,7 +771,7 @@ GAPLUG:
 		Description: Ion Cannon Array
 		DisplayTimer: True
 		DisplayBeacon: True
-		TargetCircleRange: 5c0
+		TargetCircleRange: 6c0
 		LongDesc: Fires an array of ion cannons on the targetted area.
 		ChargeInterval: 6000
 		ActivationSequence: idle

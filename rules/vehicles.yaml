@@ -265,8 +265,7 @@ SONIC:
 		PauseOnCondition: empdisable
 	Turreted:
 		TurnSpeed: 3
-		Offset: -50,0,0
-		# Offset: -400,0,0
+	#	# Offset: -410,0,0
 	AutoTarget:
 	WithFacingSpriteBody:
 	WithSpriteTurret:

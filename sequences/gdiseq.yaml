@@ -399,20 +399,23 @@ g4tnk:
 	icon: g4tnkicon
 
 sonic:
+	# Inherits: ^SpriteVehicleWithShadowAndTurret
 	Inherits: ^EmpOverlay
-	Inherits@1: ^SpriteVehicleWithShadowAndTurret
-	# idle:
-	#	# Facings: -32
-	#	# UseTilesetCode: false
-	#	# ShadowStart: 32
-	## stand:
-	#	# Facings: -32
-	#	# UseTilesetCode: false
-	#	# ShadowStart: 32
-	## turret: sonicturret
-	#	# Start: 32
-	#	# Facings: -32
-	#	# UseTilesetCode: false
+	idle:
+		Facings: -32
+		UseTilesetCode: false
+		ShadowStart: 32
+	stand:
+		Facings: -32
+		UseTilesetCode: false
+		ShadowStart: 32
+	turret: sonicturret
+		Start: 32
+		Facings: -32
+		UseTilesetCode: false
+	# stand: sonicturret
+	# idle: sonicturret
+	# turret: sonicturret
 	icon: soniicon
 
 mmch:

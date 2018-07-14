@@ -1177,7 +1177,7 @@ muventi:
 
 mutsw1:
 	Defaults:
-		Offset: -6, -30, 30
+		Offset: -6, -26, 30
 		UseTilesetCode: false
 	idle:
 		Start: 30

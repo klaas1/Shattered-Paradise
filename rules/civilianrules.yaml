@@ -2226,7 +2226,7 @@ GASAND:
 	Health:
 		HP: 25000
 	Armor:
-		Type: Light
+		Type: BuildingArmor
 	LineBuild:
 		NodeTypes: sandbags
 	LineBuildNode:
@@ -2435,7 +2435,6 @@ WELL:
 		Offset: 1300,0,0
 	GivesCashOnCapture:
 		Amount: 250
-    
 
 MACHINESHOP:
 	Inherits: ^TechBuilding
@@ -2676,8 +2675,8 @@ EGGS:
 		Palette: playermut
 	Targetable:
 		TargetTypes: Defence, Ground, C4, DetonateAttack, NeutralTibCritter
-    -Demolishable:
-    -ThrowsShrapnel@SMALL:
+	-Demolishable:
+	-ThrowsShrapnel@SMALL:
 	-ThrowsShrapnel@LARGE:
 	-Explodes:
 	-SoundOnDamageTransition:
@@ -2721,5 +2720,108 @@ RADIOTOWER:
 		Type: BuildingArmor
 	RenderSprites:
 		Palette: player
-    Selectable:
-        Bounds: 40,140,0,-52
+	Selectable:
+		Bounds: 40,140,0,-52
+
+TANKBARRIER:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Tank Barrier
+	Health:
+		HP: 50000
+	Armor:
+		Type: ConcreteArmor
+	RenderSprites:
+		Palette: player
+
+TANKBARRIER2:
+	Inherits: TANKBARRIER
+
+CONCRETEBARRIER:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Civilian Barrier
+	Health:
+		HP: 25000
+	Armor:
+		Type: ConcreteArmor
+	RenderSprites:
+		Palette: player
+
+CONCRETEBARRIER2:
+	Inherits: CONCRETEBARRIER
+
+CONCRETEBARRIER3:
+	Inherits: CONCRETEBARRIER
+
+CONCRETEBARRIER4:
+	Inherits: CONCRETEBARRIER
+
+CONCRETEBARRIER5:
+	Inherits: CONCRETEBARRIER
+
+CONCRETEBARRIER6:
+	Inherits: CONCRETEBARRIER
+
+CONCRETEBARRIER7:
+	Inherits: CONCRETEBARRIER
+
+CONCRETEBARRIER8:
+	Inherits: CONCRETEBARRIER
+
+FENCE:
+	Inherits: ^Wall
+	Tooltip:
+		Name: Fence
+	Crushable:
+		CrushClasses: infantry
+	-BlocksProjectiles:
+	Armor:
+		Type: BuildingArmor
+
+CONTAINER:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x2Shape
+	Building:
+		Footprint: xx
+		Dimensions: 1,2
+	Tooltip:
+		Name: Container
+	Health:
+		HP: 35000
+	Armor:
+		Type: BuildingArmor
+	RenderSprites:
+		Palette: player
+
+CONTAINER2:
+	Inherits: CONTAINER
+	Inherits@2: ^2x1Shape
+	Building:
+		Footprint: x x
+		Dimensions: 2,1
+
+CONTAINER3:
+	Inherits: CONTAINER
+	Inherits@2: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
+CONSTRUCTIONBARRIER:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Construction Barrier
+	Health:
+		HP: 5000
+	Armor:
+		Type: BuildingArmor
+	RenderSprites:
+		Palette: player
+
+CONSTRUCTIONBARRIER2:
+	Inherits: CONSTRUCTIONBARRIER

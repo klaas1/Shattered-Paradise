@@ -265,7 +265,7 @@ SONIC:
 		PauseOnCondition: empdisable
 	Turreted:
 		TurnSpeed: 3
-		Offset: -400,0,0
+	#	# Offset: -410,0,0
 	AutoTarget:
 	WithFacingSpriteBody:
 	WithSpriteTurret:
@@ -350,13 +350,13 @@ HMEC:
 		QuantizedFacings: 8
 		CameraPitch: 250
 	AutoTarget:
-    AmbientSound@WalkAnim:
-        SoundFiles: mamothwalk0000.wav, mamothwalk0001.wav, mamothwalk0002.wav, mamothwalk0003.wav
-        Delay: 16
-        Interval: 16
-        RequiresCondition: walking
-    GrantConditionOnMovement:
-        Condition: walking
+	AmbientSound@WalkAnim:
+		SoundFiles: mamothwalk0000.wav, mamothwalk0001.wav, mamothwalk0002.wav, mamothwalk0003.wav
+		Delay: 16
+		Interval: 16
+		RequiresCondition: walking
+	GrantConditionOnMovement:
+		Condition: walking
 	Armament:
 		Weapon: MKIITusk
 		LocalOffset: 0,0,2800
@@ -907,7 +907,7 @@ BIKE:
 	Armor@Bike:
 		Type: Bike
 	Health:
-		HP: 9000
+		HP: 8000
 	WithRangeCircle:
 		Range: 3c0
 		Type: DemoBike
@@ -1321,7 +1321,7 @@ WOLF:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 20
-		Description: Tiberium beast that uses tiberium acid to harm nearby units.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- Attacks reduce target resistance by 15%.\n- Can mutate killed units.\n- Inmune to tiberium radiation.\n- E.M.P. Inmune.\n- Heals even when in combat.
+		Description: Tiberium beast that uses tiberium acid to harm nearby units.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- Attacks reduce target damage by 35%.\n- Can mutate killed units.\n- E.M.P. Inmune.\n- Heals even when in combat.
 		Prerequisites: ~muweap, muradr
 	Valued:
 		Cost: 800
@@ -1512,7 +1512,7 @@ SCRMBT:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 25
-		Description: Light Tank, good for scouting.\n\nGood vs Ground targets.\n\nSpecial:\n- Hovers (it ignores terrain like Veins and Water).\nAbsorbs essence from killed units to heal.\n- Cannot crush infantry.
+		Description: Light Tank, good for harassment.\n\nGood vs Ground targets.\n\nSpecial:\n- Hovers (it ignores terrain like Veins and Water).\nAbsorbs essence from killed units to heal.\n- Cannot crush infantry.
 		Prerequisites: ~scrweap
 	Valued:
 		Cost: 900

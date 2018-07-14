@@ -300,7 +300,7 @@ BullAcid:
 		InvalidTargets: Water
 	Warhead@Acid: GrantExternalCondition
 		Range: 1c0
-		Duration: 150
+		Duration: 100
 		Condition: WolfDebuff
 	Warhead@op: FireShrapnel
 		Weapon: BullAcidJump
@@ -632,7 +632,7 @@ FalconPunch:
 		AllowSnapping: true
 		CloseEnough: 200
 	Warhead@1Dam: SpreadDamage
-		Spread: 300
+		Spread: 400
 		Damage: 27000
 		ValidTargets: Ground, Water, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TiberiumDeath

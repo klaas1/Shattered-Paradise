@@ -1,5 +1,5 @@
 FireballLauncher:
-    Inherits: ^RifleWarhead
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 4c256
 	Report: flamtnk1.aud
@@ -24,7 +24,7 @@ FireballLauncher:
 		InvalidTargets: Vehicle, Building, Wall
 
 Hellfire:
-    Inherits: ^RifleWarhead
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 6c0
 	Report: orcamis1.aud
@@ -281,17 +281,22 @@ LTrail:
 	Inherits: MammothTusk
 	Range: 6c0  
 
-EngineerCapture:
-	ReloadDelay: 200
-	Report: klax1.aud
+EngineerCaptureLoadup:
+	ReloadDelay: 25
 	ValidTargets: Building
-	Range: 1c0
-	Projectile: InstantExplode
+	Range: 1c512
+	Projectile: BulletAS
+		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 1
 		ValidTargets: Building
+
+EngineerCapture:
+	Inherits: EngineerCaptureLoadup
+	ReloadDelay: 200
 	Warhead@2Dam: CaptureActor
 		ValidTargets: Building
+		IgnoreCaptureThreshold: true
 
 LightTowerClaxon:
 	ReloadDelay: 200

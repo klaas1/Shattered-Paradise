@@ -33,67 +33,34 @@ ScrinBuildingExplode:
 		Explosions: jtwlt100, jtwlt100b, jtwlt070, jtwlt070b, jstumu42, jstumu42b ,jstumu60, jstumu60b, jbrrlexp1, jsbang34, jsbang34b, jsbang48, jsbang48b, jbrrlexp1b
 		ExplosionPalette: gensmkexplojFblue
 
-ReactorExplode:
-	Inherits: ^ExploDefaults
-	Inherits@2: ^Large_twlt
-	Warhead@1Dam: SpreadDamage
-		Spread: 350
-		Damage: 50000
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-		Versus:
-			InfantryArmor: 200
-			BuildingArmor: 150
-			VehicleArmor: 100
-			DefenseArmor: 100
-			ConcreteArmor: 40
-
 CyborgExplode:
 	Inherits: ^ExploDefaults
 	Inherits@2: ^Medium_Bang
 
 StormriderExplode:
 	Inherits: ^ExploDefaults
-	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Mediuml_Clsn
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c080
 		Damage: 2500
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		InvalidTargets: Air
 
 SmallPlaneExplode:
 	Inherits: ^ExploDefaults
-	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Mediuml_Clsn
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c200
+		Spread: 0c400
 		Damage: 5000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Versus:
-			InfantryArmor: 100
-			BuildingArmor: 100
-			VehicleArmor: 50
-			DefenseArmor: 50
-			ConcreteArmor: 35
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		InvalidTargets: Air
 
 BattleshipExplode:
 	Inherits: ^ExploDefaults
-	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^GreyExplo
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c500
+		Spread: 0c800
 		Damage: 10000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Versus:
-			InfantryArmor: 100
-			BuildingArmor: 100
-			VehicleArmor: 50
-			DefenseArmor: 50
-			ConcreteArmor: 35
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		InvalidTargets: Air
 
@@ -137,21 +104,6 @@ UnitExplode:
 		Sequences: fire4
 		Palette: effectalpha25
 		Weapon: DummyWeapon
-
-VeinholeExplosion:
-	Warhead@1Dam: SpreadDamage
-	Inherits@2: ^Large_twlt
-		Spread: 426
-		Damage: 5000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Versus:
-			InfantryArmor: 90
-			BuildingArmor: 75
-			VehicleArmor: 60
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@3Veinholekill: DestroyResource
-		Size: 30,0
-		ValidTargets: Veins
 
 ScrinUnitExplode:
 	Inherits: ^ExploDefaults
@@ -314,7 +266,6 @@ LargeDebris:
 		Image: explosion
 		Sequences: fire2, fire1
 		Palette: effectalpha25
-		# Weapon: DummyWeapon
 
 BuildingFireBigParticleSpawner:
 	Inherits: ^ParticleSpawner
@@ -356,7 +307,6 @@ BuildingFireBig:
 		Image: explosion
 		Sequences: fire3, fire4
 		Palette: effectalpha50
-		# Weapon: DummyWeapon
 
 BuildingFireSmall:
   	Inherits: BuildingFireBig

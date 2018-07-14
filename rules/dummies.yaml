@@ -37,6 +37,17 @@ VISIONACTOR:
 		Delay: 10
 		HealIfBelow: 200
 
+SWVISIONDUMMY:
+	Inherits: ^DUMMYAIRCRAFT
+	RevealsShroud:
+		Range: 7c0
+	Health:
+		HP: 7
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 200
+
 IONBEAMTARGET:
 	Inherits: ^DUMMYAIRCRAFT
 	# Inherits@2: ^VisionWhenKilled
@@ -282,6 +293,8 @@ NANOMACHINEBURSTDUMMY:
 	Health:
 		HP: 20
 		NotifyAppliedDamage: False
+	RevealsShroud:
+		Range: 8c0
 	ProximityExternalCondition:
 		Condition: nanomachineburst
 		Range: 7c0
@@ -325,9 +338,9 @@ IONSTORMGENERATOR:
 		Delay: 25
 		HealIfBelow: 200
 	RevealsShroud:
-		Range: 5c0
+		Range: 8c0
 	Health:
-		HP: 60
+		HP: 8
 		NotifyAppliedDamage: False
 	ExplodeWeapon:
 		Weapon: RandomBoltSpawner

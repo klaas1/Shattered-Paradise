@@ -188,8 +188,7 @@ fona15:
 VEINHOLE:
 	Inherits: ^Building
 	Inherits@2: ^2x2Shape
-	-ExternalCapturable:
-	-ExternalCapturableBar:
+	-Capturable:
 	RadarColorFromTerrain:
 		Terrain: Veins
 	Building:

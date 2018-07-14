@@ -272,7 +272,7 @@ MUBUNKR:
 	Tooltip:
 		Name: Bunker
 	Buildable:
-		Description: Fortified position where infantry can fire from within.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Provides stealth detection when garrisoned.\n- Up to 4 infantry units can be garrisoned\n- Does not require power to operate.
+		Description: Fortified position where infantry can fire from within.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Provides stealth detection when garrisoned.\n- Infantry units can be garrisoned inside, gaining extra range.\n- Does not require power to operate.
 		Queue: Defense
 		BuildPaletteOrder: 16
 		Prerequisites: murax, ~structures.mut, ~!AImoney
@@ -289,7 +289,7 @@ MUBUNKR:
 		MaxWeight: 5
 		PipCount: 5
 		Types: Infantry
-		EjectOnDeath: true
+		EjectOnDeath: False
 		LoadedCondition: loaded
 	DetectCloaked:
 		RequiresCondition: loaded && !empdisable && !disabled
@@ -771,7 +771,7 @@ GAPLUG:
 		Description: Ion Cannon Array
 		DisplayTimer: True
 		DisplayBeacon: True
-		TargetCircleRange: 5c0
+		TargetCircleRange: 6c0
 		LongDesc: Fires an array of ion cannons on the targetted area.
 		ChargeInterval: 6000
 		ActivationSequence: idle
@@ -1115,7 +1115,7 @@ CABEYE:
 		Range: 11c0
 		RequiresCondition: !disabled
 	RevealsShroud@asd:
-		Range: 24c0
+		Range: 21c0
 		RequiresCondition: !disabled
 	Selectable:
 		Bounds: 90, 124, 0, -40

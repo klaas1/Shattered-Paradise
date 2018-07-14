@@ -219,10 +219,6 @@ GTDROP:
 	ProvidesPrerequisite@buildingname:
 	DetonateWeaponPower@pods:
 		Icon: droppods
-		ActivationSequence: idle
-		DisplayTimer: True
-		DisplayBeacon: True
-		TargetCircleRange: 6c0
 		Description: Helldiver Drop
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady
@@ -237,7 +233,11 @@ GTDROP:
 		IncomingSpeechNotification: SuperweaponFired
 		IncomingSound: SuperweaponFired
 		LaunchSound: n_swlaunch.aud
-		CameraRange: 10c0
+		ActivationSequence: idle
+		DisplayTimer: True
+		DisplayBeacon: True
+		TargetCircleRange: 6c0
+		CameraRange: 7c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
 	Health:
@@ -544,7 +544,7 @@ NAMISL:
 		IsPlayerPalette: True
 		OrderName: ToxinMissile
 		CameraActor: camera
-		CameraRange: 10c0
+		CameraRange: 7c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
 		PauseOnCondition: empdisable || disabled

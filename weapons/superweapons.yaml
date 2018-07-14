@@ -213,6 +213,9 @@ DroppodSpawner:
 		Delay: 1
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@5Actor: SpawnActor
+		Actors: swvisiondummy
+		Range: 3
 
 DroppodElevator:
 	ReloadDelay: 6
@@ -481,15 +484,15 @@ MeteorSpawner:
 		Delay: 15
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
-	Warhead@Shake: ScreenShaker
-		Intensity: 10
-		Duration: 15
 	Warhead@6: FireShrapnel
 		Weapon: MeteorSpawner2
 		Amount: 1
 		Delay: 35
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@5Actor: SpawnActor
+		Actors: swvisiondummy
+		Range: 3
 
 MeteorSpawner2:
 	Inherits: MeteorSpawner
@@ -580,6 +583,9 @@ MeteorRainNormal:
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 1c0
+	Warhead@Shake: ScreenShaker
+		Intensity: 10
+		Duration: 7
 
 MeteorRainSlow:
 	Inherits: MeteorRainNormal

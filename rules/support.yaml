@@ -1115,7 +1115,7 @@ CABEYE:
 		Range: 11c0
 		RequiresCondition: !disabled
 	RevealsShroud@asd:
-		Range: 21c0
+		Range: 18c0
 		RequiresCondition: !disabled
 	Selectable:
 		Bounds: 90, 124, 0, -40

@@ -361,7 +361,7 @@
 		RequiresCondition: WolfDebuff
 	FirepowerMultiplier@WolfDebuff:
 		RequiresCondition: WolfDebuff
-		Modifier: 70
+		Modifier: 65
 	ExternalCondition@WolfDebuff:
 		Condition: WolfDebuff
 

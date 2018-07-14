@@ -181,7 +181,7 @@
 		Damage: 1
 		Versus:
 			InfantryArmor: 300
-			BuildingArmor: 100
+			BuildingArmor: 80
 			VehicleArmor: 50
 			DefenseArmor: 50
 			ConcreteArmor: 35

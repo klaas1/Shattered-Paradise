@@ -466,7 +466,7 @@ CRAB:
 		-InvalidTargets:
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Creep, Water, Building, Defence, Air, NoAutoTarget\
+		ValidTargets: Infantry, Vehicle, Creep, Water, Building, Defence, Air, NoAutoTarget
 		-InvalidTargets:
 
 PERMACRAB:

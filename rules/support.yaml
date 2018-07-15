@@ -268,11 +268,11 @@ MUBUNKR:
 	Inherits@2: ^TowerStealthDetection
 	Inherits@3: ^2x2Shape
 	Valued:
-		Cost: 400
+		Cost: 500
 	Tooltip:
 		Name: Bunker
 	Buildable:
-		Description: Fortified position where infantry can fire from within.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Provides stealth detection when garrisoned.\n- Infantry units can be garrisoned inside, gaining extra range.\n- Does not require power to operate.
+		Description: Fortified position where infantry can fire from within.\n\nGood vs: Depends what has been garrisoned\n\nSpecial:\n- Provides stealth detection when garrisoned.\n- Infantry units can be garrisoned inside, gaining extra range.\n- Comes with a free marauder.\n- Does not require power to operate.
 		Queue: Defense
 		BuildPaletteOrder: 16
 		Prerequisites: murax, ~structures.mut, ~!AImoney
@@ -291,6 +291,7 @@ MUBUNKR:
 		Types: Infantry
 		EjectOnDeath: False
 		LoadedCondition: loaded
+		InitialUnits: marauder
 	DetectCloaked:
 		RequiresCondition: loaded && !empdisable && !disabled
 	AttackGarrisoned:
@@ -676,7 +677,7 @@ SCRTRACTOR:
 GAPOWRUP:
 	Inherits: ^BuildingPlug
 	Valued:
-		Cost: 300
+		Cost: 200
 	Tooltip:
 		Name: Power Turbine
 	Buildable:
@@ -1098,7 +1099,7 @@ CABEYE:
 		Description: High tech detection system.\n\nSpecial:\n- Provides huge vision range\n- Shrouds the enemy vision range in a certain area\n- Requires power to operate
 		Prerequisites: ~structures.cab, cabradr
 	Valued:
-		Cost: 1000
+		Cost: 500
 	Tooltip:
 		Name: Eye of Cabal
 	Building:
@@ -1121,7 +1122,7 @@ CABEYE:
 		Bounds: 90, 124, 0, -40
 		DecorationBounds: 90, 124, 0, -40
 	Power:
-		Amount: -100
+		Amount: -50
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack
 	ProvidesPrerequisite@buildingname:
@@ -1200,6 +1201,26 @@ CABSW1:
 		HP: 300000
 	RequiresBuildableArea:
 		AreaTypes: building
+	SpawnActorsOnSell@gdi:
+		ValuePercent: 30
+		ActorTypes: gdie1
+		Factions: gdi
+	SpawnActorsOnSell@nod:
+		ValuePercent: 30
+		ActorTypes: altnode1
+		Factions: nod
+	SpawnActorsOnSell@cab:
+		ValuePercent: 30
+		ActorTypes: worker
+		Factions: cab
+	SpawnActorsOnSell@mut:
+		ValuePercent: 30
+		ActorTypes: marauder
+		Factions: mut
+	SpawnActorsOnSell@scr:
+		ValuePercent: 30
+		ActorTypes: shark
+		Factions: scr
 
 CABGRINDER:
 	Inherits: ^Building

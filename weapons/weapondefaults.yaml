@@ -13,9 +13,9 @@
 		Damage: 20
 		Versus:
 			InfantryArmor: 100
-			BuildingArmor: 30
+			BuildingArmor: 20
 			VehicleArmor: 10
-			DefenseArmor: 15
+			DefenseArmor: 10
 			AircraftArmor: 100
 			ConcreteArmor: 5
 			Shield: 0

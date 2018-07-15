@@ -359,7 +359,7 @@
 		Sequence: bullparticle
 		Palette: apolgreenalpha
 		RequiresCondition: WolfDebuff
-	FirepowerMultiplier@WolfDebuff:
+	ReloadDelayMultiplier@WolfDebuff:
 		RequiresCondition: WolfDebuff
 		Modifier: 65
 	ExternalCondition@WolfDebuff:
@@ -463,7 +463,7 @@
 		TerrainTypes: Tiberium, BlueTiberium
 	SelfHealing@Tib:
 		PercentageStep: 1
-		Step: 200
+		Step: 300
 		Delay: 100
 		DamageCooldown: 0
 		HealIfBelow: 105
@@ -1154,7 +1154,7 @@
 		WarnProbability: 0
 		CrushSound: squish6.aud
 	DamagedByTerrain:
-		Damage: 200
+		Damage: 300
 		DamageInterval: 25
 		Terrain: Tiberium, BlueTiberium
 		DamageTypes: TiberiumDeath

@@ -244,7 +244,7 @@ ALTNODE1:
 		Description: Light infantry variant.\n\nGood vs: Infantry\n\nSpecial:\n- Does not go prone after taking fire.\n- Crush class: crushable
 		Prerequisites: ~nahand
 	Valued:
-		Cost: 100
+		Cost: 120
 	Tooltip:
 		Name: Militant
 	Health:
@@ -903,7 +903,7 @@ BUG:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 21
-		Description: Alien breed that poisons enemies.\n\nGood vs Ground targets.\n\nSpecial\n- Units hit will become poisoned.\n- Poisoned units take damage over time.\n- Plague Carriers attacks bounce a second time.\n- Absorbs essence from killed enemies to heal.\n- Crush class: crushable.\n- Does not receive damage from tiberium fields.
+		Description: Alien breed that poisons enemies.\n\nGood vs Ground targets.\n\nSpecial\n- Units hit will become poisoned.\n- Poisoned units take damage over time.\n- Plague Carriers attacks bounce a second time.\n- Absorbs essence from killed enemies to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.
 		Prerequisites: ~scrrax, scrradr
 	Valued:
 		Cost: 500
@@ -916,6 +916,7 @@ BUG:
 		Bounds: 26,30,0,-10
 	Health:
 		HP: 20000
+    -Crushable:
 	Mobile:
 		Speed: 70
 	SpawnActorOnDeath@conversion:

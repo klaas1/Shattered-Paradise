@@ -145,7 +145,7 @@ DummySparks:
 
 FloatTesla:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Range: 7c0
 	Report: voltautofire.wav
 	Charges: yes
@@ -533,7 +533,7 @@ DestroyerCannon:
 
 FighterSpawn:
 	Inherits: ^ArtilleryWarhead
-	ReloadDelay: 25
+	ReloadDelay: 15
 	Range: 8c0
 	MinRange: 0c100
 	Projectile: InstantExplode
@@ -738,7 +738,7 @@ EssenceMissile:
 		ExplosionPalette: apolra2ialpha
 	Warhead@emp: GrantExternalCondition
 		Range: 75
-		Duration: 250
+		Duration: 175
 		Condition: batteryboost
 	Warhead@emp: GrantExternalCondition
 		Range: 200

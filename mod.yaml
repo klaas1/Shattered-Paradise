@@ -99,7 +99,6 @@ Packages:
 	sp|uibits
 
 MapFolders:
-	sp|maps/ww: System
 	sp|maps/meme: System
 	sp|maps/balanced: System
 	sp|maps/others: System

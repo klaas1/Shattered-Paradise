@@ -766,7 +766,7 @@ TTNK:
 		Prerequisites: ~naweap
 	Mobile:
 		TurnSpeed: 5
-		Speed: 95
+		Speed: 90
 		Locomotor: InfantryCrusherVehicle
 		RequiresCondition: undeployed && !empdisable
 	Health:
@@ -1035,6 +1035,7 @@ HOWTLIZER:
 		Speed: 50
 		TurnSpeed: 3
 		Locomotor: InfantryCrusherVehicle
+	-Cloak@CLOAKGENERATOR:
 	Cloak@cloakgenerator:
 		InitialDelay: 170
 		CloakDelay: 170
@@ -1089,8 +1090,9 @@ STNK:
 		Sequence: shield
 		IsPlayerPalette: true
 		Palette: cloakscrinshield
-	GrantCondition:
-		Condition: cloakgenerator
+	GrantConditionOnDamageState@CloakBreaks:
+		Condition: CloakBreaks
+		ValidDamageStates: Critical
 	Cloak@cloakgenerator:
 		InitialDelay: 80
 		CloakDelay: 80
@@ -1127,9 +1129,6 @@ STNK:
 	-GrantConditionOnDamageState@smoke:
 	-SmokeParticleEmitter:
 	-ExternalCondition@smoketrail:
-	GrantConditionOnDamageState@CloakBreaks:
-		Condition: CloakBreaks
-		ValidDamageStates: Critical
 
 #####################################################################
 # FORGOTTEN
@@ -1321,7 +1320,7 @@ WOLF:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 20
-		Description: Tiberium beast that uses tiberium acid to harm nearby units.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- Attacks reduce target damage by 35%.\n- Can mutate killed units.\n- E.M.P. Inmune.\n- Heals even when in combat.
+		Description: Tiberium beast that uses tiberium acid to harm nearby units.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- Attacks reduce target attack speed by 35%.\n- Can mutate killed units.\n- E.M.P. Inmune.\n- Heals even when in combat.
 		Prerequisites: ~muweap, muradr
 	Valued:
 		Cost: 800
@@ -1485,7 +1484,7 @@ SCRSCORPION:
 		Prerequisites: ~scrweap
 	Mobile:
 		TurnSpeed: 6
-		Speed: 100
+		Speed: 95
 		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 30000
@@ -1552,7 +1551,7 @@ SCRGLYDER2:
 	Health:
 		HP: 30000
 	Mobile:
-		Speed: 100
+		Speed: 90
 		Locomotor: Hover
 	Transforms:
 		IntoActor: scrglyder1

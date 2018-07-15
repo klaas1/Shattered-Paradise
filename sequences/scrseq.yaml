@@ -94,9 +94,10 @@ legio:
 		Length: 7
 		# ShadowStart: 434
 	die-crushed:
-		Start: 96
-		Length: 7
+		Start: 283
+		Length: 2
 		# ShadowStart: 434
+		Tick: 400
 		ZOffset: -511
 	shoot:
 		Start: 221

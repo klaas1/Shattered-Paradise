@@ -95,7 +95,7 @@ TemplarLasor:
 BHRifle:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 100
-	Range: 9c0
+	Range: 10c0
 	Report: ramjetfire.wav
 	ValidTargets: Infantry, LandedAircraft
 	Projectile: BulletAS
@@ -121,7 +121,7 @@ BHRifle:
 		ExplosionPalette: ra
 		ValidImpactTypes: Water
 	Warhead@emp: GrantExternalCondition
-		Range: 1c512
+		Range: 2c0
 		Duration: 125
 		Condition: ToxinTrooperDebuff
 		ValidTargets: Infantry
@@ -359,7 +359,7 @@ StealthRocketAA:
 HarpyClaw:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
-	ReloadDelay: 20
+	ReloadDelay: 40
 	Range: 5c0
 	MinRange: 0c100
 	InvalidTargets: Air
@@ -505,7 +505,7 @@ RedEye2:
 
 ObeliskLaserFire:
 	Inherits: ^FullDamage
-	ReloadDelay: 40
+	ReloadDelay: 70
 	Range: 9c0
 	Report: obelray1.aud
 	Projectile: LaserZap

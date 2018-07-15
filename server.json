@@ -5,7 +5,7 @@
     "timestep": 40,
     "orderlatency": 3,
     "allowspectators": true,
-    "dedicated": true,
+    "dedicated": false,
     "allowversionmismatch": false,
     "enablesingleplayer": true,
     "options": {

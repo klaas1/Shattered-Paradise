@@ -943,7 +943,7 @@ COLOSSI:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 22
-		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.\n- One hits infantry.
+		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.\n- Is devastating against infantry.
 		Prerequisites: ~scrrax, scrtech
 	Valued:
 		Cost: 600

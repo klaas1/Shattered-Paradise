@@ -988,7 +988,7 @@ SCRCARRIER:
 	CarrierMaster:
 		Actors: STORMRIDERSPAWN, STORMRIDERSPAWN, STORMRIDERSPAWN, STORMRIDERSPAWN, STORMRIDERSPAWN, STORMRIDERSPAWN
 		RespawnTicks: 700
-		ReamTicks: 10
+		RearmTicks: 10
 		InstaRepair: true
 	AttackTurreted:
 	Turreted:

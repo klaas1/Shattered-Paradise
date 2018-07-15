@@ -379,7 +379,7 @@ FighterHellfireAA:
 	ValidTargets: Air
 	Burst: 1
 	BurstDelays: 3
-	ReloadDelay: 50
+	ReloadDelay: 25
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
 		ValidTargets: Air

@@ -884,6 +884,7 @@ NATMPL:
 		LaunchSpeechNotification: SuperweaponFired
 		IncomingSpeechNotification: SuperweaponFired
 		IncomingSound: SuperweaponFired
+		# IncomingSound: incomingnuke.wav
 		LaunchSound: n_swlaunch.aud
 		SpawnOffset: 0,427,0
 		DisplayTimerStances: Ally, Neutral, Enemy

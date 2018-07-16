@@ -403,6 +403,11 @@
 		DeathType: ScrinEssenceKill
 		RequiresLobbyCreeps: false
 
+^Chronoshiftable:
+	Chronoshiftable:
+		ReturnToOrigin: false
+		ChronoshiftSound: instantrift.wav
+
 ^KillSelf:
 	KillsSelf:
 		RequiresCondition: KillSelf
@@ -560,9 +565,6 @@
 		Condition: empdisable
 		Color: FFFFFF
 	SpeedMultiplier@WebDisable:
-		RequiresCondition: empdisable
-		Modifier: 0
-	RangeMultiplier@WebDisable:
 		RequiresCondition: empdisable
 		Modifier: 0
 	WithIdleOverlay@EMPDISABLE:
@@ -826,6 +828,7 @@
 	Inherits@2: ^InfantryStealthDetection
 	Inherits@3: ^HopspitalHeal
 	Inherits@4: ^ToxinTrooperDebuff
+	Inherits@5: ^Chronoshiftable
 	Inherits@6: ^WebDisable
 	Inherits@7: ^BugPoison
 	Inherits@8: ^DisplayVanguardShield
@@ -850,6 +853,7 @@
 	Inherits@11: ^DamagedByRadioactivity
 	Inherits@12: ^WolfDebuff
 	Inherits@13: ^GetsOneShotedbySuperweapons
+	Inherits@14: ^Chronoshiftable
 	GrantConditionOnTunnelLayer:
 		Condition: inside-tunnel
 
@@ -1148,8 +1152,6 @@
 		Voice: Move
 	Armor:
 		Type: InfantryArmor
-	Chronoshiftable:
-		ReturnToOrigin: false
 	Crushable:
 		WarnProbability: 0
 		CrushSound: squish6.aud
@@ -1520,8 +1522,6 @@
 		Types: Vehicle
 		CaptureThreshold: 100
 		CancelActivity: True
-	Chronoshiftable:
-		ReturnToOrigin: false
 	Crushable:
 		CrushClasses: Vehicle
 		WarnProbability: 0

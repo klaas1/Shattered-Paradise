@@ -1100,7 +1100,7 @@ SCRADVPOWR:
 	Inherits@3: ^ScrinDeathExplo
 	Inherits@4: ^3x3Shape
 	Tooltip:
-		Name: Reality Destabilizer
+		Name: Wormhole Generator
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 9
@@ -1128,7 +1128,7 @@ SCRADVPOWR:
 		ChargeInterval: 6000
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady
-		Description: Reality destabilization
+		Description: Instant Wormhole
 		LongDesc: Teleports infantry and vehicles.
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower

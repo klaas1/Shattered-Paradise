@@ -1,6 +1,6 @@
 Metadata:
 	Title: Shattered Paradise
-	Version: SP-Build-20180715-III
+	Version: SP-Build-20180716
 	Website: https://www.openra.net
 	WebIcon32: https://ppmforums.com/files/logo2megamini_614.png
 
@@ -216,7 +216,7 @@ ChromeLayout:
 	common|chrome/multiplayer-directconnect.yaml
 	common|chrome/connection.yaml
 	common|chrome/replaybrowser.yaml
-	ts|chrome/dropdowns.yaml
+	sp|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
 	common|chrome/assetbrowser.yaml

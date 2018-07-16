@@ -39,6 +39,7 @@ ENGINEER:
 		FactionImages:
 			gdi: engineer.gdi
 			nod: engineer.nod
+	AttackFrontal:
 	AnnounceOnSeen:
 		Notification: EnemyEngineerDetected
 
@@ -830,6 +831,7 @@ NAPOST:
 		Name: Laser Fence
 	Health:
 		HP: 30000
+	BlocksProjectiles:
 	Armor:
 		Type: ConcreteArmor
 	-Targetable:

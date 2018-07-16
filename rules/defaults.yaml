@@ -228,15 +228,6 @@
 			TopLeft: -3072, -2048
 			BottomRight: 3072, 2048
 
-^CanBeCaptured:
-	Capturable:
-		CaptureThreshold: 100
-	WithColoredOverlay@capturingbuilding:
-		RequiresCondition: empdisable
-		Palette: captured
-	ExternalCondition@capturingbuilding:
-		Condition: capturingbuilding
-
 ^CrateBuffs:
 	SpeedMultiplier@speedcrate:
 		RequiresCondition: speedcrate
@@ -368,9 +359,9 @@
 		Sequence: bullparticle
 		Palette: apolgreenalpha
 		RequiresCondition: WolfDebuff
-	FirepowerMultiplier@WolfDebuff:
+	ReloadDelayMultiplier@WolfDebuff:
 		RequiresCondition: WolfDebuff
-		Modifier: 65
+		Modifier: 135
 	ExternalCondition@WolfDebuff:
 		Condition: WolfDebuff
 
@@ -472,7 +463,7 @@
 		TerrainTypes: Tiberium, BlueTiberium
 	SelfHealing@Tib:
 		PercentageStep: 1
-		Step: 200
+		Step: 300
 		Delay: 100
 		DamageCooldown: 0
 		HealIfBelow: 105
@@ -569,9 +560,6 @@
 		Condition: empdisable
 		Color: FFFFFF
 	SpeedMultiplier@WebDisable:
-		RequiresCondition: empdisable
-		Modifier: 0
-	RangeMultiplier@WebDisable:
 		RequiresCondition: empdisable
 		Modifier: 0
 	WithIdleOverlay@EMPDISABLE:
@@ -958,9 +946,11 @@
 	Inherits@0: ^BasicBuilding
 	Inherits@1: ^StructureEffects
 	Inherits@2: ^5CellVision
-	Inherits@3: ^CanBeCaptured
 	GivesBuildableArea:
 		AreaTypes: building
+	ExternalCapturable:
+		CaptureCompleteTime: 7
+	ExternalCapturableBar:
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	RevealsShroud:
@@ -1076,7 +1066,6 @@
 ^TechBuilding:
 	Inherits: ^BasicBuilding
 	Inherits@0: ^6CellVision
-	Inherits@1: ^CanBeCaptured
 	RevealsShroud:
 		Type: Footprint 
         MaxHeightDelta: 3
@@ -1090,6 +1079,9 @@
 	RenderSprites:
 	EditorTilesetFilter:
 		Categories: Tech Structure
+	ExternalCapturable:
+		CaptureCompleteTime: 7
+	ExternalCapturableBar:
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
@@ -1159,7 +1151,7 @@
 		WarnProbability: 0
 		CrushSound: squish6.aud
 	DamagedByTerrain:
-		Damage: 200
+		Damage: 300
 		DamageInterval: 25
 		Terrain: Tiberium, BlueTiberium
 		DamageTypes: TiberiumDeath
@@ -1505,22 +1497,10 @@
 	DetectCloaked:
 		CloakTypes: mine
 		Range: 4c0
-	AttackFrontal:
-	Armament@loadup:
-		Weapon: EngineerCaptureLoadup
-		Name: primary
-	Armament@mainweapon:
-		Weapon: EngineerCapture
-		Name: secondary
-		RequiresCondition: CaptureEnabled > 4
-	GrantConditionOnAttack:
-		Condition: CaptureEnabled
-		RevokeOnNewTarget: True
-		RevokeDelay: 30
-		MaximumInstances: 5
-	KillsSelf:
-		RequiresCondition: CaptureEnabled > 4
-		Delay: 10
+	ExternalCaptures:
+		Type: building
+		ConsumeActor: true
+		PlayerExperience: 50
 
 ^Vehicle:
 	Inherits@0: ^GainsExperience
@@ -2193,6 +2173,7 @@
 		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
 	EditorTilesetFilter:
 		Categories: Defence
+	-ExternalCapturableBar:
 	WithDecoration@POWERDOWN:
 		Image: poweroff
 		Sequence: offline

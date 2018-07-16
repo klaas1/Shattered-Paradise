@@ -1,10 +1,11 @@
 {
     "mod": "sp",
-    "modversion": "{Build 20180711 Bleed}",
+    "modversion": "SP-Build-20180715-III",
     "map": "50795cd535bb2f204d25403e0d794c520aa8658d",
     "timestep": 40,
     "orderlatency": 3,
     "allowspectators": true,
+    "dedicated": true,
     "allowversionmismatch": false,
     "enablesingleplayer": true,
     "options": {

@@ -39,7 +39,7 @@ SkirmisherMortar:
 	Inherits@2: ^Small_Clsn
 	Inherits@3: ^SpawnsIrradiation
 	ReloadDelay: 150
-	Range: 8c0
+	Range: 10c0
 	MinRange: 2c0
 	Report: 120mmf.aud
 	Projectile: BulletAS
@@ -240,7 +240,7 @@ PsykerRay:
 	Inherits: ^FullDamage
 	Inherits@2: ^Large_Explosion
 	ReloadDelay: 150
-	Range: 12c0
+	Range: 14c0
 	Burst: 3
 	ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
 	Projectile: BulletAS
@@ -248,8 +248,8 @@ PsykerRay:
 		Inaccuracy: 2c512
 		Blockable: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 150
-		Damage: 7000
+		Spread: 400
+		Damage: 10000
 		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: bolt1, bolt2, bolt3, bolt4, bolt5, bolt6, bolt7, bolt8, bolt9, bolt10
@@ -472,11 +472,6 @@ QueenShard:
 		ExplosionPalette: apolgreenalpha
 		ImpactSounds: expnew14.aud
 		InvalidTargets: Water
-	Warhead@8Radio: CreateRadioactivity
-		Range: 1
-		Level: 40
-		Falloff: 100
-		MaxLevel: 500
 
 SpawnEggShrapnel:
 	ReloadDelay: 500

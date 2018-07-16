@@ -34,7 +34,7 @@ JJGrenade:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Bang
 	ReloadDelay: 80
-	Range: 4c0
+	Range: 5c0
 	Report: grenadelauncherfire.wav
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
@@ -55,12 +55,12 @@ JJGrenade:
 
 JJGroundGrenade:
 	Inherits: JJGrenade
-	Range: 5c0
+	Range: 6c0
 
 JJBuff:
 	Inherits: ^NoDamage
 	ReloadDelay: 80
-	Range: 4c0
+	Range: 5c0
 	Projectile: InstantExplode
 	Warhead@Acid: GrantExternalCondition
 		Range: 32
@@ -377,11 +377,11 @@ FighterHellfire:
 FighterHellfireAA:
 	Inherits: FighterHellfire
 	ValidTargets: Air
-	Burst: 2
+	Burst: 1
 	BurstDelays: 3
 	ReloadDelay: 25
 	Warhead@1Dam: SpreadDamage
-		Damage: 1500
+		Damage: 3000
 		ValidTargets: Air
 
 OBBombFrontal:

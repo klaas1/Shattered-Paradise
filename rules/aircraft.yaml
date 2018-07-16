@@ -74,7 +74,7 @@ ORCA:
 		Bounds: 30,24
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 160
+		Speed: 150
 		MoveIntoShroud: true
 	AutoTarget:
 		InitialStance: HoldFire
@@ -331,7 +331,7 @@ APACHE:
 		Bounds: 30,24
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 160
+		Speed: 150
 		MoveIntoShroud: true
 	Health:
 		HP: 12000
@@ -505,7 +505,7 @@ MUTHELI:
 		Bounds: 30,24
 	Aircraft:
 		TurnSpeed: 7
-		Speed: 160
+		Speed: 150
 		MoveIntoShroud: true
 		RearmBuildings: muair, gahpad, nahpad
 	-RenderVoxels:
@@ -628,7 +628,7 @@ MUTQUEEN:
 		VoiceSet: Fiend
 	Aircraft:
 		TurnSpeed: 6
-		Speed: 110
+		Speed: 125
 		Repulsable: true
 		MoveIntoShroud: true
 		IdealSeparation: 1c0
@@ -859,6 +859,7 @@ SCRTRANS:
 	Inherits@1: ^9CellVision
 	Inherits@2: ^ScrinRender
 	Inherits@Shadow: ^AircraftShadow
+ 	Inherits@3: ^LowerSelectionPriority
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -881,7 +882,7 @@ SCRTRANS:
 		Priority: 4
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 100
+		Speed: 130
 		LandWhenIdle: true
 		Repulsable: true
 		MoveIntoShroud: true
@@ -987,7 +988,7 @@ SCRCARRIER:
 	CarrierMaster:
 		Actors: STORMRIDERSPAWN, STORMRIDERSPAWN, STORMRIDERSPAWN, STORMRIDERSPAWN, STORMRIDERSPAWN, STORMRIDERSPAWN
 		RespawnTicks: 700
-		ReamTicks: 10
+		RearmTicks: 10
 		InstaRepair: true
 	AttackTurreted:
 	Turreted:

@@ -460,6 +460,14 @@ CRAB:
 		ReduceMoveRadiusDelay: 1
 		MinMoveDelay: 25
 		MaxMoveDelay: 100
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything
+		ValidTargets: Infantry, Vehicle, Creep, Water, Defence, Air, NoAutoTarget
+		-InvalidTargets:
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Infantry, Vehicle, Creep, Water, Building, Defence, Air, NoAutoTarget
+		-InvalidTargets:
 
 PERMACRAB:
 	Inherits: CRAB

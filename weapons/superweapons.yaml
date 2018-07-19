@@ -253,6 +253,7 @@ droppod1:
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 3
 	Range: 3c0
+    Report: tsgun4.aud
 	ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry, Water
 	Projectile: BulletAS
 		Speed: 350
@@ -352,7 +353,7 @@ ClusterMissile:
 	Warhead@SoundEffect0: CreateEffect
 		Explosions: nuke1, nuke2, nuke3
 		ExplosionPalette: effect
-		ImpactSounds: expnew19.aud
+		ImpactSounds: nukeexplo.wav
 	Warhead@ClusterSmudges0: LeaveSmudge
 		SmudgeType: LargeCrater
 		Size: 1

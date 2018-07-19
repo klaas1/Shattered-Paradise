@@ -99,7 +99,6 @@ Packages:
 	sp|uibits
 
 MapFolders:
-	sp|maps/ww: System
 	sp|maps/meme: System
 	sp|maps/balanced: System
 	sp|maps/others: System
@@ -217,7 +216,7 @@ ChromeLayout:
 	common|chrome/multiplayer-directconnect.yaml
 	common|chrome/connection.yaml
 	common|chrome/replaybrowser.yaml
-	ts|chrome/dropdowns.yaml
+	sp|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
 	common|chrome/assetbrowser.yaml

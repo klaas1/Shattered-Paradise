@@ -93,4 +93,5 @@ DrWhitePsyker		: Stealth Tank
 Graion Dilach		: Forgotten MCV
 HiJinxy				: Harvester
 SchismNavigator		: Beam Cannon
+StringStorm			: Cyborg Vehicle quotes (shared by Centurion, Drone Host, Minotaur)	
 SkyHunter713		: Old Guardian Platform

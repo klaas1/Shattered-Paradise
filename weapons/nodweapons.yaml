@@ -151,7 +151,7 @@ BikeExplo:
 	InvalidTargets: Air
 	Report: gexpbara, gexpbarb, gexpbarc
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c0
+		Spread: 1c950
 		Damage: 90000
 		ValidTargets: Ground, Water, Water, Air
 		AffectsParent: true
@@ -359,7 +359,7 @@ StealthRocketAA:
 HarpyClaw:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
-	ReloadDelay: 40
+	ReloadDelay: 30
 	Range: 5c0
 	MinRange: 0c100
 	InvalidTargets: Air
@@ -493,15 +493,9 @@ TurretLaserFire:
 RedEye2:
 	Inherits: ^RocketWarhead
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 40
-	Range: 10c0
+    Inherits@3: ^AntiAirTurretWeapon
 	Report: samshot1.aud
-	ValidTargets: Air
 	Projectile: Missile
-	Warhead@1Dam: SpreadDamage
-		Damage: 5000
-		ValidTargets: Air
-		DamageTypes: SmallExplosionDeath
 
 ObeliskLaserFire:
 	Inherits: ^FullDamage

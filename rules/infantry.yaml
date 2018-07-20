@@ -39,7 +39,7 @@ GRENADIER:
 	Tooltip:
 		Name: Phalanx
 	Health:
-		HP: 9000
+		HP: 10000
 	Armament@1:
 		Weapon: GrenadierBazooka
 		LocalOffset: 0,0,600
@@ -1177,7 +1177,7 @@ PDRONE:
 		Name: Reclaimer
 	Buildable:
 		Queue: Infantry
-		Description: Melee drone programmed to kill enemy infantry.\n\nSpecial:\n- Can only attack infantry\n- Turns killed infantry into worker cyborgs\n- Does not receive damage from tiberium fields.\n- Crush class: crushable
+		Description: Melee drone programmed to kill enemy infantry.\n\nSpecial:\n- Can only attack infantry\n- Turns killed infantry into worker cyborgs\n- Does not receive damage from tiberium fields.\n- Crush class: crushable.\n- Can cross water.
 		BuildPaletteOrder: 26
 		Prerequisites: ~cabclaw
 	Selectable:

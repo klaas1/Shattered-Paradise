@@ -500,6 +500,24 @@
 	ExternalCondition@hospitalheal:
 		Condition: hospitalheal
 
+^BarracksHeal:
+	SelfHealing@BarracksHeal:
+		PercentageStep: 2
+		Delay: 25
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: BarracksHeal
+	WithDecoration@BarracksHeal:
+		Image: healpip
+		Sequence: idle
+		ReferencePoint: Bottom, Left
+		Palette: mouse
+		ValidStances: Ally, Enemy
+		ShowToEnemies: true
+		RequiresCondition: BarracksHeal
+	ExternalCondition@BarracksHeal:
+		Condition: BarracksHeal
+
 ^MachineShopHeal:
 	SelfHealing@MachineShopHeal:
 		PercentageStep: 1
@@ -840,6 +858,7 @@
 	Inherits@9: ^DamagedByRadioactivity
 	Inherits@10: ^WolfDebuff
 	Inherits@11: ^GetsOneShotedbySuperweapons
+	Inherits@12: ^BarracksHeal
 	GrantConditionOnTunnelLayer:
 		Condition: inside-tunnel
 
@@ -1028,11 +1047,6 @@
 	RenderRangeCircle:
 	Targetable@Defence:
 		TargetTypes: Defence
-	-SpawnActorsOnSell@gdi:
-	-SpawnActorsOnSell@nod:
-	-SpawnActorsOnSell@cab:
-	-SpawnActorsOnSell@mut:
-	-SpawnActorsOnSell@scr:
 	Armor:
 		Type: DefenseArmor
 	EditorTilesetFilter:
@@ -1044,11 +1058,15 @@
 
 ^AntiAir:
 	Inherits: ^Defence
-	Inherits@0: ^10CellVision
+	Inherits@0: ^11CellVision
 	RenderRangeCircle:
 		RangeCircleType: AA
 	RevealsShroud:
 		Type: Footprint 
+	Valued:
+		Cost: 800
+	Health:
+		HP: 60000
 
 ^Tier2:
 	Inherits: ^Defence
@@ -2221,6 +2239,23 @@
 	LineBuildNode:
 		Connections: 0,-1, 0,1
 	Gate:
+
+^ScrinDeathExplo:
+	Explodes:
+		Weapon: ScrinBuildingExplode
+		EmptyWeapon: ScrinBuildingExplode
+		Type: Footprint
+	SmokeParticleEmitter:
+		Duration: 100
+		RequiresCondition: smoketrail
+		Sequence: idle
+		SpawnFrequency: 3, 10
+		Gravity: -32,-32,48, 32,32,48
+		Offset: 0,0,0,0,0,0
+		Image: scrsmoke
+		Palette: apolbluealpha60
+	Building:
+		BuildSounds: scrinplacebuilding.wav
 
 ^ScrinRender:
 	Inherits: ^Cloakable

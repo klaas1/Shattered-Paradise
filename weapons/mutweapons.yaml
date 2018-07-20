@@ -40,7 +40,7 @@ SkirmisherMortar:
 	Inherits@3: ^SpawnsIrradiation
 	ReloadDelay: 150
 	Range: 10c0
-	MinRange: 2c0
+	MinRange: 1c0
 	Report: 120mmf.aud
 	Projectile: BulletAS
 		Speed: 180
@@ -390,7 +390,7 @@ TiberianRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 4500
+		Damage: 3000
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@2EffWater: CreateEffect
@@ -568,8 +568,8 @@ GargoylACannon:
 		Versus:
 			InfantryArmor: 80
 			BuildingArmor: 80
-			VehicleArmor: 100
-			DefenseArmor: 100
+			VehicleArmor: 80
+			DefenseArmor: 80
 			ConcreteArmor: 30
 		ValidTargets: Ground, Water
 		InvalidTargets: Air
@@ -649,17 +649,12 @@ LeonidCannon:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 FlakFire:
-	Inherits: ^FullDamage
+	Inherits: ^AntiAirTurretWeapon
 	Inherits: ^Small_Brnl
-	ReloadDelay: 50
-	Range: 10c0
 	Report: cygun1.aud
-	ValidTargets: Air
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Air
 		Damage: 4000
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		ValidTargets: Ground, Water, Air, AirHit
 		ExplosionPalette: apolra2salpha

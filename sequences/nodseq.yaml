@@ -422,14 +422,14 @@ subtank:
 
 stnk:
 	Inherits: ^EmpOverlay
-	idle: stealthtank3#stnksprite
+	idle: stealthtank3
 		Facings: -32
 		ShadowStart: 32
 	turret: buggyturret
 		Start: 32
 		Facings: -32
 		UseTilesetCode: false
-	icon: stealthtankicon2#stnkicon#
+	icon: stealthtankicon2
 
 sgen:
 	Inherits: ^EmpOverlay

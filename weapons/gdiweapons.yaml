@@ -126,7 +126,7 @@ WolverineVulcan:
 
 APCGrenade:
 	Inherits: ^ArtilleryWarhead
-	Inherits@2: ^GreyExplo
+	Inherits@2: ^Small_Bang
 	ReloadDelay: 50
 	Range: 5c0
 	Report: grenadelauncherfire.wav
@@ -210,7 +210,7 @@ JuggCannon:
 	MinRange: 5c0
 	Report: jugger1.aud
 	Projectile: BulletAS
-		Speed: 200
+		Speed: 250
 		Image: 120mm
 		LaunchAngle: 165
 		Shadow: true
@@ -425,10 +425,8 @@ VulcanTower:
 GdiRedEye:
 	Inherits: ^RocketWarhead
 	Inherits@2: ^Small_Twlt
-	ReloadDelay: 40
-	Range: 10c0
+	Inherits@3: ^AntiAirTurretWeapon
 	Report: samshot1.aud
-	ValidTargets: Air
 	Projectile: Missile
 		Arm: 2
 		Blockable: false
@@ -437,10 +435,6 @@ GdiRedEye:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Damage: 5000
-		ValidTargets: Air
-		DamageTypes: SmallExplosionDeath
 
 RPGTower:
 	Inherits: ^RocketWarhead

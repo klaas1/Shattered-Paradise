@@ -20,7 +20,7 @@ GAVULC:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
 	Health:
-		HP: 70000
+		HP: 60000
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -73,7 +73,7 @@ GAROCK:
 		Bounds: 48, 36, 0, -6
 		DecorationBounds: 48, 48, 0, -12
 	Health:
-		HP: 70000
+		HP: 60000
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -102,8 +102,6 @@ GACSAM:
 	Power:
 		Amount: -20
 	WithSpriteBody:
-	Valued:
-		Cost: 600
 	Tooltip:
 		Name: SAM Tower
 	Buildable:
@@ -118,8 +116,6 @@ GACSAM:
 	Selectable:
 		Bounds: 48, 36, 0, -6
 		DecorationBounds: 48, 48, 0, -12
-	Health:
-		HP: 70000
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -160,7 +156,7 @@ NALASR:
 		Bounds: 40, 30, -8, -6
 		DecorationBounds: 40, 36, -8, -8
 	Health:
-		HP: 70000
+		HP: 60000
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
@@ -198,7 +194,7 @@ NAOBEL:
 		Bounds: 88, 42, 0, -6
 		DecorationBounds: 88, 72, 0, -12
 	Health:
-		HP: 100000
+		HP: 90000
 	WithMuzzleOverlay:
 	Armament:
 		Weapon: ObeliskLaserFire
@@ -227,8 +223,6 @@ NAOBEL:
 
 NASAM:
 	Inherits: ^AntiAir
-	Valued:
-		Cost: 600
 	Tooltip:
 		Name: S.A.M. Site
 	Buildable:
@@ -240,8 +234,6 @@ NASAM:
 	Selectable:
 		Bounds: 40, 30, -3, -8
 		DecorationBounds: 40, 36, -3, -8
-	Health:
-		HP: 70000
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -283,7 +275,7 @@ MUBUNKR:
 		Bounds: 80, 42, 0, -6
 		DecorationBounds: 80, 42, 0, -6
 	Health:
-		HP: 90000
+		HP: 80000
 	AutoTarget:
 	Cargo:
 		MaxWeight: 5
@@ -303,7 +295,6 @@ MUBUNKR:
 		AreaTypes: building
 	WithSpriteBody:
 		PauseOnCondition: loaded
-		# RequiresCondition: !loaded
 	WithIdleOverlay@1@asd:
 		RequiresCondition: loaded
 		Sequence: occupied
@@ -346,7 +337,7 @@ MUCANNON:
 		Bounds: 40, 30, -3, -8
 		DecorationBounds: 40, 36, -3, -8
 	Health:
-		HP: 70000
+		HP: 55000
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -374,8 +365,6 @@ MUCANNON:
 MUFLAK:
 	Inherits: ^AntiAir
 	Inherits@1: ^MutRender
-	Valued:
-		Cost: 600
 	Tooltip:
 		Name: Flak Station
 	Buildable:
@@ -387,8 +376,6 @@ MUFLAK:
 	Selectable:
 		Bounds: 40, 36, -3, -8
 		DecorationBounds: 40, 36, -3, -8
-	Health:
-		HP: 50000
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -440,7 +427,7 @@ CABPIT:
 	-ExternalCapturableBar:
 	-ToggleConditionOnOrder:
 	Health:
-		HP: 70000
+		HP: 60000
 	AutoTarget:
 	SelectionDecorations:
 	AttackOmni:
@@ -473,7 +460,7 @@ CABBLAST:
 		Bounds: 40, 30, -3, -8
 		DecorationBounds: 40, 36, -3, -8
 	Health:
-		HP: 50000
+		HP: 40000
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -495,8 +482,6 @@ CABBLAST:
 CABRAIL:
 	Inherits: ^Defence
 	Inherits@1: ^CabRender
-	Valued:
-		Cost: 600
 	Tooltip:
 		Name: Railgun Turret
 	Buildable:
@@ -508,8 +493,6 @@ CABRAIL:
 	Selectable:
 		Bounds: 40, 30, -3, -8
 		DecorationBounds: 40, 36, -3, -8
-	Health:
-		HP: 70000
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -552,7 +535,7 @@ SCRNEEDLER:
 		Bounds: 40, 30, -3, -8
 		DecorationBounds: 40, 36, -3, -8
 	Health:
-		HP: 70000
+		HP: 60000
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -604,7 +587,7 @@ SCRDRONE:
 		Bounds: 88, 42, 0, -6
 		DecorationBounds: 88, 72, 0, -12
 	Health:
-		HP: 100000
+		HP: 90000
 	AttackOmni:
 		PauseOnCondition: empdisable || disabled
 	Armament:
@@ -634,8 +617,6 @@ SCRTRACTOR:
 	Selectable:
 		Bounds: 40, 30, -3, -8
 		DecorationBounds: 40, 36, -3, -8
-	Health:
-		HP: 70000
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -754,7 +735,7 @@ GAPLUG:
 		DecorationBounds: 115,104,0,-24
 	Buildable:
 		BuildPaletteOrder: 41
-		Prerequisites: proc, gatech, ~structures.gdi, ~techlevel.unrestricted
+		Prerequisites: gatech, ~structures.gdi, ~techlevel.unrestricted
 		Description: Communications facility for the Ion Cannon Array.\n\nSpecial:\n- Provides access to the Ion Cannon Array\n- Requires power to operate
 		Queue: Defense
 		BuildLimit: 1
@@ -809,7 +790,7 @@ NASTLH:
 		Name: Stealth Generator
 	Buildable:
 		BuildPaletteOrder: 43
-		Prerequisites: proc, natech, ~structures.nod
+		Prerequisites: natech, ~structures.nod
 		Description: Support structure that cloacks friendly units and buildings.\n\nSpecial:\n- Cloacks friendly assets around it.\n- Generator itself is not cloacked.\n- Requires power to operate.
 		Queue: Defense
 	Building:

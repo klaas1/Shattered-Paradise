@@ -97,7 +97,7 @@ APC:
 		Prerequisites: ~gaweap, gapile
 	Mobile:
 		TurnSpeed: 5
-		Speed: 100
+		Speed: 85
         Locomotor: AmphAPCLocomotor
 	Health:
 		HP: 35000
@@ -1043,7 +1043,7 @@ HOWTLIZER:
 		UncloakSound: cloak5.aud
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-		RequiresCondition: !CloakBreaks
+		RequiresCondition: !CloakBreaks && !empdisable
 	WithIdleOverlay@shield:
 		Sequence: shield
 		IsPlayerPalette: true
@@ -1100,7 +1100,7 @@ STNK:
 		UncloakSound: cloak5.aud
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-		RequiresCondition: !CloakBreaks
+		RequiresCondition: !CloakBreaks && !empdisable
 	Armament:
 		Weapon: StealthRocket
 		LocalOffset: 400,100,300, 400,-100,300
@@ -1182,7 +1182,7 @@ MUTQUAD:
 		Speed: 80
 		Locomotor: InfantryCrusherVehicle
 	Health:
-		HP: 30000
+		HP: 25000
 	Voiced:
 		VoiceSet: Trike
 		Volume: 3
@@ -1214,7 +1214,6 @@ MUTQUAD:
 
 LYNX:
 	Inherits: ^Tank
-	Inherits@1: ^Ra2vxl
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^MutRender
 	Inherits@4: ^8CellVision
@@ -1230,11 +1229,11 @@ LYNX:
 		Name: Lynx
 	Mobile:
 		TurnSpeed: 10
-		Speed: 105
+		Speed: 95
 		Locomotor: InfantryCrusherVehicle
 	WithFacingSpriteBody:
 	Health:
-		HP: 25000
+		HP: 30000
 	Voiced:
 		VoiceSet: Trike
 		Volume: 3
@@ -1260,7 +1259,6 @@ LYNX:
 
 STRUCK:
 	Inherits: ^Tank
-	Inherits@1: ^Ra2vxl
 	Inherits@2: ^6CellVision
 	Inherits@3: ^MutRender
 	Valued:
@@ -1370,13 +1368,7 @@ MRLS:
 		Weapon: tiberianrocket
 		LocalOffset: 400,100,900, 400,-100,900
 		RequiresCondition: !deployed
-		PauseOnCondition: empdisable || tibrocket2
-	Armament@clean:
-		Weapon: TiberianRocketClean
-		LocalOffset: 400,100,900, 400,-100,900
-		PauseOnCondition: empdisable || tibrocket1
-		RequiresCondition: deployed
-		Name: secondary
+		PauseOnCondition: empdisable
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
@@ -1386,22 +1378,6 @@ MRLS:
 	WithFacingSpriteBody:
 	WithSpriteTurret:
 	-DamagedByRadioactivity@Default:
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed
-		CanDeployOnRamps: True
-	WithTextDecoration@primary:
-		Text: N
-		ReferencePoint: Right
-		Color: E0D048
-		ZOffset: 9999
-		RequiresCondition: deployed
-	GrantConditionOnAttack@tibrocket1:
-		Condition: tibrocket1
-		RevokeDelay: 200
-	GrantConditionOnAttack@tibrocket2:
-		Condition: tibrocket2
-		RevokeDelay: 200
-		ArmamentNames: secondary
 
 DEATHCLAW:
 	Inherits: ^Beast
@@ -1484,10 +1460,10 @@ SCRSCORPION:
 		Prerequisites: ~scrweap
 	Mobile:
 		TurnSpeed: 6
-		Speed: 95
+		Speed: 80
 		Locomotor: InfantryCrusherVehicle
 	Health:
-		HP: 30000
+		HP: 35000
 	AttackFrontal:
 		Voice: Attack
 		PauseOnCondition: empdisable
@@ -1830,11 +1806,11 @@ REAPERCAB:
 		LocalOffset: 0,0,200
 	Armament@secondary:
 		Weapon: ReaperScythe
-		LocalOffset: 0,-200,500, 0,200,500
+		LocalOffset: 300,-400,950, 300,400,950
 		PauseOnCondition: empdisable
 	Armament@AA:
 		Weapon: ReaperScytheAA
-		LocalOffset: 0,-200,500, 0,200,500
+		LocalOffset: 300,-400,950, 300,400,950
 		PauseOnCondition: empdisable
 	WithDeathAnimation@die:
 		DeathSequence: die1
@@ -1887,7 +1863,6 @@ REPAIRVEHICLE:
 
 ECM:
 	Inherits: ^Vehicle
-	Inherits@1: ^Ra2vxl
 	Inherits@2: ^CabRender
     Inherits@3: ^LowerSelectionPriority
 	Valued:

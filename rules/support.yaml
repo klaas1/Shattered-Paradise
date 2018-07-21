@@ -376,6 +376,8 @@ MUFLAK:
 	Selectable:
 		Bounds: 40, 36, -3, -8
 		DecorationBounds: 40, 36, -3, -8
+	Health:
+		HP: 40000
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:

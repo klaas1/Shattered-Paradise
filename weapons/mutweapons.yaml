@@ -651,6 +651,7 @@ LeonidCannon:
 FlakFire:
 	Inherits: ^AntiAirTurretWeapon
 	Inherits: ^Small_Brnl
+	ReloadDelay: 50
 	Report: cygun1.aud
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage

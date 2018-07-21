@@ -596,6 +596,7 @@ BlasterProton:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 CABRAILAA:
+	ReloadDelay: 50
 	Inherits: ^AntiAirTurretWeapon
 	Report: railgunfire.wav
 	Projectile: Railgun

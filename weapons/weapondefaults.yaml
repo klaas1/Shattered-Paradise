@@ -15,9 +15,9 @@
 			InfantryArmor: 100
 			BuildingArmor: 20
 			VehicleArmor: 10
-			DefenseArmor: 10
+			DefenseArmor: 5
 			AircraftArmor: 100
-			ConcreteArmor: 5
+			ConcreteArmor: 3
 			Shield: 0
 
 ^RocketWarhead:
@@ -129,14 +129,9 @@
 ^SpawnsIrradiation:
 	Warhead@3Radio: CreateRadioactivity
 		Range: 1, 2
-		Level: 40
+		Level: 6
 		Falloff: 100, 10
 		MaxLevel: 500
-
-^SpawnIrradiationScrin:
-    Inherits: ^SpawnsIrradiation
-	Warhead@3Radio: CreateRadioactivity
-		Level: 20
 
 ^SpawnsIrradiationFalcon:
     Inherits: ^SpawnsIrradiation
@@ -163,6 +158,17 @@
 			ConcreteArmor: 30
 			Shield: 0
 
+^AntiAirTurretWeapon:
+	Inherits: ^FullDamage
+	ValidTargets: Air
+	ReloadDelay: 40
+	Range: 11c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c045
+		Damage: 5000
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		ValidTargets: Air
+
 ^NoDamage:
 	ValidTargets: Ground, Infantry, Vehicle, Building
 	Warhead@1Dam: SpreadDamage
@@ -181,7 +187,7 @@
 		Damage: 1
 		Versus:
 			InfantryArmor: 300
-			BuildingArmor: 80
+			BuildingArmor: 60
 			VehicleArmor: 50
 			DefenseArmor: 50
 			ConcreteArmor: 35

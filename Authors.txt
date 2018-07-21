@@ -1,4 +1,4 @@
-	Shattered Paradise, a mod for OpenRA made by the Nolt).
+	Shattered Paradise, a mod for OpenRA made by the Nolt.
 
 #Special Thanks
 
@@ -9,28 +9,44 @@ A warm thank you to the following folks.
 
 This is the current development team.
 
-Apollo				: Knowledge about palettes and explosion making.
-abcdefg30			: Dev that offered time working on specific issues.
-Graion Dilach		: Code wizzard, responsible for the code necessary for many features the mod offers.
-FiveAces			: Streaming.
-lawANDorder			: YAML Maintenance & SDK configuration.
-Noddy				: Asset Hunter, Writter.
-Voidwalker			: Coding & Maintenance.
-ZxGanon				: Balance & Streaming.
+Core Members (Without them, the project literally dies):
+
+Nolt:				: Founder, mod maintainer, jack of all trades.
+Graion Dilach		: Coding, Advisor, AS Fork Maintainer.
+Voidwalker			: Coding, SP Fork maintainer.
+ZxGanon				: Balance, Tester Manager & Streaming.
 Jrb0001				: Multiplayer server support.
-Trempler			: Mapping.
+
+Team Members:
+
+Apollo				: Knowledge about palettes and explosion making.
+abcdefg30			: ORA Dev, he helped with some bug fixing.
+FiveAces			: Streaming.
 Windawz				: 2d Support.
-Kerbiter			: Logo support.
+SoScared			: Streaming.
+Orb					: Balance advisor.
+Noddy				: Asset Hunter, Writter.
+Trempler			: Mapping.
 CptNaughty			: Prop modeller.
 
 Former team members
 
+RedSky:				: Writter (Currently missing in action).
+lawANDorder			: YAML Maintenance & SDK configuration.
 SchismNavigator		: Worked on SP for some time.
-BoolBada			: Another code wizzard, responsible for carrier logic and other fun stuff.
-4XS					: For his help with concept art. http://4-x-s.deviantart.com/
+Siv					: Article writter.
+BoolBada			: Coder, responsible for carrier logic and other fun stuff.
+4XS					: Concept Artist. http://4-x-s.deviantart.com/
 Penev				: Dev that offered time working on specific issues.
-Skyhunter713		: Voice Acting.
 Scipci�n			: Got me into 3D modelling.
+Alex06				: 2d Support.
+The_Dementor		: Minor logo support.
+
+Testers:
+
+Note: People that already have a bigger role will be omitted from this list:
+
+Kwendy, J MegaTank, Icesinithol, MustaphaTR, Schmusifant, Blackened, 010010, PeaceKeep0r, StolenTech, TheChosenEvilOne.
 
 #Game Art
 
@@ -77,4 +93,5 @@ DrWhitePsyker		: Stealth Tank
 Graion Dilach		: Forgotten MCV
 HiJinxy				: Harvester
 SchismNavigator		: Beam Cannon
+StringStorm			: Cyborg Vehicle quotes (shared by Centurion, Drone Host, Minotaur)	
 SkyHunter713		: Old Guardian Platform

@@ -816,21 +816,6 @@ MUTSW2:
 	Power:
 		Amount: -150
 
-^ScrinDeathExplo:
-	Explodes:
-		Weapon: ScrinBuildingExplode
-		EmptyWeapon: ScrinBuildingExplode
-		Type: Footprint
-	SmokeParticleEmitter:
-		Duration: 100
-		RequiresCondition: smoketrail
-		Sequence: idle
-		SpawnFrequency: 3, 10
-		Gravity: -32,-32,48, 32,32,48
-		Offset: 0,0,0,0,0,0
-		Image: scrsmoke
-		Palette: apolbluealpha60
-
 drached:
 	Inherits: GACNST
 	Inherits@2: ^ScrinRender

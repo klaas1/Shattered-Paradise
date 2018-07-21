@@ -62,7 +62,7 @@ ORCA:
 	Inherits@3: ^11CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1000
+		Cost: 1200
 	Tooltip:
 		Name: Orca Fighter
 	Buildable:
@@ -319,7 +319,7 @@ APACHE:
     Inherits@4: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1000
+		Cost: 1200
 	Tooltip:
 		Name: Harpy
 	Buildable:
@@ -446,16 +446,9 @@ CERBERUS:
 		MoveIntoShroud: true
 	Health:
 		HP: 45000
-	GrantConditionOnAttack:
-		Condition: LaserCharge
-		MaximumInstances: 7
-		RevokeDelay: 60
-	Armament@charge:
-		Weapon: CerberusLazorCharge
 	Armament:
 		Weapon: CerberusLazor
 		LocalOffset: 500,0,0, 150, 400, 0, 150, -400, 0, -600,0,0
-		RequiresCondition: LaserCharge > 6
 	AttackHeli:
 		FacingTolerance: 64
 		Voice: Attack
@@ -479,9 +472,6 @@ CERBERUS:
 	WithRangeCircle:
 		Range: 4c0
 		Type: cloakgenerator
-	AmbientSound:
-		RequiresCondition: LaserCharge == 1
-		SoundFiles: obelpowr.aud
 
 MUTHELI:
 	Inherits: ^CombatHelicopter
@@ -493,7 +483,7 @@ MUTHELI:
     Inherits@6: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1000
+		Cost: 1200
 	Tooltip:
 		Name: Gargoyle
 	Buildable:
@@ -644,8 +634,8 @@ MUTQUEEN:
 		QuantizedFacings: 8
 	GrantTimedConditionOnDeploy:
 		DeployedCondition: deployed
-		CooldownTicks: 4000
-		DeployedTicks: 20
+		CooldownTicks: 4500
+		DeployedTicks: 15
 		StartsFullyCharged: True
 	ExplodeWeapon:
 		Weapon: EggElevator
@@ -673,7 +663,7 @@ STORMRIDER:
 	Inherits@3: ^11CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 700
+		Cost: 800
 	Tooltip:
 		Name: Storm Rider
 	Buildable:
@@ -1143,7 +1133,7 @@ WASP:
 	Inherits@5: ^CabRender
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1100
+		Cost: 1300
 	Tooltip:
 		Name: Wasp
 	Buildable:
@@ -1155,7 +1145,7 @@ WASP:
 		Bounds: 40,30
 	Aircraft:
 		TurnSpeed: 6
-		Speed: 125
+		Speed: 135
 		Repulsable: true
 		MoveIntoShroud: true
 	Health:

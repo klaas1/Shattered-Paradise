@@ -114,6 +114,17 @@ Cyborg:
 		Burned: 22-n106
 		Zapped: electro1
 
+CabalVehicle:
+	DefaultVariant: .wav
+	Voices:
+		Select: cabvehicle0000, cabvehicle0001, cabvehicle0002, cabvehicle0003, cabvehicle0004 
+		Move: cabvehicle0005, cabvehicle0006, cabvehicle0007, cabvehicle0008, cabvehicle0009
+		Attack: cabvehicle0010, cabvehicle0011, cabvehicle0012, cabvehicle0013, cabvehicle0014
+		Action: cabvehicle0005, cabvehicle0006, cabvehicle0007, cabvehicle0008, cabvehicle0009
+		Die: 22-n104, 22-n106, 22-n108
+		Burned: 22-n106
+		Zapped: electro1
+
 CyborgReap:
 	Voices:
 		Select: 60-n100, 60-n102, 60-n104

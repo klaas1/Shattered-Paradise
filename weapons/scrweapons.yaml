@@ -9,7 +9,7 @@ SharkJump:
 	Warhead@1Dam: SpreadDamage
 		Damage: 2000
 		Versus:
-			BuildingArmor: 15
+			BuildingArmor: 10
 		Spread: 0c030
 		DamageTypes: BulletDeath, ScrinEssenceKill
 		InvalidTargets: Shark
@@ -17,7 +17,7 @@ SharkJump:
 		Damage: 2000
 		ValidTargets: Shark
 		Versus:
-			BuildingArmor: 15
+			BuildingArmor: 10
 		Spread: 0c030
 		DamageTypes: BulletDeath, ScrinEssenceKill
 		InvalidTargets: Building, Vehicle
@@ -221,8 +221,8 @@ FloatGlaive2:
 
 ScorpAcid:
 	Inherits: ^AcidWarhead
-	Inherits@1: ^SpawnIrradiationScrin
-	ReloadDelay: 100
+	Inherits@1: ^SpawnsIrradiation
+	ReloadDelay: 70
 	Range: 4c0
 	Burst: 12
 	BurstDelays: 1
@@ -254,8 +254,6 @@ ScorpAcid:
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
 		ExplosionPalette: apolgreenalpha
-	Warhead@3Radio: CreateRadioactivity
-		Level: 6
 
 MindController:
 	ReloadDelay: 100
@@ -590,7 +588,7 @@ WyvermBlastAA:
 
 NeedlerAcid:
 	Inherits: ^AcidWarhead
-	Inherits@1: ^SpawnIrradiationScrin
+	Inherits@1: ^SpawnsIrradiation
 	ReloadDelay: 50
 	Range: 6c768
 	Burst: 7
@@ -625,15 +623,10 @@ NeedlerAcid:
 		Explosions: tibexp2
 		ExplosionPalette: apolgreenalpha
 		InvalidImpactTypes: Water
-	Warhead@3Radio: CreateRadioactivity
-		Level: 6
 
 TractorBeam:
-	Inherits: ^FullDamage
-	ReloadDelay: 50
-	Range: 10c0
+	Inherits: ^AntiAirTurretWeapon
 	Report: triplasor0000.wav, triplasor0001.wav, triplasor0002.wav
-	ValidTargets: Air
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
@@ -646,9 +639,7 @@ TractorBeam:
 		ValidTargets: Air
 
 TractorBeam2:
-	ReloadDelay: 50
-	Range: 8c0
-	ValidTargets: Air
+    Inherits: TractorBeam
 	Projectile: LaserZap
 		Color: 50F5FF45
 		Width: 50
@@ -657,8 +648,6 @@ TractorBeam2:
 		SecondaryBeamZOffset: 4000
 	Warhead@1Dam: SpreadDamage
 		Damage: 1
-		ValidTargets: Air
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 DronePlane:
 	Inherits: ^BombWarhead

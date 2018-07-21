@@ -124,14 +124,16 @@ ReclaimerHit:
 GLAD120mm:
 	Inherits: ^APWarhead
 	Inherits@2: ^Mediuml_Clsn
-	ReloadDelay: 187
+	ReloadDelay: 150
 	Range: 5c0
 	Report: tankmediumfire.wav
 	Projectile: BulletAS
 		Speed: 1c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 7200
+		Damage: 6500
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		Versus:
+			BuildingArmor: 75
 
 LurkerProj:
 	Inherits: ^FullDamage
@@ -253,7 +255,7 @@ Dogzooka:
 CenturionVulcan:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
-	ReloadDelay: 50
+	ReloadDelay: 40
 	Burst: 2
 	Range: 6c0
 	Report: HammerGun0000.wav, HammerGun0001.wav, HammerGun0002.wav
@@ -587,15 +589,16 @@ BlasterProton:
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
 		Damage: 5850
+		Versus:
+			BuildingArmor: 50
+			VehicleArmor: 50
 		ValidTargets: Ground, Water, Vehicle, Infantry, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 CABRAILAA:
-	Inherits: ^FullDamage
 	ReloadDelay: 50
-	Range: 10c0
+	Inherits: ^AntiAirTurretWeapon
 	Report: railgunfire.wav
-	ValidTargets: Air
 	Projectile: Railgun
 		Width: 75
 		ZOffset: 2047
@@ -603,8 +606,6 @@ CABRAILAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 2500
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-		ValidTargets: Air
 
 LaserFence:
 	TargetActorCenter: true

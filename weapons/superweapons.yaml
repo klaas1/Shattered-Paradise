@@ -433,7 +433,7 @@ ToxinMissile:
 	Inherits: ^Large_Explosion
 	ValidTargets: Ground, Water, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
-		Spread: 1c0
+		Spread: 1c128
 		Damage: 6000
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Water, Air
@@ -455,9 +455,9 @@ ToxinMissile:
 		FallRate: 5000
 		Range: 3
 	Warhead@8Radio: CreateRadioactivity
-		Range: 1, 2, 3
-		Level: 500
-		Falloff: 100, 50, 25
+		Range: 1, 2, 3, 4
+		Level: 600
+		Falloff: 100, 60, 50, 25
 		MaxLevel: 1000
 
 MeteorSpawner:

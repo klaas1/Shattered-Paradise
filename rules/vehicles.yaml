@@ -75,7 +75,6 @@ MMCH:
 		MuzzleSequence: muzzle
 		LocalOffset: 600, 300, 700
 		PauseOnCondition: empdisable
-	RenderVoxels:
 	WithSpriteBarrel:
 		LocalOffset: 300, 250, 300
 	WithMuzzleOverlay:

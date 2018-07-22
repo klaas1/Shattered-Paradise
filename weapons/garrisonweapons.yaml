@@ -129,6 +129,10 @@ GLegioNeedlerAA:
 	Inherits: LegioNeedlerAA
 	Inherits@1: ^GarrisonWeapon
 
+GColossiShard:
+	Inherits: ColossiTesla
+	Inherits@1: ^GarrisonWeapon
+
 GColossiTesla:
 	Inherits: ColossiTesla
 	Inherits@1: ^GarrisonWeapon

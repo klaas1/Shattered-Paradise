@@ -395,7 +395,7 @@ scrscorpion:
 		Start: 1
 		Facings: 8
 		Length: 8
-		Tick: 50
+		Tick: 60
 		Stride: 16
 	shoot:
 		Start: 10

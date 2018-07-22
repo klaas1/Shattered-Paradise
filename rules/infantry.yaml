@@ -964,13 +964,13 @@ COLOSSI:
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Armament@1:
-		Weapon: ColossiTesla
-		LocalOffset: 300,0,1000
+		Weapon: ColossiShard
+		LocalOffset: 400,0,1300
 		RequiresCondition: undeployed
 		PauseOnCondition: WebDisable
 		Name: OnFoot
 	Armament@2:
-		Weapon: GColossiTesla
+		Weapon: GColossiShard
 		LocalOffset: 300,0,1000
 		RequiresCondition: undeployed
 		PauseOnCondition: WebDisable

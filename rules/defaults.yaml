@@ -1092,6 +1092,9 @@
 		Categories: Civilian Structure
 	ExternalCondition@CLOAKGENERATOR:
 		Condition: cloakgenerator
+	-GrantConditionOnDamageState@SpawnFire:
+	-ExplodeWeapon@SpawnFire:
+	-ExternalCondition@SpawnFire:
 
 ^TechBuilding:
 	Inherits: ^BasicBuilding

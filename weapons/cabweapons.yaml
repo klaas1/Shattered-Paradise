@@ -199,7 +199,7 @@ CyCannon:
 		Palette: effect
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
-		Spread: 300
+		Spread: 350
 		Damage: 10000
 		ValidTargets: Ground, Water
 		Versus:
@@ -591,6 +591,7 @@ BlasterProton:
 		Damage: 5850
 		Versus:
 			BuildingArmor: 50
+			DefenseArmor: 50
 			VehicleArmor: 50
 		ValidTargets: Ground, Water, Vehicle, Infantry, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath

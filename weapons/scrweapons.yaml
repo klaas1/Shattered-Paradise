@@ -58,12 +58,38 @@ LegioNeedlerAA:
 		ValidTargets: Air
 		InvalidTargets: Ground, Water, Infantry, Vehicle, Building
 
+ColossiShard:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 70
+	Range: 5c0
+    Burst: 4
+	Report: fiend2.aud
+	MinRange: 0c100
+	ValidTargets: Ground, Water
+	Projectile: BulletAS
+		Speed: 600
+		Image: minitibshard
+		Shadow: true
+		LaunchAngle: 60
+		Palette: apblue
+	Warhead@1Dam: SpreadDamage
+		Damage: 5000
+		ValidTargets: Ground, Water
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidTargets: Water
+	Warhead@2Eff: CreateEffect
+		Explosions: tib_expsmall
+		ExplosionPalette: apolbluealpha
+		InvalidTargets: Water
+
 ColossiTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
 	Range: 5c0
-	Report: voltautofire.wav
-	Charges: yes
 	Projectile: TeslaZap
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage

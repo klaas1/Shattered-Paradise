@@ -304,6 +304,11 @@ MUBUNKR:
 	-ToggleConditionOnOrder:
 	-WithDecoration@POWERDOWN:
 	-PowerMultiplier@POWERDOWN:
+	-SpawnActorsOnSell@gdi:
+	-SpawnActorsOnSell@nod:
+	-SpawnActorsOnSell@cab:
+	-SpawnActorsOnSell@mut:
+	-SpawnActorsOnSell@scr:
 
 MUBUNKRFULL:
 	Inherits: MUBUNKR
@@ -482,7 +487,7 @@ CABBLAST:
 		AreaTypes: building
 
 CABRAIL:
-	Inherits: ^Defence
+	Inherits: ^AntiAir
 	Inherits@1: ^CabRender
 	Tooltip:
 		Name: Railgun Turret

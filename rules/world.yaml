@@ -345,6 +345,8 @@ World:
 		CheckboxVisible: False
 	SpawnMapActors:
 	MapBuildRadius:
+		AllyBuildRadiusCheckboxDisplayOrder: 4
+		BuildRadiusCheckboxDisplayOrder: 5
 	MapOptions:
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevelDropdownDisplayOrder: 2
@@ -406,7 +408,9 @@ World:
 		BaseActor: drache
 		SupportActors: limped
 	MPStartLocations:
+		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:
+		DropdownDisplayOrder: 1
 	CrateSpawner:
 		Minimum: 5
 		Maximum: 20
@@ -415,6 +419,7 @@ World:
 		ValidGround: Clear, Rough, Road, DirtRoad, Tiberium, BlueTiberium
 		InitialSpawnDelay: 1500
 		CheckboxEnabled: False
+		CheckboxDisplayOrder: 1
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:

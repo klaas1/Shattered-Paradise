@@ -60,6 +60,7 @@ Player:
 	PlayerResources:
 	DeveloperMode:
 		CheckboxEnabled: true
+		CheckboxDisplayOrder: 8
 	ProvidesTechPrerequisite@high:
 		Name: No Superweapons
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high
@@ -69,6 +70,7 @@ Player:
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high, techlevel.unrestricted
 		Id: unrestricted
 	Shroud:
+		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True
 	FrozenActorLayer:
 	BaseAttackNotifier:

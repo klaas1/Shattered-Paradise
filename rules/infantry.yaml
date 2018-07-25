@@ -103,7 +103,8 @@ JUMPJET:
 	Tooltip:
 		Name: Jumpjet Infantry
 	Voiced:
-		VoiceSet: Marine
+		VoiceSet: Jumpjet
+		Volume: 2
 	Mobile:
 		Speed: 60
 	Health:
@@ -137,7 +138,8 @@ JUMPJETAIR:
 		Prerequisites: ~gapile, garadr
 		Description: Soldiers with jetpacks armed with a grenade launcher.\n\nGood vs: Infantry, Structures.\n\nSpecial:\n- Can fly\n- Will land when ordered to deploy.\n- BUG: looses experience if it change modes.
 	Voiced:
-		VoiceSet: Marine
+		VoiceSet: Jumpjet
+		Volume: 2
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -319,6 +321,9 @@ TEMPLAR:
 		Name: Templar
 	Health:
 		HP: 22500
+	Voiced:
+		VoiceSet: Templar
+		Volume: 2
 	Mobile:
 		Speed: 70
 		TerrainSpeeds:
@@ -474,7 +479,8 @@ MARAUDER:
 	Tooltip:
 		Name: Marauder
 	Voiced:
-		VoiceSet: Rocket
+		VoiceSet: Marauder
+		Volume: 2
 	Health:
 		HP: 11000
 	AutoTarget:
@@ -630,7 +636,8 @@ E3:
 	Tooltip:
 		Name: Skirmisher
 	Voiced:
-		VoiceSet: Rocket
+		VoiceSet: Skirmisher
+		Volume: 2
 	Health:
 		HP: 9500
 	Mobile:

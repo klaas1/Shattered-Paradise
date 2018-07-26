@@ -204,6 +204,7 @@ JUG:
 		Armaments: primary, secondary
 		PauseOnCondition: empdisable
 	AutoTarget:
+		ScanRadius: 16
 	Armament:
 		Weapon: JuggCannon
 		LocalOffset: 600, 200, 2650
@@ -1054,6 +1055,8 @@ HOWTLIZER:
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexploj
 		PauseOnCondition: empdisable
+	AutoTarget:
+		ScanRadius: 19
 	AttackFrontal:
 		Voice: Attack
 		PauseOnCondition: empdisable
@@ -1363,6 +1366,8 @@ MRLS:
 	Voiced:
 		VoiceSet: Trike
 		Volume: 3
+	AutoTarget:
+		ScanRadius: 13
 	Armament:
 		Weapon: tiberianrocket
 		LocalOffset: 400,100,900, 400,-100,900
@@ -1956,6 +1961,8 @@ SPIDERARTY:
 	WithMuzzleOverlay:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
+	AutoTarget:
+		ScanRadius: 11
 	AttackFrontal:
 		PauseOnCondition: empdisable
 	Armament:

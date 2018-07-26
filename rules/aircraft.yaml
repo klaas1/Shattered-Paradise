@@ -816,6 +816,8 @@ SCRDESTROYER:
 		VoiceSet: Deva
 	Selectable:
 		Bounds: 85,50,0,-12
+	AutoTarget:
+		ScanRadius: 15
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 60

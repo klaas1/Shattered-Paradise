@@ -404,15 +404,29 @@ GACNST:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
 
-PROC:
-	Inherits: ^Building
-	Inherits@4: ^NormalRefineryHitShape
-	Tooltip:
-		Name: Tiberium Refinery
+^RefineryHP:
+	Health:
+		HP: 100000
 	Valued:
 		Cost: 1500
 	CustomSellValue:
 		Value: 500
+	Tooltip:
+		Name: Tiberium Refinery
+	Power:
+		Amount: -30
+	StoresResources:
+		PipColor: Green
+		PipCount: 15
+		Capacity: 1000
+	Explodes:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
+
+PROC:
+	Inherits: ^Building
+	Inherits@1: ^NormalRefineryHitShape
+    Inherits@2: ^RefineryHP
 	ProvidesPrerequisite:
 		Factions: gdi, cab, mut, nod
 		Prerequisite: proc
@@ -423,8 +437,6 @@ PROC:
 		Bounds: 100, 70, -30, -24
 		DecorationBounds: 102, 70, -26, -24
 	SelectionDecorations:
-	Health:
-		HP: 100000
 	Refinery:
 		DockAngle: 160
 		DockOffset: 2,1
@@ -433,13 +445,6 @@ PROC:
 		Actor: HARV
 		SpawnOffset: 3,1
 		Facing: 160
-	StoresResources:
-		PipColor: Green
-		PipCount: 15
-		Capacity: 1000
-	Explodes:
-		Weapon: TiberiumExplosion
-		EmptyWeapon: TiberiumExplosion
 	WithIdleOverlay@REDLIGHTS:
 		Sequence: idle-redlights
 	WithIdleOverlay@BIB:
@@ -447,8 +452,6 @@ PROC:
 	WithDockedOverlay@flame:
 		Sequence: flame
 		Palette: effect
-	Power:
-		Amount: -30
 	ProvidesPrerequisite@proc:
 		ProvidesPrerequisite: proc
 		Description: Tiberium Refinery
@@ -464,13 +467,8 @@ PROC:
 
 FLIPPEDPROC:
 	Inherits: ^Building
-	Inherits@4: ^FlippedRefineryHitshape
-	Tooltip:
-		Name: Tiberium Refinery
-	Valued:
-		Cost: 1500
-	CustomSellValue:
-		Value: 500
+	Inherits@1: ^FlippedRefineryHitshape
+    Inherits@2: ^RefineryHP
 	ProvidesPrerequisite:
 		Factions: gdi, cab, mut, nod, scr
 		Prerequisite: proc
@@ -481,29 +479,14 @@ FLIPPEDPROC:
 		Bounds: 100, 70, 24, 12
 		DecorationBounds: 100, 70, 24, 12
 	SelectionDecorations:
-	Health:
-		HP: 140000
 	Refinery:
 		DockAngle: 30
 		DockOffset: 1,1
 		DiscardExcessResources: false
-		# IsDragRequired: true
-		# DragOffset: -512,-512,0
-		# DragLength: 12
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: 0,1
 		Facing: 30
-	StoresResources:
-		PipColor: Green
-		PipCount: 15
-		Capacity: 1000
-	Explodes:
-		Weapon: TiberiumExplosion
-		EmptyWeapon: TiberiumExplosion
-	Explodes@1:
-		Weapon: TiberiumExplosion
-		EmptyWeapon: TiberiumExplosion
 	WithIdleOverlay@REDLIGHTS:
 		Sequence: idle-redlights
 	WithIdleOverlay@BIB:
@@ -511,8 +494,6 @@ FLIPPEDPROC:
 	WithDockedOverlay@flame:
 		Sequence: flame
 		Palette: effect
-	Power:
-		Amount: -30
 	ProvidesPrerequisite@proc:
 		ProvidesPrerequisite: proc
 		Description: Tiberium Refinery

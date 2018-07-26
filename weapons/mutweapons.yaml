@@ -406,7 +406,7 @@ TiberianRocket:
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water, Air, AirHit
 	Warhead@ShieldUpgrade: GrantExternalCondition
-		Range: 368
+		Range: 460
 	Warhead@3Radio: CreateRadioactivity
 		Level: 10
 

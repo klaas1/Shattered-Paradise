@@ -1,11 +1,11 @@
 {
     "mod": "sp",
-    "modversion": "Server name test build",
+    "modversion": "Server name test build II",
     "map": "50795cd535bb2f204d25403e0d794c520aa8658d",
     "timestep": 40,
     "orderlatency": 3,
     "allowspectators": true,
-    "ModTitle": "Shattered Paradise",
+    "modtitle": "Shattered Paradise",
     "modwebsite": "http://www.moddb.com/mods/shattered-paradise",
     "modicon32": "https://ppmforums.com/files/logo2megamini_614.png",
     "dedicated": true,

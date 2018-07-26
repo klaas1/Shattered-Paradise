@@ -68,6 +68,17 @@ VeterancyWeapon:
 		Range: 1c512
 		ValidStances: Ally, Neutral
 
+RadarScanWeapon:
+	ReloadDelay: 6 
+	Projectile: InstantExplode
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 1
+		Damage: 1
+		ValidTargets: Ground, Water, Air
+	Warhead@Spawn: SpawnActor
+		Actors: radarscandummy
+		Range: 3
+
 IonCannon: ### THIS IS THE MAIN ION CANON WEAPON
 	Inherits: ^SWBaseEffects
 	ValidTargets: Ground, Water, Air, IonBeam

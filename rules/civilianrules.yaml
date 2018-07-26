@@ -2548,19 +2548,32 @@ NEUTRALRADAR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
-	DetectCloaked:
-		Range: 5c0
-	RenderDetectionCircle:
 	Selectable:
-		Bounds: 102, 60, 0, 0
+		Bounds: 70, 100, 0, -30
 	Health:
 		HP: 250000
 	RenderSprites:
 	SelectionDecorations:
-		VisualBounds: 70, 90, 0, -32
+		VisualBounds: 70, 100, 0, -30
 	RevealsShroud:
 		Range: 14c0
 	ProvidesRadar:
+	DetonateWeaponPower:
+		# AllowMultiple: True
+		Cursor: emp
+		MaximumFiringInstances: 1000
+		ArmamentName: primary
+		Icon: radarscan
+		ChargeInterval: 3000
+		Description: Radar Scan
+		LongDesc: Reveals shroud on an area, does not detect cloaked units.
+		EndChargeSound: speech-nod|00-i158.aud
+		SelectTargetSound: n_00-i042.aud
+		OrderName: RadarScan
+		ActivationSequence: idle
+		PauseOnCondition: disabled
+		TargetCircleRange: 9c0
+		Weapon: RadarScanWeapon
 
 NEUTRALPOWERPLANT:
 	Inherits: ^TechBuilding

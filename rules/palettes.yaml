@@ -260,6 +260,10 @@
 		Name: apolgreyalpha
 		BasePalette: apgrey
 		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@radarscanpalette:
+		Name: radarscanpalette
+		BasePalette: apgrey
+		Alpha: 0.3
 	PaletteFromPaletteWithAlpha@tibtree:
 		Name: tibtreepal
 		BasePalette: apgreen

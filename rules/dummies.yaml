@@ -48,6 +48,23 @@ SWVISIONDUMMY:
 		Delay: 25
 		HealIfBelow: 200
 
+RADARSCANDUMMY:
+	Inherits: ^DUMMYAIRCRAFT
+	RevealsShroud:
+		Range: 9c0
+	Health:
+		HP: 10
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 200
+	WithSpriteBody:
+		Sequence: idle
+	-Tooltip:
+	RenderSprites:
+		Image: radarscananim
+		Palette: radarscanpalette
+
 IONBEAMTARGET:
 	Inherits: ^DUMMYAIRCRAFT
 	# Inherits@2: ^VisionWhenKilled

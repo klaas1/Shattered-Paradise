@@ -392,7 +392,7 @@ TripodProton:
 		Versus:
 			InfantryArmor: 100
 			BuildingArmor: 80
-			VehicleArmor: 25
+			VehicleArmor: 20
 			DefenseArmor: 50
 			ConcreteArmor: 30
 		ValidTargets: Ground, Water

@@ -549,7 +549,12 @@ icon:
 	hunterseeker: detnicon
 	ScrStasis: scrshieldicon
 	mothershipicon: councilicon
-    veterancyicon: veterancysupportpowericon
+	veterancyicon: veterancysupportpowericon
+	radarscan: radarscanicon
+
+radarscananim:
+	idle:
+		Length: *
 
 clustermissile:
 	up: atnukemini

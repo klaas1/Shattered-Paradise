@@ -1525,9 +1525,6 @@
 		PipType: Yellow
 	EngineerRepair:
 	RepairsBridges:
-	DetectCloaked:
-		CloakTypes: mine
-		Range: 4c0
 	ExternalCaptures:
 		Type: building
 		ConsumeActor: true

@@ -159,10 +159,10 @@ shapeshifter:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die2: ghost
-		Start: 149
-		Length: 15
-		ShadowStart: 441
+	die2: doggie
+		Start: 99
+		Length: 10
+		ShadowStart: 218
 	die-crushed: ghost
 		Start: 159
 		Length: 5

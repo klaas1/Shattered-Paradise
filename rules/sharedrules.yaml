@@ -424,7 +424,7 @@ PROC:
 		DecorationBounds: 102, 70, -26, -24
 	SelectionDecorations:
 	Health:
-		HP: 140000
+		HP: 100000
 	Refinery:
 		DockAngle: 160
 		DockOffset: 2,1

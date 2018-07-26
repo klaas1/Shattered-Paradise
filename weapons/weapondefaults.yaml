@@ -116,6 +116,8 @@
 
 ^AcidWarhead:
 	Inherits: ^WeaponGenericUpgrades
+	Warhead@ShieldUpgrade: GrantExternalCondition
+		Range: 276
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			InfantryArmor: 150

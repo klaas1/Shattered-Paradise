@@ -433,7 +433,7 @@ CERBERUS:
 	Tooltip:
 		Name: Paladin Cruiser
 	Buildable:
-		Description: High tech frigate armed with a mobile stealth generator.\n\nGood vs: Ground Targets\n\nSpecial:\n- Cloacks friendly units next to it.
+		Description: High tech frigate armed with a mobile stealth generator.\n\nGood vs: Ground Targets\n\nSpecial:\n- Cloaks friendly units next to it.
 		Queue: Air
 		BuildPaletteOrder: 5
 		Prerequisites: ~nahpad, natech

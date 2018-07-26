@@ -572,7 +572,7 @@ BGGY:
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.bug
 	Armament@colossi:
-		Weapon: ColossiTesla
+		Weapon: ColossiShard
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.colossi
 	Armament@float:
@@ -906,7 +906,7 @@ BIKE:
 	Armor@Bike:
 		Type: Bike
 	Health:
-		HP: 8000
+		HP: 6000
 	WithRangeCircle:
 		Range: 3c0
 		Type: DemoBike
@@ -1462,7 +1462,7 @@ SCRSCORPION:
 		Speed: 80
 		Locomotor: InfantryCrusherVehicle
 	Health:
-		HP: 35000
+		HP: 30000
 	AttackFrontal:
 		Voice: Attack
 		PauseOnCondition: empdisable
@@ -1991,7 +1991,7 @@ PALADIN:
 		DamageCooldown: 0
 		Delay: 75
 	Health:
-		HP: 70000
+		HP: 65000
 	BodyOrientation:
 		QuantizedFacings: 8
 		CameraPitch: 250

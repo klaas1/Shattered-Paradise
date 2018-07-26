@@ -405,6 +405,8 @@ TiberianRocket:
 		Explosions: tib_expsmall
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water, Air, AirHit
+	Warhead@ShieldUpgrade: GrantExternalCondition
+		Range: 368
 	Warhead@3Radio: CreateRadioactivity
 		Level: 10
 
@@ -426,17 +428,17 @@ MiniNuke:
 		Spread: 1c0
 		Damage: 4500
 		Versus:
-			BuildingArmor: 115
+			BuildingArmor: 140
 	Warhead@ClusterDamage3: SpreadDamage
 		Spread: 1c512
 		Damage: 7500
 		Versus:
-			BuildingArmor: 115
+			BuildingArmor: 140
 	Warhead@7Dam_areanukeb: SpreadDamage
 		Spread: 2c0
 		Damage: 1500
 		Versus:
-			BuildingArmor: 115
+			BuildingArmor: 140
 	Warhead@8Radio: CreateRadioactivity
 		Range: 1, 2, 3, 4, 5, 6
 		Level: 1000

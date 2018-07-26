@@ -246,7 +246,7 @@ ALTNODE1:
 		Description: Light infantry variant.\n\nGood vs: Infantry\n\nSpecial:\n- Does not go prone after taking fire.\n- Crush class: crushable
 		Prerequisites: ~nahand
 	Valued:
-		Cost: 120
+		Cost: 110
 	Tooltip:
 		Name: Militant
 	Health:
@@ -1390,7 +1390,7 @@ CYC2:
 	Tooltip:
 		Name: Cyborg Commando
 	Buildable:
-		Description: Elite cyborg armed with a plasma cannon.\n\nGood vs: Ground Targets\n\nSpecial:\n- Selfrepair\n- Maximum Supply of 1\n- Does not receive damage from tiberium fields.\n- Crush class: uncrushable.\n- Cannot be mindcontrolled.
+		Description: Elite cyborg armed with a plasma cannon.\n\nGood vs: Ground Targets\n\nSpecial:\n- Selfrepair\n- Maximum Supply of 1\n- Does not receive damage from tiberium fields.\n- Looses its legs when at critical health.\n- Will reattach new legs after gaining enough health.\n- Crush class: uncrushable.\n- Cannot be mindcontrolled.
 		Queue: Infantry
 		BuildPaletteOrder: 30
 		Prerequisites: ~cabclaw, cabtech
@@ -1398,6 +1398,16 @@ CYC2:
 	DeliversCash:
 		Payload: 600
 		Voice: Move
+	-WithPermanentInjury:
+	WithInfantryBody:
+		RequiresCondition: !criticalspeed
+	WithInfantryBody@Damaged:
+		RequiresCondition: criticalspeed
+		MoveSequence: crippled-run
+		AttackSequences: crippled-shoot
+		StandSequences: crippled-stand
+	GrantConditionOnDamageState@CRITICAL:
+		GrantPermanently: false
 	Voiced:
 		VoiceSet: CyborgCommando
 	AnnounceOnSeen:
@@ -1459,7 +1469,7 @@ WORKER:
 	-DamagedByTerrain:
 
 cybdog:
-	Inherits: ^Cyborg
+	Inherits: ^Soldier
 	Valued:
 		Cost: 120
 	Tooltip:
@@ -1492,6 +1502,8 @@ cybdog:
 		Armaments: OnFoot
 	SelectionDecorations:
 	-SpawnActorOnDeath@nanomachineburst:
+	-SpawnActorOnDeath@conversion:
+	-DamagedByTerrain:
 
 FLAMEGUY:
 	Inherits@1: ^ExistsInWorld

@@ -392,7 +392,7 @@ TripodProton:
 		Versus:
 			InfantryArmor: 100
 			BuildingArmor: 80
-			VehicleArmor: 50
+			VehicleArmor: 25
 			DefenseArmor: 50
 			ConcreteArmor: 30
 		ValidTargets: Ground, Water
@@ -415,6 +415,7 @@ StormRiderBlast:
 	Projectile: Missile
 		TerrainHeightAware: True
 		CruiseAltitude: 4000
+		Speed: 500
 		MinimumLaunchAngle: 255
 		MaximumLaunchAngle: 255
 		MaximumLaunchSpeed: 0c543

@@ -967,13 +967,13 @@ COLOSSI:
 		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.\n- Immune to its own radiation.
 		Prerequisites: ~scrrax, scrtech
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Colossus
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 35000
+		HP: 30000
 	Mobile:
 		Locomotor: HeavyInfantry
 		RequiresCondition: !deployed && !WebDisable

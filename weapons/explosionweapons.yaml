@@ -8,7 +8,7 @@ MineExplode:
 			Mine: 5
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-		InvalidTargets: Mine
+		InvalidTargets: Mine, Air
 
 BuildingExplode:
 	Inherits: ^ExploDefaults

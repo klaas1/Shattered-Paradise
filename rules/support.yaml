@@ -611,7 +611,7 @@ SCRTRACTOR:
 	Inherits@2: ^ScrinRender
 	Inherits@4: ^ScrinDeathExplo
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Tractor Beam
 	Buildable:

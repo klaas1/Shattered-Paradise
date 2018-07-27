@@ -324,7 +324,7 @@ Marine:
 	Voices:
 		Select: marine0015, marine0016, marine0017, marine0018, marine0019
 		Move: marine0009, marine0010, marine0011, marine0012, marine0014
-		Attack: jumpjetquotes0000, jumpjetquotes0001, jumpjetquotes0002, jumpjetquotes0003, jumpjetquotes0004
+		Attack: marine0009, marine0010, marine0011, marine0012, marine0014
 		Action: marine0009, marine0010, marine0011, marine0012, marine0014
         Build: jumpjetquotes0005
 		# Feedback: 15-i058, 15-i064 # TODO
@@ -338,13 +338,24 @@ Jumpjet:
 		Select: jumpjetquotes0015, jumpjetquotes0016, jumpjetquotes0017, jumpjetquotes0018, jumpjetquotes0019
 		Move: jumpjetquotes0010, jumpjetquotes0011, jumpjetquotes0012, jumpjetquotes0013, jumpjetquotes0014
 		Attack: jumpjetquotes0000, jumpjetquotes0001, jumpjetquotes0002, jumpjetquotes0003, jumpjetquotes0004
-		Action: jumpjetquotes0000, jumpjetquotes0001, jumpjetquotes0002, jumpjetquotes0003, jumpjetquotes0004
-        Action-Land: jumpjetquotes0006, jumpjetquotes0007
-        Action-Liftoff: jumpjetquotes0008, jumpjetquotes0009
+		Action: jumpjetquotes0006, jumpjetquotes0007
         Build: jumpjetquotes0005
-		Die: dedman1, dedman3, dedman4, dedman5, dedman6
-		Burned: dedman2
+		Die: jjdeath0000, jjdeath0001, jjdeath0002, jjtoxindeath0000, dedman1, dedman3, dedman4, dedman5, dedman6
+		Burned: jjburndeath0000, jjburndeath0001
 		Zapped: electro1
+
+Jumpjet2:
+	DefaultVariant: .wav
+	Voices:
+		Select: jumpjetquotes0015, jumpjetquotes0016, jumpjetquotes0017, jumpjetquotes0018, jumpjetquotes0019
+		Move: jumpjetquotes0010, jumpjetquotes0011, jumpjetquotes0012, jumpjetquotes0013, jumpjetquotes0014
+		Attack: jumpjetquotes0000, jumpjetquotes0001, jumpjetquotes0002, jumpjetquotes0003, jumpjetquotes0004
+		Action: jumpjetquotes0008, jumpjetquotes0009
+        Build: jumpjetquotes0005
+		Die: jjdeath0000, jjdeath0001, jjdeath0002, jjtoxindeath0000, dedman1, dedman3, dedman4, dedman5, dedman6
+		Burned: jjburndeath0000, jjburndeath0001
+		Zapped: electro1
+
 
 GuardianVO:
 	Voices:
@@ -367,8 +378,8 @@ Templar:
 		Move: templarquotes0006, templarquotes0007, templarquotes0008, templarquotes0009, templarquotes0010
 		Attack: templarquotes0000, templarquotes0001, templarquotes0002, templarquotes0003, templarquotes0004
 		Action: templarquotes0000, templarquotes0001, templarquotes0002, templarquotes0003, templarquotes0004
-		Die: dedman1, dedman3, dedman4, dedman5, dedman6
-		Burned: dedman2
+		Die: templartoxindeath0000, templardeath0000, templardeath0001, templardeath0002, dedman1, dedman3, dedman4, dedman5, dedman6
+		Burned: templarburndeath0000, templarburndeath0000, dedman2
 		Zapped: electro1
 		Build: templarquotes0005
 
@@ -400,20 +411,20 @@ Marauder:
 		Attack: marauderquotes0000, marauderquotes0001, marauderquotes0002, marauderquotes0003, marauderquotes0004
 		Action: marauderquotes0006, marauderquotes0007, marauderquotes0008
 		Build: marauderquotes0005
-		Die: dedman1, dedman3, dedman4, dedman5, dedman6
-		Burned: dedman2
+		Die: maraudertoxindeath0001, marauderdeath0000, marauderdeath0001, marauderdeath0002, dedman1, dedman3, dedman4, dedman5, dedman6
+		Burned: marauderburndeath0000, marauderburndeath0001, dedman2
 		Zapped: electro1
 
 Skirmisher:
 	DefaultVariant: .wav
 	Voices:
-		Select: marauderquotes0011, marauderquotes0012, marauderquotes0013, marauderquotes0014, marauderquotes0015
+		Select: skirmisherquotes0011, skirmisherquotes0012, skirmisherquotes0013, skirmisherquotes0014, skirmisherquotes0015
 		Move: skirmisherquotes0006, skirmisherquotes0007, skirmisherquotes0008, skirmisherquotes0009, skirmisherquotes0010
 		Attack: skirmisherquotes0000, skirmisherquotes0001, skirmisherquotes0002, skirmisherquotes0003, skirmisherquotes0004
 		Action: skirmisherquotes0000, skirmisherquotes0001, skirmisherquotes0002, skirmisherquotes0003, skirmisherquotes0004
         Build: skirmisherquotes0005
-		Die: dedman1, dedman3, dedman4, dedman5, dedman6
-		Burned: dedman2
+		Die: skirmishetoxindeath0000, skirmisherdeath0000, skirmisherdeath0001, skirmisherdeath0002, dedman1, dedman3, dedman4, dedman5, dedman6
+		Burned: skirmisheburndeath0000, skirmisheburndeath0001, dedman2
 		Zapped: electro1
 
 Trike:

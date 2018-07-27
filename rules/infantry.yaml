@@ -79,6 +79,8 @@ MEDIC:
 		Prerequisites: ~gapile
 	Voiced:
 		VoiceSet: Medic
+	Mobile:
+		Speed: 50
 	Health:
 		HP: 7000
 	Crushable:
@@ -103,8 +105,8 @@ JUMPJET:
 	Tooltip:
 		Name: Jumpjet Infantry
 	Voiced:
-		VoiceSet: Jumpjet
-		Volume: 2
+		VoiceSet: Jumpjet2
+		Volume: 3
 	Mobile:
 		Speed: 60
 	Health:
@@ -139,7 +141,7 @@ JUMPJETAIR:
 		Description: Soldiers with jetpacks armed with a grenade launcher.\n\nGood vs: Infantry, Structures.\n\nSpecial:\n- Can fly\n- Will land when ordered to deploy.\n- BUG: looses experience if it change modes.
 	Voiced:
 		VoiceSet: Jumpjet
-		Volume: 2
+		Volume: 3
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -150,6 +152,9 @@ JUMPJETAIR:
 		Type: Rectangle
 			TopLeft: -250, -250
 			BottomRight: 250, 250
+	AnnounceOnBuildAS:
+		Voice: Build
+		OnlyToOwner: True
 	Health:
 		HP: 9000
 	Armament@1:
@@ -320,10 +325,13 @@ TEMPLAR:
 	Tooltip:
 		Name: Templar
 	Health:
-		HP: 22500
+		HP: 25000
 	Voiced:
 		VoiceSet: Templar
-		Volume: 2
+		Volume: 3
+	AnnounceOnBuildAS:
+		Voice: Build
+		OnlyToOwner: True
 	Mobile:
 		Speed: 70
 		TerrainSpeeds:
@@ -360,9 +368,9 @@ NCONF:
 	Tooltip:
 		Name: Black Hand Trooper
 	Health:
-		HP: 12000
+		HP: 20000
 	Mobile:
-		Speed: 65
+		Speed: 70
 	Armament@1:
 		Weapon: TemplarLasor
 		LocalOffset: 400,0,778
@@ -480,7 +488,10 @@ MARAUDER:
 		Name: Marauder
 	Voiced:
 		VoiceSet: Marauder
-		Volume: 2
+		Volume: 3
+	AnnounceOnBuildAS:
+		Voice: Build
+		OnlyToOwner: True
 	Health:
 		HP: 11000
 	AutoTarget:
@@ -637,7 +648,10 @@ E3:
 		Name: Skirmisher
 	Voiced:
 		VoiceSet: Skirmisher
-		Volume: 2
+		Volume: 3
+	AnnounceOnBuildAS:
+		Voice: Build
+		OnlyToOwner: True
 	Health:
 		HP: 9500
 	Mobile:
@@ -666,7 +680,7 @@ SEER:
 		Description: Psychic mutant that leads armies through fear.\n\nGood vs: Vehicles, Aircraft.\n\nSpecial:\n- Can persuade friendly units to fight harder when deployed.\n- Buffed units will get 20% extra attack speed, move speed and receive 20% more damage.\n- Effect lasts 15 seconds.\n- Heals on Tiberium.\n- Can attack air\n- Crush class: crushable.
 		Prerequisites: ~murax, muhall
 	Valued:
-		Cost: 600
+		Cost: 450
 	Tooltip:
 		Name: Tyrant
 	Voiced:
@@ -913,7 +927,7 @@ BUG:
 		Description: Alien breed that poisons enemies.\n\nGood vs Ground targets.\n\nSpecial\n- Units hit will become poisoned.\n- Poisoned units take damage over time.\n- Plague Carriers attacks bounce a second time.\n- Absorbs essence from killed enemies to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.
 		Prerequisites: ~scrrax, scrradr
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: Plague Trooper
 	Targetable@MindControlImmunity:
@@ -922,7 +936,7 @@ BUG:
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 20000
+		HP: 30000
     -Crushable:
 	Mobile:
 		Speed: 70
@@ -950,7 +964,7 @@ COLOSSI:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 22
-		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.\n- Is devastating against infantry.
+		Description: Heavy duty alien.\n\nGood vs Infantry.\n\nSpecial:\n- Can irradiate its surroundings when deployed.\n- Becomes immobile on this stance.\n- Radiation harms all units regardless of owner.\n- Can absorb essence from killed units to heal.\n- Crush class: uncrushable.\n- Does not receive damage from tiberium fields.\n- Immune to its own radiation.
 		Prerequisites: ~scrrax, scrtech
 	Valued:
 		Cost: 600
@@ -964,6 +978,7 @@ COLOSSI:
 		Locomotor: HeavyInfantry
 		RequiresCondition: !deployed && !WebDisable
 	-SpawnActorOnDeath@FLAMEGUY:
+	-DamagedByRadioactivity@Colossus:
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -1002,8 +1017,12 @@ COLOSSI:
 		StandSequences: deployed
 		Sequence: deployed
 		RequiresCondition: !undeployed
-	ExplodeWeapon:
+	ExplodeWeapon@1:
 		Weapon: ColossiBlast
+		RequiresCondition: deployed
+		PauseOnCondition: WebDisable
+	ExplodeWeapon@2:
+		Weapon: ColossiBlastSound
 		RequiresCondition: deployed
 		PauseOnCondition: WebDisable
 
@@ -1097,7 +1116,7 @@ CBORG:
 	Inherits@1: ^7CellVision
 	Inherits@2: ^CabRender
 	Valued:
-		Cost: 350
+		Cost: 400
 	Tooltip:
 		Name: Missile Cyborg
 	Buildable:
@@ -1318,7 +1337,7 @@ MOTH:
 	Hovers:
 		RequiresCondition: !deployed
 	Mobile:
-		Speed: 60
+		Speed: 80
         Locomotor: HoverInfantry
 		RequiresCondition: !deployed && !WebDisable
 	LeavesTrails:

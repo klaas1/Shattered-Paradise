@@ -764,6 +764,11 @@
 		DamageTypes: FireDeath
 		RadioactivityLayerName: OrangeRadiation
 		DamageInterval: 25
+	DamagedByRadioactivity@Colossus:
+		DamageCoeff: 6000
+		DamageTypes: BulletDeath
+		RadioactivityLayerName: ColossusRadiation
+		DamageInterval: 25
 
 ^3CellVision:
 	RevealsShroud:

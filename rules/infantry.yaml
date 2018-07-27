@@ -1194,7 +1194,7 @@ PDRONE:
 		CrushSound: squish6.aud
 	Hovers:
 	Mobile:
-		Speed: 85
+		Speed: 80
 		-RequiresCondition: WebDisable
         Locomotor: HoverInfantry
 	Health:

@@ -2564,7 +2564,7 @@ NEUTRALRADAR:
 		MaximumFiringInstances: 1000
 		ArmamentName: primary
 		Icon: radarscan
-		ChargeInterval: 3000
+		ChargeInterval: 4500
 		Description: Radar Scan
 		LongDesc: Reveals shroud on an area, does not detect cloaked units.
 		EndChargeSound: speech-nod|00-i158.aud
@@ -2572,7 +2572,7 @@ NEUTRALRADAR:
 		OrderName: RadarScan
 		ActivationSequence: idle
 		PauseOnCondition: disabled
-		TargetCircleRange: 9c0
+		TargetCircleRange: 6c0
 		Weapon: RadarScanWeapon
 
 NEUTRALPOWERPLANT:

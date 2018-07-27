@@ -551,7 +551,7 @@ WETP:
 	Tooltip:
 		Name: Falcon
 	Buildable:
-		Description: Fast jet that throws a small tiberium bomb.\n\nGood vs: Ground Targets.\nSpecial:\n- Can mutate killed enemy units\n- Emits tiberium gas damaging nearby units.\n- Moves at high speed until it fires its payload\n- Has no vision when moving at high speed.
+		Description: Fast jet that throws a small tiberium bomb.\n\nGood vs: Ground Targets.\nSpecial:\n- Can mutate killed enemy units\n- Emits tiberium gas damaging nearby units.\n- Moves at high speed until it fires its payload\n- Has very low vision.
 		Queue: Air
 		BuildPaletteOrder: 7
 		Prerequisites: ~muair, muhall

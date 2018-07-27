@@ -117,30 +117,30 @@ ColossiBlast:
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Falloff: 100, 100, 100, 100
-		Spread: 1500
-		Damage: 800
-		Versus:
-			InfantryArmor: 50
-			BuildingArmor: 0
-			VehicleArmor: 20
-			DefenseArmor: 20
-			ConcreteArmor: 2
+		Spread: 1
+		Damage: 1
 		DamageTypes: FireDeath, ScrinEssenceKill
-	# # Warhead@2Eff: CreateEffect
-	# 	# Explosions: colossiglow
-	# 	# ExplosionPalette: colossiglow
-	# 	# ImpactSounds: expnew12.aud
 	Warhead@op: FireShrapnel
 		Weapon: ColossiBlastTesla
 		Amount: 8
 		AllowDirectHit: false
 	Warhead@8Radio: CreateRadioactivity
-		Range: 1, 2, 3, 4, 5
-		Level: 15
-		Falloff: 100, 80, 60, 40, 15
+		Range: 1, 2, 3, 4, 5, 6
+		Level: 30
+		Falloff: 100, 90, 80, 70, 50, 40
 		MaxLevel: 500
 		RadioactivityLayerName: ColossusRadiation
 
+ColossiBlastSound:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 75
+	Projectile: InstantExplode
+	Report: ScrinAcid0000.wav, ScrinAcid0001.wav, ScrinAcid0002.wav, ScrinAcid0003.wav, ScrinAcid0004.wav
+	Warhead@1Dam: SpreadDamage
+		Falloff: 100, 100, 100, 100
+		Spread: 1
+		Damage: 1
+		DamageTypes: FireDeath, ScrinEssenceKill
 ColossiBlastTesla:
 	Inherits: ^NoDamage
 	Inherits: ^RifleWarhead

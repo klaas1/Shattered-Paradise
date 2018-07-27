@@ -1620,15 +1620,15 @@ CAARMR:
 	Health:
 		HP: 120000
 	DetonateWeaponPower:
-		# AllowMultiple: True
+		AllowMultiple: True
 		Cursor: emp
 		MaximumFiringInstances: 1000
 		ArmamentName: primary
 		Icon: veterancyicon
 		ChargeInterval: 3000
-		Description: Veterancy
+		Description: Advanced training
 		LongDesc: Adds an extra level of experience to the selected units (1 range radius), does not affect aircraft
-		EndChargeSound: speech-nod|00-i158.aud
+		EndChargeSound: AdvTrainingReady.aud
 		SelectTargetSound: n_00-i042.aud
 		OrderName: Veterancy
 		ActivationSequence: idle
@@ -2544,7 +2544,7 @@ NEUTRALRADAR:
 	Inherits: ^TechBuilding
 	Inherits@3: ^2x2Shape
 	Tooltip:
-		Name: Surveilance Radar
+		Name: Spy Satellite (Provides vision & Radar scan power)
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
@@ -2559,15 +2559,15 @@ NEUTRALRADAR:
 		Range: 14c0
 	ProvidesRadar:
 	DetonateWeaponPower:
-		# AllowMultiple: True
+		AllowMultiple: True
 		Cursor: emp
 		MaximumFiringInstances: 1000
 		ArmamentName: primary
 		Icon: radarscan
 		ChargeInterval: 4500
-		Description: Radar Scan
+		Description: Spy Satellite
 		LongDesc: Reveals shroud on an area, does not detect cloaked units.
-		EndChargeSound: speech-nod|00-i158.aud
+		EndChargeSound: SpySatelliteReady.aud
 		SelectTargetSound: n_00-i042.aud
 		OrderName: RadarScan
 		ActivationSequence: idle

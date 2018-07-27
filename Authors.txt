@@ -4,7 +4,7 @@
 
 A warm thank you to the following folks.
 
-* WestWood Studios Studios
+* WestWood Studios
 * OpenRA dev team for their effort in creating the game.
 
 This is the current development team.
@@ -48,7 +48,7 @@ Note: People that already have a bigger role will be omitted from this list:
 
 Kwendy, J MegaTank, Icesinithol, MustaphaTR, Schmusifant, Blackened, 010010, PeaceKeep0r, StolenTech, TheChosenEvilOne.
 
-#Game Art
+#Game Assets
 
 Assets come from three sources, Public, Vanilla and made by Nolt, if an asset isnt listed here
 and it doesnt belong to the vanilla tiberian sun or any other cnc game, then its made by Nolt.

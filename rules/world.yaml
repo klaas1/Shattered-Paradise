@@ -16,11 +16,11 @@
 	Faction@0:
 		Name: GDI
 		InternalName: gdi
-		Description: Global Defense Initiative\nA paramilitar organization that fights to halt tiberium growth and\nmaintain world stability, along with global peace.\n\nBalanced faction.\n\nSpecial Characteristics:\n\n- Well rounded arsenal in offense as much as defense.\n- Heavy Tanks and Bombers.\n- Support structure: Firestorm Generators (Firewall).\n- Support power: Drop pod support.\n- Superweapon: Ion cannon alpha strike.
+		Description: Global Defense Initiative\nA paramilitar organization that fights to halt tiberium growth and\nmaintain world stability, along with global peace.\n\nBalanced faction.\n\nSpecial Characteristics:\n\n- Well rounded arsenal in offense as much as defense.\n- Heavy Tanks and Bombers.\n- Support structure: Firestorm Generators (Firewall).\n- Support power: Drop pod support.\n- Superweapon: Ion cannon array.
 	Faction@1:
 		Name: Nod
 		InternalName: nod
-		Description: Brotherhood of Nod\nThe Brotherhood fights under the leadership of Kane to speed up\nthe evolution of mankind through the power of Tiberium.\n\nHit and run faction.\n\nSpecial Characteristics:\n\n- Nod units are oriented to do guerilla attacks and stealth.\n- Advanced laser technology and Subterranean Vehicles.\n- Support Structure: Stealth Generators.\n- Support power: Toxin Bomb (quick missile).\n- Superweapon: Atomic Bomb.
+		Description: Brotherhood of Nod\nThe Brotherhood fights under the leadership of Kane to speed up\nthe evolution of mankind through the power of Tiberium.\n\nHit and run faction.\n\nSpecial Characteristics:\n\n- Nod units are oriented to do guerilla attacks and stealth.\n- Advanced laser technology and Subterranean Vehicles.\n- Support Structure: Stealth Generators.\n- Support power: Chemical Missile (quick missile).\n- Superweapon: Atomic Bomb.
 	Faction@2:
 		Name: Mutants
 		InternalName: mut
@@ -307,8 +307,10 @@ World:
 		Darkest: 10
 		Name: BlueRadiation
 	RadioactivityLayer@ColossusRadiation:
-		Color: 99FFFF
+		Color: 000099
 		Color2: 99FFFF
+		Darkest: 10
+		Halflife: 75
 		Name: ColossusRadiation
 	SmudgeLayer@SMALLSCORCH:
 		Type: SmallScorch

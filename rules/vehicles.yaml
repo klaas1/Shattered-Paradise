@@ -17,7 +17,7 @@ SMECH:
 		Speed: 100
 		Locomotor: Vehicle
 	Health:
-		HP: 17500
+		HP: 20000
 	AttackFrontal:
 		Voice: Attack
 		PauseOnCondition: empdisable
@@ -161,7 +161,7 @@ HVR:
 		TurnSpeed: 9
 		Locomotor: Hover
 	Health:
-		HP: 22000
+		HP: 25000
 	Armament:
 		Weapon: HoverMissile
 		LocalOffset: 100,150,384, 100,-150,384
@@ -452,7 +452,7 @@ BGGY:
 		Offset: -250,0,400
 		TurnSpeed: 8
 	Health:
-		HP: 15000
+		HP: 17500
 	WithMuzzleOverlay:
 	############################################
 	# Conditions
@@ -982,39 +982,6 @@ SUBTANK:
 		Voice: Attack
 		PauseOnCondition: empdisable
 	AutoTarget:
-
-ARMH:
-	Inherits: ^Tank
-	Inherits@1: ^5CellVision
-	Valued:
-		Cost: 1300
-	Tooltip:
-		Name: Beam Cannon
-	Health:
-		HP: 16000
-	Mobile:
-		Speed: 70
-		TurnSpeed: 5
-		Locomotor: Vehicle
-	WithFacingSpriteBody:
-	Armament:
-		Weapon: BCLazor
-		LocalOffset: 600,0,450
-		PauseOnCondition: empdisable
-	AttackFrontal:
-		Voice: Attack
-		PauseOnCondition: empdisable
-	AutoTarget:
-	Voiced:
-		VoiceSet: BeamCannonVO
-		Volume: 3
-	AnnounceOnBuildAS:
-		Voice: Build
-		OnlyToOwner: True
-	AnnounceOnKillAS:
-		Voice: Kill
-		Interval: 1000
-		OnlyToOwner: True
 
 HOWTLIZER:
 	Inherits: ^Tank
@@ -1783,7 +1750,7 @@ REAPERCAB:
 	Inherits: ^Walker
 	Inherits@1: ^8CellVision
 	Valued:
-		Cost: 1000
+		Cost: 1100
 	Tooltip:
 		Name: Cyborg Reaper
 	Buildable:
@@ -1917,12 +1884,12 @@ CABAPC:
 		Prerequisites: ~cabweap, cabradr
 	Mobile:
 		TurnSpeed: 8
-		Speed: 130
+		Speed: 110
 		Locomotor: Hover
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 40000
+		HP: 30000
 	Cargo:
 		Types: Infantry, Vehicle
 		MaxWeight: 8
@@ -1954,7 +1921,7 @@ SPIDERARTY:
 		Speed: 70
 		Locomotor: InfantryCrusherVehicle
 	Health:
-		HP: 45000
+		HP: 35000
 	BodyOrientation:
 		QuantizedFacings: 32
 		CameraPitch: 250

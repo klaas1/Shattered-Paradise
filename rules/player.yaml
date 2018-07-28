@@ -59,7 +59,7 @@ Player:
 		Type: mutantteleportnetwork
 	PlayerResources:
 	DeveloperMode:
-		CheckboxEnabled: true
+		CheckboxEnabled: false
 		CheckboxDisplayOrder: 8
 	ProvidesTechPrerequisite@high:
 		Name: No Superweapons

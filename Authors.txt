@@ -47,6 +47,10 @@ Testers:
 Note: People that already have a bigger role will be omitted from this list:
 
 Kwendy, J MegaTank, Icesinithol, MustaphaTR, Schmusifant, Blackened, 010010, PeaceKeep0r, StolenTech, TheChosenEvilOne.
+#Maps
+
+Maps are usually credited in the game lobby itself, so this place will be used to correct mistakes in case there are any:
+Snow Nitro: This map was made by the user WavePy
 
 #Game Assets
 

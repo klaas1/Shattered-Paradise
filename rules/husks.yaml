@@ -134,7 +134,7 @@ CERBERUS.Husk:
 MUTHELI.Husk:
 	Inherits: ^AircraftHusk
 	Tooltip:
-		Name: Banshee Fighter
+		Name: Gargoyl
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 168
@@ -274,7 +274,7 @@ WYVERM2.Husk:
 	Inherits: ^AircraftHusk
 	Inherits@2: ^ScrinRender
 	Tooltip:
-		Name: Destroyer
+		Name: Wyverm
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -297,7 +297,7 @@ GLYDER1.Husk:
 	-Cloak@CLOAKGENERATOR:
 	-ExternalCondition@cloakgenerator:
 	Tooltip:
-		Name: Destroyer
+		Name: Glyder
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -318,7 +318,7 @@ DRACHE.Husk:
 	Inherits: ^AircraftHusk
 	Inherits@2: ^ScrinRender
 	Tooltip:
-		Name: Drache
+		Name: Host Station
 	FallsToEarth:
 		Explosion: BattleshipExplode
 	Selectable:
@@ -375,7 +375,7 @@ SCRCARRIER.Husk:
 	Inherits: ^AircraftHusk
 	Inherits@2: ^ScrinRender
 	Tooltip:
-		Name: Mothership
+		Name: Carrier
 	Selectable:
 		Bounds: 1,1
 	WithShadow:

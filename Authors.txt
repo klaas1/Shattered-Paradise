@@ -74,6 +74,7 @@ Marn				: Weapon light effects.
 Moder.U				: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
 The_Dementor		: Cameos: Skirmisher, EMP pulse Icons, Harvester and mut MCV, Wrench and Tiberium Icons. 
 HG_Scipci�n			: Scrin powerplant and Cabal refinery model, Shattered Paradise planet logo.
+ImP_RuLz			: Container model.
 Jah					: Storm Rider vxl.	
 Super Joe			: Marine shp, Militant shp.
 OverWatch (PPM User): Forgotten Battle Bus vxl.	

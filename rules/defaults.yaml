@@ -1841,8 +1841,8 @@
 	ReturnOnIdle:
 
 ^CombatPlane:
-    Inherits: ^Plane
-    Inherits@0: ^GainsExperience
+	Inherits: ^Plane
+	Inherits@0: ^GainsExperience
 
 ^AircraftHusk:
 	Inherits: ^SpriteActor
@@ -1887,6 +1887,10 @@
 			Radius: 256
 	Armor:
 		Type: VehicleArmor
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle, Creep, Water, Defence, Air, Wall
+	AutoTargetPriority@ATTACKANYTHING:
+		ValidTargets: Infantry, Vehicle, Creep, Water, Defence, Air, Wall
 	Mobile:
 		Speed: 120
 		WaitAverage: 10

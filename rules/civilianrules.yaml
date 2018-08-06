@@ -288,10 +288,7 @@ VISC_LRG:
 		ScanRadius: 5
 	AttackFrontal:
 		Voice: Attack
-	AttackWander:
-		WanderMoveRadius: 2
-		MinMoveDelay: 25
-		MaxMoveDelay: 50
+    Wanders:
 	WithAttackAnimation:
 		AttackSequence: attack
 	Explodes:
@@ -2800,6 +2797,21 @@ FENCE:
 	Armor:
 		Type: BuildingArmor
 
+TRASHDUMP:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Trash Dump
+	Health:
+		HP: 15000
+	Armor:
+		Type: BuildingArmor
+	RenderSprites:
+		Palette: player
+
 CONTAINER:
 	Inherits: ^CivBuilding
 	Inherits@2: ^1x2Shape
@@ -2829,6 +2841,20 @@ CONTAINER3:
 		Footprint: xx xx
 		Dimensions: 2,2
 
+CONTAINER4:
+	Inherits: CONTAINER
+	Inherits@2: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
+CONTAINER5:
+	Inherits: CONTAINER
+	Inherits@2: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
 CONSTRUCTIONBARRIER:
 	Inherits: ^CivBuilding
 	Inherits@2: ^1x1Shape
@@ -2846,3 +2872,36 @@ CONSTRUCTIONBARRIER:
 
 CONSTRUCTIONBARRIER2:
 	Inherits: CONSTRUCTIONBARRIER
+
+BLUETIBBARREL:
+	Inherits: ^CivBuilding
+	Inherits@2: ^1x1Shape
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Blue Tib-fuel Barrel
+	Health:
+		HP: 2000
+	Armor:
+		Type: BuildingArmor
+	RenderSprites:
+		Palette: player
+	Explodes:
+		Weapon: BlueTibBarrelExplo
+		EmptyWeapon: BlueTibBarrelExplo
+
+BLUETIBBARREL2:
+	Inherits: BLUETIBBARREL
+
+BLUETIBBARREL3:
+	Inherits: BLUETIBBARREL
+
+BLUETIBBARREL4:
+	Inherits: BLUETIBBARREL
+
+BLUETIBBARREL5:
+	Inherits: BLUETIBBARREL
+
+BLUETIBBARREL6:
+	Inherits: BLUETIBBARREL

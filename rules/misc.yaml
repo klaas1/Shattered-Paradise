@@ -1,43 +1,42 @@
-mpspawn:
+^EditorNotifier:
 	Interactable:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	RenderSpritesEditorOnly:
+		Palette: apred
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	EditorTilesetFilter:
+		Categories: Other
+
+mpspawn:
+	Inherits: ^EditorNotifier
 	EditorOnlyTooltip:
 		Name: (multiplayer player starting point)
-	AlwaysVisible:
-	Immobile:
-		OccupiesSpace: false
-	RenderSpritesEditorOnly:
-	WithSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 1
-	EditorTilesetFilter:
-		Categories: Other
 
 waypoint:
-	Interactable:
+	Inherits: ^EditorNotifier
 	EditorOnlyTooltip:
 		Name: (waypoint for scripted behavior)
-	AlwaysVisible:
-	Immobile:
-		OccupiesSpace: false
+
+tibambientsounddummy:
+	Inherits: ^EditorNotifier
+	EditorOnlyTooltip:
+		Name: (waypoint for scripted behavior)
+	AmbientSound@TibSound:
+		SoundFiles: floatmov.wav, flotmov2.wav, flotmov3.wav, flotmov4.wav
+		Delay: 300, 600
+		Interval: 300, 600
 	RenderSpritesEditorOnly:
-	WithSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 1
-	EditorTilesetFilter:
-		Categories: Other
+		Image: musicnotifier
 
 CAMERA:
+	Inherits: ^EditorNotifier
 	Inherits@1: ^1x1Shape
-	Interactable:
 	EditorOnlyTooltip:
 		Name: (reveals area to owner)
-	AlwaysVisible:
-	RenderSpritesEditorOnly:
-	WithSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 1
-	Immobile:
-		OccupiesSpace: false
 	Health:
 		HP: 1000
 	RevealsShroud:
@@ -45,11 +44,9 @@ CAMERA:
 		Type: CenterPosition
 	DetectCloaked:
 		Range: 10c0
-	EditorTilesetFilter:
-		Categories: Other
 
 mmch.colorpicker:
-	Inherits: MMCH
+	Inherits: CENTURION
 	EditorOnlyTooltip:
 		Name: Color picker unit (Do not place in editor)
 	Mobile:
@@ -59,11 +56,8 @@ mmch.colorpicker:
 		InitialFacing: 160
 	WithInfantryBody:
 		StandSequences: run
-	RenderVoxels:
-		Image: mmch
-		Palette: colorpicker
 	RenderSprites:
-		Image: mmch
+		Image: centurion
 		Palette: colorpicker
 
 CRATE:

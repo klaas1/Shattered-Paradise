@@ -233,6 +233,9 @@ waypoint:
 camera:
 	Inherits: ^IngameIcon
 
+musicnotifier:
+	Inherits: ^IngameIcon
+
 clock:
 	Inherits: ^IngameIcon
 	idle: gclock2

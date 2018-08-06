@@ -1439,6 +1439,15 @@ concretebarrier8:
 		Start: 7
 		ShadowStart: 15
 
+trashdump:
+	Defaults:
+		Offset: 0, -12, 12
+		UseTilesetCode: false
+	idle:
+		ShadowStart: 1
+	damaged-idle:
+		ShadowStart: 1
+
 fence:
 	Defaults:
 		Offset: 0, -12, 12
@@ -1455,7 +1464,7 @@ container:
 	Defaults:
 		Offset: 12, -18, 18
 	idle:
-		ShadowStart: 3
+		ShadowStart: 5
 
 container2:
 	Inherits: container
@@ -1463,7 +1472,7 @@ container2:
 		Offset: -12, -18, 6
 	idle: container
 		Start: 1
-		ShadowStart: 4
+		ShadowStart: 6
 
 container3:
 	Inherits: container
@@ -1471,7 +1480,23 @@ container3:
 		Offset: 0, -24, 24
 	idle: container
 		Start: 2
-		ShadowStart: 5
+		ShadowStart: 7
+
+container4:
+	Inherits: container
+	Defaults:
+		Offset: 0, -24, 24
+	idle: container
+		Start: 3
+		ShadowStart: 8
+
+container5:
+	Inherits: container
+	Defaults:
+		Offset: 0, -24, 24
+	idle: container
+		Start: 4
+		ShadowStart: 9
 
 constructionbarrier:
 	Defaults:
@@ -1481,7 +1506,46 @@ constructionbarrier:
 		ShadowStart: 2
 
 constructionbarrier2:
-    Inherits: constructionbarrier
+	Inherits: constructionbarrier
 	idle: constructionbarrier
-        Start: 1
+		Start: 1
 		ShadowStart: 3
+
+bluetibbarrel:
+	Defaults:
+		Offset: 0, -12, 48
+		DepthSpriteOffset: 0, 0
+	idle:
+		ShadowStart: 6
+
+bluetibbarrel2:
+	Inherits: bluetibbarrel
+	idle: bluetibbarrel
+		Start: 1
+		ShadowStart: 7
+
+bluetibbarrel3:
+	Inherits: bluetibbarrel
+	idle: bluetibbarrel
+		Start: 2
+		ShadowStart: 8
+
+bluetibbarrel4:
+	Inherits: bluetibbarrel
+	idle: bluetibbarrel
+		Start: 3
+		ShadowStart: 9
+
+bluetibbarrel5:
+	Inherits: bluetibbarrel
+	idle: bluetibbarrel
+		Start: 4
+		ShadowStart: 10
+
+bluetibbarrel6:
+	Inherits: bluetibbarrel
+	idle: bluetibbarrel
+		Start: 5
+		ShadowStart: 11
+
+

@@ -29,11 +29,8 @@ BIGBLUE3:
 		Name: Duplicated vinifera (It helps avoid map inportation issues)
 
 ^Fona:
-    Inherits: ^Tree
-    AmbientSound@TibSound:
-        SoundFiles: floatmov.wav, flotmov2.wav, flotmov3.wav, flotmov4.wav
-        Delay: 1500, 3000
-        Interval: 1500, 3000
+	Inherits: ^Tree
+	-Tooltip:
 
 TREE01:
 	Inherits: ^Tree

@@ -1548,4 +1548,23 @@ bluetibbarrel6:
 		Start: 5
 		ShadowStart: 11
 
-
+neutralsonictur:
+	Defaults:
+		Offset: 0, -12, 18
+		UseTilesetCode: false
+	idle: dot
+	damaged-idle: dot
+	dead: dot
+	turret:
+		Facings: 32
+		ShadowStart: 64
+	damaged-turret:
+		Start: 32
+		Facings: 32
+		ShadowStart: 96
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive

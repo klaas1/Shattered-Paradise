@@ -71,10 +71,6 @@ VeterancyWeapon:
 RadarScanWeapon:
 	ReloadDelay: 6 
 	Projectile: InstantExplode
-	Warhead@3Dam_area: SpreadDamage
-		Spread: 1
-		Damage: 1
-		ValidTargets: Ground, Water, Air
 	Warhead@Spawn: SpawnActor
 		Actors: radarscandummy
 		Range: 3

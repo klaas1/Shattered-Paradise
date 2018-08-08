@@ -187,7 +187,7 @@ ZombieExplosion:
 
 BlueTibBarrelExplo:
 	Inherits: ^ExploDefaults
-	Inherits@2: ^Mediuml_Clsn
+	Inherits@2: ^Large_Explosion
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
 		Damage: 20000
@@ -294,9 +294,9 @@ BuildingFireBigShrapnel:
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 BuildingFireSmallShrapnel:
-   	Inherits: BuildingFireBigShrapnel
-   	ReloadDelay: 6
-   	Warhead@op: FireShrapnel
+	Inherits: BuildingFireBigShrapnel
+	ReloadDelay: 6
+	Warhead@op: FireShrapnel
 		Weapon: BuildingFireSmall
 
 BuildingFireBig:
@@ -316,23 +316,23 @@ BuildingFireBig:
 		Palette: effectalpha50
 
 BuildingFireSmall:
-  	Inherits: BuildingFireBig
+	Inherits: BuildingFireBig
 	Range: 2c0
 	MinRange: 0c512
-  	Warhead@2: SpawnSmokeParticle
+	Warhead@2: SpawnSmokeParticle
 		Sequences: fire2, fire1
 		Duration: 25, 300
 
 BuildingCriticalDamageFireSpawner:
 	Inherits: BuildingFireBigShrapnel
 	ReloadDelay: 125
-   	Warhead@op: FireShrapnel
+	Warhead@op: FireShrapnel
 		Weapon: BuildingCriticalDamageFireSmall
 
 BuildingCriticalDamageFireSmall:
-  	Inherits: BuildingFireBig
+	Inherits: BuildingFireBig
 	Range: 1c0
-  	Warhead@2: SpawnSmokeParticle
+	Warhead@2: SpawnSmokeParticle
 		Duration: 250
 		Sequences: fire1, fire2
 		Image: buildingfire

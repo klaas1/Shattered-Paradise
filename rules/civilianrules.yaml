@@ -1633,6 +1633,39 @@ CAARMR:
 		TargetCircleRange: 1c512
 		Weapon: VeterancyWeapon
 
+NEUTRALSONICTUR:
+	Inherits: ^TechBuilding
+	Inherits@0: ^1x1Shape
+	Inherits@1: ^11CellVision
+	Inherits@2: ^AutoTargetAll
+	Tooltip:
+		Name: Tech Shockwave Turret
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Health:
+	ThrowsShrapnel@SMALL:
+		Pieces: 6, 9
+	ThrowsShrapnel@LARGE:
+		Pieces: 3, 4
+	Armor:
+		Type: DefenseArmor
+	Health:
+		HP: 200000
+	WithRangeCircle:
+	Turreted:
+		TurnSpeed: 3
+	WithSpriteTurret:
+	AttackTurreted:
+		PauseOnCondition: empdisable
+	Armament@1:
+		Weapon: SonicEmitterProj
+		PauseOnCondition: empdisable
+		LocalOffset: 1500,0, 0
+	Selectable:
+		Bounds: 40, 54, -3, -16
+		DecorationBounds: 40, 54, -3, -16
+
 CACRSH01:
 	Inherits: ^Decoration
 	Tooltip:

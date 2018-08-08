@@ -13,7 +13,7 @@ SMECH:
 		BuildPaletteOrder: 2
 		Prerequisites: ~gaweap
 	Mobile:
-    	TurnSpeed: 10
+		TurnSpeed: 10
 		Speed: 100
 		Locomotor: Vehicle
 	Health:

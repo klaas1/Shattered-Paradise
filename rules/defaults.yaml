@@ -700,9 +700,9 @@
 	Targetable@Shield:
 		TargetTypes: ShieldedUnit
 		RequiresCondition: VanguardShield
-    Armor@Shield:
+	Armor@Shield:
 		RequiresCondition: VanguardShield && BreakShield <= 4
-        Type: Shield
+		Type: Shield
 
 ^GetsOneShotedbySuperweapons:
 	SelfHealing@GetsOneShotedbySuperweapons:
@@ -839,8 +839,8 @@
 	Inherits@4: ^FirestormGenBuff
 	Inherits@5: ^CrateBuffs
 	RevealOnFire:
-        ArmamentNames: primary, secondary, OnFoot
-        Duration: 50
+		ArmamentNames: primary, secondary, OnFoot
+		Duration: 50
 	OwnerLostAction:
 		Action: Kill
 
@@ -871,7 +871,7 @@
 	Inherits: ^GenericEffects
 	Inherits@1: ^TyrannyBuff
 	Inherits@2: ^DisplayWrench
- 	Inherits@3: ^MachineShopHeal
+	Inherits@3: ^MachineShopHeal
 	Inherits@4: ^BugPoison
 	Inherits@5: ^EmpDisableMobile
 	Inherits@6: ^SpawnSmoke
@@ -991,7 +991,7 @@
 		PlayerExperienceModifier: 1
 	RevealsShroud:
 		Type: Footprint
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700
@@ -1044,7 +1044,7 @@
 	Inherits@3: ^8CellVision
 	RevealsShroud:
 		Type: Footprint
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	-GivesBuildableArea:
 	-SpawnActorOnDeath@tiberium2:
 	AutoTarget:
@@ -1106,7 +1106,7 @@
 	Inherits@0: ^6CellVision
 	RevealsShroud:
 		Type: Footprint 
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700
@@ -1211,7 +1211,7 @@
 	RevealsShroud:
 		RequiresCondition: !inside-tunnel
 		Type: CenterPosition
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
@@ -1229,7 +1229,7 @@
 		Speed: 60
 		Crushes: crate
 		WaitAverage: 10
-        Locomotor: Infantry
+		Locomotor: Infantry
 	Selectable:
 		Bounds: 22,30,0,-10
 	SelectionDecorations:
@@ -1329,14 +1329,14 @@
 
 ^Mutant:
 	Inherits: ^Soldier
-    Inherits@1: ^HealsOnTiberium
+	Inherits@1: ^HealsOnTiberium
 	-DamagedByTerrain:
-    Mobile:
-        Locomotor: TibInmuneInfantry
+	Mobile:
+		Locomotor: TibInmuneInfantry
 
 ^Beast:
 	Inherits: ^Soldier
-    Inherits@1: ^HealsOnTiberium
+	Inherits@1: ^HealsOnTiberium
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -1347,8 +1347,8 @@
 		DeathTypes:
 			TiberiumDeath: 1, 2
 			EnergyDeath: 1, 2
-    Mobile:
-        Locomotor: Vehicle
+	Mobile:
+		Locomotor: Vehicle
 	-TakeCover:
 	-WithDeathAnimation@body:
 	-WithDeathAnimation@tib:
@@ -1484,7 +1484,7 @@
 	WithDeathAnimation@body:
 		DeathSequencePalette: apolra2i
 		DeathPaletteIsPlayerPalette: False
-        UseDeathTypeSuffix: False
+		UseDeathTypeSuffix: False
 		DeathSequence: dieevaporate
 	FirepowerMultiplier@Hologram:
 		Modifier: 2
@@ -1558,7 +1558,7 @@
 		PlayerExperienceModifier: 1
 	RevealsShroud:
 		Type: CenterPosition
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
@@ -1614,7 +1614,7 @@
 		Categories: Vehicle
 	BodyOrientation:
 		QuantizedFacings: 32
-    WithFacingSpriteBody:
+	WithFacingSpriteBody:
 
 ^Tank:
 	Inherits: ^Vehicle
@@ -1648,8 +1648,8 @@
 	-GrantConditionOnTerrain@VEINS:
 
 ^HoverTank:
-    Inherits: ^HoverVehicle
-    Inherits@1: ^AutoTargetGroundAssaultMove
+	Inherits: ^HoverVehicle
+	Inherits@1: ^AutoTargetGroundAssaultMove
 	WithSpriteTurret:
 	Turreted:
 	AttackTurreted:

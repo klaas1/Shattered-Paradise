@@ -186,17 +186,50 @@ BlueTibBurstExplo:
 		ImpactSounds: expnew14.aud
 		InvalidImpactTypes: Water
 
-DerrickAnimation:
+SonicEmitterProj:
 	Inherits: ^FullDamage
-	ReloadDelay: 25
-	Range: 9c0
-	ValidTargets: KilledUnit
-	Projectile: BulletAS
-		Speed: 100c0
+	ReloadDelay: 100
+	Range: 11c0
+	Projectile: WarheadTrailProjectile
+		Offsets: 0,128,0#, 64,96,0, -64,96,0
+		Firemode: Line # try putting "Line" or "Spread" here, "Focus"
+		Inaccuracy: 0c0
+		Weapon: SonicEmitterHit
+		Speed: 250
+		ExplosionInterval: 4
+		ExplodeUnderThisAltitude: -9999
+		Blockable: False
+		KillProjectilesWhenReachedTargetLocation: false #try putting true
 	Warhead@1Dam: SpreadDamage
-		Spread: 200
 		Damage: 1
-		ValidTargets: KilledUnit
+
+SonicEmitterHit:
+	Inherits: ^FullDamage
+	Inherits@2: ^Large_Explosion
+	ReloadDelay: 125
+	ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
+	Range: 11c0
+	Projectile: BulletAS
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c300
+		Damage: 15000
+		Versus:
+			InfantryArmor: 300
+			BuildingArmor: 30
+			VehicleArmor: 70
+			DefenseArmor: 50
+			AircraftArmor: 100
+			ConcreteArmor: 30
+		ValidStances: Enemy, Neutral, Ally
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
+	Warhead@2Eff: CreateEffect
+		ExplosionPalette: gensmkexplojFblue
+	Warhead@4Sharpnel: FireShrapnel
+		Weapon: SmallDebris
+		Amount: 1
+		ValidTargets: Ground, Water, Air, AirHit
+		InvalidTargets: Infantry, Vehicle, Building, Wall
 
 ServDepoShrapnelSpawn:
 	ReloadDelay: 75

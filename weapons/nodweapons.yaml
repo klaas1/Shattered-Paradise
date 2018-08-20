@@ -140,7 +140,7 @@ BuggyCannon:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 BuggyCannonLoaded:
-    Inherits: BuggyCannon
+	Inherits: BuggyCannon
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 
@@ -493,7 +493,7 @@ TurretLaserFire:
 RedEye2:
 	Inherits: ^RocketWarhead
 	Inherits@2: ^Small_Clsn
-    Inherits@3: ^AntiAirTurretWeapon
+	Inherits@3: ^AntiAirTurretWeapon
 	Report: samshot1.aud
 	Projectile: Missile
 

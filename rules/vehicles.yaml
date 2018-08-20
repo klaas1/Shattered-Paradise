@@ -13,7 +13,7 @@ SMECH:
 		BuildPaletteOrder: 2
 		Prerequisites: ~gaweap
 	Mobile:
-		TurnSpeed: 10
+    	TurnSpeed: 10
 		Speed: 100
 		Locomotor: Vehicle
 	Health:
@@ -1348,7 +1348,7 @@ MRLS:
 		Offset: -300,0,0
 	WithFacingSpriteBody:
 	WithSpriteTurret:
-	-DamagedByRadioactivity@Default:
+	-DamagedByTintedCells@Default:
 
 DEATHCLAW:
 	Inherits: ^Beast
@@ -1448,7 +1448,7 @@ SCRSCORPION:
 	WithInfantryBody:
 	Selectable:
 		Bounds: 50, 32, 0, -8
-	-DamagedByRadioactivity@Default:
+	-DamagedByTintedCells@Default:
 
 SCRMBT:
 	Inherits@1: ^HoverTank

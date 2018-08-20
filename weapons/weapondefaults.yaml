@@ -3,14 +3,16 @@
 		Condition: BreakShield
 		Range: 96
 		Duration: 400
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c090
+		Damage: 1
+		DamageTypes: Prone60Percent, TriggerProne
 
 ^RifleWarhead:
 	Inherits: ^WeaponGenericUpgrades
 	Projectile: BulletAS
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c090
-		Damage: 20
 		Versus:
 			InfantryArmor: 100
 			BuildingArmor: 20
@@ -129,15 +131,15 @@
 			Shield: 0
 
 ^SpawnsIrradiation:
-	Warhead@3Radio: CreateRadioactivity
+	Warhead@3Radio: CreateTintedCells
 		Range: 1, 2
 		Level: 6
 		Falloff: 100, 10
 		MaxLevel: 500
 
 ^SpawnsIrradiationFalcon:
-    Inherits: ^SpawnsIrradiation
-	Warhead@8Radio: CreateRadioactivity
+	Inherits: ^SpawnsIrradiation
+	Warhead@8Radio: CreateTintedCells
 		Range: 1, 2, 3
 		Level: 700
 		Falloff: 100, 50, 25
@@ -179,7 +181,6 @@
 
 ^ExploDefaults:
 	Inherits: ^WeaponGenericUpgrades
-		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
 	Warhead@op: FireShrapnel
 		Weapon: SmallDebris
 		Amount: 2
@@ -188,7 +189,6 @@
 	Warhead@1Dam: SpreadDamage
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Damage: 1
-		AffectsParent: true
 		Versus:
 			InfantryArmor: 300
 			BuildingArmor: 60

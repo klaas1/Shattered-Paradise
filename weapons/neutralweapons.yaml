@@ -1,5 +1,5 @@
 FireballLauncher:
-    Inherits: ^RifleWarhead
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 4c256
 	Report: flamtnk1.aud
@@ -24,7 +24,7 @@ FireballLauncher:
 		InvalidTargets: Vehicle, Building, Wall
 
 Hellfire:
-    Inherits: ^RifleWarhead
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 6c0
 	Report: orcamis1.aud
@@ -94,7 +94,7 @@ CrabAcid:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
-	Warhead@3Radio: CreateRadioactivity
+	Warhead@3Radio: CreateTintedCells
 		Range: 1, 2, 3
 		Level: 10
 		Falloff: 100, 50, 20
@@ -312,7 +312,7 @@ LTrail:
 
 4tnktusk:
 	Inherits: MammothTusk
-	Range: 6c0  
+	Range: 6c0
 
 EngineerCapture:
 	ReloadDelay: 200
@@ -339,7 +339,7 @@ LightTowerClaxon:
 GreenTibRadiation:
 	ReloadDelay: 100
 	Projectile: InstantExplode
-	Warhead@8Radio: CreateRadioactivity
+	Warhead@8Radio: CreateTintedCells
 		Range: 1, 2, 3, 4, 5
 		Falloff: 100, 65, 45, 25, 5
 		Level: 32
@@ -348,7 +348,7 @@ GreenTibRadiation:
 
 BlueTibRadiation:
 	Inherits: GreenTibRadiation
-	Warhead@8Radio: CreateRadioactivity
+	Warhead@8Radio: CreateTintedCells
 		RadioactivityLayerName: BlueRadiation
 		Range: 1, 2, 3, 4
 		Falloff: 100, 50, 25, 5
@@ -361,7 +361,7 @@ SpawnVisc:
 	ValidTargets: ViscMale
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-    	ValidTargets: ViscMale
+		ValidTargets: ViscMale
 		Damage: 1
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 	Warhead@5Actor: SpawnActor
@@ -396,7 +396,7 @@ SlimeAttack:
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 
 VeinholeAttack:
-    Inherits: ^RifleWarhead
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 5c0
 	Report:
@@ -410,7 +410,7 @@ VeinholeAttack:
 		FallRate: 5000
 		Range: 3
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
-	Warhead@8Radio: CreateRadioactivity
+	Warhead@8Radio: CreateTintedCells
 		Range: 1, 2, 3, 4
 		Level: 10
 		Falloff: 100, 50, 25, 5
@@ -421,7 +421,7 @@ FloaterCloudSpawn:
 	ReloadDelay: 100
 
 Veins:
-    Inherits: ^RifleWarhead
+	Inherits: ^RifleWarhead
 	ReloadDelay: 12
 	Warhead@Damage: SpreadDamage
 		Spread: 42
@@ -447,6 +447,7 @@ Repair:
 Demolish:
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: ExplosionDeath
+		Damage: 1
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
 		ExplosionPalette: effectalpha75

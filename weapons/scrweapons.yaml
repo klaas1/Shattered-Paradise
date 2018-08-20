@@ -62,7 +62,7 @@ ColossiShard:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 70
 	Range: 5c0
-    Burst: 4
+	Burst: 4
 	Report: fiend2.aud
 	MinRange: 0c100
 	ValidTargets: Ground, Water
@@ -124,7 +124,7 @@ ColossiBlast:
 		Weapon: ColossiBlastTesla
 		Amount: 8
 		AllowDirectHit: false
-	Warhead@8Radio: CreateRadioactivity
+	Warhead@8Radio: CreateTintedCells
 		Range: 1, 2, 3, 4, 5, 6
 		Level: 30
 		Falloff: 100, 90, 80, 70, 50, 40
@@ -462,7 +462,7 @@ Glyder1Cannon:
 	Inherits@2: ^Scrin_Pulse
 	ReloadDelay: 50
 	Range: 6c0
-    Burst: 3
+	Burst: 3
 	MinRange: 0c100
 	Report: photon1.wav
 	ValidTargets: Ground, Water
@@ -490,7 +490,7 @@ Glyder2Cannon:
 	Inherits@2: ^Scrin_Pulse
 	ReloadDelay: 50
 	Range: 7c0
-    Burst: 3
+	Burst: 3
 	MinRange: 0c100
 	Report: photon1.wav
 	ValidTargets: Air
@@ -505,7 +505,6 @@ Glyder2Cannon:
 		Damage: 2000
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@1Dam: SpreadDamage
 
 BattleshipCannon:
 	Inherits: ^FullDamage
@@ -666,7 +665,7 @@ TractorBeam:
 		ValidTargets: Air
 
 TractorBeam2:
-    Inherits: TractorBeam
+	Inherits: TractorBeam
 	Projectile: LaserZap
 		Color: 50F5FF45
 		Width: 50

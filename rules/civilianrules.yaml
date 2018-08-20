@@ -360,7 +360,7 @@ ZOMBIE:
 		MinMoveDelay: 25
 		MaxMoveDelay: 45
 	-SpawnActorOnDeath@tiberium:
-	-DamagedByRadioactivity@Default:
+	-DamagedByTintedCells@Default:
 
 BERSERKER:
 	Inherits: ^Mutant
@@ -404,7 +404,7 @@ BERSERKER:
 		MinMoveDelay: 100
 		MaxMoveDelay: 200
 	-SpawnActorOnDeath@tiberium:
-	-DamagedByRadioactivity@Default:
+	-DamagedByTintedCells@Default:
 
 CRAB:
 	Inherits: ^Beast
@@ -414,7 +414,7 @@ CRAB:
 	Tooltip:
 		Name: Crab
 	-GainsExperience:
-	-DamagedByRadioactivity@Default:
+	-DamagedByTintedCells@Default:
 	Health:
 		HP: 17000
 		Shape: Circle
@@ -524,8 +524,8 @@ FLOATER:
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 100
 		MaxMoveDelay: 200
-	-DamagedByRadioactivity@Default:
-	-DamagedByRadioactivity@OrangeRadiation:
+	-DamagedByTintedCells@Default:
+	-DamagedByTintedCells@OrangeRadiation:
 
 jfish:
 	Inherits: FLOATER

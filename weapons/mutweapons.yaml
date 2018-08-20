@@ -407,12 +407,12 @@ TiberianRocket:
 		InvalidTargets: Water, Air, AirHit
 	Warhead@ShieldUpgrade: GrantExternalCondition
 		Range: 460
-	Warhead@3Radio: CreateRadioactivity
+	Warhead@3Radio: CreateTintedCells
 		Level: 10
 
 TiberianRocketClean:
 	Inherits: TiberianRocket
-	-Warhead@3Radio: CreateRadioactivity
+	-Warhead@3Radio: CreateTintedCells
 	-Warhead@4Eff: CreateEffect
 	Warhead@2Eff: CreateEffect
 		Explosions: jsclsn16, jsclsn16b, jexplosml, jexplosml
@@ -439,7 +439,7 @@ MiniNuke:
 		Damage: 1500
 		Versus:
 			BuildingArmor: 140
-	Warhead@8Radio: CreateRadioactivity
+	Warhead@8Radio: CreateTintedCells
 		Range: 1, 2, 3, 4, 5, 6
 		Level: 1000
 		Falloff: 100, 60, 40, 25, 15, 5

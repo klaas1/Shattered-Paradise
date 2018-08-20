@@ -305,11 +305,9 @@ MammothTusk:
 	Warhead@1Dam: SpreadDamage
 		Damage: 4500
 		ValidTargets: Ground, Water, Vehicle, Building, Infantry, Air
-		Versus:
-		DamageTypes: Explosion
 
 MechRailgun:
-    Inherits: ^APWarhead
+	Inherits: ^APWarhead
 	ReloadDelay: 120
 	Range: 8c0
 	Burst: 2
@@ -344,7 +342,7 @@ MechRailgun2:
 			VehicleArmor: 160
 			DefenseArmor: 160
 			ConcreteArmor: 25
-            Shield: 0
+			Shield: 0
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 
 MKIITusk:

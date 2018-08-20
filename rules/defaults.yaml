@@ -231,13 +231,13 @@
 ^CrateBuffs:
 	SpeedMultiplier@speedcrate:
 		RequiresCondition: speedcrate
-		Modifier: 125
+		Modifier: 300
 	FirepowerMultiplier@firepowercrate:
 		RequiresCondition: firepowercrate
-		Modifier: 125
+		Modifier: 300
 	DamageMultiplier@damagecrate:
 		RequiresCondition: damagecrate
-		Modifier: 75
+		Modifier: 33
 	ExternalCondition@damagecrate:
 		Condition: damagecrate
 	ExternalCondition@firepowercrate:
@@ -700,9 +700,9 @@
 	Targetable@Shield:
 		TargetTypes: ShieldedUnit
 		RequiresCondition: VanguardShield
-	Armor@Shield:
+    Armor@Shield:
 		RequiresCondition: VanguardShield && BreakShield <= 4
-		Type: Shield
+        Type: Shield
 
 ^GetsOneShotedbySuperweapons:
 	SelfHealing@GetsOneShotedbySuperweapons:
@@ -753,21 +753,21 @@
 	ExternalCondition@SpawnFire:
 		Condition: SpawnFire
 
-^DamagedByRadioactivity: #Damage = DamageCoeff * RadioactivityLevel / MaxLevel
-	DamagedByRadioactivity@Default:
+^DamagedByTintedCells: #Damage = DamageCoeff * RadioactivityLevel / MaxLevel
+	DamagedByTintedCells@Default:
 		DamageCoeff: 3000
 		DamageTypes: TiberiumDeath
 		DamageInterval: 25
 		RequiresCondition: !(VanguardShield && BreakShield <= 4)
-	DamagedByRadioactivity@OrangeRadiation:
+	DamagedByTintedCells@OrangeRadiation:
 		DamageCoeff: 2500
 		DamageTypes: FireDeath
-		RadioactivityLayerName: OrangeRadiation
+		LayerName: OrangeRadiation
 		DamageInterval: 25
-	DamagedByRadioactivity@Colossus:
+	DamagedByTintedCells@Colossus:
 		DamageCoeff: 6000
 		DamageTypes: BulletDeath
-		RadioactivityLayerName: ColossusRadiation
+		LayerName: ColossusRadiation
 		DamageInterval: 25
 
 ^3CellVision:
@@ -825,11 +825,38 @@
 		AmmoPool: primary
 		RequiresCondition: AIReload
 		Count: 20
-	GrantConditionOnPrerequisite@AIReload:
+	GrantConditionOnBotOwner@AIReload:
 		Condition: AIReload
-		Prerequisites: AIReload
-	ExternalCondition@AIReload:
-		Condition: AIReload
+        Bots: CheaterAI, EasyAI
+
+^AIBuffCheat:
+	GrantConditionOnBotOwner@AIBuffCheat:
+		Condition: AIBuffCheat
+        Bots: CheaterAI
+	FirepowerMultiplier@AIBuffCheat:
+		RequiresCondition: AIBuffCheat
+		Modifier: 120
+	DamageMultiplier@AIBuffCheat:
+		RequiresCondition: AIBuffCheat
+		Modifier: 80
+
+^AICash:
+	GrantConditionOnBotOwner@AICashCheater:
+		Condition: AICashCheater
+        Bots: CheaterAI
+	CashTrickler@AICashCheater:
+		Interval: 1000
+		Amount: 400
+		ShowTicks: False
+		RequiresCondition: AICashCheater
+	GrantConditionOnBotOwner@AICashNormal:
+		Condition: AICashNormal
+        Bots: EasyAI
+	CashTrickler@AICashNormal:
+		Interval: 1000
+		Amount: 350
+		ShowTicks: False
+		RequiresCondition: AICashNormal
 
 ^GenericEffects:
 	Inherits@0: ^KillSelf
@@ -839,8 +866,8 @@
 	Inherits@4: ^FirestormGenBuff
 	Inherits@5: ^CrateBuffs
 	RevealOnFire:
-		ArmamentNames: primary, secondary, OnFoot
-		Duration: 50
+        ArmamentNames: primary, secondary, OnFoot
+        Duration: 50
 	OwnerLostAction:
 		Action: Kill
 
@@ -860,7 +887,7 @@
 	Inherits@6: ^WebDisable
 	Inherits@7: ^BugPoison
 	Inherits@8: ^DisplayVanguardShield
-	Inherits@9: ^DamagedByRadioactivity
+	Inherits@9: ^DamagedByTintedCells
 	Inherits@10: ^WolfDebuff
 	Inherits@11: ^GetsOneShotedbySuperweapons
 	Inherits@12: ^BarracksHeal
@@ -871,7 +898,7 @@
 	Inherits: ^GenericEffects
 	Inherits@1: ^TyrannyBuff
 	Inherits@2: ^DisplayWrench
-	Inherits@3: ^MachineShopHeal
+ 	Inherits@3: ^MachineShopHeal
 	Inherits@4: ^BugPoison
 	Inherits@5: ^EmpDisableMobile
 	Inherits@6: ^SpawnSmoke
@@ -879,7 +906,7 @@
 	Inherits@8: ^SpawnSpark
 	Inherits@9: ^DisplayVanguardShield
 	Inherits@10: ^VeinholePoisonVehicle
-	Inherits@11: ^DamagedByRadioactivity
+	Inherits@11: ^DamagedByTintedCells
 	Inherits@12: ^WolfDebuff
 	Inherits@13: ^GetsOneShotedbySuperweapons
 	Inherits@14: ^Chronoshiftable
@@ -991,7 +1018,7 @@
 		PlayerExperienceModifier: 1
 	RevealsShroud:
 		Type: Footprint
-		MaxHeightDelta: 3
+        MaxHeightDelta: 3
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700
@@ -1044,7 +1071,7 @@
 	Inherits@3: ^8CellVision
 	RevealsShroud:
 		Type: Footprint
-		MaxHeightDelta: 3
+        MaxHeightDelta: 3
 	-GivesBuildableArea:
 	-SpawnActorOnDeath@tiberium2:
 	AutoTarget:
@@ -1106,7 +1133,7 @@
 	Inherits@0: ^6CellVision
 	RevealsShroud:
 		Type: Footprint 
-		MaxHeightDelta: 3
+        MaxHeightDelta: 3
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700
@@ -1211,7 +1238,7 @@
 	RevealsShroud:
 		RequiresCondition: !inside-tunnel
 		Type: CenterPosition
-		MaxHeightDelta: 3
+        MaxHeightDelta: 3
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
@@ -1229,7 +1256,7 @@
 		Speed: 60
 		Crushes: crate
 		WaitAverage: 10
-		Locomotor: Infantry
+        Locomotor: Infantry
 	Selectable:
 		Bounds: 22,30,0,-10
 	SelectionDecorations:
@@ -1329,14 +1356,14 @@
 
 ^Mutant:
 	Inherits: ^Soldier
-	Inherits@1: ^HealsOnTiberium
+    Inherits@1: ^HealsOnTiberium
 	-DamagedByTerrain:
-	Mobile:
-		Locomotor: TibInmuneInfantry
+    Mobile:
+        Locomotor: TibInmuneInfantry
 
 ^Beast:
 	Inherits: ^Soldier
-	Inherits@1: ^HealsOnTiberium
+    Inherits@1: ^HealsOnTiberium
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -1347,8 +1374,8 @@
 		DeathTypes:
 			TiberiumDeath: 1, 2
 			EnergyDeath: 1, 2
-	Mobile:
-		Locomotor: Vehicle
+    Mobile:
+        Locomotor: Vehicle
 	-TakeCover:
 	-WithDeathAnimation@body:
 	-WithDeathAnimation@tib:
@@ -1484,7 +1511,7 @@
 	WithDeathAnimation@body:
 		DeathSequencePalette: apolra2i
 		DeathPaletteIsPlayerPalette: False
-		UseDeathTypeSuffix: False
+        UseDeathTypeSuffix: False
 		DeathSequence: dieevaporate
 	FirepowerMultiplier@Hologram:
 		Modifier: 2
@@ -1558,7 +1585,7 @@
 		PlayerExperienceModifier: 1
 	RevealsShroud:
 		Type: CenterPosition
-		MaxHeightDelta: 3
+        MaxHeightDelta: 3
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
@@ -1614,7 +1641,7 @@
 		Categories: Vehicle
 	BodyOrientation:
 		QuantizedFacings: 32
-	WithFacingSpriteBody:
+    WithFacingSpriteBody:
 
 ^Tank:
 	Inherits: ^Vehicle
@@ -1648,8 +1675,8 @@
 	-GrantConditionOnTerrain@VEINS:
 
 ^HoverTank:
-	Inherits: ^HoverVehicle
-	Inherits@1: ^AutoTargetGroundAssaultMove
+    Inherits: ^HoverVehicle
+    Inherits@1: ^AutoTargetGroundAssaultMove
 	WithSpriteTurret:
 	Turreted:
 	AttackTurreted:
@@ -1841,8 +1868,8 @@
 	ReturnOnIdle:
 
 ^CombatPlane:
-	Inherits: ^Plane
-	Inherits@0: ^GainsExperience
+    Inherits: ^Plane
+    Inherits@0: ^GainsExperience
 
 ^AircraftHusk:
 	Inherits: ^SpriteActor
@@ -1887,10 +1914,6 @@
 			Radius: 256
 	Armor:
 		Type: VehicleArmor
-	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Creep, Water, Defence, Air, Wall
-	AutoTargetPriority@ATTACKANYTHING:
-		ValidTargets: Infantry, Vehicle, Creep, Water, Defence, Air, Wall
 	Mobile:
 		Speed: 120
 		WaitAverage: 10

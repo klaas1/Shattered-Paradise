@@ -287,30 +287,30 @@ World:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	DomainIndex:
 	BridgeLayer:
-	RadioactivityLayer@Default:
+	TintedCellsLayer@Default:
 		UpdateDelay: 75
-		Halflife: 150
+		FadeoutDelay: 150
 		Brightest: 128
-	RadioactivityLayer@HarmlessRadiationGreen:
+	TintedCellsLayer@HarmlessRadiationGreen:
 		Color: 00FF00
 		MaxLevel: 300
 		Name: HarmlessRadiationGreen
-	RadioactivityLayer@OrangeRadiation:
+	TintedCellsLayer@OrangeRadiation:
 		Color: EFFF00
 		Darkest: 16
 		Name: OrangeRadiation
 		UpdateDelay: 75
-		Halflife: 200
-	RadioactivityLayer@BlueRadiation:
+		FadeoutDelay: 200
+	TintedCellsLayer@BlueRadiation:
 		Color: 000099
 		Color2: 000099
 		Darkest: 10
 		Name: BlueRadiation
-	RadioactivityLayer@ColossusRadiation:
+	TintedCellsLayer@ColossusRadiation:
 		Color: 000099
 		Color2: 99FFFF
 		Darkest: 10
-		Halflife: 75
+		FadeoutDelay: 75
 		Name: ColossusRadiation
 	SmudgeLayer@SMALLSCORCH:
 		Type: SmallScorch

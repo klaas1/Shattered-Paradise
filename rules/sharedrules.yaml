@@ -350,16 +350,6 @@ GACNST:
 		ActorTypes: legio
 		Factions: scr
 	SelectionDecorations:
-	ProvidesAIPrerequisite@AImoney:
-		Prerequisite: AImoney
-	GrantConditionOnPrerequisite@AImoney:
-		Condition: money
-		Prerequisites: AImoney
-	CashTrickler@AImoney:
-		Interval: 1000
-		Amount: 400
-		ShowTicks: False
-		RequiresCondition: money
 	RequiresBuildableArea:
 		AreaTypes: building
 

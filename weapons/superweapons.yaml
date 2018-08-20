@@ -71,6 +71,10 @@ VeterancyWeapon:
 RadarScanWeapon:
 	ReloadDelay: 6 
 	Projectile: InstantExplode
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 1
+		Damage: 1
+		ValidTargets: Ground, Water, Air
 	Warhead@Spawn: SpawnActor
 		Actors: radarscandummy
 		Range: 3
@@ -401,7 +405,7 @@ ClusterMissile:
 		Duration: 15
 	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 6c0
-	Warhead@8Radio: CreateRadioactivity
+	Warhead@8Radio: CreateTintedCells
 		Range: 1, 2, 3, 4, 5, 6
 		Level: 750
 		Falloff: 100, 100, 60, 40, 20, 5
@@ -461,7 +465,7 @@ ToxinMissile:
 		Actors: CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1
 		FallRate: 5000
 		Range: 3
-	Warhead@8Radio: CreateRadioactivity
+	Warhead@8Radio: CreateTintedCells
 		Range: 1, 2, 3, 4
 		Level: 600
 		Falloff: 100, 60, 50, 25
@@ -681,7 +685,7 @@ RecoveryGun:
 		ValidTargets: KilledUnit
 
 IonStormSpawnerWeapon: ### THIS ONE GENERATES THE MAIN ION BEAM DUMMY
-    Inherits: IonCannonSpawner
+	Inherits: IonCannonSpawner
 	ReloadDelay: 6 
 	Range: 12c0
 	Projectile: InstantExplode

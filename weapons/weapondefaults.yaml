@@ -132,18 +132,17 @@
 
 ^SpawnsIrradiation:
 	Warhead@3Radio: CreateTintedCells
-		Range: 1, 2
+		Spread: 512
 		Level: 6
-		Falloff: 100, 10
+		Falloff: 100, 75, 50, 25, 10
 		MaxLevel: 500
 
 ^SpawnsIrradiationFalcon:
 	Inherits: ^SpawnsIrradiation
 	Warhead@8Radio: CreateTintedCells
-		Range: 1, 2, 3
-		Level: 700
-		Falloff: 100, 50, 25
-		MaxLevel: 700
+		Spread: 1024
+		Level: 1400
+		MaxLevel: 1400
 
 ^DecentFalloff:
 	Inherits: ^WeaponGenericUpgrades

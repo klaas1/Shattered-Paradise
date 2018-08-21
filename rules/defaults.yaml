@@ -898,7 +898,7 @@
 	Inherits: ^GenericEffects
 	Inherits@1: ^TyrannyBuff
 	Inherits@2: ^DisplayWrench
- 	Inherits@3: ^MachineShopHeal
+	Inherits@3: ^MachineShopHeal
 	Inherits@4: ^BugPoison
 	Inherits@5: ^EmpDisableMobile
 	Inherits@6: ^SpawnSmoke
@@ -1206,6 +1206,8 @@
 	Inherits@4: ^InfantryShape
 	Inherits@5: ^5CellVision
 	ActorLostNotification:
+	SharedPassenger:
+		CargoType: Infantry
 	AttackMove:
 		Voice: Move
 	Armor:
@@ -1363,7 +1365,7 @@
 
 ^Beast:
 	Inherits: ^Soldier
-    Inherits@1: ^HealsOnTiberium
+	Inherits@1: ^HealsOnTiberium
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -1374,8 +1376,8 @@
 		DeathTypes:
 			TiberiumDeath: 1, 2
 			EnergyDeath: 1, 2
-    Mobile:
-        Locomotor: Vehicle
+	Mobile:
+		Locomotor: Vehicle
 	-TakeCover:
 	-WithDeathAnimation@body:
 	-WithDeathAnimation@tib:
@@ -1397,7 +1399,7 @@
 	Mobile:
 		SharesCell: false
 		-RequiresCondition: !WebDisable
- 	-WithColoredOverlay@WebDisable:
+	-WithColoredOverlay@WebDisable:
 	-TimedConditionBar@WebDisable:
 	-SpeedMultiplier@WebDisable:
 	WithInfantryBody:
@@ -1569,6 +1571,8 @@
 	Inherits@3: ^VehicleShape
 	Inherits@4: ^5CellVision
 	ActorLostNotification:
+	SharedPassenger:
+		CargoType: Vehicle
 	Armor:
 		Type: VehicleArmor
 	AttackMove:

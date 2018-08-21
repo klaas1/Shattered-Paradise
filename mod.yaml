@@ -259,7 +259,7 @@ ServerTraits:
 
 ChromeMetrics:
 	common|metrics.yaml
-	ts|metrics.yaml
+	sp|metrics.yaml
 
 Fonts:
 	Regular:

@@ -49,6 +49,8 @@ Player:
 	PlaceBuilding:
 		Palette: placebuilding
 	SupportPowerManager:
+	SharedCargoManager:
+		MaxWeight: 10
 	ScriptTriggers:
 	MissionObjectives:
 	ConquestVictoryConditions:

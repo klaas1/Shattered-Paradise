@@ -24,7 +24,7 @@
 	Faction@2:
 		Name: Mutants
 		InternalName: mut
-		Description: Forgotten\nWarbands composed of people affected by tiberium mutations. To\nsurvive they exploit the very substance that harms them.\n\nSwarmer faction.\n\nSpecial Characteristics:\n\n- Most units are cheap and fast to produce.\n- Defenses dont require energy to operate.\n- Infantry and beasts heal on tiberium fields.\n- Support Structure: Tunnels.\n- Support power: Veinhole cluster spawn.\n- Superweapon: Ion Storm control.
+		Description: Mutants\nWarbands composed of people affected by tiberium mutations. To\nsurvive they exploit the very substance that harms them.\n\nSwarmer faction.\n\nSpecial Characteristics:\n\n- Most units are cheap and fast to produce.\n- Defenses dont require energy to operate.\n- Infantry and beasts heal on tiberium fields.\n- Support Structure: Tunnels.\n- Support power: Veinhole cluster spawn.\n- Superweapon: Ion Storm control.
 	Faction@3:
 		Name: C.A.B.A.L.
 		InternalName: cab
@@ -111,7 +111,7 @@
 			BlueTiberium: 70
 				PathingCost: 300
 			Veins: 80
-  	Locomotor@TibInmuneInfantry:
+	Locomotor@TibInmuneInfantry:
 		Name: TibInmuneInfantry
 		Crushes: crate
 		SharesCell: true
@@ -128,7 +128,7 @@
 			BlueTiberium: 70
 				PathingCost: 50
 			Veins: 80
-  	Locomotor@TibFiends:
+	Locomotor@TibFiends:
 		Name: TibFiends
 		Crushes: crate
 		SharesCell: true
@@ -302,13 +302,11 @@ World:
 		UpdateDelay: 75
 		FadeoutDelay: 200
 	TintedCellsLayer@BlueRadiation:
-		Color: 000099
-		Color2: 000099
+		Color: 0061ff
 		Darkest: 10
 		Name: BlueRadiation
 	TintedCellsLayer@ColossusRadiation:
 		Color: 000099
-		Color2: 99FFFF
 		Darkest: 10
 		FadeoutDelay: 75
 		Name: ColossusRadiation

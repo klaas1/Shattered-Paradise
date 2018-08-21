@@ -905,7 +905,7 @@ MUVENTI:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 46
-		Description: Allows players to quickly transport units across the battlefield.\n\nSpecial:\nInstantly transports incoming units into the Tunnel network designated as primary.\n- Primary tunnel is the exit point.
+		Description: Allows players to quickly transport units across the battlefield.\n\nSpecial:\n- The building has a shared cargo storage for vehicles and infantry.\n- Units can enter any tunnel built and exit on any other.
 		Prerequisites: ~structures.mut, muradr
 	Valued:
 		Cost: 500
@@ -916,10 +916,10 @@ MUVENTI:
 		Dimensions: 2,2
 	Health:
 		HP: 100000
-	TeleportNetworkPrimaryExit:
-	TeleportNetwork:
-		Type: mutantteleportnetwork
-		PauseOnCondition: disabled
+	SharedCargo:
+		Types: Infantry, Vehicle
+		PipCount: 10
+		MaxWeight: 10
 	RallyPoint:
 	Exit:
 	WithIdleOverlay@LIGHTS:

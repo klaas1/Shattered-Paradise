@@ -45,19 +45,15 @@ CAMERA:
 	DetectCloaked:
 		Range: 10c0
 
-mmch.colorpicker:
-	Inherits: CENTURION
+colorpicker:
+	Inherits: MUTMCV
 	EditorOnlyTooltip:
 		Name: Color picker unit (Do not place in editor)
 	Mobile:
 		InitialFacing: 160
 	-Buildable:
-	Turreted:
-		InitialFacing: 160
-	WithInfantryBody:
-		StandSequences: run
 	RenderSprites:
-		Image: centurion
+		Image: ttnk
 		Palette: colorpicker
 
 CRATE:

@@ -326,7 +326,7 @@ Marine:
 		Move: marine0009, marine0010, marine0011, marine0012, marine0014
 		Attack: marine0009, marine0010, marine0011, marine0012, marine0014
 		Action: marine0009, marine0010, marine0011, marine0012, marine0014
-        Build: jumpjetquotes0005
+		Build: jumpjetquotes0005
 		# Feedback: 15-i058, 15-i064 # TODO
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
@@ -339,7 +339,7 @@ Jumpjet:
 		Move: jumpjetquotes0010, jumpjetquotes0011, jumpjetquotes0012, jumpjetquotes0013, jumpjetquotes0014
 		Attack: jumpjetquotes0000, jumpjetquotes0001, jumpjetquotes0002, jumpjetquotes0003, jumpjetquotes0004
 		Action: jumpjetquotes0006, jumpjetquotes0007
-        Build: jumpjetquotes0005
+		Build: jumpjetquotes0005
 		Die: jjdeath0000, jjdeath0001, jjdeath0002, jjtoxindeath0000, dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: jjburndeath0000, jjburndeath0001
 		Zapped: electro1
@@ -351,7 +351,7 @@ Jumpjet2:
 		Move: jumpjetquotes0010, jumpjetquotes0011, jumpjetquotes0012, jumpjetquotes0013, jumpjetquotes0014
 		Attack: jumpjetquotes0000, jumpjetquotes0001, jumpjetquotes0002, jumpjetquotes0003, jumpjetquotes0004
 		Action: jumpjetquotes0008, jumpjetquotes0009
-        Build: jumpjetquotes0005
+		Build: jumpjetquotes0005
 		Die: jjdeath0000, jjdeath0001, jjdeath0002, jjtoxindeath0000, dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: jjburndeath0000, jjburndeath0001
 		Zapped: electro1
@@ -400,6 +400,7 @@ StealthTankVO:
 		Attack: stnk0011, stnk0012, stnk0013, stnk0014, stnk0015
 		Action: stnk0011, stnk0012, stnk0013, stnk0014, stnk0015
 		Die: stnk0016, stnk0017, stnk0018
+
 ######################################################################
 #Mutant Custom
 ######################################################################

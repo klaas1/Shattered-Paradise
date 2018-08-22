@@ -160,14 +160,14 @@ NALASR:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
-		Offset: 270,-165,330
+		Offset: 350,-165,270
 	AttackTurreted:
 		PauseOnCondition: empdisable || disabled
 	Armament:
 		Weapon: TurretLaserFire
-		LocalOffset: 350, 0, 250
+		LocalOffset: 625, 0, 575
 	RenderVoxels:
-	WithVoxelTurret:
+	WithSpriteTurret:
 	Power:
 		Amount: -40
 	SelectionDecorations:

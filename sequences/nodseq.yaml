@@ -1243,6 +1243,9 @@ nalasr:
 	damaged-idle:
 		Start: 1
 		ShadowStart: 4
+	turret: lasertursprite
+		Facings: 32
+		UseTilesetCode: false
 	dead:
 		Start: 2
 		ShadowStart: 5

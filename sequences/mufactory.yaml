@@ -265,6 +265,9 @@ bggy:
 		Start: 192
 		Facings: -32
 		UseTilesetCode: false
+	turret-engineer: buggyrepairtur
+		Facings: 32
+		UseTilesetCode: false
 	turret-eagleguard: buggyturret2
 		Facings: -32
 		UseTilesetCode: false

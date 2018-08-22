@@ -198,6 +198,7 @@ BlueTibBarrelExplo:
 		ExplosionPalette: gensmkexplojFblue
 
 SparkSpawner:
+	Inherits: ^SparkSpawner
 	Inherits: ^NoDamage
 	ReloadDelay: 100
 	Projectile: InstantExplode
@@ -205,15 +206,6 @@ SparkSpawner:
 		Spread: 1
 		Damage: 1
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
-	Warhead@op: FireShrapnel
-		Weapon: SparkDebris
-		Amount: 12
-		ValidTargets: Ground, Water, Air, AirHit
-		InvalidTargets: Infantry, Vehicle, Building, Wall
-	Warhead@1: CreateEffect
-		Explosions: marnflash6
-		ExplosionPalette: MarnAlphaAlpha
-		ValidTargets: Ground, Water, Infantry, Vehicle, Building, Air
 
 SparkDebris:
 	Range: 1c0

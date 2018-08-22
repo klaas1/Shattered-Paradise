@@ -13,7 +13,7 @@ SMECH:
 		BuildPaletteOrder: 2
 		Prerequisites: ~gaweap
 	Mobile:
-    	TurnSpeed: 10
+		TurnSpeed: 10
 		Speed: 100
 		Locomotor: Vehicle
 	Health:
@@ -474,10 +474,10 @@ BGGY:
 			mutfiend: ifv.crusader
 			cborg: ifv.crusader
 			legio: ifv.crusader
-			engineer: ifv.militant
-			e2: ifv.militant
-			shapeshifter: ifv.militant
-			swarmling: ifv.militant
+			engineer: ifv.engineer
+			e2: ifv.engineer
+			shapeshifter: ifv.engineer
+			swarmling: ifv.engineer
 			templar: ifv.templar
 			nconf: ifv.nconf
 			bhs: ifv.bhs
@@ -542,6 +542,12 @@ BGGY:
 		Weapon: Heal
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.medic
+		TargetStances: Ally
+		ForceTargetStances: None
+	Armament@engineer:
+		Weapon: BuggyRepair
+		LocalOffset: 250,0,125
+		RequiresCondition: ifv.engineer
 		TargetStances: Ally
 		ForceTargetStances: None
 	Armament@eagleguard:
@@ -639,6 +645,9 @@ BGGY:
 	WithSpriteTurret@glad:
 		Sequence: turret-glad
 		RequiresCondition: ifv.glad
+	WithSpriteTurret@engineer:
+		Sequence: turret-engineer
+		RequiresCondition: ifv.engineer
 	WithSpriteTurret@cyc2:
 		Sequence: turret-cyc2
 		RequiresCondition: ifv.cyc2
@@ -693,6 +702,9 @@ BGGY:
 	Tooltip@skirmisher:
 		Name: Skirmisher Buggy
 		RequiresCondition: ifv.skirmisher
+	Tooltip@Engineer:
+		Name: Engineer Buggy
+		RequiresCondition: ifv.engineer
 	Tooltip@seer:
 		Name: Tyrant Buggy
 		RequiresCondition: ifv.seer

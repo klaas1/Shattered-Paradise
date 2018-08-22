@@ -134,7 +134,7 @@
 		UseTilesetCode: false
 
 ^BuggyMuzzle:
-   	muzzle0: mgun-n
+	muzzle0: mgun-n
 		Length: *
 	muzzle1: mgun-nw
 		Length: *

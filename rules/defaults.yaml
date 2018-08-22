@@ -866,8 +866,8 @@
 	Inherits@4: ^FirestormGenBuff
 	Inherits@5: ^CrateBuffs
 	RevealOnFire:
-        ArmamentNames: primary, secondary, OnFoot
-        Duration: 50
+		ArmamentNames: primary, secondary, OnFoot
+		Duration: 50
 	OwnerLostAction:
 		Action: Kill
 

@@ -144,6 +144,19 @@ BuggyCannonLoaded:
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 
+BuggyRepair:
+	Inherits: ^SparkSpawner
+	ReloadDelay: 75
+	Range: 2c0
+	Report: repair11.aud
+	ValidTargets: Vehicle
+	Projectile: BulletAS
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 80
+		Damage: -900
+		ValidTargets: Vehicle
+
 BikeExplo:
 	Inherits@1: ^BombWarhead
 	Inherits@2: ^Large_Explosion

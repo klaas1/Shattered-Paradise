@@ -199,6 +199,17 @@
 		ImpactSounds: ssplash1.aud, ssplash2.aud, ssplash3.aud
 		ValidTargets: Water
 
+^SparkSpawner:
+	Warhead@op: FireShrapnel
+		Weapon: SparkDebris
+		Amount: 12
+		ValidTargets: Ground, Water, Air, AirHit
+		InvalidTargets: Infantry, Vehicle, Building, Wall
+	Warhead@1: CreateEffect
+		Explosions: marnflash6
+		ExplosionPalette: MarnAlphaAlpha
+		ValidTargets: Ground, Water, Infantry, Vehicle, Building, Air
+
 ^FlameScorch:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch

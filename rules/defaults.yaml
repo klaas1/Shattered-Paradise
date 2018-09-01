@@ -15,7 +15,7 @@
 	ConditionManager:
 
 ^AntiVehiclePriority:
-  	AutoTargetPriority@AntiVehiclePriority:
+	AutoTargetPriority@AntiVehiclePriority:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Vehicle
 		InvalidTargets: NoAutoTarget
@@ -1008,7 +1008,7 @@
 ^Building:
 	Inherits@0: ^BasicBuilding
 	Inherits@1: ^StructureEffects
-	Inherits@2: ^5CellVision
+	Inherits@2: ^4CellVision
 	GivesBuildableArea:
 		AreaTypes: building
 	ExternalCapturable:
@@ -1130,7 +1130,7 @@
 
 ^TechBuilding:
 	Inherits: ^BasicBuilding
-	Inherits@0: ^6CellVision
+	Inherits@0: ^3CellVision
 	RevealsShroud:
 		Type: Footprint 
         MaxHeightDelta: 3
@@ -1240,7 +1240,7 @@
 	RevealsShroud:
 		RequiresCondition: !inside-tunnel
 		Type: CenterPosition
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
@@ -1258,7 +1258,7 @@
 		Speed: 60
 		Crushes: crate
 		WaitAverage: 10
-        Locomotor: Infantry
+		Locomotor: Infantry
 	Selectable:
 		Bounds: 22,30,0,-10
 	SelectionDecorations:
@@ -1556,6 +1556,8 @@
 	Health:
 		HP: 9500
 	Passenger:
+		PipType: Yellow
+	SharedPassenger:
 		PipType: Yellow
 	EngineerRepair:
 	RepairsBridges:
@@ -2248,7 +2250,7 @@
 		BlocksProjectilesHeight: 640
 	RequiresBuildableArea:
 		AreaTypes: building
-		Adjacent: 4
+		Adjacent: 6
 	Replacement:
 		ReplaceableTypes: Gate
 

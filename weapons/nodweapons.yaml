@@ -157,6 +157,33 @@ BuggyRepair:
 		Damage: -900
 		ValidTargets: Vehicle
 
+SharkJumpNod:
+	Inherits: ^RifleWarhead
+	ValidTargets: Ground, Water
+	ReloadDelay: 20
+	Range: 1c512
+	Report: SharkStrike0001.wav, SharkStrike0003.wav, SharkStrike0004.wav, SharkStrike0006.wav
+	Projectile: BulletAS
+		Speed: 100c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
+		Versus:
+			InfantryArmor: 300
+			BuildingArmor: 100
+		Spread: 0c030
+		DamageTypes: BulletDeath, ScrinEssenceKill
+		InvalidTargets: Shark
+	Warhead@2Shark: SpreadDamage
+		Damage: 2000
+		ValidTargets: Shark
+		Versus:
+			InfantryArmor: 300
+			BuildingArmor: 100
+		Spread: 0c030
+		DamageTypes: BulletDeath, ScrinEssenceKill
+		InvalidTargets: Building, Vehicle
+		ValidStances: Enemy, Neutral
+
 BikeExplo:
 	Inherits@1: ^BombWarhead
 	Inherits@2: ^Large_Explosion
@@ -353,7 +380,7 @@ StealthRocket:
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 125
 	Range: 7c0
-	Burst: 7
+	Burst: 6
 	Report: misl1.aud
 	ValidTargets: Ground, Water
 	Projectile: Missile
@@ -366,6 +393,7 @@ StealthRocket:
 StealthRocketAA:
 	Inherits: StealthRocket
 	ValidTargets: Air
+	Range: 9c0
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 
@@ -373,7 +401,7 @@ HarpyClaw:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
 	ReloadDelay: 30
-	Range: 5c0
+	Range: 6c0
 	MinRange: 0c100
 	InvalidTargets: Air
 	Report: VenomGun0000.wav, VenomGun0001.wav, VenomGun0002.wav
@@ -480,7 +508,9 @@ CerberusLazor:
 	InvalidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 96
-		Damage: 8000
+		Damage: 5000
+		Versus:
+			DefenseArmor: 75
 		ValidTargets: Ground, Water, water, Infantry, Vehicle, Building
 		InvalidTargets: Air
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath

@@ -62,7 +62,7 @@ ORCA:
 	Inherits@3: ^11CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1200
+		Cost: 1350
 	Tooltip:
 		Name: Orca Fighter
 	Buildable:
@@ -128,7 +128,7 @@ ORCAB:
 		AirborneCondition: airborne
 		MoveIntoShroud: true
 	Health:
-		HP: 20000
+		HP: 22500
 	Armament@primary:
 		Weapon: OBBombFrontal
 		PauseOnCondition: !ammo
@@ -319,7 +319,7 @@ APACHE:
     Inherits@4: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1200
+		Cost: 1350
 	Tooltip:
 		Name: Harpy
 	Buildable:
@@ -395,7 +395,7 @@ SCRIN:
 		AirborneCondition: airborne
 		MoveIntoShroud: true
 	Health:
-		HP: 17500
+		HP: 20000
 	Armament@1:
 		Weapon: Proton
 		PauseOnCondition: !ammo
@@ -483,7 +483,7 @@ MUTHELI:
     Inherits@6: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1200
+		Cost: 1350
 	Tooltip:
 		Name: Gargoyle
 	Buildable:
@@ -604,7 +604,7 @@ MUTQUEEN:
 	Inherits@4: ^PermanentSelfHeal
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1300
+		Cost: 1200
 	Tooltip:
 		Name: Queen
 	Buildable:
@@ -623,7 +623,7 @@ MUTQUEEN:
 		MoveIntoShroud: true
 		IdealSeparation: 1c0
 	Health:
-		HP: 17500
+		HP: 10000
 	-RenderVoxels:
 	-WithVoxelBody:
 	RenderSprites:
@@ -759,6 +759,7 @@ SCRGLYDER1:
 	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^BasicStealthDetection
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 800
@@ -874,13 +875,13 @@ SCRTRANS:
 		Priority: 4
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 130
+		Speed: 150
 		LandWhenIdle: true
 		Repulsable: true
 		MoveIntoShroud: true
 		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
-		HP: 35000
+		HP: 7000
 	-RenderVoxels:
 	-WithVoxelBody:
 	RenderSprites:
@@ -1135,7 +1136,7 @@ WASP:
 	Inherits@5: ^CabRender
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1300
+		Cost: 1400
 	Tooltip:
 		Name: Wasp
 	Buildable:
@@ -1147,7 +1148,7 @@ WASP:
 		Bounds: 40,30
 	Aircraft:
 		TurnSpeed: 6
-		Speed: 135
+		Speed: 130
 		Repulsable: true
 		MoveIntoShroud: true
 	Health:

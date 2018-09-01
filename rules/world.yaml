@@ -208,7 +208,7 @@
 			Water: 60
 	Locomotor@VehicleCrusher:
 		Name: VehicleCrusher
-		Crushes: crate, infantry, Vehicle, HeavyInfantry
+		Crushes: wall, heavywall, crate, infantry, Vehicle, HeavyInfantry
 		TerrainSpeeds:
 			Clear: 100
 			Ice: 100

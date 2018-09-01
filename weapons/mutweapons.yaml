@@ -629,7 +629,7 @@ FalconPunch:
 		AllowSnapping: true
 		CloseEnough: 200
 	Warhead@1Dam: SpreadDamage
-		Spread: 400
+		Spread: 600
 		Damage: 27000
 		ValidTargets: Ground, Water, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TiberiumDeath

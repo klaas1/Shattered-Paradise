@@ -246,7 +246,7 @@ VISC_SML:
 	Health:
 		HP: 15000
 	Armor:
-		Type: VehicleArmor
+		Type: InfantryArmor
 	AttackWander:
 		WanderMoveRadius: 3
 		MinMoveDelay: 30
@@ -278,7 +278,7 @@ VISC_LRG:
 	Health:
 		HP: 15000
 	Armor:
-		Type: VehicleArmor
+		Type: InfantryArmor
 	RevealsShroud:
 		Range: 4c0
 	Armament:
@@ -2258,7 +2258,7 @@ GASAND:
 		DamagedSounds: sandbag1.aud
 		DestroyedSounds: sandbag1.aud
 	Valued:
-		Cost: 25
+		Cost: 0
 	Tooltip:
 		Name: Sandbags
 	Health:
@@ -2478,7 +2478,7 @@ MACHINESHOP:
 	Inherits: ^TechBuilding
 	Inherits@2: ^2x2Shape
 	Tooltip:
-		Name: Machine Shop
+		Name: Machine Shop (Provides global repair for vehicles)
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
@@ -2494,7 +2494,7 @@ BLOODDERRICK:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^3x3Shape
 	Tooltip:
-		Name: Crab Hive
+		Name: Crab Hive (Spawns hostile crabs when destroyed)
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3

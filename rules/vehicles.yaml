@@ -3,7 +3,7 @@ SMECH:
 	Inherits@1: ^7CellVision
 	Inherits@2: ^BasicStealthDetection
 	Valued:
-		Cost: 400
+		Cost: 450
 	Tooltip:
 		Name: Wolverine
 	Buildable:
@@ -336,7 +336,7 @@ HMEC:
 		TurnSpeed: 3
 		Speed: 40
 		Locomotor: VehicleCrusher
-    -Crushable:
+	-Crushable:
 	Health:
 		HP: 200000
 	AnnounceOnSeen:
@@ -402,6 +402,8 @@ HMEC:
 		Sequence: turret2
 		Turret: third
 	WithFacingSpriteBody:
+	Passenger:
+		PipType: red
 	WithMoveAnimation:
 		MoveSequence: run
 	Selectable:
@@ -437,7 +439,7 @@ BGGY:
 	Inherits@2: ^7CellVision
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 300
+		Cost: 350
 	Buildable:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
@@ -571,7 +573,7 @@ BGGY:
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.psyker
 	Armament@shark:
-		Weapon: SharkJump
+		Weapon: SharkJumpNod
 		LocalOffset: 250,0,125
 		RequiresCondition: ifv.shark
 	Armament@bug:
@@ -1299,12 +1301,16 @@ WOLF:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 20
-		Description: Tiberium beast that uses tiberium acid to harm nearby units.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- Attacks reduce target attack speed by 35%.\n- Can mutate killed units.\n- E.M.P. Inmune.\n- Heals even when in combat.
+		Description: Tiberium beast that uses tiberium acid to harm nearby units.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium\n- Attacks reduce target attack speed by 35%\n- Can mutate killed units\n- E.M.P. Inmune\n- Heals even when in combat\n- Cannot be mindcontrolled
 		Prerequisites: ~muweap, muradr
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Tiberian Bull
+	Targetable@MindControlImmunity:
+		TargetTypes: MindControlInmune
+	Targetable@MCImmune:
+		TargetTypes: MCImmune
 	Armament@PRIMARY:
 		Weapon: BullAcid
 		LocalOffset: 128,0,400
@@ -1331,7 +1337,7 @@ MRLS:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 21
-		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed units\n- Emits tiberium radiaton that damages nearby units.\n- Can swap to regular warheads with a deploy order.\n- Can crush infantry.\n- Inmune to tiberium radiation.
+		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed units\n- Emits tiberium radiaton that damages nearby units\n- Can crush infantry\n- Inmune to tiberium radiation
 		Prerequisites: ~muweap, muhall
 	Mobile:
 		TurnSpeed: 10
@@ -1371,12 +1377,16 @@ DEATHCLAW:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 22
-		Description: Melee beast from the outer redzones that brings death with its claws.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium.\n- E.M.P. Inmune.
+		Description: Melee beast from the outer redzones that brings death with its claws.\n\nGood vs: Ground Targets\n\nSpecial:\n- Heals on Tiberium\n- E.M.P. Inmune\n- Cannot be mindcontrolled
 		Prerequisites: ~muweap, muhall
 	Valued:
 		Cost: 1200
 	Tooltip:
 		Name: Ravager
+	Targetable@MindControlImmunity:
+		TargetTypes: MindControlInmune
+	Targetable@MCImmune:
+		TargetTypes: MCImmune
 	AutoTarget:
 		ScanRadius: 6
 		InitialStance: AttackAnything
@@ -1477,7 +1487,7 @@ SCRMBT:
 	Tooltip:
 		Name: Hover Tank
 	Health:
-		HP: 28000
+		HP: 25000
 	Mobile:
     	TurnSpeed: 7
 		Speed: 90
@@ -1809,7 +1819,8 @@ REAPERCAB:
 	DeathSounds:
 
 REPAIRVEHICLE:
-	Inherits: ^Tank
+	Inherits@1: ^Tank
+	Inherits@2: ^LowerSelectionPriority
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1819,7 +1830,7 @@ REPAIRVEHICLE:
 		BuildPaletteOrder: 32
 		BuildAtProductionType: Tank
 		Prerequisites: ~cabweap, gadept
-		Description: Repairs nearby vehicles.\n\nSpecial:\n- unarmed.\n- repairs vehicles.\n- can crush infantry.
+		Description: Repairs nearby vehicles.\n\nSpecial:\n- unarmed\n- repairs vehicles\n- can crush infantry
 	Health:
 		HP: 20000
 	Mobile:
@@ -1960,7 +1971,7 @@ PALADIN:
 	Inherits@3: ^PermanentSelfHeal
 	Inherits@4: ^CabalVehicleVoice
 	Valued:
-		Cost: 1500
+		Cost: 1750
 	Tooltip:
 		Name: Minotaur
 	Buildable:

@@ -45,7 +45,7 @@ ENGINEER:
 
 MCV:
 	Inherits: ^VoxelVehicle
-    Inherits@2: ^LowerSelectionPriority
+	Inherits@2: ^LowerSelectionPriority
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
@@ -789,7 +789,7 @@ NAPOST:
 		Queue: Defense
 		BuildPaletteOrder: 2
 		Prerequisites: napowr, ~structures.nod
-		Description: Stops infantry and blocks enemy fire.\n- Can NOT be crushed by tanks.\n- Requires power to operate.
+		Description: Stops infantry and blocks enemy fire\n- Can NOT be crushed\n- Requires power to operate
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -816,7 +816,7 @@ NAPOST:
 		Types: laserfencenode
 	RequiresBuildableArea:
 		AreaTypes: building
-		Adjacent: 4
+		Adjacent: 6
 	Power:
 		Amount: -5
 	WithIdleOverlay@LIGHTS:
@@ -1006,7 +1006,7 @@ TRNSPORT:
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Health:
-		HP: 12000
+		HP: 9000
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithFacingSpriteBody:

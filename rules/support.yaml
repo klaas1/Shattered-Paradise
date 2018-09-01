@@ -601,7 +601,7 @@ SCRDRONE:
 		ForceTargetStances: Enemy
 		LocalOffset: 0,0,1750
 	Power:
-		Amount: -40
+		Amount: -30
 	SelectionDecorations:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -918,8 +918,8 @@ MUVENTI:
 		HP: 100000
 	SharedCargo:
 		Types: Infantry, Vehicle
-		PipCount: 10
-		MaxWeight: 10
+		PipCount: 15
+		MaxWeight: 15
 	RallyPoint:
 	Exit:
 	WithIdleOverlay@LIGHTS:

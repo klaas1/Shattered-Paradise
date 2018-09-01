@@ -85,7 +85,7 @@ ReaperWeb:
 ReaperScythe:
 	Inherits: ^RocketWarhead
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 125
+	ReloadDelay: 90
 	Range: 7c0
 	Burst: 4
 	Report: samshot1.aud
@@ -95,7 +95,7 @@ ReaperScythe:
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 3500
+		Damage: 2900
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@ShieldUpgrade: GrantExternalCondition
@@ -193,7 +193,7 @@ CyCannon:
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
 		Blockable: false
-		Speed: 750
+		Speed: 700
 		Acceleration: 50
 		Shadow: true
 		Palette: effect
@@ -268,7 +268,7 @@ CenturionVulcan:
 
 RepairVehicleRep:
 	Inherits: ^SparkSpawner
-	ReloadDelay: 75
+	ReloadDelay: 60
 	Range: 2c0
 	Report: repair11.aud
 	ValidTargets: Vehicle
@@ -581,7 +581,7 @@ BlasterProton:
 	Report: scrin5b.aud
 	ValidTargets: Ground, Water, Vehicle, Infantry, water
 	Projectile: BulletAS
-		Speed: 341
+		Speed: 450
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 1c0

@@ -50,6 +50,7 @@ JJGrenade:
 			BuildingArmor: 80
 			VehicleArmor: 25
 			DefenseArmor: 25
+			ConcreteArmor: 5
 		ValidTargets: Ground, Water
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 
@@ -144,6 +145,7 @@ APCGrenade:
 			BuildingArmor: 25
 			VehicleArmor: 25
 			DefenseArmor: 25
+			ConcreteArmor: 5
 		ValidTargets: Ground, Water
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 		
@@ -250,7 +252,7 @@ SonicZap:
 		Versus:
 			VehicleArmor: 80
 			DefenseArmor: 80
-			ConcreteArmor: 60
+			ConcreteArmor: 15
 			Disruptor: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Dam: SpreadDamage
@@ -262,7 +264,7 @@ SonicZap:
 		Versus:
 			VehicleArmor: 80
 			DefenseArmor: 80
-			ConcreteArmor: 60
+			ConcreteArmor: 15
 			Disruptor: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 

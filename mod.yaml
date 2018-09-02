@@ -102,6 +102,7 @@ MapFolders:
 	sp|maps/meme: System
 	sp|maps/balanced: System
 	sp|maps/others: System
+	sp|maps/campaign/cabal: System
 	~^maps/sp/{DEV_VERSION}: User
 
 Rules:

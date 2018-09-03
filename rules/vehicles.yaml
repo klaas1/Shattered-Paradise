@@ -785,6 +785,9 @@ TTNK:
 		RequiresCondition: undeployed && !empdisable
 	Health:
 		HP: 35000
+	RejectsOrders@deployment:
+		Reject: Move, EnterTransport, EnterTransports
+		RequiresCondition: deployed
 	Armor:
 		RequiresCondition: undeployed
 	Armor@deployed:
@@ -850,7 +853,7 @@ TTNK:
 TICKHOLOGRAM:
 	Inherits: TTNK
 	Inherits@1: ^3CellVision
-    Inherits@2: ^HologramKillTimer
+	Inherits@2: ^HologramKillTimer
 	-Buildable:
 	EditorOnlyTooltip:
 		Name: Tick Tank Hollogram

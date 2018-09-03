@@ -832,12 +832,12 @@ NAPOST:
 	-AutoTargetPriority@DEFAULT:
 	-AutoTargetPriority@ATTACKANYTHING:
 	-RenderRangeCircle:
-        
+
 NAFNCE:
 	Inherits: ^Wall
 	Inherits@1: ^Cloakable
 	-Replaceable:
-    Valued:
+	Valued:
 		Cost: 50
 	CustomSellValue:
 		Value: 0
@@ -853,6 +853,9 @@ NAFNCE:
 	-Sellable:
 	-Targetable:
 	-Building:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
 	EnergyWall:
 		ActiveCondition: active-posts == 2
 		Weapon: LaserFence

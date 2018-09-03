@@ -72,7 +72,7 @@ IONBEAMTARGET:
 	Tooltip:
 		Name: Target
 	Health:
-		HP: 160
+		HP: 110
 	SelfHealing:
 		Step: -10
 		Delay: 10
@@ -133,11 +133,11 @@ IONBEAMMINI:
 		TurnSpeed: 6
 		Repulsable: false
 		AltitudeVelocity: 400
-		Speed: 30
+		Speed: 43
 		MoveIntoShroud: true
 	-Tooltip:
 	Health:
-		HP: 150
+		HP: 110
 	SelfHealing:
 		Step: -10
 		Delay: 10

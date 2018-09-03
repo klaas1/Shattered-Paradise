@@ -196,6 +196,7 @@ JUMPJETAIR:
 		RequiresCondition: airborne
 	AttackHeli:
 		FacingTolerance: 20
+		Voice: Attack
 	-RenderVoxels:
 	-WithVoxelBody:
 	Armament@SelfBuff:
@@ -552,9 +553,12 @@ MARAUDER:
 		Condition: AnimateTurret
 		# RevokeDelay: 10
 		ArmamentNames: OnFoot
-    DamageMultiplier@MarauderBuff:
-        Modifier: 75
-        RequiresCondition: deployed
+	DamageMultiplier@MarauderBuff:
+		Modifier: 75
+		RequiresCondition: deployed
+	RejectsOrders@deployment:
+		Reject: Move, EnterTransport, EnterTransports
+		RequiresCondition: deployed
 
 MUTFIEND:
 	Inherits: ^Mutant

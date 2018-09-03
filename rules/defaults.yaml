@@ -1647,7 +1647,7 @@
 		Categories: Vehicle
 	BodyOrientation:
 		QuantizedFacings: 32
-    WithFacingSpriteBody:
+	WithFacingSpriteBody:
 
 ^Tank:
 	Inherits: ^Vehicle

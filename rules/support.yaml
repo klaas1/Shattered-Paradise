@@ -1670,6 +1670,7 @@ MUMINE:
 	Health:
 		HP: 5000
 	-SpawnActorOnDeath@ScrinEssence:
+	-MustBeDestroyed:
 	-UpdatesPlayerStatistics:
 	-Sellable:
 	-SpawnActorsOnSell@gdi:

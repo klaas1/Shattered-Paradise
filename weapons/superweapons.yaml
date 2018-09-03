@@ -79,7 +79,7 @@ IonCannon: ### THIS IS THE MAIN ION CANON WEAPON
 	Inherits: ^SWBaseEffects
 	ValidTargets: Ground, Water, Air, IonBeam
 	Projectile: InstantExplode
-    Report: ion1.aud
+	Report: ion1.aud
 	Warhead@1Dam_area: SpreadDamage
 		Spread: 1c0
 		Damage: 150000
@@ -261,7 +261,7 @@ droppod1:
 	ReloadDelay: 3
 	Range: 3c0
     Report: tsgun4.aud
-	ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry, Water
+	ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air, Vehicle, Building, Infantry, Water
 	Projectile: BulletAS
 		Speed: 350
 		Image: gdidroppod
@@ -321,12 +321,12 @@ droppod5:
 
 ClusterMissile:
 	Inherits: ^SWBaseEffects
-	ValidTargets: Ground, Water, Water, Air
+	ValidTargets: Ground, Water, BlueTiberium, Tiberium, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 0c512
 		Damage: 32000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Water, Water, Air
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Water, Air
 		Versus:
 			ConcreteArmor: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -335,7 +335,7 @@ ClusterMissile:
 		Spread: 1c0
 		Falloff: 1000, 700, 500, 300, 150, 50, 0
 		Delay: 25
-		ValidTargets: Ground, Water, Water, Air
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Water, Air
 		Versus:
 			InfantryArmor: 500
 			BuildingArmor: 100
@@ -348,7 +348,7 @@ ClusterMissile:
 		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 50
-		ValidTargets: Ground, Water, Air, Trees
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air, Trees
 		AffectsParent: True
 		Versus:
 			InfantryArmor: 500
@@ -438,12 +438,12 @@ MeteorFlame:
 
 ToxinMissile:
 	Inherits: ^Large_Explosion
-	ValidTargets: Ground, Water, Water, Air
+	ValidTargets: Ground, Water, BlueTiberium, Tiberium, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c128
 		Damage: 6000
 		Falloff: 500, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Water, Water, Air
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Water, Air
 		Versus:
 			ConcreteArmor: 25
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
@@ -555,7 +555,7 @@ MeteorRainNormal:
 	ReloadDelay: 8
 	Range: 1c0
 	Report: mehit1.aud
-	ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry, Water
+	ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air, Vehicle, Building, Infantry, Water
 	Projectile: BulletAS
 		Speed: 350
 		Image: meteor2
@@ -569,7 +569,7 @@ MeteorRainNormal:
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
 		Damage: 10000
-		ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry, Water
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
@@ -657,11 +657,11 @@ CabalCannon:
 		Range: 4c0
 
 NanoMachineBurst:
-	ValidTargets: Ground, Water, Air
+	ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 1
 		Damage: 1
-		ValidTargets: Ground, Water, Air
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air
 	Warhead@5Actor: SpawnActor
 		Actors: NANOMACHINEBURSTSPAWNER
 		FallRate: 5000
@@ -688,7 +688,7 @@ IonStormSpawnerWeapon: ### THIS ONE GENERATES THE MAIN ION BEAM DUMMY
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 1
 		Damage: 1
-		ValidTargets: Ground, Water, Air
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air
 	-Warhead@op: FireShrapnel
 	Warhead@Spawn: SpawnActor
 		Actors: ionstormgenerator
@@ -748,12 +748,12 @@ VeinholeSummonerWeapon:
 	Inherits: ^BombWarhead
 	ReloadDelay: 8
 	Range: 3c0
-	ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry, Water
+	ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air, Vehicle, Building, Infantry, Water
 	Warhead@1Dam: SpreadDamage
 		Spread: 650
 		Damage: 1
 		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
-		ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry, Water
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air, Vehicle, Building, Infantry, Water
 		DamageTypes:
 	Warhead@5Actor: SpawnActor
 		Actors: VEINHOLESPAWNERDUMMY
@@ -763,7 +763,7 @@ VeinholeSummonerWeapon:
 		Weapon: VeinholeShrapnel
 		Amount: 3
 		AllowDirectHit: false
-		ValidTargets: Ground, Water, Air, AirHit
+		ValidTargets: Ground, Water, BlueTiberium, Tiberium, Air, AirHit
 		InvalidTargets: Infantry, Vehicle, Building, Wall
 
 VeinholeShrapnel:

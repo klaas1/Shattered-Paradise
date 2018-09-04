@@ -1018,7 +1018,7 @@
 		PlayerExperienceModifier: 1
 	RevealsShroud:
 		Type: Footprint
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700
@@ -1071,7 +1071,7 @@
 	Inherits@3: ^8CellVision
 	RevealsShroud:
 		Type: Footprint
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	-GivesBuildableArea:
 	-SpawnActorOnDeath@tiberium2:
 	AutoTarget:
@@ -1133,7 +1133,10 @@
 	Inherits@0: ^3CellVision
 	RevealsShroud:
 		Type: Footprint 
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
+	CaptureNotification:
+		Notification: BuildingCaptured
+		LoseNotification: BuildingLostToCapture
 	RepairableBuilding:
 		IndicatorPalette: mouse
 		RepairStep: 700
@@ -1283,7 +1286,7 @@
 		DeathType: MilitantFireDeath
 	SpawnActorOnDeath@tiberium:
 		Actor: inftibspawn
-		Probability: 25
+		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		DeathType: TiberiumDeath
@@ -1358,10 +1361,10 @@
 
 ^Mutant:
 	Inherits: ^Soldier
-    Inherits@1: ^HealsOnTiberium
+	Inherits@1: ^HealsOnTiberium
 	-DamagedByTerrain:
-    Mobile:
-        Locomotor: TibInmuneInfantry
+	Mobile:
+		Locomotor: TibInmuneInfantry
 
 ^Beast:
 	Inherits: ^Soldier
@@ -1874,8 +1877,8 @@
 	ReturnOnIdle:
 
 ^CombatPlane:
-    Inherits: ^Plane
-    Inherits@0: ^GainsExperience
+	Inherits: ^Plane
+	Inherits@0: ^GainsExperience
 
 ^AircraftHusk:
 	Inherits: ^SpriteActor
@@ -1924,7 +1927,7 @@
 		Speed: 120
 		WaitAverage: 10
 		TurnSpeed: 16
-        Locomotor: Vehicle
+		Locomotor: Vehicle
 	SelectionDecorations:
 		Palette: pips
 	Selectable:

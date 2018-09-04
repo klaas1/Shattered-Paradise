@@ -905,7 +905,7 @@ MUVENTI:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 46
-		Description: Allows players to quickly transport units across the battlefield.\n\nSpecial:\n- The building has a shared cargo storage for vehicles and infantry.\n- Units can enter any tunnel built and exit on any other.
+		Description: Allows players to quickly transport units across the battlefield.\n\nSpecial:\n- The building has a shared cargo storage for vehicles and infantry.\n- Units can enter any tunnel built and exit on any other.\n- Cannot be repaired by engineers.
 		Prerequisites: ~structures.mut, muradr
 	Valued:
 		Cost: 500
@@ -916,6 +916,7 @@ MUVENTI:
 		Dimensions: 2,2
 	Health:
 		HP: 100000
+	-EngineerRepairable:
 	SharedCargo:
 		Types: Infantry, Vehicle
 		PipCount: 15
@@ -949,7 +950,7 @@ MUTSW1:
 		Queue: Defense
 		BuildPaletteOrder: 47
 		Prerequisites: muhall, ~structures.mut, ~techlevel.unrestricted
-		Description: Allows to generate powerful Ion Storms.\n\nSpecial:\n- Provides access to Ion Storm\n- Requires power to operate
+		Description: Allows to generate powerful Ion Storms.\n\nSpecial:\n- Provides access to Ion Storm\n- Requires power to operate.\n- Takes 3 seconds to charge up.
 		BuildLimit: 1
 	Valued:
 		Cost: 2500

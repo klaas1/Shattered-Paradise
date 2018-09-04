@@ -1109,7 +1109,8 @@ SCRADVPOWR:
 		Range: 2
 		OrderName: Chronoshift
 		PauseOnCondition: empdisable || disabled
-		Icon: mothershipicon
+		Icon: wormholeicon
+		IconPalette: playerscrin
 		ChargeInterval: 6000
 		EndChargeSound: SuperWeaponReady
 		EndChargeSpeechNotification: SuperWeaponReady

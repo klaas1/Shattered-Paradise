@@ -360,10 +360,15 @@ IONSTORMGENERATOR:
 	RevealsShroud:
 		Range: 8c0
 	Health:
-		HP: 8
+		HP: 11
 		NotifyAppliedDamage: False
 	ExplodeWeapon:
 		Weapon: RandomBoltSpawner
+		RequiresCondition: ChargeUp
+	GrantPeriodicCondition:
+		Condition: ChargeUp
+		CooldownDuration: 75
+		ActiveDuration: 9999
 
 IONSTORMRANDOMBOLT:
 	Inherits: IONSTORMGENERATOR

@@ -99,6 +99,11 @@ cybdog:
 	die2:
 		Start: 266
 		Length: 21
+	die-crushed:
+		Start: 261
+		Length: 1
+		Tick: 800
+		ZOffset: -511
 	shoot:
 		Start: 174
 		Length: 10

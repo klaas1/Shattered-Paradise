@@ -288,7 +288,7 @@ VISC_LRG:
 		ScanRadius: 5
 	AttackFrontal:
 		Voice: Attack
-    Wanders:
+	Wanders:
 	WithAttackAnimation:
 		AttackSequence: attack
 	Explodes:
@@ -361,6 +361,12 @@ ZOMBIE:
 		MaxMoveDelay: 45
 	-SpawnActorOnDeath@tiberium:
 	-DamagedByTintedCells@Default:
+	TransformOnCondition:
+		IntoActor: berserker
+		RequiresCondition: Transform
+	GrantPeriodicCondition:
+		Condition: Transform
+		CooldownDuration: 1000
 
 BERSERKER:
 	Inherits: ^Mutant
@@ -382,6 +388,9 @@ BERSERKER:
 	Mobile:
 		Speed: 100
 		Crushes: nada
+		SharesCell: False
+	Armor:
+		Type: VehicleArmor
 	-Crushable:
 	Voiced:
 		VoiceSet: Fiend

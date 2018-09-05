@@ -423,7 +423,7 @@ Skirmisher:
 		Move: skirmisherquotes0006, skirmisherquotes0007, skirmisherquotes0008, skirmisherquotes0009, skirmisherquotes0010
 		Attack: skirmisherquotes0000, skirmisherquotes0001, skirmisherquotes0002, skirmisherquotes0003, skirmisherquotes0004
 		Action: skirmisherquotes0000, skirmisherquotes0001, skirmisherquotes0002, skirmisherquotes0003, skirmisherquotes0004
-        Build: skirmisherquotes0005
+		Build: skirmisherquotes0005
 		Die: skirmishetoxindeath0000, skirmisherdeath0000, skirmisherdeath0001, skirmisherdeath0002, dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: skirmisheburndeath0000, skirmisheburndeath0001, dedman2
 		Zapped: electro1
@@ -445,6 +445,17 @@ MutantMCV:
 		Select: fmcv_s1, fmcv_s2, fmcv_s3, fmcv_s4, fmcv_s5, fmcv_s6, fmcv_s7, fmcv_s8, fmcv_s9, fmcv_s10
 		Move: fmcv_m1, fmcv_m2, fmcv_m3, fmcv_m4, fmcv_m5, fmcv_m6, fmcv_m7, fmcv_m8, fmcv_m9, fmcv_m10
 		Action: fmcv_m1, fmcv_m2, fmcv_m3, fmcv_m4, fmcv_m5, fmcv_m6, fmcv_m7, fmcv_m8, fmcv_m9, fmcv_m10
+
+DemoTruck:
+	Voices:
+		Select: demotruckvoice0000, demotruckvoice0001, demotruckvoice0002, demotruckvoice0003, demotruckvoice0012
+		Move: demotruckvoice0009, demotruckvoice0010, demotruckvoice0011, demotruckvoice0013, demotruckvoice0016
+		Attack: demotruckvoice0006, demotruckvoice0007, demotruckvoice0008, demotruckvoice0014, demotruckvoice0015
+		Action: demotruckvoice0006, demotruckvoice0007, demotruckvoice0008, demotruckvoice0014, demotruckvoice0015
+		Repair: demotruckvoice0005, demotruckvoice0004
+		Die: dedman1, dedman3, dedman4, dedman5, dedman6
+		Burned: dedman2
+		Zapped: electro1
 
 ######################################################################
 #CABAL Custom

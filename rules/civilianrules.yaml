@@ -1625,22 +1625,24 @@ CAARMR:
 		Sequence: flag
 	Health:
 		HP: 120000
-	DetonateWeaponPower:
-		AllowMultiple: True
-		Cursor: emp
-		MaximumFiringInstances: 1000
-		ArmamentName: primary
-		Icon: veterancyicon
-		ChargeInterval: 3000
-		Description: Advanced training
-		LongDesc: Adds an extra level of experience to the selected units (1 range radius), does not affect aircraft
-		EndChargeSound: AdvTrainingReady.aud
-		SelectTargetSound: n_00-i042.aud
-		OrderName: Veterancy
-		ActivationSequence: idle
-		PauseOnCondition: disabled
-		TargetCircleRange: 1c512
-		Weapon: VeterancyWeapon
+	ProvidesPrerequisite:
+		Prerequisite: ArmoryExpBuff
+	#DetonateWeaponPower:
+	#	AllowMultiple: True
+	#	Cursor: emp
+	#	MaximumFiringInstances: 1000
+	#	ArmamentName: primary
+	#	Icon: veterancyicon
+	#	ChargeInterval: 3000
+	#	Description: Advanced training
+	#	LongDesc: Adds an extra level of experience to the selected units (1 range radius), does not affect aircraft
+	#	EndChargeSound: AdvTrainingReady.aud
+	#	SelectTargetSound: n_00-i042.aud
+	#	OrderName: Veterancy
+	#	ActivationSequence: idle
+	#	PauseOnCondition: disabled
+	#	TargetCircleRange: 1c512
+	#	Weapon: VeterancyWeapon
 
 NEUTRALSONICTUR:
 	Inherits: ^TechBuilding

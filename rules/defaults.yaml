@@ -326,7 +326,13 @@
 		Modifier: 250
 		RequiresCondition: rank-elite
 	Targetable@Academy:
-        TargetTypes: CanTakeVeterancyPower
+		TargetTypes: CanTakeVeterancyPower
+	GainsExperienceMultiplier@armory:
+		Modifier: 150
+		RequiresCondition: ArmoryBuff
+	GrantConditionOnPrerequisite@ArmoryBuff:
+		Condition: ArmoryBuff
+		Prerequisites: ArmoryExpBuff
 
 ^TyrannyBuff:
 	SpeedMultiplier@TyrannyBuff:
@@ -827,12 +833,12 @@
 		Count: 20
 	GrantConditionOnBotOwner@AIReload:
 		Condition: AIReload
-        Bots: CheaterAI, EasyAI
+		Bots: CheaterAI, EasyAI
 
 ^AIBuffCheat:
 	GrantConditionOnBotOwner@AIBuffCheat:
 		Condition: AIBuffCheat
-        Bots: CheaterAI
+		Bots: CheaterAI
 	FirepowerMultiplier@AIBuffCheat:
 		RequiresCondition: AIBuffCheat
 		Modifier: 120
@@ -843,7 +849,7 @@
 ^AICash:
 	GrantConditionOnBotOwner@AICashCheater:
 		Condition: AICashCheater
-        Bots: CheaterAI
+		Bots: CheaterAI
 	CashTrickler@AICashCheater:
 		Interval: 1000
 		Amount: 400
@@ -851,7 +857,7 @@
 		RequiresCondition: AICashCheater
 	GrantConditionOnBotOwner@AICashNormal:
 		Condition: AICashNormal
-        Bots: EasyAI
+		Bots: EasyAI
 	CashTrickler@AICashNormal:
 		Interval: 1000
 		Amount: 350
@@ -865,6 +871,7 @@
 	Inherits@3: ^BurstRecovery
 	Inherits@4: ^FirestormGenBuff
 	Inherits@5: ^CrateBuffs
+	Inherits@6: ^AIBuffCheat
 	RevealOnFire:
 		ArmamentNames: primary, secondary, OnFoot
 		Duration: 50

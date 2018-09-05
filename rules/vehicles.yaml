@@ -1417,8 +1417,10 @@ HVRTRUK3:
 		BuildPaletteOrder: 23
 		Prerequisites: ~muweap, muhall
 	Voiced:
-		VoiceSet: Trike
+		VoiceSet: DemoTruck
 		Volume: 3
+	Repairable:
+		Voice: Repair
 	Mobile:
 		TurnSpeed: 5
 		Speed: 60

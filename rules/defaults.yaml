@@ -5,6 +5,7 @@
 	ScriptTriggers:
 	ConditionManager:
 	RenderDebugState:
+	Huntable:
 
 ^SpriteActor:
 	BodyOrientation:

@@ -1378,6 +1378,9 @@ MOTH:
 		DeploySound: place2.aud
 		UndeploySound: clicky1.aud
 		CanDeployOnRamps: True
+	RejectsOrders@deployment:
+		Reject: Move, EnterTransport, EnterTransports
+		RequiresCondition: deployed
 	Cloak@cloakgenerator:
 		RequiresCondition: deployed
 		InitialDelay: 40

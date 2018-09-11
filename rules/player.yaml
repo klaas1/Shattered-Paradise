@@ -49,16 +49,11 @@ Player:
 	PlaceBuilding:
 		Palette: placebuilding
 	SupportPowerManager:
-	SharedCargoManager:
-		MaxWeight: 15
 	ScriptTriggers:
 	MissionObjectives:
 	ConquestVictoryConditions:
-	PlayerExperience:
 	PowerManager:
 	AllyRepair:
-	TeleportNetworkManager:
-		Type: mutantteleportnetwork
 	PlayerResources:
 	DeveloperMode:
 		CheckboxEnabled: false
@@ -83,3 +78,8 @@ Player:
 	PlaceSimpleBeacon:
 	ResourceStorageWarning:
 		AdviceInterval: 120
+	PlayerExperience:
+	SharedCargoManager:
+		MaxWeight: 15
+	TeleportNetworkManager:
+		Type: mutantteleportnetwork

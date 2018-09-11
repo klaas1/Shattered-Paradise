@@ -1612,7 +1612,9 @@ CAARMR:
 	Inherits: ^TechBuilding
 	Inherits@shape: ^4x4Shape
 	Tooltip:
-		Name: Civilian Armory (Provides veterancy Power)
+		Name: Civilian Armory
+	TooltipDescription:
+		Description: Increases experience gain.
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4, 4
@@ -1651,6 +1653,8 @@ NEUTRALSONICTUR:
 	Inherits@2: ^AutoTargetAll
 	Tooltip:
 		Name: Tech Shockwave Turret
+	TooltipDescription:
+		Description: Damages units in a straight line.
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
@@ -1699,6 +1703,8 @@ CAHOSP:
 	Inherits@shape: ^3x4Shape
 	Tooltip:
 		Name: Civilian Hospital
+	TooltipDescription:
+		Description: Provides global healing for infantry
 	Building:
 		Footprint: XxX xxx xxx xxx
 		Dimensions: 3, 4
@@ -2461,7 +2467,9 @@ WELL:
 	Inherits@1: ^SpawnSmoke
 	Inherits@2: ^3x3Shape
 	Tooltip:
-		Name: Tiberium Well (Awards money)
+		Name: Tiberium Well
+	TooltipDescription:
+		Description: Provides additional funds.
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
@@ -2489,7 +2497,9 @@ MACHINESHOP:
 	Inherits: ^TechBuilding
 	Inherits@2: ^2x2Shape
 	Tooltip:
-		Name: Machine Shop (Provides global repair for vehicles)
+		Name: Machine Shop
+	TooltipDescription:
+		Description: Provides global repairs for vehicles
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
@@ -2505,7 +2515,9 @@ BLOODDERRICK:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^3x3Shape
 	Tooltip:
-		Name: Crab Hive (Spawns hostile crabs when destroyed)
+		Name: Crab Hive
+	TooltipDescription:
+		Description: Spawns hostile crabs when destroyed
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
@@ -2585,7 +2597,9 @@ NEUTRALRADAR:
 	Inherits: ^TechBuilding
 	Inherits@3: ^2x2Shape
 	Tooltip:
-		Name: Spy Satellite (Provides vision & Radar scan power)
+		Name: Spy Satellite
+	TooltipDescription:
+		Description: Provides vision & a scan power.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
@@ -2620,7 +2634,9 @@ NEUTRALPOWERPLANT:
 	Inherits: ^TechBuilding
 	Inherits@3: ^3x3Shape
 	Tooltip:
-		Name: Nuclear Powerplant (Provides build radius & explosive)
+		Name: Nuclear Powerplant
+	TooltipDescription:
+		Description: Provides build radius & explodes violently when destroyed
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
@@ -2650,7 +2666,9 @@ SCRINREINFPAD:
 	Inherits: ^TechBuilding
 	Inherits@3: ^3x3Shape
 	Tooltip:
-		Name: Scrin Replicator (Reinforcement Pad)
+		Name: Scrin Replicator
+	TooltipDescription:
+		Description: Builds a main battle tanks in a loop
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3

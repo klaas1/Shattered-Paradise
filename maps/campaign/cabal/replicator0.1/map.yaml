@@ -1,11 +1,11 @@
 MapFormat: 11
 RequiresMod: sp
-Title: Assimilate the Scrin Replicator
+Title: Assimilate the alien artifact
 Author: Nolt, jrb0001
 Tileset: TEMPERATE
 MapSize: 60,260
 Bounds: 2,4,56,248
-Visibility: Lobby
+Visibility: MissionSelector
 Categories: Campaign (CABAL)
 Players:
 	PlayerReference@Neutral:
@@ -17,46 +17,41 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
-		Enemies: Cabal, Nod1, Nod2, Multi0
+		Enemies: Cabal, Nod1, Nod2
 	PlayerReference@Cabal:
 		Name: Cabal
 		Playable: True
 		Required: True
-		Faction: cab
 		LockFaction: True
-		Color: 1262E2
+		Faction: cab
 		LockColor: True
+		Color: 1262E2
 		LockSpawn: True
-		Team: 1
 		LockTeam: True
+		Team: 1
 		Enemies: Creeps, Nod1, Nod2
 	PlayerReference@Nod1:
 		Name: Nod1
-		Playable: True
 		Required: True
-		Bot: Easy AI
-		Faction: nod
 		LockFaction: True
-		Color: FE1100
+		Faction: nod
 		LockColor: True
+		Color: FE1100
 		LockSpawn: True
-		Team: 2
 		LockTeam: True
+		Team: 2
 		Enemies: Creeps, Cabal
 	PlayerReference@Nod2:
 		Name: Nod2
-		Playable: True
 		Required: True
-		Bot: Easy AI
-		Faction: nod
 		LockFaction: True
-		Color: BA6109
+		Faction: nod
 		LockColor: True
+		Color: BA6109
 		LockSpawn: True
-		Team: 2
 		LockTeam: True
+		Team: 2
 		Enemies: Creeps, Cabal
-
 Actors:
 	Actor0: city11
 		Location: 105,94
@@ -813,18 +808,8 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor163: naobel
-		Location: 70,28
-		Owner: Nod1
-		Health: 100
-		Facing: 160
 	Actor165: naobel
 		Location: 51,29
-		Owner: Nod1
-		Health: 100
-		Facing: 160
-	Actor166: naapwr
-		Location: 73,27
 		Owner: Nod1
 		Health: 100
 		Facing: 160
@@ -838,18 +823,8 @@ Actors:
 		Owner: Nod1
 		Health: 100
 		Facing: 160
-	Actor169: nahand
-		Location: 92,74
-		Owner: Nod1
-		Health: 100
-		Facing: 160
 	Actor170: naapwr
 		Location: 92,68
-		Owner: Nod1
-		Health: 100
-		Facing: 160
-	Actor171: nalasr
-		Location: 95,67
 		Owner: Nod1
 		Health: 100
 		Facing: 160
@@ -1185,14 +1160,8 @@ Actors:
 	Actor247: fona15
 		Location: 70,-35
 		Owner: Neutral
-	Actor248: tibtre01
-		Location: 77,-34
-		Owner: Neutral
 	Actor249: fona14
 		Location: 45,-33
-		Owner: Neutral
-	Actor250: tibtre02
-		Location: 57,-32
 		Owner: Neutral
 	Actor251: fona10
 		Location: 52,-31
@@ -1221,9 +1190,6 @@ Actors:
 	Actor259: fona09
 		Location: 71,-25
 		Owner: Neutral
-	Actor260: tibtre02
-		Location: 90,-21
-		Owner: Neutral
 	Actor261: tibtre03
 		Location: 45,-3
 		Owner: Neutral
@@ -1247,9 +1213,6 @@ Actors:
 		Owner: Neutral
 	Actor268: tree07
 		Location: 80,23
-		Owner: Neutral
-	Actor269: tibtre02
-		Location: 111,23
 		Owner: Neutral
 	Actor270: tree09
 		Location: 80,24
@@ -1454,15 +1417,6 @@ Actors:
 		Owner: Neutral
 	Actor337: tree22
 		Location: 105,76
-		Owner: Neutral
-	Actor338: tibtre02
-		Location: 90,82
-		Owner: Neutral
-	Actor339: tibtre03
-		Location: 94,89
-		Owner: Neutral
-	Actor340: tibtre02
-		Location: 139,93
 		Owner: Neutral
 	Actor341: tree23
 		Location: 146,104
@@ -1911,33 +1865,9 @@ Actors:
 	Actor501: city14
 		Owner: Neutral
 		Location: 85,11
-	Actor502: altnode1
-		Owner: Nod1
-		Location: 60,4
-		SubCell: 2
-		Facing: 92
-	Actor503: altnode1
-		Owner: Nod1
-		Location: 61,3
-		SubCell: 2
-		Facing: 92
-	Actor504: templar
-		Owner: Nod1
-		Location: 63,3
-		SubCell: 2
-		Facing: 92
-		TurretFacing: 92
 	Actor505: nodref
 		Owner: Nod1
 		Location: 63,-17
-	Actor507: nalasr
-		Owner: Nod1
-		Location: 44,-8
-		TurretFacing: 92
-	Actor508: nalasr
-		Owner: Nod1
-		Location: 35,-11
-		TurretFacing: 92
 	Actor520: nahand
 		Owner: Nod1
 		Location: 44,30
@@ -1965,30 +1895,9 @@ Actors:
 	Actor538: nahpad
 		Owner: Nod1
 		Location: 51,17
-	Actor536: napost
-		Owner: Nod1
-		Location: 18,6
-	Actor539: napost
-		Owner: Nod1
-		Location: 18,-3
-	Actor540: napost
-		Owner: Nod1
-		Location: 30,6
-	Actor541: napost
-		Owner: Nod1
-		Location: 30,-3
 	Actor542: gate_b
 		Owner: Neutral
 		Location: 25,0
-	Actor543: napost
-		Owner: Nod1
-		Location: 25,3
-	Actor545: napost
-		Owner: Nod1
-		Location: 30,3
-	Actor546: napost
-		Owner: Nod1
-		Location: 30,-1
 	Actor549: ca0013
 		Owner: Neutral
 		Location: 62,-39
@@ -1998,9 +1907,6 @@ Actors:
 	Actor551: ca0013
 		Owner: Neutral
 		Location: 72,-36
-	Actor568: napost
-		Owner: Nod1
-		Location: 25,-1
 	Actor569: gate_b
 		Owner: Nod1
 		Location: 30,0
@@ -2071,29 +1977,6 @@ Actors:
 		Location: 72,38
 		SubCell: 2
 		Facing: 92
-	Actor653: truckb
-		Owner: Neutral
-		Location: 92,71
-		Facing: 92
-	Actor654: truckb
-		Owner: Neutral
-		Location: 94,71
-		Facing: 92
-	Actor655: truckb
-		Owner: Neutral
-		Location: 98,48
-		Facing: 93
-	Actor656: truckb
-		Owner: Neutral
-		Location: 100,48
-		Facing: 92
-	Actor658: truckb
-		Owner: Neutral
-		Location: 98,50
-		Facing: 92
-	Actor659: naobel
-		Owner: Nod1
-		Location: 96,57
 	Actor661: well
 		Owner: Nod1
 		Location: 76,-18
@@ -2137,50 +2020,6 @@ Actors:
 		Location: 62,19
 		SubCell: 2
 		Facing: 92
-	Actor807: altnode1
-		Owner: Neutral
-		Location: 114,76
-		SubCell: 2
-		Facing: 92
-	Actor808: altnode1
-		Owner: Nod1
-		Location: 115,76
-		SubCell: 2
-		Facing: 92
-	Actor809: altnode1
-		Owner: Nod1
-		Location: 116,76
-		SubCell: 2
-		Facing: 92
-	Actor815: altnode1
-		Owner: Nod1
-		Location: 117,76
-		SubCell: 2
-		Facing: 92
-	Actor814: crusader
-		Owner: Nod1
-		Location: 120,75
-		SubCell: 2
-		Facing: 92
-		TurretFacing: 92
-	Actor816: crusader
-		Owner: Nod1
-		Location: 118,73
-		SubCell: 2
-		Facing: 92
-		TurretFacing: 92
-	Actor817: crusader
-		Owner: Nod1
-		Location: 96,73
-		SubCell: 2
-		Facing: 92
-		TurretFacing: 92
-	Actor818: crusader
-		Owner: Nod1
-		Location: 96,74
-		SubCell: 2
-		Facing: 92
-		TurretFacing: 92
 	Actor819: altnode1
 		Owner: Nod1
 		Location: 105,48
@@ -2196,49 +2035,9 @@ Actors:
 		Location: 104,50
 		SubCell: 2
 		Facing: 92
-	Actor822: altnode1
-		Owner: Nod1
-		Location: 118,60
-		SubCell: 2
-		Facing: 92
-	Actor823: altnode1
-		Owner: Nod1
-		Location: 121,59
-		SubCell: 2
-		Facing: 92
-	Actor824: altnode1
-		Owner: Nod1
-		Location: 117,56
-		SubCell: 2
-		Facing: 92
-	Actor825: altnode1
-		Owner: Nod1
-		Location: 95,34
-		SubCell: 2
-		Facing: 92
-	Actor826: altnode1
-		Owner: Nod1
-		Location: 96,32
-		SubCell: 2
-		Facing: 92
 	Actor830: bggy
 		Owner: Nod1
 		Location: 116,79
-		Facing: 92
-		TurretFacing: 92
-	Actor831: rocketbggy
-		Owner: Nod1
-		Location: 112,50
-		Facing: 92
-		TurretFacing: 92
-	Actor832: rocketbggy
-		Owner: Nod1
-		Location: 114,50
-		Facing: 92
-		TurretFacing: 92
-	Actor833: flamebggy
-		Owner: Nod1
-		Location: 139,79
 		Facing: 92
 		TurretFacing: 92
 	Actor828: nalasr
@@ -2248,16 +2047,6 @@ Actors:
 	Actor829: nalasr
 		Owner: Nod2
 		Location: 126,51
-		TurretFacing: 92
-	Actor837: ttnk
-		Owner: Nod2
-		Location: 122,48
-		Facing: 92
-		TurretFacing: 92
-	Actor838: ttnk
-		Owner: Nod2
-		Location: 122,45
-		Facing: 92
 		TurretFacing: 92
 	Actor839: naapwr
 		Owner: Nod2
@@ -2271,12 +2060,6 @@ Actors:
 	Actor843: well
 		Owner: Nod2
 		Location: 130,37
-	Actor844: napost
-		Owner: Nod1
-		Location: 25,-3
-	Actor845: napost
-		Owner: Nod1
-		Location: 25,6
 	Actor847: naobel
 		Owner: Nod2
 		Location: 156,70
@@ -2284,9 +2067,6 @@ Actors:
 		Owner: Nod2
 		Location: 153,56
 		TurretFacing: 92
-	Actor849: nagate_b
-		Owner: Nod2
-		Location: 154,53
 	Actor850: nagate_a
 		Owner: Nod2
 		Location: 170,77
@@ -2583,11 +2363,6 @@ Actors:
 		Owner: Nod2
 		Location: 108,1
 		TurretFacing: 92
-	Actor1004: cyborg
-		Owner: Cabal
-		Location: 119,90
-		SubCell: 2
-		Facing: 92
 	Actor1005: cyborg
 		Owner: Cabal
 		Location: 118,90
@@ -2606,11 +2381,6 @@ Actors:
 	Actor1008: cyborg
 		Owner: Cabal
 		Location: 115,90
-		SubCell: 2
-		Facing: 92
-	Actor1009: cyborg
-		Owner: Cabal
-		Location: 114,89
 		SubCell: 2
 		Facing: 92
 	Actor1010: cyborg
@@ -2633,21 +2403,6 @@ Actors:
 		Location: 118,89
 		SubCell: 2
 		Facing: 92
-	Actor1014: cyborg
-		Owner: Cabal
-		Location: 119,89
-		SubCell: 2
-		Facing: 92
-	Actor1015: cyborg
-		Owner: Cabal
-		Location: 114,90
-		SubCell: 2
-		Facing: 92
-	Actor1016: cborg
-		Owner: Cabal
-		Location: 119,94
-		SubCell: 2
-		Facing: 92
 	Actor1017: cborg
 		Owner: Cabal
 		Location: 118,94
@@ -2666,16 +2421,6 @@ Actors:
 	Actor1020: cborg
 		Owner: Cabal
 		Location: 115,94
-		SubCell: 2
-		Facing: 92
-	Actor1021: cborg
-		Owner: Cabal
-		Location: 114,94
-		SubCell: 2
-		Facing: 92
-	commando: cyc2
-		Owner: Cabal
-		Location: 116,88
 		SubCell: 2
 		Facing: 92
 	Actor1023: cabyard
@@ -3299,139 +3044,12 @@ Actors:
 	Actor1194: container
 		Owner: Neutral
 		Location: 157,56
-	Actor1192: nawall
-		Owner: Nod2
-		Location: 180,71
-	Actor1193: nawall
-		Owner: Nod2
-		Location: 179,71
-	Actor1196: nawall
-		Owner: Nod2
-		Location: 178,71
-	Actor1197: nawall
-		Owner: Nod2
-		Location: 177,71
-	Actor1198: nawall
-		Owner: Nod2
-		Location: 176,71
-	Actor1199: nawall
-		Owner: Nod2
-		Location: 175,71
-	Actor1200: nawall
-		Owner: Nod2
-		Location: 175,72
-	Actor1201: nawall
-		Owner: Nod2
-		Location: 175,73
-	Actor1202: nawall
-		Owner: Nod2
-		Location: 175,74
-	Actor1203: nawall
-		Owner: Nod2
-		Location: 175,75
-	Actor1204: nawall
-		Owner: Nod2
-		Location: 175,75
-	Actor1205: nawall
-		Owner: Nod2
-		Location: 175,76
 	Actor1191: caaray
 		Owner: Nod2
 		Location: 176,68
 	Actor1206: city15
 		Owner: Neutral
 		Location: 173,62
-	Actor1207: cyborg
-		Owner: Neutral
-		Location: 176,72
-		SubCell: 2
-		Facing: 92
-	Actor1208: cyborg
-		Owner: Neutral
-		Location: 176,73
-		SubCell: 2
-		Facing: 92
-	Actor1209: cyborg
-		Owner: Neutral
-		Location: 176,74
-		SubCell: 2
-		Facing: 92
-	Actor1210: cyborg
-		Owner: Neutral
-		Location: 176,75
-		SubCell: 2
-		Facing: 92
-	Actor1211: cyborg
-		Owner: Neutral
-		Location: 176,76
-		SubCell: 2
-		Facing: 92
-	Actor1212: glad
-		Owner: Neutral
-		Location: 177,72
-		Facing: 92
-	Actor1213: glad
-		Owner: Neutral
-		Location: 177,73
-		Facing: 92
-	Actor1214: glad
-		Owner: Neutral
-		Location: 177,74
-		Facing: 92
-	Actor1215: glad
-		Owner: Neutral
-		Location: 177,75
-		Facing: 92
-	Actor1216: glad
-		Owner: Neutral
-		Location: 177,76
-		Facing: 92
-	Actor1217: glad
-		Owner: Neutral
-		Location: 178,72
-		Facing: 92
-	Actor1218: glad
-		Owner: Neutral
-		Location: 178,73
-		Facing: 92
-	Actor1219: cborg
-		Owner: Neutral
-		Location: 180,72
-		SubCell: 2
-		Facing: 92
-	Actor1220: cborg
-		Owner: Neutral
-		Location: 179,72
-		SubCell: 2
-		Facing: 92
-	Actor1221: cborg
-		Owner: Neutral
-		Location: 179,73
-		SubCell: 2
-		Facing: 92
-	Actor1222: cborg
-		Owner: Neutral
-		Location: 180,73
-		SubCell: 2
-		Facing: 92
-	Actor1223: cborg
-		Owner: Neutral
-		Location: 180,74
-		SubCell: 2
-		Facing: 92
-	Actor1224: cborg
-		Owner: Neutral
-		Location: 179,74
-		SubCell: 2
-		Facing: 92
-	lostreaper: reapercab
-		Owner: Neutral
-		Location: 178,74
-		Facing: 92
-	Actor1226: reapercab
-		Owner: Neutral
-		Location: 178,75
-		Facing: 92
 	Actor1227: civ2
 		Owner: Neutral
 		Location: 168,74
@@ -3711,9 +3329,6 @@ Actors:
 		Location: 164,65
 		SubCell: 2
 		Facing: 92
-	Actor1270: naapwr
-		Owner: Nod1
-		Location: 96,52
 	Actor1271: naapwr
 		Owner: Nod1
 		Location: 29,-9
@@ -3805,6 +3420,995 @@ Actors:
 	Actor1056: naradr
 		Owner: Nod1
 		Location: 22,15
+	Actor1022: waypoint
+		Owner: Neutral
+		Location: 117,91
+	Actor1304: nalasr
+		Owner: Nod1
+		Location: 94,53
+		TurretFacing: 92
+	Actor1192: reapercab
+		Owner: Neutral
+		Location: 179,75
+		Facing: 85
+	Actor1193: reapercab
+		Owner: Neutral
+		Location: 178,75
+		Facing: 92
+	Actor1196: reapercab
+		Owner: Neutral
+		Location: 179,74
+		Facing: 92
+	Actor1197: reapercab
+		Owner: Neutral
+		Location: 178,74
+		Facing: 92
+	Actor1198: nawall
+		Owner: Nod2
+		Location: 179,73
+	Actor1199: nawall
+		Owner: Nod2
+		Location: 180,73
+	Actor1200: nawall
+		Owner: Nod2
+		Location: 178,73
+	Actor1201: nawall
+		Owner: Nod2
+		Location: 177,73
+	Actor1202: nawall
+		Owner: Nod2
+		Location: 177,74
+	Actor1203: nawall
+		Owner: Nod2
+		Location: 177,76
+	Actor1204: nawall
+		Owner: Nod2
+		Location: 177,75
+	Actor1205: city05
+		Owner: Neutral
+		Location: 173,73
+	Actor1210: waypoint
+		Owner: Neutral
+		Location: 96,8
+	Actor1211: waypoint
+		Owner: Neutral
+		Location: 57,-9
+	Actor1213: tibtre02
+		Owner: Neutral
+		Location: 92,86
+	Actor1214: nalasr
+		Owner: Nod1
+		Location: 44,-8
+		TurretFacing: 92
+	Actor1215: nalasr
+		Owner: Nod1
+		Location: 34,-9
+		TurretFacing: 92
+	Actor1216: altnode1
+		Owner: Nod2
+		Location: 71,-13
+		SubCell: 2
+		Facing: 92
+	Actor1217: altnode1
+		Owner: Nod2
+		Location: 73,-12
+		SubCell: 2
+		Facing: 92
+	Actor1218: altnode1
+		Owner: Nod2
+		Location: 74,-13
+		SubCell: 2
+		Facing: 92
+	Actor1219: altnode1
+		Owner: Nod2
+		Location: 35,-18
+		SubCell: 2
+		Facing: 92
+	Actor1220: altnode1
+		Owner: Nod2
+		Location: 37,-17
+		SubCell: 2
+		Facing: 92
+	Actor1221: altnode1
+		Owner: Nod2
+		Location: 38,-19
+		SubCell: 2
+		Facing: 92
+	Actor1222: altnode1
+		Owner: Nod2
+		Location: 71,21
+		SubCell: 2
+		Facing: 92
+	Actor1223: altnode1
+		Owner: Nod2
+		Location: 70,23
+		SubCell: 2
+		Facing: 92
+	Actor1224: altnode1
+		Owner: Nod2
+		Location: 71,23
+		SubCell: 2
+		Facing: 92
+	Actor1226: ca0002
+		Owner: Neutral
+		Location: 70,27
+	Actor1305: car
+		Owner: Neutral
+		Location: 73,26
+		Facing: 92
+	Actor1306: civ1
+		Owner: Neutral
+		Location: 75,30
+		SubCell: 2
+		Facing: 92
+	Actor1307: civ2
+		Owner: Neutral
+		Location: 74,28
+		SubCell: 2
+		Facing: 92
+	Actor1308: tibtre01
+		Owner: Neutral
+		Location: 90,-21
+	Actor1309: nawall
+		Owner: Neutral
+		Location: 74,-23
+	Actor1310: nawall
+		Owner: Neutral
+		Location: 74,-24
+	Actor1311: nawall
+		Owner: Neutral
+		Location: 73,-24
+	Actor1312: nawall
+		Owner: Neutral
+		Location: 72,-24
+	Actor1313: nawall
+		Owner: Neutral
+		Location: 71,-24
+	Actor1314: nawall
+		Owner: Neutral
+		Location: 69,-24
+	Actor1315: nawall
+		Owner: Neutral
+		Location: 70,-24
+	Actor1316: nawall
+		Owner: Neutral
+		Location: 68,-24
+	Actor1317: nawall
+		Owner: Neutral
+		Location: 67,-24
+	Actor1318: nawall
+		Owner: Neutral
+		Location: 67,-23
+	Actor1319: nawall
+		Owner: Neutral
+		Location: 66,-23
+	Actor1320: nawall
+		Owner: Neutral
+		Location: 65,-23
+	Actor1321: nawall
+		Owner: Neutral
+		Location: 65,-22
+	Actor1322: nawall
+		Owner: Neutral
+		Location: 39,-35
+	Actor1323: nawall
+		Owner: Neutral
+		Location: 40,-35
+	Actor1324: nawall
+		Owner: Neutral
+		Location: 41,-35
+	Actor1325: nawall
+		Owner: Neutral
+		Location: 42,-35
+	Actor1326: nawall
+		Owner: Neutral
+		Location: 43,-35
+	Actor1327: nawall
+		Owner: Neutral
+		Location: 43,-34
+	Actor1328: nawall
+		Owner: Neutral
+		Location: 44,-34
+	Actor1329: nawall
+		Owner: Neutral
+		Location: 44,-33
+	Actor1330: nawall
+		Owner: Neutral
+		Location: 44,-32
+	Actor1331: nawall
+		Owner: Neutral
+		Location: 44,-31
+	Actor1332: nawall
+		Owner: Neutral
+		Location: 45,-31
+	Actor1333: nawall
+		Owner: Neutral
+		Location: 45,-30
+	Actor1334: nawall
+		Owner: Neutral
+		Location: 46,-30
+	Actor1335: nawall
+		Owner: Neutral
+		Location: 47,-30
+	Actor1336: nawall
+		Owner: Neutral
+		Location: 47,-29
+	Actor1337: glad
+		Owner: Cabal
+		Location: 116,88
+		Facing: 92
+	Actor1343: cacrsh01
+		Owner: Neutral
+		Location: 77,38
+	Actor1344: cacrsh04
+		Owner: Neutral
+		Location: 83,41
+	Actor1207: waypoint
+		Owner: Neutral
+		Location: 113,37
+	Actor1208: waypoint
+		Owner: Neutral
+		Location: 125,23
+	Actor1209: waypoint
+		Owner: Neutral
+		Location: 66,25
+	Actor1212: waypoint
+		Owner: Neutral
+		Location: 67,41
+	Actor1345: waypoint
+		Owner: Neutral
+		Location: 97,70
+	Actor1346: waypoint
+		Owner: Neutral
+		Location: 97,50
+	Actor1347: waypoint
+		Owner: Neutral
+		Location: 108,61
+	Actor1348: waypoint
+		Owner: Neutral
+		Location: 121,55
+	Actor1349: waypoint
+		Owner: Neutral
+		Location: 139,85
+	Actor1350: waypoint
+		Owner: Neutral
+		Location: 131,75
+	Actor1351: waypoint
+		Owner: Neutral
+		Location: 107,80
+	Actor1352: waypoint
+		Owner: Neutral
+		Location: 90,54
+	Actor1353: waypoint
+		Owner: Neutral
+		Location: 92,38
+	Actor1354: waypoint
+		Owner: Neutral
+		Location: 93,26
+	Actor1355: waypoint
+		Owner: Neutral
+		Location: 78,32
+	Actor1356: waypoint
+		Owner: Neutral
+		Location: 76,41
+	Actor1357: waypoint
+		Owner: Neutral
+		Location: 67,-7
+	Actor1358: waypoint
+		Owner: Neutral
+		Location: 74,-15
+	Actor1359: waypoint
+		Owner: Neutral
+		Location: 68,1
+	Actor1360: waypoint
+		Owner: Neutral
+		Location: 67,12
+	Actor1361: ttnk
+		Owner: Nod2
+		Location: 57,32
+		Facing: 92
+		TurretFacing: 92
+	Actor1362: ttnk
+		Owner: Nod2
+		Location: 57,36
+		Facing: 92
+		TurretFacing: 92
+	Actor1363: ttnk
+		Owner: Nod2
+		Location: 57,40
+		Facing: 92
+		TurretFacing: 92
+	Actor1364: altnode1
+		Owner: Nod2
+		Location: 59,3
+		SubCell: 2
+		Facing: 92
+	Actor1365: altnode1
+		Owner: Nod2
+		Location: 61,2
+		SubCell: 2
+		Facing: 92
+	Actor1366: altnode1
+		Owner: Nod2
+		Location: 62,4
+		SubCell: 2
+		Facing: 92
+	Actor1367: templar
+		Owner: Nod2
+		Location: 60,5
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1368: templar
+		Owner: Nod2
+		Location: 112,36
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1369: templar
+		Owner: Nod2
+		Location: 115,38
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1370: templar
+		Owner: Nod2
+		Location: 94,38
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1371: templar
+		Owner: Nod2
+		Location: 91,37
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1372: altnode1
+		Owner: Nod2
+		Location: 121,62
+		SubCell: 2
+		Facing: 92
+	Actor1373: altnode1
+		Owner: Nod2
+		Location: 118,60
+		SubCell: 2
+		Facing: 92
+	Actor1374: altnode1
+		Owner: Nod2
+		Location: 121,58
+		SubCell: 2
+		Facing: 92
+	Actor1375: altnode1
+		Owner: Nod2
+		Location: 117,56
+		SubCell: 2
+		Facing: 92
+	Actor1376: bggy
+		Owner: Nod2
+		Location: 116,57
+		Facing: 92
+		TurretFacing: 92
+	Actor1377: bggy
+		Owner: Nod2
+		Location: 118,55
+		Facing: 92
+		TurretFacing: 92
+	Actor1338: crusader
+		Owner: Nod2
+		Location: 115,74
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1378: crusader
+		Owner: Nod2
+		Location: 116,74
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1379: altnode1
+		Owner: Nod2
+		Location: 116,76
+		SubCell: 2
+		Facing: 92
+	Actor1380: altnode1
+		Owner: Nod2
+		Location: 119,76
+		SubCell: 2
+		Facing: 92
+	Actor1381: altnode1
+		Owner: Nod2
+		Location: 118,75
+		SubCell: 2
+		Facing: 92
+	Actor1382: altnode1
+		Owner: Nod2
+		Location: 118,75
+		SubCell: 1
+		Facing: 92
+	Actor1383: altnode1
+		Owner: Nod2
+		Location: 118,75
+		SubCell: 3
+		Facing: 92
+	Actor1384: altnode1
+		Owner: Nod2
+		Location: 118,73
+		SubCell: 2
+		Facing: 92
+	Actor1385: altnode1
+		Owner: Nod2
+		Location: 116,73
+		SubCell: 2
+		Facing: 92
+	Actor1386: moth
+		Owner: Cabal
+		Location: 119,94
+		SubCell: 2
+		Facing: 92
+	Actor1387: moth
+		Owner: Cabal
+		Location: 114,94
+		SubCell: 2
+		Facing: 92
+	Actor1388: bggy
+		Owner: Nod2
+		Location: 140,79
+		Facing: 92
+		TurretFacing: 92
+	Actor1339: altnode1
+		Owner: Nod2
+		Location: 96,73
+		SubCell: 2
+		Facing: 92
+	Actor1340: altnode1
+		Owner: Nod2
+		Location: 97,75
+		SubCell: 2
+		Facing: 92
+	Actor1341: altnode1
+		Owner: Nod2
+		Location: 95,74
+		SubCell: 2
+		Facing: 92
+	Actor1342: altnode1
+		Owner: Nod2
+		Location: 97,78
+		SubCell: 2
+		Facing: 92
+	Actor1389: altnode1
+		Owner: Nod2
+		Location: 99,75
+		SubCell: 2
+		Facing: 92
+	Actor1390: altnode1
+		Owner: Nod2
+		Location: 97,73
+		SubCell: 2
+		Facing: 92
+	Actor1391: nahand
+		Owner: Nod2
+		Location: 91,74
+	Actor1392: waypoint
+		Owner: Neutral
+		Location: 39,-17
+	Actor1393: waypoint
+		Owner: Neutral
+		Location: 110,69
+	Actor1394: waypoint
+		Owner: Neutral
+		Location: 162,80
+	Actor1395: waypoint
+		Owner: Neutral
+		Location: 172,81
+	Actor1396: waypoint
+		Owner: Neutral
+		Location: 167,66
+	Actor1397: waypoint
+		Owner: Neutral
+		Location: 157,46
+	Actor1398: waypoint
+		Owner: Neutral
+		Location: 165,60
+	Actor1399: waypoint
+		Owner: Neutral
+		Location: 125,42
+	Actor1400: waypoint
+		Owner: Neutral
+		Location: 44,34
+	Actor1401: waypoint
+		Owner: Neutral
+		Location: 47,8
+	Actor1402: waypoint
+		Owner: Neutral
+		Location: 33,-4
+	Actor1403: waypoint
+		Owner: Neutral
+		Location: 22,6
+	Actor1404: waypoint
+		Owner: Neutral
+		Location: 36,16
+	Actor1405: waypoint
+		Owner: Neutral
+		Location: 28,19
+	Actor1406: waypoint
+		Owner: Neutral
+		Location: 41,-27
+	Actor1407: waypoint
+		Owner: Neutral
+		Location: 68,-17
+	Actor1408: waypoint
+		Owner: Neutral
+		Location: 57,-33
+	Actor1409: altnode1
+		Owner: Nod2
+		Location: 121,45
+		SubCell: 2
+		Facing: 92
+	Actor1410: altnode1
+		Owner: Nod2
+		Location: 121,45
+		SubCell: 1
+		Facing: 92
+	Actor1411: altnode1
+		Owner: Nod2
+		Location: 121,45
+		SubCell: 3
+		Facing: 92
+	Actor1412: altnode1
+		Owner: Nod2
+		Location: 125,39
+		SubCell: 2
+		Facing: 92
+	Actor1413: altnode1
+		Owner: Nod2
+		Location: 125,39
+		SubCell: 1
+		Facing: 92
+	Actor1414: altnode1
+		Owner: Nod2
+		Location: 125,39
+		SubCell: 3
+		Facing: 92
+	Actor1415: crusader
+		Owner: Nod2
+		Location: 125,44
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1416: crusader
+		Owner: Nod2
+		Location: 125,44
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor1417: crusader
+		Owner: Nod2
+		Location: 125,44
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor1418: altnode1
+		Owner: Nod2
+		Location: 112,50
+		SubCell: 2
+		Facing: 92
+	Actor1419: altnode1
+		Owner: Nod2
+		Location: 112,50
+		SubCell: 1
+		Facing: 92
+	Actor1420: altnode1
+		Owner: Nod2
+		Location: 112,50
+		SubCell: 3
+		Facing: 92
+	Actor1421: altnode1
+		Owner: Nod2
+		Location: 115,46
+		SubCell: 2
+		Facing: 92
+	Actor1422: altnode1
+		Owner: Nod2
+		Location: 115,46
+		SubCell: 1
+		Facing: 92
+	Actor1423: altnode1
+		Owner: Nod2
+		Location: 115,46
+		SubCell: 3
+		Facing: 92
+	Actor1424: altnode1
+		Owner: Nod2
+		Location: 109,59
+		SubCell: 2
+		Facing: 92
+	Actor1425: altnode1
+		Owner: Nod2
+		Location: 109,59
+		SubCell: 1
+		Facing: 92
+	Actor1426: altnode1
+		Owner: Nod2
+		Location: 109,59
+		SubCell: 3
+		Facing: 92
+	Actor1427: altnode1
+		Owner: Nod2
+		Location: 112,65
+		SubCell: 2
+		Facing: 92
+	Actor1428: altnode1
+		Owner: Nod2
+		Location: 112,65
+		SubCell: 1
+		Facing: 92
+	Actor1429: altnode1
+		Owner: Nod2
+		Location: 107,65
+		SubCell: 2
+		Facing: 92
+	Actor1430: altnode1
+		Owner: Nod2
+		Location: 107,65
+		SubCell: 1
+		Facing: 92
+	Actor1431: altnode1
+		Owner: Nod2
+		Location: 131,79
+		SubCell: 2
+		Facing: 92
+	Actor1432: altnode1
+		Owner: Nod2
+		Location: 131,79
+		SubCell: 1
+		Facing: 92
+	Actor1433: altnode1
+		Owner: Nod2
+		Location: 131,79
+		SubCell: 3
+		Facing: 92
+	Actor1434: altnode1
+		Owner: Nod2
+		Location: 103,69
+		SubCell: 2
+		Facing: 92
+	Actor1435: altnode1
+		Owner: Nod2
+		Location: 103,69
+		SubCell: 1
+		Facing: 92
+	Actor1436: altnode1
+		Owner: Nod2
+		Location: 103,69
+		SubCell: 3
+		Facing: 92
+	Actor1437: altnode1
+		Owner: Nod2
+		Location: 99,84
+		SubCell: 2
+		Facing: 92
+	Actor1438: altnode1
+		Owner: Nod2
+		Location: 99,84
+		SubCell: 1
+		Facing: 92
+	Actor1439: altnode1
+		Owner: Nod2
+		Location: 99,84
+		SubCell: 3
+		Facing: 92
+	Actor1440: altnode1
+		Owner: Nod2
+		Location: 98,92
+		SubCell: 2
+		Facing: 92
+	Actor1441: altnode1
+		Owner: Nod2
+		Location: 98,92
+		SubCell: 1
+		Facing: 92
+	Actor1442: altnode1
+		Owner: Nod2
+		Location: 98,92
+		SubCell: 3
+		Facing: 92
+	Actor1443: altnode1
+		Owner: Nod2
+		Location: 134,96
+		SubCell: 2
+		Facing: 92
+	Actor1444: altnode1
+		Owner: Nod2
+		Location: 134,96
+		SubCell: 1
+		Facing: 92
+	Actor1445: altnode1
+		Owner: Nod2
+		Location: 134,96
+		SubCell: 3
+		Facing: 92
+	Actor1446: altnode1
+		Owner: Nod2
+		Location: 132,85
+		SubCell: 2
+		Facing: 92
+	Actor1447: altnode1
+		Owner: Nod2
+		Location: 132,85
+		SubCell: 1
+		Facing: 92
+	Actor1448: altnode1
+		Owner: Nod2
+		Location: 132,85
+		SubCell: 3
+		Facing: 92
+	Actor1449: altnode1
+		Owner: Nod2
+		Location: 116,67
+		SubCell: 2
+		Facing: 92
+	Actor1450: altnode1
+		Owner: Nod2
+		Location: 116,67
+		SubCell: 1
+		Facing: 92
+	Actor1451: altnode1
+		Owner: Nod2
+		Location: 116,67
+		SubCell: 3
+		Facing: 92
+	Actor1452: altnode1
+		Owner: Nod2
+		Location: 120,67
+		SubCell: 2
+		Facing: 92
+	Actor1453: altnode1
+		Owner: Nod2
+		Location: 120,67
+		SubCell: 1
+		Facing: 92
+	Actor1454: altnode1
+		Owner: Nod2
+		Location: 120,67
+		SubCell: 3
+		Facing: 92
+	Actor1455: altnode1
+		Owner: Nod2
+		Location: 116,50
+		SubCell: 2
+		Facing: 92
+	Actor1456: altnode1
+		Owner: Nod2
+		Location: 116,50
+		SubCell: 1
+		Facing: 92
+	Actor1457: altnode1
+		Owner: Nod2
+		Location: 116,50
+		SubCell: 3
+		Facing: 92
+	Actor1458: altnode1
+		Owner: Nod2
+		Location: 110,54
+		SubCell: 2
+		Facing: 92
+	Actor1459: altnode1
+		Owner: Nod2
+		Location: 110,54
+		SubCell: 1
+		Facing: 92
+	Actor1460: altnode1
+		Owner: Nod2
+		Location: 110,55
+		SubCell: 2
+		Facing: 92
+	Actor1461: altnode1
+		Owner: Nod2
+		Location: 96,60
+		SubCell: 2
+		Facing: 92
+	Actor1462: altnode1
+		Owner: Nod2
+		Location: 96,60
+		SubCell: 1
+		Facing: 92
+	Actor1463: altnode1
+		Owner: Nod2
+		Location: 96,60
+		SubCell: 3
+		Facing: 92
+	Actor1185: templar
+		Owner: Nod2
+		Location: 113,63
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1225: templar
+		Owner: Nod2
+		Location: 118,53
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor1270: pdrone
+		Owner: Cabal
+		Location: 120,92
+		SubCell: 2
+		Facing: 92
+	Actor1299: pdrone
+		Owner: Cabal
+		Location: 120,92
+		SubCell: 1
+		Facing: 92
+	Actor1300: pdrone
+		Owner: Cabal
+		Location: 120,92
+		SubCell: 3
+		Facing: 92
+	Actor1301: pdrone
+		Owner: Cabal
+		Location: 120,91
+		SubCell: 2
+		Facing: 92
+	Actor1302: pdrone
+		Owner: Cabal
+		Location: 120,91
+		SubCell: 1
+		Facing: 92
+	Actor1303: pdrone
+		Owner: Cabal
+		Location: 120,91
+		SubCell: 3
+		Facing: 92
+	Actor1464: pdrone
+		Owner: Cabal
+		Location: 120,93
+		SubCell: 2
+		Facing: 92
+	Actor1465: pdrone
+		Owner: Cabal
+		Location: 120,93
+		SubCell: 1
+		Facing: 92
+	Actor1466: pdrone
+		Owner: Cabal
+		Location: 120,93
+		SubCell: 3
+		Facing: 92
+	Actor1467: pdrone
+		Owner: Cabal
+		Location: 121,93
+		SubCell: 2
+		Facing: 92
+	Actor1468: pdrone
+		Owner: Cabal
+		Location: 121,93
+		SubCell: 1
+		Facing: 92
+	Actor1469: pdrone
+		Owner: Cabal
+		Location: 121,93
+		SubCell: 3
+		Facing: 92
+	Actor1476: altnode1
+		Owner: Nod2
+		Location: 125,60
+		SubCell: 2
+		Facing: 92
+	Actor1477: altnode1
+		Owner: Nod2
+		Location: 125,60
+		SubCell: 1
+		Facing: 92
+	Actor1478: altnode1
+		Owner: Nod2
+		Location: 125,60
+		SubCell: 3
+		Facing: 92
+	Actor1479: altnode1
+		Owner: Nod2
+		Location: 125,75
+		SubCell: 2
+		Facing: 92
+	Actor1480: altnode1
+		Owner: Nod2
+		Location: 125,75
+		SubCell: 1
+		Facing: 92
+	Actor1481: altnode1
+		Owner: Nod2
+		Location: 125,75
+		SubCell: 3
+		Facing: 92
+	Actor1482: stnk
+		Owner: Nod2
+		Location: 129,74
+		Facing: 92
+		TurretFacing: 92
+	Actor1483: stnk
+		Owner: Nod2
+		Location: 93,85
+		Facing: 92
+		TurretFacing: 92
+	Actor1484: stnk
+		Owner: Nod2
+		Location: 97,68
+		Facing: 92
+		TurretFacing: 92
+	Actor1485: stnk
+		Owner: Nod2
+		Location: 111,46
+		Facing: 92
+		TurretFacing: 92
+	Actor1486: stnk
+		Owner: Nod2
+		Location: 99,54
+		Facing: 92
+		TurretFacing: 92
+	Actor1470: cyborg
+		Owner: Cabal
+		Location: 118,90
+		SubCell: 1
+		Facing: 92
+	Actor1471: cyborg
+		Owner: Cabal
+		Location: 115,90
+		SubCell: 1
+		Facing: 92
+	Actor1472: cyborg
+		Owner: Cabal
+		Location: 118,89
+		SubCell: 1
+		Facing: 92
+	Actor1473: cyborg
+		Owner: Cabal
+		Location: 115,89
+		SubCell: 1
+		Facing: 92
+	Actor1474: cyc2
+		Owner: Cabal
+		Location: 119,88
+		SubCell: 2
+		Facing: 92
+	Actor1475: cyc2
+		Owner: Cabal
+		Location: 119,88
+		SubCell: 1
+		Facing: 92
+	Actor1487: cyc2
+		Owner: Cabal
+		Location: 119,88
+		SubCell: 3
+		Facing: 92
+	Actor1488: cyc2
+		Owner: Cabal
+		Location: 120,88
+		SubCell: 2
+		Facing: 92
+	Actor1489: cyc2
+		Owner: Cabal
+		Location: 120,88
+		SubCell: 1
+		Facing: 92
+	Actor1490: cyc2
+		Owner: Cabal
+		Location: 120,88
+		SubCell: 3
+		Facing: 92
+	Actor1491: cyc2
+		Owner: Cabal
+		Location: 121,88
+		SubCell: 2
+		Facing: 92
+	Actor1492: cyc2
+		Owner: Cabal
+		Location: 121,88
+		SubCell: 1
+		Facing: 92
+	Actor1493: cyc2
+		Owner: Cabal
+		Location: 121,88
+		SubCell: 3
+		Facing: 92
 Rules: sp|rules/campaign.yaml
 	World:
 		ElevatedBridgeLayer:
@@ -3813,8 +4417,5 @@ Rules: sp|rules/campaign.yaml
 			Height: 8
 			Orientation: X
 			Length: 20
-	Player:
-		PlayerResources:
-			DefaultCash: 10000
-	REAPERCAB:
-		AnnounceOnSeen:
+		MissionData:
+			Briefing: Assimilate the alien artifact.\n\nAn unknown signal has been detected in this sector... Tactical Value: High... Planning next course of action... Identified unused M.C.V. on the area... Deploying strike team...\n\nPraetor, you shall capture this M.C.V. in my name, establish a base and identify the source of these signals.\n\nC.A.B.A.L. demands any technological advantage that can be salvaged from this object.

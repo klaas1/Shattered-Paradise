@@ -236,6 +236,9 @@ camera:
 musicnotifier:
 	Inherits: ^IngameIcon
 
+cashnotifier:
+	Inherits: ^IngameIcon
+
 clock:
 	Inherits: ^IngameIcon
 	idle: gclock2

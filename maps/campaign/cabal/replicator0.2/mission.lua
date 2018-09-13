@@ -1,6 +1,9 @@
 
 InfantryTypes = { "altnode1", "crusader", "templar" }
-VehicleTypes = { "bggy", "rocketbggy", "flamebggy", "stnk", "ttnk" }
+NodBasicVehicles = { "bggy", "rocketbggy", "flamebggy", "tickclone" }
+NodVehicles = { "bggy", "rocketbggy", "flamebggy", "stnk", "tickclone"}
+AttackPaths = { {actor1352}, {actor1347}, {actor1348}, {actor1022}, {actor1349}, {actor1345}, {actor1207} }
+
 
 Objectives = function()
 		Objective1 = player.AddPrimaryObjective("Recapture our lost M.C.V.")
@@ -24,9 +27,9 @@ NodWarnedMessage = function()
 	UserInterface.SetMissionText("As expected, the M.C.V. has a tracker, Nod has been notified of our presence, establish a base and capture the alien artifact.")
 	Trigger.AfterDelay(DateTime.Seconds(15), CleanMissionText)
 	player.MarkCompletedObjective(Objective1)
-	Trigger.AfterDelay(DateTime.Seconds(60), MainAIProduceInfantry)
-	Trigger.AfterDelay(DateTime.Seconds(60), MainAIProduceVehicles)
-	Trigger.AfterDelay(DateTime.Seconds(10), SecondAIProduceVehicles)
+	Trigger.AfterDelay(DateTime.Seconds(5), MainAIProduceInfantry)
+	Trigger.AfterDelay(DateTime.Seconds(5), MainAIProduceVehicles)
+	Trigger.AfterDelay(DateTime.Seconds(5), SecondAIProduceVehicles)
 end
 
 ReplicatorFoundMessage = function()
@@ -35,68 +38,82 @@ ReplicatorFoundMessage = function()
 	player.MarkCompletedObjective(Objective2)
 end
 
-ReplicatorFoundMessage = function()
+MissionCompleteMessage = function()
 	UserInterface.SetMissionText("Mission Complete.")
 	Trigger.AfterDelay(DateTime.Seconds(15), CleanMissionText)
 	player.MarkCompletedObjective(Objective3)
 end
 
-IdlingUnits = { }
-AttackGroupSize = 3
+IdleAi1Infantry = { }
+IdleAi1Vehicles = { }
+IdleAi2Vehicles = { }
+IdleHunters = { }
+AttackGroupSize = 6
 
-EarlyHunterKillers = function()
-	local delay = Utils.RandomInteger(DateTime.Seconds(3), DateTime.Seconds(9))
+MainAIProduceInfantry = function()
+	local delay = Utils.RandomInteger(DateTime.Seconds(5), DateTime.Seconds(15))
 	local toBuild = { Utils.Random(InfantryTypes) }
-	ai2.Build(toBuild, function(unit)
-		IdlingUnits[#IdlingUnits + 1] = unit[1]
-		Trigger.AfterDelay(delay, EarlyHunterKillers)
-		if #IdlingUnits >= (AttackGroupSize) then
-			SendAttack()
+	local Path = Utils.Random(AttackPaths)
+	ai.Build(toBuild, function(unit)
+		IdleAi1Infantry[#IdleAi1Infantry + 1] = unit[1]
+		Trigger.AfterDelay(delay, MainAIProduceInfantry)
+		if #IdleAi1Infantry >= (AttackGroupSize*3) then
+			SendAttack(IdleAi1Infantry, Path)
+			IdleAi1Infantry = { }
 		end
 	end)
 end
 
-MainAIProduceInfantry = function()
-	local delay = Utils.RandomInteger(DateTime.Seconds(3), DateTime.Seconds(5))
+EarlyHunterKillers = function()
+	local delay = Utils.RandomInteger(DateTime.Seconds(6), DateTime.Seconds(18))
 	local toBuild = { Utils.Random(InfantryTypes) }
-	ai.Build(toBuild, function(unit)
-		IdlingUnits[#IdlingUnits + 1] = unit[1]
-		Trigger.AfterDelay(delay, MainAIProduceInfantry)
-		if #IdlingUnits >= (AttackGroupSize*10) then
-			SendAttack()
+	local Path = Utils.Random(AttackPaths)
+	ai2.Build(toBuild, function(unit)
+		IdleHunters[#IdleHunters + 1] = unit[1]
+		Trigger.AfterDelay(delay, EarlyHunterKillers)
+		if #IdleHunters >= (AttackGroupSize/2) then
+			SendAttack(IdleHunters, Path)
+			IdleHunters = { }
 		end
 	end)
 end
 
 MainAIProduceVehicles = function()
-	local delay = Utils.RandomInteger(DateTime.Seconds(10), DateTime.Seconds(30))
-	local toBuild = { Utils.Random(VehicleTypes) }
-	ai.Build(toBuild, function(unit)
-		IdlingUnits[#IdlingUnits + 1] = unit[1]
+	local delay = Utils.RandomInteger(DateTime.Seconds(5), DateTime.Seconds(25))
+	local toBuildVehicles = { Utils.Random(NodVehicles) }
+	local Path = Utils.Random(AttackPaths)
+	ai.Build(toBuildVehicles, function(unit)
+		IdleAi1Vehicles[#IdleAi1Vehicles + 1] = unit[1]
 		Trigger.AfterDelay(delay, MainAIProduceVehicles)
-		if #IdlingUnits >= (AttackGroupSize*5) then
-			SendAttack()
+		if #IdleAi1Vehicles >= (10) then
+			SendAttack(IdleAi1Vehicles, Path)
+			IdleAi1Vehicles = { }
 		end
 	end)
 end
 
 SecondAIProduceVehicles = function()
-	local delay = Utils.RandomInteger(DateTime.Seconds(10), DateTime.Seconds(30))
-	local toBuild = { Utils.Random(VehicleTypes) }
-	ai.Build(toBuild, function(unit)
-		IdlingUnits[#IdlingUnits + 1] = unit[1]
+	local delay = Utils.RandomInteger(DateTime.Seconds(5), DateTime.Seconds(15))
+	local toBuildVehicles2 = { Utils.Random(NodBasicVehicles) }
+	local Path = Utils.Random(AttackPaths)
+	ai2.Build(toBuildVehicles2, function(unit)
+		IdleAi2Vehicles[#IdleAi2Vehicles + 1] = unit[1]
 		Trigger.AfterDelay(delay, SecondAIProduceVehicles)
-		if #IdlingUnits >= (AttackGroupSize*7) then
-			SendAttack()
+		if #IdleAi2Vehicles >= (5) then
+			SendAttack(IdleAi2Vehicles, Path)
+			IdleAi2Vehicles = { }
 		end
 	end)
 end
 
-SendAttack = function()
-	local units = { }
-		units = SetupAttackGroup()
+SendAttack = function(units, Path)
 	Utils.Do(units, function(unit)
-		IdleHunt(unit)
+		if not unit.IsDead then
+			Utils.Do(Path, function(waypoint)
+				unit.AttackMove(Path.Location)
+			end)
+			IdleHunt(unit)
+		end
 	end)
 end
 
@@ -152,10 +169,10 @@ WorldLoaded = function()
 		end
 	end)
 
-	Trigger.OnKilledOrCaptured(Actor1023, function() NodWarnedMessage()
+	Trigger.OnCapture(Actor1023, function() NodWarnedMessage()
 	end)
 
-	Trigger.OnKilledOrCaptured(replicator, function() Victory()
+	Trigger.OnCapture(replicator, function() MissionCompleteMessage()
 	end)
 
 end 

@@ -5,7 +5,6 @@
 	ScriptTriggers:
 	ConditionManager:
 	RenderDebugState:
-	Huntable:
 
 ^SpriteActor:
 	BodyOrientation:
@@ -1071,6 +1070,7 @@
 		Sequence: repair
 		ReferencePoint: Center
 		Palette: mouse
+	Huntable:
 
 ^Defence:
 	Inherits: ^Building
@@ -1366,6 +1366,7 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: true
+	Huntable:
 
 ^Mutant:
 	Inherits: ^Soldier
@@ -1576,6 +1577,7 @@
 		Type: building
 		ConsumeActor: true
 		PlayerExperience: 50
+	Huntable:
 
 ^Vehicle:
 	Inherits@0: ^GainsExperience
@@ -1584,6 +1586,7 @@
 	Inherits@3: ^VehicleShape
 	Inherits@4: ^5CellVision
 	ActorLostNotification:
+	Huntable:
 	SharedPassenger:
 		CargoType: Vehicle
 	Armor:
@@ -1851,6 +1854,7 @@
 		Categories: Aircraft
 	Hovers@CRUISING:
 		RequiresCondition: cruising
+	Huntable:
 
 ^AircraftShadow:
 	WithShadow:

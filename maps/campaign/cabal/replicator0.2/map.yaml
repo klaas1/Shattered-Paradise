@@ -12,11 +12,11 @@ Players:
 		Name: Neutral
 		OwnsWorld: True
 		NonCombatant: True
-		Faction: Random
+		Faction: cab
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
-		Faction: Random
+		Faction: cab
 		Enemies: Cabal, Nod1, Nod2
 	PlayerReference@Cabal:
 		Name: Cabal
@@ -3703,21 +3703,6 @@ Actors:
 	Actor1360: waypoint
 		Owner: Neutral
 		Location: 67,12
-	Actor1361: ttnk
-		Owner: Nod2
-		Location: 57,32
-		Facing: 92
-		TurretFacing: 92
-	Actor1362: ttnk
-		Owner: Nod2
-		Location: 57,36
-		Facing: 92
-		TurretFacing: 92
-	Actor1363: ttnk
-		Owner: Nod2
-		Location: 57,40
-		Facing: 92
-		TurretFacing: 92
 	Actor1364: altnode1
 		Owner: Nod2
 		Location: 59,3
@@ -4364,50 +4349,35 @@ Actors:
 		Location: 115,89
 		SubCell: 1
 		Facing: 92
-	Actor1474: cyc2
+	Actor1361: cashnotifier
+		Owner: Neutral
+		Location: 39,15
+	Actor1362: cashnotifier
+		Owner: Neutral
+		Location: 96,2
+	Actor1363: moth
 		Owner: Cabal
-		Location: 119,88
+		Location: 118,95
 		SubCell: 2
 		Facing: 92
-	Actor1475: cyc2
+	Actor1474: moth
 		Owner: Cabal
-		Location: 119,88
-		SubCell: 1
-		Facing: 92
-	Actor1487: cyc2
-		Owner: Cabal
-		Location: 119,88
-		SubCell: 3
-		Facing: 92
-	Actor1488: cyc2
-		Owner: Cabal
-		Location: 120,88
+		Location: 118,96
 		SubCell: 2
 		Facing: 92
-	Actor1489: cyc2
+	Actor1475: moth
 		Owner: Cabal
-		Location: 120,88
-		SubCell: 1
-		Facing: 92
-	Actor1490: cyc2
-		Owner: Cabal
-		Location: 120,88
-		SubCell: 3
-		Facing: 92
-	Actor1491: cyc2
-		Owner: Cabal
-		Location: 121,88
+		Location: 118,92
 		SubCell: 2
 		Facing: 92
-	Actor1492: cyc2
+	Actor1487: moth
 		Owner: Cabal
-		Location: 121,88
-		SubCell: 1
+		Location: 117,92
+		SubCell: 2
 		Facing: 92
-	Actor1493: cyc2
+	Actor1488: glad
 		Owner: Cabal
-		Location: 121,88
-		SubCell: 3
+		Location: 117,88
 		Facing: 92
 Rules: sp|rules/campaign.yaml
 	World:
@@ -4419,3 +4389,35 @@ Rules: sp|rules/campaign.yaml
 			Length: 20
 		MissionData:
 			Briefing: Assimilate the alien artifact.\n\nAn unknown signal has been detected in this sector... Tactical Value: High... Planning next course of action... Identified unused M.C.V. on the area... Deploying strike team...\n\nPraetor, you shall capture this M.C.V. in my name, establish a base and identify the source of these signals.\n\nC.A.B.A.L. demands any technological advantage that can be salvaged from this object.
+	SCRINREINFPAD:
+		-PeriodicProducer@GDI:
+		-PeriodicProducer@NOD:
+		-PeriodicProducer@mut:
+		-PeriodicProducer@cab:
+		-PeriodicProducer@scr:
+	ROCKETBGGY:
+		Buildable:
+			Prerequisites: ~naweap
+	FLAMEBGGY:
+		Buildable:
+			Prerequisites: ~naweap
+	TICKCLONE:
+		Inherits: TTNK
+		Inherits@1: ^3CellVision
+		Inherits@2: ^HologramKillTimer
+		EditorOnlyTooltip:
+			Name: Tick Tank
+		-GrantConditionOnDeploy:
+		-WithSpriteBody@deployed:
+		WithFacingSpriteBody:
+			Sequence: idle
+			-RequiresCondition: undeployed
+		RenderSprites:
+			Image: ttnk
+		RenderVoxels:
+			Image: ttnk
+		Mobile:
+			-RequiresCondition: undeployed
+		-AttackTurreted@deployed:
+		AttackFrontal:
+			-RequiresCondition: undeployed

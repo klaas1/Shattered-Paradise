@@ -32,6 +32,20 @@ tibambientsounddummy:
 	RenderSpritesEditorOnly:
 		Image: musicnotifier
 
+cashnotifier:
+	Inherits: ^EditorNotifier
+	EditorOnlyTooltip:
+		Name: (waypoint for scripted behavior)
+	AmbientSound@TibSound:
+		SoundFiles: floatmov.wav, flotmov2.wav, flotmov3.wav, flotmov4.wav
+		Delay: 300, 600
+		Interval: 300, 600
+	RenderSpritesEditorOnly:
+	CashTrickler@InfiniteCash:
+		Interval: 1000
+		Amount: 99999
+		ShowTicks: False
+
 CAMERA:
 	Inherits: ^EditorNotifier
 	Inherits@1: ^1x1Shape

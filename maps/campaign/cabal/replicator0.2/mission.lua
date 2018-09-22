@@ -27,9 +27,9 @@ NodWarnedMessage = function()
 	UserInterface.SetMissionText("As expected, the M.C.V. has a tracker, Nod has been notified of our presence, establish a base and capture the alien artifact.")
 	Trigger.AfterDelay(DateTime.Seconds(15), CleanMissionText)
 	player.MarkCompletedObjective(Objective1)
-	Trigger.AfterDelay(DateTime.Seconds(5), MainAIProduceInfantry)
-	Trigger.AfterDelay(DateTime.Seconds(5), MainAIProduceVehicles)
-	Trigger.AfterDelay(DateTime.Seconds(5), SecondAIProduceVehicles)
+	Trigger.AfterDelay(DateTime.Seconds(60), MainAIProduceInfantry)
+	Trigger.AfterDelay(DateTime.Seconds(60), MainAIProduceVehicles)
+	Trigger.AfterDelay(DateTime.Seconds(60), SecondAIProduceVehicles)
 end
 
 ReplicatorFoundMessage = function()
@@ -51,7 +51,7 @@ IdleHunters = { }
 AttackGroupSize = 6
 
 MainAIProduceInfantry = function()
-	local delay = Utils.RandomInteger(DateTime.Seconds(5), DateTime.Seconds(15))
+	local delay = Utils.RandomInteger(DateTime.Seconds(8), DateTime.Seconds(15))
 	local toBuild = { Utils.Random(InfantryTypes) }
 	local Path = Utils.Random(AttackPaths)
 	ai.Build(toBuild, function(unit)
@@ -65,7 +65,7 @@ MainAIProduceInfantry = function()
 end
 
 EarlyHunterKillers = function()
-	local delay = Utils.RandomInteger(DateTime.Seconds(6), DateTime.Seconds(18))
+	local delay = Utils.RandomInteger(DateTime.Seconds(8), DateTime.Seconds(18))
 	local toBuild = { Utils.Random(InfantryTypes) }
 	local Path = Utils.Random(AttackPaths)
 	ai2.Build(toBuild, function(unit)
@@ -79,7 +79,7 @@ EarlyHunterKillers = function()
 end
 
 MainAIProduceVehicles = function()
-	local delay = Utils.RandomInteger(DateTime.Seconds(5), DateTime.Seconds(25))
+	local delay = Utils.RandomInteger(DateTime.Seconds(12), DateTime.Seconds(25))
 	local toBuildVehicles = { Utils.Random(NodVehicles) }
 	local Path = Utils.Random(AttackPaths)
 	ai.Build(toBuildVehicles, function(unit)
@@ -93,7 +93,7 @@ MainAIProduceVehicles = function()
 end
 
 SecondAIProduceVehicles = function()
-	local delay = Utils.RandomInteger(DateTime.Seconds(5), DateTime.Seconds(15))
+	local delay = Utils.RandomInteger(DateTime.Seconds(12), DateTime.Seconds(20))
 	local toBuildVehicles2 = { Utils.Random(NodBasicVehicles) }
 	local Path = Utils.Random(AttackPaths)
 	ai2.Build(toBuildVehicles2, function(unit)

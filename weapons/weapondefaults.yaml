@@ -31,7 +31,7 @@
 		MaximumLaunchAngle: 255
 		MaximumLaunchSpeed: 0c543
 		MinimumLaunchSpeed: 0c301
-		Speed: 400
+		Speed: 600
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 0c181
@@ -54,6 +54,10 @@
 			AircraftArmor: 100
 			ConcreteArmor: 35
 			Shield: 0
+
+^AARocketWarhead:
+	Projectile: Missile
+		Speed: 400
 
 ^APWarhead:
 	Inherits: ^WeaponGenericUpgrades
@@ -165,7 +169,7 @@
 	Inherits: ^FullDamage
 	ValidTargets: Air
 	ReloadDelay: 40
-	Range: 11c0
+	Range: 9c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 5000

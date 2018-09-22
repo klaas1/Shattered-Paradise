@@ -59,7 +59,7 @@ ORCA:
 	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^BasicStealthDetection
-	Inherits@3: ^11CellVision
+	Inherits@3: ^9CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 1350
@@ -315,7 +315,7 @@ APACHE:
 	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^BasicStealthDetection
-	Inherits@3: ^11CellVision
+	Inherits@3: ^9CellVision
     Inherits@4: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -479,7 +479,7 @@ MUTHELI:
 	Inherits@2: ^AutoTargetAllAssaultMove
 	Inherits@3: ^BasicStealthDetection
 	Inherits@4: ^MutRender
-	Inherits@5: ^11CellVision
+	Inherits@5: ^9CellVision
     Inherits@6: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
@@ -660,7 +660,7 @@ MUTBIRD:
 STORMRIDER:
 	Inherits: ^CombatPlane
 	Inherits@1: ^AutoTargetAllAssaultMove
-	Inherits@3: ^11CellVision
+	Inherits@3: ^9CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
 		Cost: 800
@@ -1132,7 +1132,7 @@ WASP:
 	Inherits: ^CombatHelicopter
 	Inherits@1: ^AutoTargetAllAssaultMove
 	Inherits@2: ^BasicStealthDetection
-	Inherits@4: ^11CellVision
+	Inherits@4: ^9CellVision
 	Inherits@5: ^CabRender
 	Inherits@Shadow: ^AircraftShadow
 	Valued:

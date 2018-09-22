@@ -25,6 +25,7 @@ GrenadierBazooka:
 
 GrenadierBazookaAA:
 	Inherits: GrenadierBazooka
+	Inherits@1: ^AARocketWarhead
 	Range: 7c0
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage

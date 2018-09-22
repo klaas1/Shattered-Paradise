@@ -252,6 +252,8 @@ VISC_SML:
 		MinMoveDelay: 30
 		MaxMoveDelay: 60
 		RequiresCondition: !Evolve
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	RenderSprites:
 		Image: vissml
 	Targetable@ViscMale:
@@ -281,6 +283,8 @@ VISC_LRG:
 		Type: InfantryArmor
 	RevealsShroud:
 		Range: 4c0
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	Armament:
 		Weapon: SlimeAttack
 		FireDelay: 10
@@ -2415,6 +2419,8 @@ NTPYRA:
 		Pieces: 7, 9
 	ThrowsShrapnel@LARGE:
 		Pieces: 3, 5
+	DamageMultiplier@cantkillme:
+		Modifier: 0
 
 UFO:
 	Inherits: ^CivBuilding

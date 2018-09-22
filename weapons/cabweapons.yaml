@@ -26,6 +26,7 @@ CyborgRocket:
 
 CyborgRocketAA:
 	Inherits: CyborgRocket
+	Inherits@1: ^AARocketWarhead
 	ValidTargets: Air
 	Range: 7c0
 	Warhead@1Dam: SpreadDamage

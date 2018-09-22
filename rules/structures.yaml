@@ -427,6 +427,8 @@ NAAPWR:
 	SelectionDecorations:
 	RequiresBuildableArea:
 		AreaTypes: building
+	ProvidesPrerequisite:
+		Prerequisite: anypower
 
 NAHPAD:
 	Inherits@1: ^Helipad

@@ -51,6 +51,7 @@ LegioNeedler:
 
 LegioNeedlerAA:
 	Inherits: LegioNeedler
+	Inherits@1: ^AARocketWarhead
 	Range: 7c0
 	ValidTargets: Air
 	InvalidTargets: Ground, Water, Infantry, Vehicle, Building
@@ -125,11 +126,11 @@ ColossiBlast:
 		Amount: 8
 		AllowDirectHit: false
 	Warhead@8Radio: CreateTintedCells
-		Range: 1, 2, 3, 4, 5, 6
+		Spread: 1c0
 		Level: 30
 		Falloff: 100, 90, 80, 70, 50, 40
 		MaxLevel: 500
-		RadioactivityLayerName: ColossusRadiation
+		LayerName: ColossusRadiation
 
 ColossiBlastSound:
 	Inherits: ^RifleWarhead

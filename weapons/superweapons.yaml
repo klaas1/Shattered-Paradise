@@ -402,11 +402,11 @@ ClusterMissile:
 	Warhead@GetsOneShotedbySuperweapons: GrantExternalCondition
 		Range: 6c0
 	Warhead@8Radio: CreateTintedCells
-		Range: 1, 2, 3, 4, 5, 6
+		Spread: 2c0
 		Level: 750
 		Falloff: 100, 100, 60, 40, 20, 5
 		MaxLevel: 750
-		RadioactivityLayerName: OrangeRadiation
+		LayerName: OrangeRadiation
 
 NukeFlame:
 	Inherits: ^FlameWarhead

@@ -2386,7 +2386,7 @@ NAMNTK:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^1x3Shape
 	Tooltip:
-		Name: NOD Montauk
+		Name: Nod Montauk
 	Building:
 		Footprint: x x x
 		Dimensions: 1, 3

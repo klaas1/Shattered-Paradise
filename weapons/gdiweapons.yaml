@@ -169,6 +169,9 @@ Titan120mm:
 	Range: 6c0
 	Report: 120mmf.aud
 	Projectile: BulletAS
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Damage: 7000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -278,6 +281,9 @@ SonicZap:
 	Burst: 2
 	BurstDelays: 8
 	Projectile: BulletAS
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 0c28
 		Speed: 682
 		Image: 120mm
 		Shadow: true

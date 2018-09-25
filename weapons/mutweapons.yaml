@@ -340,6 +340,13 @@ LynxCannon:
 	ReloadDelay: 50
 	Range: 6c0
 	Report: 120mmf.aud
+	Projectile: BulletAS
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 0c17
+		Speed: 682
+		Shadow: true
+		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -647,8 +654,10 @@ LeonidCannon:
 	ReloadDelay: 75
 	Range: 6c768
 	Report: 120mmf.aud
-	Projectile: InstantHit
-		Innacuracy: 1c0
+	Projectile: BulletAS
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath

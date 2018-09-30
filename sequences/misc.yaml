@@ -93,7 +93,7 @@ beacon:
 	minimltiicon: nodnukeiconmini
 		Length: *
 		Offset: 0,-42
-	minichemicon: minichemicon
+	minichemicon: chemmissileiconmini
 		Length: *
 		Offset: 0,-42
 	minipulsicon: minipulsicon
@@ -543,7 +543,7 @@ largecraters:
 
 icon:
 	clustermissile: nodnukeicon
-	toxinmissile: chemicon
+	toxinmissile: chemmissileicon
 	ioncannon: ioncicon
 	droppods: podsicon
 	emp: pulsicon

@@ -543,6 +543,8 @@ NAMISL:
 		DisplayBeacon: True
 		DisplayRadarPing: True
 		MissilePalette: player
+        IconPalette: chem
+		BeaconPosterPalette: chem
 		IsPlayerPalette: True
 		OrderName: ToxinMissile
 		CameraActor: camera

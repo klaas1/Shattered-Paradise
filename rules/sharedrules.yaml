@@ -285,7 +285,7 @@ GACNST:
 		Name: Construction Yard
 		Description: Builds base structures.
 	BaseProvider:
-		Range: 16c0
+		Range: 14c0
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, MindControlInmune
 	BaseBuilding:

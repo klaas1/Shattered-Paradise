@@ -142,6 +142,7 @@ ColossiBlastSound:
 		Spread: 1
 		Damage: 1
 		DamageTypes: FireDeath, ScrinEssenceKill
+
 ColossiBlastTesla:
 	Inherits: ^NoDamage
 	Inherits: ^RifleWarhead
@@ -678,9 +679,11 @@ TractorBeam2:
 
 DronePlane:
 	Inherits: ^BombWarhead
-	ReloadDelay: 200
-	Range: 6c768
-	MinRange: 2c0
+	ReloadDelay: 100
+	Range: 7c0
+    Burst: 2
+    BurstDelays: 10
+	MinRange: 1c0
 	ValidTargets: Infantry, Vehicle, Building
 	Projectile: BulletAS
 		Speed: 360
@@ -690,7 +693,14 @@ DronePlane:
 		LaunchAngle: 50
 	Warhead@1Dam: SpreadDamage
 		Spread: 150
-		Damage: 3000
+		Damage: 4000
+		Versus:
+			InfantryArmor: 100
+			BuildingArmor: 100
+			VehicleArmor: 100
+			DefenseArmor: 100
+			AircraftArmor: 100
+			ConcreteArmor: 15
 		ValidTargets: Ground, Water, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 	Warhead@2Eff: CreateEffect

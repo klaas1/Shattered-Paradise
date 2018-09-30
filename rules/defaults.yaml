@@ -1589,6 +1589,7 @@
 	Huntable:
 	SharedPassenger:
 		CargoType: Vehicle
+		PipType: Blue
 	Armor:
 		Type: VehicleArmor
 	AttackMove:

@@ -492,6 +492,7 @@ BasiliskBomb:
 			BuildingArmor: 50
 			VehicleArmor: 25
 			DefenseArmor: 50
+			ConcreteArmor: 15
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: firestormexplo, firestormexplo1, firestormexplo2

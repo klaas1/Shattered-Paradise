@@ -90,7 +90,7 @@ Heal:
 
 TrooperRail:
 	Inherits: ^APWarhead
-	ReloadDelay: 75
+	ReloadDelay: 90
 	Range: 5c0
 	Report: railgunfire.wav
 	Projectile: Railgun

@@ -74,7 +74,7 @@ GDIREF:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
-		Prerequisites: ~structures.gdi, gapowr
+		Prerequisites: ~structures.gdi, anypower
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.
 	FreeActor:
 		Actor: harv.gdi
@@ -90,7 +90,7 @@ GDIREF2:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
-		Prerequisites: ~structures.gdi, gapowr
+		Prerequisites: ~structures.gdi, anypower
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.\n- Turned 180 degrees.
 	FreeActor:
 		Actor: harv.gdi
@@ -338,7 +338,7 @@ NODREF:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
-		Prerequisites: ~structures.nod, napowr
+		Prerequisites: ~structures.nod, anypower
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.
 	FreeActor:
 		Actor: harv.nod
@@ -358,7 +358,7 @@ NODREF2:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
-		Prerequisites: ~structures.nod, napowr
+		Prerequisites: ~structures.nod, anypower
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.\n- Turned 180 degrees.
 	FreeActor:
 		Actor: harv.nod
@@ -655,7 +655,7 @@ MUPROC:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
-		Prerequisites: ~structures.mut, mupowr
+		Prerequisites: ~structures.mut, anypower
 		IconPalette: UnittemIconMut
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.
 	FreeActor:
@@ -681,7 +681,7 @@ MUPROC2:
 		Queue: Building
 		BuildPaletteOrder: 3
 		IconPalette: UnittemIconMut
-		Prerequisites: ~structures.mut, mupowr
+		Prerequisites: ~structures.mut, anypower
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.\n- Turned 180 degrees.
 	FreeActor:
 		Actor: harv.mut
@@ -1223,7 +1223,7 @@ CABPROC:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
-		Prerequisites: cabpowr, ~structures.cab
+		Prerequisites: anypower, ~structures.cab
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.
 		IconPalette: UnittemIconCab
 	FreeActor:
@@ -1246,7 +1246,7 @@ CABPROC2:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 3
-		Prerequisites: cabpowr, ~structures.cab
+		Prerequisites: anypower, ~structures.cab
 		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 1000$.\n- Turned 180 degrees.
 		IconPalette: UnittemIconCab
 	FreeActor:

@@ -103,7 +103,7 @@ FiendShardAA:
 		-TrailImage: small_smoke_trail
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		Damage: 250
+		Damage: 1200
 
 SeerTesla:
 	Inherits: ^FullDamage

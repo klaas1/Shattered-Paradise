@@ -438,6 +438,7 @@ MeteorFlame:
 
 ToxinMissile:
 	Inherits: ^Large_Explosion
+	Inherits@1: ^SpawnsIrradiation
 	ValidTargets: Ground, Water, BlueTiberium, Tiberium, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c128
@@ -461,10 +462,9 @@ ToxinMissile:
 		Actors: CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1
 		FallRate: 5000
 		Range: 3
-	Warhead@8Radio: CreateTintedCells
-		Range: 1, 2, 3, 4
+	Warhead@3Radio: CreateTintedCells
 		Level: 600
-		Falloff: 100, 60, 50, 25
+		Spread: 0c768
 		MaxLevel: 1000
 
 MeteorSpawner:

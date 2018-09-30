@@ -778,7 +778,7 @@ SCRGLYDER1:
 		MoveIntoShroud: true
 		LandableTerrainTypes: Clear, Ice, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, Water
 	Health:
-		HP: 30000
+		HP: 20000
 	Armament:
 		Weapon: Glyder1Cannon
 		LocalOffset: 0,0,-100

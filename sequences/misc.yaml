@@ -90,7 +90,7 @@ beacon:
 		BlendMode: Additive
 		ZOffset: 2047
 		Offset: 0, 0, 24
-	minimltiicon: minimltiicon
+	minimltiicon: nodnukeiconmini
 		Length: *
 		Offset: 0,-42
 	minichemicon: minichemicon
@@ -542,7 +542,7 @@ largecraters:
 	cr12: crater12
 
 icon:
-	clustermissile: mltiicon
+	clustermissile: nodnukeicon
 	toxinmissile: chemicon
 	ioncannon: ioncicon
 	droppods: podsicon

@@ -102,12 +102,12 @@ BHRifle:
 	ReloadDelay: 100
 	Range: 10c0
 	Report: ramjetfire.wav
-	ValidTargets: Infantry, LandedAircraft
+	ValidTargets: Infantry, LandedAircraft, Ground
 	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 7500
-		ValidTargets: Infantry, LandedAircraft
+		ValidTargets: Infantry, LandedAircraft, Ground
 		Versus:
 			InfantryArmor: 400
 			BuildingArmor: 5
@@ -130,7 +130,7 @@ BHRifle:
 		Duration: 125
 		Condition: ToxinTrooperDebuff
 		ValidTargets: Infantry
-		InvalidTargets: Building, Defence, MindControlInmune, MCImmune
+		InvalidTargets: Building, Defence
 
 BuggyCannon:
 	Inherits: ^RifleWarhead
@@ -451,7 +451,7 @@ Proton:
 	ValidTargets: Ground, Water, Vehicle, Building, Infantry
 	BurstDelays: 2
 	Projectile: BulletAS
-		Speed: 600
+		Speed: 750
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 128
@@ -529,13 +529,14 @@ TurretLaserFire:
 	Range: 6c768
 	Report: lastur1.aud
 	Projectile: LaserZap
-		Duration: 15
-		ZOffset: 2047
-		Color: FF000080
-		SecondaryBeam: true
-		SecondaryBeamWidth: 180
-		SecondaryBeamZOffset: 2047
-		SecondaryBeamColor: FF000040
+        Duration: 15
+        Width: 100
+        ZOffset: 2047
+        Color: FF000080
+        SecondaryBeam: true
+        SecondaryBeamWidth: 25
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 3500
@@ -554,13 +555,13 @@ ObeliskLaserFire:
 	Range: 9c0
 	Report: obelray1.aud
 	Projectile: LaserZap
-		Width: 90
-		ZOffset: 4000
-		Color: FF000080
-		SecondaryBeam: true
-		SecondaryBeamWidth: 180
-		SecondaryBeamZOffset: 4000
-		SecondaryBeamColor: FF000040
+        Width: 210
+        ZOffset: 4000
+        Color: FF000080
+        SecondaryBeam: true
+        SecondaryBeamWidth: 45
+        SecondaryBeamZOffset: 4000
+        SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Damage: 28000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath

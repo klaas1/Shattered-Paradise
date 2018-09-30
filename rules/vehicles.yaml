@@ -408,6 +408,8 @@ HMEC:
 		MoveSequence: run
 	Selectable:
 		Bounds: 40, 40, 0, -8
+	SharedPassenger:
+		PipType: Red
 
 NODMCV:
 	Inherits: MCV
@@ -946,7 +948,7 @@ BIKE:
 SAPC:
 	Inherits: ^SubterraneanVoxelVehicle
 	Valued:
-		Cost: 700
+		Cost: 500
 	Tooltip:
 		Name: Subterranean APC
 	Buildable:
@@ -1212,7 +1214,7 @@ LYNX:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Lynx
+		Name: Lynx Tank
 	Mobile:
 		TurnSpeed: 10
 		Speed: 95
@@ -1519,11 +1521,11 @@ SCRGLYDER2:
 		Description: Anti air hover vehicle.\n\nGood vs Aircraft\n\nSpecial:\n- Can transform into an aerial version that can only engage ground units.\n- Aerial Version weapon performs Good Vs Infantry.\n- Absorbs essence from killed units to heal.\nBUG: Switching modes will make the unit loose any accumulated experience.\n- Hovers (it ignores terrain like Veins and Water)
 		Prerequisites: ~scrweap, scrradr
 	Valued:
-		Cost: 700
+		Cost: 800
 	Tooltip:
 		Name: Glider
 	Health:
-		HP: 30000
+		HP: 20000
 	Mobile:
 		Speed: 90
 		Locomotor: Hover

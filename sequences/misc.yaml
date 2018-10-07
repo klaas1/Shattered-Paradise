@@ -869,3 +869,9 @@ purpbullet:
 	idle:
 		Facings: -32
 		ZOffset: 1023
+
+bullet:
+	idle:
+		Facings: 32
+		ZOffset: 1023
+

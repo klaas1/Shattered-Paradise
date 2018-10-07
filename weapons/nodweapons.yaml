@@ -4,8 +4,6 @@ MilitantRifle:
 	ReloadDelay: 25
 	Range: 4c512
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
-	Projectile: BulletAS
-		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Damage: 1600
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
@@ -61,7 +59,7 @@ CrusaderBazookaAA:
 TemplarFlame:
 	Inherits: ^FlameWarhead
 	Inherits@2: ^FlameScorch
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Range: 4c256
 	Report: flamtnk1.aud
 	Projectile: BulletAS
@@ -69,6 +67,7 @@ TemplarFlame:
 		Image: FLAMEALL
 		Inaccuracy: 1c3
 		Palette: effectalpha75
+		Blockable: true
 	Burst: 10
 	BurstDelays: 2
 	Warhead@1Dam: SpreadDamage
@@ -83,15 +82,15 @@ TemplarLasor:
 	Range: 7c0
 	Report: laserriflefire01.wav
 	Projectile: LaserZap
-        Blockable: true
-        Color: C80000
-        Width: 0c42
-        BeamDuration: 20
-        ZOffset: 4000
-        SecondaryBeam: true
-        SecondaryBeamWidth: 0c21
-        SecondaryBeamZOffset: 4000
-        SecondaryBeamColor: FFFFFF
+		Blockable: true
+		Color: C80000
+		Width: 0c42
+		BeamDuration: 20
+		ZOffset: 4000
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c21
+		SecondaryBeamZOffset: 4000
+		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 2400
@@ -225,14 +224,15 @@ Tick90mm:
 	Range: 7c0
 	Report: 120mmf.aud
 	Projectile: BulletAS
-        ContrailLength: 10
-        ContrailColor: FFFFFF
-        ContrailWidth: 0c21
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c21
 		Speed: 682
 		Image: 120mm
 		Shadow: true
 		LaunchAngle: 75
 		Palette: ra
+		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -248,6 +248,7 @@ DevilsFlame:
 		Image: FLAMEALL
 		Inaccuracy: 1c3
 		Palette: effectalpha75
+		Blockable: true
 	Burst: 14
 	BurstDelays: 2
 	Warhead@1Dam: SpreadDamage
@@ -529,14 +530,14 @@ TurretLaserFire:
 	Range: 6c768
 	Report: lastur1.aud
 	Projectile: LaserZap
-        Duration: 15
-        Width: 100
-        ZOffset: 2047
-        Color: FF000080
-        SecondaryBeam: true
-        SecondaryBeamWidth: 25
-        SecondaryBeamZOffset: 2047
-        SecondaryBeamColor: FFFFFF
+		Duration: 15
+		Width: 100
+		ZOffset: 2047
+		Color: FF000080
+		SecondaryBeam: true
+		SecondaryBeamWidth: 25
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 3500
@@ -555,13 +556,13 @@ ObeliskLaserFire:
 	Range: 9c0
 	Report: obelray1.aud
 	Projectile: LaserZap
-        Width: 210
-        ZOffset: 4000
-        Color: FF000080
-        SecondaryBeam: true
-        SecondaryBeamWidth: 45
-        SecondaryBeamZOffset: 4000
-        SecondaryBeamColor: FFFFFF
+		Width: 210
+		ZOffset: 4000
+		Color: FF000080
+		SecondaryBeam: true
+		SecondaryBeamWidth: 45
+		SecondaryBeamZOffset: 4000
+		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Damage: 28000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath

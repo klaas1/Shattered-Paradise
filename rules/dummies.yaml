@@ -298,6 +298,10 @@ NANOMACHINEBURSTSPAWNER:
 		Probability: 100
 		RequiresLobbyCreeps: false
 		SkipMakeAnimations: false
+    AmbientSound:
+        SoundFiles: nanomachine0000.wav, nanomachine0001.wav, nanomachine0002.wav, nanomachine0003.wav, nanomachine0004.wav
+        Delay: 0, 5
+        Interval: 0, 5
 
 NANOMACHINEBURSTDUMMY:
 	Inherits: ^DUMMYAIRCRAFT

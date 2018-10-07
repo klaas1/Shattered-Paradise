@@ -412,6 +412,10 @@ GACNST:
 	Explodes:
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
+	ProximityExternalCondition@RefineryLock:
+		Condition: RefineryLock
+		Range: 2c0
+		ValidStances: Enemy, Neutral
 
 PROC:
 	Inherits: ^Building
@@ -543,6 +547,10 @@ FLIPPEDPROC:
 		Factions: gdi, nod, cab, mut
 		Prerequisite: humanstuff
 		ResetOnOwnerChange: True
+	ProximityExternalCondition@RefineryLock:
+		Condition: RefineryLock
+		Range: 2c0
+		ValidStances: Enemy, Neutral
 
 ^Helipad:
 	Inherits: ^Building

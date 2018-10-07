@@ -71,6 +71,7 @@ Hellfire:
 
 CrabAcid:
 	Inherits: ^AcidWarhead
+	Inherits@1: ^SpawnsIrradiation
 	ReloadDelay: 100
 	Range: 4c0
 	Report: ScrinAcid0000.wav, ScrinAcid0001.wav, ScrinAcid0002.wav, ScrinAcid0003.wav, ScrinAcid0004.wav
@@ -95,10 +96,7 @@ CrabAcid:
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
 	Warhead@3Radio: CreateTintedCells
-		Range: 1, 2, 3
 		Level: 10
-		Falloff: 100, 50, 20
-		MaxLevel: 1000
 
 Tentacle:
 	Inherits@wh: ^AcidWarhead

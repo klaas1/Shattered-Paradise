@@ -73,6 +73,7 @@ ColossiShard:
 		Shadow: true
 		LaunchAngle: 60
 		Palette: apblue
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Damage: 5000
 		ValidTargets: Ground, Water
@@ -198,12 +199,12 @@ FloatGlaive:
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
 		Speed: 300
-		Blockable: false
+		Blockable: true
 		Shadow: true
 		Palette: apollightbluealpha
 		Image: glaive
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
+		Damage: 1500
 		ValidTargets: Ground, Water
 		DamageTypes: SmallExplosionDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
@@ -290,6 +291,7 @@ MindController:
 	InvalidTargets: MCImmune, MindControlInmune
 	Report: iyurat1a.wav
 	Projectile: InstantHit
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 1
 		Damage: 0
@@ -321,16 +323,17 @@ SCRMBTLASOR:
 		SecondaryBeamWidth: 30
 		SecondaryBeamZOffset: 4000
 		SecondaryBeamColor: FFFFFF
+		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
-		Damage: 8500
+		Damage: 7500
 		Versus:
 			InfantryArmor: 45
 		DamageTypes: Prone60Percent, TriggerProne, FireDeath, ScrinEssenceKill
 		InvalidTargets: Shark
 	Warhead@2shark: SpreadDamage
 		Spread: 0c045
-		Damage: 7000
+		Damage: 7500
 		ValidTargets: Shark
 		Versus:
 			InfantryArmor: 65
@@ -351,6 +354,7 @@ TripodLaser:
 		Shadow: true
 		LaunchAngle: 62
 		Palette: apolgreenalpha
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 2500

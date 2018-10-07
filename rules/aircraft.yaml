@@ -62,7 +62,7 @@ ORCA:
 	Inherits@3: ^9CellVision
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1350
+		Cost: 1400
 	Tooltip:
 		Name: Orca Fighter
 	Buildable:
@@ -319,7 +319,7 @@ APACHE:
     Inherits@4: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1350
+		Cost: 1400
 	Tooltip:
 		Name: Harpy
 	Buildable:
@@ -483,7 +483,7 @@ MUTHELI:
     Inherits@6: ^UsesAmunition
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 1350
+		Cost: 1400
 	Tooltip:
 		Name: Gargoyle
 	Buildable:
@@ -951,7 +951,7 @@ SCRCARRIER:
 	Inherits@4: ^BasicStealthDetection
 	Inherits@Shadow: ^AircraftShadow
 	Valued:
-		Cost: 2000
+		Cost: 2200
 	Tooltip:
 		Name: Assault Carrier
 	Buildable:

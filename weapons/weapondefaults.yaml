@@ -12,6 +12,7 @@
 	Inherits: ^WeaponGenericUpgrades
 	Projectile: BulletAS
 		Speed: 1c682
+		Blockable:true
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			InfantryArmor: 100
@@ -67,6 +68,7 @@
 		Shadow: true
 		LaunchAngle: 75
 		Palette: ra
+		Blockable:true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Versus:
@@ -138,7 +140,6 @@
 	Warhead@3Radio: CreateTintedCells
 		Spread: 512
 		Level: 6
-		Falloff: 100, 75, 50, 25, 10
 		MaxLevel: 500
 
 ^SpawnsIrradiationFalcon:

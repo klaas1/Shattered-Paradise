@@ -71,6 +71,7 @@ VeterancyWeapon:
 RadarScanWeapon:
 	ReloadDelay: 6 
 	Projectile: InstantExplode
+	Report: uradarpi.wav
 	Warhead@Spawn: SpawnActor
 		Actors: radarscandummy
 		Range: 3

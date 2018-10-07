@@ -1606,7 +1606,7 @@
 		PlayerExperienceModifier: 1
 	RevealsShroud:
 		Type: CenterPosition
-        MaxHeightDelta: 3
+		MaxHeightDelta: 3
 	RevealOnDeath:
 		Duration: 50
 		Radius: 3c0
@@ -2197,9 +2197,8 @@
 	Crushable:
 		CrushClasses: wall
 	Health:
-		HP: 30000
+		HP: 25000
 	BlocksProjectiles:
-		Height: 640
 	Armor:
 		Type: ConcreteArmor
 	Crushable:

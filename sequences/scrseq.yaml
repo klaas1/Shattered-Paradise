@@ -998,13 +998,13 @@ scrneedler:
 		ShadowStart: 187
 		Tick: 400
 	turret:
-		Start: 25
+		Start: 26
 		Facings: 32
 		Offset: -0,-12
 	damaged-turret:
 		Start: 59
 		Facings: 32
-		Offset: -4, 0
+		Offset: -0,-12
 	make:
 		Length: 25
 		ShadowStart: 94

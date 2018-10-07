@@ -115,6 +115,7 @@ SeerTesla:
 	Projectile: TeslaZap
 		Palette: apolbluealpha
 		Duration: 10
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Damage: 7000
 		ValidTargets: Ground, Water
@@ -322,6 +323,7 @@ BullAcidJump:
 
 RavagerStrike:
 	Inherits: ^FullDamage
+	Inherits@2: ^Small_Clsn
 	ReloadDelay: 30
 	Range: 1c512
 	Report: fiend2.aud
@@ -341,12 +343,13 @@ LynxCannon:
 	Range: 6c0
 	Report: 120mmf.aud
 	Projectile: BulletAS
-        ContrailLength: 10
-        ContrailColor: FFFFFF
-        ContrailWidth: 0c17
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c17
 		Speed: 682
 		Shadow: true
 		Palette: ra
+		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -401,7 +404,7 @@ TiberianRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 3000
+		Damage: 2000
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@2EffWater: CreateEffect
@@ -638,6 +641,9 @@ FalconPunch:
 		Palette: effect
 		AllowSnapping: true
 		CloseEnough: 200
+		ContrailLength: 10
+		ContrailColor: 00FF00
+		ContrailWidth: 0c30
 	Warhead@1Dam: SpreadDamage
 		Spread: 600
 		Damage: 27000
@@ -648,16 +654,17 @@ FalconPunch:
 		FallRate: 5000
 		Range: 3
 
-LeonidCannon:
+ForgottenCannonWeapon:
 	Inherits: ^APWarhead
 	Inherits@2: ^Large_Clsn
 	ReloadDelay: 75
 	Range: 6c768
 	Report: 120mmf.aud
 	Projectile: BulletAS
-        ContrailLength: 10
-        ContrailColor: FFFFFF
-        ContrailWidth: 0c21
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c21
+		Blockable: False
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath

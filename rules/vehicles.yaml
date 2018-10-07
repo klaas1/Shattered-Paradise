@@ -49,7 +49,7 @@ MMCH:
 		Queue: Vehicle
 		BuildPaletteOrder: 3
 		BuildAtProductionType: Tank
-		Description: Well balanced main battle walker armed with an anti-tank cannon.\n\nGood vs: Vehicles\n\nSpecial:\n- Can crush infantry
+		Description: Well balanced main battle walker armed with an anti-tank cannon.\n\nGood vs: Vehicles\n\nSpecial:\n- Can shoot over walls\n- Can crush infantry
 		Prerequisites: ~gaweap
 	Mobile:
 		TurnSpeed: 5
@@ -91,7 +91,7 @@ APC:
 	Buildable:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
-		Description: Armored infantry transport.\n\nGood vs: Infantry.\n\nSpecial:\n- Can transport 5 infantry units.\n- Can travel over water.\n- Can crush infantry.
+		Description: Armored infantry transport.\n\nGood vs: Infantry.\n\nSpecial:\n- Can transport 5 infantry units\n- Can travel over water\n- Can shoot over walls\n- Can crush infantry
 		BuildPaletteOrder: 4
 		Prerequisites: ~gaweap, gapile
 	Mobile:
@@ -153,12 +153,12 @@ HVR:
 	Buildable:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
-		Description: Hovering vehicle, armed with long range missiles.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Can attack Air\n- Hovers (it ignores terrain like Veins and Water)
+		Description: Hovering vehicle, armed with long range missiles.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Can attack Air\n- Can shoot over walls\n- Hovers (it ignores terrain like Veins and Water)
 		BuildPaletteOrder: 5
 		Prerequisites: ~gaweap, garadr
 	Mobile:
 		Speed: 110
-		TurnSpeed: 9
+		TurnSpeed: 14
 		Locomotor: Hover
 	Health:
 		HP: 25000
@@ -191,12 +191,13 @@ JUG:
 	Buildable:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
-		Description: Heavy mechanized artillery walker.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can crush infantry
+		Description: Heavy mechanized artillery walker.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can shoot over walls\n- Can crush infantry
 		BuildPaletteOrder: 6
 		Prerequisites: ~gaweap, gatech
 	Mobile:
+		TurnSpeed: 5
 		Speed: 60
-        Locomotor: InfantryCrusherVehicle
+		Locomotor: InfantryCrusherVehicle
 	Health:
 		HP: 21000
 	AttackFrontal:
@@ -243,7 +244,7 @@ SONIC:
 	Buildable:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
-		Description: Armored high-tech vehicle with sonic armament.\n\nGood vs: Ground Targets.\n\nSpecial:\n- Deals damage over time to any unit in line of fire.\n- Can crush infantry.
+		Description: Armored high-tech vehicle with sonic armament.\n\nGood vs: Ground Targets.\n\nSpecial:\n- Deals damage over time to any unit in line of fire\n- Can crush infantry
 		BuildPaletteOrder: 7
 		Prerequisites: ~gaweap, gatech
 	Mobile:
@@ -282,7 +283,7 @@ G4TNK:
 	Buildable:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
-		Description: Heavy assault tank.\n\nGood vs: Vehicles, Aircraft.\n\nSpecial:\n- Selfheal to 50%\n- Can attack air.\n- Can crush infantry.
+		Description: Heavy assault tank.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Selfheal to 50%\n- Can attack air\n- Only the Missiles can pass over walls\n- Can crush infantry
 		BuildPaletteOrder: 8
 		Prerequisites: ~gaweap, gatech
 	Mobile:
@@ -330,7 +331,7 @@ HMEC:
 		BuildPaletteOrder: 9
 		Prerequisites: ~gaweap, gtdrop
 		BuildAtProductionType: Mammoth
-		Description: GDI's super-heavy walker and the pride of their army.\n\nGood vs: Everything\n\nSpecial:\n- Maximum Supply of 1.\n- Selfhealing up to 100%.\n- Can attack air.\n- Can crush infantry.\n- Immune to mind control.\n- Can crush vehicles and cyborgs.\n- It is deployed via dropship at the Dropship Bay.
+		Description: GDI's super-heavy walker and the pride of their army.\n\nGood vs: Everything\n\nSpecial:\n- Maximum Supply of 1\n- Selfhealing up to 100%\n- Can attack air\n- Can crush infantry\n- Immune to mind control\n- Can shoot over walls\n- Can crush vehicles and cyborgs\n- It is deployed via dropship at the Dropship Bay
 		BuildLimit: 1
 	Mobile:
 		TurnSpeed: 3
@@ -781,7 +782,7 @@ TTNK:
 		Description: Nod´s main battle tank armed with an anti-tank cannon.\n\nGood vs: Vehicles\n\nSpecial:\n- Can deploy to gain extra protection\n- Can crush infantry
 		Prerequisites: ~naweap
 	Mobile:
-		TurnSpeed: 5
+		TurnSpeed: 8
 		Speed: 90
 		Locomotor: InfantryCrusherVehicle
 		RequiresCondition: undeployed && !empdisable
@@ -820,6 +821,7 @@ TTNK:
 		DeploySound: place2.aud
 		CanDeployOnRamps: True
 		UndeploySound: clicky1.aud
+		PauseOnCondition: RefineryLock
 	Carryable:
 		RequiresCondition: undeployed
 	WithFacingSpriteBody:
@@ -851,6 +853,8 @@ TTNK:
 		Condition: deployed
 	ExternalCondition@undeployed:
 		Condition: undeployed
+	ExternalCondition@RefineryLock:
+		Condition: RefineryLock
 
 TICKHOLOGRAM:
 	Inherits: TTNK
@@ -985,7 +989,7 @@ SUBTANK:
 		BuildPaletteOrder: 14
 		Prerequisites: ~naweap, natech
 	Mobile:
-		TurnSpeed: 6
+		TurnSpeed: 8
 		Speed: 90
 	Health:
 		HP: 25000
@@ -1012,14 +1016,14 @@ HOWTLIZER:
 	Buildable:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
-		Description: High tech artillery armed with a self-propelled howitzer.\nAnd cloak generators.\n\nGood vs: Ground Targets\n- Can crush infantry.\n- Cloaks when not firing.\n- Cloaking malfunctions when at red hp.
+		Description: High tech artillery armed with a self-propelled howitzer\nand cloak generators.\n\nGood vs: Ground Targets\n- Can shoot over walls\n- Can crush infantry\n- Cloaks when not firing\n- Cloaking malfunctions when at red hp
 		BuildPaletteOrder: 15
 		Prerequisites: ~naweap, natech
 	Health:
 		HP: 12000
 	Mobile:
-		Speed: 50
-		TurnSpeed: 3
+		Speed: 55
+		TurnSpeed: 5
 		Locomotor: InfantryCrusherVehicle
 	-Cloak@CLOAKGENERATOR:
 	Cloak@cloakgenerator:
@@ -1066,10 +1070,10 @@ STNK:
 		BuildPaletteOrder: 16
 		BuildAtProductionType: Tank
 		Prerequisites: ~naweap, natech
-		Description: High tech tank armed with rocket launchers and equipped with a personal mobile stealth generator.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Stealthed\n- Can attack air\n- Can crush infantry.\n- Cloaking malfunctions when at red hp.
+		Description: High tech tank armed with rocket launchers and equipped with a personal mobile stealth generator.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Stealthed\n- Can attack air\n- Can shoot over walls\n- Can crush infantry\n- Cloaking malfunctions when at red hp
 		Queue: Vehicle
 	Mobile:
-		TurnSpeed: 7
+		TurnSpeed: 12
 		Speed: 100
 		Locomotor: InfantryCrusherVehicle
 	Health:
@@ -1342,10 +1346,10 @@ MRLS:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 21
-		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed units\n- Emits tiberium radiaton that damages nearby units\n- Can crush infantry\n- Inmune to tiberium radiation
+		Description: Light artillery armed with tiberium rockets.\n\nGood vs: Infantry, Buildings.\n\nSpecial:\n- Deals AoE damage\n- Minimum attack distance\n- Can mutate killed units\n- Emits tiberium radiaton that damages nearby units\n- Can shoot over walls\n- Can crush infantry\n- Inmune to tiberium radiation
 		Prerequisites: ~muweap, muhall
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 5
 		Speed: 90
 		Locomotor: InfantryCrusherVehicle
 	BodyOrientation:
@@ -1399,7 +1403,7 @@ DEATHCLAW:
 		HP: 65000
 	Mobile:
 		Speed: 110
-        Locomotor: TibVeCritter
+		Locomotor: TibVeCritter
 	Armament:
 		Weapon: RavagerStrike
 	Selectable:
@@ -1443,6 +1447,10 @@ HVRTRUK3:
 	AutoTarget:
 	AttackFrontal:
 
+###########################################################
+# SCRIN
+###########################################################
+
 SCRSCORPION:
 	Inherits@1: ^Walker
 	Inherits: ^ScrinVehicle
@@ -1456,10 +1464,10 @@ SCRSCORPION:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 24
-		Description: Anti-personnel walker.\n\n Good vs Infantry.\n\nSpecial:\n- Can mutate enemies killed.\n- Deals considerable damage to vehicles.\n- Absorbs essence from killed enemies to heal.\n- Attacks emit radiation that harms infantry in the area.\n- Inmune to tiberium radiation.\n- Cannot crush infantry.
+		Description: Anti-personnel walker.\n\n Good vs Infantry\n\nSpecial:\n- Can mutate enemies killed\n- Deals considerable damage to vehicles\n- Absorbs essence from killed enemies to heal\n- Attacks emit radiation that harms infantry in the area\n- Inmune to tiberium radiation.\n- Cannot crush infantry
 		Prerequisites: ~scrweap
 	Mobile:
-		TurnSpeed: 6
+		TurnSpeed: 8
 		Speed: 80
 		Locomotor: InfantryCrusherVehicle
 	Health:
@@ -1487,7 +1495,7 @@ SCRMBT:
 		Queue: Vehicle
 		BuildAtProductionType: Tank
 		BuildPaletteOrder: 25
-		Description: Light Tank, good for harassment.\n\nGood vs Ground targets.\n\nSpecial:\n- Hovers (it ignores terrain like Veins and Water).\nAbsorbs essence from killed units to heal.\n- Cannot crush infantry.
+		Description: Light Tank, good for harassment.\n\nGood vs Ground targets\n\nSpecial:\n- Hovers (it ignores terrain like Veins and Water)\n- Absorbs essence from killed units to heal\n- Cannot crush infantry
 		Prerequisites: ~scrweap
 	Valued:
 		Cost: 900
@@ -1554,7 +1562,7 @@ SCRRECHARGER:
 		Description: Mobile shield generator.\n\nSpecial:\n- Generates shields around nearby friendly units.\n- Shields protect from all damage until the unit is hit 4 times.\n- Does not protect against super weapons.\n- Absorbs essence from killed enemies to heal.\n- Can Crush infantry.\n- Cannot apply shields to aircraft.
 		Prerequisites: ~scrweap, scrdepot
 	Mobile:
-		TurnSpeed: 8
+		TurnSpeed: 7
 		Speed: 80
 		Locomotor: Vehicle
 	Health:
@@ -1594,7 +1602,7 @@ SCRMOBMINE:
 		Queue: Vehicle
 		BuildPaletteOrder: 28
 		BuildAtProductionType: Tank
-		Description: Mind Control unit\n\nSpecial:\n- Can mind control vehicles.\n- Can control up to three units.\n- Absorbs essence from killed units to heal.\n- Cannot mindcontrol MCVs or harvester.
+		Description: Mind Control unit\n\nSpecial:\n- Can mind control vehicles\n- Can control up to three units\n- Absorbs essence from killed units to heal\n- Cannot mindcontrol MCVs, Harvesters and Heroics\n- Can shoot over walls
 		Prerequisites: ~scrweap, scrtech
 	Valued:
 		Cost: 1400
@@ -1639,7 +1647,7 @@ TRIPOD:
 		BuildPaletteOrder: 29
 		BuildAtProductionType: Tank
 		Prerequisites: ~scrweap, scrtech
-		Description: Advanced walker.\n\n  Good vs Infantry, Buildings.\n\nSpecial:\n- Absorbs essence from killed units to heal\n- Can crush infantry
+		Description: Advanced walker.\n\n  Good vs Infantry, Buildings.\n\nSpecial:\n- Absorbs essence from killed units to heal\n- Can shoot over walls\n- Can crush infantry
 		IconPalette: chromescrin
 	Mobile:
 		TurnSpeed: 6
@@ -1734,7 +1742,7 @@ CENTURION:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
 		BuildAtProductionType: Tank
-		Description: Heavy walker equipped with chain guns.\n\nGood vs: Infantry\n\nSpecial:\n- Stealth detection\n- Can crush infantry
+		Description: Heavy walker equipped with chain guns.\n\nGood vs: Infantry\n\nSpecial:\n- Stealth detection\n- Can shoot over walls\n- Can crush infantry
 		Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 5
@@ -1786,12 +1794,12 @@ REAPERCAB:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
 		BuildAtProductionType: Tank
-		Description: Fast raiding walker armed with cluster missiles and web launchers.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Can attack air\n- Can ensnare infantry with webs.
+		Description: Fast raiding walker armed with cluster missiles and web launchers.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Can attack air\n- Can ensnare infantry with webs\n- Can shoot over walls
 		Prerequisites: ~cabweap
 	Selectable:
 		Bounds: 40,40,0,-10
 	Mobile:
-    	TurnSpeed: 8
+    	TurnSpeed: 10
 		Speed: 95
 		Locomotor: Vehicle
 	Explodes:
@@ -1913,7 +1921,7 @@ CABAPC:
 		BuildPaletteOrder: 33
 		Prerequisites: ~cabweap, cabradr
 	Mobile:
-		TurnSpeed: 8
+		TurnSpeed: 10
 		Speed: 110
 		Locomotor: Hover
 	Voiced:
@@ -1944,10 +1952,10 @@ SPIDERARTY:
 		Queue: Vehicle
 		BuildPaletteOrder: 34
 		BuildAtProductionType: Tank
-		Description: Heavy Artillery that deploys drones at the targetted area.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals AOE damage\n- Minimum attack distance.\n- Upon attack drones get spawned that attack the enemy.\n- Converts killed units into workers.\n- Can crush infantry.\n- Selfrepair
+		Description: Heavy Artillery that deploys drones at the targetted area.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals AOE damage\n- Minimum attack distance\n- Upon attack drones get spawned that attack the enemy\n- Converts killed units into workers\n- Can shoot over walls\n- Can crush infantry\n- Selfrepair
 		Prerequisites: ~cabweap, cabtech
 	Mobile:
-		TurnSpeed: 6
+		TurnSpeed: 4
 		Speed: 70
 		Locomotor: InfantryCrusherVehicle
 	Health:
@@ -1985,7 +1993,7 @@ PALADIN:
 		Queue: Vehicle
 		BuildPaletteOrder: 35
 		BuildAtProductionType: Tank
-		Description: Advanced Walker armed with a twin laser cannon.\n\nGood vs: Ground Targets\n\nSpecial:\n- Selfrepair\n- Can crush infantry.
+		Description: Advanced Walker armed with a twin laser cannon.\n\nGood vs: Ground Targets\n\nSpecial:\n- Selfrepair\n- Can shoot over walls\n- Can crush infantry
 		Prerequisites: ~cabweap, cabtech
 	Mobile:
 		TurnSpeed: 5

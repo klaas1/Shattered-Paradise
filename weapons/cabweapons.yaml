@@ -130,6 +130,7 @@ GLAD120mm:
 	Report: tankmediumfire.wav
 	Projectile: BulletAS
 		Speed: 1c512
+		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Damage: 6500
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -358,6 +359,7 @@ PalaLazor:
 		ZOffset: 4000
 		SecondaryBeamZOffset: 4000
 		SecondaryBeamColor: FFFFFF
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c045
 		Damage: 2550

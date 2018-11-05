@@ -100,14 +100,13 @@ legio:
 		Tick: 400
 		ZOffset: -511
 	shoot:
-		Start: 221
+		Start: 101
 		Length: 6
 		Facings: -8
 		# ShadowStart: 508
 	prone-shoot:
-		Tick: 80
 		Start: 221
-		Length: 6
+		Length: 7
 		Facings: -8
 		# ShadowStart: 628
 	standup-0:

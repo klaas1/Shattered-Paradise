@@ -403,7 +403,7 @@ OBBombFrontal:
 	ValidTargets: Ground, Water, Building, Infantry, Vehicle
 	Range: 2c0
 	Projectile: BulletAS
-		Speed: 170
+		Speed: 220
 		Image: 120mm
 		Shadow: true
 		Palette: ra

@@ -771,7 +771,7 @@
 		LayerName: OrangeRadiation
 		DamageInterval: 25
 	DamagedByTintedCells@Colossus:
-		DamageCoeff: 6000
+		DamageCoeff: 7000
 		DamageTypes: BulletDeath
 		LayerName: ColossusRadiation
 		DamageInterval: 25
@@ -1892,37 +1892,6 @@
 ^CombatPlane:
 	Inherits: ^Plane
 	Inherits@0: ^GainsExperience
-
-^AircraftHusk:
-	Inherits: ^SpriteActor
-	HitShape:
-	RenderSprites:
-	Interactable:
-		Bounds: 50,50
-	BodyOrientation:
-		QuantizedFacings: 0
-		CameraPitch: 90
-	Aircraft:
-		AirborneCondition: airborne
-		CruisingCondition: cruising
-	WithFacingSpriteBody:
-	WithShadow:
-	Health:
-		HP: 28000
-	Armor:
-		Type: AircraftArmor
-	HiddenUnderFog:
-		Type: GroundPosition
-	Targetable@Ignore:
-		TargetTypes: NoAutoTarget
-	ScriptTriggers:
-	Tooltip:
-		GenericName: Destroyed Aircraft
-	FallsToEarth:
-		Spins: true
-		Moves: true
-		Velocity: 140
-		Explosion: SmallPlaneExplode
 
 ^Visceroid:
 	Inherits@1: ^ExistsInWorld

@@ -407,6 +407,51 @@ MUFLAK:
 	-WithDecoration@POWERDOWN:
 	-PowerMultiplier@POWERDOWN:
 
+MINIVEIN:
+	Inherits: VEINHOLE
+	Inherits@2: ^1x1Shape
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Tooltip:
+		Name: Mini Veinhole
+	WithIdleOverlay@sushi:
+		Sequence: sushi1
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	-Explodes:
+	-SeedsResource:
+	-DamageMultiplier@Veinhole:
+	-Sellable:
+	-RepairableBuilding: 
+	-MustBeDestroyed:
+	-WithBuildingRepairDecoration:
+	AmbientSound:
+		SoundFiles: tentaclem0001.wav, tentaclem0002.wav, tentaclem0003.wav
+		Delay: 0, 100
+		Interval: 150, 300
+	Health:
+		HP: 70000
+	Selectable:
+		Priority: 3
+		Bounds: 25, 25, 0, 0
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, NeutralTibCritter
+	ExplodeWeapon@1:
+		Weapon: VeinholeAttack
+	ExplodeWeapon@2:
+		Weapon: VeinholeEggElevator
+	ProximityExternalCondition:
+		Condition: veinholedrain
+		Range: 4c0
+		AffectsParent: false
+		ValidStances: Ally, Enemy, Neutral
+	Targetable@Defence:
+		TargetTypes: Defence
+	WithMakeAnimation:
+	RequiresBuildableArea:
+		AreaTypes: building
+
 CABPIT:
 	Inherits: ^Defence
 	Inherits@1: ^CabRender
@@ -896,7 +941,7 @@ MUVENTI:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 46
-		Description: Allows players to quickly transport units across the battlefield.\n\nSpecial:\n- The building has a shared cargo storage for vehicles and infantry.\n- Units can enter any tunnel built and exit on any other.\n- Cannot be repaired by engineers.
+		Description: Allows players to quickly transport units across the battlefield.\n\nSpecial:\n- The building has a shared cargo storage.\n- Infantry can enter any tunnel built and exit on any other.\n- Cannot be repaired by engineers.
 		Prerequisites: ~structures.mut, muradr
 	Valued:
 		Cost: 500
@@ -909,7 +954,7 @@ MUVENTI:
 		HP: 50000
 	-EngineerRepairable:
 	SharedCargo:
-		Types: Infantry, Vehicle
+		Types: Infantry
 		PipCount: 15
 		MaxWeight: 15
 	RallyPoint:
@@ -1652,7 +1697,7 @@ NAWAST:
 		AreaTypes: building
 
 MUMINE:
-	Inherits: ^Building
+	Inherits: ^Defence
 	Valued:
 		Cost: 50
 	Tooltip:
@@ -1662,7 +1707,6 @@ MUMINE:
 	Health:
 		HP: 5000
 	-SpawnActorOnDeath@ScrinEssence:
-	-MustBeDestroyed:
 	-UpdatesPlayerStatistics:
 	-Sellable:
 	-SpawnActorsOnSell@gdi:
@@ -1690,6 +1734,16 @@ MUMINE:
 		AvoidFriendly: true
 	Explodes:
 		Weapon: MineExplode
+	-AutoTarget:
+	-AutoTargetPriority@DEFAULT:
+	-AutoTargetPriority@ATTACKANYTHING:
+	-WithColoredOverlay@IDISABLE:
+	-GrantConditionOnPowerState@LOWPOWER:
+	-GrantCondition@IDISABLE:
+	-ToggleConditionOnOrder:
+	-WithDecoration@POWERDOWN:
+	-PowerMultiplier@POWERDOWN:
+	-RenderRangeCircle:
 
 MUWARD:
 	Inherits: ^DeployedVehicle

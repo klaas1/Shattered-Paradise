@@ -55,6 +55,15 @@ SmallPlaneExplode:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		InvalidTargets: Air
 
+DestroyerExplode:
+	Inherits: ^ExploDefaults
+	Inherits@2: ^Mediuml_Clsn
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c400
+		Damage: 5000
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		InvalidTargets: Air
+
 BattleshipExplode:
 	Inherits: ^ExploDefaults
 	Inherits@2: ^GreyExplo
@@ -167,6 +176,9 @@ TiberiumExplosion:
 	Warhead@3Eff: CreateEffect
 		Explosions: tibexp
 		ImpactSounds: expnew09.aud
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 ZombieExplosion:
 	Warhead@1Dam: SpreadDamage

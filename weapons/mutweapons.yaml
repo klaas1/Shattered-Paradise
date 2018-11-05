@@ -167,7 +167,7 @@ SeerTyranyBuff:
 		DamageTypes: FireDeath, ScrinEssenceKill
 		InvalidTargets: Colossi
 	Warhead@Acid: GrantExternalCondition
-		Range: 5c0
+		Range: 3c0
 		Duration: 375
 		Condition: TyrannyBuff
 		ValidStances: Ally
@@ -619,7 +619,7 @@ FalconPunch:
 	Inherits: ^BombWarhead
 	Inherits@2: ^Mediuml_Clsn
 	Inherits@3: ^SpawnsIrradiationFalcon
-	ValidTargets: Ground, Water, Water
+	ValidTargets: Building, Structure, Infantry, Vehicle
 	ReloadDelay: 1
 	MinRange: 0c100
 	Range: 3c0
@@ -647,7 +647,7 @@ FalconPunch:
 	Warhead@1Dam: SpreadDamage
 		Spread: 600
 		Damage: 27000
-		ValidTargets: Ground, Water, Water
+		ValidTargets: Building, Structure, Infantry, Vehicle
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@5Actor: SpawnActor
 		Actors: cloud1, cloud1, cloud1, cloud1, cloud1, cloud1, cloud1, cloud1

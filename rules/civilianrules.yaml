@@ -775,12 +775,8 @@ GAWALL:
 	Tooltip:
 		Name: Concrete Wall
 		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
-	Health:
-		HP: 30000
 	RenderSprites:
 		Image: wall.gdi
-	BlocksProjectiles:
-		Height: 640
 	Crushable:
 		CrushClasses: BuildingArmorwall
 	LineBuild:
@@ -797,14 +793,10 @@ NAWALL:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: NOD Wall
+		Name: Nod Wall
 		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
-	Health:
-		HP: 30000
 	RenderSprites:
 		Image: wall.nod
-	BlocksProjectiles:
-		Height: 640
 	Crushable:
 		CrushClasses: BuildingArmorwall
 	LineBuild:

@@ -1,3 +1,34 @@
+^AircraftHusk:
+	Inherits: ^SpriteActor
+	HitShape:
+	RenderSprites:
+	Interactable:
+		Bounds: 50,50
+	BodyOrientation:
+		QuantizedFacings: 0
+		CameraPitch: 90
+	Aircraft:
+		AirborneCondition: airborne
+		CruisingCondition: cruising
+	WithFacingSpriteBody:
+	WithShadow:
+	Health:
+		HP: 28000
+	Armor:
+		Type: AircraftArmor
+	HiddenUnderFog:
+		Type: GroundPosition
+	Targetable@Ignore:
+		TargetTypes: NoAutoTarget
+	ScriptTriggers:
+	Tooltip:
+		GenericName: Destroyed Aircraft
+	FallsToEarth:
+		Spins: true
+		Moves: true
+		Velocity: 140
+		Explosion: SmallPlaneExplode
+
 DSHP.Husk:
 	Inherits: ^AircraftHusk
 	Tooltip:
@@ -116,7 +147,7 @@ APACHE.Husk:
 CERBERUS.Husk:
 	Inherits: ^AircraftHusk
 	Tooltip:
-		Name: Cerberus
+		Name: Paladin Husk
 	Selectable:
 		Bounds: 1,1
 	Aircraft:
@@ -129,7 +160,7 @@ CERBERUS.Husk:
 	RenderSprites:
 		Image: cerberus
 	FallsToEarth:
-		Explosion: BattleshipExplode
+		Explosion: DestroyerExplode
 
 MUTHELI.Husk:
 	Inherits: ^AircraftHusk
@@ -252,7 +283,7 @@ BASILISK.Husk:
 	RenderSprites:
 		Image: basilisk
 	FallsToEarth:
-		Explosion: BattleshipExplode
+		Explosion: DestroyerExplode
 
 STORMRIDER.Husk:
 	Inherits: ^AircraftHusk
@@ -350,7 +381,7 @@ SCRDESTROYER.Husk:
 	RenderSprites:
 		Image: scrdestroyer
 	FallsToEarth:
-		Explosion: BattleshipExplode
+		Explosion: DestroyerExplode
 
 SCRBATTLESHIP.Husk:
 	Inherits: ^AircraftHusk
@@ -388,7 +419,7 @@ SCRCARRIER.Husk:
 	RenderSprites:
 		Image: scrcarrier
 	FallsToEarth:
-		Explosion: BattleshipExplode
+		Explosion: DestroyerExplode
 
 SCRTRANS.Husk:
 	Inherits: ^AircraftHusk
